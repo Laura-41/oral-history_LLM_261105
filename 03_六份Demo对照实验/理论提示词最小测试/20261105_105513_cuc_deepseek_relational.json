@@ -1,0 +1,52 @@
+{
+  "run_time": "2026-11-05T10:55:13",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.2",
+  "case_id": "relational",
+  "source_text": "他是印书馆的排字工人。",
+  "expected_type": "RELATIONAL",
+  "expected_reason": "建立职业身份。",
+  "actual_type": "RELATIONAL",
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "他是印书馆的排字工人",
+    "event_type": "RELATIONAL",
+    "event_type_zh": "关系",
+    "core_process": "是",
+    "participants": [
+      {
+        "role": "Carrier",
+        "mention": "他",
+        "normalized_entity": null,
+        "certainty": "LOW"
+      },
+      {
+        "role": "Attribute",
+        "mention": "印书馆的排字工人",
+        "normalized_entity": "印书馆的排字工人",
+        "certainty": "HIGH"
+      }
+    ],
+    "circumstances": [],
+    "projected_content": null,
+    "evidence_quote": "他是印书馆的排字工人。",
+    "type_basis": "核心过程“是”建立身份或类别归属，参与者配置为 Carrier“他”与 Attribute“印书馆的排字工人”，符合关系过程；该句不描述可观察行动、心理感知、言语交换、行为外显或存在引入。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"他是印书馆的排字工人\",\n  \"event_type\": \"RELATIONAL\",\n  \"event_type_zh\": \"关系\",\n  \"core_process\": \"是\",\n  \"participants\": [\n    {\n      \"role\": \"Carrier\",\n      \"mention\": \"他\",\n      \"normalized_entity\": null,\n      \"certainty\": \"LOW\"\n    },\n    {\n      \"role\": \"Attribute\",\n      \"mention\": \"印书馆的排字工人\",\n      \"normalized_entity\": \"印书馆的排字工人\",\n      \"certainty\": \"HIGH\"\n    }\n  ],\n  \"circumstances\": [],\n  \"projected_content\": null,\n  \"evidence_quote\": \"他是印书馆的排字工人。\",\n  \"type_basis\": \"核心过程“是”建立身份或类别归属，参与者配置为 Carrier“他”与 Attribute“印书馆的排字工人”，符合关系过程；该句不描述可观察行动、心理感知、言语交换、行为外显或存在引入。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2144,
+    "total_tokens": 2739,
+    "completion_tokens": 595,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 342
+    },
+    "time_to_first_token_ms": 5879,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

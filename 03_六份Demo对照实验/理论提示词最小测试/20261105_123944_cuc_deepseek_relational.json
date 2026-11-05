@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-05T12:39:44",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3",
+  "case_id": "relational",
+  "source_text": "他是印书馆的排字工人。",
+  "expected_type": "RELATIONAL",
+  "expected_reason": "建立职业身份。",
+  "actual_type": "RELATIONAL",
+  "expected_roles": [],
+  "forbidden_roles": [],
+  "actual_roles": [
+    "Carrier",
+    "Attribute"
+  ],
+  "expected_circumstances": [],
+  "forbidden_circumstances": [],
+  "actual_circumstances": [],
+  "required_projected_text": null,
+  "projected_content": null,
+  "roles_present": true,
+  "forbidden_absent": true,
+  "circumstances_present": true,
+  "forbidden_circumstances_absent": true,
+  "roles_allowed": true,
+  "unexpected_roles": [],
+  "evidence_exact": true,
+  "projected_content_present": true,
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "他是印书馆的排字工人",
+    "event_type": "RELATIONAL",
+    "event_type_zh": "关系",
+    "core_process": "是",
+    "participants": [
+      {
+        "role": "Carrier",
+        "mention": "他",
+        "normalized_entity": null,
+        "certainty": "LOW"
+      },
+      {
+        "role": "Attribute",
+        "mention": "印书馆的排字工人",
+        "normalized_entity": null,
+        "certainty": "HIGH"
+      }
+    ],
+    "circumstances": [],
+    "projected_content": null,
+    "evidence_quote": "他是印书馆的排字工人。",
+    "type_basis": "核心过程“是”建立身份／职业归属关系，配置为 Carrier＋Attribute；不表示动作、变化或言语交换，排除 MATERIAL、VERBAL 等类型。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"他是印书馆的排字工人\",\n  \"event_type\": \"RELATIONAL\",\n  \"event_type_zh\": \"关系\",\n  \"core_process\": \"是\",\n  \"participants\": [\n    {\n      \"role\": \"Carrier\",\n      \"mention\": \"他\",\n      \"normalized_entity\": null,\n      \"certainty\": \"LOW\"\n    },\n    {\n      \"role\": \"Attribute\",\n      \"mention\": \"印书馆的排字工人\",\n      \"normalized_entity\": null,\n      \"certainty\": \"HIGH\"\n    }\n  ],\n  \"circumstances\": [],\n  \"projected_content\": null,\n  \"evidence_quote\": \"他是印书馆的排字工人。\",\n  \"type_basis\": \"核心过程“是”建立身份／职业归属关系，配置为 Carrier＋Attribute；不表示动作、变化或言语交换，排除 MATERIAL、VERBAL 等类型。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2726,
+    "total_tokens": 3520,
+    "completion_tokens": 794,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 561
+    },
+    "time_to_first_token_ms": 8747,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

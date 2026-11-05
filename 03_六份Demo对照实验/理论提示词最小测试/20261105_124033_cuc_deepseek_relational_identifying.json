@@ -1,0 +1,77 @@
+{
+  "run_time": "2026-11-05T12:40:33",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3",
+  "case_id": "relational_identifying",
+  "source_text": "他就是印书馆里那位唯一的排字工人。",
+  "expected_type": "RELATIONAL",
+  "expected_reason": "确定特定身份，属于识别式。",
+  "actual_type": "RELATIONAL",
+  "expected_roles": [
+    "Token",
+    "Value"
+  ],
+  "forbidden_roles": [
+    "Carrier",
+    "Attribute"
+  ],
+  "actual_roles": [
+    "Token",
+    "Value"
+  ],
+  "expected_circumstances": [],
+  "forbidden_circumstances": [],
+  "actual_circumstances": [],
+  "required_projected_text": null,
+  "projected_content": null,
+  "roles_present": true,
+  "forbidden_absent": true,
+  "circumstances_present": true,
+  "forbidden_circumstances_absent": true,
+  "roles_allowed": true,
+  "unexpected_roles": [],
+  "evidence_exact": true,
+  "projected_content_present": true,
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "识别他为印书馆里唯一的排字工人",
+    "event_type": "RELATIONAL",
+    "event_type_zh": "关系",
+    "core_process": "是",
+    "participants": [
+      {
+        "role": "Token",
+        "mention": "他",
+        "normalized_entity": null,
+        "certainty": "LOW"
+      },
+      {
+        "role": "Value",
+        "mention": "印书馆里那位唯一的排字工人",
+        "normalized_entity": null,
+        "certainty": "HIGH"
+      }
+    ],
+    "circumstances": [],
+    "projected_content": null,
+    "evidence_quote": "他就是印书馆里那位唯一的排字工人。",
+    "type_basis": "核心过程“是”建立识别关系，且可倒置为“印书馆里那位唯一的排字工人就是他”，属于识别式关系过程；参与者角色为Token与Value，符合RELATIONAL允许词表。地点信息已包含在Value的mention中，不在事件层重复标注LOCATION。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"识别他为印书馆里唯一的排字工人\",\n  \"event_type\": \"RELATIONAL\",\n  \"event_type_zh\": \"关系\",\n  \"core_process\": \"是\",\n  \"participants\": [\n    {\n      \"role\": \"Token\",\n      \"mention\": \"他\",\n      \"normalized_entity\": null,\n      \"certainty\": \"LOW\"\n    },\n    {\n      \"role\": \"Value\",\n      \"mention\": \"印书馆里那位唯一的排字工人\",\n      \"normalized_entity\": null,\n      \"certainty\": \"HIGH\"\n    }\n  ],\n  \"circumstances\": [],\n  \"projected_content\": null,\n  \"evidence_quote\": \"他就是印书馆里那位唯一的排字工人。\",\n  \"type_basis\": \"核心过程“是”建立识别关系，且可倒置为“印书馆里那位唯一的排字工人就是他”，属于识别式关系过程；参与者角色为Token与Value，符合RELATIONAL允许词表。地点信息已包含在Value的mention中，不在事件层重复标注LOCATION。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2731,
+    "total_tokens": 3691,
+    "completion_tokens": 960,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 697
+    },
+    "tokens_per_second": 959000,
+    "time_to_first_token_ms": 8337,
+    "time_per_output_token_ms": 0
+  }
+}

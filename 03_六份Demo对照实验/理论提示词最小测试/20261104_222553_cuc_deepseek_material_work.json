@@ -1,0 +1,62 @@
+{
+  "run_time": "2026-11-04T22:25:53",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.1",
+  "case_id": "material_work",
+  "source_text": "1931年他到上海印书馆做排字工人。",
+  "expected_type": "MATERIAL",
+  "expected_reason": "突出到达并从事职业劳动。",
+  "actual_type": "MATERIAL",
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "他到上海印书馆做排字工人",
+    "event_type": "MATERIAL",
+    "event_type_zh": "物质",
+    "core_process": "赴上海印书馆从事排字工作",
+    "participants": [
+      {
+        "role": "Actor",
+        "mention": "他",
+        "normalized_entity": null,
+        "certainty": "LOW"
+      },
+      {
+        "role": "Scope",
+        "mention": "排字工人",
+        "normalized_entity": "排字工人",
+        "certainty": "HIGH"
+      }
+    ],
+    "circumstances": [
+      {
+        "kind": "TIME",
+        "value": "1931年",
+        "normalized_value": "1931"
+      },
+      {
+        "kind": "LOCATION",
+        "value": "上海印书馆",
+        "normalized_value": "上海印书馆"
+      }
+    ],
+    "evidence_quote": "1931年他到上海印书馆做排字工人。",
+    "type_basis": "核心过程为到达并从事排字劳动，使人物位置和职业活动发生可观察改变，符合物质事件；他为主要行动者，上海印书馆为地点环境。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"他到上海印书馆做排字工人\",\n  \"event_type\": \"MATERIAL\",\n  \"event_type_zh\": \"物质\",\n  \"core_process\": \"赴上海印书馆从事排字工作\",\n  \"participants\": [\n    {\n      \"role\": \"Actor\",\n      \"mention\": \"他\",\n      \"normalized_entity\": null,\n      \"certainty\": \"LOW\"\n    },\n    {\n      \"role\": \"Scope\",\n      \"mention\": \"排字工人\",\n      \"normalized_entity\": \"排字工人\",\n      \"certainty\": \"HIGH\"\n    }\n  ],\n  \"circumstances\": [\n    {\n      \"kind\": \"TIME\",\n      \"value\": \"1931年\",\n      \"normalized_value\": \"1931\"\n    },\n    {\n      \"kind\": \"LOCATION\",\n      \"value\": \"上海印书馆\",\n      \"normalized_value\": \"上海印书馆\"\n    }\n  ],\n  \"evidence_quote\": \"1931年他到上海印书馆做排字工人。\",\n  \"type_basis\": \"核心过程为到达并从事排字劳动，使人物位置和职业活动发生可观察改变，符合物质事件；他为主要行动者，上海印书馆为地点环境。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 1553,
+    "total_tokens": 4689,
+    "completion_tokens": 3136,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2839
+    },
+    "time_to_first_token_ms": 27296,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

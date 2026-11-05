@@ -1,0 +1,61 @@
+{
+  "run_time": "2026-11-05T12:06:42",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.2",
+  "case_id": "existential_school",
+  "source_text": "村里有一所学校。",
+  "expected_type": "EXISTENTIAL",
+  "expected_reason": "引入学校的存在，地点是环境。",
+  "actual_type": "EXISTENTIAL",
+  "expected_roles": [
+    "Existent"
+  ],
+  "forbidden_roles": [],
+  "actual_roles": [
+    "Existent"
+  ],
+  "roles_present": true,
+  "forbidden_absent": true,
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "村里存在一所学校",
+    "event_type": "EXISTENTIAL",
+    "event_type_zh": "存在",
+    "core_process": "有",
+    "participants": [
+      {
+        "role": "Existent",
+        "mention": "一所学校",
+        "normalized_entity": null,
+        "certainty": "HIGH"
+      }
+    ],
+    "circumstances": [
+      {
+        "kind": "LOCATION",
+        "value": "村里",
+        "normalized_value": null
+      }
+    ],
+    "projected_content": null,
+    "evidence_quote": "村里有一所学校。",
+    "type_basis": "核心过程“有”在此引入“一所学校”的存在，回答“有什么”，符合存在过程；地点“村里”是环境成分，不是参与者。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"村里存在一所学校\",\n  \"event_type\": \"EXISTENTIAL\",\n  \"event_type_zh\": \"存在\",\n  \"core_process\": \"有\",\n  \"participants\": [\n    {\n      \"role\": \"Existent\",\n      \"mention\": \"一所学校\",\n      \"normalized_entity\": null,\n      \"certainty\": \"HIGH\"\n    }\n  ],\n  \"circumstances\": [\n    {\n      \"kind\": \"LOCATION\",\n      \"value\": \"村里\",\n      \"normalized_value\": null\n    }\n  ],\n  \"projected_content\": null,\n  \"evidence_quote\": \"村里有一所学校。\",\n  \"type_basis\": \"核心过程“有”在此引入“一所学校”的存在，回答“有什么”，符合存在过程；地点“村里”是环境成分，不是参与者。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2144,
+    "total_tokens": 2620,
+    "completion_tokens": 476,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 262
+    },
+    "time_to_first_token_ms": 5061,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

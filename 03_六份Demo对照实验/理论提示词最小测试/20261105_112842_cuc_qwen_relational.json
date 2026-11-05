@@ -1,0 +1,52 @@
+{
+  "run_time": "2026-11-05T11:28:42",
+  "model_id": "cuc/qwen",
+  "prompt_version": "v0.2",
+  "case_id": "relational",
+  "source_text": "他是印书馆的排字工人。",
+  "expected_type": "RELATIONAL",
+  "expected_reason": "建立职业身份。",
+  "actual_type": "RELATIONAL",
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "他是印书馆的排字工人",
+    "event_type": "RELATIONAL",
+    "event_type_zh": "关系",
+    "core_process": "是",
+    "participants": [
+      {
+        "role": "Token",
+        "mention": "他",
+        "normalized_entity": null,
+        "certainty": "LOW"
+      },
+      {
+        "role": "Value",
+        "mention": "印书馆的排字工人",
+        "normalized_entity": null,
+        "certainty": "HIGH"
+      }
+    ],
+    "circumstances": [],
+    "projected_content": null,
+    "evidence_quote": "他是印书馆的排字工人。",
+    "type_basis": "核心过程‘是’建立身份/职业识别关系，‘他’为Token，‘印书馆的排字工人’为Value；不是正在实施的行动，故排除MATERIAL；无感知现象，排除MENTAL；无言语内容，排除VERBAL；不引入存在，排除EXISTENTIAL；非外显行为，排除BEHAVIORAL。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "\n\n{\n  \"event_name\": \"他是印书馆的排字工人\",\n  \"event_type\": \"RELATIONAL\",\n  \"event_type_zh\": \"关系\",\n  \"core_process\": \"是\",\n  \"participants\": [\n    {\n      \"role\": \"Token\",\n      \"mention\": \"他\",\n      \"normalized_entity\": null,\n      \"certainty\": \"LOW\"\n    },\n    {\n      \"role\": \"Value\",\n      \"mention\": \"印书馆的排字工人\",\n      \"normalized_entity\": null,\n      \"certainty\": \"HIGH\"\n    }\n  ],\n  \"circumstances\": [],\n  \"projected_content\": null,\n  \"evidence_quote\": \"他是印书馆的排字工人。\",\n  \"type_basis\": \"核心过程‘是’建立身份/职业识别关系，‘他’为Token，‘印书馆的排字工人’为Value；不是正在实施的行动，故排除MATERIAL；无感知现象，排除MENTAL；无言语内容，排除VERBAL；不引入存在，排除EXISTENTIAL；非外显行为，排除BEHAVIORAL。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2237,
+    "total_tokens": 4263,
+    "completion_tokens": 2026,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1731
+    },
+    "time_to_first_token_ms": 47021,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

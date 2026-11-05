@@ -1,0 +1,77 @@
+{
+  "run_time": "2026-11-05T12:26:09",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3",
+  "case_id": "mental_perception",
+  "source_text": "他看见远处来了一支队伍。",
+  "expected_type": "MENTAL",
+  "expected_reason": "表达感知结果及其现象。",
+  "actual_type": "MENTAL",
+  "expected_roles": [
+    "Senser",
+    "Phenomenon"
+  ],
+  "forbidden_roles": [],
+  "actual_roles": [
+    "Senser",
+    "Phenomenon"
+  ],
+  "expected_circumstances": [],
+  "forbidden_circumstances": [
+    {
+      "kind": "LOCATION",
+      "value": "远处"
+    },
+    {
+      "kind": "DIRECTION",
+      "value": "远处"
+    }
+  ],
+  "actual_circumstances": [],
+  "roles_present": true,
+  "forbidden_absent": true,
+  "circumstances_present": true,
+  "forbidden_circumstances_absent": true,
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "他看见远处来了一支队伍",
+    "event_type": "MENTAL",
+    "event_type_zh": "心理",
+    "core_process": "看见",
+    "participants": [
+      {
+        "role": "Senser",
+        "mention": "他",
+        "normalized_entity": null,
+        "certainty": "MEDIUM"
+      },
+      {
+        "role": "Phenomenon",
+        "mention": "远处来了一支队伍",
+        "normalized_entity": null,
+        "certainty": "HIGH"
+      }
+    ],
+    "circumstances": [],
+    "projected_content": null,
+    "evidence_quote": "他看见远处来了一支队伍。",
+    "type_basis": "核心过程“看见”为感知心理过程，有感知者“他”和现象小句“远处来了一支队伍”；心理过程不能用do替代，排除物质过程。现象为完整小句，其内部“远处”不重复标为事件层环境成分。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"他看见远处来了一支队伍\",\n  \"event_type\": \"MENTAL\",\n  \"event_type_zh\": \"心理\",\n  \"core_process\": \"看见\",\n  \"participants\": [\n    {\n      \"role\": \"Senser\",\n      \"mention\": \"他\",\n      \"normalized_entity\": null,\n      \"certainty\": \"MEDIUM\"\n    },\n    {\n      \"role\": \"Phenomenon\",\n      \"mention\": \"远处来了一支队伍\",\n      \"normalized_entity\": null,\n      \"certainty\": \"HIGH\"\n    }\n  ],\n  \"circumstances\": [],\n  \"projected_content\": null,\n  \"evidence_quote\": \"他看见远处来了一支队伍。\",\n  \"type_basis\": \"核心过程“看见”为感知心理过程，有感知者“他”和现象小句“远处来了一支队伍”；心理过程不能用do替代，排除物质过程。现象为完整小句，其内部“远处”不重复标为事件层环境成分。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2728,
+    "total_tokens": 3420,
+    "completion_tokens": 692,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 438
+    },
+    "time_to_first_token_ms": 8411,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

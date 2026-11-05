@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-05T12:39:11",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3",
+  "case_id": "material_work",
+  "source_text": "1931年他到上海印书馆做排字工人。",
+  "expected_type": "MATERIAL",
+  "expected_reason": "突出到达并从事职业劳动。",
+  "actual_type": "MATERIAL",
+  "expected_roles": [
+    "Actor"
+  ],
+  "forbidden_roles": [
+    "Scope"
+  ],
+  "actual_roles": [
+    "Actor"
+  ],
+  "expected_circumstances": [],
+  "forbidden_circumstances": [],
+  "actual_circumstances": [
+    {
+      "kind": "TIME",
+      "value": "1931年",
+      "normalized_value": "1931年"
+    },
+    {
+      "kind": "LOCATION",
+      "value": "上海印书馆",
+      "normalized_value": "上海印书馆"
+    }
+  ],
+  "required_projected_text": null,
+  "projected_content": null,
+  "roles_present": true,
+  "forbidden_absent": true,
+  "circumstances_present": true,
+  "forbidden_circumstances_absent": true,
+  "roles_allowed": true,
+  "unexpected_roles": [],
+  "evidence_exact": true,
+  "projected_content_present": true,
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "他到上海印书馆从事排字工作",
+    "event_type": "MATERIAL",
+    "event_type_zh": "物质",
+    "core_process": "从事排字工作",
+    "participants": [
+      {
+        "role": "Actor",
+        "mention": "他",
+        "normalized_entity": null,
+        "certainty": "LOW"
+      }
+    ],
+    "circumstances": [
+      {
+        "kind": "TIME",
+        "value": "1931年",
+        "normalized_value": "1931年"
+      },
+      {
+        "kind": "LOCATION",
+        "value": "上海印书馆",
+        "normalized_value": "上海印书馆"
+      }
+    ],
+    "projected_content": null,
+    "evidence_quote": "1931年他到上海印书馆做排字工人。",
+    "type_basis": "核心过程为到职并从事排字工作的职业劳动，Actor=他，发生可观察的职业行动；不是关系过程（并非单纯身份归属），不是行为过程（职业劳动），且“排字工人”融入规范化过程，不标为Scope。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"他到上海印书馆从事排字工作\",\n  \"event_type\": \"MATERIAL\",\n  \"event_type_zh\": \"物质\",\n  \"core_process\": \"从事排字工作\",\n  \"participants\": [\n    {\n      \"role\": \"Actor\",\n      \"mention\": \"他\",\n      \"normalized_entity\": null,\n      \"certainty\": \"LOW\"\n    }\n  ],\n  \"circumstances\": [\n    {\n      \"kind\": \"TIME\",\n      \"value\": \"1931年\",\n      \"normalized_value\": \"1931年\"\n    },\n    {\n      \"kind\": \"LOCATION\",\n      \"value\": \"上海印书馆\",\n      \"normalized_value\": \"上海印书馆\"\n    }\n  ],\n  \"projected_content\": null,\n  \"evidence_quote\": \"1931年他到上海印书馆做排字工人。\",\n  \"type_basis\": \"核心过程为到职并从事排字工作的职业劳动，Actor=他，发生可观察的职业行动；不是关系过程（并非单纯身份归属），不是行为过程（职业劳动），且“排字工人”融入规范化过程，不标为Scope。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2731,
+    "total_tokens": 4053,
+    "completion_tokens": 1322,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1041
+    },
+    "time_to_first_token_ms": 16098,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

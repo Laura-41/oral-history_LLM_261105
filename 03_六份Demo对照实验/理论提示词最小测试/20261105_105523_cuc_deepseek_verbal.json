@@ -1,0 +1,52 @@
+{
+  "run_time": "2026-11-05T10:55:23",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.2",
+  "case_id": "verbal",
+  "source_text": "他告诉我部队已经出发了。",
+  "expected_type": "VERBAL",
+  "expected_reason": "有言说者、受话者和明确言语内容。",
+  "actual_type": "VERBAL",
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "他告诉我部队已经出发",
+    "event_type": "VERBAL",
+    "event_type_zh": "言语",
+    "core_process": "告诉",
+    "participants": [
+      {
+        "role": "Sayer",
+        "mention": "他",
+        "normalized_entity": null,
+        "certainty": "LOW"
+      },
+      {
+        "role": "Receiver",
+        "mention": "我",
+        "normalized_entity": null,
+        "certainty": "LOW"
+      }
+    ],
+    "circumstances": [],
+    "projected_content": "部队已经出发了",
+    "evidence_quote": "他告诉我部队已经出发了。",
+    "type_basis": "核心过程“告诉”为言语过程，参与者配置为 Sayer=他、Receiver=我；告知内容“部队已经出发了”是被投射小句，不重复记为 Verbiage。该过程不是物质行动，也不是心理感知或关系识别。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"他告诉我部队已经出发\",\n  \"event_type\": \"VERBAL\",\n  \"event_type_zh\": \"言语\",\n  \"core_process\": \"告诉\",\n  \"participants\": [\n    {\n      \"role\": \"Sayer\",\n      \"mention\": \"他\",\n      \"normalized_entity\": null,\n      \"certainty\": \"LOW\"\n    },\n    {\n      \"role\": \"Receiver\",\n      \"mention\": \"我\",\n      \"normalized_entity\": null,\n      \"certainty\": \"LOW\"\n    }\n  ],\n  \"circumstances\": [],\n  \"projected_content\": \"部队已经出发了\",\n  \"evidence_quote\": \"他告诉我部队已经出发了。\",\n  \"type_basis\": \"核心过程“告诉”为言语过程，参与者配置为 Sayer=他、Receiver=我；告知内容“部队已经出发了”是被投射小句，不重复记为 Verbiage。该过程不是物质行动，也不是心理感知或关系识别。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2143,
+    "total_tokens": 2862,
+    "completion_tokens": 719,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 468
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 9690,
+    "time_per_output_token_ms": 0
+  }
+}

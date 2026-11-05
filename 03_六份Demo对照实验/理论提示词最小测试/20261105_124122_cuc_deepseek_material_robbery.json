@@ -1,0 +1,74 @@
+{
+  "run_time": "2026-11-05T12:41:22",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3",
+  "case_id": "material_robbery",
+  "source_text": "一伙人抢劫了村庄。",
+  "expected_type": "MATERIAL",
+  "expected_reason": "突出行动者、行动过程和受影响目标。",
+  "actual_type": "MATERIAL",
+  "expected_roles": [
+    "Actor",
+    "Goal"
+  ],
+  "forbidden_roles": [],
+  "actual_roles": [
+    "Actor",
+    "Goal"
+  ],
+  "expected_circumstances": [],
+  "forbidden_circumstances": [],
+  "actual_circumstances": [],
+  "required_projected_text": null,
+  "projected_content": null,
+  "roles_present": true,
+  "forbidden_absent": true,
+  "circumstances_present": true,
+  "forbidden_circumstances_absent": true,
+  "roles_allowed": true,
+  "unexpected_roles": [],
+  "evidence_exact": true,
+  "projected_content_present": true,
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "一伙人抢劫村庄",
+    "event_type": "MATERIAL",
+    "event_type_zh": "物质",
+    "core_process": "抢劫",
+    "participants": [
+      {
+        "role": "Actor",
+        "mention": "一伙人",
+        "normalized_entity": null,
+        "certainty": "HIGH"
+      },
+      {
+        "role": "Goal",
+        "mention": "村庄",
+        "normalized_entity": null,
+        "certainty": "HIGH"
+      }
+    ],
+    "circumstances": [],
+    "projected_content": null,
+    "evidence_quote": "一伙人抢劫了村庄。",
+    "type_basis": "核心过程“抢劫”表示一伙人对村庄实施可观察的物质性侵害行为，参与者配置为 Actor＋Goal，符合物质过程；不是引入事件存在的存在过程，也不是言语、心理、关系或行为过程。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"一伙人抢劫村庄\",\n  \"event_type\": \"MATERIAL\",\n  \"event_type_zh\": \"物质\",\n  \"core_process\": \"抢劫\",\n  \"participants\": [\n    {\n      \"role\": \"Actor\",\n      \"mention\": \"一伙人\",\n      \"normalized_entity\": null,\n      \"certainty\": \"HIGH\"\n    },\n    {\n      \"role\": \"Goal\",\n      \"mention\": \"村庄\",\n      \"normalized_entity\": null,\n      \"certainty\": \"HIGH\"\n    }\n  ],\n  \"circumstances\": [],\n  \"projected_content\": null,\n  \"evidence_quote\": \"一伙人抢劫了村庄。\",\n  \"type_basis\": \"核心过程“抢劫”表示一伙人对村庄实施可观察的物质性侵害行为，参与者配置为 Actor＋Goal，符合物质过程；不是引入事件存在的存在过程，也不是言语、心理、关系或行为过程。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2728,
+    "total_tokens": 3422,
+    "completion_tokens": 694,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 457
+    },
+    "time_to_first_token_ms": 7036,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

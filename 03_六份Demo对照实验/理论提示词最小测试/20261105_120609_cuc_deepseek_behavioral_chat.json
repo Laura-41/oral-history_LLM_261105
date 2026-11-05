@@ -1,0 +1,69 @@
+{
+  "run_time": "2026-11-05T12:06:09",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.2",
+  "case_id": "behavioral_chat",
+  "source_text": "他们在路上闲谈了一会儿。",
+  "expected_type": "BEHAVIORAL",
+  "expected_reason": "只突出交谈行为，没有明确命题内容。",
+  "actual_type": "BEHAVIORAL",
+  "expected_roles": [
+    "Behaver"
+  ],
+  "forbidden_roles": [
+    "Sayer",
+    "Verbiage"
+  ],
+  "actual_roles": [
+    "Behaver"
+  ],
+  "roles_present": true,
+  "forbidden_absent": true,
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "他们闲谈",
+    "event_type": "BEHAVIORAL",
+    "event_type_zh": "行为",
+    "core_process": "闲谈",
+    "participants": [
+      {
+        "role": "Behaver",
+        "mention": "他们",
+        "normalized_entity": null,
+        "certainty": "LOW"
+      }
+    ],
+    "circumstances": [
+      {
+        "kind": "LOCATION",
+        "value": "路上",
+        "normalized_value": null
+      },
+      {
+        "kind": "TIME",
+        "value": "一会儿",
+        "normalized_value": null
+      }
+    ],
+    "projected_content": null,
+    "evidence_quote": "他们在路上闲谈了一会儿。",
+    "type_basis": "核心过程“闲谈”是有意识生命表现出的可观察言语性社会行为，但没有明确命题内容、要求或评价，不构成言语过程；也没有空间移动、职业劳动、组织行动或物质变化结果，因此归为行为过程。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"他们闲谈\",\n  \"event_type\": \"BEHAVIORAL\",\n  \"event_type_zh\": \"行为\",\n  \"core_process\": \"闲谈\",\n  \"participants\": [\n    {\n      \"role\": \"Behaver\",\n      \"mention\": \"他们\",\n      \"normalized_entity\": null,\n      \"certainty\": \"LOW\"\n    }\n  ],\n  \"circumstances\": [\n    {\n      \"kind\": \"LOCATION\",\n      \"value\": \"路上\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"TIME\",\n      \"value\": \"一会儿\",\n      \"normalized_value\": null\n    }\n  ],\n  \"projected_content\": null,\n  \"evidence_quote\": \"他们在路上闲谈了一会儿。\",\n  \"type_basis\": \"核心过程“闲谈”是有意识生命表现出的可观察言语性社会行为，但没有明确命题内容、要求或评价，不构成言语过程；也没有空间移动、职业劳动、组织行动或物质变化结果，因此归为行为过程。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2146,
+    "total_tokens": 2788,
+    "completion_tokens": 642,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 377
+    },
+    "time_to_first_token_ms": 6693,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

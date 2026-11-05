@@ -1,0 +1,66 @@
+{
+  "run_time": "2026-11-05T12:05:08",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.2",
+  "case_id": "relational_identifying",
+  "source_text": "他就是印书馆里那位唯一的排字工人。",
+  "expected_type": "RELATIONAL",
+  "expected_reason": "确定特定身份，属于识别式。",
+  "actual_type": "RELATIONAL",
+  "expected_roles": [
+    "Token",
+    "Value"
+  ],
+  "forbidden_roles": [
+    "Carrier",
+    "Attribute"
+  ],
+  "actual_roles": [
+    "Token",
+    "Value"
+  ],
+  "roles_present": true,
+  "forbidden_absent": true,
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "他是印书馆里那位唯一的排字工人",
+    "event_type": "RELATIONAL",
+    "event_type_zh": "关系",
+    "core_process": "是",
+    "participants": [
+      {
+        "role": "Token",
+        "mention": "他",
+        "normalized_entity": null,
+        "certainty": "LOW"
+      },
+      {
+        "role": "Value",
+        "mention": "印书馆里那位唯一的排字工人",
+        "normalized_entity": null,
+        "certainty": "HIGH"
+      }
+    ],
+    "circumstances": [],
+    "projected_content": null,
+    "evidence_quote": "他就是印书馆里那位唯一的排字工人。",
+    "type_basis": "核心过程“是”建立“他”与“印书馆里那位唯一的排字工人”之间的识别关系；该关系可倒置为“印书馆里那位唯一的排字工人就是他”，且不描述行动、感知或言说，故为关系过程识别式。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"他是印书馆里那位唯一的排字工人\",\n  \"event_type\": \"RELATIONAL\",\n  \"event_type_zh\": \"关系\",\n  \"core_process\": \"是\",\n  \"participants\": [\n    {\n      \"role\": \"Token\",\n      \"mention\": \"他\",\n      \"normalized_entity\": null,\n      \"certainty\": \"LOW\"\n    },\n    {\n      \"role\": \"Value\",\n      \"mention\": \"印书馆里那位唯一的排字工人\",\n      \"normalized_entity\": null,\n      \"certainty\": \"HIGH\"\n    }\n  ],\n  \"circumstances\": [],\n  \"projected_content\": null,\n  \"evidence_quote\": \"他就是印书馆里那位唯一的排字工人。\",\n  \"type_basis\": \"核心过程“是”建立“他”与“印书馆里那位唯一的排字工人”之间的识别关系；该关系可倒置为“印书馆里那位唯一的排字工人就是他”，且不描述行动、感知或言说，故为关系过程识别式。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2149,
+    "total_tokens": 3684,
+    "completion_tokens": 1535,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1278
+    },
+    "time_to_first_token_ms": 27516,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

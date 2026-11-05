@@ -1,0 +1,80 @@
+{
+  "run_time": "2026-11-05T12:40:06",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3",
+  "case_id": "behavioral",
+  "source_text": "他听完以后笑了笑。",
+  "expected_type": "BEHAVIORAL",
+  "expected_reason": "情感状态的可见外显。",
+  "actual_type": "BEHAVIORAL",
+  "expected_roles": [
+    "Behaver"
+  ],
+  "forbidden_roles": [
+    "Actor"
+  ],
+  "actual_roles": [
+    "Behaver"
+  ],
+  "expected_circumstances": [],
+  "forbidden_circumstances": [],
+  "actual_circumstances": [
+    {
+      "kind": "TIME",
+      "value": "听完以后",
+      "normalized_value": null
+    }
+  ],
+  "required_projected_text": null,
+  "projected_content": null,
+  "roles_present": true,
+  "forbidden_absent": true,
+  "circumstances_present": true,
+  "forbidden_circumstances_absent": true,
+  "roles_allowed": true,
+  "unexpected_roles": [],
+  "evidence_exact": true,
+  "projected_content_present": true,
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "他笑了笑",
+    "event_type": "BEHAVIORAL",
+    "event_type_zh": "行为",
+    "core_process": "笑了笑",
+    "participants": [
+      {
+        "role": "Behaver",
+        "mention": "他",
+        "normalized_entity": null,
+        "certainty": "LOW"
+      }
+    ],
+    "circumstances": [
+      {
+        "kind": "TIME",
+        "value": "听完以后",
+        "normalized_value": null
+      }
+    ],
+    "projected_content": null,
+    "evidence_quote": "他听完以后笑了笑。",
+    "type_basis": "核心过程“笑了笑”是有意识生命表现出的可观察心理／生理状态外显，无独立物质结果，也无明确命题内容，符合行为过程；参与者配置为Behaver=他。排除心理过程，因为“听完”未带明确现象且整体主导过程为“笑了笑”；排除物质过程，因为没有可观察的客观状态或空间位置改变。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"他笑了笑\",\n  \"event_type\": \"BEHAVIORAL\",\n  \"event_type_zh\": \"行为\",\n  \"core_process\": \"笑了笑\",\n  \"participants\": [\n    {\n      \"role\": \"Behaver\",\n      \"mention\": \"他\",\n      \"normalized_entity\": null,\n      \"certainty\": \"LOW\"\n    }\n  ],\n  \"circumstances\": [\n    {\n      \"kind\": \"TIME\",\n      \"value\": \"听完以后\",\n      \"normalized_value\": null\n    }\n  ],\n  \"projected_content\": null,\n  \"evidence_quote\": \"他听完以后笑了笑。\",\n  \"type_basis\": \"核心过程“笑了笑”是有意识生命表现出的可观察心理／生理状态外显，无独立物质结果，也无明确命题内容，符合行为过程；参与者配置为Behaver=他。排除心理过程，因为“听完”未带明确现象且整体主导过程为“笑了笑”；排除物质过程，因为没有可观察的客观状态或空间位置改变。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2725,
+    "total_tokens": 3953,
+    "completion_tokens": 1228,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 967
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 15717
+  }
+}

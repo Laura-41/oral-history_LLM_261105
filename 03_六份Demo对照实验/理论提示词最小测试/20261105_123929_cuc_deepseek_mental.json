@@ -1,0 +1,74 @@
+{
+  "run_time": "2026-11-05T12:39:29",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3",
+  "case_id": "mental",
+  "source_text": "他想起了在家乡的哥哥。",
+  "expected_type": "MENTAL",
+  "expected_reason": "内在认知过程及其现象。",
+  "actual_type": "MENTAL",
+  "expected_roles": [
+    "Senser",
+    "Phenomenon"
+  ],
+  "forbidden_roles": [],
+  "actual_roles": [
+    "Senser",
+    "Phenomenon"
+  ],
+  "expected_circumstances": [],
+  "forbidden_circumstances": [],
+  "actual_circumstances": [],
+  "required_projected_text": null,
+  "projected_content": null,
+  "roles_present": true,
+  "forbidden_absent": true,
+  "circumstances_present": true,
+  "forbidden_circumstances_absent": true,
+  "roles_allowed": true,
+  "unexpected_roles": [],
+  "evidence_exact": true,
+  "projected_content_present": true,
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "想起在家乡的哥哥",
+    "event_type": "MENTAL",
+    "event_type_zh": "心理",
+    "core_process": "想起",
+    "participants": [
+      {
+        "role": "Senser",
+        "mention": "他",
+        "normalized_entity": null,
+        "certainty": "LOW"
+      },
+      {
+        "role": "Phenomenon",
+        "mention": "在家乡的哥哥",
+        "normalized_entity": null,
+        "certainty": "MEDIUM"
+      }
+    ],
+    "circumstances": [],
+    "projected_content": null,
+    "evidence_quote": "他想起了在家乡的哥哥。",
+    "type_basis": "核心过程“想起”表示内在认知，Senser“他”对Phenomenon“在家乡的哥哥”产生心理指向；该过程不能用do替代，排除物质或行为过程；未建立身份属性关系，也无言语投射。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"想起在家乡的哥哥\",\n  \"event_type\": \"MENTAL\",\n  \"event_type_zh\": \"心理\",\n  \"core_process\": \"想起\",\n  \"participants\": [\n    {\n      \"role\": \"Senser\",\n      \"mention\": \"他\",\n      \"normalized_entity\": null,\n      \"certainty\": \"LOW\"\n    },\n    {\n      \"role\": \"Phenomenon\",\n      \"mention\": \"在家乡的哥哥\",\n      \"normalized_entity\": null,\n      \"certainty\": \"MEDIUM\"\n    }\n  ],\n  \"circumstances\": [],\n  \"projected_content\": null,\n  \"evidence_quote\": \"他想起了在家乡的哥哥。\",\n  \"type_basis\": \"核心过程“想起”表示内在认知，Senser“他”对Phenomenon“在家乡的哥哥”产生心理指向；该过程不能用do替代，排除物质或行为过程；未建立身份属性关系，也无言语投射。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2726,
+    "total_tokens": 3877,
+    "completion_tokens": 1151,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 902
+    },
+    "time_to_first_token_ms": 17882,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

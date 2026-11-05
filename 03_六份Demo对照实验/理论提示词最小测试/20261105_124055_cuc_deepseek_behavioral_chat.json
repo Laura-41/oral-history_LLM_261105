@@ -1,0 +1,91 @@
+{
+  "run_time": "2026-11-05T12:40:55",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3",
+  "case_id": "behavioral_chat",
+  "source_text": "他们在路上闲谈了一会儿。",
+  "expected_type": "BEHAVIORAL",
+  "expected_reason": "只突出交谈行为，没有明确命题内容。",
+  "actual_type": "BEHAVIORAL",
+  "expected_roles": [
+    "Behaver"
+  ],
+  "forbidden_roles": [
+    "Sayer",
+    "Verbiage"
+  ],
+  "actual_roles": [
+    "Behaver"
+  ],
+  "expected_circumstances": [],
+  "forbidden_circumstances": [],
+  "actual_circumstances": [
+    {
+      "kind": "LOCATION",
+      "value": "路上",
+      "normalized_value": null
+    },
+    {
+      "kind": "TIME",
+      "value": "一会儿",
+      "normalized_value": null
+    }
+  ],
+  "required_projected_text": null,
+  "projected_content": null,
+  "roles_present": true,
+  "forbidden_absent": true,
+  "circumstances_present": true,
+  "forbidden_circumstances_absent": true,
+  "roles_allowed": true,
+  "unexpected_roles": [],
+  "evidence_exact": true,
+  "projected_content_present": true,
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "他们闲谈",
+    "event_type": "BEHAVIORAL",
+    "event_type_zh": "行为",
+    "core_process": "闲谈",
+    "participants": [
+      {
+        "role": "Behaver",
+        "mention": "他们",
+        "normalized_entity": null,
+        "certainty": "LOW"
+      }
+    ],
+    "circumstances": [
+      {
+        "kind": "LOCATION",
+        "value": "路上",
+        "normalized_value": null
+      },
+      {
+        "kind": "TIME",
+        "value": "一会儿",
+        "normalized_value": null
+      }
+    ],
+    "projected_content": null,
+    "evidence_quote": "他们在路上闲谈了一会儿。",
+    "type_basis": "核心过程“闲谈”是有意识生命表现出的无明确命题内容的言语行为，符合行为过程；参与者“他们”承担Behaver角色，属于行为类允许角色。该过程没有独立物质结果，也不是传递具体信息的言语过程，因此排除MATERIAL和VERBAL。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"他们闲谈\",\n  \"event_type\": \"BEHAVIORAL\",\n  \"event_type_zh\": \"行为\",\n  \"core_process\": \"闲谈\",\n  \"participants\": [\n    {\n      \"role\": \"Behaver\",\n      \"mention\": \"他们\",\n      \"normalized_entity\": null,\n      \"certainty\": \"LOW\"\n    }\n  ],\n  \"circumstances\": [\n    {\n      \"kind\": \"LOCATION\",\n      \"value\": \"路上\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"TIME\",\n      \"value\": \"一会儿\",\n      \"normalized_value\": null\n    }\n  ],\n  \"projected_content\": null,\n  \"evidence_quote\": \"他们在路上闲谈了一会儿。\",\n  \"type_basis\": \"核心过程“闲谈”是有意识生命表现出的无明确命题内容的言语行为，符合行为过程；参与者“他们”承担Behaver角色，属于行为类允许角色。该过程没有独立物质结果，也不是传递具体信息的言语过程，因此排除MATERIAL和VERBAL。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2728,
+    "total_tokens": 3393,
+    "completion_tokens": 665,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 391
+    },
+    "time_to_first_token_ms": 5180,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

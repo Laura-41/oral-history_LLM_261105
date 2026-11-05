@@ -1,0 +1,81 @@
+{
+  "run_time": "2026-11-05T13:25:49",
+  "run_stage": "CONTROLLED_EVENT_RECONSTRUCTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3-frozen",
+  "schema_version": "event_candidate_v1.0",
+  "packet_version": "v1.0",
+  "packet_id": "DEMO-P01",
+  "doc_id": "CHF-V1-01",
+  "source_segment_ids": [
+    "CHF-V1-01-S0015",
+    "CHF-V1-01-S0017",
+    "CHF-V1-01-S0019",
+    "CHF-V1-01-S0020"
+  ],
+  "json_valid": true,
+  "schema_errors": [],
+  "evidence_supported": true,
+  "evidence_segment_id": "CHF-V1-01-S0015",
+  "technical_passed": true,
+  "parsed_output": {
+    "event_name": "陈海峰到上海荣华印书馆当排字学徒",
+    "event_type": "MATERIAL",
+    "event_type_zh": "物质",
+    "core_process": "当排字学徒",
+    "participants": [
+      {
+        "role": "Actor",
+        "mention": "我",
+        "normalized_entity": "陈海峰",
+        "certainty": "HIGH"
+      }
+    ],
+    "circumstances": [
+      {
+        "kind": "TIME",
+        "value": "11岁",
+        "normalized_value": null
+      },
+      {
+        "kind": "DIRECTION",
+        "value": "上海",
+        "normalized_value": "上海"
+      },
+      {
+        "kind": "LOCATION",
+        "value": "印书馆",
+        "normalized_value": "荣华印书馆（上海新闸路83号）"
+      },
+      {
+        "kind": "MANNER",
+        "value": "冒充13岁",
+        "normalized_value": null
+      },
+      {
+        "kind": "CAUSE",
+        "value": "家里也比较困难",
+        "normalized_value": "家庭经济困难"
+      }
+    ],
+    "projected_content": null,
+    "evidence_quote": "我才11岁，我就到上海去了，家里也比较困难，就去当学徒了。当什么学徒呢？是印书馆里面的排字工人，我只有11岁，冒充13岁。",
+    "type_basis": "核心过程“当排字学徒”是职业劳动和物质性行动，使主体进入学徒工作状态；参与者配置为 Actor，符合 MATERIAL 的封闭角色词表。该过程不是判断“他是排字工人”的身份归属，故不标 RELATIONAL；不是无明确物质结果的心理生理外显，故不标 BEHAVIORAL；也不是言语、心理或存在过程。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"陈海峰到上海荣华印书馆当排字学徒\",\n  \"event_type\": \"MATERIAL\",\n  \"event_type_zh\": \"物质\",\n  \"core_process\": \"当排字学徒\",\n  \"participants\": [\n    {\n      \"role\": \"Actor\",\n      \"mention\": \"我\",\n      \"normalized_entity\": \"陈海峰\",\n      \"certainty\": \"HIGH\"\n    }\n  ],\n  \"circumstances\": [\n    {\n      \"kind\": \"TIME\",\n      \"value\": \"11岁\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"DIRECTION\",\n      \"value\": \"上海\",\n      \"normalized_value\": \"上海\"\n    },\n    {\n      \"kind\": \"LOCATION\",\n      \"value\": \"印书馆\",\n      \"normalized_value\": \"荣华印书馆（上海新闸路83号）\"\n    },\n    {\n      \"kind\": \"MANNER\",\n      \"value\": \"冒充13岁\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"CAUSE\",\n      \"value\": \"家里也比较困难\",\n      \"normalized_value\": \"家庭经济困难\"\n    }\n  ],\n  \"projected_content\": null,\n  \"evidence_quote\": \"我才11岁，我就到上海去了，家里也比较困难，就去当学徒了。当什么学徒呢？是印书馆里面的排字工人，我只有11岁，冒充13岁。\",\n  \"type_basis\": \"核心过程“当排字学徒”是职业劳动和物质性行动，使主体进入学徒工作状态；参与者配置为 Actor，符合 MATERIAL 的封闭角色词表。该过程不是判断“他是排字工人”的身份归属，故不标 RELATIONAL；不是无明确物质结果的心理生理外显，故不标 BEHAVIORAL；也不是言语、心理或存在过程。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 3232,
+    "total_tokens": 8550,
+    "completion_tokens": 5318,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4880
+    },
+    "time_to_first_token_ms": 58874,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5317000
+  }
+}

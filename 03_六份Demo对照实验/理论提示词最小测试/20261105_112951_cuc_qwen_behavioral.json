@@ -1,0 +1,52 @@
+{
+  "run_time": "2026-11-05T11:29:51",
+  "model_id": "cuc/qwen",
+  "prompt_version": "v0.2",
+  "case_id": "behavioral",
+  "source_text": "他听完以后笑了笑。",
+  "expected_type": "BEHAVIORAL",
+  "expected_reason": "情感状态的可见外显。",
+  "actual_type": "BEHAVIORAL",
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "他听完以后笑",
+    "event_type": "BEHAVIORAL",
+    "event_type_zh": "行为",
+    "core_process": "笑",
+    "participants": [
+      {
+        "role": "Behaver",
+        "mention": "他",
+        "normalized_entity": null,
+        "certainty": "LOW"
+      }
+    ],
+    "circumstances": [
+      {
+        "kind": "TIME",
+        "value": "听完以后",
+        "normalized_value": null
+      }
+    ],
+    "projected_content": null,
+    "evidence_quote": "他听完以后笑了笑。",
+    "type_basis": "核心过程“笑”是有意识生命的外显情感/生理行为，无明确命题内容，也不产生独立物质结果，符合BEHAVIORAL；“他”为Behaver；“听完以后”作为时间环境，不改变主导类型；排除MATERIAL因无物质行动或结果，排除MENTAL因未表达指向现象的内在认知或情感，排除VERBAL因无言语内容。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "\n\n{\n  \"event_name\": \"他听完以后笑\",\n  \"event_type\": \"BEHAVIORAL\",\n  \"event_type_zh\": \"行为\",\n  \"core_process\": \"笑\",\n  \"participants\": [\n    {\n      \"role\": \"Behaver\",\n      \"mention\": \"他\",\n      \"normalized_entity\": null,\n      \"certainty\": \"LOW\"\n    }\n  ],\n  \"circumstances\": [\n    {\n      \"kind\": \"TIME\",\n      \"value\": \"听完以后\",\n      \"normalized_value\": null\n    }\n  ],\n  \"projected_content\": null,\n  \"evidence_quote\": \"他听完以后笑了笑。\",\n  \"type_basis\": \"核心过程“笑”是有意识生命的外显情感/生理行为，无明确命题内容，也不产生独立物质结果，符合BEHAVIORAL；“他”为Behaver；“听完以后”作为时间环境，不改变主导类型；排除MATERIAL因无物质行动或结果，排除MENTAL因未表达指向现象的内在认知或情感，排除VERBAL因无言语内容。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2235,
+    "total_tokens": 3634,
+    "completion_tokens": 1399,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1112
+    },
+    "time_to_first_token_ms": 36661,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

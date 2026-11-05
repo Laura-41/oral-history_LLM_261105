@@ -1,0 +1,77 @@
+{
+  "run_time": "2026-11-05T12:40:24",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3",
+  "case_id": "relational_attributive",
+  "source_text": "他是一名排字工人。",
+  "expected_type": "RELATIONAL",
+  "expected_reason": "把人物归入职业类别，属于归属式而非识别式。",
+  "actual_type": "RELATIONAL",
+  "expected_roles": [
+    "Carrier",
+    "Attribute"
+  ],
+  "forbidden_roles": [
+    "Token",
+    "Value"
+  ],
+  "actual_roles": [
+    "Carrier",
+    "Attribute"
+  ],
+  "expected_circumstances": [],
+  "forbidden_circumstances": [],
+  "actual_circumstances": [],
+  "required_projected_text": null,
+  "projected_content": null,
+  "roles_present": true,
+  "forbidden_absent": true,
+  "circumstances_present": true,
+  "forbidden_circumstances_absent": true,
+  "roles_allowed": true,
+  "unexpected_roles": [],
+  "evidence_exact": true,
+  "projected_content_present": true,
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "他是排字工人",
+    "event_type": "RELATIONAL",
+    "event_type_zh": "关系",
+    "core_process": "是",
+    "participants": [
+      {
+        "role": "Carrier",
+        "mention": "他",
+        "normalized_entity": null,
+        "certainty": "MEDIUM"
+      },
+      {
+        "role": "Attribute",
+        "mention": "一名排字工人",
+        "normalized_entity": null,
+        "certainty": "HIGH"
+      }
+    ],
+    "circumstances": [],
+    "projected_content": null,
+    "evidence_quote": "他是一名排字工人。",
+    "type_basis": "核心过程“是”建立身份类别归属，配置为Carrier＋Attribute，属于归属式关系过程；不表示可观察行动或发生，排除MATERIAL；不是识别式Token＋Value。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"他是排字工人\",\n  \"event_type\": \"RELATIONAL\",\n  \"event_type_zh\": \"关系\",\n  \"core_process\": \"是\",\n  \"participants\": [\n    {\n      \"role\": \"Carrier\",\n      \"mention\": \"他\",\n      \"normalized_entity\": null,\n      \"certainty\": \"MEDIUM\"\n    },\n    {\n      \"role\": \"Attribute\",\n      \"mention\": \"一名排字工人\",\n      \"normalized_entity\": null,\n      \"certainty\": \"HIGH\"\n    }\n  ],\n  \"circumstances\": [],\n  \"projected_content\": null,\n  \"evidence_quote\": \"他是一名排字工人。\",\n  \"type_basis\": \"核心过程“是”建立身份类别归属，配置为Carrier＋Attribute，属于归属式关系过程；不表示可观察行动或发生，排除MATERIAL；不是识别式Token＋Value。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2729,
+    "total_tokens": 3634,
+    "completion_tokens": 905,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 671
+    },
+    "time_to_first_token_ms": 10216,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

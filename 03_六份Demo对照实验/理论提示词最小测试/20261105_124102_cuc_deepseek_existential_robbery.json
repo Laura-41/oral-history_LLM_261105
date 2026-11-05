@@ -1,0 +1,78 @@
+{
+  "run_time": "2026-11-05T12:41:02",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3",
+  "case_id": "existential_robbery",
+  "source_text": "村里发生了一次抢劫。",
+  "expected_type": "EXISTENTIAL",
+  "expected_reason": "引入一个作为存在者的事件。",
+  "actual_type": "EXISTENTIAL",
+  "expected_roles": [
+    "Existent"
+  ],
+  "forbidden_roles": [],
+  "actual_roles": [
+    "Existent"
+  ],
+  "expected_circumstances": [],
+  "forbidden_circumstances": [],
+  "actual_circumstances": [
+    {
+      "kind": "LOCATION",
+      "value": "村里",
+      "normalized_value": null
+    }
+  ],
+  "required_projected_text": null,
+  "projected_content": null,
+  "roles_present": true,
+  "forbidden_absent": true,
+  "circumstances_present": true,
+  "forbidden_circumstances_absent": true,
+  "roles_allowed": true,
+  "unexpected_roles": [],
+  "evidence_exact": true,
+  "projected_content_present": true,
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "村里发生一次抢劫",
+    "event_type": "EXISTENTIAL",
+    "event_type_zh": "存在",
+    "core_process": "发生",
+    "participants": [
+      {
+        "role": "Existent",
+        "mention": "一次抢劫",
+        "normalized_entity": null,
+        "certainty": "HIGH"
+      }
+    ],
+    "circumstances": [
+      {
+        "kind": "LOCATION",
+        "value": "村里",
+        "normalized_value": null
+      }
+    ],
+    "projected_content": null,
+    "evidence_quote": "村里发生了一次抢劫。",
+    "type_basis": "核心过程“发生”引入“一次抢劫”这一事件的存在或出现，参与者配置为 Existent，符合存在过程；不是“一伙人抢劫村庄”那样由 Actor 实施物质行动，因此排除 MATERIAL。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"村里发生一次抢劫\",\n  \"event_type\": \"EXISTENTIAL\",\n  \"event_type_zh\": \"存在\",\n  \"core_process\": \"发生\",\n  \"participants\": [\n    {\n      \"role\": \"Existent\",\n      \"mention\": \"一次抢劫\",\n      \"normalized_entity\": null,\n      \"certainty\": \"HIGH\"\n    }\n  ],\n  \"circumstances\": [\n    {\n      \"kind\": \"LOCATION\",\n      \"value\": \"村里\",\n      \"normalized_value\": null\n    }\n  ],\n  \"projected_content\": null,\n  \"evidence_quote\": \"村里发生了一次抢劫。\",\n  \"type_basis\": \"核心过程“发生”引入“一次抢劫”这一事件的存在或出现，参与者配置为 Existent，符合存在过程；不是“一伙人抢劫村庄”那样由 Actor 实施物质行动，因此排除 MATERIAL。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2728,
+    "total_tokens": 3315,
+    "completion_tokens": 587,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 358
+    },
+    "time_to_first_token_ms": 6736,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 586000
+  }
+}

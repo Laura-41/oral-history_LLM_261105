@@ -1,0 +1,69 @@
+{
+  "run_time": "2026-11-05T12:06:02",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.2",
+  "case_id": "behavioral_perception",
+  "source_text": "他一直望着远处。",
+  "expected_type": "BEHAVIORAL",
+  "expected_reason": "突出可观察的感知行为，未陈述感知结果。",
+  "actual_type": "BEHAVIORAL",
+  "expected_roles": [
+    "Behaver"
+  ],
+  "forbidden_roles": [
+    "Senser",
+    "Phenomenon"
+  ],
+  "actual_roles": [
+    "Behaver"
+  ],
+  "roles_present": true,
+  "forbidden_absent": true,
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "他望着远处",
+    "event_type": "BEHAVIORAL",
+    "event_type_zh": "行为",
+    "core_process": "望着",
+    "participants": [
+      {
+        "role": "Behaver",
+        "mention": "他",
+        "normalized_entity": null,
+        "certainty": "LOW"
+      }
+    ],
+    "circumstances": [
+      {
+        "kind": "TIME",
+        "value": "一直",
+        "normalized_value": null
+      },
+      {
+        "kind": "LOCATION",
+        "value": "远处",
+        "normalized_value": null
+      }
+    ],
+    "projected_content": null,
+    "evidence_quote": "他一直望着远处。",
+    "type_basis": "核心过程“望着”表示有意识生命发出的可观察凝视行为，参与者仅为 Behaver“他”；没有明确思想对象或命题内容，不构成心理或言语过程，也没有物质结果或状态改变，故归为行为过程。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"他望着远处\",\n  \"event_type\": \"BEHAVIORAL\",\n  \"event_type_zh\": \"行为\",\n  \"core_process\": \"望着\",\n  \"participants\": [\n    {\n      \"role\": \"Behaver\",\n      \"mention\": \"他\",\n      \"normalized_entity\": null,\n      \"certainty\": \"LOW\"\n    }\n  ],\n  \"circumstances\": [\n    {\n      \"kind\": \"TIME\",\n      \"value\": \"一直\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"LOCATION\",\n      \"value\": \"远处\",\n      \"normalized_value\": null\n    }\n  ],\n  \"projected_content\": null,\n  \"evidence_quote\": \"他一直望着远处。\",\n  \"type_basis\": \"核心过程“望着”表示有意识生命发出的可观察凝视行为，参与者仅为 Behaver“他”；没有明确思想对象或命题内容，不构成心理或言语过程，也没有物质结果或状态改变，故归为行为过程。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2144,
+    "total_tokens": 3588,
+    "completion_tokens": 1444,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1183
+    },
+    "time_to_first_token_ms": 18387,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 1443000
+  }
+}

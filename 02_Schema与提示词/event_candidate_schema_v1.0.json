@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.oral-history.example/schema/event-candidate-v1.0.json",
+  "title": "口述史六类过程候选事件 Schema v1.0",
+  "description": "用于校验system_prompt_v0.3输出的单个候选一级事件。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_name",
+    "event_type",
+    "event_type_zh",
+    "core_process",
+    "participants",
+    "circumstances",
+    "projected_content",
+    "evidence_quote",
+    "type_basis",
+    "alternative_event_type",
+    "ambiguity_reason",
+    "review_status"
+  ],
+  "properties": {
+    "event_name": {"type": "string", "minLength": 1},
+    "event_type": {
+      "enum": ["MATERIAL", "MENTAL", "RELATIONAL", "VERBAL", "BEHAVIORAL", "EXISTENTIAL"]
+    },
+    "event_type_zh": {
+      "enum": ["物质", "心理", "关系", "言语", "行为", "存在"]
+    },
+    "core_process": {"type": "string", "minLength": 1},
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["role", "mention", "normalized_entity", "certainty"],
+        "properties": {
+          "role": {
+            "enum": [
+              "Actor", "Goal", "Client", "Recipient", "Scope",
+              "Senser", "Phenomenon",
+              "Carrier", "Attribute", "Token", "Value",
+              "Sayer", "Receiver", "Target", "Verbiage",
+              "Behaver", "BehaviourScope",
+              "Existent"
+            ]
+          },
+          "mention": {"type": "string", "minLength": 1},
+          "normalized_entity": {"type": ["string", "null"]},
+          "certainty": {"enum": ["HIGH", "MEDIUM", "LOW"]}
+        }
+      }
+    },
+    "circumstances": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "value", "normalized_value"],
+        "properties": {
+          "kind": {
+            "enum": ["TIME", "LOCATION", "MANNER", "CAUSE", "PURPOSE", "CONTENT", "DIRECTION", "OTHER"]
+          },
+          "value": {"type": "string", "minLength": 1},
+          "normalized_value": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "projected_content": {"type": ["string", "null"]},
+    "evidence_quote": {"type": "string", "minLength": 1},
+    "type_basis": {"type": "string", "minLength": 1},
+    "alternative_event_type": {
+      "oneOf": [
+        {"type": "null"},
+        {"enum": ["MATERIAL", "MENTAL", "RELATIONAL", "VERBAL", "BEHAVIORAL", "EXISTENTIAL"]}
+      ]
+    },
+    "ambiguity_reason": {"type": ["string", "null"]},
+    "review_status": {"enum": ["MODEL_CANDIDATE", "NEEDS_REVIEW"]}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"event_type": {"const": "MATERIAL"}}, "required": ["event_type"]},
+      "then": {
+        "properties": {
+          "event_type_zh": {"const": "物质"},
+          "participants": {
+            "contains": {"properties": {"role": {"const": "Actor"}}, "required": ["role"]},
+            "items": {"properties": {"role": {"enum": ["Actor", "Goal", "Client", "Recipient", "Scope"]}}}
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"event_type": {"const": "MENTAL"}}, "required": ["event_type"]},
+      "then": {
+        "properties": {
+          "event_type_zh": {"const": "心理"},
+          "participants": {
+            "allOf": [
+              {"contains": {"properties": {"role": {"const": "Senser"}}, "required": ["role"]}},
+              {"contains": {"properties": {"role": {"const": "Phenomenon"}}, "required": ["role"]}}
+            ],
+            "items": {"properties": {"role": {"enum": ["Senser", "Phenomenon"]}}}
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"event_type": {"const": "RELATIONAL"}}, "required": ["event_type"]},
+      "then": {
+        "properties": {
+          "event_type_zh": {"const": "关系"},
+          "participants": {
+            "oneOf": [
+              {
+                "allOf": [
+                  {"contains": {"properties": {"role": {"const": "Carrier"}}, "required": ["role"]}},
+                  {"contains": {"properties": {"role": {"const": "Attribute"}}, "required": ["role"]}}
+                ]
+              },
+              {
+                "allOf": [
+                  {"contains": {"properties": {"role": {"const": "Token"}}, "required": ["role"]}},
+                  {"contains": {"properties": {"role": {"const": "Value"}}, "required": ["role"]}}
+                ]
+              }
+            ],
+            "items": {"properties": {"role": {"enum": ["Carrier", "Attribute", "Token", "Value"]}}}
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"event_type": {"const": "VERBAL"}}, "required": ["event_type"]},
+      "then": {
+        "properties": {
+          "event_type_zh": {"const": "言语"},
+          "participants": {
+            "contains": {"properties": {"role": {"const": "Sayer"}}, "required": ["role"]},
+            "items": {"properties": {"role": {"enum": ["Sayer", "Receiver", "Target", "Verbiage"]}}}
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"event_type": {"const": "BEHAVIORAL"}}, "required": ["event_type"]},
+      "then": {
+        "properties": {
+          "event_type_zh": {"const": "行为"},
+          "participants": {
+            "contains": {"properties": {"role": {"const": "Behaver"}}, "required": ["role"]},
+            "items": {"properties": {"role": {"enum": ["Behaver", "BehaviourScope"]}}}
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"event_type": {"const": "EXISTENTIAL"}}, "required": ["event_type"]},
+      "then": {
+        "properties": {
+          "event_type_zh": {"const": "存在"},
+          "participants": {
+            "contains": {"properties": {"role": {"const": "Existent"}}, "required": ["role"]},
+            "items": {"properties": {"role": {"const": "Existent"}}}
+          }
+        }
+      }
+    }
+  ]
+}

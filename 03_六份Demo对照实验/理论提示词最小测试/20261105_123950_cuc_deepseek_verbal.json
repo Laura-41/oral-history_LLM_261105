@@ -1,0 +1,81 @@
+{
+  "run_time": "2026-11-05T12:39:50",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3",
+  "case_id": "verbal",
+  "source_text": "他告诉我部队已经出发了。",
+  "expected_type": "VERBAL",
+  "expected_reason": "有言说者、受话者和明确言语内容。",
+  "actual_type": "VERBAL",
+  "expected_roles": [
+    "Sayer",
+    "Receiver"
+  ],
+  "forbidden_roles": [
+    "Verbiage"
+  ],
+  "actual_roles": [
+    "Sayer",
+    "Receiver"
+  ],
+  "expected_circumstances": [],
+  "forbidden_circumstances": [
+    {
+      "kind": "CONTENT",
+      "value": "部队已经出发"
+    }
+  ],
+  "actual_circumstances": [],
+  "required_projected_text": "部队已经出发",
+  "projected_content": "部队已经出发了",
+  "roles_present": true,
+  "forbidden_absent": true,
+  "circumstances_present": true,
+  "forbidden_circumstances_absent": true,
+  "roles_allowed": true,
+  "unexpected_roles": [],
+  "evidence_exact": true,
+  "projected_content_present": true,
+  "json_valid": true,
+  "passed": true,
+  "parsed_output": {
+    "event_name": "他告诉部队已出发",
+    "event_type": "VERBAL",
+    "event_type_zh": "言语",
+    "core_process": "告诉",
+    "participants": [
+      {
+        "role": "Sayer",
+        "mention": "他",
+        "normalized_entity": null,
+        "certainty": "MEDIUM"
+      },
+      {
+        "role": "Receiver",
+        "mention": "我",
+        "normalized_entity": null,
+        "certainty": "MEDIUM"
+      }
+    ],
+    "circumstances": [],
+    "projected_content": "部队已经出发了",
+    "evidence_quote": "他告诉我部队已经出发了。",
+    "type_basis": "核心过程“告诉”是明确的言语交换，Sayer 为“他”，Receiver 为“我”；被告知内容“部队已经出发了”作为投射内容记录，不重复标为 Verbiage。该句不建立关系、不表达心理感知，也不是物质行动或存在引入。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"他告诉部队已出发\",\n  \"event_type\": \"VERBAL\",\n  \"event_type_zh\": \"言语\",\n  \"core_process\": \"告诉\",\n  \"participants\": [\n    {\n      \"role\": \"Sayer\",\n      \"mention\": \"他\",\n      \"normalized_entity\": null,\n      \"certainty\": \"MEDIUM\"\n    },\n    {\n      \"role\": \"Receiver\",\n      \"mention\": \"我\",\n      \"normalized_entity\": null,\n      \"certainty\": \"MEDIUM\"\n    }\n  ],\n  \"circumstances\": [],\n  \"projected_content\": \"部队已经出发了\",\n  \"evidence_quote\": \"他告诉我部队已经出发了。\",\n  \"type_basis\": \"核心过程“告诉”是明确的言语交换，Sayer 为“他”，Receiver 为“我”；被告知内容“部队已经出发了”作为投射内容记录，不重复标为 Verbiage。该句不建立关系、不表达心理感知，也不是物质行动或存在引入。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 2725,
+    "total_tokens": 3279,
+    "completion_tokens": 554,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 294
+    },
+    "time_to_first_token_ms": 5808,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

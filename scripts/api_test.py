@@ -7,6 +7,7 @@
 from __future__ import annotations
 
 import argparse
+import http.client
 import json
 import os
 import sys
@@ -46,6 +47,10 @@ def request_json(
         raise RuntimeError(f"HTTP {exc.code}: {body}") from exc
     except urllib.error.URLError as exc:
         raise RuntimeError(f"连接失败：{exc.reason}") from exc
+    except TimeoutError as exc:
+        raise RuntimeError(f"读取响应超时（等待上限 {timeout} 秒）") from exc
+    except (ConnectionError, http.client.HTTPException) as exc:
+        raise RuntimeError(f"连接被远端中断：{exc}") from exc
 
     try:
         return json.loads(body)
@@ -53,11 +58,12 @@ def request_json(
         raise RuntimeError(f"接口没有返回合法JSON：{body[:1000]}") from exc
 
 
-def list_models(base_url: str, api_key: str) -> list[str]:
+def list_models(base_url: str, api_key: str, timeout: int = 120) -> list[str]:
     result = request_json(
         method="GET",
         url=f"{base_url}/models",
         api_key=api_key,
+        timeout=timeout,
     )
     model_ids = [
         str(item.get("id"))
@@ -74,7 +80,9 @@ def list_models(base_url: str, api_key: str) -> list[str]:
     return model_ids
 
 
-def chat_test(base_url: str, api_key: str, model: str) -> dict[str, Any]:
+def chat_test(
+    base_url: str, api_key: str, model: str, timeout: int = 120
+) -> dict[str, Any]:
     payload = {
         "model": model,
         "messages": [
@@ -89,6 +97,7 @@ def chat_test(base_url: str, api_key: str, model: str) -> dict[str, Any]:
         url=f"{base_url}/chat/completions",
         api_key=api_key,
         payload=payload,
+        timeout=timeout,
     )
     content = extract_content(result)
     print(f"\n[2/3] {model} 中文响应：成功")
@@ -97,7 +106,9 @@ def chat_test(base_url: str, api_key: str, model: str) -> dict[str, Any]:
     return result
 
 
-def json_test(base_url: str, api_key: str, model: str) -> dict[str, Any]:
+def json_test(
+    base_url: str, api_key: str, model: str, timeout: int = 120
+) -> dict[str, Any]:
     payload = {
         "model": model,
         "messages": [
@@ -122,6 +133,7 @@ def json_test(base_url: str, api_key: str, model: str) -> dict[str, Any]:
         url=f"{base_url}/chat/completions",
         api_key=api_key,
         payload=payload,
+        timeout=timeout,
     )
     content = extract_content(result).strip()
     if content.startswith("```"):
@@ -176,11 +188,20 @@ def parse_args() -> argparse.Namespace:
         default="cuc/deepseek",
         help="chat/json测试使用的模型ID。",
     )
+    parser.add_argument(
+        "--timeout",
+        type=int,
+        default=120,
+        help="单次请求等待上限（秒），默认120。",
+    )
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
+    if args.timeout <= 0:
+        print("错误：--timeout 必须是正整数。", file=sys.stderr)
+        return 2
     base_url = os.environ.get("CUC_BASE_URL", DEFAULT_BASE_URL).rstrip("/")
     api_key = os.environ.get("CUC_API_KEY", "").strip()
     if not api_key:
@@ -190,11 +211,11 @@ def main() -> int:
 
     try:
         if args.mode in {"models", "all"}:
-            list_models(base_url, api_key)
+            list_models(base_url, api_key, args.timeout)
         if args.mode in {"chat", "all"}:
-            chat_test(base_url, api_key, args.model)
+            chat_test(base_url, api_key, args.model, args.timeout)
         if args.mode in {"json", "all"}:
-            json_test(base_url, api_key, args.model)
+            json_test(base_url, api_key, args.model, args.timeout)
     except RuntimeError as exc:
         print(f"\n测试失败：{exc}", file=sys.stderr)
         return 1

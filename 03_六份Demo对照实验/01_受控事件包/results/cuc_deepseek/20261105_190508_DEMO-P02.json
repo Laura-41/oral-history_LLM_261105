@@ -1,0 +1,87 @@
+{
+  "run_time": "2026-11-05T19:05:08",
+  "run_stage": "CONTROLLED_EVENT_RECONSTRUCTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3-frozen",
+  "schema_version": "event_candidate_v1.0",
+  "packet_version": "v1.0",
+  "packet_id": "DEMO-P02",
+  "doc_id": "CRT-01",
+  "source_segment_ids": [
+    "CRT-01-S0018",
+    "CRT-01-S0020",
+    "CRT-01-S0022"
+  ],
+  "json_valid": true,
+  "schema_errors": [],
+  "evidence_supported": true,
+  "evidence_segment_id": "CRT-01-S0020",
+  "technical_passed": true,
+  "parsed_output": {
+    "event_name": "陈锐霆与同龄小孩到东山放牧并捡柴拾粪",
+    "event_type": "MATERIAL",
+    "event_type_zh": "物质",
+    "core_process": "放牧",
+    "participants": [
+      {
+        "role": "Actor",
+        "mention": "我",
+        "normalized_entity": "陈锐霆",
+        "certainty": "HIGH"
+      },
+      {
+        "role": "Actor",
+        "mention": "我同年的一些小孩",
+        "normalized_entity": null,
+        "certainty": "MEDIUM"
+      },
+      {
+        "role": "Goal",
+        "mention": "牛群",
+        "normalized_entity": "村里的牛群",
+        "certainty": "HIGH"
+      }
+    ],
+    "circumstances": [
+      {
+        "kind": "TIME",
+        "value": "8岁的时候",
+        "normalized_value": "8岁"
+      },
+      {
+        "kind": "LOCATION",
+        "value": "东山",
+        "normalized_value": "东山"
+      },
+      {
+        "kind": "MANNER",
+        "value": "嘻嘻哈哈的",
+        "normalized_value": null
+      },
+      {
+        "kind": "PURPOSE",
+        "value": "帮助家里边使用",
+        "normalized_value": null
+      }
+    ],
+    "projected_content": null,
+    "evidence_quote": "有几十头牛吧，集体的找人来放养嘛，到东山去放牧。",
+    "type_basis": "核心过程“放牧”为物质行动，参与者为儿童（Actor）和牛群（Goal）；“捡柴、拾粪”同属物质劳动；“听说日本兵舰”为伴随感知，不改变主导类型。角色均在MATERIAL允许词表内。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"陈锐霆与同龄小孩到东山放牧并捡柴拾粪\",\n  \"event_type\": \"MATERIAL\",\n  \"event_type_zh\": \"物质\",\n  \"core_process\": \"放牧\",\n  \"participants\": [\n    {\n      \"role\": \"Actor\",\n      \"mention\": \"我\",\n      \"normalized_entity\": \"陈锐霆\",\n      \"certainty\": \"HIGH\"\n    },\n    {\n      \"role\": \"Actor\",\n      \"mention\": \"我同年的一些小孩\",\n      \"normalized_entity\": null,\n      \"certainty\": \"MEDIUM\"\n    },\n    {\n      \"role\": \"Goal\",\n      \"mention\": \"牛群\",\n      \"normalized_entity\": \"村里的牛群\",\n      \"certainty\": \"HIGH\"\n    }\n  ],\n  \"circumstances\": [\n    {\n      \"kind\": \"TIME\",\n      \"value\": \"8岁的时候\",\n      \"normalized_value\": \"8岁\"\n    },\n    {\n      \"kind\": \"LOCATION\",\n      \"value\": \"东山\",\n      \"normalized_value\": \"东山\"\n    },\n    {\n      \"kind\": \"MANNER\",\n      \"value\": \"嘻嘻哈哈的\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"PURPOSE\",\n      \"value\": \"帮助家里边使用\",\n      \"normalized_value\": null\n    }\n  ],\n  \"projected_content\": null,\n  \"evidence_quote\": \"有几十头牛吧，集体的找人来放养嘛，到东山去放牧。\",\n  \"type_basis\": \"核心过程“放牧”为物质行动，参与者为儿童（Actor）和牛群（Goal）；“捡柴、拾粪”同属物质劳动；“听说日本兵舰”为伴随感知，不改变主导类型。角色均在MATERIAL允许词表内。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 3041,
+    "total_tokens": 11907,
+    "completion_tokens": 8866,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8432
+    },
+    "time_to_first_token_ms": 111520,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8865000
+  }
+}

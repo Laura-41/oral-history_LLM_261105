@@ -1,0 +1,81 @@
+{
+  "run_time": "2026-11-05T19:07:09",
+  "run_stage": "CONTROLLED_EVENT_RECONSTRUCTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3-frozen",
+  "schema_version": "event_candidate_v1.0",
+  "packet_version": "v1.0",
+  "packet_id": "DEMO-P03",
+  "doc_id": "CHF-V2-01",
+  "source_segment_ids": [
+    "CHF-V2-01-S0007",
+    "CHF-V2-01-S0009",
+    "CHF-V2-01-S0016",
+    "CHF-V2-01-S0018",
+    "CHF-V2-01-S0020",
+    "CHF-V2-01-S0022",
+    "CHF-V2-01-S0024"
+  ],
+  "json_valid": true,
+  "schema_errors": [
+    "MATERIAL缺少必需角色：Actor"
+  ],
+  "evidence_supported": true,
+  "evidence_segment_id": "CHF-V2-01-S0020",
+  "technical_passed": false,
+  "parsed_output": {
+    "event_name": "陈海峰被选送到皖南学习",
+    "event_type": "MATERIAL",
+    "event_type_zh": "物质",
+    "core_process": "选送",
+    "participants": [
+      {
+        "role": "Goal",
+        "mention": "我",
+        "normalized_entity": "陈海峰",
+        "certainty": "HIGH"
+      }
+    ],
+    "circumstances": [
+      {
+        "kind": "LOCATION",
+        "value": "皖南",
+        "normalized_value": "皖南"
+      },
+      {
+        "kind": "PURPOSE",
+        "value": "学习",
+        "normalized_value": "学习"
+      },
+      {
+        "kind": "MANNER",
+        "value": "半自愿半抽调",
+        "normalized_value": "半自愿半抽调"
+      },
+      {
+        "kind": "CAUSE",
+        "value": "工人出身，又是经过和日本鬼子打了三十多次仗了，有考验，又是情报站的副总站长",
+        "normalized_value": "工人出身、经过三十多次战斗考验、任情报站副总站长"
+      }
+    ],
+    "projected_content": null,
+    "evidence_quote": "那个时候是两个因素。一个因素是我们自己，因为知道皖南有一个教导队，有抗大了，原来不知道。教导队是抗大的，就说送干部去学习，那么首先送谁呢？就选到我了，因为我是工人出身，又是经过和日本鬼子打了三十多次仗了，有考验，又是情报站的副总站长，是不是，那么这样子选拔了。",
+    "type_basis": "核心过程为组织性选送并伴随空间移动，属于物质过程；‘我’是受选送者，标为Goal；无直接引语或命题，排除VERBAL；非身份属性判断，排除RELATIONAL；非内在感知，排除MENTAL；非单纯生理外显，排除BEHAVIORAL；非引入存在，排除EXISTENTIAL。Goal在MATERIAL允许角色词表内。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"陈海峰被选送到皖南学习\",\n  \"event_type\": \"MATERIAL\",\n  \"event_type_zh\": \"物质\",\n  \"core_process\": \"选送\",\n  \"participants\": [\n    {\n      \"role\": \"Goal\",\n      \"mention\": \"我\",\n      \"normalized_entity\": \"陈海峰\",\n      \"certainty\": \"HIGH\"\n    }\n  ],\n  \"circumstances\": [\n    {\n      \"kind\": \"LOCATION\",\n      \"value\": \"皖南\",\n      \"normalized_value\": \"皖南\"\n    },\n    {\n      \"kind\": \"PURPOSE\",\n      \"value\": \"学习\",\n      \"normalized_value\": \"学习\"\n    },\n    {\n      \"kind\": \"MANNER\",\n      \"value\": \"半自愿半抽调\",\n      \"normalized_value\": \"半自愿半抽调\"\n    },\n    {\n      \"kind\": \"CAUSE\",\n      \"value\": \"工人出身，又是经过和日本鬼子打了三十多次仗了，有考验，又是情报站的副总站长\",\n      \"normalized_value\": \"工人出身、经过三十多次战斗考验、任情报站副总站长\"\n    }\n  ],\n  \"projected_content\": null,\n  \"evidence_quote\": \"那个时候是两个因素。一个因素是我们自己，因为知道皖南有一个教导队，有抗大了，原来不知道。教导队是抗大的，就说送干部去学习，那么首先送谁呢？就选到我了，因为我是工人出身，又是经过和日本鬼子打了三十多次仗了，有考验，又是情报站的副总站长，是不是，那么这样子选拔了。\",\n  \"type_basis\": \"核心过程为组织性选送并伴随空间移动，属于物质过程；‘我’是受选送者，标为Goal；无直接引语或命题，排除VERBAL；非身份属性判断，排除RELATIONAL；非内在感知，排除MENTAL；非单纯生理外显，排除BEHAVIORAL；非引入存在，排除EXISTENTIAL。Goal在MATERIAL允许角色词表内。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 3429,
+    "total_tokens": 15284,
+    "completion_tokens": 11855,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 11374
+    },
+    "time_to_first_token_ms": 120762,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11854000
+  }
+}

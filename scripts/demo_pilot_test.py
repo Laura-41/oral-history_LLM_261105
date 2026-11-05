@@ -7,6 +7,7 @@ import argparse
 import json
 import os
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -42,6 +43,18 @@ def parse_args() -> argparse.Namespace:
         required=True,
         choices=tuple(f"DEMO-P{index:02d}" for index in range(1, 7)),
     )
+    parser.add_argument(
+        "--timeout",
+        type=int,
+        default=600,
+        help="单次请求等待上限（秒），默认600。",
+    )
+    parser.add_argument(
+        "--attempts",
+        type=int,
+        default=2,
+        help="连接失败时的总尝试次数，默认2次。",
+    )
     return parser.parse_args()
 
 
@@ -67,6 +80,9 @@ def build_user_prompt(packet: dict[str, Any]) -> str:
 
 def main() -> int:
     args = parse_args()
+    if args.timeout <= 0 or args.attempts <= 0:
+        print("错误：--timeout 和 --attempts 必须是正整数。", file=sys.stderr)
+        return 2
     api_key = os.environ.get("CUC_API_KEY", "").strip()
     base_url = os.environ.get(
         "CUC_BASE_URL", "https://openai.cuc.edu.cn/v1"
@@ -91,14 +107,44 @@ def main() -> int:
         "stream": False,
     }
 
-    try:
-        response = request_json(
-            method="POST",
-            url=f"{base_url}/chat/completions",
-            api_key=api_key,
-            payload=payload,
-            timeout=240,
+    response: dict[str, Any] | None = None
+    last_error: RuntimeError | None = None
+    for attempt in range(1, args.attempts + 1):
+        print(
+            f"请求 {args.model} / {args.packet}："
+            f"第 {attempt}/{args.attempts} 次，最长等待 {args.timeout} 秒……",
+            flush=True,
         )
+        try:
+            response = request_json(
+                method="POST",
+                url=f"{base_url}/chat/completions",
+                api_key=api_key,
+                payload=payload,
+                timeout=args.timeout,
+            )
+            break
+        except RuntimeError as exc:
+            last_error = exc
+            print(f"本次请求失败：{exc}", file=sys.stderr, flush=True)
+            if attempt < args.attempts:
+                wait_seconds = 15 * attempt
+                print(
+                    f"{wait_seconds} 秒后自动重试。"
+                    "提示：服务端可能已处理超时请求，因此重试可能重复计费。",
+                    file=sys.stderr,
+                    flush=True,
+                )
+                time.sleep(wait_seconds)
+
+    if response is None:
+        print(
+            f"测试失败：已尝试 {args.attempts} 次；最后错误：{last_error}",
+            file=sys.stderr,
+        )
+        return 1
+
+    try:
         raw_content = extract_content(response)
     except RuntimeError as exc:
         print(f"测试失败：{exc}", file=sys.stderr)

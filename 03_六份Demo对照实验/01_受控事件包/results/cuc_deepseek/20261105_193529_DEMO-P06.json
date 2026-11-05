@@ -1,0 +1,68 @@
+{
+  "run_time": "2026-11-05T19:35:29",
+  "run_stage": "CONTROLLED_EVENT_RECONSTRUCTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3-frozen",
+  "schema_version": "event_candidate_v1.0",
+  "packet_version": "v1.0",
+  "packet_id": "DEMO-P06",
+  "doc_id": "YYS-01",
+  "source_segment_ids": [
+    "YYS-01-S0008",
+    "YYS-01-S0010",
+    "YYS-01-S0012",
+    "YYS-01-S0014",
+    "YYS-01-S0016",
+    "YYS-01-S0018"
+  ],
+  "json_valid": true,
+  "schema_errors": [],
+  "evidence_supported": true,
+  "evidence_segment_id": "YYS-01-S0018",
+  "technical_passed": true,
+  "parsed_output": {
+    "event_name": "红军从陕甘边界向西安附近集结",
+    "event_type": "MATERIAL",
+    "event_type_zh": "物质",
+    "core_process": "集结",
+    "participants": [
+      {
+        "role": "Actor",
+        "mention": "我们红军",
+        "normalized_entity": "红军",
+        "certainty": "HIGH"
+      }
+    ],
+    "circumstances": [
+      {
+        "kind": "LOCATION",
+        "value": "陕甘边界",
+        "normalized_value": "陕甘边界"
+      },
+      {
+        "kind": "DIRECTION",
+        "value": "西安附近",
+        "normalized_value": "西安附近"
+      }
+    ],
+    "projected_content": null,
+    "evidence_quote": "我们红军就从陕甘边界向西安附近集结。",
+    "type_basis": "核心过程“集结”是红军作为军事组织向西安附近进行的空间移动和组织行动，Actor=我们红军，DIRECTION=西安附近，LOCATION=陕甘边界为出发地；其他片段所述整训、谈判、宣言等是准备阶段，不改变主导物质类型。角色均在MATERIAL允许词表内。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "{\n  \"event_name\": \"红军从陕甘边界向西安附近集结\",\n  \"event_type\": \"MATERIAL\",\n  \"event_type_zh\": \"物质\",\n  \"core_process\": \"集结\",\n  \"participants\": [\n    {\n      \"role\": \"Actor\",\n      \"mention\": \"我们红军\",\n      \"normalized_entity\": \"红军\",\n      \"certainty\": \"HIGH\"\n    }\n  ],\n  \"circumstances\": [\n    {\n      \"kind\": \"LOCATION\",\n      \"value\": \"陕甘边界\",\n      \"normalized_value\": \"陕甘边界\"\n    },\n    {\n      \"kind\": \"DIRECTION\",\n      \"value\": \"西安附近\",\n      \"normalized_value\": \"西安附近\"\n    }\n  ],\n  \"projected_content\": null,\n  \"evidence_quote\": \"我们红军就从陕甘边界向西安附近集结。\",\n  \"type_basis\": \"核心过程“集结”是红军作为军事组织向西安附近进行的空间移动和组织行动，Actor=我们红军，DIRECTION=西安附近，LOCATION=陕甘边界为出发地；其他片段所述整训、谈判、宣言等是准备阶段，不改变主导物质类型。角色均在MATERIAL允许词表内。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 3196,
+    "total_tokens": 11022,
+    "completion_tokens": 7826,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7529
+    },
+    "time_to_first_token_ms": 94761,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7825000
+  }
+}

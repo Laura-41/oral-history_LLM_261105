@@ -1,0 +1,1348 @@
+{
+  "run_time": "2026-11-06T14:08:03",
+  "run_stage": "DOCUMENT_CONSOLIDATION_AND_SCOPE",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+document-consolidation-v0.1+output-contract-v0.3",
+  "technical_document_id": "BATCH01-DOC01",
+  "document_id": "02.陈海峰（一访）（一校后 阅读版）.docx",
+  "input_candidate_ids": [
+    "BATCH01-DOC01-W001-E01",
+    "BATCH01-DOC01-W001-E02",
+    "BATCH01-DOC01-W001-E03",
+    "BATCH01-DOC01-W002-E01",
+    "BATCH01-DOC01-W002-E02",
+    "BATCH01-DOC01-W002-E03",
+    "BATCH01-DOC01-W003-E01",
+    "BATCH01-DOC01-W003-E02",
+    "BATCH01-DOC01-W003-E03",
+    "BATCH01-DOC01-W003-E04",
+    "BATCH01-DOC01-W004-E01",
+    "BATCH01-DOC01-W004-E02",
+    "BATCH01-DOC01-W005-E01"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "input_candidate_count": 13,
+    "document_event_count": 9,
+    "candidate_decision_count": 13,
+    "personal_event_count": 7,
+    "context_event_count": 2,
+    "uncertain_event_count": 0,
+    "needs_review_count": 0
+  },
+  "normalization_applied": false,
+  "normalization_error": null,
+  "parsed_output": {
+    "schema_version": "document-consolidation-v1.0",
+    "technical_document_id": "BATCH01-DOC01",
+    "document_id": "02.陈海峰（一访）（一校后 阅读版）.docx",
+    "interviewee": "陈海峰",
+    "document_events": [
+      {
+        "document_event_id": "BATCH01-DOC01-DE001",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W001-E01",
+          "BATCH01-DOC01-W002-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0003",
+          "BATCH01-DOC01-S0005",
+          "BATCH01-DOC01-S0007",
+          "BATCH01-DOC01-S0020"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0007"
+        ],
+        "scope_evidence_quote": "我们带了四条枪。等于是表面武装而过（音）了，实际上是进去了，慢慢地控制这个部队。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈海峰等八人带枪加入并控制地方武装",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "带枪加入并控制地方武装",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们八个人",
+              "normalized_entity": "陈海峰等八人",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "离开我们家里九里路的一个武装",
+              "normalized_entity": "离家九里路的地方武装",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "当时国民党溃退的时候",
+              "normalized_value": "国民党溃退时"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们带了四条枪。等于是表面武装而过（音）了，实际上是进去了，慢慢地控制这个部队。",
+          "type_basis": "核心过程为带枪进入并控制地方武装，属组织行动/物质过程；Actor为陈海峰等八人，Goal为该武装；不是言语、心理或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC01-DE002",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W001-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0012",
+          "BATCH01-DOC01-S0014"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0012"
+        ],
+        "scope_evidence_quote": "我们就和新四军接上头了。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "所在部队与新四军接头并改编为江抗三路",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "接头并改编为江抗三路",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰所在地方武装",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "陈毅元帅",
+              "normalized_entity": "陈毅",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "我们这个部队",
+              "normalized_entity": "陈海峰所在地方武装",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "以后并到那里去，就和陈毅元帅见面了。陈毅元帅把我们这个部队改成“江南抗日义勇军第三路”",
+          "type_basis": "核心过程为所在部队与新四军接头并被陈毅改编为江抗三路，属组织行动/物质过程；保留受访者作为‘我们’一员的接头阶段，不把整体仅降为机构沿革。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC01-DE003",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W001-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0016",
+          "BATCH01-DOC01-S0018",
+          "BATCH01-DOC01-S0020"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "COLLECTIVE_WITHOUT_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0018"
+        ],
+        "scope_evidence_quote": "警卫三师就是我们这个旅的，我们后来六纵24集团军里面的一个师",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "江抗三路后续发展改编为正规军及24集团军",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "发展改编为正规军及24集团军",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "这个部队",
+              "normalized_entity": "江南抗日义勇军第三路",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1941年“皖南事变”以后",
+              "normalized_value": "1941年皖南事变后"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "到1941年“皖南事变”以后，就并到粟裕的一师，就变成一师二旅六团，变成正规军了。",
+          "type_basis": "核心过程为部队后续发展、并入主力并改编为正规军及24集团军，属组织沿革/物质过程；叙述对象为部队长期发展，无本人具体参与证据，故作为讲述背景。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC01-DE004",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W002-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0024",
+          "BATCH01-DOC01-S0026"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0024"
+        ],
+        "scope_evidence_quote": "没有搞医之前，我和日本鬼子面对面的战斗（有）三十多次！",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈海峰与日军面对面战斗三十多次",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "与日本鬼子面对面战斗",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "没有搞医之前",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "江南、茅山地区",
+              "normalized_value": "江南茅山地区"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "没有搞医之前，我和日本鬼子面对面的战斗（有）三十多次！",
+          "type_basis": "核心过程为武装战斗，属物质行动；Actor为陈海峰本人；不是心理、言语或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC01-DE005",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W002-E03",
+          "BATCH01-DOC01-W003-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0028",
+          "BATCH01-DOC01-S0030",
+          "BATCH01-DOC01-S0032",
+          "BATCH01-DOC01-S0034",
+          "BATCH01-DOC01-S0036",
+          "BATCH01-DOC01-S0038",
+          "BATCH01-DOC01-S0040",
+          "BATCH01-DOC01-S0042"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0030"
+        ],
+        "scope_evidence_quote": "陈剑雄呢，他接总站站长，我是副站长，我就指挥十几个情报站。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈海峰任澄西抗日情报总站副站长并领导情报站开展侦察锄奸工作",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "任副站长并领导情报站开展侦察锄奸",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "十几个情报站",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "汉奸",
+              "normalized_entity": "汉奸",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "维持会的会长",
+              "normalized_entity": "维持会会长",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "常州周围，常州、宜兴、金坛、江阴一带",
+              "normalized_value": "常州周边地区"
+            },
+            {
+              "kind": "MANNER",
+              "value": "尽量少用枪，少用子弹",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "便于我们战斗，便于我们抗日",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "陈剑雄呢，他接总站站长，我是副站长，我就指挥十几个情报站。",
+          "type_basis": "主导过程为担任情报总站副站长、指挥十几个情报站并组织侦察、镇压或争取汉奸，属组织行动/物质过程；‘副站长’身份是背景，不把整体改判为关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC01-DE006",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W003-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0044",
+          "BATCH01-DOC01-S0046",
+          "BATCH01-DOC01-S0048"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "COLLECTIVE_WITHOUT_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0044"
+        ],
+        "scope_evidence_quote": "我们新四军刚到江南的时候，（从）山上刚下来，穿的衣服都是补丁，都是破的，几个月都没剪头发。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "新四军初到江南由被轻视到赢得民众支持并壮大",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "赢得民众支持并壮大",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "新四军",
+              "normalized_entity": "新四军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "江南",
+              "normalized_value": "江南"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "所以慢慢印象就改变了，（说）新四军是抗日的，这参军的人就多了。参军（的）人越来越多，部队就壮大了，装备也越来越好了。",
+          "type_basis": "核心过程为新四军在江南从被轻视到获得支持、参军增多和部队壮大，属组织状态的可观察变化/物质过程；叙述为部队整体经历，无本人具体参与证据，作为讲述背景。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC01-DE007",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W003-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0050"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0050"
+        ],
+        "scope_evidence_quote": "我们一个团是分得很散的，在好多个县，我们在茅山地区，一直到江阴，后来到江阴东乡，我们都去，部队打游击嘛。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "所在部队在江南分散打游击",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "分散打游击",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们部队",
+              "normalized_entity": "新四军部队",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "茅山地区、江阴、江阴东乡",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "分散活动",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们的部队啊，一个连是很少在一块活动的，经常是一个排，最多一个连。我们一个团是分得很散的，在好多个县，我们在茅山地区，一直到江阴，后来到江阴东乡，我们都去，部队打游击嘛。",
+          "type_basis": "核心过程为部队分散活动、打游击，属军事空间移动和组织行动/物质过程；‘我们都去’表明受访者随集体行动，故为个人经历。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC01-DE008",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W003-E04",
+          "BATCH01-DOC01-W004-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0052"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECTLY_AFFECTED"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0052"
+        ],
+        "scope_evidence_quote": "在渡运河的时候，打了一场遭遇战，我们牺牲了18个人，还牺牲一个营长呢，那次我还掉到河里去了。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "渡运河时与日军遭遇战",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "打遭遇战",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰所在部队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "十余个鬼子",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "江南常州南门外坂上李家桥",
+              "normalized_value": "江苏省常州市南门外坂上李家桥"
+            },
+            {
+              "kind": "TIME",
+              "value": "渡运河的时候",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "在渡运河的时候，打了一场遭遇战，我们牺牲了18个人，还牺牲一个营长呢，那次我还掉到河里去了。",
+          "type_basis": "核心过程为渡运河时与日军遭遇并交战，造成人员牺牲，属物质战斗过程；受访者本人落水，属直接受影响。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC01-DE009",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W004-E02",
+          "BATCH01-DOC01-W005-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0054",
+          "BATCH01-DOC01-S0056",
+          "BATCH01-DOC01-S0058",
+          "BATCH01-DOC01-S0065",
+          "BATCH01-DOC01-S0070",
+          "BATCH01-DOC01-S0072",
+          "BATCH01-DOC01-S0074",
+          "BATCH01-DOC01-S0076",
+          "BATCH01-DOC01-S0078",
+          "BATCH01-DOC01-S0080"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0078"
+        ],
+        "scope_evidence_quote": "一冒烟，我一看，嘿，这次机会来了，我就一个箭步蹿到面前的一块玉米地里。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "庙桥战斗及突围脱险",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "打庙桥战斗并突围脱险",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰所在部队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "日本鬼子",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "庙桥",
+              "normalized_value": "庙桥"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "望山桥",
+              "normalized_value": "望山桥"
+            },
+            {
+              "kind": "MANNER",
+              "value": "靠手榴弹",
+              "normalized_value": "使用手榴弹"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那么这样子呢，这个就是在庙桥打了一仗。庙桥打了一仗以后，我们等于（是）突围，就突出了，我们就到望山桥，再往前有一片山。",
+          "type_basis": "核心过程为在庙桥与日军交战并突围脱险，属军事行动和空间移动/物质过程；受访者本人投弹、转移并追赶部队，故为个人经历。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "candidate_id": "BATCH01-DOC01-W001-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE001"
+        ],
+        "reason": "与W002-E01同指八人带枪加入地方武装，S0020为回顾性概括，归并到DE001。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W001-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE002"
+        ],
+        "reason": "单独保留为所在部队与新四军接头并改编为江抗三路，保留本人作为‘我们’一员的接头阶段。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W001-E03",
+        "action": "CONTEXT_ONLY",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE003"
+        ],
+        "reason": "主要叙述江抗三路后续改编为正规军及24集团军，属部队长期沿革，无本人具体参与证据，作为讲述背景保留。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W002-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE001"
+        ],
+        "reason": "与W001-E01同指八人带枪加入地方武装，S0020为回顾性概括，归并到DE001。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W002-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE004"
+        ],
+        "reason": "单独保留为陈海峰与日军面对面战斗三十多次的个人经历总结。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W002-E03",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE005"
+        ],
+        "reason": "与W003-E01同指陈海峰领导情报站开展抗日情报与锄奸工作，归并到DE005。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W003-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE005"
+        ],
+        "reason": "与W002-E03同指陈海峰领导情报站开展抗日情报与锄奸工作，归并到DE005。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W003-E02",
+        "action": "CONTEXT_ONLY",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE006"
+        ],
+        "reason": "叙述新四军初到江南的整体形象转变和壮大，无本人具体参与证据，作为讲述背景保留。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W003-E03",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE007"
+        ],
+        "reason": "单独保留为所在部队在江南分散打游击；‘我们都去’表明受访者随集体行动。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W003-E04",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE008"
+        ],
+        "reason": "与W004-E01同指渡运河时遭遇战，归并到DE008。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W004-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE008"
+        ],
+        "reason": "与W003-E04同指渡运河时遭遇战，归并到DE008。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W004-E02",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE009"
+        ],
+        "reason": "与W005-E01同指庙桥战斗及突围脱险，归并到DE009。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W005-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE009"
+        ],
+        "reason": "与W004-E02同指庙桥战斗及突围脱险，归并到DE009。"
+      }
+    ]
+  },
+  "normalized_output": {
+    "schema_version": "document-consolidation-v1.0",
+    "technical_document_id": "BATCH01-DOC01",
+    "document_id": "02.陈海峰（一访）（一校后 阅读版）.docx",
+    "interviewee": "陈海峰",
+    "document_events": [
+      {
+        "document_event_id": "BATCH01-DOC01-DE001",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W001-E01",
+          "BATCH01-DOC01-W002-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0003",
+          "BATCH01-DOC01-S0005",
+          "BATCH01-DOC01-S0007",
+          "BATCH01-DOC01-S0020"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0007"
+        ],
+        "scope_evidence_quote": "我们带了四条枪。等于是表面武装而过（音）了，实际上是进去了，慢慢地控制这个部队。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈海峰等八人带枪加入并控制地方武装",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "带枪加入并控制地方武装",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们八个人",
+              "normalized_entity": "陈海峰等八人",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "离开我们家里九里路的一个武装",
+              "normalized_entity": "离家九里路的地方武装",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "当时国民党溃退的时候",
+              "normalized_value": "国民党溃退时"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们带了四条枪。等于是表面武装而过（音）了，实际上是进去了，慢慢地控制这个部队。",
+          "type_basis": "核心过程为带枪进入并控制地方武装，属组织行动/物质过程；Actor为陈海峰等八人，Goal为该武装；不是言语、心理或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC01-DE002",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W001-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0012",
+          "BATCH01-DOC01-S0014"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0012"
+        ],
+        "scope_evidence_quote": "我们就和新四军接上头了。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "所在部队与新四军接头并改编为江抗三路",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "接头并改编为江抗三路",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰所在地方武装",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "陈毅元帅",
+              "normalized_entity": "陈毅",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "我们这个部队",
+              "normalized_entity": "陈海峰所在地方武装",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "以后并到那里去，就和陈毅元帅见面了。陈毅元帅把我们这个部队改成“江南抗日义勇军第三路”",
+          "type_basis": "核心过程为所在部队与新四军接头并被陈毅改编为江抗三路，属组织行动/物质过程；保留受访者作为‘我们’一员的接头阶段，不把整体仅降为机构沿革。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC01-DE003",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W001-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0016",
+          "BATCH01-DOC01-S0018",
+          "BATCH01-DOC01-S0020"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "COLLECTIVE_WITHOUT_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0018"
+        ],
+        "scope_evidence_quote": "警卫三师就是我们这个旅的，我们后来六纵24集团军里面的一个师",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "江抗三路后续发展改编为正规军及24集团军",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "发展改编为正规军及24集团军",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "这个部队",
+              "normalized_entity": "江南抗日义勇军第三路",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1941年“皖南事变”以后",
+              "normalized_value": "1941年皖南事变后"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "到1941年“皖南事变”以后，就并到粟裕的一师，就变成一师二旅六团，变成正规军了。",
+          "type_basis": "核心过程为部队后续发展、并入主力并改编为正规军及24集团军，属组织沿革/物质过程；叙述对象为部队长期发展，无本人具体参与证据，故作为讲述背景。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC01-DE004",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W002-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0024",
+          "BATCH01-DOC01-S0026"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0024"
+        ],
+        "scope_evidence_quote": "没有搞医之前，我和日本鬼子面对面的战斗（有）三十多次！",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈海峰与日军面对面战斗三十多次",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "与日本鬼子面对面战斗",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "没有搞医之前",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "江南、茅山地区",
+              "normalized_value": "江南茅山地区"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "没有搞医之前，我和日本鬼子面对面的战斗（有）三十多次！",
+          "type_basis": "核心过程为武装战斗，属物质行动；Actor为陈海峰本人；不是心理、言语或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC01-DE005",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W002-E03",
+          "BATCH01-DOC01-W003-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0028",
+          "BATCH01-DOC01-S0030",
+          "BATCH01-DOC01-S0032",
+          "BATCH01-DOC01-S0034",
+          "BATCH01-DOC01-S0036",
+          "BATCH01-DOC01-S0038",
+          "BATCH01-DOC01-S0040",
+          "BATCH01-DOC01-S0042"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0030"
+        ],
+        "scope_evidence_quote": "陈剑雄呢，他接总站站长，我是副站长，我就指挥十几个情报站。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈海峰任澄西抗日情报总站副站长并领导情报站开展侦察锄奸工作",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "任副站长并领导情报站开展侦察锄奸",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "十几个情报站",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "汉奸",
+              "normalized_entity": "汉奸",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "维持会的会长",
+              "normalized_entity": "维持会会长",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "常州周围，常州、宜兴、金坛、江阴一带",
+              "normalized_value": "常州周边地区"
+            },
+            {
+              "kind": "MANNER",
+              "value": "尽量少用枪，少用子弹",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "便于我们战斗，便于我们抗日",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "陈剑雄呢，他接总站站长，我是副站长，我就指挥十几个情报站。",
+          "type_basis": "主导过程为担任情报总站副站长、指挥十几个情报站并组织侦察、镇压或争取汉奸，属组织行动/物质过程；‘副站长’身份是背景，不把整体改判为关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC01-DE006",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W003-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0044",
+          "BATCH01-DOC01-S0046",
+          "BATCH01-DOC01-S0048"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "COLLECTIVE_WITHOUT_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0044"
+        ],
+        "scope_evidence_quote": "我们新四军刚到江南的时候，（从）山上刚下来，穿的衣服都是补丁，都是破的，几个月都没剪头发。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "新四军初到江南由被轻视到赢得民众支持并壮大",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "赢得民众支持并壮大",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "新四军",
+              "normalized_entity": "新四军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "江南",
+              "normalized_value": "江南"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "所以慢慢印象就改变了，（说）新四军是抗日的，这参军的人就多了。参军（的）人越来越多，部队就壮大了，装备也越来越好了。",
+          "type_basis": "核心过程为新四军在江南从被轻视到获得支持、参军增多和部队壮大，属组织状态的可观察变化/物质过程；叙述为部队整体经历，无本人具体参与证据，作为讲述背景。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC01-DE007",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W003-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0050"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0050"
+        ],
+        "scope_evidence_quote": "我们一个团是分得很散的，在好多个县，我们在茅山地区，一直到江阴，后来到江阴东乡，我们都去，部队打游击嘛。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "所在部队在江南分散打游击",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "分散打游击",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们部队",
+              "normalized_entity": "新四军部队",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "茅山地区、江阴、江阴东乡",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "分散活动",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们的部队啊，一个连是很少在一块活动的，经常是一个排，最多一个连。我们一个团是分得很散的，在好多个县，我们在茅山地区，一直到江阴，后来到江阴东乡，我们都去，部队打游击嘛。",
+          "type_basis": "核心过程为部队分散活动、打游击，属军事空间移动和组织行动/物质过程；‘我们都去’表明受访者随集体行动，故为个人经历。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC01-DE008",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W003-E04",
+          "BATCH01-DOC01-W004-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0052"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECTLY_AFFECTED"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0052"
+        ],
+        "scope_evidence_quote": "在渡运河的时候，打了一场遭遇战，我们牺牲了18个人，还牺牲一个营长呢，那次我还掉到河里去了。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "渡运河时与日军遭遇战",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "打遭遇战",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰所在部队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "十余个鬼子",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "江南常州南门外坂上李家桥",
+              "normalized_value": "江苏省常州市南门外坂上李家桥"
+            },
+            {
+              "kind": "TIME",
+              "value": "渡运河的时候",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "在渡运河的时候，打了一场遭遇战，我们牺牲了18个人，还牺牲一个营长呢，那次我还掉到河里去了。",
+          "type_basis": "核心过程为渡运河时与日军遭遇并交战，造成人员牺牲，属物质战斗过程；受访者本人落水，属直接受影响。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC01-DE009",
+        "source_candidate_ids": [
+          "BATCH01-DOC01-W004-E02",
+          "BATCH01-DOC01-W005-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0054",
+          "BATCH01-DOC01-S0056",
+          "BATCH01-DOC01-S0058",
+          "BATCH01-DOC01-S0065",
+          "BATCH01-DOC01-S0070",
+          "BATCH01-DOC01-S0072",
+          "BATCH01-DOC01-S0074",
+          "BATCH01-DOC01-S0076",
+          "BATCH01-DOC01-S0078",
+          "BATCH01-DOC01-S0080"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC01-S0078"
+        ],
+        "scope_evidence_quote": "一冒烟，我一看，嘿，这次机会来了，我就一个箭步蹿到面前的一块玉米地里。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "庙桥战斗及突围脱险",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "打庙桥战斗并突围脱险",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰所在部队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "日本鬼子",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "庙桥",
+              "normalized_value": "庙桥"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "望山桥",
+              "normalized_value": "望山桥"
+            },
+            {
+              "kind": "MANNER",
+              "value": "靠手榴弹",
+              "normalized_value": "使用手榴弹"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那么这样子呢，这个就是在庙桥打了一仗。庙桥打了一仗以后，我们等于（是）突围，就突出了，我们就到望山桥，再往前有一片山。",
+          "type_basis": "核心过程为在庙桥与日军交战并突围脱险，属军事行动和空间移动/物质过程；受访者本人投弹、转移并追赶部队，故为个人经历。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "candidate_id": "BATCH01-DOC01-W001-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE001"
+        ],
+        "reason": "与W002-E01同指八人带枪加入地方武装，S0020为回顾性概括，归并到DE001。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W001-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE002"
+        ],
+        "reason": "单独保留为所在部队与新四军接头并改编为江抗三路，保留本人作为‘我们’一员的接头阶段。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W001-E03",
+        "action": "CONTEXT_ONLY",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE003"
+        ],
+        "reason": "主要叙述江抗三路后续改编为正规军及24集团军，属部队长期沿革，无本人具体参与证据，作为讲述背景保留。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W002-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE001"
+        ],
+        "reason": "与W001-E01同指八人带枪加入地方武装，S0020为回顾性概括，归并到DE001。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W002-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE004"
+        ],
+        "reason": "单独保留为陈海峰与日军面对面战斗三十多次的个人经历总结。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W002-E03",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE005"
+        ],
+        "reason": "与W003-E01同指陈海峰领导情报站开展抗日情报与锄奸工作，归并到DE005。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W003-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE005"
+        ],
+        "reason": "与W002-E03同指陈海峰领导情报站开展抗日情报与锄奸工作，归并到DE005。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W003-E02",
+        "action": "CONTEXT_ONLY",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE006"
+        ],
+        "reason": "叙述新四军初到江南的整体形象转变和壮大，无本人具体参与证据，作为讲述背景保留。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W003-E03",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE007"
+        ],
+        "reason": "单独保留为所在部队在江南分散打游击；‘我们都去’表明受访者随集体行动。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W003-E04",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE008"
+        ],
+        "reason": "与W004-E01同指渡运河时遭遇战，归并到DE008。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W004-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE008"
+        ],
+        "reason": "与W003-E04同指渡运河时遭遇战，归并到DE008。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W004-E02",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE009"
+        ],
+        "reason": "与W005-E01同指庙桥战斗及突围脱险，归并到DE009。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W005-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC01-DE009"
+        ],
+        "reason": "与W004-E02同指庙桥战斗及突围脱险，归并到DE009。"
+      }
+    ]
+  },
+  "raw_content": "{\n  \"schema_version\": \"document-consolidation-v1.0\",\n  \"technical_document_id\": \"BATCH01-DOC01\",\n  \"document_id\": \"02.陈海峰（一访）（一校后 阅读版）.docx\",\n  \"interviewee\": \"陈海峰\",\n  \"document_events\": [\n    {\n      \"document_event_id\": \"BATCH01-DOC01-DE001\",\n      \"source_candidate_ids\": [\n        \"BATCH01-DOC01-W001-E01\",\n        \"BATCH01-DOC01-W002-E01\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0003\",\n        \"BATCH01-DOC01-S0005\",\n        \"BATCH01-DOC01-S0007\",\n        \"BATCH01-DOC01-S0020\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0007\"\n      ],\n      \"scope_evidence_quote\": \"我们带了四条枪。等于是表面武装而过（音）了，实际上是进去了，慢慢地控制这个部队。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"陈海峰等八人带枪加入并控制地方武装\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"带枪加入并控制地方武装\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们八个人\",\n            \"normalized_entity\": \"陈海峰等八人\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"离开我们家里九里路的一个武装\",\n            \"normalized_entity\": \"离家九里路的地方武装\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"当时国民党溃退的时候\",\n            \"normalized_value\": \"国民党溃退时\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们带了四条枪。等于是表面武装而过（音）了，实际上是进去了，慢慢地控制这个部队。\",\n        \"type_basis\": \"核心过程为带枪进入并控制地方武装，属组织行动/物质过程；Actor为陈海峰等八人，Goal为该武装；不是言语、心理或关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH01-DOC01-DE002\",\n      \"source_candidate_ids\": [\n        \"BATCH01-DOC01-W001-E02\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0012\",\n        \"BATCH01-DOC01-S0014\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0012\"\n      ],\n      \"scope_evidence_quote\": \"我们就和新四军接上头了。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"所在部队与新四军接头并改编为江抗三路\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"接头并改编为江抗三路\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰所在地方武装\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"陈毅元帅\",\n            \"normalized_entity\": \"陈毅\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"我们这个部队\",\n            \"normalized_entity\": \"陈海峰所在地方武装\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": null,\n        \"evidence_quote\": \"以后并到那里去，就和陈毅元帅见面了。陈毅元帅把我们这个部队改成“江南抗日义勇军第三路”\",\n        \"type_basis\": \"核心过程为所在部队与新四军接头并被陈毅改编为江抗三路，属组织行动/物质过程；保留受访者作为‘我们’一员的接头阶段，不把整体仅降为机构沿革。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH01-DOC01-DE003\",\n      \"source_candidate_ids\": [\n        \"BATCH01-DOC01-W001-E03\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0016\",\n        \"BATCH01-DOC01-S0018\",\n        \"BATCH01-DOC01-S0020\"\n      ],\n      \"experience_scope\": \"NARRATED_CONTEXT\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITHOUT_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0018\"\n      ],\n      \"scope_evidence_quote\": \"警卫三师就是我们这个旅的，我们后来六纵24集团军里面的一个师\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"江抗三路后续发展改编为正规军及24集团军\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"发展改编为正规军及24集团军\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"这个部队\",\n            \"normalized_entity\": \"江南抗日义勇军第三路\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"1941年“皖南事变”以后\",\n            \"normalized_value\": \"1941年皖南事变后\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"到1941年“皖南事变”以后，就并到粟裕的一师，就变成一师二旅六团，变成正规军了。\",\n        \"type_basis\": \"核心过程为部队后续发展、并入主力并改编为正规军及24集团军，属组织沿革/物质过程；叙述对象为部队长期发展，无本人具体参与证据，故作为讲述背景。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH01-DOC01-DE004\",\n      \"source_candidate_ids\": [\n        \"BATCH01-DOC01-W002-E02\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0024\",\n        \"BATCH01-DOC01-S0026\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"DIRECT_FIRST_PERSON\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0024\"\n      ],\n      \"scope_evidence_quote\": \"没有搞医之前，我和日本鬼子面对面的战斗（有）三十多次！\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"陈海峰与日军面对面战斗三十多次\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"与日本鬼子面对面战斗\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"没有搞医之前\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"江南、茅山地区\",\n            \"normalized_value\": \"江南茅山地区\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"没有搞医之前，我和日本鬼子面对面的战斗（有）三十多次！\",\n        \"type_basis\": \"核心过程为武装战斗，属物质行动；Actor为陈海峰本人；不是心理、言语或关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH01-DOC01-DE005\",\n      \"source_candidate_ids\": [\n        \"BATCH01-DOC01-W002-E03\",\n        \"BATCH01-DOC01-W003-E01\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0028\",\n        \"BATCH01-DOC01-S0030\",\n        \"BATCH01-DOC01-S0032\",\n        \"BATCH01-DOC01-S0034\",\n        \"BATCH01-DOC01-S0036\",\n        \"BATCH01-DOC01-S0038\",\n        \"BATCH01-DOC01-S0040\",\n        \"BATCH01-DOC01-S0042\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"DIRECT_FIRST_PERSON\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0030\"\n      ],\n      \"scope_evidence_quote\": \"陈剑雄呢，他接总站站长，我是副站长，我就指挥十几个情报站。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"陈海峰任澄西抗日情报总站副站长并领导情报站开展侦察锄奸工作\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"任副站长并领导情报站开展侦察锄奸\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"十几个情报站\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"汉奸\",\n            \"normalized_entity\": \"汉奸\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"维持会的会长\",\n            \"normalized_entity\": \"维持会会长\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"常州周围，常州、宜兴、金坛、江阴一带\",\n            \"normalized_value\": \"常州周边地区\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"尽量少用枪，少用子弹\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"便于我们战斗，便于我们抗日\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"陈剑雄呢，他接总站站长，我是副站长，我就指挥十几个情报站。\",\n        \"type_basis\": \"主导过程为担任情报总站副站长、指挥十几个情报站并组织侦察、镇压或争取汉奸，属组织行动/物质过程；‘副站长’身份是背景，不把整体改判为关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH01-DOC01-DE006\",\n      \"source_candidate_ids\": [\n        \"BATCH01-DOC01-W003-E02\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0044\",\n        \"BATCH01-DOC01-S0046\",\n        \"BATCH01-DOC01-S0048\"\n      ],\n      \"experience_scope\": \"NARRATED_CONTEXT\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITHOUT_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0044\"\n      ],\n      \"scope_evidence_quote\": \"我们新四军刚到江南的时候，（从）山上刚下来，穿的衣服都是补丁，都是破的，几个月都没剪头发。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"新四军初到江南由被轻视到赢得民众支持并壮大\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"赢得民众支持并壮大\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"新四军\",\n            \"normalized_entity\": \"新四军\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"江南\",\n            \"normalized_value\": \"江南\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"所以慢慢印象就改变了，（说）新四军是抗日的，这参军的人就多了。参军（的）人越来越多，部队就壮大了，装备也越来越好了。\",\n        \"type_basis\": \"核心过程为新四军在江南从被轻视到获得支持、参军增多和部队壮大，属组织状态的可观察变化/物质过程；叙述为部队整体经历，无本人具体参与证据，作为讲述背景。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH01-DOC01-DE007\",\n      \"source_candidate_ids\": [\n        \"BATCH01-DOC01-W003-E03\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0050\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0050\"\n      ],\n      \"scope_evidence_quote\": \"我们一个团是分得很散的，在好多个县，我们在茅山地区，一直到江阴，后来到江阴东乡，我们都去，部队打游击嘛。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"所在部队在江南分散打游击\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"分散打游击\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们部队\",\n            \"normalized_entity\": \"新四军部队\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"茅山地区、江阴、江阴东乡\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"分散活动\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们的部队啊，一个连是很少在一块活动的，经常是一个排，最多一个连。我们一个团是分得很散的，在好多个县，我们在茅山地区，一直到江阴，后来到江阴东乡，我们都去，部队打游击嘛。\",\n        \"type_basis\": \"核心过程为部队分散活动、打游击，属军事空间移动和组织行动/物质过程；‘我们都去’表明受访者随集体行动，故为个人经历。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH01-DOC01-DE008\",\n      \"source_candidate_ids\": [\n        \"BATCH01-DOC01-W003-E04\",\n        \"BATCH01-DOC01-W004-E01\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0052\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"DIRECTLY_AFFECTED\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0052\"\n      ],\n      \"scope_evidence_quote\": \"在渡运河的时候，打了一场遭遇战，我们牺牲了18个人，还牺牲一个营长呢，那次我还掉到河里去了。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"渡运河时与日军遭遇战\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"打遭遇战\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰所在部队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"十余个鬼子\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"江南常州南门外坂上李家桥\",\n            \"normalized_value\": \"江苏省常州市南门外坂上李家桥\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"渡运河的时候\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"在渡运河的时候，打了一场遭遇战，我们牺牲了18个人，还牺牲一个营长呢，那次我还掉到河里去了。\",\n        \"type_basis\": \"核心过程为渡运河时与日军遭遇并交战，造成人员牺牲，属物质战斗过程；受访者本人落水，属直接受影响。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH01-DOC01-DE009\",\n      \"source_candidate_ids\": [\n        \"BATCH01-DOC01-W004-E02\",\n        \"BATCH01-DOC01-W005-E01\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0054\",\n        \"BATCH01-DOC01-S0056\",\n        \"BATCH01-DOC01-S0058\",\n        \"BATCH01-DOC01-S0065\",\n        \"BATCH01-DOC01-S0070\",\n        \"BATCH01-DOC01-S0072\",\n        \"BATCH01-DOC01-S0074\",\n        \"BATCH01-DOC01-S0076\",\n        \"BATCH01-DOC01-S0078\",\n        \"BATCH01-DOC01-S0080\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"DIRECT_FIRST_PERSON\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0078\"\n      ],\n      \"scope_evidence_quote\": \"一冒烟，我一看，嘿，这次机会来了，我就一个箭步蹿到面前的一块玉米地里。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"庙桥战斗及突围脱险\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"打庙桥战斗并突围脱险\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰所在部队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"日本鬼子\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"庙桥\",\n            \"normalized_value\": \"庙桥\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"望山桥\",\n            \"normalized_value\": \"望山桥\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"靠手榴弹\",\n            \"normalized_value\": \"使用手榴弹\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那么这样子呢，这个就是在庙桥打了一仗。庙桥打了一仗以后，我们等于（是）突围，就突出了，我们就到望山桥，再往前有一片山。\",\n        \"type_basis\": \"核心过程为在庙桥与日军交战并突围脱险，属军事行动和空间移动/物质过程；受访者本人投弹、转移并追赶部队，故为个人经历。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    }\n  ],\n  \"candidate_decisions\": [\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W001-E01\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH01-DOC01-DE001\"\n      ],\n      \"reason\": \"与W002-E01同指八人带枪加入地方武装，S0020为回顾性概括，归并到DE001。\"\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W001-E02\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH01-DOC01-DE002\"\n      ],\n      \"reason\": \"单独保留为所在部队与新四军接头并改编为江抗三路，保留本人作为‘我们’一员的接头阶段。\"\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W001-E03\",\n      \"action\": \"CONTEXT_ONLY\",\n      \"document_event_ids\": [\n        \"BATCH01-DOC01-DE003\"\n      ],\n      \"reason\": \"主要叙述江抗三路后续改编为正规军及24集团军，属部队长期沿革，无本人具体参与证据，作为讲述背景保留。\"\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W002-E01\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH01-DOC01-DE001\"\n      ],\n      \"reason\": \"与W001-E01同指八人带枪加入地方武装，S0020为回顾性概括，归并到DE001。\"\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W002-E02\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH01-DOC01-DE004\"\n      ],\n      \"reason\": \"单独保留为陈海峰与日军面对面战斗三十多次的个人经历总结。\"\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W002-E03\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH01-DOC01-DE005\"\n      ],\n      \"reason\": \"与W003-E01同指陈海峰领导情报站开展抗日情报与锄奸工作，归并到DE005。\"\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W003-E01\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH01-DOC01-DE005\"\n      ],\n      \"reason\": \"与W002-E03同指陈海峰领导情报站开展抗日情报与锄奸工作，归并到DE005。\"\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W003-E02\",\n      \"action\": \"CONTEXT_ONLY\",\n      \"document_event_ids\": [\n        \"BATCH01-DOC01-DE006\"\n      ],\n      \"reason\": \"叙述新四军初到江南的整体形象转变和壮大，无本人具体参与证据，作为讲述背景保留。\"\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W003-E03\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH01-DOC01-DE007\"\n      ],\n      \"reason\": \"单独保留为所在部队在江南分散打游击；‘我们都去’表明受访者随集体行动。\"\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W003-E04\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH01-DOC01-DE008\"\n      ],\n      \"reason\": \"与W004-E01同指渡运河时遭遇战，归并到DE008。\"\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W004-E01\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH01-DOC01-DE008\"\n      ],\n      \"reason\": \"与W003-E04同指渡运河时遭遇战，归并到DE008。\"\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W004-E02\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH01-DOC01-DE009\"\n      ],\n      \"reason\": \"与W005-E01同指庙桥战斗及突围脱险，归并到DE009。\"\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W005-E01\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH01-DOC01-DE009\"\n      ],\n      \"reason\": \"与W004-E02同指庙桥战斗及突围脱险，归并到DE009。\"\n    }\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 16094,
+    "total_tokens": 53597,
+    "completion_tokens": 37503,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 31228
+    },
+    "tokens_per_second": 18751000,
+    "time_to_first_token_ms": 307089,
+    "time_per_output_token_ms": 0
+  }
+}

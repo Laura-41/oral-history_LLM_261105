@@ -1,0 +1,184 @@
+{
+  "run_time": "2026-11-06T10:22:28",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH01-DOC01-W001",
+  "technical_document_id": "BATCH01-DOC01",
+  "document_id": "02.陈海峰（一访）（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH01-DOC01-S0002",
+    "BATCH01-DOC01-S0003",
+    "BATCH01-DOC01-S0004",
+    "BATCH01-DOC01-S0005",
+    "BATCH01-DOC01-S0006",
+    "BATCH01-DOC01-S0007",
+    "BATCH01-DOC01-S0008",
+    "BATCH01-DOC01-S0009",
+    "BATCH01-DOC01-S0010",
+    "BATCH01-DOC01-S0011",
+    "BATCH01-DOC01-S0012",
+    "BATCH01-DOC01-S0013",
+    "BATCH01-DOC01-S0014",
+    "BATCH01-DOC01-S0015",
+    "BATCH01-DOC01-S0016",
+    "BATCH01-DOC01-S0017",
+    "BATCH01-DOC01-S0018",
+    "BATCH01-DOC01-S0019",
+    "BATCH01-DOC01-S0020"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 3,
+    "assigned_segment_count": 8,
+    "unassigned_segment_count": 11,
+    "input_segment_count": 19,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH01-DOC01-W001-E03"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH01-DOC01-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH01-DOC01-W001-E01",
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0003",
+          "BATCH01-DOC01-S0005",
+          "BATCH01-DOC01-S0007"
+        ],
+        "event": {
+          "event_name": "陈海峰等八人带枪参加并控制地方武装",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "参加并控制武装",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰等八人",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "离开我们家里九里路的一个武装",
+              "normalized_entity": "离家九里路的地方武装",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "当时国民党溃退的时候",
+              "normalized_value": "国民党溃退时"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们带了四条枪。等于是表面武装而过（音）了，实际上是进去了，慢慢地控制这个部队。",
+          "type_basis": "核心过程为带枪进入并控制地方武装，属组织行动/物质过程；Actor为陈海峰等八人，Goal为该武装；不是言语、心理或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W001-E02",
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0012",
+          "BATCH01-DOC01-S0014"
+        ],
+        "event": {
+          "event_name": "所在部队与新四军接头后改编为江抗三路",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "改编为江抗三路",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "陈毅元帅",
+              "normalized_entity": "陈毅",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "我们这个部队",
+              "normalized_entity": "陈海峰所在地方武装",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "陈毅元帅把我们这个部队改成“江南抗日义勇军第三路”",
+          "type_basis": "核心过程为将所在部队改编为江抗三路，属组织行动/物质过程；Actor为陈毅，Goal为所在部队；与新四军接头为前置阶段，不单列。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W001-E03",
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0016",
+          "BATCH01-DOC01-S0018",
+          "BATCH01-DOC01-S0020"
+        ],
+        "event": {
+          "event_name": "江抗三路发展改编为正规军及24集团军",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "发展改编为正规军",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "这个部队",
+              "normalized_entity": "江南抗日义勇军第三路",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1941年“皖南事变”以后",
+              "normalized_value": "1941年皖南事变后"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "到1941年“皖南事变”以后，就并到粟裕的一师，就变成一师二旅六团，变成正规军了。",
+          "type_basis": "核心过程为部队发展、并入主力并改编为正规军，属组织行动/物质过程；Actor为所在部队；不是单纯关系或言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH01-DOC01-S0002",
+      "BATCH01-DOC01-S0004",
+      "BATCH01-DOC01-S0006",
+      "BATCH01-DOC01-S0008",
+      "BATCH01-DOC01-S0009",
+      "BATCH01-DOC01-S0010",
+      "BATCH01-DOC01-S0011",
+      "BATCH01-DOC01-S0013",
+      "BATCH01-DOC01-S0015",
+      "BATCH01-DOC01-S0017",
+      "BATCH01-DOC01-S0019"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH01-DOC01-W001\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W001-E01\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0003\",\n        \"BATCH01-DOC01-S0005\",\n        \"BATCH01-DOC01-S0007\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰等八人带枪参加并控制地方武装\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"参加并控制武装\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰等八人\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"离开我们家里九里路的一个武装\",\n            \"normalized_entity\": \"离家九里路的地方武装\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"当时国民党溃退的时候\",\n            \"normalized_value\": \"国民党溃退时\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们带了四条枪。等于是表面武装而过（音）了，实际上是进去了，慢慢地控制这个部队。\",\n        \"type_basis\": \"核心过程为带枪进入并控制地方武装，属组织行动/物质过程；Actor为陈海峰等八人，Goal为该武装；不是言语、心理或关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W001-E02\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0012\",\n        \"BATCH01-DOC01-S0014\"\n      ],\n      \"event\": {\n        \"event_name\": \"所在部队与新四军接头后改编为江抗三路\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"改编为江抗三路\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"陈毅元帅\",\n            \"normalized_entity\": \"陈毅\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"我们这个部队\",\n            \"normalized_entity\": \"陈海峰所在地方武装\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": null,\n        \"evidence_quote\": \"陈毅元帅把我们这个部队改成“江南抗日义勇军第三路”\",\n        \"type_basis\": \"核心过程为将所在部队改编为江抗三路，属组织行动/物质过程；Actor为陈毅，Goal为所在部队；与新四军接头为前置阶段，不单列。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W001-E03\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0016\",\n        \"BATCH01-DOC01-S0018\",\n        \"BATCH01-DOC01-S0020\"\n      ],\n      \"event\": {\n        \"event_name\": \"江抗三路发展改编为正规军及24集团军\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"发展改编为正规军\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"这个部队\",\n            \"normalized_entity\": \"江南抗日义勇军第三路\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"1941年“皖南事变”以后\",\n            \"normalized_value\": \"1941年皖南事变后\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"到1941年“皖南事变”以后，就并到粟裕的一师，就变成一师二旅六团，变成正规军了。\",\n        \"type_basis\": \"核心过程为部队发展、并入主力并改编为正规军，属组织行动/物质过程；Actor为所在部队；不是单纯关系或言语过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH01-DOC01-S0002\",\n    \"BATCH01-DOC01-S0004\",\n    \"BATCH01-DOC01-S0006\",\n    \"BATCH01-DOC01-S0008\",\n    \"BATCH01-DOC01-S0009\",\n    \"BATCH01-DOC01-S0010\",\n    \"BATCH01-DOC01-S0011\",\n    \"BATCH01-DOC01-S0013\",\n    \"BATCH01-DOC01-S0015\",\n    \"BATCH01-DOC01-S0017\",\n    \"BATCH01-DOC01-S0019\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5525,
+    "total_tokens": 22965,
+    "completion_tokens": 17440,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 16223
+    },
+    "time_to_first_token_ms": 144558,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8719500
+  }
+}

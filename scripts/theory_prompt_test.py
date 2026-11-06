@@ -2,7 +2,7 @@
 """使用项目操作性提示词测试单句事件分类。
 
 第一次默认只测试“到上海印书馆做排字工人”，验证裸提示词的类型错误
-是否得到纠正。密钥仅从 CUC_API_KEY 环境变量读取。
+是否得到纠正。密钥优先从环境变量读取，缺失时从macOS钥匙串读取。
 """
 
 from __future__ import annotations
@@ -22,7 +22,12 @@ PROMPT_DIR = PROJECT_DIR / "02_Schema与提示词"
 RESULT_DIR = PROJECT_DIR / "03_六份Demo对照实验" / "理论提示词最小测试"
 
 sys.path.insert(0, str(SCRIPT_DIR))
-from api_test import extract_content, print_usage, request_json  # noqa: E402
+from api_test import (  # noqa: E402
+    extract_content,
+    get_api_key,
+    print_usage,
+    request_json,
+)
 
 
 TEST_CASES: dict[str, dict[str, Any]] = {
@@ -176,12 +181,12 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    api_key = os.environ.get("CUC_API_KEY", "").strip()
+    api_key = get_api_key()
     base_url = os.environ.get(
         "CUC_BASE_URL", "https://openai.cuc.edu.cn/v1"
     ).rstrip("/")
     if not api_key:
-        print("错误：当前终端没有 CUC_API_KEY。", file=sys.stderr)
+        print("错误：环境变量和钥匙串均没有API密钥。", file=sys.stderr)
         return 2
     prompt_path = PROMPT_DIR / f"system_prompt_{args.prompt_version}.md"
     if not prompt_path.exists():

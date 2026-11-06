@@ -19,7 +19,12 @@ PROMPT_PATH = PROJECT_DIR / "02_Schema与提示词" / "system_prompt_v0.3.md"
 PILOT_ROOT = PROJECT_DIR / "03_六份Demo对照实验" / "01_受控事件包"
 
 sys.path.insert(0, str(SCRIPT_DIR))
-from api_test import extract_content, print_usage, request_json  # noqa: E402
+from api_test import (  # noqa: E402
+    extract_content,
+    get_api_key,
+    print_usage,
+    request_json,
+)
 from validate_event_candidate import validate_event  # noqa: E402
 
 
@@ -83,12 +88,12 @@ def main() -> int:
     if args.timeout <= 0 or args.attempts <= 0:
         print("错误：--timeout 和 --attempts 必须是正整数。", file=sys.stderr)
         return 2
-    api_key = os.environ.get("CUC_API_KEY", "").strip()
+    api_key = get_api_key()
     base_url = os.environ.get(
         "CUC_BASE_URL", "https://openai.cuc.edu.cn/v1"
     ).rstrip("/")
     if not api_key:
-        print("错误：当前终端没有 CUC_API_KEY。", file=sys.stderr)
+        print("错误：环境变量和钥匙串均没有API密钥。", file=sys.stderr)
         return 2
 
     packet_path = PILOT_ROOT / "inputs" / f"{args.packet}.json"

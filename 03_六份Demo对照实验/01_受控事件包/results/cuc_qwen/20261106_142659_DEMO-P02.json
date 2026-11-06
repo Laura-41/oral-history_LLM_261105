@@ -1,0 +1,110 @@
+{
+  "run_time": "2026-11-06T14:26:59",
+  "run_stage": "CONTROLLED_EVENT_RECONSTRUCTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "v0.3-frozen",
+  "schema_version": "event_candidate_v1.0",
+  "packet_version": "v1.0",
+  "packet_id": "DEMO-P02",
+  "doc_id": "CRT-01",
+  "source_segment_ids": [
+    "CRT-01-S0018",
+    "CRT-01-S0020",
+    "CRT-01-S0022"
+  ],
+  "json_valid": true,
+  "schema_errors": [],
+  "evidence_supported": true,
+  "evidence_segment_id": "CRT-01-S0018",
+  "technical_passed": true,
+  "parsed_output": {
+    "event_name": "陈锐霆8岁随牛群到东山放牧并捡柴拾粪",
+    "event_type": "MATERIAL",
+    "event_type_zh": "物质",
+    "core_process": "放牧并捡拾",
+    "participants": [
+      {
+        "role": "Actor",
+        "mention": "我",
+        "normalized_entity": "陈锐霆",
+        "certainty": "HIGH"
+      },
+      {
+        "role": "Actor",
+        "mention": "我同年的一些小孩",
+        "normalized_entity": null,
+        "certainty": "MEDIUM"
+      },
+      {
+        "role": "Goal",
+        "mention": "牛群",
+        "normalized_entity": null,
+        "certainty": "HIGH"
+      },
+      {
+        "role": "Goal",
+        "mention": "柴",
+        "normalized_entity": null,
+        "certainty": "HIGH"
+      },
+      {
+        "role": "Goal",
+        "mention": "粪",
+        "normalized_entity": null,
+        "certainty": "HIGH"
+      },
+      {
+        "role": "Client",
+        "mention": "家里边",
+        "normalized_entity": null,
+        "certainty": "MEDIUM"
+      }
+    ],
+    "circumstances": [
+      {
+        "kind": "TIME",
+        "value": "8岁的时候",
+        "normalized_value": null
+      },
+      {
+        "kind": "TIME",
+        "value": "每天",
+        "normalized_value": null
+      },
+      {
+        "kind": "LOCATION",
+        "value": "东山",
+        "normalized_value": null
+      },
+      {
+        "kind": "MANNER",
+        "value": "背着一个筐子",
+        "normalized_value": null
+      },
+      {
+        "kind": "CAUSE",
+        "value": "家里也没有劳动力",
+        "normalized_value": null
+      }
+    ],
+    "projected_content": null,
+    "evidence_quote": "我8岁的时候因为家里边贫穷啊，上学也上不起，家里也没有劳动力啊，我从小就参加一些劳动呀：挑水呀、种地呀，在家里做一些家务劳动啊。所以8岁的时候没读书，每天背着一个筐子，随着我们这个村子里边的牛群，那个时候我村子里边那个牛还是不少的。",
+    "type_basis": "核心过程为8岁时随牛群到东山放牧并捡柴拾粪，属于职业劳动/执行任务，可用 What did X do? 测试；Actor、Goal、Client 均在 MATERIAL 允许角色内。听说日本兵舰停泊是伴随心理/存在成分，不改变主导物质劳动；未标 VERBAL/MENTAL 为主，因主过程不是言说或感知，且感知对象未作为主事件参与者。",
+    "alternative_event_type": "MENTAL",
+    "ambiguity_reason": "片段同时包含放牧劳动（MATERIAL）和听说日本兵舰停泊（MENTAL），主导类型需人工确认。",
+    "review_status": "NEEDS_REVIEW"
+  },
+  "raw_content": "\n\n{\n  \"event_name\": \"陈锐霆8岁随牛群到东山放牧并捡柴拾粪\",\n  \"event_type\": \"MATERIAL\",\n  \"event_type_zh\": \"物质\",\n  \"core_process\": \"放牧并捡拾\",\n  \"participants\": [\n    {\n      \"role\": \"Actor\",\n      \"mention\": \"我\",\n      \"normalized_entity\": \"陈锐霆\",\n      \"certainty\": \"HIGH\"\n    },\n    {\n      \"role\": \"Actor\",\n      \"mention\": \"我同年的一些小孩\",\n      \"normalized_entity\": null,\n      \"certainty\": \"MEDIUM\"\n    },\n    {\n      \"role\": \"Goal\",\n      \"mention\": \"牛群\",\n      \"normalized_entity\": null,\n      \"certainty\": \"HIGH\"\n    },\n    {\n      \"role\": \"Goal\",\n      \"mention\": \"柴\",\n      \"normalized_entity\": null,\n      \"certainty\": \"HIGH\"\n    },\n    {\n      \"role\": \"Goal\",\n      \"mention\": \"粪\",\n      \"normalized_entity\": null,\n      \"certainty\": \"HIGH\"\n    },\n    {\n      \"role\": \"Client\",\n      \"mention\": \"家里边\",\n      \"normalized_entity\": null,\n      \"certainty\": \"MEDIUM\"\n    }\n  ],\n  \"circumstances\": [\n    {\n      \"kind\": \"TIME\",\n      \"value\": \"8岁的时候\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"TIME\",\n      \"value\": \"每天\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"LOCATION\",\n      \"value\": \"东山\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"MANNER\",\n      \"value\": \"背着一个筐子\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"CAUSE\",\n      \"value\": \"家里也没有劳动力\",\n      \"normalized_value\": null\n    }\n  ],\n  \"projected_content\": null,\n  \"evidence_quote\": \"我8岁的时候因为家里边贫穷啊，上学也上不起，家里也没有劳动力啊，我从小就参加一些劳动呀：挑水呀、种地呀，在家里做一些家务劳动啊。所以8岁的时候没读书，每天背着一个筐子，随着我们这个村子里边的牛群，那个时候我村子里边那个牛还是不少的。\",\n  \"type_basis\": \"核心过程为8岁时随牛群到东山放牧并捡柴拾粪，属于职业劳动/执行任务，可用 What did X do? 测试；Actor、Goal、Client 均在 MATERIAL 允许角色内。听说日本兵舰停泊是伴随心理/存在成分，不改变主导物质劳动；未标 VERBAL/MENTAL 为主，因主过程不是言说或感知，且感知对象未作为主事件参与者。\",\n  \"alternative_event_type\": \"MENTAL\",\n  \"ambiguity_reason\": \"片段同时包含放牧劳动（MATERIAL）和听说日本兵舰停泊（MENTAL），主导类型需人工确认。\",\n  \"review_status\": \"NEEDS_REVIEW\"\n}",
+  "usage": {
+    "prompt_tokens": 3142,
+    "total_tokens": 17541,
+    "completion_tokens": 14399,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 13666
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 14398000,
+    "time_to_first_token_ms": 419874
+  }
+}

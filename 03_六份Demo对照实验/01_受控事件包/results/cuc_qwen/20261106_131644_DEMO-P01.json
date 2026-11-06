@@ -1,0 +1,73 @@
+{
+  "run_time": "2026-11-06T13:16:44",
+  "run_stage": "CONTROLLED_EVENT_RECONSTRUCTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "v0.3-frozen",
+  "schema_version": "event_candidate_v1.0",
+  "packet_version": "v1.0",
+  "packet_id": "DEMO-P01",
+  "doc_id": "CHF-V1-01",
+  "source_segment_ids": [
+    "CHF-V1-01-S0015",
+    "CHF-V1-01-S0017",
+    "CHF-V1-01-S0019",
+    "CHF-V1-01-S0020"
+  ],
+  "json_valid": true,
+  "schema_errors": [],
+  "evidence_supported": true,
+  "evidence_segment_id": "CHF-V1-01-S0015",
+  "technical_passed": true,
+  "parsed_output": {
+    "event_name": "陈海峰到上海荣华印书馆从事排字学徒工作",
+    "event_type": "MATERIAL",
+    "event_type_zh": "物质",
+    "core_process": "从事排字学徒工作",
+    "participants": [
+      {
+        "role": "Actor",
+        "mention": "我",
+        "normalized_entity": "陈海峰",
+        "certainty": "HIGH"
+      }
+    ],
+    "circumstances": [
+      {
+        "kind": "TIME",
+        "value": "1931年",
+        "normalized_value": null
+      },
+      {
+        "kind": "LOCATION",
+        "value": "上海新闸路83号荣华印书馆",
+        "normalized_value": null
+      },
+      {
+        "kind": "CAUSE",
+        "value": "家里也比较困难",
+        "normalized_value": null
+      },
+      {
+        "kind": "MANNER",
+        "value": "冒充13岁",
+        "normalized_value": null
+      }
+    ],
+    "projected_content": null,
+    "evidence_quote": "我才11岁，我就到上海去了，家里也比较困难，就去当学徒了。当什么学徒呢？是印书馆里面的排字工人，我只有11岁，冒充13岁。",
+    "type_basis": "核心过程是到上海后从事排字学徒工作，属于职业劳动；参与者仅使用MATERIAL允许的Actor，时间、地点、原因和方式作为环境成分；不是静态身份归属，也不是心理、言语、存在或无物质结果行为，因此为MATERIAL。",
+    "alternative_event_type": null,
+    "ambiguity_reason": null,
+    "review_status": "MODEL_CANDIDATE"
+  },
+  "raw_content": "\n\n{\n  \"event_name\": \"陈海峰到上海荣华印书馆从事排字学徒工作\",\n  \"event_type\": \"MATERIAL\",\n  \"event_type_zh\": \"物质\",\n  \"core_process\": \"从事排字学徒工作\",\n  \"participants\": [\n    {\n      \"role\": \"Actor\",\n      \"mention\": \"我\",\n      \"normalized_entity\": \"陈海峰\",\n      \"certainty\": \"HIGH\"\n    }\n  ],\n  \"circumstances\": [\n    {\n      \"kind\": \"TIME\",\n      \"value\": \"1931年\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"LOCATION\",\n      \"value\": \"上海新闸路83号荣华印书馆\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"CAUSE\",\n      \"value\": \"家里也比较困难\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"MANNER\",\n      \"value\": \"冒充13岁\",\n      \"normalized_value\": null\n    }\n  ],\n  \"projected_content\": null,\n  \"evidence_quote\": \"我才11岁，我就到上海去了，家里也比较困难，就去当学徒了。当什么学徒呢？是印书馆里面的排字工人，我只有11岁，冒充13岁。\",\n  \"type_basis\": \"核心过程是到上海后从事排字学徒工作，属于职业劳动；参与者仅使用MATERIAL允许的Actor，时间、地点、原因和方式作为环境成分；不是静态身份归属，也不是心理、言语、存在或无物质结果行为，因此为MATERIAL。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": null,\n  \"review_status\": \"MODEL_CANDIDATE\"\n}",
+  "usage": {
+    "prompt_tokens": 3359,
+    "total_tokens": 14622,
+    "completion_tokens": 11263,
+    "prompt_tokens_details": null,
+    "time_to_first_token_ms": 583725,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11262000
+  }
+}

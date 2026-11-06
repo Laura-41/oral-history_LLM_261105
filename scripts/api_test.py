@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 """中国传媒大学 OpenAI 兼容接口的最小安全测试。
 
-密钥只从环境变量 CUC_API_KEY 读取，不写入文件和日志。
+密钥优先从环境变量读取；macOS环境变量缺失时从钥匙串读取。
+密钥不写入项目文件和日志。
 """
 
 from __future__ import annotations
 
 import argparse
+import getpass
 import http.client
 import json
 import os
+import subprocess
 import sys
 import urllib.error
 import urllib.request
@@ -17,6 +20,38 @@ from typing import Any
 
 
 DEFAULT_BASE_URL = "https://openai.cuc.edu.cn/v1"
+KEYCHAIN_SERVICE = "edu.cuc.openai.api-key"
+
+
+def get_api_key() -> str:
+    """安全取得API密钥，不打印密钥内容。"""
+    environment_key = os.environ.get("CUC_API_KEY", "").strip()
+    if environment_key:
+        return environment_key
+    if sys.platform != "darwin":
+        return ""
+    try:
+        result = subprocess.run(
+            [
+                "/usr/bin/security",
+                "find-generic-password",
+                "-a",
+                getpass.getuser(),
+                "-s",
+                KEYCHAIN_SERVICE,
+                "-w",
+            ],
+            check=False,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.DEVNULL,
+            text=True,
+            timeout=10,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return ""
+    if result.returncode != 0:
+        return ""
+    return result.stdout.strip()
 
 
 def request_json(
@@ -203,10 +238,12 @@ def main() -> int:
         print("错误：--timeout 必须是正整数。", file=sys.stderr)
         return 2
     base_url = os.environ.get("CUC_BASE_URL", DEFAULT_BASE_URL).rstrip("/")
-    api_key = os.environ.get("CUC_API_KEY", "").strip()
+    api_key = get_api_key()
     if not api_key:
-        print("错误：没有检测到 CUC_API_KEY。", file=sys.stderr)
-        print("请先按照工作流程文档，在当前终端隐藏输入并导出密钥。", file=sys.stderr)
+        print(
+            "错误：环境变量和macOS钥匙串均未检测到API密钥。",
+            file=sys.stderr,
+        )
         return 2
 
     try:

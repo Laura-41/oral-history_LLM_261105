@@ -1,0 +1,273 @@
+{
+  "run_time": "2026-11-06T19:40:16",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH01-DOC03-W003",
+  "technical_document_id": "BATCH01-DOC03",
+  "document_id": "02.杨永松100506（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH01-DOC03-S0042",
+    "BATCH01-DOC03-S0043",
+    "BATCH01-DOC03-S0044",
+    "BATCH01-DOC03-S0045",
+    "BATCH01-DOC03-S0046",
+    "BATCH01-DOC03-S0047",
+    "BATCH01-DOC03-S0048",
+    "BATCH01-DOC03-S0049",
+    "BATCH01-DOC03-S0050",
+    "BATCH01-DOC03-S0051",
+    "BATCH01-DOC03-S0052",
+    "BATCH01-DOC03-S0053",
+    "BATCH01-DOC03-S0054",
+    "BATCH01-DOC03-S0055",
+    "BATCH01-DOC03-S0056",
+    "BATCH01-DOC03-S0057",
+    "BATCH01-DOC03-S0058",
+    "BATCH01-DOC03-S0059",
+    "BATCH01-DOC03-S0060",
+    "BATCH01-DOC03-S0061",
+    "BATCH01-DOC03-S0062",
+    "BATCH01-DOC03-S0063",
+    "BATCH01-DOC03-S0064",
+    "BATCH01-DOC03-S0065",
+    "BATCH01-DOC03-S0066",
+    "BATCH01-DOC03-S0067",
+    "BATCH01-DOC03-S0068",
+    "BATCH01-DOC03-S0069",
+    "BATCH01-DOC03-S0070",
+    "BATCH01-DOC03-S0071",
+    "BATCH01-DOC03-S0072"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 4,
+    "assigned_segment_count": 11,
+    "unassigned_segment_count": 20,
+    "input_segment_count": 31,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH01-DOC03-W003-E04"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH01-DOC03-W003",
+    "events": [
+      {
+        "candidate_id": "BATCH01-DOC03-W003-E01",
+        "source_segment_ids": [
+          "BATCH01-DOC03-S0043",
+          "BATCH01-DOC03-S0045",
+          "BATCH01-DOC03-S0047"
+        ],
+        "event": {
+          "event_name": "685团平型关战斗伤亡情况",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "战斗下来伤亡",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "685团",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "整个战役，这个战斗下来以后",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "整个战役，这个战斗下来以后，有800。下来以后还剩下900人，我们上战场1000多人嘛。",
+          "type_basis": "核心过程为战斗造成人员损失，Actor为‘我们’（可规范为685团），属于可观察状态改变；不是单纯关系或存在，因为由战斗过程导致。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH01-DOC03-W003-E02",
+        "source_segment_ids": [
+          "BATCH01-DOC03-S0054",
+          "BATCH01-DOC03-S0056"
+        ],
+        "event": {
+          "event_name": "直罗镇缴获武器保留组建第三团",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "保留缴获武器并组建第三团",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "领导",
+              "normalized_entity": null,
+              "certainty": "LOW"
+            },
+            {
+              "role": "Goal",
+              "mention": "第三团",
+              "normalized_entity": "第三团",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "直罗镇战斗以后",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "尽可能不要换，留起来要建设另外一个团",
+          "evidence_quote": "要另外组织一个团，你尽交些不要的枪给他不合适啊。所以你缴的枪呢你不要全部给换了，要留一部分。那个时候呢就是要组织一个第三团，直罗镇战斗以后，组织一个第三团呢，就一团、三团、13团编为一师，一师就（是115师）以后杨成武那个独立团了。",
+          "type_basis": "核心过程为保留缴获武器并组建第三团，属组织行动；‘领导’为泛称施事者，‘第三团’为目标，角色配置支持MATERIAL，但施事者不明确，需复核。",
+          "alternative_event_type": "VERBAL",
+          "ambiguity_reason": "‘领导说’构成言语过程，保留/组建第三团构成物质组织行动；施事者‘领导’为泛称，事件边界与主导类型需复核。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      },
+      {
+        "candidate_id": "BATCH01-DOC03-W003-E03",
+        "source_segment_ids": [
+          "BATCH01-DOC03-S0062",
+          "BATCH01-DOC03-S0064",
+          "BATCH01-DOC03-S0066",
+          "BATCH01-DOC03-S0068"
+        ],
+        "event": {
+          "event_name": "三营11连缴获武器在运城展览动员新兵",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "缴获武器并在运城展览动员新兵",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "这个连",
+              "normalized_entity": "三营11连",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "新兵",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "运城",
+              "normalized_value": "运城"
+            },
+            {
+              "kind": "MANNER",
+              "value": "展览",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "所以这个连呢，我们去动员新兵，在运城，他有钢帽，日本什么信啊什么旗帜之类的东西，拿到街上一展览，呦，说这八路军打胜仗的部队，歪把子机枪都是。",
+          "type_basis": "核心过程为缴获武器并在运城展览动员新兵，属组织行动；Actor包括三营11连和‘我们’，Goal为‘新兵’，运城为地点，展览为方式；不是言语过程，因为缴获内容未作为投射小句。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH01-DOC03-W003-E04",
+        "source_segment_ids": [
+          "BATCH01-DOC03-S0070",
+          "BATCH01-DOC03-S0072"
+        ],
+        "event": {
+          "event_name": "685团夜攻东西跑池并撤至山头",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "夜攻东西跑池并撤到山头",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们685团",
+              "normalized_entity": "685团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "东西跑池",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "第二天晚上",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "山头上",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "往山后面",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "第二天晚上，我们685团晚上攻东西跑池的时候，天亮以前都撤到山头上来了。你这个机枪要瞄准敌人打上几发子弹，你不走开，他过一会，他就把你机枪手给打死了，他射击有这么准。",
+          "type_basis": "核心过程为夜攻东西跑池并撤至山头，属作战/移动；Actor为685团，Goal为东西跑池，山头上为结果位置，往山后面为方向；不是行为过程，因为有物质结果。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH01-DOC03-S0042",
+      "BATCH01-DOC03-S0044",
+      "BATCH01-DOC03-S0046",
+      "BATCH01-DOC03-S0048",
+      "BATCH01-DOC03-S0049",
+      "BATCH01-DOC03-S0050",
+      "BATCH01-DOC03-S0051",
+      "BATCH01-DOC03-S0052",
+      "BATCH01-DOC03-S0053",
+      "BATCH01-DOC03-S0055",
+      "BATCH01-DOC03-S0057",
+      "BATCH01-DOC03-S0058",
+      "BATCH01-DOC03-S0059",
+      "BATCH01-DOC03-S0060",
+      "BATCH01-DOC03-S0061",
+      "BATCH01-DOC03-S0063",
+      "BATCH01-DOC03-S0065",
+      "BATCH01-DOC03-S0067",
+      "BATCH01-DOC03-S0069",
+      "BATCH01-DOC03-S0071"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH01-DOC03-W003\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH01-DOC03-W003-E01\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC03-S0043\",\n        \"BATCH01-DOC03-S0045\",\n        \"BATCH01-DOC03-S0047\"\n      ],\n      \"event\": {\n        \"event_name\": \"685团平型关战斗伤亡情况\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"战斗下来伤亡\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"685团\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"整个战役，这个战斗下来以后\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"整个战役，这个战斗下来以后，有800。下来以后还剩下900人，我们上战场1000多人嘛。\",\n        \"type_basis\": \"核心过程为战斗造成人员损失，Actor为‘我们’（可规范为685团），属于可观察状态改变；不是单纯关系或存在，因为由战斗过程导致。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC03-W003-E02\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC03-S0054\",\n        \"BATCH01-DOC03-S0056\"\n      ],\n      \"event\": {\n        \"event_name\": \"直罗镇缴获武器保留组建第三团\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"保留缴获武器并组建第三团\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"领导\",\n            \"normalized_entity\": null,\n            \"certainty\": \"LOW\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"第三团\",\n            \"normalized_entity\": \"第三团\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"直罗镇战斗以后\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"尽可能不要换，留起来要建设另外一个团\",\n        \"evidence_quote\": \"要另外组织一个团，你尽交些不要的枪给他不合适啊。所以你缴的枪呢你不要全部给换了，要留一部分。那个时候呢就是要组织一个第三团，直罗镇战斗以后，组织一个第三团呢，就一团、三团、13团编为一师，一师就（是115师）以后杨成武那个独立团了。\",\n        \"type_basis\": \"核心过程为保留缴获武器并组建第三团，属组织行动；‘领导’为泛称施事者，‘第三团’为目标，角色配置支持MATERIAL，但施事者不明确，需复核。\",\n        \"alternative_event_type\": \"VERBAL\",\n        \"ambiguity_reason\": \"‘领导说’构成言语过程，保留/组建第三团构成物质组织行动；施事者‘领导’为泛称，事件边界与主导类型需复核。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC03-W003-E03\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC03-S0062\",\n        \"BATCH01-DOC03-S0064\",\n        \"BATCH01-DOC03-S0066\",\n        \"BATCH01-DOC03-S0068\"\n      ],\n      \"event\": {\n        \"event_name\": \"三营11连缴获武器在运城展览动员新兵\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"缴获武器并在运城展览动员新兵\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"这个连\",\n            \"normalized_entity\": \"三营11连\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"新兵\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"运城\",\n            \"normalized_value\": \"运城\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"展览\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"所以这个连呢，我们去动员新兵，在运城，他有钢帽，日本什么信啊什么旗帜之类的东西，拿到街上一展览，呦，说这八路军打胜仗的部队，歪把子机枪都是。\",\n        \"type_basis\": \"核心过程为缴获武器并在运城展览动员新兵，属组织行动；Actor包括三营11连和‘我们’，Goal为‘新兵’，运城为地点，展览为方式；不是言语过程，因为缴获内容未作为投射小句。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC03-W003-E04\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC03-S0070\",\n        \"BATCH01-DOC03-S0072\"\n      ],\n      \"event\": {\n        \"event_name\": \"685团夜攻东西跑池并撤至山头\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"夜攻东西跑池并撤到山头\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们685团\",\n            \"normalized_entity\": \"685团\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"东西跑池\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"第二天晚上\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"山头上\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"往山后面\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"第二天晚上，我们685团晚上攻东西跑池的时候，天亮以前都撤到山头上来了。你这个机枪要瞄准敌人打上几发子弹，你不走开，他过一会，他就把你机枪手给打死了，他射击有这么准。\",\n        \"type_basis\": \"核心过程为夜攻东西跑池并撤至山头，属作战/移动；Actor为685团，Goal为东西跑池，山头上为结果位置，往山后面为方向；不是行为过程，因为有物质结果。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH01-DOC03-S0042\",\n    \"BATCH01-DOC03-S0044\",\n    \"BATCH01-DOC03-S0046\",\n    \"BATCH01-DOC03-S0048\",\n    \"BATCH01-DOC03-S0049\",\n    \"BATCH01-DOC03-S0050\",\n    \"BATCH01-DOC03-S0051\",\n    \"BATCH01-DOC03-S0052\",\n    \"BATCH01-DOC03-S0053\",\n    \"BATCH01-DOC03-S0055\",\n    \"BATCH01-DOC03-S0057\",\n    \"BATCH01-DOC03-S0058\",\n    \"BATCH01-DOC03-S0059\",\n    \"BATCH01-DOC03-S0060\",\n    \"BATCH01-DOC03-S0061\",\n    \"BATCH01-DOC03-S0063\",\n    \"BATCH01-DOC03-S0065\",\n    \"BATCH01-DOC03-S0067\",\n    \"BATCH01-DOC03-S0069\",\n    \"BATCH01-DOC03-S0071\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 6129,
+    "total_tokens": 32216,
+    "completion_tokens": 26087,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 23762
+    },
+    "time_to_first_token_ms": 400117,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13043000
+  }
+}

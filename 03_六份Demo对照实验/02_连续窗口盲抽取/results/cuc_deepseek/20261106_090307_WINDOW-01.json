@@ -1,0 +1,141 @@
+{
+  "run_time": "2026-11-06T09:03:07",
+  "run_stage": "CONTINUOUS_WINDOW_BLIND_EXTRACTION_MINIMAL",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3-frozen+window-v0.5",
+  "window_id": "WINDOW-01",
+  "doc_id": "CRT-01",
+  "input_segment_ids": [
+    "CRT-01-S0018",
+    "CRT-01-S0019",
+    "CRT-01-S0020",
+    "CRT-01-S0021",
+    "CRT-01-S0022",
+    "CRT-01-S0023",
+    "CRT-01-S0024",
+    "CRT-01-S0025",
+    "CRT-01-S0026",
+    "CRT-01-S0027"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "acceptable_event_counts": [
+    2
+  ],
+  "preferred_event_count": 2,
+  "event_count_matches_preferred": true,
+  "event_count_matches_reference": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 5,
+    "unassigned_segment_count": 5,
+    "input_segment_count": 10,
+    "all_input_segments_accounted_for": true
+  },
+  "parsed_output": {
+    "window_id": "WINDOW-01",
+    "events": [
+      {
+        "candidate_id": "WINDOW-01-E01",
+        "source_segment_ids": [
+          "CRT-01-S0018",
+          "CRT-01-S0020",
+          "CRT-01-S0022"
+        ],
+        "event": {
+          "event_name": "陈锐霆童年参加家务和放牧劳动",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "参加劳动、放牧、捡柴拾粪",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "8岁的时候",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "即墨县，山东，崂山湾的北部；东山",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "家里边贫穷、没有劳动力",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我8岁的时候因为家里边贫穷啊，上学也上不起，家里也没有劳动力啊，我从小就参加一些劳动呀：挑水呀、种地呀，在家里做一些家务劳动啊。",
+          "type_basis": "核心过程为挑水、种地、家务、放牧、捡柴拾粪等可观察劳动，Actor为陈锐霆；这些是生产或家务劳动，不是单纯生理行为或心理感知，故为MATERIAL。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "WINDOW-01-E02",
+        "source_segment_ids": [
+          "CRT-01-S0022",
+          "CRT-01-S0024",
+          "CRT-01-S0026"
+        ],
+        "event": {
+          "event_name": "陈锐霆等儿童观看日本兵舰时遭炮击并逃脱",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "观看日本兵舰、遭炮击后逃脱",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们这些小孩",
+              "normalized_entity": "陈锐霆及同年儿童",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "东山、高山",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "日本的一些兵舰啊，在东山的高山外头，那个深水的港湾停泊，花花绿绿挺好看啊。",
+          "evidence_quote": "我们在那么高（的地方）站了一会儿，（日本人）就向我们开了炮。因为我们在山脊上，它要不就打近了，要不就打远了，没打中我们，打了几十发炮弹，我们就跑掉了嘛。",
+          "type_basis": "核心过程为儿童前往观看日本兵舰、遭日军炮击并跑掉，属于可观察的空间移动和军事攻击后的逃脱，Actor为陈锐霆等儿童；听说和看到是触发或阶段，仇日心理是结果，均不改变主导的MATERIAL类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "CRT-01-S0019",
+      "CRT-01-S0021",
+      "CRT-01-S0023",
+      "CRT-01-S0025",
+      "CRT-01-S0027"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"WINDOW-01\",\n  \"events\": [\n    {\n      \"candidate_id\": \"WINDOW-01-E01\",\n      \"source_segment_ids\": [\n        \"CRT-01-S0018\",\n        \"CRT-01-S0020\",\n        \"CRT-01-S0022\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆童年参加家务和放牧劳动\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"参加劳动、放牧、捡柴拾粪\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"8岁的时候\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"即墨县，山东，崂山湾的北部；东山\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"家里边贫穷、没有劳动力\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我8岁的时候因为家里边贫穷啊，上学也上不起，家里也没有劳动力啊，我从小就参加一些劳动呀：挑水呀、种地呀，在家里做一些家务劳动啊。\",\n        \"type_basis\": \"核心过程为挑水、种地、家务、放牧、捡柴拾粪等可观察劳动，Actor为陈锐霆；这些是生产或家务劳动，不是单纯生理行为或心理感知，故为MATERIAL。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"WINDOW-01-E02\",\n      \"source_segment_ids\": [\n        \"CRT-01-S0022\",\n        \"CRT-01-S0024\",\n        \"CRT-01-S0026\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆等儿童观看日本兵舰时遭炮击并逃脱\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"观看日本兵舰、遭炮击后逃脱\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们这些小孩\",\n            \"normalized_entity\": \"陈锐霆及同年儿童\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"东山、高山\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"日本的一些兵舰啊，在东山的高山外头，那个深水的港湾停泊，花花绿绿挺好看啊。\",\n        \"evidence_quote\": \"我们在那么高（的地方）站了一会儿，（日本人）就向我们开了炮。因为我们在山脊上，它要不就打近了，要不就打远了，没打中我们，打了几十发炮弹，我们就跑掉了嘛。\",\n        \"type_basis\": \"核心过程为儿童前往观看日本兵舰、遭日军炮击并跑掉，属于可观察的空间移动和军事攻击后的逃脱，Actor为陈锐霆等儿童；听说和看到是触发或阶段，仇日心理是结果，均不改变主导的MATERIAL类型。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"CRT-01-S0019\",\n    \"CRT-01-S0021\",\n    \"CRT-01-S0023\",\n    \"CRT-01-S0025\",\n    \"CRT-01-S0027\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 4593,
+    "total_tokens": 16650,
+    "completion_tokens": 12057,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 11155
+    },
+    "time_to_first_token_ms": 100669,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 12056000
+  }
+}

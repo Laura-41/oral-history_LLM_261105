@@ -1,0 +1,154 @@
+{
+  "run_time": "2026-11-06T09:04:11",
+  "run_stage": "CONTINUOUS_WINDOW_BLIND_EXTRACTION_MINIMAL",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3-frozen+window-v0.5",
+  "window_id": "WINDOW-02",
+  "doc_id": "CHF-V1-01",
+  "input_segment_ids": [
+    "CHF-V1-01-S0042",
+    "CHF-V1-01-S0043",
+    "CHF-V1-01-S0044",
+    "CHF-V1-01-S0045",
+    "CHF-V1-01-S0046",
+    "CHF-V1-01-S0047",
+    "CHF-V1-01-S0048",
+    "CHF-V1-01-S0049",
+    "CHF-V1-01-S0050",
+    "CHF-V1-01-S0051",
+    "CHF-V1-01-S0052",
+    "CHF-V1-01-S0053",
+    "CHF-V1-01-S0054"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "acceptable_event_counts": [
+    2,
+    3,
+    4
+  ],
+  "preferred_event_count": 2,
+  "event_count_matches_preferred": true,
+  "event_count_matches_reference": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 7,
+    "unassigned_segment_count": 6,
+    "input_segment_count": 13,
+    "all_input_segments_accounted_for": true
+  },
+  "parsed_output": {
+    "window_id": "WINDOW-02",
+    "events": [
+      {
+        "candidate_id": "WINDOW-02-E01",
+        "source_segment_ids": [
+          "CHF-V1-01-S0042",
+          "CHF-V1-01-S0044",
+          "CHF-V1-01-S0046",
+          "CHF-V1-01-S0048",
+          "CHF-V1-01-S0050"
+        ],
+        "event": {
+          "event_name": "陈海峰领导印书馆罢工并离开",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "领导罢工并离开印书馆",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "印书馆",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "盲目地",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "治他",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "实际上是我来领导了，领导罢工。",
+          "type_basis": "核心过程为领导罢工、离开印书馆，是集体物质行动；参与者为Actor，符合MATERIAL允许角色；师弟受害和提意见受阻是触发与阶段，已合并；非言语、心理、关系、行为或存在。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "WINDOW-02-E02",
+        "source_segment_ids": [
+          "CHF-V1-01-S0050",
+          "CHF-V1-01-S0052",
+          "CHF-V1-01-S0054"
+        ],
+        "event": {
+          "event_name": "陈海峰失业后重新就业",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "失业后重新就业",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "一个多月到两个月",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "上海",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "一个多月到两个月的失业的生活，尝了失业的滋味，失业是什么滋味那个时候知道了。后来又找到工作",
+          "type_basis": "核心过程为失业后找到工作并重新就业，属于物质行动和状态变化；参与者为Actor，符合MATERIAL词表；非关系、存在或心理。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "CHF-V1-01-S0043",
+      "CHF-V1-01-S0045",
+      "CHF-V1-01-S0047",
+      "CHF-V1-01-S0049",
+      "CHF-V1-01-S0051",
+      "CHF-V1-01-S0053"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"WINDOW-02\",\n  \"events\": [\n    {\n      \"candidate_id\": \"WINDOW-02-E01\",\n      \"source_segment_ids\": [\n        \"CHF-V1-01-S0042\",\n        \"CHF-V1-01-S0044\",\n        \"CHF-V1-01-S0046\",\n        \"CHF-V1-01-S0048\",\n        \"CHF-V1-01-S0050\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰领导印书馆罢工并离开\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"领导罢工并离开印书馆\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"印书馆\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"盲目地\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"治他\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"实际上是我来领导了，领导罢工。\",\n        \"type_basis\": \"核心过程为领导罢工、离开印书馆，是集体物质行动；参与者为Actor，符合MATERIAL允许角色；师弟受害和提意见受阻是触发与阶段，已合并；非言语、心理、关系、行为或存在。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"WINDOW-02-E02\",\n      \"source_segment_ids\": [\n        \"CHF-V1-01-S0050\",\n        \"CHF-V1-01-S0052\",\n        \"CHF-V1-01-S0054\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰失业后重新就业\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"失业后重新就业\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"一个多月到两个月\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"上海\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"一个多月到两个月的失业的生活，尝了失业的滋味，失业是什么滋味那个时候知道了。后来又找到工作\",\n        \"type_basis\": \"核心过程为失业后找到工作并重新就业，属于物质行动和状态变化；参与者为Actor，符合MATERIAL词表；非关系、存在或心理。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"CHF-V1-01-S0043\",\n    \"CHF-V1-01-S0045\",\n    \"CHF-V1-01-S0047\",\n    \"CHF-V1-01-S0049\",\n    \"CHF-V1-01-S0051\",\n    \"CHF-V1-01-S0053\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5249,
+    "total_tokens": 12538,
+    "completion_tokens": 7289,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6450
+    },
+    "time_to_first_token_ms": 63996,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7288000
+  }
+}

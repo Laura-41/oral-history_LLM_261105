@@ -1,0 +1,103 @@
+{
+  "run_time": "2026-11-05T22:48:09",
+  "run_stage": "CONTINUOUS_WINDOW_BLIND_EXTRACTION_MINIMAL",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3-frozen+window-v0.2",
+  "window_id": "WINDOW-01",
+  "doc_id": "CRT-01",
+  "input_segment_ids": [
+    "CRT-01-S0018",
+    "CRT-01-S0019",
+    "CRT-01-S0020",
+    "CRT-01-S0021",
+    "CRT-01-S0022",
+    "CRT-01-S0023",
+    "CRT-01-S0024",
+    "CRT-01-S0025",
+    "CRT-01-S0026",
+    "CRT-01-S0027"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 5,
+    "unassigned_segment_count": 5,
+    "input_segment_count": 10,
+    "all_input_segments_accounted_for": true
+  },
+  "parsed_output": {
+    "window_id": "WINDOW-01",
+    "events": [
+      {
+        "candidate_id": "WINDOW-01-E01",
+        "source_segment_ids": [
+          "CRT-01-S0018",
+          "CRT-01-S0020",
+          "CRT-01-S0022",
+          "CRT-01-S0024",
+          "CRT-01-S0026"
+        ],
+        "event": {
+          "event_name": "八岁放牧时遭日军炮击",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "遭炮击",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "日本人",
+              "normalized_entity": "日本海军/日军",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "我们",
+              "normalized_entity": "陈锐霆及其童年同伴",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "8岁的时候",
+              "normalized_value": "8岁"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "高山",
+              "normalized_value": "高山"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们在那么高（的地方）站了一会儿，（日本人）就向我们开了炮。因为我们在山脊上，它要不就打近了，要不就打远了，没打中我们，打了几十发炮弹，我们就跑掉了嘛。",
+          "type_basis": "核心过程为日军开炮、儿童遭炮击后逃脱，属物质过程；日本人为Actor，儿童为Goal。“听说”“看到”是同一经历链中的触发和阶段，“仇恨”是结果，均不另立一级事件；非言语、心理或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "CRT-01-S0019",
+      "CRT-01-S0021",
+      "CRT-01-S0023",
+      "CRT-01-S0025",
+      "CRT-01-S0027"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"WINDOW-01\",\n  \"events\": [\n    {\n      \"candidate_id\": \"WINDOW-01-E01\",\n      \"source_segment_ids\": [\n        \"CRT-01-S0018\",\n        \"CRT-01-S0020\",\n        \"CRT-01-S0022\",\n        \"CRT-01-S0024\",\n        \"CRT-01-S0026\"\n      ],\n      \"event\": {\n        \"event_name\": \"八岁放牧时遭日军炮击\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"遭炮击\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"日本人\",\n            \"normalized_entity\": \"日本海军/日军\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈锐霆及其童年同伴\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"8岁的时候\",\n            \"normalized_value\": \"8岁\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"高山\",\n            \"normalized_value\": \"高山\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们在那么高（的地方）站了一会儿，（日本人）就向我们开了炮。因为我们在山脊上，它要不就打近了，要不就打远了，没打中我们，打了几十发炮弹，我们就跑掉了嘛。\",\n        \"type_basis\": \"核心过程为日军开炮、儿童遭炮击后逃脱，属物质过程；日本人为Actor，儿童为Goal。“听说”“看到”是同一经历链中的触发和阶段，“仇恨”是结果，均不另立一级事件；非言语、心理或关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"CRT-01-S0019\",\n    \"CRT-01-S0021\",\n    \"CRT-01-S0023\",\n    \"CRT-01-S0025\",\n    \"CRT-01-S0027\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 4285,
+    "total_tokens": 12688,
+    "completion_tokens": 8403,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7873
+    },
+    "tokens_per_second": 8402000,
+    "time_to_first_token_ms": 65060,
+    "time_per_output_token_ms": 0
+  }
+}

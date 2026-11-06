@@ -1,0 +1,223 @@
+{
+  "run_time": "2026-11-06T09:12:46",
+  "run_stage": "CONTINUOUS_WINDOW_BLIND_EXTRACTION_MINIMAL",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3-frozen+window-v0.5",
+  "window_id": "WINDOW-03",
+  "doc_id": "YYS-01",
+  "input_segment_ids": [
+    "YYS-01-S0020",
+    "YYS-01-S0021",
+    "YYS-01-S0022",
+    "YYS-01-S0023",
+    "YYS-01-S0024",
+    "YYS-01-S0025",
+    "YYS-01-S0026",
+    "YYS-01-S0027",
+    "YYS-01-S0028",
+    "YYS-01-S0029",
+    "YYS-01-S0030"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "acceptable_event_counts": null,
+  "preferred_event_count": null,
+  "event_count_matches_preferred": null,
+  "event_count_matches_reference": null,
+  "metrics": {
+    "event_count": 3,
+    "assigned_segment_count": 6,
+    "unassigned_segment_count": 5,
+    "input_segment_count": 11,
+    "all_input_segments_accounted_for": true
+  },
+  "parsed_output": {
+    "window_id": "WINDOW-03",
+    "events": [
+      {
+        "candidate_id": "WINDOW-03-E01",
+        "source_segment_ids": [
+          "YYS-01-S0020",
+          "YYS-01-S0022"
+        ],
+        "event": {
+          "event_name": "红军第一军团改编为八路军第115师",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "改编为",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们红军第一军团",
+              "normalized_entity": "红军第一军团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "国民革命军第八路军第115师",
+              "normalized_entity": "八路军第115师",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "8月23号",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "三原",
+              "normalized_value": "三原"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我记得是8月23号，我们红军第一军团，就在三原改编为国民革命军第八路军第115师",
+          "type_basis": "核心过程“改编为”表示红军部队组织建制的物质性改变；Actor为红军第一军团，Goal为八路军第115师，均属MATERIAL允许角色；不是单纯身份归属的关系过程，因为原文强调改编行动和建制变化。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "WINDOW-03-E02",
+        "source_segment_ids": [
+          "YYS-01-S0024",
+          "YYS-01-S0026",
+          "YYS-01-S0028",
+          "YYS-01-S0030"
+        ],
+        "event": {
+          "event_name": "115师官兵换戴青天白日帽",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "换帽",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "很多同志",
+              "normalized_entity": "115师部分官兵",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "红五星帽子",
+              "normalized_entity": "红五星帽",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "青天白日帽子",
+              "normalized_entity": "青天白日帽",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "8月23号",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "忍痛",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "为了国家利益，要参加抗战",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "换帽的时候啊，因为大家都干革命干了这么多年，当红军当了这么多年，很多同志都不愿意换，但是为了国家利益，要参加抗战，所以忍痛把帽子摘下来放到包袱里面，作为永久的纪念。",
+          "type_basis": "核心过程“换帽”是官兵摘戴帽子的可观察物质行动；Actor为很多同志，Goal为红五星帽和青天白日帽，均属MATERIAL允许角色；虽有不愿换、忍痛等心理内容，但作为换帽行动的动机和方式，不单独构成MENTAL事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "WINDOW-03-E03",
+        "source_segment_ids": [
+          "YYS-01-S0026",
+          "YYS-01-S0030"
+        ],
+        "event": {
+          "event_name": "115师出发，685团前卫渡黄河",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "渡河",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们115师",
+              "normalized_entity": "八路军第115师",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我们685团",
+              "normalized_entity": "八路军第115师343旅685团",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "8月24号",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "富平",
+              "normalized_value": "富平"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "韩城",
+              "normalized_value": "韩城"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "芝川",
+              "normalized_value": "芝川"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "黄河",
+              "normalized_value": "黄河"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "大概8月24号，我们685团呢就是前卫了，大概是经过富平，经过韩城，在韩城（的）好像是叫芝川吧，渡黄河。",
+          "type_basis": "核心过程“渡河”及“出发”表示部队空间移动；Actor为115师和685团，符合MATERIAL允许角色；不是存在过程，因为原文突出部队作为施事的移动和渡河行动。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "YYS-01-S0021",
+      "YYS-01-S0023",
+      "YYS-01-S0025",
+      "YYS-01-S0027",
+      "YYS-01-S0029"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"WINDOW-03\",\n  \"events\": [\n    {\n      \"candidate_id\": \"WINDOW-03-E01\",\n      \"source_segment_ids\": [\n        \"YYS-01-S0020\",\n        \"YYS-01-S0022\"\n      ],\n      \"event\": {\n        \"event_name\": \"红军第一军团改编为八路军第115师\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"改编为\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们红军第一军团\",\n            \"normalized_entity\": \"红军第一军团\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"国民革命军第八路军第115师\",\n            \"normalized_entity\": \"八路军第115师\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"8月23号\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"三原\",\n            \"normalized_value\": \"三原\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我记得是8月23号，我们红军第一军团，就在三原改编为国民革命军第八路军第115师\",\n        \"type_basis\": \"核心过程“改编为”表示红军部队组织建制的物质性改变；Actor为红军第一军团，Goal为八路军第115师，均属MATERIAL允许角色；不是单纯身份归属的关系过程，因为原文强调改编行动和建制变化。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"WINDOW-03-E02\",\n      \"source_segment_ids\": [\n        \"YYS-01-S0024\",\n        \"YYS-01-S0026\",\n        \"YYS-01-S0028\",\n        \"YYS-01-S0030\"\n      ],\n      \"event\": {\n        \"event_name\": \"115师官兵换戴青天白日帽\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"换帽\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"很多同志\",\n            \"normalized_entity\": \"115师部分官兵\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"红五星帽子\",\n            \"normalized_entity\": \"红五星帽\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"青天白日帽子\",\n            \"normalized_entity\": \"青天白日帽\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"8月23号\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"忍痛\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"为了国家利益，要参加抗战\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"换帽的时候啊，因为大家都干革命干了这么多年，当红军当了这么多年，很多同志都不愿意换，但是为了国家利益，要参加抗战，所以忍痛把帽子摘下来放到包袱里面，作为永久的纪念。\",\n        \"type_basis\": \"核心过程“换帽”是官兵摘戴帽子的可观察物质行动；Actor为很多同志，Goal为红五星帽和青天白日帽，均属MATERIAL允许角色；虽有不愿换、忍痛等心理内容，但作为换帽行动的动机和方式，不单独构成MENTAL事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"WINDOW-03-E03\",\n      \"source_segment_ids\": [\n        \"YYS-01-S0026\",\n        \"YYS-01-S0030\"\n      ],\n      \"event\": {\n        \"event_name\": \"115师出发，685团前卫渡黄河\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"渡河\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们115师\",\n            \"normalized_entity\": \"八路军第115师\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们685团\",\n            \"normalized_entity\": \"八路军第115师343旅685团\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"8月24号\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"富平\",\n            \"normalized_value\": \"富平\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"韩城\",\n            \"normalized_value\": \"韩城\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"芝川\",\n            \"normalized_value\": \"芝川\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"黄河\",\n            \"normalized_value\": \"黄河\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"大概8月24号，我们685团呢就是前卫了，大概是经过富平，经过韩城，在韩城（的）好像是叫芝川吧，渡黄河。\",\n        \"type_basis\": \"核心过程“渡河”及“出发”表示部队空间移动；Actor为115师和685团，符合MATERIAL允许角色；不是存在过程，因为原文突出部队作为施事的移动和渡河行动。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"YYS-01-S0021\",\n    \"YYS-01-S0023\",\n    \"YYS-01-S0025\",\n    \"YYS-01-S0027\",\n    \"YYS-01-S0029\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 4692,
+    "total_tokens": 18610,
+    "completion_tokens": 13918,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12430
+    },
+    "time_to_first_token_ms": 107375,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13917000
+  }
+}

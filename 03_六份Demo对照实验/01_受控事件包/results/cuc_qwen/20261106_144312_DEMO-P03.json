@@ -1,0 +1,95 @@
+{
+  "run_time": "2026-11-06T14:43:12",
+  "run_stage": "CONTROLLED_EVENT_RECONSTRUCTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "v0.3-frozen",
+  "schema_version": "event_candidate_v1.0",
+  "packet_version": "v1.0",
+  "packet_id": "DEMO-P03",
+  "doc_id": "CHF-V2-01",
+  "source_segment_ids": [
+    "CHF-V2-01-S0007",
+    "CHF-V2-01-S0009",
+    "CHF-V2-01-S0016",
+    "CHF-V2-01-S0018",
+    "CHF-V2-01-S0020",
+    "CHF-V2-01-S0022",
+    "CHF-V2-01-S0024"
+  ],
+  "json_valid": true,
+  "schema_errors": [],
+  "evidence_supported": true,
+  "evidence_segment_id": "CHF-V2-01-S0020",
+  "technical_passed": true,
+  "parsed_output": {
+    "event_name": "陈海峰被选拔并派往皖南新四军学习",
+    "event_type": "MATERIAL",
+    "event_type_zh": "物质",
+    "core_process": "选拔并派往",
+    "participants": [
+      {
+        "role": "Actor",
+        "mention": "我们",
+        "normalized_entity": null,
+        "certainty": "LOW"
+      },
+      {
+        "role": "Goal",
+        "mention": "我",
+        "normalized_entity": "陈海峰",
+        "certainty": "HIGH"
+      }
+    ],
+    "circumstances": [
+      {
+        "kind": "DIRECTION",
+        "value": "皖南",
+        "normalized_value": null
+      },
+      {
+        "kind": "PURPOSE",
+        "value": "学习",
+        "normalized_value": null
+      },
+      {
+        "kind": "CAUSE",
+        "value": "工人出身",
+        "normalized_value": null
+      },
+      {
+        "kind": "CAUSE",
+        "value": "经过和日本鬼子打了三十多次仗了",
+        "normalized_value": null
+      },
+      {
+        "kind": "CAUSE",
+        "value": "有考验",
+        "normalized_value": null
+      },
+      {
+        "kind": "CAUSE",
+        "value": "情报站的副总站长",
+        "normalized_value": null
+      }
+    ],
+    "projected_content": null,
+    "evidence_quote": "就说送干部去学习，那么首先送谁呢？就选到我了，因为我是工人出身，又是经过和日本鬼子打了三十多次仗了，有考验，又是情报站的副总站长，是不是，那么这样子选拔了。",
+    "type_basis": "候选主导过程为送干部去学习、选到我了、派到三支队，属于组织行动与执行任务的物质过程；陈海峰作为被选拔和派遣对象标 Goal，Actor 保留原文代词我们并降为 LOW，角色均在 MATERIAL 允许词表内。身份归属、名称批准和动员言语为背景，不改变主导类型；无感知现象，非纯关系、言语、存在或行为过程。",
+    "alternative_event_type": null,
+    "ambiguity_reason": "Actor 代词我们无法可靠消歧为上海地下党、潘汉年、江抗或新四军，导致 MATERIAL 的 Actor 确定性低，需要复核。",
+    "review_status": "NEEDS_REVIEW"
+  },
+  "raw_content": "\n\n{\n  \"event_name\": \"陈海峰被选拔并派往皖南新四军学习\",\n  \"event_type\": \"MATERIAL\",\n  \"event_type_zh\": \"物质\",\n  \"core_process\": \"选拔并派往\",\n  \"participants\": [\n    {\n      \"role\": \"Actor\",\n      \"mention\": \"我们\",\n      \"normalized_entity\": null,\n      \"certainty\": \"LOW\"\n    },\n    {\n      \"role\": \"Goal\",\n      \"mention\": \"我\",\n      \"normalized_entity\": \"陈海峰\",\n      \"certainty\": \"HIGH\"\n    }\n  ],\n  \"circumstances\": [\n    {\n      \"kind\": \"DIRECTION\",\n      \"value\": \"皖南\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"PURPOSE\",\n      \"value\": \"学习\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"CAUSE\",\n      \"value\": \"工人出身\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"CAUSE\",\n      \"value\": \"经过和日本鬼子打了三十多次仗了\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"CAUSE\",\n      \"value\": \"有考验\",\n      \"normalized_value\": null\n    },\n    {\n      \"kind\": \"CAUSE\",\n      \"value\": \"情报站的副总站长\",\n      \"normalized_value\": null\n    }\n  ],\n  \"projected_content\": null,\n  \"evidence_quote\": \"就说送干部去学习，那么首先送谁呢？就选到我了，因为我是工人出身，又是经过和日本鬼子打了三十多次仗了，有考验，又是情报站的副总站长，是不是，那么这样子选拔了。\",\n  \"type_basis\": \"候选主导过程为送干部去学习、选到我了、派到三支队，属于组织行动与执行任务的物质过程；陈海峰作为被选拔和派遣对象标 Goal，Actor 保留原文代词我们并降为 LOW，角色均在 MATERIAL 允许词表内。身份归属、名称批准和动员言语为背景，不改变主导类型；无感知现象，非纯关系、言语、存在或行为过程。\",\n  \"alternative_event_type\": null,\n  \"ambiguity_reason\": \"Actor 代词我们无法可靠消歧为上海地下党、潘汉年、江抗或新四军，导致 MATERIAL 的 Actor 确定性低，需要复核。\",\n  \"review_status\": \"NEEDS_REVIEW\"\n}",
+  "usage": {
+    "prompt_tokens": 3544,
+    "total_tokens": 30394,
+    "completion_tokens": 26850,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 26263
+    },
+    "time_to_first_token_ms": 668068,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13424500
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "run_time": "2026-11-05T22:14:29",
+  "run_stage": "CONTINUOUS_WINDOW_BLIND_EXTRACTION_MINIMAL",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3-frozen+window-v0.1",
+  "window_id": "WINDOW-01",
+  "doc_id": "CRT-01",
+  "input_segment_ids": [
+    "CRT-01-S0018",
+    "CRT-01-S0019",
+    "CRT-01-S0020",
+    "CRT-01-S0021",
+    "CRT-01-S0022",
+    "CRT-01-S0023",
+    "CRT-01-S0024",
+    "CRT-01-S0025",
+    "CRT-01-S0026",
+    "CRT-01-S0027"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 6,
+    "assigned_segment_count": 5,
+    "unassigned_segment_count": 5,
+    "input_segment_count": 10,
+    "all_input_segments_accounted_for": true
+  },
+  "parsed_output": {
+    "window_id": "WINDOW-01",
+    "events": [
+      {
+        "candidate_id": "WINDOW-01-E01",
+        "source_segment_ids": [
+          "CRT-01-S0018"
+        ],
+        "event": {
+          "event_name": "他攻打青岛",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "打青岛",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他",
+              "normalized_entity": null,
+              "certainty": "LOW"
+            },
+            {
+              "role": "Goal",
+              "mention": "青岛",
+              "normalized_entity": "青岛",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "这个时候",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "这个时候他就打青岛嘛",
+          "type_basis": "核心过程为攻打青岛，Actor为‘他’，Goal为青岛；属于物质攻击过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": "Actor‘他’指代不明，无法确认具体主体。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      },
+      {
+        "candidate_id": "WINDOW-01-E02",
+        "source_segment_ids": [
+          "CRT-01-S0018",
+          "CRT-01-S0020",
+          "CRT-01-S0022"
+        ],
+        "event": {
+          "event_name": "陈锐霆幼年参加劳动",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "参加劳动",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "从小",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "家里",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "东山",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "家里贫穷，没有劳动力",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我8岁的时候因为家里边贫穷啊，上学也上不起，家里也没有劳动力啊，我从小就参加一些劳动呀：挑水呀、种地呀，在家里做一些家务劳动啊。",
+          "type_basis": "核心过程为参加劳动，包含挑水、种地、家务及随牛群到东山捡柴拾粪等物质行动；Actor明确，无心理或言语投射。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "WINDOW-01-E03",
+        "source_segment_ids": [
+          "CRT-01-S0022",
+          "CRT-01-S0024"
+        ],
+        "event": {
+          "event_name": "孩子们听说日本兵舰停泊",
+          "event_type": "MENTAL",
+          "event_type_zh": "心理",
+          "core_process": "听说日本兵舰停泊",
+          "participants": [
+            {
+              "role": "Senser",
+              "mention": "我们这些小孩",
+              "normalized_entity": "陈锐霆与同龄小孩",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Phenomenon",
+              "mention": "日本的一些兵舰啊，在东山的高山外头，那个深水的港湾停泊，花花绿绿挺好看啊",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "都在东山上听说日本的一些兵舰啊，在东山的高山外头，那个深水的港湾停泊，花花绿绿挺好看啊。",
+          "type_basis": "核心过程为听觉感知/获知信息，Senser为孩子们，Phenomenon为日本兵舰停泊；无明确Sayer，按心理感知处理。",
+          "alternative_event_type": "VERBAL",
+          "ambiguity_reason": "“听说”可分析为转述言语，但原文无明确Sayer和Verbiage。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      },
+      {
+        "candidate_id": "WINDOW-01-E04",
+        "source_segment_ids": [
+          "CRT-01-S0024"
+        ],
+        "event": {
+          "event_name": "孩子们跑到高山看到日本小船",
+          "event_type": "MENTAL",
+          "event_type_zh": "心理",
+          "core_process": "看到七八艘日本的小船",
+          "participants": [
+            {
+              "role": "Senser",
+              "mention": "我们这些小孩",
+              "normalized_entity": "陈锐霆与同龄小孩",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Phenomenon",
+              "mention": "七八艘日本的小船",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "高山",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们小孩就跑到那个山头上，看到有七八艘日本的小船",
+          "type_basis": "核心过程为视觉感知，Senser为孩子们，Phenomenon为日本小船；跑到高山是促成感知的移动背景。",
+          "alternative_event_type": "MATERIAL",
+          "ambiguity_reason": "“跑到高山”为物质移动，但事件主结果是看到日本小船。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      },
+      {
+        "candidate_id": "WINDOW-01-E05",
+        "source_segment_ids": [
+          "CRT-01-S0026"
+        ],
+        "event": {
+          "event_name": "日本兵向孩子们开炮",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "向我们开了炮",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "（日本人）",
+              "normalized_entity": "日本人",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "我们",
+              "normalized_entity": "陈锐霆与同龄小孩",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "山脊",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "（日本人）就向我们开了炮。",
+          "type_basis": "核心过程为开炮攻击，Actor为日本人，Goal为孩子们；属于物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "WINDOW-01-E06",
+        "source_segment_ids": [
+          "CRT-01-S0026"
+        ],
+        "event": {
+          "event_name": "陈锐霆对日本人种下仇恨种子",
+          "event_type": "MENTAL",
+          "event_type_zh": "心理",
+          "core_process": "对日本人种下仇恨的种子",
+          "participants": [
+            {
+              "role": "Senser",
+              "mention": "陈锐霆",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Phenomenon",
+              "mention": "日本人",
+              "normalized_entity": "日本人",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "这个时候",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "虽然年（纪）小吧，这个时候就对日本人种下一个仇恨的种子吧，仇日！",
+          "type_basis": "核心过程为情感/态度变化，Senser为陈锐霆，Phenomenon为日本人；‘种下种子’为心理仇恨的隐喻表达。",
+          "alternative_event_type": "RELATIONAL",
+          "ambiguity_reason": "“种下种子”字面为物质/关系隐喻，但实际表达心理仇恨。",
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "CRT-01-S0019",
+      "CRT-01-S0021",
+      "CRT-01-S0023",
+      "CRT-01-S0025",
+      "CRT-01-S0027"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"WINDOW-01\",\n  \"events\": [\n    {\n      \"candidate_id\": \"WINDOW-01-E01\",\n      \"source_segment_ids\": [\n        \"CRT-01-S0018\"\n      ],\n      \"event\": {\n        \"event_name\": \"他攻打青岛\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"打青岛\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"他\",\n            \"normalized_entity\": null,\n            \"certainty\": \"LOW\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"青岛\",\n            \"normalized_entity\": \"青岛\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"这个时候\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"这个时候他就打青岛嘛\",\n        \"type_basis\": \"核心过程为攻打青岛，Actor为‘他’，Goal为青岛；属于物质攻击过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": \"Actor‘他’指代不明，无法确认具体主体。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      }\n    },\n    {\n      \"candidate_id\": \"WINDOW-01-E02\",\n      \"source_segment_ids\": [\n        \"CRT-01-S0018\",\n        \"CRT-01-S0020\",\n        \"CRT-01-S0022\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆幼年参加劳动\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"参加劳动\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"从小\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"家里\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"东山\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"家里贫穷，没有劳动力\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我8岁的时候因为家里边贫穷啊，上学也上不起，家里也没有劳动力啊，我从小就参加一些劳动呀：挑水呀、种地呀，在家里做一些家务劳动啊。\",\n        \"type_basis\": \"核心过程为参加劳动，包含挑水、种地、家务及随牛群到东山捡柴拾粪等物质行动；Actor明确，无心理或言语投射。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"WINDOW-01-E03\",\n      \"source_segment_ids\": [\n        \"CRT-01-S0022\",\n        \"CRT-01-S0024\"\n      ],\n      \"event\": {\n        \"event_name\": \"孩子们听说日本兵舰停泊\",\n        \"event_type\": \"MENTAL\",\n        \"event_type_zh\": \"心理\",\n        \"core_process\": \"听说日本兵舰停泊\",\n        \"participants\": [\n          {\n            \"role\": \"Senser\",\n            \"mention\": \"我们这些小孩\",\n            \"normalized_entity\": \"陈锐霆与同龄小孩\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Phenomenon\",\n            \"mention\": \"日本的一些兵舰啊，在东山的高山外头，那个深水的港湾停泊，花花绿绿挺好看啊\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": null,\n        \"evidence_quote\": \"都在东山上听说日本的一些兵舰啊，在东山的高山外头，那个深水的港湾停泊，花花绿绿挺好看啊。\",\n        \"type_basis\": \"核心过程为听觉感知/获知信息，Senser为孩子们，Phenomenon为日本兵舰停泊；无明确Sayer，按心理感知处理。\",\n        \"alternative_event_type\": \"VERBAL\",\n        \"ambiguity_reason\": \"“听说”可分析为转述言语，但原文无明确Sayer和Verbiage。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      }\n    },\n    {\n      \"candidate_id\": \"WINDOW-01-E04\",\n      \"source_segment_ids\": [\n        \"CRT-01-S0024\"\n      ],\n      \"event\": {\n        \"event_name\": \"孩子们跑到高山看到日本小船\",\n        \"event_type\": \"MENTAL\",\n        \"event_type_zh\": \"心理\",\n        \"core_process\": \"看到七八艘日本的小船\",\n        \"participants\": [\n          {\n            \"role\": \"Senser\",\n            \"mention\": \"我们这些小孩\",\n            \"normalized_entity\": \"陈锐霆与同龄小孩\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Phenomenon\",\n            \"mention\": \"七八艘日本的小船\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"高山\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们小孩就跑到那个山头上，看到有七八艘日本的小船\",\n        \"type_basis\": \"核心过程为视觉感知，Senser为孩子们，Phenomenon为日本小船；跑到高山是促成感知的移动背景。\",\n        \"alternative_event_type\": \"MATERIAL\",\n        \"ambiguity_reason\": \"“跑到高山”为物质移动，但事件主结果是看到日本小船。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      }\n    },\n    {\n      \"candidate_id\": \"WINDOW-01-E05\",\n      \"source_segment_ids\": [\n        \"CRT-01-S0026\"\n      ],\n      \"event\": {\n        \"event_name\": \"日本兵向孩子们开炮\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"向我们开了炮\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"（日本人）\",\n            \"normalized_entity\": \"日本人\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈锐霆与同龄小孩\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"山脊\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"（日本人）就向我们开了炮。\",\n        \"type_basis\": \"核心过程为开炮攻击，Actor为日本人，Goal为孩子们；属于物质过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"WINDOW-01-E06\",\n      \"source_segment_ids\": [\n        \"CRT-01-S0026\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆对日本人种下仇恨种子\",\n        \"event_type\": \"MENTAL\",\n        \"event_type_zh\": \"心理\",\n        \"core_process\": \"对日本人种下仇恨的种子\",\n        \"participants\": [\n          {\n            \"role\": \"Senser\",\n            \"mention\": \"陈锐霆\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Phenomenon\",\n            \"mention\": \"日本人\",\n            \"normalized_entity\": \"日本人\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"这个时候\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"虽然年（纪）小吧，这个时候就对日本人种下一个仇恨的种子吧，仇日！\",\n        \"type_basis\": \"核心过程为情感/态度变化，Senser为陈锐霆，Phenomenon为日本人；‘种下种子’为心理仇恨的隐喻表达。\",\n        \"alternative_event_type\": \"RELATIONAL\",\n        \"ambiguity_reason\": \"“种下种子”字面为物质/关系隐喻，但实际表达心理仇恨。\",\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"CRT-01-S0019\",\n    \"CRT-01-S0021\",\n    \"CRT-01-S0023\",\n    \"CRT-01-S0025\",\n    \"CRT-01-S0027\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 3837,
+    "total_tokens": 27698,
+    "completion_tokens": 23861,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 21740
+    },
+    "time_to_first_token_ms": 194911,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11930000
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "run_time": "2026-11-05T22:56:59",
+  "run_stage": "CONTINUOUS_WINDOW_BLIND_EXTRACTION_MINIMAL",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "v0.3-frozen+window-v0.3",
+  "window_id": "WINDOW-01",
+  "doc_id": "CRT-01",
+  "input_segment_ids": [
+    "CRT-01-S0018",
+    "CRT-01-S0019",
+    "CRT-01-S0020",
+    "CRT-01-S0021",
+    "CRT-01-S0022",
+    "CRT-01-S0023",
+    "CRT-01-S0024",
+    "CRT-01-S0025",
+    "CRT-01-S0026",
+    "CRT-01-S0027"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "reference_event_count": 2,
+  "event_count_matches_reference": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 5,
+    "unassigned_segment_count": 5,
+    "input_segment_count": 10,
+    "all_input_segments_accounted_for": true
+  },
+  "parsed_output": {
+    "window_id": "WINDOW-01",
+    "events": [
+      {
+        "candidate_id": "WINDOW-01-E01",
+        "source_segment_ids": [
+          "CRT-01-S0018",
+          "CRT-01-S0020",
+          "CRT-01-S0022"
+        ],
+        "event": {
+          "event_name": "陈锐霆童年参加劳动并放牧",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "参加劳动、放牧、捡柴拾粪",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "牛群",
+              "normalized_entity": "村集体牛群",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "8岁；每天",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "即墨县，山东，崂山湾的北部；东山",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "家里贫穷，上学上不起，没有劳动力",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "帮助家里边使用",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "背着筐子，连玩带捡柴、拾粪",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我8岁的时候因为家里边贫穷啊，上学也上不起，家里也没有劳动力啊，我从小就参加一些劳动呀：挑水呀、种地呀，在家里做一些家务劳动啊。",
+          "type_basis": "核心过程为参加劳动、放牧、捡柴拾粪，属物质过程；Actor为陈锐霆，Goal为牛群；这些是长期劳动生活，不是单纯行为或心理过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "WINDOW-01-E02",
+        "source_segment_ids": [
+          "CRT-01-S0022",
+          "CRT-01-S0024",
+          "CRT-01-S0026"
+        ],
+        "event": {
+          "event_name": "陈锐霆等儿童观看日舰遭日军炮击",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "遭日军炮击后逃脱",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "（日本人）",
+              "normalized_entity": "日本军队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "我们",
+              "normalized_entity": "陈锐霆等村中儿童",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "童年",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "东山；高山（山脊上）",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们在那么高（的地方）站了一会儿，（日本人）就向我们开了炮。因为我们在山脊上，它要不就打近了，要不就打远了，没打中我们，打了几十发炮弹，我们就跑掉了嘛。这个时候在中国的土地上，在中国的家门口，受他妈日本人的欺负！虽然年（纪）小吧，这个时候就对日本人种下一个仇恨的种子吧，仇日！这是一次炮击。",
+          "type_basis": "主导过程为日军向儿童开炮、儿童逃脱，属物质过程；Actor为日军，Goal为儿童；听说、观看和产生仇恨是同一经历链的阶段，不另立一级事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "CRT-01-S0019",
+      "CRT-01-S0021",
+      "CRT-01-S0023",
+      "CRT-01-S0025",
+      "CRT-01-S0027"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"WINDOW-01\",\n  \"events\": [\n    {\n      \"candidate_id\": \"WINDOW-01-E01\",\n      \"source_segment_ids\": [\n        \"CRT-01-S0018\",\n        \"CRT-01-S0020\",\n        \"CRT-01-S0022\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆童年参加劳动并放牧\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"参加劳动、放牧、捡柴拾粪\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"牛群\",\n            \"normalized_entity\": \"村集体牛群\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"8岁；每天\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"即墨县，山东，崂山湾的北部；东山\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"家里贫穷，上学上不起，没有劳动力\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"帮助家里边使用\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"背着筐子，连玩带捡柴、拾粪\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我8岁的时候因为家里边贫穷啊，上学也上不起，家里也没有劳动力啊，我从小就参加一些劳动呀：挑水呀、种地呀，在家里做一些家务劳动啊。\",\n        \"type_basis\": \"核心过程为参加劳动、放牧、捡柴拾粪，属物质过程；Actor为陈锐霆，Goal为牛群；这些是长期劳动生活，不是单纯行为或心理过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"WINDOW-01-E02\",\n      \"source_segment_ids\": [\n        \"CRT-01-S0022\",\n        \"CRT-01-S0024\",\n        \"CRT-01-S0026\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆等儿童观看日舰遭日军炮击\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"遭日军炮击后逃脱\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"（日本人）\",\n            \"normalized_entity\": \"日本军队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈锐霆等村中儿童\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"童年\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"东山；高山（山脊上）\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们在那么高（的地方）站了一会儿，（日本人）就向我们开了炮。因为我们在山脊上，它要不就打近了，要不就打远了，没打中我们，打了几十发炮弹，我们就跑掉了嘛。这个时候在中国的土地上，在中国的家门口，受他妈日本人的欺负！虽然年（纪）小吧，这个时候就对日本人种下一个仇恨的种子吧，仇日！这是一次炮击。\",\n        \"type_basis\": \"主导过程为日军向儿童开炮、儿童逃脱，属物质过程；Actor为日军，Goal为儿童；听说、观看和产生仇恨是同一经历链的阶段，不另立一级事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"CRT-01-S0019\",\n    \"CRT-01-S0021\",\n    \"CRT-01-S0023\",\n    \"CRT-01-S0025\",\n    \"CRT-01-S0027\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 4607,
+    "total_tokens": 14906,
+    "completion_tokens": 10299,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9233
+    },
+    "time_to_first_token_ms": 88280,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 10298000
+  }
+}

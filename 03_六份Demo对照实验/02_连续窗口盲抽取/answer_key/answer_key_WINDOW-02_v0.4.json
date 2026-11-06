@@ -1,0 +1,57 @@
+{
+  "answer_key_version": "v0.4-balanced-boundary",
+  "warning": "仅用于模型完成后的边界评价，运行脚本不得读取本文件。",
+  "window_id": "WINDOW-02",
+  "acceptable_event_counts": [3, 4],
+  "required_policy": "富康受虐死亡不得单独成为事件节点，必须与剥削背景或组织罢工合并。",
+  "acceptable_groupings": [
+    {
+      "description": "长期剥削与富康受虐合并；罢工、失业困苦、重新就业分别保留。",
+      "groups": [
+        ["CHF-V1-01-S0042", "CHF-V1-01-S0044"],
+        ["CHF-V1-01-S0046", "CHF-V1-01-S0048", "CHF-V1-01-S0050"],
+        ["CHF-V1-01-S0050", "CHF-V1-01-S0052"],
+        ["CHF-V1-01-S0054"]
+      ]
+    },
+    {
+      "description": "长期剥削单列；富康受虐与罢工合并；失业困苦、重新就业分别保留。",
+      "groups": [
+        ["CHF-V1-01-S0042"],
+        ["CHF-V1-01-S0044", "CHF-V1-01-S0046", "CHF-V1-01-S0048", "CHF-V1-01-S0050"],
+        ["CHF-V1-01-S0050", "CHF-V1-01-S0052"],
+        ["CHF-V1-01-S0054"]
+      ]
+    },
+    {
+      "description": "剥削、受虐与罢工合并；失业困苦和重新就业分别保留。",
+      "groups": [
+        [
+          "CHF-V1-01-S0042",
+          "CHF-V1-01-S0044",
+          "CHF-V1-01-S0046",
+          "CHF-V1-01-S0048",
+          "CHF-V1-01-S0050"
+        ],
+        ["CHF-V1-01-S0050", "CHF-V1-01-S0052"],
+        ["CHF-V1-01-S0054"]
+      ]
+    },
+    {
+      "description": "富康受虐并入罢工；失业困苦与重新就业合并。",
+      "groups": [
+        ["CHF-V1-01-S0042"],
+        ["CHF-V1-01-S0044", "CHF-V1-01-S0046", "CHF-V1-01-S0048", "CHF-V1-01-S0050"],
+        ["CHF-V1-01-S0050", "CHF-V1-01-S0052", "CHF-V1-01-S0054"]
+      ]
+    }
+  ],
+  "expected_unassigned_segment_ids": [
+    "CHF-V1-01-S0043",
+    "CHF-V1-01-S0045",
+    "CHF-V1-01-S0047",
+    "CHF-V1-01-S0049",
+    "CHF-V1-01-S0051",
+    "CHF-V1-01-S0053"
+  ]
+}

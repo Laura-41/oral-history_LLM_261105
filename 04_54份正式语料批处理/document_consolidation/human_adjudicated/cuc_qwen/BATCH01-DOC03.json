@@ -1,0 +1,831 @@
+{
+  "adjudication_version": "human-review-v1.0",
+  "adjudicated_at": "2026-11-06T20:43:18",
+  "adjudicated_by": "研究者",
+  "decision_source": "2026-11-06 20:41 研究者决定：DE004接受NEEDS_REVIEW，由人工改判为讲述背景；DOC01、DOC02暂缓",
+  "model_id": "cuc/qwen",
+  "technical_document_id": "BATCH01-DOC03",
+  "document_id": "02.杨永松100506（二校后 阅读版）.docx",
+  "source_validated_result": "04_54份正式语料批处理/document_consolidation/validated_json/cuc_qwen/BATCH01-DOC03.json",
+  "source_raw_response": "04_54份正式语料批处理/document_consolidation/raw_responses/cuc_qwen/20261106_201800_BATCH01-DOC03.json",
+  "status": "HUMAN_CONFIRMED_WITH_SCOPE_OVERRIDE",
+  "note": "原始模型输出与自动校验结果永久保留不变；本文件仅为人工复核后的图谱导入视图。HUMAN_CONFIRMED是流程文档§10.3的人工复核状态，不在自动校验器枚举内，故本视图不参与validate_document_consolidation评分。",
+  "unchanged_policy": "冻结的提示词／输出契约／Schema／校验器均未改动；未使用--force；未覆盖cuc_deepseek结果；DOC01、DOC02按研究者决定暂缓。",
+  "adjudications": [
+    {
+      "document_event_id": "BATCH01-DOC03-DE004",
+      "event_name": "东北大学生到政治处教喊话",
+      "field_changes": [
+        {
+          "field": "experience_scope",
+          "from": "PERSONAL_EXPERIENCE",
+          "to": "NARRATED_CONTEXT"
+        },
+        {
+          "field": "participation_bases",
+          "from": [
+            "DIRECTLY_AFFECTED"
+          ],
+          "to": [
+            "THIRD_PARTY_ONLY"
+          ]
+        },
+        {
+          "field": "review_status",
+          "from": "NEEDS_REVIEW",
+          "to": "HUMAN_CONFIRMED"
+        },
+        {
+          "field": "review_reason",
+          "from": "“他教我们喊话”为接受者关系，需人工确认杨永松是否直接在场并受教喊话影响。",
+          "to": "人工裁决（2026-11-06）：「他教我们喊话」为接受者关系，按输出契约v0.3 §1.1不足以证明本人参与，范围由个人经历改判为讲述背景；逐字证据与其余字段保持不变。"
+        }
+      ],
+      "basis": [
+        "输出契约v0.3 §1.1：只有接受者关系（如「他教我们」）不足以证明本人参与",
+        "DeepSeek v0.2 同文档基线：同一内容判为 NARRATED_CONTEXT + THIRD_PARTY_ONLY",
+        "逐字原文 S0082／S0084：受访者是被教的一方，无本人职务、任务或具体行动表述",
+        "研究者2026-11-06裁决"
+      ],
+      "evidence_segment_ids": [
+        "BATCH01-DOC03-S0082"
+      ],
+      "scope_evidence_quote": "才到我们政治处里边作为敌工干事，他教我们喊话。"
+    }
+  ],
+  "metrics_original": {
+    "input_candidate_count": 12,
+    "document_event_count": 7,
+    "candidate_decision_count": 12,
+    "personal_event_count": 4,
+    "context_event_count": 3,
+    "uncertain_event_count": 0,
+    "needs_review_count": 3
+  },
+  "metrics_after_adjudication": {
+    "input_candidate_count": 12,
+    "document_event_count": 7,
+    "candidate_decision_count": 12,
+    "personal_event_count": 3,
+    "context_event_count": 4,
+    "uncertain_event_count": 0,
+    "needs_review_count": 2
+  },
+  "consolidated_output": {
+    "schema_version": "document-consolidation-v1.0",
+    "technical_document_id": "BATCH01-DOC03",
+    "document_id": "02.杨永松100506（二校后 阅读版）.docx",
+    "interviewee": "杨永松",
+    "document_events": [
+      {
+        "document_event_id": "BATCH01-DOC03-DE001",
+        "source_candidate_ids": [
+          "BATCH01-DOC03-W001-E01",
+          "BATCH01-DOC03-W002-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC03-S0012",
+          "BATCH01-DOC03-S0015",
+          "BATCH01-DOC03-S0017",
+          "BATCH01-DOC03-S0021",
+          "BATCH01-DOC03-S0023"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC03-S0021"
+        ],
+        "scope_evidence_quote": "把我呢，说你协助民运股工作。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "杨永松所在部队平型关战役前集结动员与任务分配",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "集结、动员、分配任务并出发",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们部队",
+              "normalized_entity": "杨永松所在部队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "杨永松",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Client",
+              "mention": "民运股",
+              "normalized_entity": "民运股",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "可能是22号",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "23号",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "那天晚上12点",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "冉庄",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "宿营地",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "山上",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "往这个作战方向",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "下雨",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "打出军威国威",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那天晚上唐亮主任是分配组织股、宣传股跟着营里面参加战斗政治鼓励工作，民运股，曾思玉（音）的股长，留在后边，准备接收俘虏，准备动员担架。把我呢，说你协助民运股工作。",
+          "type_basis": "主导过程是部队在冉庄集结、战前动员、任务分配和夜间出发，杨永松被明确分配协助民运股，属于组织行动的物质过程；Actor为部队和杨永松，Client为民运股。战斗进攻细节因本人明确不现场而拆入背景事件，不改变本事件类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC03-DE002",
+        "source_candidate_ids": [
+          "BATCH01-DOC03-W001-E01",
+          "BATCH01-DOC03-W002-E01",
+          "BATCH01-DOC03-W003-E01",
+          "BATCH01-DOC03-W003-E04",
+          "BATCH01-DOC03-W004-E01",
+          "BATCH01-DOC03-W004-E02",
+          "BATCH01-DOC03-W004-E03",
+          "BATCH01-DOC03-W004-E06"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC03-S0004",
+          "BATCH01-DOC03-S0006",
+          "BATCH01-DOC03-S0008",
+          "BATCH01-DOC03-S0010",
+          "BATCH01-DOC03-S0012",
+          "BATCH01-DOC03-S0019",
+          "BATCH01-DOC03-S0023",
+          "BATCH01-DOC03-S0026",
+          "BATCH01-DOC03-S0028",
+          "BATCH01-DOC03-S0030",
+          "BATCH01-DOC03-S0032",
+          "BATCH01-DOC03-S0039",
+          "BATCH01-DOC03-S0041",
+          "BATCH01-DOC03-S0043",
+          "BATCH01-DOC03-S0045",
+          "BATCH01-DOC03-S0047",
+          "BATCH01-DOC03-S0070",
+          "BATCH01-DOC03-S0072",
+          "BATCH01-DOC03-S0077",
+          "BATCH01-DOC03-S0080",
+          "BATCH01-DOC03-S0091",
+          "BATCH01-DOC03-S0095"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "EXPLICIT_NON_PARTICIPATION",
+          "REPORTED_BY_OTHERS"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC03-S0026"
+        ],
+        "scope_evidence_quote": "我不在现场，但是我听到一些回来的人讲。我讲这些东西我不参加。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "平型关战斗过程与结果",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "685团、686团进攻日军并战斗，687团参战，造成伤亡",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "685团",
+              "normalized_entity": "685团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "686团",
+              "normalized_entity": "686团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "687团",
+              "normalized_entity": "687团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "连长",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "指导员",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "敌人",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "可能是22号",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "23号",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "天亮以后",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "下午",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "第二天晚上",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "天亮以前",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "平型关",
+              "normalized_value": "平型关"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "雨裂沟",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "东西跑池",
+              "normalized_value": "东西跑池"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "村庄",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "老爷庙",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "山头",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "信号弹",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "冲锋号",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "手榴弹和机枪、步枪",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "拼刺刀",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "敌人他很警觉，也好像发现了情况",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "有800。下来以后还剩下900人，我们上战场1000多人嘛",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "不到一半，战斗部队是一半了",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "我们这个685团没有抓住活的",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他们两个人啊，就在冲这个的时候……他们两个不在一个连，这个连长牺牲了，指导员负伤了，因为干部带头啊。这个战斗打到下午，我们685团这个方向的敌人就占据东西跑池，利用村庄顽抗，右边686团这个方向的敌人呢，爬到山上一个老爷庙，在那个地方顽抗。",
+          "type_basis": "主导过程是685团、686团对日军发起进攻、清剿、顽抗、伤亡以及687团参战，属于作战的物质过程；Actor为各团和干部，Goal为敌人。杨永松明确不现场并听回来的人讲，因此本事件作为讲述背景，不标为个人经历。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC03-DE003",
+        "source_candidate_ids": [
+          "BATCH01-DOC03-W004-E06"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC03-S0091",
+          "BATCH01-DOC03-S0093",
+          "BATCH01-DOC03-S0095"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC03-S0093"
+        ],
+        "scope_evidence_quote": "我背着个手枪，没带行李，我就往前走。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "杨永松第二天前往观察被哨兵阻止",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "杨永松前往观察，被哨兵阻止并返回",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "杨永松",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "他",
+              "normalized_entity": "哨兵",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "那天下午",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "山这个地方有个小洼洼",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "往前",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "背着个手枪，没带行李",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "现在这个情况紧张",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "看看",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "“哎，同志，你干嘛去呀？”我说部队打了两天了，我去看看去。“哎！没有特殊情况不让去，现在这个情况紧张，敌人增援了。”他说那个方向已经发现了。大概我就往回走的时候，687团他就从右翼参加战斗了。",
+          "type_basis": "主导过程是杨永松背手枪前往观察、被哨兵询问并阻止、往回走，属于可观察移动和交互的物质过程；Actor为杨永松和哨兵。687团参战作为同一战斗背景拆入DE002，不改变本事件类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH01-DOC03-DE004",
+        "source_candidate_ids": [
+          "BATCH01-DOC03-W004-E04"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC03-S0082",
+          "BATCH01-DOC03-S0084",
+          "BATCH01-DOC03-S0087"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC03-S0082"
+        ],
+        "scope_evidence_quote": "才到我们政治处里边作为敌工干事，他教我们喊话。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "东北大学生到政治处教喊话",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "东北大学生到政治处作为敌工干事教喊话",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "他",
+              "normalized_entity": "敌工干事",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我们",
+              "normalized_entity": "杨永松所在政治处人员",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "到了以后",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "我们政治处",
+              "normalized_value": "政治处"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "出发抗战时候没有准备这个",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "连师部都没有",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "あいうえお（a、i、u、e、o）はひふへほ（ha、hi、hu、he、ho）（日语）50个字母，缴枪不杀，缴枪Giositelu Kilosanayi（日语），意思是你缴枪我不杀你",
+          "evidence_quote": "到了以后，才来了一个东北的大学生，会日文，才到我们政治处里边作为敌工干事，他教我们喊话。",
+          "type_basis": "核心是教喊话、拼音和日语口号，属于言语象征交换；Sayer为敌工干事，Receiver为政治处人员，具体言语内容写入projected_content，不重复为Verbiage。杨永松所在政治处直接受教喊话影响，标为个人经历。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "HUMAN_CONFIRMED",
+        "review_reason": "人工裁决（2026-11-06）：「他教我们喊话」为接受者关系，按输出契约v0.3 §1.1不足以证明本人参与，范围由个人经历改判为讲述背景；逐字证据与其余字段保持不变。"
+      },
+      {
+        "document_event_id": "BATCH01-DOC03-DE005",
+        "source_candidate_ids": [
+          "BATCH01-DOC03-W004-E05"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC03-S0089"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "COLLECTIVE_WITHOUT_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC03-S0089"
+        ],
+        "scope_evidence_quote": "我们那个团的担架队到过雪山的时候还有三十个人，就是原来的时候有五十个人。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "团担架配置与长征雪山担架队减员",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "团里配备担架，担架队长征到雪山减员至30人",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们那个团的担架队",
+              "normalized_entity": "担架队",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "长征的时候",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "雪山",
+              "normalized_value": "雪山"
+            },
+            {
+              "kind": "OTHER",
+              "value": "一个团是10副担架，一副担架是5个人",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "原来的时候有五十个人",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们那个团的担架队到过雪山的时候还有三十个人，就是原来的时候有五十个人。",
+          "type_basis": "核心是担架队到雪山并人数减少，属于移动和状态改变的物质过程；Actor为担架队。担架配置数量作为OTHER，不主导为关系过程。",
+          "alternative_event_type": "RELATIONAL",
+          "ambiguity_reason": "事件同时包含担架配置属性与担架队到雪山的人数变化，主导选择MATERIAL因核心阶段性结果是移动和减员，但关系属性也有依据。",
+          "review_status": "NEEDS_REVIEW"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "担架配置与减员兼具关系和物质依据，主导类型需人工确认。"
+      },
+      {
+        "document_event_id": "BATCH01-DOC03-DE006",
+        "source_candidate_ids": [
+          "BATCH01-DOC03-W003-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC03-S0054",
+          "BATCH01-DOC03-S0056"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC03-S0054"
+        ],
+        "scope_evidence_quote": "当时这个领导还（说）尽可能不要换，留起来要建设另外一个团。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "直罗镇缴获武器保留组建第三团",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "保留缴获武器并组建第三团",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "领导",
+              "normalized_entity": null,
+              "certainty": "LOW"
+            },
+            {
+              "role": "Goal",
+              "mention": "第三团",
+              "normalized_entity": "第三团",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "直罗镇战斗以后",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "一团、三团、13团编为一师",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "尽可能不要换，留起来要建设另外一个团",
+          "evidence_quote": "要另外组织一个团，你尽交些不要的枪给他不合适啊。所以你缴的枪呢你不要全部给换了，要留一部分。那个时候呢就是要组织一个第三团，直罗镇战斗以后，组织一个第三团呢，就一团、三团、13团编为一师，一师就（是115师）以后杨成武那个独立团了。",
+          "type_basis": "核心是保留缴获武器并组建第三团、编为一师，属于组织行动的物质过程；Actor为泛称领导，Goal为第三团。领导言语作为指示阶段写入projected_content，不改变主导类型。",
+          "alternative_event_type": "VERBAL",
+          "ambiguity_reason": "“领导说”构成言语过程，保留/组建第三团构成物质组织行动；施事者“领导”为泛称，事件边界与主导类型需复核。",
+          "review_status": "NEEDS_REVIEW"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "施事者“领导”为泛称，保留/组建第三团与言语指示边界需人工确认。"
+      },
+      {
+        "document_event_id": "BATCH01-DOC03-DE007",
+        "source_candidate_ids": [
+          "BATCH01-DOC03-W003-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH01-DOC03-S0062",
+          "BATCH01-DOC03-S0064",
+          "BATCH01-DOC03-S0066",
+          "BATCH01-DOC03-S0068"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH01-DOC03-S0064"
+        ],
+        "scope_evidence_quote": "我们带的一个连去动员新兵的时候啊",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "三营11连缴获武器在运城展览动员新兵",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "带三营11连在运城展览缴获武器并动员新兵",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "杨永松所在部队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "这个连",
+              "normalized_entity": "三营11连",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "新兵",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "运城",
+              "normalized_value": "运城"
+            },
+            {
+              "kind": "MANNER",
+              "value": "展览",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "歪把子机枪、钢帽、旗帜",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们带的一个连去动员新兵的时候啊，这个连是三营11连，这上头写了，连长是刘杨初（音），湖南人，长征过来的。",
+          "type_basis": "核心是带三营11连在运城展览缴获武器并动员新兵，属于组织行动的物质过程；Actor为“我们”和三营11连，Goal为新兵。“我们带”证明受访者随集体执行具体任务，标为个人经历。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "candidate_id": "BATCH01-DOC03-W001-E01",
+        "action": "SPLIT",
+        "document_event_ids": [
+          "BATCH01-DOC03-DE001",
+          "BATCH01-DOC03-DE002"
+        ],
+        "reason": "候选同时包含杨永松所在部队集结动员与任务分配的个人经历，以及685/686团发起进攻战斗的转述背景，拆分为两个文档事件。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC03-W002-E01",
+        "action": "SPLIT",
+        "document_event_ids": [
+          "BATCH01-DOC03-DE001",
+          "BATCH01-DOC03-DE002"
+        ],
+        "reason": "候选包含唐亮分配杨永松协助民运股等个人任务，以及685/686团战斗、伤亡和报道争议等转述背景；报道争议不单独建事件。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC03-W003-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC03-DE002"
+        ],
+        "reason": "685团伤亡是平型关战斗直接结果，与战斗过程归并为同一文档事件。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC03-W003-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH01-DOC03-DE006"
+        ],
+        "reason": "直罗镇缴获武器保留组建第三团是独立历史组织事件，不与平型关战斗归并。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC03-W003-E03",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH01-DOC03-DE007"
+        ],
+        "reason": "三营11连运城展览动员新兵是独立个人参与事件，单独保留。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC03-W003-E04",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC03-DE002"
+        ],
+        "reason": "夜攻东西跑池并撤至山头是平型关战斗继续阶段，归入同一战斗事件。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC03-W004-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC03-DE002"
+        ],
+        "reason": "与W003-E04共享片段，同为平型关战斗阶段，归入同一战斗事件。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC03-W004-E02",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC03-DE002"
+        ],
+        "reason": "拼刺刀及686团攻老爷庙伤亡是平型关战斗阶段和结果，归入同一战斗事件。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC03-W004-E03",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH01-DOC03-DE002"
+        ],
+        "reason": "未俘获活口是平型关战斗结果，归入同一战斗事件。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC03-W004-E04",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH01-DOC03-DE004"
+        ],
+        "reason": "东北大学生到政治处教喊话是独立言语事件，单独保留。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC03-W004-E05",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH01-DOC03-DE005"
+        ],
+        "reason": "团担架配置与长征雪山减员是独立部队历史背景，单独保留。"
+      },
+      {
+        "candidate_id": "BATCH01-DOC03-W004-E06",
+        "action": "SPLIT",
+        "document_event_ids": [
+          "BATCH01-DOC03-DE002",
+          "BATCH01-DOC03-DE003"
+        ],
+        "reason": "候选包含687团参战和敌人增援的战斗背景，以及杨永松前往战场观察被阻止的个人行动，拆分为两个文档事件。"
+      }
+    ]
+  }
+}

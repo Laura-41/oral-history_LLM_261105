@@ -40,11 +40,20 @@ def strip_json_fence(content: str) -> str:
     return "\n".join(lines).strip()
 
 
-def read_manifest() -> list[dict[str, str]]:
-    path = BATCH_ROOT / "batch01_manifest.csv"
+def resolve_manifest_path(args: argparse.Namespace) -> Path:
+    if args.manifest:
+        return BATCH_ROOT / args.manifest
+    if args.batch:
+        return BATCH_ROOT / f"{args.batch.lower()}_manifest.csv"
+    return BATCH_ROOT / "batch01_manifest.csv"
+
+
+def read_manifest(path: Path) -> list[dict[str, str]]:
     if not path.exists():
         raise FileNotFoundError(
-            "找不到batch01_manifest.csv，请先运行prepare_formal_batch.py"
+            f"找不到窗口清单{path.name}，请先运行"
+            "prepare_formal_batch.py（首批）或"
+            "prepare_batch_from_inventory.py（后续51份）"
         )
     with path.open(encoding="utf-8-sig", newline="") as handle:
         return list(csv.DictReader(handle))
@@ -221,12 +230,25 @@ def select_rows(
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="首批正式语料窗口运行程序")
+    parser = argparse.ArgumentParser(description="正式语料窗口运行程序")
     parser.add_argument("--model", default="cuc/deepseek")
+    parser.add_argument(
+        "--batch",
+        help="批次号，如BATCH02；等价于--manifest batch02_manifest.csv",
+    )
+    parser.add_argument(
+        "--manifest",
+        help="窗口清单文件名，如batch02_manifest.csv；默认batch01_manifest.csv",
+    )
     group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument("--document", help="技术文档ID，如BATCH01-DOC01")
+    group.add_argument("--document", help="技术文档ID，如BATCH02-DOC01")
     group.add_argument("--window", help="单个窗口ID")
-    group.add_argument("--all-first-batch", action="store_true")
+    group.add_argument(
+        "--all-first-batch",
+        "--all",
+        action="store_true",
+        help="运行所选清单内的全部窗口",
+    )
     parser.add_argument("--timeout", type=int, default=600)
     parser.add_argument("--max-windows", type=int)
     parser.add_argument("--force", action="store_true")
@@ -246,11 +268,13 @@ def main() -> int:
         "CUC_BASE_URL", "https://openai.cuc.edu.cn/v1"
     ).rstrip("/")
     try:
-        manifest = read_manifest()
+        manifest_path = resolve_manifest_path(args)
+        manifest = read_manifest(manifest_path)
         selected_rows = select_rows(manifest, args)
     except (FileNotFoundError, ValueError) as exc:
         print(f"错误：{exc}", file=sys.stderr)
         return 2
+    print(f"窗口清单：{manifest_path.name}（共{len(manifest)}行）")
 
     system_prompt = PROMPT_PATH.read_text(encoding="utf-8")
     window_prompt = WINDOW_PROMPT_PATH.read_text(encoding="utf-8")

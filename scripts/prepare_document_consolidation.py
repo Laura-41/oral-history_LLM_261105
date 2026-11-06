@@ -34,9 +34,28 @@ def write_json(path: Path, value: Any) -> None:
     )
 
 
-def read_source_segments() -> dict[str, list[dict[str, Any]]]:
+def resolve_paths(args: argparse.Namespace) -> tuple[Path, Path]:
+    if args.batch:
+        lower = args.batch.lower()
+        documents = BATCH_ROOT / f"{lower}_documents.json"
+        segments = BATCH_ROOT / f"{lower}_source_segments.jsonl"
+    else:
+        documents = BATCH_ROOT / (
+            args.documents or "batch01_documents.json"
+        )
+        segments = BATCH_ROOT / (
+            args.segments or "batch01_source_segments.jsonl"
+        )
+    for path in (documents, segments):
+        if not path.exists():
+            raise FileNotFoundError(
+                f"找不到{path.name}，请先运行对应的批次准备程序"
+            )
+    return documents, segments
+
+
+def read_source_segments(path: Path) -> dict[str, list[dict[str, Any]]]:
     grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
-    path = BATCH_ROOT / "batch01_source_segments.jsonl"
     for line in path.read_text(encoding="utf-8").splitlines():
         if not line.strip():
             continue
@@ -116,9 +135,26 @@ def parse_args() -> argparse.Namespace:
         description="准备指定模型的文档级归并输入；不调用API"
     )
     parser.add_argument("--model", required=True)
+    parser.add_argument(
+        "--batch",
+        help="批次号，如BATCH02；自动使用该批次的documents与segments文件",
+    )
+    parser.add_argument(
+        "--documents",
+        help="文档记录文件名；默认batch01_documents.json",
+    )
+    parser.add_argument(
+        "--segments",
+        help="源片段文件名；默认batch01_source_segments.jsonl",
+    )
     group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument("--document", help="技术文档ID，如BATCH01-DOC03")
-    group.add_argument("--all-first-batch", action="store_true")
+    group.add_argument("--document", help="技术文档ID，如BATCH02-DOC01")
+    group.add_argument(
+        "--all-first-batch",
+        "--all",
+        action="store_true",
+        help="为所选文档记录内的全部文档生成输入包",
+    )
     return parser.parse_args()
 
 
@@ -141,10 +177,16 @@ def select_documents(
 def main() -> int:
     args = parse_args()
     model_dir = safe_model_name(args.model)
-    documents = select_documents(
-        read_json(BATCH_ROOT / "batch01_documents.json"), args
+    try:
+        documents_path, segments_path = resolve_paths(args)
+    except FileNotFoundError as exc:
+        print(f"错误：{exc}", file=sys.stderr)
+        return 2
+    print(
+        f"文档记录：{documents_path.name}；源片段：{segments_path.name}"
     )
-    segments_by_document = read_source_segments()
+    documents = select_documents(read_json(documents_path), args)
+    segments_by_document = read_source_segments(segments_path)
     manifest_path = STAGE_ROOT / f"manifest_{model_dir}.csv"
     existing_manifest: dict[str, dict[str, str]] = {}
     if manifest_path.exists():

@@ -1,0 +1,144 @@
+{
+  "run_time": "2026-11-06T20:28:34",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH02-DOC01-W001",
+  "technical_document_id": "BATCH02-DOC01",
+  "document_id": "03.陈海峰（一访）（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH02-DOC01-S0002",
+    "BATCH02-DOC01-S0003",
+    "BATCH02-DOC01-S0004",
+    "BATCH02-DOC01-S0005",
+    "BATCH02-DOC01-S0006",
+    "BATCH02-DOC01-S0007",
+    "BATCH02-DOC01-S0008",
+    "BATCH02-DOC01-S0009",
+    "BATCH02-DOC01-S0010",
+    "BATCH02-DOC01-S0011",
+    "BATCH02-DOC01-S0012",
+    "BATCH02-DOC01-S0013",
+    "BATCH02-DOC01-S0014",
+    "BATCH02-DOC01-S0015",
+    "BATCH02-DOC01-S0016",
+    "BATCH02-DOC01-S0017",
+    "BATCH02-DOC01-S0018",
+    "BATCH02-DOC01-S0019",
+    "BATCH02-DOC01-S0020",
+    "BATCH02-DOC01-S0021",
+    "BATCH02-DOC01-S0022",
+    "BATCH02-DOC01-S0023",
+    "BATCH02-DOC01-S0024",
+    "BATCH02-DOC01-S0025",
+    "BATCH02-DOC01-S0026",
+    "BATCH02-DOC01-S0027",
+    "BATCH02-DOC01-S0028",
+    "BATCH02-DOC01-S0029",
+    "BATCH02-DOC01-S0030"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 4,
+    "unassigned_segment_count": 25,
+    "input_segment_count": 29,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH02-DOC01-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH02-DOC01-W001-E01",
+        "source_segment_ids": [
+          "BATCH02-DOC01-S0008",
+          "BATCH02-DOC01-S0010",
+          "BATCH02-DOC01-S0012",
+          "BATCH02-DOC01-S0014"
+        ],
+        "event": {
+          "event_name": "开展打狗运动并动员群众杀狗改善部队伙食",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "发动打狗运动",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "抗日部队/根据地组织",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "狗",
+              "normalized_entity": "狗",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "战士",
+              "normalized_entity": "部队战士",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "根据地内部",
+              "normalized_value": "抗日根据地"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我再补充几句，刚才不是（讲）打狗（嘛），狗给我们影响也很大嘛，以后就发动“打狗运动”。",
+          "type_basis": "核心过程为组织发动“打狗运动”，包含动员、杀狗、分配狗肉等可观察行动，参与者为部队/组织（Actor）、狗（Goal）和战士（Recipient），均属MATERIAL允许角色；不是单纯言语或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH02-DOC01-S0002",
+      "BATCH02-DOC01-S0003",
+      "BATCH02-DOC01-S0004",
+      "BATCH02-DOC01-S0005",
+      "BATCH02-DOC01-S0006",
+      "BATCH02-DOC01-S0007",
+      "BATCH02-DOC01-S0009",
+      "BATCH02-DOC01-S0011",
+      "BATCH02-DOC01-S0013",
+      "BATCH02-DOC01-S0015",
+      "BATCH02-DOC01-S0016",
+      "BATCH02-DOC01-S0017",
+      "BATCH02-DOC01-S0018",
+      "BATCH02-DOC01-S0019",
+      "BATCH02-DOC01-S0020",
+      "BATCH02-DOC01-S0021",
+      "BATCH02-DOC01-S0022",
+      "BATCH02-DOC01-S0023",
+      "BATCH02-DOC01-S0024",
+      "BATCH02-DOC01-S0025",
+      "BATCH02-DOC01-S0026",
+      "BATCH02-DOC01-S0027",
+      "BATCH02-DOC01-S0028",
+      "BATCH02-DOC01-S0029",
+      "BATCH02-DOC01-S0030"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH02-DOC01-W001\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH02-DOC01-W001-E01\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC01-S0008\",\n        \"BATCH02-DOC01-S0010\",\n        \"BATCH02-DOC01-S0012\",\n        \"BATCH02-DOC01-S0014\"\n      ],\n      \"event\": {\n        \"event_name\": \"开展打狗运动并动员群众杀狗改善部队伙食\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"发动打狗运动\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"抗日部队/根据地组织\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"狗\",\n            \"normalized_entity\": \"狗\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"战士\",\n            \"normalized_entity\": \"部队战士\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"根据地内部\",\n            \"normalized_value\": \"抗日根据地\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我再补充几句，刚才不是（讲）打狗（嘛），狗给我们影响也很大嘛，以后就发动“打狗运动”。\",\n        \"type_basis\": \"核心过程为组织发动“打狗运动”，包含动员、杀狗、分配狗肉等可观察行动，参与者为部队/组织（Actor）、狗（Goal）和战士（Recipient），均属MATERIAL允许角色；不是单纯言语或关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH02-DOC01-S0002\",\n    \"BATCH02-DOC01-S0003\",\n    \"BATCH02-DOC01-S0004\",\n    \"BATCH02-DOC01-S0005\",\n    \"BATCH02-DOC01-S0006\",\n    \"BATCH02-DOC01-S0007\",\n    \"BATCH02-DOC01-S0009\",\n    \"BATCH02-DOC01-S0011\",\n    \"BATCH02-DOC01-S0013\",\n    \"BATCH02-DOC01-S0015\",\n    \"BATCH02-DOC01-S0016\",\n    \"BATCH02-DOC01-S0017\",\n    \"BATCH02-DOC01-S0018\",\n    \"BATCH02-DOC01-S0019\",\n    \"BATCH02-DOC01-S0020\",\n    \"BATCH02-DOC01-S0021\",\n    \"BATCH02-DOC01-S0022\",\n    \"BATCH02-DOC01-S0023\",\n    \"BATCH02-DOC01-S0024\",\n    \"BATCH02-DOC01-S0025\",\n    \"BATCH02-DOC01-S0026\",\n    \"BATCH02-DOC01-S0027\",\n    \"BATCH02-DOC01-S0028\",\n    \"BATCH02-DOC01-S0029\",\n    \"BATCH02-DOC01-S0030\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5866,
+    "total_tokens": 20552,
+    "completion_tokens": 14686,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 13911
+    },
+    "time_to_first_token_ms": 120309,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 14685000
+  }
+}

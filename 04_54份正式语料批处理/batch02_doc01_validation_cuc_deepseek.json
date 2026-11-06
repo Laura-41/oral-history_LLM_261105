@@ -1,0 +1,49 @@
+{
+  "summary_version": "v1.0",
+  "generated_at": "2026-11-06T20:44:00",
+  "batch_id": "BATCH02",
+  "model_id": "cuc/deepseek",
+  "run_track": "DEEPSEEK_PARALLEL_TRACK",
+  "document_count": 1,
+  "expected_window_count": 5,
+  "passed_window_count": 5,
+  "schema_pass_rate": 1.0,
+  "token_input": 43512,
+  "token_output": 115343,
+  "estimated_cost_cny": 0.5049,
+  "checks": {
+    "json_and_schema_all_windows_passed": true,
+    "schema_pass_rate_at_least_95pct": true,
+    "segment_coverage_100pct": true,
+    "edge_candidates_queued": true,
+    "raw_responses_and_usage_saved": true,
+    "document_consolidation_all_passed": true
+  },
+  "technical_gate_passed": true,
+  "content_gate": "MANUAL_REVIEW_REQUIRED",
+  "content_gate_note": "集体战斗、历史背景是否被成批误纳为个人经历，必须人工抽检后才能进入下一批；本程序不自动放行。",
+  "validation_error_details": [],
+  "per_document": [
+    {
+      "technical_document_id": "BATCH02-DOC01",
+      "document_id": "03.陈海峰（一访）（一校后 阅读版）.docx",
+      "interviewee": "陈海峰",
+      "source_format": "DOCX",
+      "expected_windows": 5,
+      "passed_windows": 5,
+      "window_candidates": 13,
+      "edge_candidates": 4,
+      "coverage_ok": true,
+      "raw_response_files": 5,
+      "cross_window_pairs": 2,
+      "terminal_candidate_ids": 2,
+      "exists": true,
+      "technical_passed": true,
+      "document_event_count": 9,
+      "personal": 6,
+      "context": 2,
+      "uncertain": 1,
+      "needs_review": 1
+    }
+  ]
+}

@@ -3,9 +3,10 @@
 > 当前版本：v1.11
 > 更新日期：2026-11-06  
 > DeepSeek基线：首批3份窗口抽取与文档级回归已通过
-> Qwen状态：主模型候选，待按DOC03→DOC01→DOC02完成首批全文回归
+> Qwen状态：DOC03的4个窗口与文档级归并已技术通过；核心反证生效，但内容存在1项契约分歧待研究者裁决，暂不继续DOC01、DOC02
 > 六类过程提示词：`system_prompt_v0.3`（保持冻结）  
-> 连续窗口提示词：`window_extraction_prompt_v0.5`（保持原文件不改）
+> 连续窗口提示词：`window_extraction_prompt_v0.5`（保持原文件不改）  
+> 后续51份：已编排为 `BATCH02`–`BATCH07`（9/9/9/9/9/6）；DeepSeek 并行支线运行方法见 `DeepSeek_51份分批运行SOP.md`
 
 ## 一、执行决定
 
@@ -127,6 +128,11 @@ python3 scripts/run_formal_batch.py --model cuc/deepseek --document BATCH01-DOC0
 | v1.9 | 2026-11-06 | `BATCH01-DOC01`文档级v0.3技术与内容回归通过：13个候选形成9个事件，个人7、背景2；两项具体集体动作正确恢复为个人经历，部队长期沿革和新四军整体壮大仍为背景；下一步运行DOC02。 |
 | v1.10 | 2026-11-06 | `BATCH01-DOC02`文档级v0.3回归通过：8候选形成8事件，正确归并菏泽守城、拆分本人抗战与他部队背景，并保留文末不完整袭击准备；首批3份全部通过，冻结文档级规则，下一步准备后续首批9份。 |
 | v1.11 | 2026-11-06 | Qwen定向同题测试优于DeepSeek后，将双模型窗口复核队列、文档级输入和清单改为按模型隔离；既有DeepSeek结果保留，Qwen先回归最难DOC03，再回归DOC01、DOC02，通过后才进入新9份。 |
+| v1.12 | 2026-11-06 | Qwen的DOC03完成4窗口抽取与文档级归并，技术校验、逐字证据与S0026反证均通过；但DE004范围分类与冻结契约v0.3相悖，另有3项边界分歧，不判定内容完全通过，暂停后续回归与9份批次；同期补登实验登记表5条调用记录。 |
+| v1.13 | 2026-11-06 | 与v1.12的Qwen记录并列的DeepSeek支线：核准"语料清单—批处理脚本—文档级合并"链路，确认原程序只认首批3份；新增清单驱动的51份批次准备（BATCH02–BATCH07，9/9/9/9/9/6）、通用化窗口与文档级程序、一键批次编排器与熔断汇总；产出 `DeepSeek_51份分批运行SOP.md`；完成 `BATCH02-DOC01` 真实端到端验证（5/5窗口、13候选→9文档事件）。 |
+| v1.14 | 2026-11-06 | 按研究者要求确立工程级运行方式约定：大批量语料由研究者在本地终端自行启动，助手只给可复制命令、不代为长跑、不回贴长日志；新增 `scripts/run_batches_in_terminal.sh`（实时输出＋`run_logs/`日志落盘＋防休眠＋每批暂停等人工确认＋断点续跑），并写入 `.workbuddy/memory/MEMORY.md`、SOP §4.2 与主流程 v1.35。每批人工抽检熔断不变。 |
+| v1.15 | 2026-11-06 | 研究者确认双线全量并行的性质为「进度冗余／两份作业分开批改」，并选定「登记表不动结构＋补欠账＋独立台账」。修正 `run_deepseek_batch.py` 的 `run_track`／单价／超时三处按模型硬编码；新增 `scripts/backfill_experiment_registry.py` 与 `scripts/build_review_ledger.py`；`01_实验配置/实验登记表.csv` 补登 28 行至 86 行（18 列不变），新建 `01_实验配置/双线批改台账.csv`（5 行／25 列，人工列待研究者填写）。SOP 升 v1.3。未改冻结提示词／Schema／校验器／标注结果。 |
+| v1.16 | 2026-11-06 | 研究者决定后续只用单一会话、开两个终端同时跑 DeepSeek 与 Qwen，先各跑一批（BATCH02）对比再决定后续路线。核查确认全部写入点按模型隔离、共享文件只读，双终端并行可行；`run_batches_in_terminal.sh` 日志名加进程 PID 防同秒撞名；新增对等的 `Qwen_51份分批运行SOP.md`（位置地图、隔离清单、两终端命令、按模型参数、一批跑完的批改清单、改规则／选模型的口径留痕要求）；`DeepSeek_51份分批运行SOP.md` 升 v1.4 并互链、同步日志名表述。长任务仍由研究者在本地终端启动，本次未调用任何 API。 |
 
 ## 九、当前运行进度
 
@@ -237,3 +243,34 @@ DeepSeek首批3份的文档级技术与内容回归全部通过。原内容熔�
 - 文档级结果：`document_consolidation/validated_json/<模型目录>/`。
 
 先运行Qwen的`BATCH01-DOC03`。技术通过后生成Qwen专属归并输入，再运行文档级归并。不得让Qwen归并程序读取DeepSeek窗口候选，也不得覆盖既有DeepSeek结果。
+
+2026-11-06 20:27更新：Qwen的`BATCH01-DOC03`已按上述隔离要求完成4个窗口抽取（12候选、113,877 Token、¥1.690236）与文档级归并（12候选→7文档事件，个人4／背景3／待复核3，54,176 Token、¥0.707913）。技术校验与逐字证据全部通过，`S0026`反证阻止了集体战斗进入个人经历链，原内容熔断的核心成因已解除。但`DE004`「他教我们喊话」的范围分类与冻结契约v0.3相悖，另有3项边界／复核粒度分歧，故**不判定内容完全通过**，DOC01、DOC02及后续9份批次继续暂停，待研究者裁决。详见`document_consolidation/review/BATCH01-DOC03_cuc_qwen_抽检.md`与`review_queue/cuc_qwen/BATCH01-DOC03_窗口核对.md`。
+
+## 十一、后续51份 DeepSeek 分批运行
+
+研究者因Qwen接口不稳定、仍在测试中，授权开启一条 **DeepSeek 并行验证支线**。这**不改变**主模型决定，也不取消Qwen的DOC03→DOC01→DOC02回归安排；两套结果按模型目录隔离，不得混用窗口候选。
+
+原批处理链路只认识首批3份（`prepare_formal_batch.py` 硬编码、`run_formal_batch.py` 只读 `batch01_manifest.csv`、文档级准备程序只读 `batch01_*`）。现已补齐：
+
+- `scripts/prepare_batch_from_inventory.py`：从权威清单读51份，按受访者分层交错编排为 `BATCH02`–`BATCH07`（9/9/9/9/9/6），复用首批分窗规则；不调用API；
+- `run_formal_batch.py` / `prepare_document_consolidation.py`：新增 `--batch` 等参数，默认仍指向首批文件；
+- `scripts/run_deepseek_batch.py`：一键完成"窗口抽取 → 文档级输入 → 文档级归并 → 技术汇总与熔断判定"，失败即停、可断点续跑；
+- `batch_plan.csv` / `batch_plan.md`：51份、5371个原文片段、211个重叠窗口的完整编排；
+- `DeepSeek_51份分批运行SOP.md`：可直接复制的命令、输出位置、放行规则和常见问题。
+
+4份旧版 `.doc` 统一后置到 `BATCH07`，已生成 `converted_docx/` 转换副本，原始语料未修改；转换副本无独立脚注部件，需人工核对脚注与编者注。
+
+运行入口（每批人工抽检通过后才进下一批）。**工程约定**：大批量跑语料一律由研究者在本地终端自行启动，助手只提供可直接复制的命令、不代为长跑、不回贴长日志，以便研究者关注进度并保持对话窗口简短（2026-11-06 研究者要求，见 `.workbuddy/memory/MEMORY.md` 与 SOP §4.2）：
+
+```bash
+cd '/Users/yuqi/Desktop/硕士毕业论文/2609/0920_01/大模型标注1104'
+
+bash scripts/run_batches_in_terminal.sh BATCH02    # 只跑一批
+bash scripts/run_batches_in_terminal.sh            # 依次 BATCH02–BATCH07，每批结束暂停等确认
+```
+
+`scripts/run_batches_in_terminal.sh` 负责实时输出、日志落盘到 `run_logs/`、防休眠、失败即停与断点续跑；每批完成暂停等待人工抽检，按回车才进下一批。不用脚本时的等价原命令：
+
+```bash
+python3 -u scripts/run_deepseek_batch.py --batch BATCH02 2>&1 | tee "04_54份正式语料批处理/run_logs/BATCH02_$(date +%Y%m%d_%H%M%S).log"
+```

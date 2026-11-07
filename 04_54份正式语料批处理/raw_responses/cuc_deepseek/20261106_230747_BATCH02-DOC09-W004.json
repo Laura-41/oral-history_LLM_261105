@@ -1,0 +1,113 @@
+{
+  "run_time": "2026-11-06T23:07:47",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH02-DOC09-W004",
+  "technical_document_id": "BATCH02-DOC09",
+  "document_id": "04.杨永松100506（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH02-DOC09-S0078",
+    "BATCH02-DOC09-S0079",
+    "BATCH02-DOC09-S0080",
+    "BATCH02-DOC09-S0081",
+    "BATCH02-DOC09-S0082",
+    "BATCH02-DOC09-S0083",
+    "BATCH02-DOC09-S0084",
+    "BATCH02-DOC09-S0085",
+    "BATCH02-DOC09-S0086",
+    "BATCH02-DOC09-S0087",
+    "BATCH02-DOC09-S0088",
+    "BATCH02-DOC09-S0089",
+    "BATCH02-DOC09-S0090",
+    "BATCH02-DOC09-S0091",
+    "BATCH02-DOC09-S0092",
+    "BATCH02-DOC09-S0093",
+    "BATCH02-DOC09-S0094",
+    "BATCH02-DOC09-S0095",
+    "BATCH02-DOC09-S0096"
+  ],
+  "json_valid": true,
+  "validation_errors": [
+    "存在未处理输入片段：['BATCH02-DOC09-S0096']"
+  ],
+  "technical_passed": false,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 3,
+    "unassigned_segment_count": 15,
+    "input_segment_count": 19,
+    "all_input_segments_accounted_for": false
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH02-DOC09-W004",
+    "events": [
+      {
+        "candidate_id": "BATCH02-DOC09-W004-E01",
+        "source_segment_ids": [
+          "BATCH02-DOC09-S0079",
+          "BATCH02-DOC09-S0083",
+          "BATCH02-DOC09-S0085"
+        ],
+        "event": {
+          "event_name": "685团新营西行休整并获卫立煌称赞",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "西行休整",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们这个营",
+              "normalized_entity": "685团新营",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "DIRECTION",
+              "value": "往西",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "你们看看你八路军枪都没有，人家都不害怕。你们他妈的那么好的武器背着，你们吓得不行，你们真没用！",
+          "evidence_quote": "结果（一看）我们的部队，卫立煌说你们看看你八路军枪都没有，人家都不害怕。你们他妈的那么好的武器背着，你们吓得不行，你们真没用！所以卫立煌在山西抗战，他也感觉到红军改编的八路军不简单。",
+          "type_basis": "核心过程为685团新营向西转移并休整，途中遇日军进攻、卫立煌部惊慌；整体以可观察的军事行动和状态变化为主。卫立煌的言语评价作为结果写入projected_content，不改变主导类型，故归MATERIAL而非VERBAL。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH02-DOC09-S0078",
+      "BATCH02-DOC09-S0080",
+      "BATCH02-DOC09-S0081",
+      "BATCH02-DOC09-S0082",
+      "BATCH02-DOC09-S0084",
+      "BATCH02-DOC09-S0086",
+      "BATCH02-DOC09-S0087",
+      "BATCH02-DOC09-S0088",
+      "BATCH02-DOC09-S0089",
+      "BATCH02-DOC09-S0090",
+      "BATCH02-DOC09-S0091",
+      "BATCH02-DOC09-S0092",
+      "BATCH02-DOC09-S0093",
+      "BATCH02-DOC09-S0094",
+      "BATCH02-DOC09-S0095"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH02-DOC09-W004\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH02-DOC09-W004-E01\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC09-S0079\",\n        \"BATCH02-DOC09-S0083\",\n        \"BATCH02-DOC09-S0085\"\n      ],\n      \"event\": {\n        \"event_name\": \"685团新营西行休整并获卫立煌称赞\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"西行休整\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们这个营\",\n            \"normalized_entity\": \"685团新营\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"往西\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"你们看看你八路军枪都没有，人家都不害怕。你们他妈的那么好的武器背着，你们吓得不行，你们真没用！\",\n        \"evidence_quote\": \"结果（一看）我们的部队，卫立煌说你们看看你八路军枪都没有，人家都不害怕。你们他妈的那么好的武器背着，你们吓得不行，你们真没用！所以卫立煌在山西抗战，他也感觉到红军改编的八路军不简单。\",\n        \"type_basis\": \"核心过程为685团新营向西转移并休整，途中遇日军进攻、卫立煌部惊慌；整体以可观察的军事行动和状态变化为主。卫立煌的言语评价作为结果写入projected_content，不改变主导类型，故归MATERIAL而非VERBAL。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH02-DOC09-S0078\",\n    \"BATCH02-DOC09-S0080\",\n    \"BATCH02-DOC09-S0081\",\n    \"BATCH02-DOC09-S0082\",\n    \"BATCH02-DOC09-S0084\",\n    \"BATCH02-DOC09-S0086\",\n    \"BATCH02-DOC09-S0087\",\n    \"BATCH02-DOC09-S0088\",\n    \"BATCH02-DOC09-S0089\",\n    \"BATCH02-DOC09-S0090\",\n    \"BATCH02-DOC09-S0091\",\n    \"BATCH02-DOC09-S0092\",\n    \"BATCH02-DOC09-S0093\",\n    \"BATCH02-DOC09-S0094\",\n    \"BATCH02-DOC09-S0095\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5065,
+    "total_tokens": 20912,
+    "completion_tokens": 15847,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 15218
+    },
+    "time_to_first_token_ms": 134219,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7923000
+  }
+}

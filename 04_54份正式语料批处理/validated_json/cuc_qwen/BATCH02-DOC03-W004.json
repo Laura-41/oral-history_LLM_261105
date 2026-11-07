@@ -1,0 +1,160 @@
+{
+  "validated_at": "2026-11-06T22:55:22",
+  "source_raw_response": "04_54份正式语料批处理/raw_responses/cuc_qwen/20261106_225202_BATCH02-DOC03-W004.json",
+  "model_id": "cuc/qwen",
+  "window_id": "BATCH02-DOC03-W004",
+  "technical_document_id": "BATCH02-DOC03",
+  "document_id": "04.陈海峰（一访）（一校后 阅读版）.docx",
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 4,
+    "unassigned_segment_count": 5,
+    "input_segment_count": 9,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH02-DOC03-W004-E02"
+  ],
+  "postprocessed_output": {
+    "window_id": "BATCH02-DOC03-W004",
+    "events": [
+      {
+        "candidate_id": "BATCH02-DOC03-W004-E01",
+        "source_segment_ids": [
+          "BATCH02-DOC03-S0057",
+          "BATCH02-DOC03-S0059"
+        ],
+        "event": {
+          "event_name": "新四军医院组建与正规化",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "组建医院并严格训练",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "这一批人",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "沈其震",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "这个医院",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "MANNER",
+              "value": "完全按照医科大学的要求来训练",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "新四军（是有）得天独厚的（条件），就是正规",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "所以他来这一批人，来建的这个医院，组成的前方医院，组成的门诊部，组成的后方医院，完全是正规一套。",
+          "type_basis": "核心过程是组织行动和建设医院，参与者配置为Actor+Goal，可用What did X do?测试；身份介绍和评价不改变主导类型，角色均在MATERIAL允许词表内。",
+          "alternative_event_type": "RELATIONAL",
+          "ambiguity_reason": "窗口同时包含大量人员身份关系介绍与医院组建行动，且受访者亲历性不明确，需复核事件边界。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      },
+      {
+        "candidate_id": "BATCH02-DOC03-W004-E02",
+        "source_segment_ids": [
+          "BATCH02-DOC03-S0061",
+          "BATCH02-DOC03-S0063"
+        ],
+        "event": {
+          "event_name": "新四军通过叶挺关系募捐药品并形成医疗优势",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "募捐药品并改善医疗条件",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "叶挺",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "LOW"
+            },
+            {
+              "role": "Goal",
+              "mention": "药品",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "香港",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "上海南京和京沪路这些，苏州、无锡、常州、镇江",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "叶挺又和国民党的上层有很好的关系",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "通过地下党关系，买也方便",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "这个药品就比八路军好得多，医务质量比八路军好得多，得天独厚",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "到香港去募捐，（募）来的药品，八路军没有的，我们有。",
+          "type_basis": "核心过程是募捐药品和组织获取资源，参与者配置为Actor+Goal，可用What did X do?测试；比较和地理条件作为环境，不改变主导类型，角色均在MATERIAL允许词表内。",
+          "alternative_event_type": "RELATIONAL",
+          "ambiguity_reason": "窗口以比较八路军和解释优势为主，包含较多背景关系，受访者亲历性不明确，需复核是否应作为一级事件。；候选触及文档最后一个受访者片段，需人工确认叙述是否已完整。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH02-DOC03-S0056",
+      "BATCH02-DOC03-S0058",
+      "BATCH02-DOC03-S0060",
+      "BATCH02-DOC03-S0062",
+      "BATCH02-DOC03-S0064"
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 4904,
+    "total_tokens": 16819,
+    "completion_tokens": 11915,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10664
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 199725,
+    "time_per_output_token_ms": 0
+  }
+}

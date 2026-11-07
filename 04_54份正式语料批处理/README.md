@@ -133,6 +133,7 @@ python3 scripts/run_formal_batch.py --model cuc/deepseek --document BATCH01-DOC0
 | v1.14 | 2026-11-06 | 按研究者要求确立工程级运行方式约定：大批量语料由研究者在本地终端自行启动，助手只给可复制命令、不代为长跑、不回贴长日志；新增 `scripts/run_batches_in_terminal.sh`（实时输出＋`run_logs/`日志落盘＋防休眠＋每批暂停等人工确认＋断点续跑），并写入 `.workbuddy/memory/MEMORY.md`、SOP §4.2 与主流程 v1.35。每批人工抽检熔断不变。 |
 | v1.15 | 2026-11-06 | 研究者确认双线全量并行的性质为「进度冗余／两份作业分开批改」，并选定「登记表不动结构＋补欠账＋独立台账」。修正 `run_deepseek_batch.py` 的 `run_track`／单价／超时三处按模型硬编码；新增 `scripts/backfill_experiment_registry.py` 与 `scripts/build_review_ledger.py`；`01_实验配置/实验登记表.csv` 补登 28 行至 86 行（18 列不变），新建 `01_实验配置/双线批改台账.csv`（5 行／25 列，人工列待研究者填写）。SOP 升 v1.3。未改冻结提示词／Schema／校验器／标注结果。 |
 | v1.16 | 2026-11-06 | 研究者决定后续只用单一会话、开两个终端同时跑 DeepSeek 与 Qwen，先各跑一批（BATCH02）对比再决定后续路线。核查确认全部写入点按模型隔离、共享文件只读，双终端并行可行；`run_batches_in_terminal.sh` 日志名加进程 PID 防同秒撞名；新增对等的 `Qwen_51份分批运行SOP.md`（位置地图、隔离清单、两终端命令、按模型参数、一批跑完的批改清单、改规则／选模型的口径留痕要求）；`DeepSeek_51份分批运行SOP.md` 升 v1.4 并互链、同步日志名表述。长任务仍由研究者在本地终端启动，本次未调用任何 API。 |
+| v1.17 | 2026-11-07 | 首次双终端无人值守连跑复盘：DeepSeek 窗口 33/34、Qwen 18/34，两线分别在 `DOC09-W004`／`DOC05-W004` 熔断，文档级归并 1/9 与 0/9、汇总未生成，详见 `review_queue/BATCH02_断点状态_20261107.md`。修复 `run_batches_in_terminal.sh` 熔断时整体退出码为 0（导致外层重试循环误判成功、只跑一轮就停）的缺陷，仅改 shell 退出码控制流并零 API 验证。补登实验登记表 50 行／¥10.317294 至 136 行 18 列，重建双线批改台账至 18 行 25 列。DeepSeek SOP 升 v1.5、Qwen SOP 升 v1.1，均写明「抽检后置、`MODEL_CANDIDATE` 暂不入库」口径。冻结提示词／Schema／契约／校验器／既有标注结果未改，本轮零 API。 |
 
 ## 九、当前运行进度
 

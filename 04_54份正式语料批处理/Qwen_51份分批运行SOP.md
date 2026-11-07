@@ -1,6 +1,6 @@
 # Qwen 主线后续51份分批运行 SOP
 
-> 版本：v1.0　日期：2026-11-06
+> 版本：v1.1　日期：2026-11-07
 > 接口：`cuc/qwen`（学校 OpenAI 兼容 `/v1/chat/completions`）
 > 运行线标记：`QWEN_MAIN_TRACK`；与 `DeepSeek_51份分批运行SOP.md` 的 `DEEPSEEK_PARALLEL_TRACK` 并行。
 > **两条线共用同一套冻结提示词、Schema、输出契约 v0.3、校验器和同一份分窗输入**，只有 `--model` 不同；结果严格按 `cuc_qwen` / `cuc_deepseek` 目录隔离，同一份文档内绝不混用两个模型的窗口候选。
@@ -187,3 +187,4 @@ DeepSeek 的倾向相反（保守易漏，DOC03 有实质内容被判"未分配"
 | 版本 | 日期 | 说明 |
 |---|---|---|
 | v1.0 | 2026-11-06 | 按研究者要求新建 Qwen 主线 SOP，与 DeepSeek SOP 对等。核准双终端并行的写入隔离清单；`run_batches_in_terminal.sh` 日志名加 PID 防同秒撞名；写明按模型参数、两终端可复制命令、一批跑完的双模型批改清单，以及「改规则／只选模型」时的口径留痕要求。零 API 演练验证，未启动任何长任务。 |
+| v1.1 | 2026-11-07 | 首次无人值守连跑后留痕：Qwen 在 `BATCH02-DOC05-W004` 因 RELATIONAL 事件同时写入 `Carrier/Attribute` 与 `Token/Value` 触发 Schema 硬校验熔断（退出码 3），窗口 18/34、文档级归并 0/9；此前 `DOC01-W004` 曾因推理耗尽返回 `content=null`。修复终端脚本熔断时整体退出码为 0、导致外层重试循环误判成功的缺陷（仅改 shell 控制流）。补登登记表／重建台账，详见 `review_queue/BATCH02_断点状态_20261107.md`。**口径声明**：该批抽检后置，结果均为 `MODEL_CANDIDATE`、暂不入库、不放行；冻结规则未改。 |

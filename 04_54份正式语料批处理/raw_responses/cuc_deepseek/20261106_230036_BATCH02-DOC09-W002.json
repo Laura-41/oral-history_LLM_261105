@@ -1,0 +1,287 @@
+{
+  "run_time": "2026-11-06T23:00:36",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH02-DOC09-W002",
+  "technical_document_id": "BATCH02-DOC09",
+  "document_id": "04.杨永松100506（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH02-DOC09-S0027",
+    "BATCH02-DOC09-S0028",
+    "BATCH02-DOC09-S0029",
+    "BATCH02-DOC09-S0030",
+    "BATCH02-DOC09-S0031",
+    "BATCH02-DOC09-S0032",
+    "BATCH02-DOC09-S0033",
+    "BATCH02-DOC09-S0034",
+    "BATCH02-DOC09-S0035",
+    "BATCH02-DOC09-S0036",
+    "BATCH02-DOC09-S0037",
+    "BATCH02-DOC09-S0038",
+    "BATCH02-DOC09-S0039",
+    "BATCH02-DOC09-S0040",
+    "BATCH02-DOC09-S0041",
+    "BATCH02-DOC09-S0042",
+    "BATCH02-DOC09-S0043",
+    "BATCH02-DOC09-S0044",
+    "BATCH02-DOC09-S0045",
+    "BATCH02-DOC09-S0046",
+    "BATCH02-DOC09-S0047",
+    "BATCH02-DOC09-S0048",
+    "BATCH02-DOC09-S0049",
+    "BATCH02-DOC09-S0050",
+    "BATCH02-DOC09-S0051",
+    "BATCH02-DOC09-S0052",
+    "BATCH02-DOC09-S0053",
+    "BATCH02-DOC09-S0054"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 4,
+    "assigned_segment_count": 11,
+    "unassigned_segment_count": 17,
+    "input_segment_count": 28,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH02-DOC09-W002-E04"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH02-DOC09-W002",
+    "events": [
+      {
+        "candidate_id": "BATCH02-DOC09-W002-E01",
+        "source_segment_ids": [
+          "BATCH02-DOC09-S0030",
+          "BATCH02-DOC09-S0032",
+          "BATCH02-DOC09-S0034",
+          "BATCH02-DOC09-S0036",
+          "BATCH02-DOC09-S0042"
+        ],
+        "event": {
+          "event_name": "肖华在沁源召开连以上干部会议并作动员报告",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "召开会议并作动员报告",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "肖华",
+              "normalized_entity": "肖华",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "连以上干部",
+              "normalized_entity": "685、686团连以上干部（含杨永松）",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "在沁源休息的时候",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "沁源",
+              "normalized_value": "沁源县"
+            }
+          ],
+          "projected_content": "山西正面战场因国民党军战败南逃，已不可能有大规模战斗；我党我军要准备单独坚持华北抗战，负担敌后抗战和建设根据地责任。",
+          "evidence_quote": "就是我们在沁源休息的时候，肖华召开了连以上干部（会议），做了动员。",
+          "type_basis": "核心过程为肖华召开连以上干部会议并作动员报告，Sayer=肖华，Receiver=连以上干部，报告内容为投射内容；S0042为报告后听闻特务窃听反宣传，作为结果并入。符合言语过程，排除物质和心理。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH02-DOC09-W002-E02",
+        "source_segment_ids": [
+          "BATCH02-DOC09-S0044"
+        ],
+        "event": {
+          "event_name": "从沁源冒雪步行两天到临汾",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "步行到临汾",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "杨永松及扩军人员",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "两天",
+              "normalized_value": "两天"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "沁源县",
+              "normalized_value": "沁源县"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "临汾",
+              "normalized_value": "临汾"
+            },
+            {
+              "kind": "MANNER",
+              "value": "冒雪翻山，路滑",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们从沁源县出发，就爬着雪山，又冷，路又不好走，特别滑，我们用两天的时间走到了临汾。",
+          "type_basis": "核心过程为空间移动，Actor=我们，从沁源县出发，用两天走到临汾；属物质过程，排除行为（非心理生理外显）和存在（非引入存在）。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH02-DOC09-W002-E03",
+        "source_segment_ids": [
+          "BATCH02-DOC09-S0046",
+          "BATCH02-DOC09-S0048",
+          "BATCH02-DOC09-S0050",
+          "BATCH02-DOC09-S0052"
+        ],
+        "event": {
+          "event_name": "到运城地区开展扩军并补充兵员",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "开展扩军",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "杨永松及扩军工作组",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "我们团里面",
+              "normalized_entity": "685团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "晋西北120师",
+              "normalized_entity": "八路军第120师",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "运城地区",
+              "normalized_value": "运城地区"
+            },
+            {
+              "kind": "TIME",
+              "value": "约一个月",
+              "normalized_value": "约一个月"
+            },
+            {
+              "kind": "MANNER",
+              "value": "分县分组宣传",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们在那里一共给我们自己补充了1000人。",
+          "type_basis": "核心过程为组织性扩军行动，Actor=我们，地点运城地区，结果为本团补充1000人、上交800人（据称补充120师）并接收约300名知识分子；属物质过程，排除言语（宣传为手段）和心理。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH02-DOC09-W002-E04",
+        "source_segment_ids": [
+          "BATCH02-DOC09-S0052",
+          "BATCH02-DOC09-S0054"
+        ],
+        "event": {
+          "event_name": "12月底奉命撤回洪洞归队",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "撤回部队",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "杨永松及扩军人员",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "12月底",
+              "normalized_value": "12月底"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "洪洞附近",
+              "normalized_value": "洪洞附近"
+            },
+            {
+              "kind": "MANNER",
+              "value": "奉命",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们在12月底，上面就来指示，要我们撤回到部队去。",
+          "type_basis": "核心过程为撤回部队的空间移动，Actor=我们，时间12月底，归队地点洪洞附近；S0054归队后得知补充团组建，作为结果并入。属物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH02-DOC09-S0027",
+      "BATCH02-DOC09-S0028",
+      "BATCH02-DOC09-S0029",
+      "BATCH02-DOC09-S0031",
+      "BATCH02-DOC09-S0033",
+      "BATCH02-DOC09-S0035",
+      "BATCH02-DOC09-S0037",
+      "BATCH02-DOC09-S0038",
+      "BATCH02-DOC09-S0039",
+      "BATCH02-DOC09-S0040",
+      "BATCH02-DOC09-S0041",
+      "BATCH02-DOC09-S0043",
+      "BATCH02-DOC09-S0045",
+      "BATCH02-DOC09-S0047",
+      "BATCH02-DOC09-S0049",
+      "BATCH02-DOC09-S0051",
+      "BATCH02-DOC09-S0053"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH02-DOC09-W002\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH02-DOC09-W002-E01\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC09-S0030\",\n        \"BATCH02-DOC09-S0032\",\n        \"BATCH02-DOC09-S0034\",\n        \"BATCH02-DOC09-S0036\",\n        \"BATCH02-DOC09-S0042\"\n      ],\n      \"event\": {\n        \"event_name\": \"肖华在沁源召开连以上干部会议并作动员报告\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"召开会议并作动员报告\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"肖华\",\n            \"normalized_entity\": \"肖华\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"连以上干部\",\n            \"normalized_entity\": \"685、686团连以上干部（含杨永松）\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"在沁源休息的时候\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"沁源\",\n            \"normalized_value\": \"沁源县\"\n          }\n        ],\n        \"projected_content\": \"山西正面战场因国民党军战败南逃，已不可能有大规模战斗；我党我军要准备单独坚持华北抗战，负担敌后抗战和建设根据地责任。\",\n        \"evidence_quote\": \"就是我们在沁源休息的时候，肖华召开了连以上干部（会议），做了动员。\",\n        \"type_basis\": \"核心过程为肖华召开连以上干部会议并作动员报告，Sayer=肖华，Receiver=连以上干部，报告内容为投射内容；S0042为报告后听闻特务窃听反宣传，作为结果并入。符合言语过程，排除物质和心理。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC09-W002-E02\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC09-S0044\"\n      ],\n      \"event\": {\n        \"event_name\": \"从沁源冒雪步行两天到临汾\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"步行到临汾\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"杨永松及扩军人员\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"两天\",\n            \"normalized_value\": \"两天\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"沁源县\",\n            \"normalized_value\": \"沁源县\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"临汾\",\n            \"normalized_value\": \"临汾\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"冒雪翻山，路滑\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们从沁源县出发，就爬着雪山，又冷，路又不好走，特别滑，我们用两天的时间走到了临汾。\",\n        \"type_basis\": \"核心过程为空间移动，Actor=我们，从沁源县出发，用两天走到临汾；属物质过程，排除行为（非心理生理外显）和存在（非引入存在）。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC09-W002-E03\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC09-S0046\",\n        \"BATCH02-DOC09-S0048\",\n        \"BATCH02-DOC09-S0050\",\n        \"BATCH02-DOC09-S0052\"\n      ],\n      \"event\": {\n        \"event_name\": \"到运城地区开展扩军并补充兵员\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"开展扩军\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"杨永松及扩军工作组\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"我们团里面\",\n            \"normalized_entity\": \"685团\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"晋西北120师\",\n            \"normalized_entity\": \"八路军第120师\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"运城地区\",\n            \"normalized_value\": \"运城地区\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"约一个月\",\n            \"normalized_value\": \"约一个月\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"分县分组宣传\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们在那里一共给我们自己补充了1000人。\",\n        \"type_basis\": \"核心过程为组织性扩军行动，Actor=我们，地点运城地区，结果为本团补充1000人、上交800人（据称补充120师）并接收约300名知识分子；属物质过程，排除言语（宣传为手段）和心理。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC09-W002-E04\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC09-S0052\",\n        \"BATCH02-DOC09-S0054\"\n      ],\n      \"event\": {\n        \"event_name\": \"12月底奉命撤回洪洞归队\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"撤回部队\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"杨永松及扩军人员\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"12月底\",\n            \"normalized_value\": \"12月底\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"洪洞附近\",\n            \"normalized_value\": \"洪洞附近\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"奉命\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们在12月底，上面就来指示，要我们撤回到部队去。\",\n        \"type_basis\": \"核心过程为撤回部队的空间移动，Actor=我们，时间12月底，归队地点洪洞附近；S0054归队后得知补充团组建，作为结果并入。属物质过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH02-DOC09-S0027\",\n    \"BATCH02-DOC09-S0028\",\n    \"BATCH02-DOC09-S0029\",\n    \"BATCH02-DOC09-S0031\",\n    \"BATCH02-DOC09-S0033\",\n    \"BATCH02-DOC09-S0035\",\n    \"BATCH02-DOC09-S0037\",\n    \"BATCH02-DOC09-S0038\",\n    \"BATCH02-DOC09-S0039\",\n    \"BATCH02-DOC09-S0040\",\n    \"BATCH02-DOC09-S0041\",\n    \"BATCH02-DOC09-S0043\",\n    \"BATCH02-DOC09-S0045\",\n    \"BATCH02-DOC09-S0047\",\n    \"BATCH02-DOC09-S0049\",\n    \"BATCH02-DOC09-S0051\",\n    \"BATCH02-DOC09-S0053\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5723,
+    "total_tokens": 28728,
+    "completion_tokens": 23005,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 21019
+    },
+    "time_to_first_token_ms": 239228,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11502000
+  }
+}

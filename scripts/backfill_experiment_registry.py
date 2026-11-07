@@ -139,6 +139,9 @@ def collect() -> tuple[list[dict], list[str], int, int]:
                 candidates.append((path, record, date))
                 known.add(key)
 
+    # run_id 必须在「已有登记行 + 本次新增行」范围内唯一：
+    # 同一窗口在不同日期失败后重跑，会各自产生一份原始响应，若编号每批从 001 重来就会撞号。
+    existing_ids = {r["run_id"] for r in existing_rows}
     counters: Counter[str] = Counter()
     rows: list[dict] = []
     for path, record, date in candidates:
@@ -151,8 +154,12 @@ def collect() -> tuple[list[dict], list[str], int, int]:
         ) / 1_000_000
         document_id, scope, prefix = identity_of(record, path)
         tag = MODEL_TAG.get(model, "XX")
-        counters[prefix] += 1
-        run_id = f"{prefix}-{tag}-{counters[prefix]:03d}"
+        while True:
+            counters[prefix] += 1
+            run_id = f"{prefix}-{tag}-{counters[prefix]:03d}"
+            if run_id not in existing_ids:
+                break
+        existing_ids.add(run_id)
         tech_passed = bool(record.get("technical_passed"))
         errors = record.get("validation_errors") or record.get("schema_errors") or []
         status = "PASSED_WITH_REVIEW_NOTE" if tech_passed else "TECHNICAL_FAILED"

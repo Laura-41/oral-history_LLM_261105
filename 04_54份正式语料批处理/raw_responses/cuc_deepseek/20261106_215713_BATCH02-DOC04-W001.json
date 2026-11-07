@@ -1,0 +1,276 @@
+{
+  "run_time": "2026-11-06T21:57:13",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH02-DOC04-W001",
+  "technical_document_id": "BATCH02-DOC04",
+  "document_id": "03.杨永松100506（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH02-DOC04-S0002",
+    "BATCH02-DOC04-S0003",
+    "BATCH02-DOC04-S0004",
+    "BATCH02-DOC04-S0005",
+    "BATCH02-DOC04-S0006",
+    "BATCH02-DOC04-S0007",
+    "BATCH02-DOC04-S0008",
+    "BATCH02-DOC04-S0009",
+    "BATCH02-DOC04-S0010",
+    "BATCH02-DOC04-S0011",
+    "BATCH02-DOC04-S0012",
+    "BATCH02-DOC04-S0013",
+    "BATCH02-DOC04-S0014",
+    "BATCH02-DOC04-S0015",
+    "BATCH02-DOC04-S0016",
+    "BATCH02-DOC04-S0017",
+    "BATCH02-DOC04-S0018",
+    "BATCH02-DOC04-S0019",
+    "BATCH02-DOC04-S0020",
+    "BATCH02-DOC04-S0021",
+    "BATCH02-DOC04-S0022",
+    "BATCH02-DOC04-S0023",
+    "BATCH02-DOC04-S0024",
+    "BATCH02-DOC04-S0025",
+    "BATCH02-DOC04-S0026",
+    "BATCH02-DOC04-S0027",
+    "BATCH02-DOC04-S0028",
+    "BATCH02-DOC04-S0029"
+  ],
+  "json_valid": true,
+  "validation_errors": [
+    "events[1].event.evidence_quote不在该事件所列原文片段中"
+  ],
+  "technical_passed": false,
+  "metrics": {
+    "event_count": 5,
+    "assigned_segment_count": 7,
+    "unassigned_segment_count": 21,
+    "input_segment_count": 28,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH02-DOC04-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH02-DOC04-W001-E01",
+        "source_segment_ids": [
+          "BATCH02-DOC04-S0005"
+        ],
+        "event": {
+          "event_name": "杨永松遭遇日机低飞后躲进水沟",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "躲进水沟",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "杨永松",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "那个水沟",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我就又躲到那个水沟里看一会儿。",
+          "type_basis": "核心过程为躲避日机低飞而改变空间位置，属物质过程；无言语、心理或关系识别特征。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH02-DOC04-W001-E02",
+        "source_segment_ids": [
+          "BATCH02-DOC04-S0007",
+          "BATCH02-DOC04-S0009",
+          "BATCH02-DOC04-S0011"
+        ],
+        "event": {
+          "event_name": "中央军飞机轰炸公路上的缴获汽车",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "轰炸",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "中央军飞机",
+              "normalized_entity": "中央军飞机",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "公路上的车",
+              "normalized_entity": "缴获汽车",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "中央军他炸那个公路上的车啊。",
+          "type_basis": "中央军飞机实施轰炸，使公路上的缴获车辆受到破坏，属物质过程；非言语或心理过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH02-DOC04-W001-E03",
+        "source_segment_ids": [
+          "BATCH02-DOC04-S0013"
+        ],
+        "event": {
+          "event_name": "687团击退敌骑兵",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "打退",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "687团",
+              "normalized_entity": "687团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "他的骑兵",
+              "normalized_entity": "日军骑兵",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "687团上去以后，他就把他的骑兵就打退了。",
+          "type_basis": "687团实施作战行动使敌骑兵退却，属物质过程；非言语、心理或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH02-DOC04-W001-E04",
+        "source_segment_ids": [
+          "BATCH02-DOC04-S0015"
+        ],
+        "event": {
+          "event_name": "685团夜攻东西跑池未克后撤退",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "攻东、西跑池未克后撤退",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们685团",
+              "normalized_entity": "685团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "东、西跑池",
+              "normalized_entity": "东、西跑池",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "那天晚上",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "天亮以前",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "这边山头上",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们685团就攻东、西跑池。据我了解东、西跑池的（日本）人非常顽强，咱们接近村子就伤亡很大，所以那天晚上我们没有达到歼灭村子的敌人的目的。",
+          "type_basis": "685团实施夜攻并因敌顽强未达歼灭目的后撤退，属物质过程；非言语、心理或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH02-DOC04-W001-E05",
+        "source_segment_ids": [
+          "BATCH02-DOC04-S0029"
+        ],
+        "event": {
+          "event_name": "部队第三天傍晚撤退",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "撤下来",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们部队",
+              "normalized_entity": "部队",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "第三天的傍晚",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我记得是第三天的傍晚啊，我们部队就撤下来了。",
+          "type_basis": "部队实施撤退行动，空间位置改变，属物质过程；非存在、关系或言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH02-DOC04-S0002",
+      "BATCH02-DOC04-S0003",
+      "BATCH02-DOC04-S0004",
+      "BATCH02-DOC04-S0006",
+      "BATCH02-DOC04-S0008",
+      "BATCH02-DOC04-S0010",
+      "BATCH02-DOC04-S0012",
+      "BATCH02-DOC04-S0014",
+      "BATCH02-DOC04-S0016",
+      "BATCH02-DOC04-S0017",
+      "BATCH02-DOC04-S0018",
+      "BATCH02-DOC04-S0019",
+      "BATCH02-DOC04-S0020",
+      "BATCH02-DOC04-S0021",
+      "BATCH02-DOC04-S0022",
+      "BATCH02-DOC04-S0023",
+      "BATCH02-DOC04-S0024",
+      "BATCH02-DOC04-S0025",
+      "BATCH02-DOC04-S0026",
+      "BATCH02-DOC04-S0027",
+      "BATCH02-DOC04-S0028"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH02-DOC04-W001\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH02-DOC04-W001-E01\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC04-S0005\"\n      ],\n      \"event\": {\n        \"event_name\": \"杨永松遭遇日机低飞后躲进水沟\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"躲进水沟\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"杨永松\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"那个水沟\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我就又躲到那个水沟里看一会儿。\",\n        \"type_basis\": \"核心过程为躲避日机低飞而改变空间位置，属物质过程；无言语、心理或关系识别特征。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC04-W001-E02\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC04-S0007\",\n        \"BATCH02-DOC04-S0009\",\n        \"BATCH02-DOC04-S0011\"\n      ],\n      \"event\": {\n        \"event_name\": \"中央军飞机轰炸公路上的缴获汽车\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"轰炸\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"中央军飞机\",\n            \"normalized_entity\": \"中央军飞机\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"公路上的车\",\n            \"normalized_entity\": \"缴获汽车\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": null,\n        \"evidence_quote\": \"中央军他炸那个公路上的车啊。\",\n        \"type_basis\": \"中央军飞机实施轰炸，使公路上的缴获车辆受到破坏，属物质过程；非言语或心理过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC04-W001-E03\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC04-S0013\"\n      ],\n      \"event\": {\n        \"event_name\": \"687团击退敌骑兵\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"打退\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"687团\",\n            \"normalized_entity\": \"687团\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"他的骑兵\",\n            \"normalized_entity\": \"日军骑兵\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": null,\n        \"evidence_quote\": \"687团上去以后，他就把他的骑兵就打退了。\",\n        \"type_basis\": \"687团实施作战行动使敌骑兵退却，属物质过程；非言语、心理或关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC04-W001-E04\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC04-S0015\"\n      ],\n      \"event\": {\n        \"event_name\": \"685团夜攻东西跑池未克后撤退\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"攻东、西跑池未克后撤退\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们685团\",\n            \"normalized_entity\": \"685团\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"东、西跑池\",\n            \"normalized_entity\": \"东、西跑池\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"那天晚上\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"天亮以前\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"这边山头上\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们685团就攻东、西跑池。据我了解东、西跑池的（日本）人非常顽强，咱们接近村子就伤亡很大，所以那天晚上我们没有达到歼灭村子的敌人的目的。\",\n        \"type_basis\": \"685团实施夜攻并因敌顽强未达歼灭目的后撤退，属物质过程；非言语、心理或关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC04-W001-E05\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC04-S0029\"\n      ],\n      \"event\": {\n        \"event_name\": \"部队第三天傍晚撤退\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"撤下来\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们部队\",\n            \"normalized_entity\": \"部队\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"第三天的傍晚\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我记得是第三天的傍晚啊，我们部队就撤下来了。\",\n        \"type_basis\": \"部队实施撤退行动，空间位置改变，属物质过程；非存在、关系或言语过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH02-DOC04-S0002\",\n    \"BATCH02-DOC04-S0003\",\n    \"BATCH02-DOC04-S0004\",\n    \"BATCH02-DOC04-S0006\",\n    \"BATCH02-DOC04-S0008\",\n    \"BATCH02-DOC04-S0010\",\n    \"BATCH02-DOC04-S0012\",\n    \"BATCH02-DOC04-S0014\",\n    \"BATCH02-DOC04-S0016\",\n    \"BATCH02-DOC04-S0017\",\n    \"BATCH02-DOC04-S0018\",\n    \"BATCH02-DOC04-S0019\",\n    \"BATCH02-DOC04-S0020\",\n    \"BATCH02-DOC04-S0021\",\n    \"BATCH02-DOC04-S0022\",\n    \"BATCH02-DOC04-S0023\",\n    \"BATCH02-DOC04-S0024\",\n    \"BATCH02-DOC04-S0025\",\n    \"BATCH02-DOC04-S0026\",\n    \"BATCH02-DOC04-S0027\",\n    \"BATCH02-DOC04-S0028\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5753,
+    "total_tokens": 28993,
+    "completion_tokens": 23240,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 21427
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 23239000,
+    "time_to_first_token_ms": 185522
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "run_time": "2026-11-07T14:04:56",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH02-DOC08-W001",
+  "technical_document_id": "BATCH02-DOC08",
+  "document_id": "04.陈海峰（二访）（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH02-DOC08-S0002",
+    "BATCH02-DOC08-S0003",
+    "BATCH02-DOC08-S0004",
+    "BATCH02-DOC08-S0005",
+    "BATCH02-DOC08-S0006",
+    "BATCH02-DOC08-S0007",
+    "BATCH02-DOC08-S0008",
+    "BATCH02-DOC08-S0009",
+    "BATCH02-DOC08-S0010",
+    "BATCH02-DOC08-S0011",
+    "BATCH02-DOC08-S0012",
+    "BATCH02-DOC08-S0013",
+    "BATCH02-DOC08-S0014",
+    "BATCH02-DOC08-S0015",
+    "BATCH02-DOC08-S0016",
+    "BATCH02-DOC08-S0017",
+    "BATCH02-DOC08-S0018",
+    "BATCH02-DOC08-S0019",
+    "BATCH02-DOC08-S0020",
+    "BATCH02-DOC08-S0021",
+    "BATCH02-DOC08-S0022",
+    "BATCH02-DOC08-S0023",
+    "BATCH02-DOC08-S0024",
+    "BATCH02-DOC08-S0025"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 1,
+    "unassigned_segment_count": 23,
+    "input_segment_count": 24,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH02-DOC08-W001-E01"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH02-DOC08-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH02-DOC08-W001-E01",
+        "source_segment_ids": [
+          "BATCH02-DOC08-S0025"
+        ],
+        "event": {
+          "event_name": "陈海峰等到达三支队并参加第一、二次繁昌战斗",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "到达并参加繁昌战斗",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们三支队",
+              "normalized_entity": "新四军三支队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "繁昌",
+              "normalized_entity": "繁昌",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "9月去",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "10月熟悉熟悉情况",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "11月3号",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "接着一个多礼拜",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "正面防御战",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "仗就越打越大，鬼子越来越多",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们是9月去，10月熟悉熟悉情况，11月3号就是打第一次“繁昌战斗”，接着一个多礼拜就是第二次“繁昌战斗”，两个都基本接在一块。",
+          "type_basis": "核心过程为“打/保卫”，是军事组织行动，可用 What did X do? 测试；Actor 为“我们三支队”，Goal 为“繁昌”；9月到达、10月熟悉与11月第一、二次繁昌战斗时间连续、任务相同，合并为一个一级事件；片段中的机构说明作为背景不单独建事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH02-DOC08-S0002",
+      "BATCH02-DOC08-S0003",
+      "BATCH02-DOC08-S0004",
+      "BATCH02-DOC08-S0005",
+      "BATCH02-DOC08-S0006",
+      "BATCH02-DOC08-S0007",
+      "BATCH02-DOC08-S0008",
+      "BATCH02-DOC08-S0009",
+      "BATCH02-DOC08-S0010",
+      "BATCH02-DOC08-S0011",
+      "BATCH02-DOC08-S0012",
+      "BATCH02-DOC08-S0013",
+      "BATCH02-DOC08-S0014",
+      "BATCH02-DOC08-S0015",
+      "BATCH02-DOC08-S0016",
+      "BATCH02-DOC08-S0017",
+      "BATCH02-DOC08-S0018",
+      "BATCH02-DOC08-S0019",
+      "BATCH02-DOC08-S0020",
+      "BATCH02-DOC08-S0021",
+      "BATCH02-DOC08-S0022",
+      "BATCH02-DOC08-S0023",
+      "BATCH02-DOC08-S0024"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH02-DOC08-W001\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH02-DOC08-W001-E01\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC08-S0025\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰等到达三支队并参加第一、二次繁昌战斗\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"到达并参加繁昌战斗\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们三支队\",\n            \"normalized_entity\": \"新四军三支队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"繁昌\",\n            \"normalized_entity\": \"繁昌\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"9月去\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"10月熟悉熟悉情况\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"11月3号\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"接着一个多礼拜\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"正面防御战\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"仗就越打越大，鬼子越来越多\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们是9月去，10月熟悉熟悉情况，11月3号就是打第一次“繁昌战斗”，接着一个多礼拜就是第二次“繁昌战斗”，两个都基本接在一块。\",\n        \"type_basis\": \"核心过程为“打/保卫”，是军事组织行动，可用 What did X do? 测试；Actor 为“我们三支队”，Goal 为“繁昌”；9月到达、10月熟悉与11月第一、二次繁昌战斗时间连续、任务相同，合并为一个一级事件；片段中的机构说明作为背景不单独建事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH02-DOC08-S0002\",\n    \"BATCH02-DOC08-S0003\",\n    \"BATCH02-DOC08-S0004\",\n    \"BATCH02-DOC08-S0005\",\n    \"BATCH02-DOC08-S0006\",\n    \"BATCH02-DOC08-S0007\",\n    \"BATCH02-DOC08-S0008\",\n    \"BATCH02-DOC08-S0009\",\n    \"BATCH02-DOC08-S0010\",\n    \"BATCH02-DOC08-S0011\",\n    \"BATCH02-DOC08-S0012\",\n    \"BATCH02-DOC08-S0013\",\n    \"BATCH02-DOC08-S0014\",\n    \"BATCH02-DOC08-S0015\",\n    \"BATCH02-DOC08-S0016\",\n    \"BATCH02-DOC08-S0017\",\n    \"BATCH02-DOC08-S0018\",\n    \"BATCH02-DOC08-S0019\",\n    \"BATCH02-DOC08-S0020\",\n    \"BATCH02-DOC08-S0021\",\n    \"BATCH02-DOC08-S0022\",\n    \"BATCH02-DOC08-S0023\",\n    \"BATCH02-DOC08-S0024\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5959,
+    "total_tokens": 19891,
+    "completion_tokens": 13932,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12884
+    },
+    "time_to_first_token_ms": 213192,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13931000
+  }
+}

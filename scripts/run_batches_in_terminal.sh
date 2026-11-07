@@ -48,6 +48,10 @@ if [ "${DRY_RUN:-0}" = "1" ]; then
   LOG_TAG="_dryrun"
 fi
 
+# 记录失败退出码：内部批次熔断时，仍要把非零码传给外层调用者，
+# 否则「for ... do bash 本脚本 && break; done」式的自动重试循环会把失败误判为成功并提前退出。
+FAILED_CODE=0
+
 for batch in "${BATCHES[@]}"; do
   stamp="$(date +%Y%m%d_%H%M%S)"
   # 加 shell PID：两个终端（DeepSeek / Qwen）同一秒启动时也不会 tee 到同一个日志文件。
@@ -76,9 +80,12 @@ for batch in "${BATCHES[@]}"; do
     read -r _ || { echo "输入结束，停在 ${batch}。"; break; }
   else
     code=$?
+    FAILED_CODE=$code
     echo ""
     echo "===== ${batch} 中断（退出码 ${code}）  $(date '+%F %T') ====="
     echo "已完成的结果全部保留，不要进入下一批；排查后用同一条命令断点续跑。"
     break
   fi
 done
+
+exit "$FAILED_CODE"

@@ -1,0 +1,153 @@
+{
+  "run_time": "2026-11-06T21:52:03",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH02-DOC03-W002",
+  "technical_document_id": "BATCH02-DOC03",
+  "document_id": "04.陈海峰（一访）（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH02-DOC03-S0024",
+    "BATCH02-DOC03-S0025",
+    "BATCH02-DOC03-S0026",
+    "BATCH02-DOC03-S0027",
+    "BATCH02-DOC03-S0028",
+    "BATCH02-DOC03-S0029",
+    "BATCH02-DOC03-S0030",
+    "BATCH02-DOC03-S0031",
+    "BATCH02-DOC03-S0032",
+    "BATCH02-DOC03-S0033",
+    "BATCH02-DOC03-S0034",
+    "BATCH02-DOC03-S0035",
+    "BATCH02-DOC03-S0036",
+    "BATCH02-DOC03-S0037",
+    "BATCH02-DOC03-S0038",
+    "BATCH02-DOC03-S0039"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 7,
+    "unassigned_segment_count": 9,
+    "input_segment_count": 16,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH02-DOC03-W002",
+    "events": [
+      {
+        "candidate_id": "BATCH02-DOC03-W002-E01",
+        "source_segment_ids": [
+          "BATCH02-DOC03-S0025",
+          "BATCH02-DOC03-S0027",
+          "BATCH02-DOC03-S0029",
+          "BATCH02-DOC03-S0031",
+          "BATCH02-DOC03-S0033"
+        ],
+        "event": {
+          "event_name": "陈海峰听史沫特莱报告后报名学医",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "报名学医",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "史沫特莱作报告动员学医",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "学医",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那么我就报名了。我们一块报名是66个人",
+          "type_basis": "核心过程为报名参加医学训练，属物质行动；听史沫特莱报告和受动员是触发阶段，不单独建节点。参与者为Actor，符合MATERIAL词表。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH02-DOC03-W002-E02",
+        "source_segment_ids": [
+          "BATCH02-DOC03-S0035",
+          "BATCH02-DOC03-S0037"
+        ],
+        "event": {
+          "event_name": "陈海峰学医毕业并赴三支队从医任职",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "学医毕业并赴部队从医",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1939年1月至8月8日",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "1939年9月",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "三支队",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那么我就开始从医了。那就（是）1939年的12月底，报名参加，那么1939年1月开始训练，到8月8号毕业，1939年的9月我就派到三支队当营卫生指导员，当卫生巡视员。四个月以后，我就当团卫生队队长了，就是少校卫生队长。",
+          "type_basis": "核心过程为参加医学训练、毕业并赴部队从医任职，属物质行动；训练、毕业和任职构成同一职业起步阶段。参与者为Actor，符合MATERIAL词表。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH02-DOC03-S0024",
+      "BATCH02-DOC03-S0026",
+      "BATCH02-DOC03-S0028",
+      "BATCH02-DOC03-S0030",
+      "BATCH02-DOC03-S0032",
+      "BATCH02-DOC03-S0034",
+      "BATCH02-DOC03-S0036",
+      "BATCH02-DOC03-S0038",
+      "BATCH02-DOC03-S0039"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH02-DOC03-W002\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH02-DOC03-W002-E01\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC03-S0025\",\n        \"BATCH02-DOC03-S0027\",\n        \"BATCH02-DOC03-S0029\",\n        \"BATCH02-DOC03-S0031\",\n        \"BATCH02-DOC03-S0033\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰听史沫特莱报告后报名学医\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"报名学医\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"史沫特莱作报告动员学医\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"学医\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那么我就报名了。我们一块报名是66个人\",\n        \"type_basis\": \"核心过程为报名参加医学训练，属物质行动；听史沫特莱报告和受动员是触发阶段，不单独建节点。参与者为Actor，符合MATERIAL词表。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC03-W002-E02\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC03-S0035\",\n        \"BATCH02-DOC03-S0037\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰学医毕业并赴三支队从医任职\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"学医毕业并赴部队从医\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"1939年1月至8月8日\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"1939年9月\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"三支队\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那么我就开始从医了。那就（是）1939年的12月底，报名参加，那么1939年1月开始训练，到8月8号毕业，1939年的9月我就派到三支队当营卫生指导员，当卫生巡视员。四个月以后，我就当团卫生队队长了，就是少校卫生队长。\",\n        \"type_basis\": \"核心过程为参加医学训练、毕业并赴部队从医任职，属物质行动；训练、毕业和任职构成同一职业起步阶段。参与者为Actor，符合MATERIAL词表。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH02-DOC03-S0024\",\n    \"BATCH02-DOC03-S0026\",\n    \"BATCH02-DOC03-S0028\",\n    \"BATCH02-DOC03-S0030\",\n    \"BATCH02-DOC03-S0032\",\n    \"BATCH02-DOC03-S0034\",\n    \"BATCH02-DOC03-S0036\",\n    \"BATCH02-DOC03-S0038\",\n    \"BATCH02-DOC03-S0039\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5491,
+    "total_tokens": 17064,
+    "completion_tokens": 11573,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10624
+    },
+    "time_to_first_token_ms": 91192,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11572000
+  }
+}

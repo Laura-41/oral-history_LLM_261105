@@ -1,0 +1,192 @@
+{
+  "run_time": "2026-11-06T22:21:21",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH02-DOC05-W001",
+  "technical_document_id": "BATCH02-DOC05",
+  "document_id": "02.陈海峰（二访）（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH02-DOC05-S0002",
+    "BATCH02-DOC05-S0003",
+    "BATCH02-DOC05-S0004",
+    "BATCH02-DOC05-S0005",
+    "BATCH02-DOC05-S0006",
+    "BATCH02-DOC05-S0007",
+    "BATCH02-DOC05-S0008",
+    "BATCH02-DOC05-S0009",
+    "BATCH02-DOC05-S0010",
+    "BATCH02-DOC05-S0011",
+    "BATCH02-DOC05-S0012",
+    "BATCH02-DOC05-S0013",
+    "BATCH02-DOC05-S0014",
+    "BATCH02-DOC05-S0015",
+    "BATCH02-DOC05-S0016",
+    "BATCH02-DOC05-S0017",
+    "BATCH02-DOC05-S0018",
+    "BATCH02-DOC05-S0019",
+    "BATCH02-DOC05-S0020",
+    "BATCH02-DOC05-S0021",
+    "BATCH02-DOC05-S0022",
+    "BATCH02-DOC05-S0023",
+    "BATCH02-DOC05-S0024"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 8,
+    "unassigned_segment_count": 15,
+    "input_segment_count": 23,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH02-DOC05-W001-E02"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH02-DOC05-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH02-DOC05-W001-E01",
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0003",
+          "BATCH02-DOC05-S0005",
+          "BATCH02-DOC05-S0007",
+          "BATCH02-DOC05-S0009",
+          "BATCH02-DOC05-S0011"
+        ],
+        "event": {
+          "event_name": "在云岭军部附近教导队学习并接触叶挺、项英",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "在教导队学习、到军部图书馆借书还书",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰等教导队学员",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "书",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "云岭罗里村军部附近",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "罗里村军部图书馆",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "除了半个小时的午睡，最晚到一个小时，就要出来上课了，那么半个多小时吧。就说这样子的时间，我们还要（走）半里路多一点到罗里村军部的图书馆。图书馆里书最多，我们要借书、还书。",
+          "type_basis": "核心过程为陈海峰等在教导队上课、到军部图书馆借书还书，属可观察的物质活动；Actor=我们，Goal=书，符合MATERIAL角色词表。叶挺来访、项英读书等为同一学习阶段中的接触背景，不另立事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W001-E02",
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0020",
+          "BATCH02-DOC05-S0022",
+          "BATCH02-DOC05-S0024"
+        ],
+        "event": {
+          "event_name": "在云岭听周恩来作报告",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "作报告、听报告",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "周总理",
+              "normalized_entity": "周恩来",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我们",
+              "normalized_entity": "陈海峰等教导队学员",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Verbiage",
+              "mention": "《抗日战争中的战略与政略问题》",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "2月23号到3月14号之间",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "云岭陈家大祠堂",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "站在三个方桌拼成的桌子上讲，没有提纲",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "讲六个小时",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他就做了一个报告，那个时候没有麦克风啊，就是这么讲的？我们是围着周总理的三面坐的，我们这个班呢，靠大门不远，坐在地上听，做做记录。",
+          "type_basis": "核心过程为周恩来作报告、陈海峰等学员听讲，属通过口头言语交换信息；Sayer=周总理，Receiver=我们，Verbiage=报告名称，符合VERBAL角色词表。不是单纯物质行动或心理感知。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH02-DOC05-S0002",
+      "BATCH02-DOC05-S0004",
+      "BATCH02-DOC05-S0006",
+      "BATCH02-DOC05-S0008",
+      "BATCH02-DOC05-S0010",
+      "BATCH02-DOC05-S0012",
+      "BATCH02-DOC05-S0013",
+      "BATCH02-DOC05-S0014",
+      "BATCH02-DOC05-S0015",
+      "BATCH02-DOC05-S0016",
+      "BATCH02-DOC05-S0017",
+      "BATCH02-DOC05-S0018",
+      "BATCH02-DOC05-S0019",
+      "BATCH02-DOC05-S0021",
+      "BATCH02-DOC05-S0023"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH02-DOC05-W001\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH02-DOC05-W001-E01\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC05-S0003\",\n        \"BATCH02-DOC05-S0005\",\n        \"BATCH02-DOC05-S0007\",\n        \"BATCH02-DOC05-S0009\",\n        \"BATCH02-DOC05-S0011\"\n      ],\n      \"event\": {\n        \"event_name\": \"在云岭军部附近教导队学习并接触叶挺、项英\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"在教导队学习、到军部图书馆借书还书\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰等教导队学员\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"书\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"云岭罗里村军部附近\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"罗里村军部图书馆\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"除了半个小时的午睡，最晚到一个小时，就要出来上课了，那么半个多小时吧。就说这样子的时间，我们还要（走）半里路多一点到罗里村军部的图书馆。图书馆里书最多，我们要借书、还书。\",\n        \"type_basis\": \"核心过程为陈海峰等在教导队上课、到军部图书馆借书还书，属可观察的物质活动；Actor=我们，Goal=书，符合MATERIAL角色词表。叶挺来访、项英读书等为同一学习阶段中的接触背景，不另立事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC05-W001-E02\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC05-S0020\",\n        \"BATCH02-DOC05-S0022\",\n        \"BATCH02-DOC05-S0024\"\n      ],\n      \"event\": {\n        \"event_name\": \"在云岭听周恩来作报告\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"作报告、听报告\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"周总理\",\n            \"normalized_entity\": \"周恩来\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰等教导队学员\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Verbiage\",\n            \"mention\": \"《抗日战争中的战略与政略问题》\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"2月23号到3月14号之间\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"云岭陈家大祠堂\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"站在三个方桌拼成的桌子上讲，没有提纲\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"讲六个小时\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"他就做了一个报告，那个时候没有麦克风啊，就是这么讲的？我们是围着周总理的三面坐的，我们这个班呢，靠大门不远，坐在地上听，做做记录。\",\n        \"type_basis\": \"核心过程为周恩来作报告、陈海峰等学员听讲，属通过口头言语交换信息；Sayer=周总理，Receiver=我们，Verbiage=报告名称，符合VERBAL角色词表。不是单纯物质行动或心理感知。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH02-DOC05-S0002\",\n    \"BATCH02-DOC05-S0004\",\n    \"BATCH02-DOC05-S0006\",\n    \"BATCH02-DOC05-S0008\",\n    \"BATCH02-DOC05-S0010\",\n    \"BATCH02-DOC05-S0012\",\n    \"BATCH02-DOC05-S0013\",\n    \"BATCH02-DOC05-S0014\",\n    \"BATCH02-DOC05-S0015\",\n    \"BATCH02-DOC05-S0016\",\n    \"BATCH02-DOC05-S0017\",\n    \"BATCH02-DOC05-S0018\",\n    \"BATCH02-DOC05-S0019\",\n    \"BATCH02-DOC05-S0021\",\n    \"BATCH02-DOC05-S0023\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5727,
+    "total_tokens": 19055,
+    "completion_tokens": 13328,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12075
+    },
+    "time_to_first_token_ms": 103895,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13327000
+  }
+}

@@ -1,0 +1,68 @@
+BATCH02 / cuc/qwen：9份文档、34个窗口、19个步骤。
+
+=== 窗口抽取 BATCH02-DOC01 ===
++ /opt/homebrew/opt/python@3.14/bin/python3.14 scripts/run_formal_batch.py --model cuc/qwen --batch BATCH02 --document BATCH02-DOC01 --timeout 1800
+窗口清单：batch02_manifest.csv（共34行）
+[1/5] 跳过已通过窗口：BATCH02-DOC01-W001
+[2/5] 跳过已通过窗口：BATCH02-DOC01-W002
+[3/5] 跳过已通过窗口：BATCH02-DOC01-W003
+[4/5] 请求 cuc/qwen / BATCH02-DOC01-W004，最长等待1800秒……
+  通过：4个候选，边缘待复核1个，结果已保存。
+[5/5] 请求 cuc/qwen / BATCH02-DOC01-W005，最长等待1800秒……
+  通过：2个候选，边缘待复核1个，结果已保存。
+
+本次完成2个窗口，跳过已通过3个窗口。原始响应未覆盖，跨窗口候选对已写入review_queue。
+
+=== 窗口抽取 BATCH02-DOC02 ===
++ /opt/homebrew/opt/python@3.14/bin/python3.14 scripts/run_formal_batch.py --model cuc/qwen --batch BATCH02 --document BATCH02-DOC02 --timeout 1800
+窗口清单：batch02_manifest.csv（共34行）
+[1/2] 请求 cuc/qwen / BATCH02-DOC02-W001，最长等待1800秒……
+  通过：3个候选，边缘待复核1个，结果已保存。
+[2/2] 请求 cuc/qwen / BATCH02-DOC02-W002，最长等待1800秒……
+  通过：6个候选，边缘待复核1个，结果已保存。
+
+本次完成2个窗口，跳过已通过0个窗口。原始响应未覆盖，跨窗口候选对已写入review_queue。
+
+=== 窗口抽取 BATCH02-DOC03 ===
++ /opt/homebrew/opt/python@3.14/bin/python3.14 scripts/run_formal_batch.py --model cuc/qwen --batch BATCH02 --document BATCH02-DOC03 --timeout 1800
+窗口清单：batch02_manifest.csv（共34行）
+[1/4] 请求 cuc/qwen / BATCH02-DOC03-W001，最长等待1800秒……
+  通过：3个候选，边缘待复核1个，结果已保存。
+[2/4] 请求 cuc/qwen / BATCH02-DOC03-W002，最长等待1800秒……
+  通过：4个候选，边缘待复核1个，结果已保存。
+[3/4] 请求 cuc/qwen / BATCH02-DOC03-W003，最长等待1800秒……
+  通过：2个候选，边缘待复核1个，结果已保存。
+[4/4] 请求 cuc/qwen / BATCH02-DOC03-W004，最长等待1800秒……
+  通过：2个候选，边缘待复核1个，结果已保存。
+
+本次完成4个窗口，跳过已通过0个窗口。原始响应未覆盖，跨窗口候选对已写入review_queue。
+
+=== 窗口抽取 BATCH02-DOC04 ===
++ /opt/homebrew/opt/python@3.14/bin/python3.14 scripts/run_formal_batch.py --model cuc/qwen --batch BATCH02 --document BATCH02-DOC04 --timeout 1800
+窗口清单：batch02_manifest.csv（共34行）
+[1/4] 请求 cuc/qwen / BATCH02-DOC04-W001，最长等待1800秒……
+  通过：4个候选，边缘待复核1个，结果已保存。
+[2/4] 请求 cuc/qwen / BATCH02-DOC04-W002，最长等待1800秒……
+  通过：5个候选，边缘待复核1个，结果已保存。
+[3/4] 请求 cuc/qwen / BATCH02-DOC04-W003，最长等待1800秒……
+  通过：4个候选，边缘待复核1个，结果已保存。
+[4/4] 请求 cuc/qwen / BATCH02-DOC04-W004，最长等待1800秒……
+  通过：2个候选，边缘待复核1个，结果已保存。
+
+本次完成4个窗口，跳过已通过0个窗口。原始响应未覆盖，跨窗口候选对已写入review_queue。
+
+=== 窗口抽取 BATCH02-DOC05 ===
++ /opt/homebrew/opt/python@3.14/bin/python3.14 scripts/run_formal_batch.py --model cuc/qwen --batch BATCH02 --document BATCH02-DOC05 --timeout 1800
+窗口清单：batch02_manifest.csv（共34行）
+[1/4] 请求 cuc/qwen / BATCH02-DOC05-W001，最长等待1800秒……
+  通过：2个候选，边缘待复核1个，结果已保存。
+[2/4] 请求 cuc/qwen / BATCH02-DOC05-W002，最长等待1800秒……
+  通过：2个候选，边缘待复核1个，结果已保存。
+[3/4] 请求 cuc/qwen / BATCH02-DOC05-W003，最长等待1800秒……
+  通过：3个候选，边缘待复核1个，结果已保存。
+[4/4] 请求 cuc/qwen / BATCH02-DOC05-W004，最长等待1800秒……
+技术校验失败并停止：
+  - events[0].event：RELATIONAL必须且只能使用Carrier＋Attribute或Token＋Value中的一组
+步骤失败（退出码 3）：窗口抽取 BATCH02-DOC05；按熔断规则停止本批。
+
+本批在「窗口抽取 BATCH02-DOC05」中断。已完成结果全部保留，不要进入下一批；排查后可用同一命令断点续跑。

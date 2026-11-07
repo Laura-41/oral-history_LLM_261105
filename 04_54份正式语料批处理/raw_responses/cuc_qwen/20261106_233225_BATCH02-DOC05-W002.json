@@ -1,0 +1,221 @@
+{
+  "run_time": "2026-11-06T23:32:25",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH02-DOC05-W002",
+  "technical_document_id": "BATCH02-DOC05",
+  "document_id": "02.陈海峰（二访）（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH02-DOC05-S0021",
+    "BATCH02-DOC05-S0022",
+    "BATCH02-DOC05-S0023",
+    "BATCH02-DOC05-S0024",
+    "BATCH02-DOC05-S0025",
+    "BATCH02-DOC05-S0026",
+    "BATCH02-DOC05-S0027",
+    "BATCH02-DOC05-S0028",
+    "BATCH02-DOC05-S0029",
+    "BATCH02-DOC05-S0030",
+    "BATCH02-DOC05-S0031",
+    "BATCH02-DOC05-S0032",
+    "BATCH02-DOC05-S0033",
+    "BATCH02-DOC05-S0034",
+    "BATCH02-DOC05-S0035",
+    "BATCH02-DOC05-S0036",
+    "BATCH02-DOC05-S0037",
+    "BATCH02-DOC05-S0038",
+    "BATCH02-DOC05-S0039",
+    "BATCH02-DOC05-S0040",
+    "BATCH02-DOC05-S0041",
+    "BATCH02-DOC05-S0042"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 11,
+    "unassigned_segment_count": 11,
+    "input_segment_count": 22,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH02-DOC05-W002-E02"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH02-DOC05-W002",
+    "events": [
+      {
+        "candidate_id": "BATCH02-DOC05-W002-E01",
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0022",
+          "BATCH02-DOC05-S0024",
+          "BATCH02-DOC05-S0026",
+          "BATCH02-DOC05-S0028",
+          "BATCH02-DOC05-S0030",
+          "BATCH02-DOC05-S0032",
+          "BATCH02-DOC05-S0035",
+          "BATCH02-DOC05-S0036"
+        ],
+        "event": {
+          "event_name": "周总理做六小时报告",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "做报告",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "周总理",
+              "normalized_entity": "周恩来",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我们",
+              "normalized_entity": "陈海峰及新四军教导队/军医处人员",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Verbiage",
+              "mention": "报告",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "六个小时",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "桌子上头",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "没有提纲",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "穿国民党发的蓝棉衣、马裤，披军大衣，搭皮带，没有戴军衔",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "你们后面听到没有，听得清楚吗？",
+          "evidence_quote": "周总理站在那个桌子上头讲的。没有提纲，讲了多长时间？讲六个小时。",
+          "type_basis": "核心过程是周总理做报告/讲话，属于象征交换；Sayer为周总理，Receiver为听报告的我们，Verbiage为报告；伴随问话作为投射内容，服装与速记为场景细节，不改变言语主导。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W002-E02",
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0036",
+          "BATCH02-DOC05-S0038",
+          "BATCH02-DOC05-S0040",
+          "BATCH02-DOC05-S0042"
+        ],
+        "event": {
+          "event_name": "周总理3月4日参观检查军医处并勉励干部学习",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "参观检查",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他",
+              "normalized_entity": "周恩来",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "军医处",
+              "normalized_entity": "新四军军医处",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Client",
+              "mention": "我们",
+              "normalized_entity": "陈海峰及新四军教导队/军医处人员",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Client",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "班以上干部",
+              "normalized_entity": "新四军教导队班以上干部",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "3月4号",
+              "normalized_value": "3月4日"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "军医处关帝庙",
+              "normalized_value": "新四军军医处关帝庙"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "罗里村",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "很快",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "看人工呼吸、看俱乐部、接见班以上干部",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "你们要好好学，你们学医是很有意义的，你们学医是为了抗战胜利，是不是，你们知道吧，孙中山是学医的，伟人。",
+          "evidence_quote": "大概是3月4号，（他）来军医处参观，来检查工作。",
+          "type_basis": "核心过程是周总理来军医处参观、检查并接见干部，属于组织行动/物质过程；Actor为周总理，Goal为军医处，Client/Recipient为学员和班以上干部；其中的建议与勉励作为伴随言语写入投射内容，不单独升级为言语事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH02-DOC05-S0021",
+      "BATCH02-DOC05-S0023",
+      "BATCH02-DOC05-S0025",
+      "BATCH02-DOC05-S0027",
+      "BATCH02-DOC05-S0029",
+      "BATCH02-DOC05-S0031",
+      "BATCH02-DOC05-S0033",
+      "BATCH02-DOC05-S0034",
+      "BATCH02-DOC05-S0037",
+      "BATCH02-DOC05-S0039",
+      "BATCH02-DOC05-S0041"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH02-DOC05-W002\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH02-DOC05-W002-E01\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC05-S0022\",\n        \"BATCH02-DOC05-S0024\",\n        \"BATCH02-DOC05-S0026\",\n        \"BATCH02-DOC05-S0028\",\n        \"BATCH02-DOC05-S0030\",\n        \"BATCH02-DOC05-S0032\",\n        \"BATCH02-DOC05-S0035\",\n        \"BATCH02-DOC05-S0036\"\n      ],\n      \"event\": {\n        \"event_name\": \"周总理做六小时报告\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"做报告\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"周总理\",\n            \"normalized_entity\": \"周恩来\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰及新四军教导队/军医处人员\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Verbiage\",\n            \"mention\": \"报告\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"六个小时\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"桌子上头\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"没有提纲\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"穿国民党发的蓝棉衣、马裤，披军大衣，搭皮带，没有戴军衔\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"你们后面听到没有，听得清楚吗？\",\n        \"evidence_quote\": \"周总理站在那个桌子上头讲的。没有提纲，讲了多长时间？讲六个小时。\",\n        \"type_basis\": \"核心过程是周总理做报告/讲话，属于象征交换；Sayer为周总理，Receiver为听报告的我们，Verbiage为报告；伴随问话作为投射内容，服装与速记为场景细节，不改变言语主导。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC05-W002-E02\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC05-S0036\",\n        \"BATCH02-DOC05-S0038\",\n        \"BATCH02-DOC05-S0040\",\n        \"BATCH02-DOC05-S0042\"\n      ],\n      \"event\": {\n        \"event_name\": \"周总理3月4日参观检查军医处并勉励干部学习\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"参观检查\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"他\",\n            \"normalized_entity\": \"周恩来\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"军医处\",\n            \"normalized_entity\": \"新四军军医处\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Client\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰及新四军教导队/军医处人员\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Client\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"班以上干部\",\n            \"normalized_entity\": \"新四军教导队班以上干部\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"3月4号\",\n            \"normalized_value\": \"3月4日\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"军医处关帝庙\",\n            \"normalized_value\": \"新四军军医处关帝庙\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"罗里村\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"很快\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"看人工呼吸、看俱乐部、接见班以上干部\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"你们要好好学，你们学医是很有意义的，你们学医是为了抗战胜利，是不是，你们知道吧，孙中山是学医的，伟人。\",\n        \"evidence_quote\": \"大概是3月4号，（他）来军医处参观，来检查工作。\",\n        \"type_basis\": \"核心过程是周总理来军医处参观、检查并接见干部，属于组织行动/物质过程；Actor为周总理，Goal为军医处，Client/Recipient为学员和班以上干部；其中的建议与勉励作为伴随言语写入投射内容，不单独升级为言语事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH02-DOC05-S0021\",\n    \"BATCH02-DOC05-S0023\",\n    \"BATCH02-DOC05-S0025\",\n    \"BATCH02-DOC05-S0027\",\n    \"BATCH02-DOC05-S0029\",\n    \"BATCH02-DOC05-S0031\",\n    \"BATCH02-DOC05-S0033\",\n    \"BATCH02-DOC05-S0034\",\n    \"BATCH02-DOC05-S0037\",\n    \"BATCH02-DOC05-S0039\",\n    \"BATCH02-DOC05-S0041\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5860,
+    "total_tokens": 19535,
+    "completion_tokens": 13675,
+    "prompt_tokens_details": null,
+    "time_to_first_token_ms": 351749,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13674000
+  }
+}

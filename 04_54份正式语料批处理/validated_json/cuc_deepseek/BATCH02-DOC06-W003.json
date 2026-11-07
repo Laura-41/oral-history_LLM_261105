@@ -1,0 +1,135 @@
+{
+  "validated_at": "2026-11-06T22:36:47",
+  "source_raw_response": "04_54份正式语料批处理/raw_responses/cuc_deepseek/20261106_223355_BATCH02-DOC06-W003.json",
+  "model_id": "cuc/deepseek",
+  "window_id": "BATCH02-DOC06-W003",
+  "technical_document_id": "BATCH02-DOC06",
+  "document_id": "05.陈锐霆 090508（二校后 阅读版）.docx",
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 4,
+    "unassigned_segment_count": 7,
+    "input_segment_count": 11,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH02-DOC06-W003-E02"
+  ],
+  "postprocessed_output": {
+    "window_id": "BATCH02-DOC06-W003",
+    "events": [
+      {
+        "candidate_id": "BATCH02-DOC06-W003-E01",
+        "source_segment_ids": [
+          "BATCH02-DOC06-S0041",
+          "BATCH02-DOC06-S0044"
+        ],
+        "event": {
+          "event_name": "戴之奇在南岳干训班纪念周上公开骂共产党",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "骂",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "他",
+              "normalized_entity": "戴之奇",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Target",
+              "mention": "共产党",
+              "normalized_entity": "共产党",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "每一个礼拜六",
+              "normalized_value": "每周六"
+            },
+            {
+              "kind": "OTHER",
+              "value": "总理纪念周",
+              "normalized_value": "总理纪念周"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他每一个礼拜六都骂共产党。",
+          "type_basis": "核心过程“骂”是公开言语行为，Sayer为戴之奇，Target为共产党；S0044还显示有人对骂共产党表示不满，但核心过程仍是言语性的骂，不是心理或物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH02-DOC06-W003-E02",
+        "source_segment_ids": [
+          "BATCH02-DOC06-S0046",
+          "BATCH02-DOC06-S0048"
+        ],
+        "event": {
+          "event_name": "陈锐霆在建国35周年阅兵时与李默庵在天安门城楼见面",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "见面",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "李默庵",
+              "normalized_entity": "李默庵",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "（19）84年",
+              "normalized_value": "1984年"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "天安门城楼",
+              "normalized_value": "天安门城楼"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我在天安门上也跟李默庵见了面",
+          "type_basis": "核心过程“见面”是人物之间的社会性行动/遭遇，Actor为陈锐霆，Goal为李默庵；不是言语、心理或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": "候选触及文档最后一个受访者片段，需人工确认叙述是否已完整。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH02-DOC06-S0039",
+      "BATCH02-DOC06-S0040",
+      "BATCH02-DOC06-S0042",
+      "BATCH02-DOC06-S0043",
+      "BATCH02-DOC06-S0045",
+      "BATCH02-DOC06-S0047",
+      "BATCH02-DOC06-S0049"
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 4732,
+    "total_tokens": 25957,
+    "completion_tokens": 21225,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 20353
+    },
+    "time_to_first_token_ms": 172456,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 21224000
+  }
+}

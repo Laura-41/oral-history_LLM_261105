@@ -1,0 +1,270 @@
+{
+  "run_time": "2026-11-06T23:04:37",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH02-DOC09-W003",
+  "technical_document_id": "BATCH02-DOC09",
+  "document_id": "04.杨永松100506（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH02-DOC09-S0051",
+    "BATCH02-DOC09-S0052",
+    "BATCH02-DOC09-S0053",
+    "BATCH02-DOC09-S0054",
+    "BATCH02-DOC09-S0055",
+    "BATCH02-DOC09-S0056",
+    "BATCH02-DOC09-S0057",
+    "BATCH02-DOC09-S0058",
+    "BATCH02-DOC09-S0059",
+    "BATCH02-DOC09-S0060",
+    "BATCH02-DOC09-S0061",
+    "BATCH02-DOC09-S0062",
+    "BATCH02-DOC09-S0063",
+    "BATCH02-DOC09-S0064",
+    "BATCH02-DOC09-S0065",
+    "BATCH02-DOC09-S0066",
+    "BATCH02-DOC09-S0067",
+    "BATCH02-DOC09-S0068",
+    "BATCH02-DOC09-S0069",
+    "BATCH02-DOC09-S0070",
+    "BATCH02-DOC09-S0071",
+    "BATCH02-DOC09-S0072",
+    "BATCH02-DOC09-S0073",
+    "BATCH02-DOC09-S0074",
+    "BATCH02-DOC09-S0075",
+    "BATCH02-DOC09-S0076",
+    "BATCH02-DOC09-S0077",
+    "BATCH02-DOC09-S0078",
+    "BATCH02-DOC09-S0079",
+    "BATCH02-DOC09-S0080",
+    "BATCH02-DOC09-S0081"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 4,
+    "assigned_segment_count": 11,
+    "unassigned_segment_count": 20,
+    "input_segment_count": 31,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH02-DOC09-W003",
+    "events": [
+      {
+        "candidate_id": "BATCH02-DOC09-W003-E01",
+        "source_segment_ids": [
+          "BATCH02-DOC09-S0052",
+          "BATCH02-DOC09-S0054",
+          "BATCH02-DOC09-S0056"
+        ],
+        "event": {
+          "event_name": "12月底奉命撤回部队并参与洪洞扩军组建补充团",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "撤回部队、扩军并组织补充团",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "杨永松所在部队（685团等）",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "补充团",
+              "normalized_entity": "补充团",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "12月底",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "洪洞附近",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们回到部队的时候呢，部队就在洪洞附近集结。我们回去以后就知道，685团、686团就地宣传群众参军，加上我们送回去的兵员——686团他们也很有能力的了，他们除了补充自己以外，从685、686（团扩军后）共同剩下来的（兵员），也组织了一个补充团。",
+          "type_basis": "核心过程为归队、就地扩军和组织补充团，属可观察的组织行动；参与者为行动主体和创建对象，符合MATERIAL角色词表。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH02-DOC09-W003-E02",
+        "source_segment_ids": [
+          "BATCH02-DOC09-S0056",
+          "BATCH02-DOC09-S0059",
+          "BATCH02-DOC09-S0060",
+          "BATCH02-DOC09-S0062"
+        ],
+        "event": {
+          "event_name": "过年后部队北移孝义整训并发现新营缺枪",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "北移并整训",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们部队",
+              "normalized_entity": "杨永松所在部队（685团等）",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "过年后",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "汾西县、汾阳、孝义地区",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "往北",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "部队在洪洞赵城过了年以后，就往北，经过汾西县地区，就到了汾阳、孝义地区，就是汾阳、孝义的西边，主要我们是在孝义县的管辖地方，在那里一方面整训，一方面警惕地注意敌人。",
+          "type_basis": "核心过程为部队北移、集结整训和警戒，属空间移动与军事组织行动；途中发现新营缺枪是同一经历中的观察，不另立心理事件。参与者为行动主体，符合MATERIAL角色词表。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH02-DOC09-W003-E03",
+        "source_segment_ids": [
+          "BATCH02-DOC09-S0064",
+          "BATCH02-DOC09-S0070",
+          "BATCH02-DOC09-S0074",
+          "BATCH02-DOC09-S0077"
+        ],
+        "event": {
+          "event_name": "日军南下时在敌后尾随打游击并目睹大麦郊惨案",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "尾随日军打游击",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "杨永松所在部队（685团等）",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "旧历年前后，约2月5、6号",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "大麦郊（公路边一个村子）",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们在敌后转来转去跟着他，跟他保持稍稍一点距离。就那样我们有一天，我上面写了，到了公路边上一个村子，就大麦郊，就在那里男女老少杀了二百多人，这一个村子里边。",
+          "type_basis": "核心过程为在敌后尾随日军、打游击并到达大麦郊，属军事移动与作战行动；目睹惨案是同一经历中的遭遇和结果，不另立心理事件。参与者仅标行动主体，符合MATERIAL角色词表。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH02-DOC09-W003-E04",
+        "source_segment_ids": [
+          "BATCH02-DOC09-S0079"
+        ],
+        "event": {
+          "event_name": "作战中命令新营自行向西转移，必要时过黄河",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "命令新营向西转移",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "我们685团",
+              "normalized_entity": "杨永松所在685团",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Receiver",
+              "mention": "这个新营",
+              "normalized_entity": "685团新营",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "敌人南下我们进行作战活动的时候",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "新营没有武器",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "自行往西走，就是如果敌人要追得紧，实在不行你可以主动地过黄河去",
+          "evidence_quote": "当时我们685团只有两个老营，这个新营怎么办？敌人南下我们进行作战活动的时候，叫这个新营啊，叫他自行往西走，就是如果敌人要追得紧，实在不行你可以主动地过黄河去。因为他没武器呀。",
+          "type_basis": "核心过程为向新营发出转移和必要时过黄河的指令，属提议/命令的象征交换；内容写入projected_content，不重复为Verbiage或DIRECTION。参与者为Sayer和Receiver，符合VERBAL角色词表。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH02-DOC09-S0051",
+      "BATCH02-DOC09-S0053",
+      "BATCH02-DOC09-S0055",
+      "BATCH02-DOC09-S0057",
+      "BATCH02-DOC09-S0058",
+      "BATCH02-DOC09-S0061",
+      "BATCH02-DOC09-S0063",
+      "BATCH02-DOC09-S0065",
+      "BATCH02-DOC09-S0066",
+      "BATCH02-DOC09-S0067",
+      "BATCH02-DOC09-S0068",
+      "BATCH02-DOC09-S0069",
+      "BATCH02-DOC09-S0071",
+      "BATCH02-DOC09-S0072",
+      "BATCH02-DOC09-S0073",
+      "BATCH02-DOC09-S0075",
+      "BATCH02-DOC09-S0076",
+      "BATCH02-DOC09-S0078",
+      "BATCH02-DOC09-S0080",
+      "BATCH02-DOC09-S0081"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH02-DOC09-W003\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH02-DOC09-W003-E01\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC09-S0052\",\n        \"BATCH02-DOC09-S0054\",\n        \"BATCH02-DOC09-S0056\"\n      ],\n      \"event\": {\n        \"event_name\": \"12月底奉命撤回部队并参与洪洞扩军组建补充团\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"撤回部队、扩军并组织补充团\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"杨永松所在部队（685团等）\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"补充团\",\n            \"normalized_entity\": \"补充团\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"12月底\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"洪洞附近\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们回到部队的时候呢，部队就在洪洞附近集结。我们回去以后就知道，685团、686团就地宣传群众参军，加上我们送回去的兵员——686团他们也很有能力的了，他们除了补充自己以外，从685、686（团扩军后）共同剩下来的（兵员），也组织了一个补充团。\",\n        \"type_basis\": \"核心过程为归队、就地扩军和组织补充团，属可观察的组织行动；参与者为行动主体和创建对象，符合MATERIAL角色词表。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC09-W003-E02\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC09-S0056\",\n        \"BATCH02-DOC09-S0059\",\n        \"BATCH02-DOC09-S0060\",\n        \"BATCH02-DOC09-S0062\"\n      ],\n      \"event\": {\n        \"event_name\": \"过年后部队北移孝义整训并发现新营缺枪\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"北移并整训\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们部队\",\n            \"normalized_entity\": \"杨永松所在部队（685团等）\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"过年后\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"汾西县、汾阳、孝义地区\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"往北\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"部队在洪洞赵城过了年以后，就往北，经过汾西县地区，就到了汾阳、孝义地区，就是汾阳、孝义的西边，主要我们是在孝义县的管辖地方，在那里一方面整训，一方面警惕地注意敌人。\",\n        \"type_basis\": \"核心过程为部队北移、集结整训和警戒，属空间移动与军事组织行动；途中发现新营缺枪是同一经历中的观察，不另立心理事件。参与者为行动主体，符合MATERIAL角色词表。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC09-W003-E03\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC09-S0064\",\n        \"BATCH02-DOC09-S0070\",\n        \"BATCH02-DOC09-S0074\",\n        \"BATCH02-DOC09-S0077\"\n      ],\n      \"event\": {\n        \"event_name\": \"日军南下时在敌后尾随打游击并目睹大麦郊惨案\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"尾随日军打游击\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"杨永松所在部队（685团等）\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"旧历年前后，约2月5、6号\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"大麦郊（公路边一个村子）\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们在敌后转来转去跟着他，跟他保持稍稍一点距离。就那样我们有一天，我上面写了，到了公路边上一个村子，就大麦郊，就在那里男女老少杀了二百多人，这一个村子里边。\",\n        \"type_basis\": \"核心过程为在敌后尾随日军、打游击并到达大麦郊，属军事移动与作战行动；目睹惨案是同一经历中的遭遇和结果，不另立心理事件。参与者仅标行动主体，符合MATERIAL角色词表。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC09-W003-E04\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC09-S0079\"\n      ],\n      \"event\": {\n        \"event_name\": \"作战中命令新营自行向西转移，必要时过黄河\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"命令新营向西转移\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"我们685团\",\n            \"normalized_entity\": \"杨永松所在685团\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"这个新营\",\n            \"normalized_entity\": \"685团新营\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"敌人南下我们进行作战活动的时候\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"新营没有武器\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"自行往西走，就是如果敌人要追得紧，实在不行你可以主动地过黄河去\",\n        \"evidence_quote\": \"当时我们685团只有两个老营，这个新营怎么办？敌人南下我们进行作战活动的时候，叫这个新营啊，叫他自行往西走，就是如果敌人要追得紧，实在不行你可以主动地过黄河去。因为他没武器呀。\",\n        \"type_basis\": \"核心过程为向新营发出转移和必要时过黄河的指令，属提议/命令的象征交换；内容写入projected_content，不重复为Verbiage或DIRECTION。参与者为Sayer和Receiver，符合VERBAL角色词表。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH02-DOC09-S0051\",\n    \"BATCH02-DOC09-S0053\",\n    \"BATCH02-DOC09-S0055\",\n    \"BATCH02-DOC09-S0057\",\n    \"BATCH02-DOC09-S0058\",\n    \"BATCH02-DOC09-S0061\",\n    \"BATCH02-DOC09-S0063\",\n    \"BATCH02-DOC09-S0065\",\n    \"BATCH02-DOC09-S0066\",\n    \"BATCH02-DOC09-S0067\",\n    \"BATCH02-DOC09-S0068\",\n    \"BATCH02-DOC09-S0069\",\n    \"BATCH02-DOC09-S0071\",\n    \"BATCH02-DOC09-S0072\",\n    \"BATCH02-DOC09-S0073\",\n    \"BATCH02-DOC09-S0075\",\n    \"BATCH02-DOC09-S0076\",\n    \"BATCH02-DOC09-S0078\",\n    \"BATCH02-DOC09-S0080\",\n    \"BATCH02-DOC09-S0081\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5837,
+    "total_tokens": 27756,
+    "completion_tokens": 21919,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 19852
+    },
+    "time_to_first_token_ms": 190094,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 10959000
+  }
+}

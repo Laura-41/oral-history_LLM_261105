@@ -1,0 +1,148 @@
+{
+  "validated_at": "2026-11-06T22:27:47",
+  "source_raw_response": "04_54份正式语料批处理/raw_responses/cuc_deepseek/20261106_222602_BATCH02-DOC05-W003.json",
+  "model_id": "cuc/deepseek",
+  "window_id": "BATCH02-DOC05-W003",
+  "technical_document_id": "BATCH02-DOC05",
+  "document_id": "02.陈海峰（二访）（二校后 阅读版）.docx",
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 6,
+    "unassigned_segment_count": 17,
+    "input_segment_count": 23,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH02-DOC05-W003-E02"
+  ],
+  "postprocessed_output": {
+    "window_id": "BATCH02-DOC05-W003",
+    "events": [
+      {
+        "candidate_id": "BATCH02-DOC05-W003-E01",
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0040",
+          "BATCH02-DOC05-S0042",
+          "BATCH02-DOC05-S0044",
+          "BATCH02-DOC05-S0046",
+          "BATCH02-DOC05-S0048"
+        ],
+        "event": {
+          "event_name": "周总理接见班以上干部并发表勉励讲话",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "接见班以上干部并讲话勉励",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "周总理",
+              "normalized_entity": "周恩来",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我们班以上干部",
+              "normalized_entity": "新四军班以上干部",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": "勉励学员好好学习，指出学医有意义、是为了抗战胜利，并举孙中山、鲁迅、郭沫若学医为例，要求学好技术、救活伤员以贡献抗战。",
+          "evidence_quote": "他接见我们班以上干部十几个人，在那个地方，那么讲话，他就勉励我们了",
+          "type_basis": "核心过程为周总理接见班以上干部并讲话勉励，参与者为Sayer与Receiver，讲话内容作为投射内容；不是物质行动或关系属性，故为言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W003-E02",
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0061"
+        ],
+        "event": {
+          "event_name": "陈海峰毕业后任营卫生指导员并领取八元技术待遇",
+          "event_type": "RELATIONAL",
+          "event_type_zh": "关系",
+          "core_process": "任营卫生指导员，拿八块",
+          "participants": [
+            {
+              "role": "Carrier",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Attribute",
+              "mention": "营卫生指导员",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Attribute",
+              "mention": "八块",
+              "normalized_entity": "八元（技术待遇）",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "毕业以后",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "三支队",
+              "normalized_value": "三支队"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我毕业以后，派到三支队当营卫生指导员，拿八块。",
+          "type_basis": "核心过程“任营卫生指导员，拿八块”建立陈海峰的岗位身份和工资待遇属性，参与者为Carrier与Attribute；“派到三支队”作为任职地点环境，故为关系过程而非单纯物质行动。",
+          "alternative_event_type": "MATERIAL",
+          "ambiguity_reason": "“派到三支队”含物质指派过程，但整体核心是岗位与工资待遇属性。；候选触及非末窗口最后一个受访者片段，可能在下一窗口继续。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH02-DOC05-S0039",
+      "BATCH02-DOC05-S0041",
+      "BATCH02-DOC05-S0043",
+      "BATCH02-DOC05-S0045",
+      "BATCH02-DOC05-S0047",
+      "BATCH02-DOC05-S0049",
+      "BATCH02-DOC05-S0050",
+      "BATCH02-DOC05-S0051",
+      "BATCH02-DOC05-S0052",
+      "BATCH02-DOC05-S0053",
+      "BATCH02-DOC05-S0054",
+      "BATCH02-DOC05-S0055",
+      "BATCH02-DOC05-S0056",
+      "BATCH02-DOC05-S0057",
+      "BATCH02-DOC05-S0058",
+      "BATCH02-DOC05-S0059",
+      "BATCH02-DOC05-S0060"
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 5680,
+    "total_tokens": 18424,
+    "completion_tokens": 12744,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 11627
+    },
+    "time_to_first_token_ms": 104570,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 12743000
+  }
+}

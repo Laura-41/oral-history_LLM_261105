@@ -1,0 +1,1411 @@
+{
+  "run_time": "2026-11-07T13:53:35",
+  "run_stage": "DOCUMENT_CONSOLIDATION_AND_SCOPE",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+document-consolidation-v0.1+output-contract-v0.3",
+  "technical_document_id": "BATCH02-DOC05",
+  "document_id": "02.陈海峰（二访）（二校后 阅读版）.docx",
+  "input_candidate_ids": [
+    "BATCH02-DOC05-W001-E01",
+    "BATCH02-DOC05-W001-E02",
+    "BATCH02-DOC05-W002-E01",
+    "BATCH02-DOC05-W002-E02",
+    "BATCH02-DOC05-W002-E03",
+    "BATCH02-DOC05-W002-E04",
+    "BATCH02-DOC05-W003-E01",
+    "BATCH02-DOC05-W003-E02",
+    "BATCH02-DOC05-W004-E01",
+    "BATCH02-DOC05-W004-E02",
+    "BATCH02-DOC05-W004-E03",
+    "BATCH02-DOC05-W004-E04"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "input_candidate_count": 12,
+    "document_event_count": 10,
+    "candidate_decision_count": 12,
+    "personal_event_count": 7,
+    "context_event_count": 3,
+    "uncertain_event_count": 0,
+    "needs_review_count": 2
+  },
+  "normalization_applied": false,
+  "normalization_error": null,
+  "parsed_output": {
+    "schema_version": "document-consolidation-v1.0",
+    "technical_document_id": "BATCH02-DOC05",
+    "document_id": "02.陈海峰（二访）（二校后 阅读版）.docx",
+    "interviewee": "陈海峰",
+    "document_events": [
+      {
+        "document_event_id": "BATCH02-DOC05-DE001",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W001-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0003",
+          "BATCH02-DOC05-S0005",
+          "BATCH02-DOC05-S0007",
+          "BATCH02-DOC05-S0009",
+          "BATCH02-DOC05-S0011"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0009"
+        ],
+        "scope_evidence_quote": "你像我和朱潮两个人比较要好一点，我们（都在）三班是吧。除了半个小时的午睡，最晚到一个小时，就要出来上课了，那么半个多小时吧。就说这样子的时间，我们还要（走）半里路多一点到罗里村军部的图书馆。图书馆里书最多，我们要借书、还书。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "在云岭教导队学习并到军部图书馆借书还书",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "在教导队学习、到军部图书馆借书还书",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰等教导队学员",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "书",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "云岭罗里村军部附近",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "罗里村军部图书馆",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "除了半个小时的午睡，最晚到一个小时，就要出来上课了，那么半个多小时吧。就说这样子的时间，我们还要（走）半里路多一点到罗里村军部的图书馆。图书馆里书最多，我们要借书、还书。",
+          "type_basis": "核心过程为在教导队上课、到军部图书馆借书还书，属可观察的物质活动；Actor=我们，Goal=书，符合MATERIAL角色词表。叶挺、项英内容作为同一学习阶段背景，不另立事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE002",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W001-E02",
+          "BATCH02-DOC05-W002-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0020",
+          "BATCH02-DOC05-S0022",
+          "BATCH02-DOC05-S0024",
+          "BATCH02-DOC05-S0026",
+          "BATCH02-DOC05-S0028",
+          "BATCH02-DOC05-S0030",
+          "BATCH02-DOC05-S0032",
+          "BATCH02-DOC05-S0035"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0022"
+        ],
+        "scope_evidence_quote": "我们是围着周总理的三面坐的，我们这个班呢，靠大门不远，坐在地上听，做做记录。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "周恩来在云岭作《抗日战争中的战略与政略问题》报告",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "作报告、听报告",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "周总理",
+              "normalized_entity": "周恩来",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我们",
+              "normalized_entity": "陈海峰等教导队学员",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Verbiage",
+              "mention": "《抗日战争中的战略与政略问题》",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "2月23号到3月14号之间",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "云岭陈家大祠堂",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "站在三个方桌拼成的桌子上讲，没有提纲",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "讲六个小时",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他就做了一个报告，那个时候没有麦克风啊，就是这么讲的？我们是围着周总理的三面坐的，我们这个班呢，靠大门不远，坐在地上听，做做记录。",
+          "type_basis": "核心过程为周恩来作报告、陈海峰等学员听讲，属通过口头言语交换信息；Sayer=周总理，Receiver=我们，Verbiage=报告名称，符合VERBAL角色词表。不是单纯物质行动或心理感知。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE003",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W002-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0036"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0036"
+        ],
+        "scope_evidence_quote": "检查工作呢，到了军医处关帝庙以后，很快就到罗里村来看我们。我们呢，正在上课，做人工呼吸。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "周恩来视察军医处并观看人工呼吸课",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "视察军医处",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他",
+              "normalized_entity": "周恩来",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "大概是3月4号",
+              "normalized_value": "3月4日"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "军医处关帝庙、罗里村",
+              "normalized_value": "军医处关帝庙、罗里村"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "大概是3月4号，（他）来军医处参观，来检查工作。检查工作呢，到了军医处关帝庙以后，很快就到罗里村来看我们。我们呢，正在上课，做人工呼吸。他一个学生做病人，一个学生在那做人工呼吸，他看着，他点点头，看他的意思做得还可以。",
+          "type_basis": "核心过程为到军医处参观、检查工作，属组织性物质行动；周总理为Actor，时间和地点作环境。观看人工呼吸是视察中的阶段，不单独升级为心理或行为事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE004",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W002-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0038"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECTLY_AFFECTED"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0038"
+        ],
+        "scope_evidence_quote": "到了我们这，又讲到这个问题。我还不知道，还挂了个救亡室。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "周恩来建议将救亡室改名为军人俱乐部",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "建议改名",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "他",
+              "normalized_entity": "周恩来",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "你们",
+              "normalized_entity": "陈海峰等军医处人员",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": "你们怎么叫救亡室？救亡救亡嘛，我们中国还没有亡嘛。没有亡，你们不能叫救亡啊，我建议你们改成叫‘军人俱乐部’。",
+          "evidence_quote": "他说：“你们怎么叫救亡室？救亡救亡嘛，我们中国还没有亡嘛。没有亡，你们不能叫救亡啊，我建议你们改成叫‘军人俱乐部’。”",
+          "type_basis": "核心过程为建议改名，周总理是Sayer，军医处人员是Receiver，建议内容为投射小句；属象征交换的言语过程。原文只是建议，未实施改名，故不标为物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "参与范围依据‘到了我们这’‘我还不知道’推断为亲历并直接受影响，需人工确认是否属于个人经历。"
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE005",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W002-E04",
+          "BATCH02-DOC05-W003-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0040",
+          "BATCH02-DOC05-S0042",
+          "BATCH02-DOC05-S0044",
+          "BATCH02-DOC05-S0046",
+          "BATCH02-DOC05-S0048"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0042"
+        ],
+        "scope_evidence_quote": "我也在里头，沙序凯等好几个人都在里头，班以上干部。他讲了大概有十几分钟，主要是勉励我们很好地学习。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "周恩来接见班以上干部并发表勉励讲话",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "接见班以上干部并讲话勉励",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "周总理",
+              "normalized_entity": "周恩来",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我们班以上干部",
+              "normalized_entity": "陈海峰等新四军班以上干部",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": "勉励学员好好学习，指出学医有意义、是为了抗战胜利，并举孙中山、鲁迅、郭沫若学医为例，要求学好技术、救活伤员以贡献抗战。",
+          "evidence_quote": "他接见我们班以上干部十几个人，在那个地方，那么讲话，他就勉励我们了",
+          "type_basis": "核心过程为周总理接见班以上干部并讲话勉励，参与者为Sayer与Receiver，讲话内容作为投射内容；不是物质行动或关系属性，故为言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE006",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W003-E02",
+          "BATCH02-DOC05-W004-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0061",
+          "BATCH02-DOC05-S0063"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0061"
+        ],
+        "scope_evidence_quote": "我毕业以后，派到三支队当营卫生指导员，拿八块。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈海峰毕业后任三支队营卫生指导员并领取八元技术津贴",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "任三支队营卫生指导员并领取八元技术津贴",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "毕业以后",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "三支队",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我毕业以后，派到三支队当营卫生指导员，拿八块。",
+          "type_basis": "核心过程为毕业分配、任职和领取技术津贴，属可观察的组织行动和待遇变化；‘当营卫生指导员’在此为分配任职经历，不是单纯身份判断，故为物质而非关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE007",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W004-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0065",
+          "BATCH02-DOC05-S0067"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0065"
+        ],
+        "scope_evidence_quote": "他1941年呢，又回来了，1939年初，1938年底来了，又走了。一回来，在盐城重建军部，原来是保健科长，回来又当重建军部卫生部的医务主任。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "齐仲桓离开新四军后返回并历任卫生领导职务",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "离开新四军后返回并历任卫生领导职务",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "齐仲桓",
+              "normalized_entity": "齐仲桓",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1938年底至1941年",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "成都、重庆、盐城等地",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他1941年呢，又回来了，1939年初，1938年底来了，又走了。一回来，在盐城重建军部，原来是保健科长，回来又当重建军部卫生部的医务主任。",
+          "type_basis": "核心过程为离开、返回及连续任职，属可观察的职业流动和组织任命；虽有‘当卫生部长’等身份表达，但整体是职业经历而非单纯关系判断，故为物质。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE008",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W004-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0068",
+          "BATCH02-DOC05-S0070",
+          "BATCH02-DOC05-S0072"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0072"
+        ],
+        "scope_evidence_quote": "那么周总理在的时候，就去参观了这个淋浴室，大加赞扬，非常感谢史沫特莱。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "周恩来参观军医处淋浴室并赞扬史沫特莱",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "参观淋浴室并赞扬史沫特莱",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "周总理",
+              "normalized_entity": "周恩来",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Target",
+              "mention": "史沫特莱",
+              "normalized_entity": "艾格尼丝·史沫特莱",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "周总理在的时候",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "淋浴室",
+              "normalized_value": "军医处淋浴室"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那么周总理在的时候，就去参观了这个淋浴室，大加赞扬，非常感谢史沫特莱。",
+          "type_basis": "核心结果是周总理对淋浴室和史沫特莱的公开赞扬与感谢，属言语过程；参观淋浴室为伴随物质阶段，不另立节点。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE009",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W004-E04"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0076",
+          "BATCH02-DOC05-S0078"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0076"
+        ],
+        "scope_evidence_quote": "7月1号日本鬼子13架飞机，突如其来，没情报，我们都不知道，这个时候就炸云岭。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "日军飞机轰炸云岭",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "轰炸云岭",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "日本鬼子13架飞机",
+              "normalized_entity": "日军飞机",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "云岭",
+              "normalized_entity": "云岭",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "7月1号",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "突如其来，没情报",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "7月1号日本鬼子13架飞机，突如其来，没情报，我们都不知道，这个时候就炸云岭。",
+          "type_basis": "核心过程为日军飞机轰炸云岭，属可观察的物质行动，有明确施事和受事；不是存在过程，也不是行为过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE010",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W004-E04"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0078"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0078"
+        ],
+        "scope_evidence_quote": "炸老百姓以后呢，我们全班马上就出动，就去救老百姓，因为事先没有准备啊，我们军医处也只是几副担架。",
+        "completeness": "INCOMPLETE",
+        "canonical_event": {
+          "event_name": "军医处全班出动救治被炸老百姓",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "出动救治老百姓",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们全班",
+              "normalized_entity": "陈海峰所在军医处班级",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "老百姓",
+              "normalized_entity": "当地民众",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "炸老百姓以后",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "炸老百姓以后呢，我们全班马上就出动，就去救老百姓，因为事先没有准备啊，我们军医处也只是几副担架。",
+          "type_basis": "核心过程为军医处全班出动救治被炸老百姓，属可观察的物质行动；Actor=我们全班，Goal=老百姓，符合MATERIAL角色词表。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "原文在‘去救老百姓’后结束，未说明救援结果，事件完整性需人工确认。"
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "candidate_id": "BATCH02-DOC05-W001-E01",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE001"
+        ],
+        "reason": "候选核心过程为在教导队学习、到军部图书馆借书还书，保留为个人经历事件；叶挺、项英内容作为同一学习阶段背景，不另立事件。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W001-E02",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE002"
+        ],
+        "reason": "与W002-E01共享周恩来作报告的核心过程、参与者和地点，归并为同一文档事件。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W002-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE002"
+        ],
+        "reason": "与W001-E02指向同一场周恩来报告，归并；S0036转入视察军医处事件。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W002-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE003"
+        ],
+        "reason": "周恩来视察军医处并观看人工呼吸课，保留为独立事件。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W002-E03",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE004"
+        ],
+        "reason": "周恩来建议改名，保留为独立言语事件；参与范围需复核。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W002-E04",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE005"
+        ],
+        "reason": "与W003-E01共享周恩来接见班以上干部并讲话的核心过程，归并为同一事件。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W003-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE005"
+        ],
+        "reason": "与W002-E04指向同一接见和勉励讲话，归并。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W003-E02",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE006"
+        ],
+        "reason": "与W004-E01指向同一毕业分配、任职和八元待遇事件，归并；按物质过程处理。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W004-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE006"
+        ],
+        "reason": "与W003-E02指向同一任职和待遇事件，归并。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W004-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE007"
+        ],
+        "reason": "齐仲桓职业流动为第三人称讲述背景，保留为独立背景事件。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W004-E03",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE008"
+        ],
+        "reason": "周恩来参观淋浴室并赞扬史沫特莱，保留为独立背景事件。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W004-E04",
+        "action": "SPLIT",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE009",
+          "BATCH02-DOC05-DE010"
+        ],
+        "reason": "候选混合日军轰炸（他人行动）与军医处全班出动救援（本人集体行动），拆为两个文档事件。"
+      }
+    ]
+  },
+  "normalized_output": {
+    "schema_version": "document-consolidation-v1.0",
+    "technical_document_id": "BATCH02-DOC05",
+    "document_id": "02.陈海峰（二访）（二校后 阅读版）.docx",
+    "interviewee": "陈海峰",
+    "document_events": [
+      {
+        "document_event_id": "BATCH02-DOC05-DE001",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W001-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0003",
+          "BATCH02-DOC05-S0005",
+          "BATCH02-DOC05-S0007",
+          "BATCH02-DOC05-S0009",
+          "BATCH02-DOC05-S0011"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0009"
+        ],
+        "scope_evidence_quote": "你像我和朱潮两个人比较要好一点，我们（都在）三班是吧。除了半个小时的午睡，最晚到一个小时，就要出来上课了，那么半个多小时吧。就说这样子的时间，我们还要（走）半里路多一点到罗里村军部的图书馆。图书馆里书最多，我们要借书、还书。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "在云岭教导队学习并到军部图书馆借书还书",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "在教导队学习、到军部图书馆借书还书",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰等教导队学员",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "书",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "云岭罗里村军部附近",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "罗里村军部图书馆",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "除了半个小时的午睡，最晚到一个小时，就要出来上课了，那么半个多小时吧。就说这样子的时间，我们还要（走）半里路多一点到罗里村军部的图书馆。图书馆里书最多，我们要借书、还书。",
+          "type_basis": "核心过程为在教导队上课、到军部图书馆借书还书，属可观察的物质活动；Actor=我们，Goal=书，符合MATERIAL角色词表。叶挺、项英内容作为同一学习阶段背景，不另立事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE002",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W001-E02",
+          "BATCH02-DOC05-W002-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0020",
+          "BATCH02-DOC05-S0022",
+          "BATCH02-DOC05-S0024",
+          "BATCH02-DOC05-S0026",
+          "BATCH02-DOC05-S0028",
+          "BATCH02-DOC05-S0030",
+          "BATCH02-DOC05-S0032",
+          "BATCH02-DOC05-S0035"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0022"
+        ],
+        "scope_evidence_quote": "我们是围着周总理的三面坐的，我们这个班呢，靠大门不远，坐在地上听，做做记录。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "周恩来在云岭作《抗日战争中的战略与政略问题》报告",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "作报告、听报告",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "周总理",
+              "normalized_entity": "周恩来",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我们",
+              "normalized_entity": "陈海峰等教导队学员",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Verbiage",
+              "mention": "《抗日战争中的战略与政略问题》",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "2月23号到3月14号之间",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "云岭陈家大祠堂",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "站在三个方桌拼成的桌子上讲，没有提纲",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "讲六个小时",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他就做了一个报告，那个时候没有麦克风啊，就是这么讲的？我们是围着周总理的三面坐的，我们这个班呢，靠大门不远，坐在地上听，做做记录。",
+          "type_basis": "核心过程为周恩来作报告、陈海峰等学员听讲，属通过口头言语交换信息；Sayer=周总理，Receiver=我们，Verbiage=报告名称，符合VERBAL角色词表。不是单纯物质行动或心理感知。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE003",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W002-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0036"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0036"
+        ],
+        "scope_evidence_quote": "检查工作呢，到了军医处关帝庙以后，很快就到罗里村来看我们。我们呢，正在上课，做人工呼吸。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "周恩来视察军医处并观看人工呼吸课",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "视察军医处",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他",
+              "normalized_entity": "周恩来",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "大概是3月4号",
+              "normalized_value": "3月4日"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "军医处关帝庙、罗里村",
+              "normalized_value": "军医处关帝庙、罗里村"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "大概是3月4号，（他）来军医处参观，来检查工作。检查工作呢，到了军医处关帝庙以后，很快就到罗里村来看我们。我们呢，正在上课，做人工呼吸。他一个学生做病人，一个学生在那做人工呼吸，他看着，他点点头，看他的意思做得还可以。",
+          "type_basis": "核心过程为到军医处参观、检查工作，属组织性物质行动；周总理为Actor，时间和地点作环境。观看人工呼吸是视察中的阶段，不单独升级为心理或行为事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE004",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W002-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0038"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECTLY_AFFECTED"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0038"
+        ],
+        "scope_evidence_quote": "到了我们这，又讲到这个问题。我还不知道，还挂了个救亡室。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "周恩来建议将救亡室改名为军人俱乐部",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "建议改名",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "他",
+              "normalized_entity": "周恩来",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "你们",
+              "normalized_entity": "陈海峰等军医处人员",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": "你们怎么叫救亡室？救亡救亡嘛，我们中国还没有亡嘛。没有亡，你们不能叫救亡啊，我建议你们改成叫‘军人俱乐部’。",
+          "evidence_quote": "他说：“你们怎么叫救亡室？救亡救亡嘛，我们中国还没有亡嘛。没有亡，你们不能叫救亡啊，我建议你们改成叫‘军人俱乐部’。”",
+          "type_basis": "核心过程为建议改名，周总理是Sayer，军医处人员是Receiver，建议内容为投射小句；属象征交换的言语过程。原文只是建议，未实施改名，故不标为物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "参与范围依据‘到了我们这’‘我还不知道’推断为亲历并直接受影响，需人工确认是否属于个人经历。"
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE005",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W002-E04",
+          "BATCH02-DOC05-W003-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0040",
+          "BATCH02-DOC05-S0042",
+          "BATCH02-DOC05-S0044",
+          "BATCH02-DOC05-S0046",
+          "BATCH02-DOC05-S0048"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0042"
+        ],
+        "scope_evidence_quote": "我也在里头，沙序凯等好几个人都在里头，班以上干部。他讲了大概有十几分钟，主要是勉励我们很好地学习。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "周恩来接见班以上干部并发表勉励讲话",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "接见班以上干部并讲话勉励",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "周总理",
+              "normalized_entity": "周恩来",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我们班以上干部",
+              "normalized_entity": "陈海峰等新四军班以上干部",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": "勉励学员好好学习，指出学医有意义、是为了抗战胜利，并举孙中山、鲁迅、郭沫若学医为例，要求学好技术、救活伤员以贡献抗战。",
+          "evidence_quote": "他接见我们班以上干部十几个人，在那个地方，那么讲话，他就勉励我们了",
+          "type_basis": "核心过程为周总理接见班以上干部并讲话勉励，参与者为Sayer与Receiver，讲话内容作为投射内容；不是物质行动或关系属性，故为言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE006",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W003-E02",
+          "BATCH02-DOC05-W004-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0061",
+          "BATCH02-DOC05-S0063"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0061"
+        ],
+        "scope_evidence_quote": "我毕业以后，派到三支队当营卫生指导员，拿八块。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈海峰毕业后任三支队营卫生指导员并领取八元技术津贴",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "任三支队营卫生指导员并领取八元技术津贴",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "毕业以后",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "三支队",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我毕业以后，派到三支队当营卫生指导员，拿八块。",
+          "type_basis": "核心过程为毕业分配、任职和领取技术津贴，属可观察的组织行动和待遇变化；‘当营卫生指导员’在此为分配任职经历，不是单纯身份判断，故为物质而非关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE007",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W004-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0065",
+          "BATCH02-DOC05-S0067"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0065"
+        ],
+        "scope_evidence_quote": "他1941年呢，又回来了，1939年初，1938年底来了，又走了。一回来，在盐城重建军部，原来是保健科长，回来又当重建军部卫生部的医务主任。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "齐仲桓离开新四军后返回并历任卫生领导职务",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "离开新四军后返回并历任卫生领导职务",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "齐仲桓",
+              "normalized_entity": "齐仲桓",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1938年底至1941年",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "成都、重庆、盐城等地",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他1941年呢，又回来了，1939年初，1938年底来了，又走了。一回来，在盐城重建军部，原来是保健科长，回来又当重建军部卫生部的医务主任。",
+          "type_basis": "核心过程为离开、返回及连续任职，属可观察的职业流动和组织任命；虽有‘当卫生部长’等身份表达，但整体是职业经历而非单纯关系判断，故为物质。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE008",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W004-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0068",
+          "BATCH02-DOC05-S0070",
+          "BATCH02-DOC05-S0072"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0072"
+        ],
+        "scope_evidence_quote": "那么周总理在的时候，就去参观了这个淋浴室，大加赞扬，非常感谢史沫特莱。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "周恩来参观军医处淋浴室并赞扬史沫特莱",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "参观淋浴室并赞扬史沫特莱",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "周总理",
+              "normalized_entity": "周恩来",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Target",
+              "mention": "史沫特莱",
+              "normalized_entity": "艾格尼丝·史沫特莱",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "周总理在的时候",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "淋浴室",
+              "normalized_value": "军医处淋浴室"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那么周总理在的时候，就去参观了这个淋浴室，大加赞扬，非常感谢史沫特莱。",
+          "type_basis": "核心结果是周总理对淋浴室和史沫特莱的公开赞扬与感谢，属言语过程；参观淋浴室为伴随物质阶段，不另立节点。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE009",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W004-E04"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0076",
+          "BATCH02-DOC05-S0078"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0076"
+        ],
+        "scope_evidence_quote": "7月1号日本鬼子13架飞机，突如其来，没情报，我们都不知道，这个时候就炸云岭。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "日军飞机轰炸云岭",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "轰炸云岭",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "日本鬼子13架飞机",
+              "normalized_entity": "日军飞机",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "云岭",
+              "normalized_entity": "云岭",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "7月1号",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "突如其来，没情报",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "7月1号日本鬼子13架飞机，突如其来，没情报，我们都不知道，这个时候就炸云岭。",
+          "type_basis": "核心过程为日军飞机轰炸云岭，属可观察的物质行动，有明确施事和受事；不是存在过程，也不是行为过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH02-DOC05-DE010",
+        "source_candidate_ids": [
+          "BATCH02-DOC05-W004-E04"
+        ],
+        "source_segment_ids": [
+          "BATCH02-DOC05-S0078"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH02-DOC05-S0078"
+        ],
+        "scope_evidence_quote": "炸老百姓以后呢，我们全班马上就出动，就去救老百姓，因为事先没有准备啊，我们军医处也只是几副担架。",
+        "completeness": "INCOMPLETE",
+        "canonical_event": {
+          "event_name": "军医处全班出动救治被炸老百姓",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "出动救治老百姓",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们全班",
+              "normalized_entity": "陈海峰所在军医处班级",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "老百姓",
+              "normalized_entity": "当地民众",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "炸老百姓以后",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "炸老百姓以后呢，我们全班马上就出动，就去救老百姓，因为事先没有准备啊，我们军医处也只是几副担架。",
+          "type_basis": "核心过程为军医处全班出动救治被炸老百姓，属可观察的物质行动；Actor=我们全班，Goal=老百姓，符合MATERIAL角色词表。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "原文在‘去救老百姓’后结束，未说明救援结果，事件完整性需人工确认。"
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "candidate_id": "BATCH02-DOC05-W001-E01",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE001"
+        ],
+        "reason": "候选核心过程为在教导队学习、到军部图书馆借书还书，保留为个人经历事件；叶挺、项英内容作为同一学习阶段背景，不另立事件。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W001-E02",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE002"
+        ],
+        "reason": "与W002-E01共享周恩来作报告的核心过程、参与者和地点，归并为同一文档事件。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W002-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE002"
+        ],
+        "reason": "与W001-E02指向同一场周恩来报告，归并；S0036转入视察军医处事件。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W002-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE003"
+        ],
+        "reason": "周恩来视察军医处并观看人工呼吸课，保留为独立事件。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W002-E03",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE004"
+        ],
+        "reason": "周恩来建议改名，保留为独立言语事件；参与范围需复核。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W002-E04",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE005"
+        ],
+        "reason": "与W003-E01共享周恩来接见班以上干部并讲话的核心过程，归并为同一事件。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W003-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE005"
+        ],
+        "reason": "与W002-E04指向同一接见和勉励讲话，归并。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W003-E02",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE006"
+        ],
+        "reason": "与W004-E01指向同一毕业分配、任职和八元待遇事件，归并；按物质过程处理。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W004-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE006"
+        ],
+        "reason": "与W003-E02指向同一任职和待遇事件，归并。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W004-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE007"
+        ],
+        "reason": "齐仲桓职业流动为第三人称讲述背景，保留为独立背景事件。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W004-E03",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE008"
+        ],
+        "reason": "周恩来参观淋浴室并赞扬史沫特莱，保留为独立背景事件。"
+      },
+      {
+        "candidate_id": "BATCH02-DOC05-W004-E04",
+        "action": "SPLIT",
+        "document_event_ids": [
+          "BATCH02-DOC05-DE009",
+          "BATCH02-DOC05-DE010"
+        ],
+        "reason": "候选混合日军轰炸（他人行动）与军医处全班出动救援（本人集体行动），拆为两个文档事件。"
+      }
+    ]
+  },
+  "raw_content": "{\n  \"schema_version\": \"document-consolidation-v1.0\",\n  \"technical_document_id\": \"BATCH02-DOC05\",\n  \"document_id\": \"02.陈海峰（二访）（二校后 阅读版）.docx\",\n  \"interviewee\": \"陈海峰\",\n  \"document_events\": [\n    {\n      \"document_event_id\": \"BATCH02-DOC05-DE001\",\n      \"source_candidate_ids\": [\n        \"BATCH02-DOC05-W001-E01\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH02-DOC05-S0003\",\n        \"BATCH02-DOC05-S0005\",\n        \"BATCH02-DOC05-S0007\",\n        \"BATCH02-DOC05-S0009\",\n        \"BATCH02-DOC05-S0011\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"DIRECT_FIRST_PERSON\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0009\"\n      ],\n      \"scope_evidence_quote\": \"你像我和朱潮两个人比较要好一点，我们（都在）三班是吧。除了半个小时的午睡，最晚到一个小时，就要出来上课了，那么半个多小时吧。就说这样子的时间，我们还要（走）半里路多一点到罗里村军部的图书馆。图书馆里书最多，我们要借书、还书。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"在云岭教导队学习并到军部图书馆借书还书\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"在教导队学习、到军部图书馆借书还书\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰等教导队学员\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"书\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"云岭罗里村军部附近\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"罗里村军部图书馆\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"除了半个小时的午睡，最晚到一个小时，就要出来上课了，那么半个多小时吧。就说这样子的时间，我们还要（走）半里路多一点到罗里村军部的图书馆。图书馆里书最多，我们要借书、还书。\",\n        \"type_basis\": \"核心过程为在教导队上课、到军部图书馆借书还书，属可观察的物质活动；Actor=我们，Goal=书，符合MATERIAL角色词表。叶挺、项英内容作为同一学习阶段背景，不另立事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH02-DOC05-DE002\",\n      \"source_candidate_ids\": [\n        \"BATCH02-DOC05-W001-E02\",\n        \"BATCH02-DOC05-W002-E01\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH02-DOC05-S0020\",\n        \"BATCH02-DOC05-S0022\",\n        \"BATCH02-DOC05-S0024\",\n        \"BATCH02-DOC05-S0026\",\n        \"BATCH02-DOC05-S0028\",\n        \"BATCH02-DOC05-S0030\",\n        \"BATCH02-DOC05-S0032\",\n        \"BATCH02-DOC05-S0035\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0022\"\n      ],\n      \"scope_evidence_quote\": \"我们是围着周总理的三面坐的，我们这个班呢，靠大门不远，坐在地上听，做做记录。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"周恩来在云岭作《抗日战争中的战略与政略问题》报告\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"作报告、听报告\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"周总理\",\n            \"normalized_entity\": \"周恩来\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰等教导队学员\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Verbiage\",\n            \"mention\": \"《抗日战争中的战略与政略问题》\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"2月23号到3月14号之间\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"云岭陈家大祠堂\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"站在三个方桌拼成的桌子上讲，没有提纲\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"讲六个小时\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"他就做了一个报告，那个时候没有麦克风啊，就是这么讲的？我们是围着周总理的三面坐的，我们这个班呢，靠大门不远，坐在地上听，做做记录。\",\n        \"type_basis\": \"核心过程为周恩来作报告、陈海峰等学员听讲，属通过口头言语交换信息；Sayer=周总理，Receiver=我们，Verbiage=报告名称，符合VERBAL角色词表。不是单纯物质行动或心理感知。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH02-DOC05-DE003\",\n      \"source_candidate_ids\": [\n        \"BATCH02-DOC05-W002-E02\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH02-DOC05-S0036\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0036\"\n      ],\n      \"scope_evidence_quote\": \"检查工作呢，到了军医处关帝庙以后，很快就到罗里村来看我们。我们呢，正在上课，做人工呼吸。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"周恩来视察军医处并观看人工呼吸课\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"视察军医处\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"他\",\n            \"normalized_entity\": \"周恩来\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"大概是3月4号\",\n            \"normalized_value\": \"3月4日\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"军医处关帝庙、罗里村\",\n            \"normalized_value\": \"军医处关帝庙、罗里村\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"大概是3月4号，（他）来军医处参观，来检查工作。检查工作呢，到了军医处关帝庙以后，很快就到罗里村来看我们。我们呢，正在上课，做人工呼吸。他一个学生做病人，一个学生在那做人工呼吸，他看着，他点点头，看他的意思做得还可以。\",\n        \"type_basis\": \"核心过程为到军医处参观、检查工作，属组织性物质行动；周总理为Actor，时间和地点作环境。观看人工呼吸是视察中的阶段，不单独升级为心理或行为事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH02-DOC05-DE004\",\n      \"source_candidate_ids\": [\n        \"BATCH02-DOC05-W002-E03\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH02-DOC05-S0038\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"DIRECTLY_AFFECTED\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0038\"\n      ],\n      \"scope_evidence_quote\": \"到了我们这，又讲到这个问题。我还不知道，还挂了个救亡室。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"周恩来建议将救亡室改名为军人俱乐部\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"建议改名\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"他\",\n            \"normalized_entity\": \"周恩来\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"你们\",\n            \"normalized_entity\": \"陈海峰等军医处人员\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": \"你们怎么叫救亡室？救亡救亡嘛，我们中国还没有亡嘛。没有亡，你们不能叫救亡啊，我建议你们改成叫‘军人俱乐部’。\",\n        \"evidence_quote\": \"他说：“你们怎么叫救亡室？救亡救亡嘛，我们中国还没有亡嘛。没有亡，你们不能叫救亡啊，我建议你们改成叫‘军人俱乐部’。”\",\n        \"type_basis\": \"核心过程为建议改名，周总理是Sayer，军医处人员是Receiver，建议内容为投射小句；属象征交换的言语过程。原文只是建议，未实施改名，故不标为物质过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"NEEDS_REVIEW\",\n      \"review_reason\": \"参与范围依据‘到了我们这’‘我还不知道’推断为亲历并直接受影响，需人工确认是否属于个人经历。\"\n    },\n    {\n      \"document_event_id\": \"BATCH02-DOC05-DE005\",\n      \"source_candidate_ids\": [\n        \"BATCH02-DOC05-W002-E04\",\n        \"BATCH02-DOC05-W003-E01\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH02-DOC05-S0040\",\n        \"BATCH02-DOC05-S0042\",\n        \"BATCH02-DOC05-S0044\",\n        \"BATCH02-DOC05-S0046\",\n        \"BATCH02-DOC05-S0048\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0042\"\n      ],\n      \"scope_evidence_quote\": \"我也在里头，沙序凯等好几个人都在里头，班以上干部。他讲了大概有十几分钟，主要是勉励我们很好地学习。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"周恩来接见班以上干部并发表勉励讲话\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"接见班以上干部并讲话勉励\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"周总理\",\n            \"normalized_entity\": \"周恩来\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"我们班以上干部\",\n            \"normalized_entity\": \"陈海峰等新四军班以上干部\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": \"勉励学员好好学习，指出学医有意义、是为了抗战胜利，并举孙中山、鲁迅、郭沫若学医为例，要求学好技术、救活伤员以贡献抗战。\",\n        \"evidence_quote\": \"他接见我们班以上干部十几个人，在那个地方，那么讲话，他就勉励我们了\",\n        \"type_basis\": \"核心过程为周总理接见班以上干部并讲话勉励，参与者为Sayer与Receiver，讲话内容作为投射内容；不是物质行动或关系属性，故为言语过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH02-DOC05-DE006\",\n      \"source_candidate_ids\": [\n        \"BATCH02-DOC05-W003-E02\",\n        \"BATCH02-DOC05-W004-E01\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH02-DOC05-S0061\",\n        \"BATCH02-DOC05-S0063\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"DIRECT_FIRST_PERSON\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0061\"\n      ],\n      \"scope_evidence_quote\": \"我毕业以后，派到三支队当营卫生指导员，拿八块。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"陈海峰毕业后任三支队营卫生指导员并领取八元技术津贴\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"任三支队营卫生指导员并领取八元技术津贴\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"毕业以后\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"三支队\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我毕业以后，派到三支队当营卫生指导员，拿八块。\",\n        \"type_basis\": \"核心过程为毕业分配、任职和领取技术津贴，属可观察的组织行动和待遇变化；‘当营卫生指导员’在此为分配任职经历，不是单纯身份判断，故为物质而非关系。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH02-DOC05-DE007\",\n      \"source_candidate_ids\": [\n        \"BATCH02-DOC05-W004-E02\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH02-DOC05-S0065\",\n        \"BATCH02-DOC05-S0067\"\n      ],\n      \"experience_scope\": \"NARRATED_CONTEXT\",\n      \"participation_bases\": [\n        \"THIRD_PARTY_ONLY\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0065\"\n      ],\n      \"scope_evidence_quote\": \"他1941年呢，又回来了，1939年初，1938年底来了，又走了。一回来，在盐城重建军部，原来是保健科长，回来又当重建军部卫生部的医务主任。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"齐仲桓离开新四军后返回并历任卫生领导职务\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"离开新四军后返回并历任卫生领导职务\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"齐仲桓\",\n            \"normalized_entity\": \"齐仲桓\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"1938年底至1941年\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"成都、重庆、盐城等地\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"他1941年呢，又回来了，1939年初，1938年底来了，又走了。一回来，在盐城重建军部，原来是保健科长，回来又当重建军部卫生部的医务主任。\",\n        \"type_basis\": \"核心过程为离开、返回及连续任职，属可观察的职业流动和组织任命；虽有‘当卫生部长’等身份表达，但整体是职业经历而非单纯关系判断，故为物质。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH02-DOC05-DE008\",\n      \"source_candidate_ids\": [\n        \"BATCH02-DOC05-W004-E03\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH02-DOC05-S0068\",\n        \"BATCH02-DOC05-S0070\",\n        \"BATCH02-DOC05-S0072\"\n      ],\n      \"experience_scope\": \"NARRATED_CONTEXT\",\n      \"participation_bases\": [\n        \"THIRD_PARTY_ONLY\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0072\"\n      ],\n      \"scope_evidence_quote\": \"那么周总理在的时候，就去参观了这个淋浴室，大加赞扬，非常感谢史沫特莱。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"周恩来参观军医处淋浴室并赞扬史沫特莱\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"参观淋浴室并赞扬史沫特莱\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"周总理\",\n            \"normalized_entity\": \"周恩来\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Target\",\n            \"mention\": \"史沫特莱\",\n            \"normalized_entity\": \"艾格尼丝·史沫特莱\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"周总理在的时候\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"淋浴室\",\n            \"normalized_value\": \"军医处淋浴室\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那么周总理在的时候，就去参观了这个淋浴室，大加赞扬，非常感谢史沫特莱。\",\n        \"type_basis\": \"核心结果是周总理对淋浴室和史沫特莱的公开赞扬与感谢，属言语过程；参观淋浴室为伴随物质阶段，不另立节点。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH02-DOC05-DE009\",\n      \"source_candidate_ids\": [\n        \"BATCH02-DOC05-W004-E04\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH02-DOC05-S0076\",\n        \"BATCH02-DOC05-S0078\"\n      ],\n      \"experience_scope\": \"NARRATED_CONTEXT\",\n      \"participation_bases\": [\n        \"THIRD_PARTY_ONLY\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0076\"\n      ],\n      \"scope_evidence_quote\": \"7月1号日本鬼子13架飞机，突如其来，没情报，我们都不知道，这个时候就炸云岭。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"日军飞机轰炸云岭\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"轰炸云岭\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"日本鬼子13架飞机\",\n            \"normalized_entity\": \"日军飞机\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"云岭\",\n            \"normalized_entity\": \"云岭\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"7月1号\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"突如其来，没情报\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"7月1号日本鬼子13架飞机，突如其来，没情报，我们都不知道，这个时候就炸云岭。\",\n        \"type_basis\": \"核心过程为日军飞机轰炸云岭，属可观察的物质行动，有明确施事和受事；不是存在过程，也不是行为过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH02-DOC05-DE010\",\n      \"source_candidate_ids\": [\n        \"BATCH02-DOC05-W004-E04\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH02-DOC05-S0078\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0078\"\n      ],\n      \"scope_evidence_quote\": \"炸老百姓以后呢，我们全班马上就出动，就去救老百姓，因为事先没有准备啊，我们军医处也只是几副担架。\",\n      \"completeness\": \"INCOMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"军医处全班出动救治被炸老百姓\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"出动救治老百姓\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们全班\",\n            \"normalized_entity\": \"陈海峰所在军医处班级\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"老百姓\",\n            \"normalized_entity\": \"当地民众\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"炸老百姓以后\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"炸老百姓以后呢，我们全班马上就出动，就去救老百姓，因为事先没有准备啊，我们军医处也只是几副担架。\",\n        \"type_basis\": \"核心过程为军医处全班出动救治被炸老百姓，属可观察的物质行动；Actor=我们全班，Goal=老百姓，符合MATERIAL角色词表。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"NEEDS_REVIEW\",\n      \"review_reason\": \"原文在‘去救老百姓’后结束，未说明救援结果，事件完整性需人工确认。\"\n    }\n  ],\n  \"candidate_decisions\": [\n    {\n      \"candidate_id\": \"BATCH02-DOC05-W001-E01\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH02-DOC05-DE001\"\n      ],\n      \"reason\": \"候选核心过程为在教导队学习、到军部图书馆借书还书，保留为个人经历事件；叶挺、项英内容作为同一学习阶段背景，不另立事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC05-W001-E02\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH02-DOC05-DE002\"\n      ],\n      \"reason\": \"与W002-E01共享周恩来作报告的核心过程、参与者和地点，归并为同一文档事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC05-W002-E01\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH02-DOC05-DE002\"\n      ],\n      \"reason\": \"与W001-E02指向同一场周恩来报告，归并；S0036转入视察军医处事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC05-W002-E02\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH02-DOC05-DE003\"\n      ],\n      \"reason\": \"周恩来视察军医处并观看人工呼吸课，保留为独立事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC05-W002-E03\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH02-DOC05-DE004\"\n      ],\n      \"reason\": \"周恩来建议改名，保留为独立言语事件；参与范围需复核。\"\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC05-W002-E04\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH02-DOC05-DE005\"\n      ],\n      \"reason\": \"与W003-E01共享周恩来接见班以上干部并讲话的核心过程，归并为同一事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC05-W003-E01\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH02-DOC05-DE005\"\n      ],\n      \"reason\": \"与W002-E04指向同一接见和勉励讲话，归并。\"\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC05-W003-E02\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH02-DOC05-DE006\"\n      ],\n      \"reason\": \"与W004-E01指向同一毕业分配、任职和八元待遇事件，归并；按物质过程处理。\"\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC05-W004-E01\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH02-DOC05-DE006\"\n      ],\n      \"reason\": \"与W003-E02指向同一任职和待遇事件，归并。\"\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC05-W004-E02\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH02-DOC05-DE007\"\n      ],\n      \"reason\": \"齐仲桓职业流动为第三人称讲述背景，保留为独立背景事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC05-W004-E03\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH02-DOC05-DE008\"\n      ],\n      \"reason\": \"周恩来参观淋浴室并赞扬史沫特莱，保留为独立背景事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC05-W004-E04\",\n      \"action\": \"SPLIT\",\n      \"document_event_ids\": [\n        \"BATCH02-DOC05-DE009\",\n        \"BATCH02-DOC05-DE010\"\n      ],\n      \"reason\": \"候选混合日军轰炸（他人行动）与军医处全班出动救援（本人集体行动），拆为两个文档事件。\"\n    }\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 15651,
+    "total_tokens": 51827,
+    "completion_tokens": 36176,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 29341
+    },
+    "time_to_first_token_ms": 291480,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 18087500
+  }
+}

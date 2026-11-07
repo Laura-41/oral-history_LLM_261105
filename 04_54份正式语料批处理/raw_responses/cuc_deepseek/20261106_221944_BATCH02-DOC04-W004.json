@@ -1,0 +1,173 @@
+{
+  "run_time": "2026-11-06T22:19:44",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH02-DOC04-W004",
+  "technical_document_id": "BATCH02-DOC04",
+  "document_id": "03.杨永松100506（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH02-DOC04-S0074",
+    "BATCH02-DOC04-S0075",
+    "BATCH02-DOC04-S0076",
+    "BATCH02-DOC04-S0077",
+    "BATCH02-DOC04-S0078",
+    "BATCH02-DOC04-S0079",
+    "BATCH02-DOC04-S0080",
+    "BATCH02-DOC04-S0081",
+    "BATCH02-DOC04-S0082",
+    "BATCH02-DOC04-S0083",
+    "BATCH02-DOC04-S0084",
+    "BATCH02-DOC04-S0085",
+    "BATCH02-DOC04-S0086",
+    "BATCH02-DOC04-S0087",
+    "BATCH02-DOC04-S0088",
+    "BATCH02-DOC04-S0089",
+    "BATCH02-DOC04-S0090",
+    "BATCH02-DOC04-S0091",
+    "BATCH02-DOC04-S0092",
+    "BATCH02-DOC04-S0093",
+    "BATCH02-DOC04-S0094",
+    "BATCH02-DOC04-S0095",
+    "BATCH02-DOC04-S0096",
+    "BATCH02-DOC04-S0097"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 10,
+    "unassigned_segment_count": 14,
+    "input_segment_count": 24,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH02-DOC04-W004-E02"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH02-DOC04-W004",
+    "events": [
+      {
+        "candidate_id": "BATCH02-DOC04-W004-E01",
+        "source_segment_ids": [
+          "BATCH02-DOC04-S0075",
+          "BATCH02-DOC04-S0077",
+          "BATCH02-DOC04-S0080",
+          "BATCH02-DOC04-S0082",
+          "BATCH02-DOC04-S0084",
+          "BATCH02-DOC04-S0086"
+        ],
+        "event": {
+          "event_name": "平型关战后缴获物资及补充情况",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "现场获取缴获物资",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们部队",
+              "normalized_entity": "八路军第115师第685团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "东西",
+              "normalized_entity": "缴获物资",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "平型关",
+              "normalized_value": "平型关"
+            },
+            {
+              "kind": "TIME",
+              "value": "当时",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "所以平型关我们部队弄到的东西都是当时现场搞到的。",
+          "type_basis": "核心过程“弄到”表示物质获取，参与者为部队和缴获物资；分发饼干属于物质转移，排除关系、言语和心理过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH02-DOC04-W004-E02",
+        "source_segment_ids": [
+          "BATCH02-DOC04-S0089",
+          "BATCH02-DOC04-S0091",
+          "BATCH02-DOC04-S0093",
+          "BATCH02-DOC04-S0096"
+        ],
+        "event": {
+          "event_name": "陈光在会议上讲话反对忻口作战",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "讲话",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "陈光",
+              "normalized_entity": "陈光",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我们连以上干部",
+              "normalized_entity": "连以上干部",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": "中央给我们的任务，打运动游击战，不放弃有利条件的运动战，交给我们的任务是要在敌后建立根据地，扩大我们人民自己的军队。可是现在呢，要我们上忻口去作战，忻口是十几二十万中央军！还有阎锡山的部队。",
+          "evidence_quote": "他的意思是说我们没有得到补充，江西长征出来的都是老骨头硬骨头，我们把这硬骨头打了，你一上去不就……本来人就已经不多了，你再打一家伙就没有多少了。我们怎么样去建立根据地，怎么样去作为抗日的主力军宣传、组织群众？他有这么个讲话，那个会我参加了，我记忆多少大概就是这么一些，可能讲了有不到一个钟头的话。",
+          "type_basis": "核心过程为陈光发表讲话，属于言语过程；有明确说者和听者，内容为投射小句，排除物质行动和心理过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH02-DOC04-S0074",
+      "BATCH02-DOC04-S0076",
+      "BATCH02-DOC04-S0078",
+      "BATCH02-DOC04-S0079",
+      "BATCH02-DOC04-S0081",
+      "BATCH02-DOC04-S0083",
+      "BATCH02-DOC04-S0085",
+      "BATCH02-DOC04-S0087",
+      "BATCH02-DOC04-S0088",
+      "BATCH02-DOC04-S0090",
+      "BATCH02-DOC04-S0092",
+      "BATCH02-DOC04-S0094",
+      "BATCH02-DOC04-S0095",
+      "BATCH02-DOC04-S0097"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH02-DOC04-W004\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH02-DOC04-W004-E01\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC04-S0075\",\n        \"BATCH02-DOC04-S0077\",\n        \"BATCH02-DOC04-S0080\",\n        \"BATCH02-DOC04-S0082\",\n        \"BATCH02-DOC04-S0084\",\n        \"BATCH02-DOC04-S0086\"\n      ],\n      \"event\": {\n        \"event_name\": \"平型关战后缴获物资及补充情况\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"现场获取缴获物资\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们部队\",\n            \"normalized_entity\": \"八路军第115师第685团\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"东西\",\n            \"normalized_entity\": \"缴获物资\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"平型关\",\n            \"normalized_value\": \"平型关\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"当时\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"所以平型关我们部队弄到的东西都是当时现场搞到的。\",\n        \"type_basis\": \"核心过程“弄到”表示物质获取，参与者为部队和缴获物资；分发饼干属于物质转移，排除关系、言语和心理过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH02-DOC04-W004-E02\",\n      \"source_segment_ids\": [\n        \"BATCH02-DOC04-S0089\",\n        \"BATCH02-DOC04-S0091\",\n        \"BATCH02-DOC04-S0093\",\n        \"BATCH02-DOC04-S0096\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈光在会议上讲话反对忻口作战\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"讲话\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"陈光\",\n            \"normalized_entity\": \"陈光\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"我们连以上干部\",\n            \"normalized_entity\": \"连以上干部\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": \"中央给我们的任务，打运动游击战，不放弃有利条件的运动战，交给我们的任务是要在敌后建立根据地，扩大我们人民自己的军队。可是现在呢，要我们上忻口去作战，忻口是十几二十万中央军！还有阎锡山的部队。\",\n        \"evidence_quote\": \"他的意思是说我们没有得到补充，江西长征出来的都是老骨头硬骨头，我们把这硬骨头打了，你一上去不就……本来人就已经不多了，你再打一家伙就没有多少了。我们怎么样去建立根据地，怎么样去作为抗日的主力军宣传、组织群众？他有这么个讲话，那个会我参加了，我记忆多少大概就是这么一些，可能讲了有不到一个钟头的话。\",\n        \"type_basis\": \"核心过程为陈光发表讲话，属于言语过程；有明确说者和听者，内容为投射小句，排除物质行动和心理过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH02-DOC04-S0074\",\n    \"BATCH02-DOC04-S0076\",\n    \"BATCH02-DOC04-S0078\",\n    \"BATCH02-DOC04-S0079\",\n    \"BATCH02-DOC04-S0081\",\n    \"BATCH02-DOC04-S0083\",\n    \"BATCH02-DOC04-S0085\",\n    \"BATCH02-DOC04-S0087\",\n    \"BATCH02-DOC04-S0088\",\n    \"BATCH02-DOC04-S0090\",\n    \"BATCH02-DOC04-S0092\",\n    \"BATCH02-DOC04-S0094\",\n    \"BATCH02-DOC04-S0095\",\n    \"BATCH02-DOC04-S0097\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5411,
+    "total_tokens": 16515,
+    "completion_tokens": 11104,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9992
+    },
+    "time_to_first_token_ms": 97303,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11103000
+  }
+}

@@ -1,0 +1,17 @@
+BATCH02 / cuc/qwen：9份文档、34个窗口、19个步骤。
+
+=== 窗口抽取 BATCH02-DOC01 ===
++ /opt/homebrew/opt/python@3.14/bin/python3.14 scripts/run_formal_batch.py --model cuc/qwen --batch BATCH02 --document BATCH02-DOC01 --timeout 1800
+窗口清单：batch02_manifest.csv（共34行）
+[1/5] 请求 cuc/qwen / BATCH02-DOC01-W001，最长等待1800秒……
+  通过：3个候选，边缘待复核1个，结果已保存。
+[2/5] 请求 cuc/qwen / BATCH02-DOC01-W002，最长等待1800秒……
+  通过：1个候选，边缘待复核1个，结果已保存。
+[3/5] 请求 cuc/qwen / BATCH02-DOC01-W003，最长等待1800秒……
+  通过：1个候选，边缘待复核1个，结果已保存。
+[4/5] 请求 cuc/qwen / BATCH02-DOC01-W004，最长等待1800秒……
+技术校验失败并停止：
+  - 模型输出不是合法JSON
+步骤失败（退出码 3）：窗口抽取 BATCH02-DOC01；按熔断规则停止本批。
+
+本批在「窗口抽取 BATCH02-DOC01」中断。已完成结果全部保留，不要进入下一批；排查后可用同一命令断点续跑。

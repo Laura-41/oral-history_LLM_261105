@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T19:00:48",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC08-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC08-DE007",
+  "usage": {
+    "prompt_tokens": 1371,
+    "total_tokens": 8840,
+    "completion_tokens": 7469,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6612
+    },
+    "time_to_first_token_ms": 111691,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC08-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"繁昌县政府、司令部、老一团、五团及黄火星的三团都集中在中分村。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"自“过春节的时候”起，至“那么都集中在中分村”止；其后关于中分村老根据地、谭震林结婚、曾如清等为背景补充，不纳入本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"春节时繁昌县政府、司令部、老一团、五团及黄火星的三团到来。\",\n      \"process_text\": \"过春节的时候，繁昌县政府，我们的司令部，我们的老一团，我们五团，后来黄火星的三团也来了\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0042\"\n      ],\n      \"evidence_quote\": \"过春节的时候，繁昌县政府，我们的司令部，我们的老一团，我们五团，后来黄火星的三团也来了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"叙述者感叹鬼子越来越多、仗越打越大。\",\n      \"process_text\": \"呦，这怎么鬼子越来越多，仗越打越大啊！\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0042\"\n      ],\n      \"evidence_quote\": \"呦，这怎么鬼子越来越多，仗越打越大啊！\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"各方都集中在中分村。\",\n      \"process_text\": \"那么都集中在中分村\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0042\"\n      ],\n      \"evidence_quote\": \"那么都集中在中分村\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE007-P01\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0042\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE007-P02\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0042\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC08-DE007",
+    "event_enrichment": {
+      "result_state": "繁昌县政府、司令部、老一团、五团及黄火星的三团都集中在中分村。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "自“过春节的时候”起，至“那么都集中在中分村”止；其后关于中分村老根据地、谭震林结婚、曾如清等为背景补充，不纳入本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC08-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "春节时繁昌县政府、司令部、老一团、五团及黄火星的三团到来。",
+        "process_text": "过春节的时候，繁昌县政府，我们的司令部，我们的老一团，我们五团，后来黄火星的三团也来了",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0042"
+        ],
+        "evidence_quote": "过春节的时候，繁昌县政府，我们的司令部，我们的老一团，我们五团，后来黄火星的三团也来了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "叙述者感叹鬼子越来越多、仗越打越大。",
+        "process_text": "呦，这怎么鬼子越来越多，仗越打越大啊！",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0042"
+        ],
+        "evidence_quote": "呦，这怎么鬼子越来越多，仗越打越大啊！",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "各方都集中在中分村。",
+        "process_text": "那么都集中在中分村",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0042"
+        ],
+        "evidence_quote": "那么都集中在中分村",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC08-DE007-P01",
+        "target_stage_id": "BATCH02-DOC08-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0042",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE007-P02",
+        "target_stage_id": "BATCH02-DOC08-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0042",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T21:31:15",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC04-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC04-DE002",
+  "usage": {
+    "prompt_tokens": 2184,
+    "total_tokens": 4860,
+    "completion_tokens": 2676,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1856
+    },
+    "time_to_first_token_ms": 26250,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC04-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"夜攻老爷庙和东、西跑池未克，部队伤亡较大，天亮前撤离并与敌人脱离接触，退到山头上。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于那天晚上686团继续攻老爷庙、685团攻东、西跑池，止于第二天天亮以前部队撤离、与敌人脱离接触并退到山头上；后续第三天撤退及敌军转移不计入本事件阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"当晚部署并展开对老爷庙和东、西跑池的进攻。\",\n      \"process_text\": \"那天晚上，686团继续攻老爷庙，685团攻东、西跑池。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0015\"\n      ],\n      \"evidence_quote\": \"那天晚上呢，686团继续攻老爷庙，我们685团就攻东、西跑池。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"东、西跑池日军顽强，部队接近村子即伤亡很大，当晚未达到歼灭村内敌人的目的。\",\n      \"process_text\": \"东、西跑池的日军非常顽强，部队接近村子就伤亡很大，当晚没有达到歼灭村内敌人的目的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0015\"\n      ],\n      \"evidence_quote\": \"据我了解东、西跑池的（日本）人非常顽强，咱们接近村子就伤亡很大，所以那天晚上我们没有达到歼灭村子的敌人的目的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"第二天天亮以前部队撤离，与敌人脱离接触并退到山头上。\",\n      \"process_text\": \"第二天天亮以前，部队撤离，与敌人脱离接触，退到山头上。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0015\"\n      ],\n      \"evidence_quote\": \"所以在第二天呢，天亮以前我们部队撤到这个……跟敌人脱离接触，退到这边山头上来了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE002-P01\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0015\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE002-P02\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE002-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0015\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC04-DE002",
+    "event_enrichment": {
+      "result_state": "夜攻老爷庙和东、西跑池未克，部队伤亡较大，天亮前撤离并与敌人脱离接触，退到山头上。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于那天晚上686团继续攻老爷庙、685团攻东、西跑池，止于第二天天亮以前部队撤离、与敌人脱离接触并退到山头上；后续第三天撤退及敌军转移不计入本事件阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC04-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "当晚部署并展开对老爷庙和东、西跑池的进攻。",
+        "process_text": "那天晚上，686团继续攻老爷庙，685团攻东、西跑池。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0015"
+        ],
+        "evidence_quote": "那天晚上呢，686团继续攻老爷庙，我们685团就攻东、西跑池。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "东、西跑池日军顽强，部队接近村子即伤亡很大，当晚未达到歼灭村内敌人的目的。",
+        "process_text": "东、西跑池的日军非常顽强，部队接近村子就伤亡很大，当晚没有达到歼灭村内敌人的目的。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0015"
+        ],
+        "evidence_quote": "据我了解东、西跑池的（日本）人非常顽强，咱们接近村子就伤亡很大，所以那天晚上我们没有达到歼灭村子的敌人的目的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "第二天天亮以前部队撤离，与敌人脱离接触并退到山头上。",
+        "process_text": "第二天天亮以前，部队撤离，与敌人脱离接触，退到山头上。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0015"
+        ],
+        "evidence_quote": "所以在第二天呢，天亮以前我们部队撤到这个……跟敌人脱离接触，退到这边山头上来了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC04-DE002-P01",
+        "target_stage_id": "BATCH02-DOC04-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0015",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE002-P02",
+        "target_stage_id": "BATCH02-DOC04-DE002-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC04-S0015",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

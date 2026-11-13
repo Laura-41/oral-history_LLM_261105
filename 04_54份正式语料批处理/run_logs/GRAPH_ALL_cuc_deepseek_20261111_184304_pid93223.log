@@ -1,0 +1,170 @@
+图谱新增层批量执行：cuc/deepseek
+日志：04_54份正式语料批处理/run_logs/GRAPH_ALL_cuc_deepseek_20261111_184304_pid93223.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+单次 API 等待上限：3600s（DeepSeek 线若曾超时，可用 TIMEOUT=3600）
+容错编排：关闭（失败即停，重跑同一命令即断点续跑）
+语料口径：60 份总账 = 6 份人工 Demo + 54 份正式语料；BATCH01 三份同为正式语料，全数纳入。
+
+一级层结果 54 份｜新增层已验收 2 份｜本次待跑 52 份
+待跑清单：
+  BATCH01-DOC03
+  BATCH02-DOC01
+  BATCH02-DOC02
+  BATCH02-DOC03
+  BATCH02-DOC04
+  BATCH02-DOC05
+  BATCH02-DOC06
+  BATCH02-DOC07
+  BATCH02-DOC08
+  BATCH02-DOC09
+  BATCH03-DOC01
+  BATCH03-DOC02
+  BATCH03-DOC03
+  BATCH03-DOC04
+  BATCH03-DOC05
+  BATCH03-DOC06
+  BATCH03-DOC07
+  BATCH03-DOC08
+  BATCH03-DOC09
+  BATCH04-DOC01
+  BATCH04-DOC02
+  BATCH04-DOC03
+  BATCH04-DOC04
+  BATCH04-DOC05
+  BATCH04-DOC06
+  BATCH04-DOC07
+  BATCH04-DOC08
+  BATCH04-DOC09
+  BATCH05-DOC01
+  BATCH05-DOC02
+  BATCH05-DOC03
+  BATCH05-DOC04
+  BATCH05-DOC05
+  BATCH05-DOC06
+  BATCH05-DOC07
+  BATCH05-DOC08
+  BATCH05-DOC09
+  BATCH06-DOC01
+  BATCH06-DOC02
+  BATCH06-DOC03
+  BATCH06-DOC04
+  BATCH06-DOC05
+  BATCH06-DOC06
+  BATCH06-DOC07
+  BATCH06-DOC08
+  BATCH06-DOC09
+  BATCH07-DOC01
+  BATCH07-DOC02
+  BATCH07-DOC03
+  BATCH07-DOC04
+  BATCH07-DOC05
+  BATCH07-DOC06
+
+[1/54] BATCH01-DOC01 已验收，跳过
+[2/54] BATCH01-DOC02 已验收，跳过
+[3/54] ===== BATCH01-DOC03 开始 =====
+单文档验证：BATCH01-DOC03 / cuc/deepseek
+日志：04_54份正式语料批处理/run_logs/GRAPH_VERIFY_BATCH01-DOC03_cuc_deepseek_20261111_184304_pid93292.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+
+===== L0 零 API 底座表 =====
+[落盘] BATCH01-DOC03 / cuc/deepseek
+  原文片段 97｜一级事件 7｜覆盖率 1.0000
+  人工视图：无
+    documents                  1 行
+    source_segments           97 行
+    source_attachments        97 行
+    coverage_audit             1 行
+    document_annotations      35 行
+    event_nodes                7 行
+    event_processes            7 行
+    event_participants        14 行
+    event_circumstances       21 行
+    event_next                 6 行
+  警告 1 条（详见 L0_report.json）
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH01-DOC03
+
+===== L1/L2 模型任务（真实 API 调用） =====
+[真实调用] BATCH01-DOC03 / cuc/deepseek / tasks=stage,entity_time
+  一级事件 7｜原文片段 97｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH01-DOC03/raw
+
+== stage：7 次调用 ==
+  [1/7] stage_BATCH01-DOC03-DE001 已有成功响应，跳过（断点续跑）
+  [2/7] stage_BATCH01-DOC03-DE002 已有成功响应，跳过（断点续跑）
+  [3/7] stage_BATCH01-DOC03-DE003 已有成功响应，跳过（断点续跑）
+  [4/7] stage_BATCH01-DOC03-DE004 已有成功响应，跳过（断点续跑）
+  [5/7] stage_BATCH01-DOC03-DE005 已有成功响应，跳过（断点续跑）
+  [6/7] stage_BATCH01-DOC03-DE006 已有成功响应，跳过（断点续跑）
+  [7/7] stage_BATCH01-DOC03-DE007 已有成功响应，跳过（断点续跑）
+
+== entity_time：1 次调用 ==
+  [1/1] 请求 entity_time/YYS-02，输入 28,873 字符，最长等待 3600s……
+  失败并停止：HTTP 504: <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta charset="UTF-8">
+    <title>访问出错 - 504</title>
+</head>
+<body>
+<div style="box-sizing: border-box;
+    font-size: 1em;
+    line-height: 1.6em;
+    margin: 14vh auto 0;
+    max-width: 600px;
+    width: 100%;
+    text-align:center;
+">
+    <img src="/wengine-auth-failed.png" alt="" style="width:200px;height:200px;">
+    <div style="margin-top:40px; color:#535353; text-align:left;">
+        <h3>出错啦！业务系统处理时间过久超时，可能的原因为</h3>
+        <p id="reason">
+        </p>
+        <div style="display: block;
+    font-size: .8em;margin-top: 12px;">(错误代码：504)</div>
+    </div>
+</div>
+<script>
+    function IsIPv4(ip){
+        if ( /^([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\.([01]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$/g.test(ip)) {
+            return true;
+        }
+        return false;
+    }
+    function IsIPv6(ip){
+        if ( /^((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*::((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4}))*|((?:[0-9A-Fa-f]{1,4}))((?::[0-9A-Fa-f]{1,4})){7}$/g.test(ip)) {
+            return true;
+        }
+        return false;
+    }
+    function IsIP(ip)
+    {
+        if(IsIPv4(ip) || IsIPv6(ip)){
+            return true;
+        }
+        return false;
+    }
+    var remote_addr = '10.202.204.83';
+    var host = window.location.hostname;
+    function GetErrors(){
+        var errors = [];
+        errors.push("您所访问的资源处理时间过久，请耐心等待，稍后可刷新重试");
+        errors.push("您可以联系管理员修改超时相关配置，或联系业务管理员优化相关访问");
+        return errors;
+    }
+    var e = GetErrors();
+    var content = "";
+    for(var i in e){
+        content += "<li>"+e[i]+"</li>";
+    }
+    document.getElementById("reason").innerHTML = content;
+</script>
+</body>
+</html>
+
+
+entity_time 在第 1 次调用熔断；已完成结果全部保留，重跑同一命令即断点续跑。
+
+熔断于：L1/L2 模型任务（真实 API 调用）。已完成结果全部保留，修好后重跑同一命令即可。
+
+熔断于 BATCH01-DOC03。已完成结果全部保留；修好后重跑同一命令即断点续跑。

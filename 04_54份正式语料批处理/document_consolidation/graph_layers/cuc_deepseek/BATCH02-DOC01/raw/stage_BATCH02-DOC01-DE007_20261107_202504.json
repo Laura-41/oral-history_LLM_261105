@@ -1,0 +1,162 @@
+{
+  "run_time": "2026-11-07T20:25:04",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC01-DE007",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC01-DE007",
+  "usage": {
+    "prompt_tokens": 1791,
+    "total_tokens": 10087,
+    "completion_tokens": 8296,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6201
+    },
+    "time_to_first_token_ms": 65817,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V1-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC01-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"后藤勇被新四军侦察员捕获并带回团部，经敌工股长劝慰、按日本习惯供食和后续教育，一个多礼拜即配合良好；叙述称其经教育加入反战同盟。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以三个日本兵离站抓鸡、侦察员逮住落单者为起点，以后藤勇被带回团部、经劝慰教育后配合良好并据叙述加入反战同盟为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"三个日本兵离开小火车站到铁路附近抓老百姓的鸡。\",\n      \"process_text\": \"三个日本鬼子离开车站约一华里，到铁路附近抓老百姓的鸡、打鸡。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0078\"\n      ],\n      \"evidence_quote\": \"三个日本鬼子离开这个站呢，大概有一华里左右，旁边有一个铁路，离铁路很近。他本来是铁路那个上面的，他想来发洋财，他来抓老百姓的鸡，打鸡，“啪啪啪啪啪”。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"侦察员逮住离另两个日本兵较远的那个日本兵，并把他带到团部，确认其叫后藤勇。\",\n      \"process_text\": \"三个侦察员逮住落单的日本兵，抓来后带到团部，翻译过来叫后藤勇，是个初中生，到中国来还不长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0080\"\n      ],\n      \"evidence_quote\": \"其中有一个呢，就跑得远一点，离开那两个日本鬼子远一点，给我们逮住了。我们是三个侦察员，那次我不在，抓来以后，我们都知道经过了，抓到我们团部来了。那个人翻译过来叫后藤勇，“前后”的“后”，藤是“葡萄藤”的“藤”，勇是“勇敢”的“勇”，是个初中生，到中国来还不长。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"用麻袋、毛巾塞嘴和五花大绑控制俘虏，缴枪后用木棍抬回，解开后俘虏发抖怕被杀。\",\n      \"process_text\": \"用老百姓的麻袋抓，毛巾往嘴里一塞，五花大绑，缴掉枪，两个侦察员用木棍把他抬回来；解开后他发抖，怕被杀害。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0082\"\n      ],\n      \"evidence_quote\": \"用我们老百姓的麻袋抓的，把那个毛巾（往嘴里）一塞，把他绑个五花大绑绑，他自己都吓得发抖。绑住了，枪当然缴掉了。江南的老百姓都车水的，那个水车有一个木棍，我们家乡话叫夯（音）。把那个夯（音）呢，两个侦察员就挑，把他抬回来的。抬回来解开以后，他就发抖，怕我们杀他。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"敌工股长用日语劝慰，并按日本人的吃法买鸡杀好。\",\n      \"process_text\": \"敌工股长讲日本话劝他；因他打过鸡，便向老百姓买鸡杀好，按日本人的规矩只留身体。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0082\"\n      ],\n      \"evidence_quote\": \"那么我们敌工股长讲日本话，劝他。按照日本的规矩，他不是打鸡嘛，我们就问老百姓买了一只鸡，杀好，也按日本人的规矩，日本人吃的方法不一样，头、脚、翅膀都不要，只要身体。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE007-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"母鸡煨汤加糖给俘虏吃，俘虏怕被毒死不吃，敌工股长先吃示范。\",\n      \"process_text\": \"把母鸡煨汤并加糖，煮后给俘虏吃，他不吃，怕被毒死；敌工股长自己先吃给他看。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0084\"\n      ],\n      \"evidence_quote\": \"母鸡煨汤，煨汤里面还加糖，我们没这种吃法的。煮了以后，给他吃，不吃，他怕我们毒死他。我们敌工股长自己先吃，吃给他看，没有问题，你吃。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE007-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"询问身世，得知后藤勇是初中生、被压迫来华且思乡；经教育一个多礼拜即配合良好。\",\n      \"process_text\": \"问他情况，他讲是初中生，像被抓壮丁一样被压迫来的，想念家乡、妹妹和母亲；不到一个多礼拜就配合得很好，新四军方面继续教育他。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0084\"\n      ],\n      \"evidence_quote\": \"那么就问他什么，他就讲（是）初中生，因为他讲日本话嘛，他就讲了。这个人还比较好，因为他等于是抓壮丁一样来的，就是压迫来的，他很想念家乡，想念他的妹妹，想念他的母亲。所以这个人没有一个多礼拜，他就跟我们配合得很好。我们教育他，以后到10月份，我们新四军军部的政治部主任袁国平来视察我们一支队。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE007-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"叙述开头概括称，俘虏经教育后加入反战同盟。\",\n      \"process_text\": \"叙述者概括说，俘虏来后经过教育，那个日本鬼子就加入了反战同盟。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0078\"\n      ],\n      \"evidence_quote\": \"我们俘虏来了以后，经过教育，那个日本鬼子就（加入了反战同盟）。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC01-DE007-P01\",\n      \"target_stage_id\": \"BATCH02-DOC01-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC01-S0080\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC01-DE007-P02\",\n      \"target_stage_id\": \"BATCH02-DOC01-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC01-S0082\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC01-DE007-P03\",\n      \"target_stage_id\": \"BATCH02-DOC01-DE007-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC01-S0082\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC01-DE007-P04\",\n      \"target_stage_id\": \"BATCH02-DOC01-DE007-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC01-S0084\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC01-DE007-P05\",\n      \"target_stage_id\": \"BATCH02-DOC01-DE007-P06\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC01-S0084\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC01-DE007-P06\",\n      \"target_stage_id\": \"BATCH02-DOC01-DE007-P07\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC01-S0078\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC01-DE007",
+    "event_enrichment": {
+      "result_state": "后藤勇被新四军侦察员捕获并带回团部，经敌工股长劝慰、按日本习惯供食和后续教育，一个多礼拜即配合良好；叙述称其经教育加入反战同盟。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以三个日本兵离站抓鸡、侦察员逮住落单者为起点，以后藤勇被带回团部、经劝慰教育后配合良好并据叙述加入反战同盟为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC01-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "三个日本兵离开小火车站到铁路附近抓老百姓的鸡。",
+        "process_text": "三个日本鬼子离开车站约一华里，到铁路附近抓老百姓的鸡、打鸡。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0078"
+        ],
+        "evidence_quote": "三个日本鬼子离开这个站呢，大概有一华里左右，旁边有一个铁路，离铁路很近。他本来是铁路那个上面的，他想来发洋财，他来抓老百姓的鸡，打鸡，“啪啪啪啪啪”。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC01-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "侦察员逮住离另两个日本兵较远的那个日本兵，并把他带到团部，确认其叫后藤勇。",
+        "process_text": "三个侦察员逮住落单的日本兵，抓来后带到团部，翻译过来叫后藤勇，是个初中生，到中国来还不长。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0080"
+        ],
+        "evidence_quote": "其中有一个呢，就跑得远一点，离开那两个日本鬼子远一点，给我们逮住了。我们是三个侦察员，那次我不在，抓来以后，我们都知道经过了，抓到我们团部来了。那个人翻译过来叫后藤勇，“前后”的“后”，藤是“葡萄藤”的“藤”，勇是“勇敢”的“勇”，是个初中生，到中国来还不长。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC01-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "用麻袋、毛巾塞嘴和五花大绑控制俘虏，缴枪后用木棍抬回，解开后俘虏发抖怕被杀。",
+        "process_text": "用老百姓的麻袋抓，毛巾往嘴里一塞，五花大绑，缴掉枪，两个侦察员用木棍把他抬回来；解开后他发抖，怕被杀害。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0082"
+        ],
+        "evidence_quote": "用我们老百姓的麻袋抓的，把那个毛巾（往嘴里）一塞，把他绑个五花大绑绑，他自己都吓得发抖。绑住了，枪当然缴掉了。江南的老百姓都车水的，那个水车有一个木棍，我们家乡话叫夯（音）。把那个夯（音）呢，两个侦察员就挑，把他抬回来的。抬回来解开以后，他就发抖，怕我们杀他。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC01-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "敌工股长用日语劝慰，并按日本人的吃法买鸡杀好。",
+        "process_text": "敌工股长讲日本话劝他；因他打过鸡，便向老百姓买鸡杀好，按日本人的规矩只留身体。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0082"
+        ],
+        "evidence_quote": "那么我们敌工股长讲日本话，劝他。按照日本的规矩，他不是打鸡嘛，我们就问老百姓买了一只鸡，杀好，也按日本人的规矩，日本人吃的方法不一样，头、脚、翅膀都不要，只要身体。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC01-DE007-P05",
+        "stage_order": 5,
+        "stage_summary": "母鸡煨汤加糖给俘虏吃，俘虏怕被毒死不吃，敌工股长先吃示范。",
+        "process_text": "把母鸡煨汤并加糖，煮后给俘虏吃，他不吃，怕被毒死；敌工股长自己先吃给他看。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0084"
+        ],
+        "evidence_quote": "母鸡煨汤，煨汤里面还加糖，我们没这种吃法的。煮了以后，给他吃，不吃，他怕我们毒死他。我们敌工股长自己先吃，吃给他看，没有问题，你吃。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC01-DE007-P06",
+        "stage_order": 6,
+        "stage_summary": "询问身世，得知后藤勇是初中生、被压迫来华且思乡；经教育一个多礼拜即配合良好。",
+        "process_text": "问他情况，他讲是初中生，像被抓壮丁一样被压迫来的，想念家乡、妹妹和母亲；不到一个多礼拜就配合得很好，新四军方面继续教育他。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0084"
+        ],
+        "evidence_quote": "那么就问他什么，他就讲（是）初中生，因为他讲日本话嘛，他就讲了。这个人还比较好，因为他等于是抓壮丁一样来的，就是压迫来的，他很想念家乡，想念他的妹妹，想念他的母亲。所以这个人没有一个多礼拜，他就跟我们配合得很好。我们教育他，以后到10月份，我们新四军军部的政治部主任袁国平来视察我们一支队。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC01-DE007-P07",
+        "stage_order": 7,
+        "stage_summary": "叙述开头概括称，俘虏经教育后加入反战同盟。",
+        "process_text": "叙述者概括说，俘虏来后经过教育，那个日本鬼子就加入了反战同盟。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0078"
+        ],
+        "evidence_quote": "我们俘虏来了以后，经过教育，那个日本鬼子就（加入了反战同盟）。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC01-DE007-P01",
+        "target_stage_id": "BATCH02-DOC01-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC01-S0080",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC01-DE007-P02",
+        "target_stage_id": "BATCH02-DOC01-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC01-S0082",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC01-DE007-P03",
+        "target_stage_id": "BATCH02-DOC01-DE007-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC01-S0082",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC01-DE007-P04",
+        "target_stage_id": "BATCH02-DOC01-DE007-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC01-S0084",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC01-DE007-P05",
+        "target_stage_id": "BATCH02-DOC01-DE007-P06",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC01-S0084",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC01-DE007-P06",
+        "target_stage_id": "BATCH02-DOC01-DE007-P07",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC01-S0078",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

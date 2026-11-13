@@ -1,0 +1,152 @@
+{
+  "run_time": "2026-11-11T06:34:33",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH07-DOC03-W001",
+  "technical_document_id": "BATCH07-DOC03",
+  "document_id": "02.陈海峰（三访）20110815（二校后 阅读版）.doc",
+  "input_segment_ids": [
+    "BATCH07-DOC03-S0002",
+    "BATCH07-DOC03-S0003",
+    "BATCH07-DOC03-S0004",
+    "BATCH07-DOC03-S0005",
+    "BATCH07-DOC03-S0006",
+    "BATCH07-DOC03-S0007",
+    "BATCH07-DOC03-S0008",
+    "BATCH07-DOC03-S0009",
+    "BATCH07-DOC03-S0010",
+    "BATCH07-DOC03-S0011",
+    "BATCH07-DOC03-S0012",
+    "BATCH07-DOC03-S0013",
+    "BATCH07-DOC03-S0014",
+    "BATCH07-DOC03-S0015",
+    "BATCH07-DOC03-S0016",
+    "BATCH07-DOC03-S0017",
+    "BATCH07-DOC03-S0018",
+    "BATCH07-DOC03-S0019",
+    "BATCH07-DOC03-S0020",
+    "BATCH07-DOC03-S0021"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 1,
+    "unassigned_segment_count": 19,
+    "input_segment_count": 20,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH07-DOC03-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH07-DOC03-W001-E01",
+        "source_segment_ids": [
+          "BATCH07-DOC03-S0017"
+        ],
+        "event": {
+          "event_name": "陈海峰调任萧村军部医院外科病室护士长",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "调到军部医院当外科病室护士长",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "（19）40年10月",
+              "normalized_value": "1940-10"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "萧村",
+              "normalized_value": "萧村"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我从（19）40年10月调到萧村，到军部医院当外科病室的护士长。",
+          "type_basis": "核心过程“调到……当……”表示职业调动和岗位变化，Actor=陈海峰；属物质过程，不是单纯身份关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH07-DOC03-W001-E02",
+        "source_segment_ids": [
+          "BATCH07-DOC03-S0017"
+        ],
+        "event": {
+          "event_name": "组织东进北渡第三批大队",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "组织东进北渡第三批大队",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰等",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "一个东进北渡第三批大队",
+              "normalized_entity": "东进北渡第三批大队",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "那么我们组织了一个东进北渡第三批大队。",
+          "type_basis": "核心过程“组织”表示集体组织行动，Actor=我们，Goal=东进北渡第三批大队；属物质过程，不是言语或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH07-DOC03-S0002",
+      "BATCH07-DOC03-S0003",
+      "BATCH07-DOC03-S0004",
+      "BATCH07-DOC03-S0005",
+      "BATCH07-DOC03-S0006",
+      "BATCH07-DOC03-S0007",
+      "BATCH07-DOC03-S0008",
+      "BATCH07-DOC03-S0009",
+      "BATCH07-DOC03-S0010",
+      "BATCH07-DOC03-S0011",
+      "BATCH07-DOC03-S0012",
+      "BATCH07-DOC03-S0013",
+      "BATCH07-DOC03-S0014",
+      "BATCH07-DOC03-S0015",
+      "BATCH07-DOC03-S0016",
+      "BATCH07-DOC03-S0018",
+      "BATCH07-DOC03-S0019",
+      "BATCH07-DOC03-S0020",
+      "BATCH07-DOC03-S0021"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH07-DOC03-W001\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH07-DOC03-W001-E01\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC03-S0017\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰调任萧村军部医院外科病室护士长\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"调到军部医院当外科病室护士长\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"（19）40年10月\",\n            \"normalized_value\": \"1940-10\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"萧村\",\n            \"normalized_value\": \"萧村\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我从（19）40年10月调到萧村，到军部医院当外科病室的护士长。\",\n        \"type_basis\": \"核心过程“调到……当……”表示职业调动和岗位变化，Actor=陈海峰；属物质过程，不是单纯身份关系。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH07-DOC03-W001-E02\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC03-S0017\"\n      ],\n      \"event\": {\n        \"event_name\": \"组织东进北渡第三批大队\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"组织东进北渡第三批大队\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰等\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"一个东进北渡第三批大队\",\n            \"normalized_entity\": \"东进北渡第三批大队\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那么我们组织了一个东进北渡第三批大队。\",\n        \"type_basis\": \"核心过程“组织”表示集体组织行动，Actor=我们，Goal=东进北渡第三批大队；属物质过程，不是言语或关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH07-DOC03-S0002\",\n    \"BATCH07-DOC03-S0003\",\n    \"BATCH07-DOC03-S0004\",\n    \"BATCH07-DOC03-S0005\",\n    \"BATCH07-DOC03-S0006\",\n    \"BATCH07-DOC03-S0007\",\n    \"BATCH07-DOC03-S0008\",\n    \"BATCH07-DOC03-S0009\",\n    \"BATCH07-DOC03-S0010\",\n    \"BATCH07-DOC03-S0011\",\n    \"BATCH07-DOC03-S0012\",\n    \"BATCH07-DOC03-S0013\",\n    \"BATCH07-DOC03-S0014\",\n    \"BATCH07-DOC03-S0015\",\n    \"BATCH07-DOC03-S0016\",\n    \"BATCH07-DOC03-S0018\",\n    \"BATCH07-DOC03-S0019\",\n    \"BATCH07-DOC03-S0020\",\n    \"BATCH07-DOC03-S0021\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5613,
+    "total_tokens": 11995,
+    "completion_tokens": 6382,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5477
+    },
+    "time_to_first_token_ms": 63147,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

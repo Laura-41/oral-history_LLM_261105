@@ -1,0 +1,44 @@
+单文档验证：BATCH05-DOC03 / cuc/deepseek
+日志：04_54份正式语料批处理/run_logs/GRAPH_VERIFY_BATCH05-DOC03_cuc_deepseek_20261112_132653_pid60447.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+
+===== L0 零 API 底座表 =====
+[落盘] BATCH05-DOC03 / cuc/deepseek
+  原文片段 69｜一级事件 10｜覆盖率 1.0000
+  人工视图：无
+    documents                  1 行
+    source_segments           69 行
+    source_attachments        71 行
+    coverage_audit             1 行
+    document_annotations      35 行
+    event_nodes               10 行
+    event_processes           10 行
+    event_participants        33 行
+    event_circumstances       20 行
+    event_next                 9 行
+  警告 6 条（详见 L0_report.json）
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH05-DOC03
+
+===== L1/L2 模型任务（真实 API 调用） =====
+[真实调用] BATCH05-DOC03 / cuc/deepseek / tasks=stage,entity_time
+  一级事件 10｜原文片段 69｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH05-DOC03/raw
+
+== stage：10 次调用 ==
+  [1/10] stage_BATCH05-DOC03-DE001 已有成功响应，跳过（断点续跑）
+  [2/10] stage_BATCH05-DOC03-DE002 已有成功响应，跳过（断点续跑）
+  [3/10] stage_BATCH05-DOC03-DE003 已有成功响应，跳过（断点续跑）
+  [4/10] stage_BATCH05-DOC03-DE004 已有成功响应，跳过（断点续跑）
+  [5/10] stage_BATCH05-DOC03-DE005 已有成功响应，跳过（断点续跑）
+  [6/10] stage_BATCH05-DOC03-DE006 已有成功响应，跳过（断点续跑）
+  [7/10] stage_BATCH05-DOC03-DE007 已有成功响应，跳过（断点续跑）
+  [8/10] stage_BATCH05-DOC03-DE008 已有成功响应，跳过（断点续跑）
+  [9/10] stage_BATCH05-DOC03-DE009 已有成功响应，跳过（断点续跑）
+  [10/10] stage_BATCH05-DOC03-DE010 已有成功响应，跳过（断点续跑）
+
+== entity_time：1 次调用 ==
+  [1/1] 请求 entity_time/CRT-11，输入 22,560 字符，最长等待 1200s……
+  失败并停止：连接失败：[Errno 61] Connection refused
+
+entity_time 在第 1 次调用熔断；已完成结果全部保留，重跑同一命令即断点续跑。
+
+熔断于：L1/L2 模型任务（真实 API 调用）。已完成结果全部保留，修好后重跑同一命令即可。

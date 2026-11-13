@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T21:50:55",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC03-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC03-DE007",
+  "usage": {
+    "prompt_tokens": 1330,
+    "total_tokens": 7812,
+    "completion_tokens": 6482,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5213
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 97439
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC03-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"罗帅在山东纵队司令部分批传达中央精神，杨永松所在部队参加传达后知道段君毅是泰西地委书记、万里是宣传部长。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 S0067 连续叙述，起于罗帅过（津浦）路东到蒙阴附近山东纵队司令部，止于杨永松所在部队参加传达后知道段君毅、万里身份。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"罗帅到蒙阴附近山东纵队司令部，杨永松也在该地。\",\n      \"process_text\": \"罗那时候呢，他要集中精力赶快传达，传达完了他带骑兵排，就过了（津浦）路东，到了蒙阴附近，就是山东黎玉、张经武他们在那里的山东纵队司令部，那个时候我也在那个地方。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0067\"\n      ],\n      \"evidence_quote\": \"罗那时候呢，他要集中精力赶快传达，传达完了他带骑兵排，就过了（津浦）路东，到了蒙阴附近，就是山东黎玉、张经武他们在那里的山东纵队司令部，那个时候我也在那个地方。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"罗帅分批传达中央精神。\",\n      \"process_text\": \"所以他去传达这个中央的精神。他传达也分好几批\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0067\"\n      ],\n      \"evidence_quote\": \"所以他去传达这个中央的精神。他传达也分好几批\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"传达按对象层级详略不同，师首长和政治部部长讲得较细，以下讲重要一点。\",\n      \"process_text\": \"省委一级讲到什么程度，你像我们那里，跟他们师的首长、政治部的部长，讲得比较细；以下就比较简单一些，讲重要一点。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0067\"\n      ],\n      \"evidence_quote\": \"省委一级讲到什么程度，你像我们那里，跟他们师的首长、政治部的部长，讲得比较细；以下就比较简单一些，讲重要一点。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"杨永松所在部队参加传达后知道段君毅、万里身份。\",\n      \"process_text\": \"那个时候我们在那里参加传达之后，知道是段君毅，是泰西地委书记，万里是宣传部长，（后来的）副总理万里，他是那时地委的宣传部长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0067\"\n      ],\n      \"evidence_quote\": \"那个时候我们在那里参加传达之后，知道是段君毅，是泰西地委书记，万里是宣传部长，（后来的）副总理万里，他是那时地委的宣传部长。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE007-P01\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0067\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE007-P02\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE007-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0067\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE007-P03\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE007-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0067\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC03-DE007",
+    "event_enrichment": {
+      "result_state": "罗帅在山东纵队司令部分批传达中央精神，杨永松所在部队参加传达后知道段君毅是泰西地委书记、万里是宣传部长。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 S0067 连续叙述，起于罗帅过（津浦）路东到蒙阴附近山东纵队司令部，止于杨永松所在部队参加传达后知道段君毅、万里身份。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC03-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "罗帅到蒙阴附近山东纵队司令部，杨永松也在该地。",
+        "process_text": "罗那时候呢，他要集中精力赶快传达，传达完了他带骑兵排，就过了（津浦）路东，到了蒙阴附近，就是山东黎玉、张经武他们在那里的山东纵队司令部，那个时候我也在那个地方。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0067"
+        ],
+        "evidence_quote": "罗那时候呢，他要集中精力赶快传达，传达完了他带骑兵排，就过了（津浦）路东，到了蒙阴附近，就是山东黎玉、张经武他们在那里的山东纵队司令部，那个时候我也在那个地方。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "罗帅分批传达中央精神。",
+        "process_text": "所以他去传达这个中央的精神。他传达也分好几批",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0067"
+        ],
+        "evidence_quote": "所以他去传达这个中央的精神。他传达也分好几批",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "传达按对象层级详略不同，师首长和政治部部长讲得较细，以下讲重要一点。",
+        "process_text": "省委一级讲到什么程度，你像我们那里，跟他们师的首长、政治部的部长，讲得比较细；以下就比较简单一些，讲重要一点。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0067"
+        ],
+        "evidence_quote": "省委一级讲到什么程度，你像我们那里，跟他们师的首长、政治部的部长，讲得比较细；以下就比较简单一些，讲重要一点。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "杨永松所在部队参加传达后知道段君毅、万里身份。",
+        "process_text": "那个时候我们在那里参加传达之后，知道是段君毅，是泰西地委书记，万里是宣传部长，（后来的）副总理万里，他是那时地委的宣传部长。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0067"
+        ],
+        "evidence_quote": "那个时候我们在那里参加传达之后，知道是段君毅，是泰西地委书记，万里是宣传部长，（后来的）副总理万里，他是那时地委的宣传部长。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC03-DE007-P01",
+        "target_stage_id": "BATCH04-DOC03-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0067",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE007-P02",
+        "target_stage_id": "BATCH04-DOC03-DE007-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC03-S0067",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE007-P03",
+        "target_stage_id": "BATCH04-DOC03-DE007-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC03-S0067",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T15:48:37",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC02-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC02-DE003",
+  "usage": {
+    "prompt_tokens": 1254,
+    "total_tokens": 5237,
+    "completion_tokens": 3983,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3256
+    },
+    "time_to_first_token_ms": 30648,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3982000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC02-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"该团在正定抗击日军后遭受重大伤亡：团长牺牲，13个连长中12人牺牲，两名营长重伤；原文未说明该团后续战斗结局。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以S0024中9月底十月初部队接触并抗击日军为起点，以S0026中团长、连长牺牲和营长重伤的战斗伤亡为终点；S0026末尾1946年豫北起义属于后续另一事件，不纳入。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC02-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"9月底十月初，32军141师在石家庄北边正定与日军接触，其中一个团在当地抗击日军。\",\n      \"process_text\": \"141师在9月底十月初接触日军；32军在石家庄北边正定，141师的一个团在那儿抗击日军。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC02-S0024\"\n      ],\n      \"evidence_quote\": \"这个时候32军的141师就在大概国民党“双十节”之前十几天，就是9月底十月初，部队就接触上了。32军在石家庄北边的正定，141师的一个团在那儿抗击日军。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC02-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"该团以河北军事政治学校师生为骨干；战斗结果团长牺牲，13个连长中12人牺牲，两名营长重伤，其中王启明为共产党员、同学。\",\n      \"process_text\": \"该团大部分为河北军事政治学校师生，团长为步兵大队队长，营连长多为同学；结果团长牺牲，13个连长牺牲12个，两个营长重伤，其中王启明是共产党员、同学。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC02-S0026\"\n      ],\n      \"evidence_quote\": \"那个时候这个团大部分都是我们河北军事政治学校的老师啊、队长啊、同学啊，团长就是步兵大队队长，另外底下营长、连长大部分都是我们的同学。结果团长也牺牲了，同时13个连长牺牲了12个，另外两个营长负了重伤，其中一个还是共产党员呢，也是我们的同学，叫王启明。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC02-DE003-P01\",\n      \"target_stage_id\": \"BATCH01-DOC02-DE003-P02\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH01-DOC02-S0026\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC02-DE003",
+    "event_enrichment": {
+      "result_state": "该团在正定抗击日军后遭受重大伤亡：团长牺牲，13个连长中12人牺牲，两名营长重伤；原文未说明该团后续战斗结局。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以S0024中9月底十月初部队接触并抗击日军为起点，以S0026中团长、连长牺牲和营长重伤的战斗伤亡为终点；S0026末尾1946年豫北起义属于后续另一事件，不纳入。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC02-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "9月底十月初，32军141师在石家庄北边正定与日军接触，其中一个团在当地抗击日军。",
+        "process_text": "141师在9月底十月初接触日军；32军在石家庄北边正定，141师的一个团在那儿抗击日军。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC02-S0024"
+        ],
+        "evidence_quote": "这个时候32军的141师就在大概国民党“双十节”之前十几天，就是9月底十月初，部队就接触上了。32军在石家庄北边的正定，141师的一个团在那儿抗击日军。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC02-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "该团以河北军事政治学校师生为骨干；战斗结果团长牺牲，13个连长中12人牺牲，两名营长重伤，其中王启明为共产党员、同学。",
+        "process_text": "该团大部分为河北军事政治学校师生，团长为步兵大队队长，营连长多为同学；结果团长牺牲，13个连长牺牲12个，两个营长重伤，其中王启明是共产党员、同学。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC02-S0026"
+        ],
+        "evidence_quote": "那个时候这个团大部分都是我们河北军事政治学校的老师啊、队长啊、同学啊，团长就是步兵大队队长，另外底下营长、连长大部分都是我们的同学。结果团长也牺牲了，同时13个连长牺牲了12个，另外两个营长负了重伤，其中一个还是共产党员呢，也是我们的同学，叫王启明。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC02-DE003-P01",
+        "target_stage_id": "BATCH01-DOC02-DE003-P02",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH01-DOC02-S0026",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

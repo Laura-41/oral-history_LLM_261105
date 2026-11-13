@@ -1,0 +1,161 @@
+{
+  "run_time": "2026-11-12T21:21:29",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC02-DE005",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC02-DE005",
+  "usage": {
+    "prompt_tokens": 1904,
+    "total_tokens": 12715,
+    "completion_tokens": 10811,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8472
+    },
+    "tokens_per_second": 10810000,
+    "time_to_first_token_ms": 159696,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC02-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队政治思想教育与抗战教育被总结为抓得好、有一套，并延续为从红军时代到抗战、解放战争、解放军的优良传统，支部建在连上，党内民主反映到生活管理。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于 S0090 校部编制与指导员兼支部书记，经 S0091 管政治思想、S0093 教材与马列主义教育、S0095-S0096 抗战教育与革命歌曲，止于 S0100-S0101 对政治思想工作延续与支部建在连上的评价；S0098 为自编教材的补充强调。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"校部编制与指导员兼支部书记出现，并提到根据实际自编。\",\n      \"process_text\": \"自己来编，来根据我们实际情况；校部有一个政治指导员，兼党内的支部书记。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0090\"\n      ],\n      \"evidence_quote\": \"那么这样子呢，自己来编，来根据我们实际情况。我们呢，就说那个校部（是）这样一个编制，有一个政治指导员，兼党内的支部书记。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"指导员兼支部书记负责政治思想，并交代党员公开背景。\",\n      \"process_text\": \"指导员兼支部书记，就管政治思想；当时党员保密，到（19）42年延安整风以后才公开。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0091\"\n      ],\n      \"evidence_quote\": \"那是保密的，那个时候还没公开党员呢，到（19）42年才公开。延安整风以后，在我们这个部队的秘密党才公开。那么指导员兼支部书记，就管政治思想。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"开展马列主义教育，使用自编与参考教材。\",\n      \"process_text\": \"上这个马列主义教育，名义上叫做《政治常识》，实际上就讲马列主义思想；主要参考经典著作、部队政治思想管理经验、艾思奇的《大众哲学》、邹韬奋他们编的《生活周刊》。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0093\"\n      ],\n      \"evidence_quote\": \"    陈海峰：他就上这个马列主义教育.那个时候呢，我们没参考书，名义上叫做《政治常识》，一个知识了就说。实际上就讲马列主义思想。主要的教材就是什么东西呢？就是参考一些经典著作，部队的政治思想管理的经验。那么哲学的思想呢，主要是艾思奇的《大众哲学》。那么订这个杂志呢，主要是邹韬奋他们编的《生活周刊》。这些呢，作为主要参考材料。因为他们都是（从）没有解放的地方来的，那么你要结合他们的一些思想。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"进行抗战教育，强调抗日、信心与革命乐观主义。\",\n      \"process_text\": \"要鼓励他抗日，进行抗战教育，要树立这个信心，树立革命乐观主义，怎么样坚持抗战到底；大家是革命乐观主义，胜利必然是我们的，建立这个信心。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0095\"\n      ],\n      \"evidence_quote\": \"    陈海峰：要鼓励他抗日，进行抗战教育，要树立这个信心，树立革命乐观主义，怎么样坚持抗战到底。老是讲打倒日本帝国主义，什么时候打倒谁知道啊？那个时候根本不知道，是不是。什么时候都是坚持抗战到底，那个底在哪儿啊？实际上底都不知道，可是大家是革命乐观主义，胜利必然是我们的，建立这个信心。所以那个时候觉得时间过得很长，都八年抗战，你不知道哪一天把日本鬼子打倒。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE005-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"以唱革命歌曲、抗战歌曲体现政治思想上的乐观。\",\n      \"process_text\": \"今天不知道明天，脑袋瓜子挂在腰杆上，但很乐观，一样地唱歌，大家要唱革命歌曲、抗战歌曲，在政治思想上面主要是这方面。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0096\"\n      ],\n      \"evidence_quote\": \"你今天不知道明天，是不是啊，那个脑袋瓜子挂在腰杆上的，是不是。但是呢，很乐观，一样地唱歌啊，大家要唱革命歌曲啊，抗战歌曲呀，在政治思想上面主要是这方面。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE005-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"评价政治思想工作抓得好，有一套，并追溯红军时代到抗战、解放战争。\",\n      \"process_text\": \"部队政治思想工作抓得非常好，有一套，红军时代一直到抗战，以后是解放战争。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0100\"\n      ],\n      \"evidence_quote\": \"    陈海峰：很重要！因为部队政治思想工作（是）抓得非常好的，有一套，红军时代一直到抗战，以后是解放战争，\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE005-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"评价该传统延续到解放军，支部建在连上，党内民主反映生活管理。\",\n      \"process_text\": \"到现在解放军，整套延续下来，支部建在连上，党的政治思想教育抓得非常好，党内民主反映到生活管理，每一个班班长管全面。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0101\"\n      ],\n      \"evidence_quote\": \"到现在解放军。他整整一套延续下来的，这个优良传统，支部建在连上啊，党的政治思想教育，这个抓得是非常好的。党内的这个民主，就是反映到生活管理里头去，每一个班，班长管这个全面的。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE005-P01\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE005-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0091\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE005-P02\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0093\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE005-P03\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE005-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0095\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE005-P04\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE005-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0096\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE005-P05\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE005-P06\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0100\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE005-P06\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE005-P07\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0101\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC02-DE005",
+    "event_enrichment": {
+      "result_state": "部队政治思想教育与抗战教育被总结为抓得好、有一套，并延续为从红军时代到抗战、解放战争、解放军的优良传统，支部建在连上，党内民主反映到生活管理。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于 S0090 校部编制与指导员兼支部书记，经 S0091 管政治思想、S0093 教材与马列主义教育、S0095-S0096 抗战教育与革命歌曲，止于 S0100-S0101 对政治思想工作延续与支部建在连上的评价；S0098 为自编教材的补充强调。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC02-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "校部编制与指导员兼支部书记出现，并提到根据实际自编。",
+        "process_text": "自己来编，来根据我们实际情况；校部有一个政治指导员，兼党内的支部书记。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0090"
+        ],
+        "evidence_quote": "那么这样子呢，自己来编，来根据我们实际情况。我们呢，就说那个校部（是）这样一个编制，有一个政治指导员，兼党内的支部书记。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "指导员兼支部书记负责政治思想，并交代党员公开背景。",
+        "process_text": "指导员兼支部书记，就管政治思想；当时党员保密，到（19）42年延安整风以后才公开。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0091"
+        ],
+        "evidence_quote": "那是保密的，那个时候还没公开党员呢，到（19）42年才公开。延安整风以后，在我们这个部队的秘密党才公开。那么指导员兼支部书记，就管政治思想。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "开展马列主义教育，使用自编与参考教材。",
+        "process_text": "上这个马列主义教育，名义上叫做《政治常识》，实际上就讲马列主义思想；主要参考经典著作、部队政治思想管理经验、艾思奇的《大众哲学》、邹韬奋他们编的《生活周刊》。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0093"
+        ],
+        "evidence_quote": "    陈海峰：他就上这个马列主义教育.那个时候呢，我们没参考书，名义上叫做《政治常识》，一个知识了就说。实际上就讲马列主义思想。主要的教材就是什么东西呢？就是参考一些经典著作，部队的政治思想管理的经验。那么哲学的思想呢，主要是艾思奇的《大众哲学》。那么订这个杂志呢，主要是邹韬奋他们编的《生活周刊》。这些呢，作为主要参考材料。因为他们都是（从）没有解放的地方来的，那么你要结合他们的一些思想。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "进行抗战教育，强调抗日、信心与革命乐观主义。",
+        "process_text": "要鼓励他抗日，进行抗战教育，要树立这个信心，树立革命乐观主义，怎么样坚持抗战到底；大家是革命乐观主义，胜利必然是我们的，建立这个信心。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0095"
+        ],
+        "evidence_quote": "    陈海峰：要鼓励他抗日，进行抗战教育，要树立这个信心，树立革命乐观主义，怎么样坚持抗战到底。老是讲打倒日本帝国主义，什么时候打倒谁知道啊？那个时候根本不知道，是不是。什么时候都是坚持抗战到底，那个底在哪儿啊？实际上底都不知道，可是大家是革命乐观主义，胜利必然是我们的，建立这个信心。所以那个时候觉得时间过得很长，都八年抗战，你不知道哪一天把日本鬼子打倒。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE005-P05",
+        "stage_order": 5,
+        "stage_summary": "以唱革命歌曲、抗战歌曲体现政治思想上的乐观。",
+        "process_text": "今天不知道明天，脑袋瓜子挂在腰杆上，但很乐观，一样地唱歌，大家要唱革命歌曲、抗战歌曲，在政治思想上面主要是这方面。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0096"
+        ],
+        "evidence_quote": "你今天不知道明天，是不是啊，那个脑袋瓜子挂在腰杆上的，是不是。但是呢，很乐观，一样地唱歌啊，大家要唱革命歌曲啊，抗战歌曲呀，在政治思想上面主要是这方面。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE005-P06",
+        "stage_order": 6,
+        "stage_summary": "评价政治思想工作抓得好，有一套，并追溯红军时代到抗战、解放战争。",
+        "process_text": "部队政治思想工作抓得非常好，有一套，红军时代一直到抗战，以后是解放战争。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0100"
+        ],
+        "evidence_quote": "    陈海峰：很重要！因为部队政治思想工作（是）抓得非常好的，有一套，红军时代一直到抗战，以后是解放战争，",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE005-P07",
+        "stage_order": 7,
+        "stage_summary": "评价该传统延续到解放军，支部建在连上，党内民主反映生活管理。",
+        "process_text": "到现在解放军，整套延续下来，支部建在连上，党的政治思想教育抓得非常好，党内民主反映到生活管理，每一个班班长管全面。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0101"
+        ],
+        "evidence_quote": "到现在解放军。他整整一套延续下来的，这个优良传统，支部建在连上啊，党的政治思想教育，这个抓得是非常好的。党内的这个民主，就是反映到生活管理里头去，每一个班，班长管这个全面的。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC02-DE005-P01",
+        "target_stage_id": "BATCH04-DOC02-DE005-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC02-S0091",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE005-P02",
+        "target_stage_id": "BATCH04-DOC02-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0093",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE005-P03",
+        "target_stage_id": "BATCH04-DOC02-DE005-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0095",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE005-P04",
+        "target_stage_id": "BATCH04-DOC02-DE005-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC02-S0096",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE005-P05",
+        "target_stage_id": "BATCH04-DOC02-DE005-P06",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC02-S0100",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE005-P06",
+        "target_stage_id": "BATCH04-DOC02-DE005-P07",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC02-S0101",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

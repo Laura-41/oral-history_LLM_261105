@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T14:38:36",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC06-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC06-DE001",
+  "usage": {
+    "prompt_tokens": 1343,
+    "total_tokens": 7379,
+    "completion_tokens": 6036,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4757
+    },
+    "time_to_first_token_ms": 89502,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC06-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"两次出动逃跑的敌人坦克均因油烧完被俘；第一次人、车被俘，第二次敌方坦克被俘。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据片段 BATCH06-DOC06-S0003 中“陈官庄合围以后，敌人坦克有两次出动逃跑……也把他俘虏了”界定；其后“这么两个事情补充一下子”及新年礼炮内容不属于本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈官庄合围后敌人坦克两次出动逃跑\",\n      \"process_text\": \"陈官庄合围以后，敌人坦克有两次出动逃跑。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0003\"\n      ],\n      \"evidence_quote\": \"陈官庄合围以后，敌人坦克有两次出动逃跑。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"我方骑兵追击敌人坦克\",\n      \"process_text\": \"一个是我们骑兵追坦克\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0003\"\n      ],\n      \"evidence_quote\": \"一个是我们骑兵追坦克\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"敌人坦克油尽停车，人车被俘\",\n      \"process_text\": \"最后把他的油烧完了，车也停了，人、车都俘虏了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0003\"\n      ],\n      \"evidence_quote\": \"最后把他的油烧完了，车也停了，人、车都俘虏了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"我方坦克追击敌方坦克\",\n      \"process_text\": \"另外一个就是我们的坦克追他的坦克\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0003\"\n      ],\n      \"evidence_quote\": \"另外一个就是我们的坦克追他的坦克\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"敌方坦克油尽被俘\",\n      \"process_text\": \"以后都也是油烧完了，也把他俘虏了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0003\"\n      ],\n      \"evidence_quote\": \"以后都也是油烧完了，也把他俘虏了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE001-P01\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0003\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE001-P02\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE001-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0003\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE001-P03\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0003\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE001-P04\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE001-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0003\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC06-DE001",
+    "event_enrichment": {
+      "result_state": "两次出动逃跑的敌人坦克均因油烧完被俘；第一次人、车被俘，第二次敌方坦克被俘。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "依据片段 BATCH06-DOC06-S0003 中“陈官庄合围以后，敌人坦克有两次出动逃跑……也把他俘虏了”界定；其后“这么两个事情补充一下子”及新年礼炮内容不属于本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC06-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "陈官庄合围后敌人坦克两次出动逃跑",
+        "process_text": "陈官庄合围以后，敌人坦克有两次出动逃跑。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0003"
+        ],
+        "evidence_quote": "陈官庄合围以后，敌人坦克有两次出动逃跑。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "我方骑兵追击敌人坦克",
+        "process_text": "一个是我们骑兵追坦克",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0003"
+        ],
+        "evidence_quote": "一个是我们骑兵追坦克",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "敌人坦克油尽停车，人车被俘",
+        "process_text": "最后把他的油烧完了，车也停了，人、车都俘虏了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0003"
+        ],
+        "evidence_quote": "最后把他的油烧完了，车也停了，人、车都俘虏了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "我方坦克追击敌方坦克",
+        "process_text": "另外一个就是我们的坦克追他的坦克",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0003"
+        ],
+        "evidence_quote": "另外一个就是我们的坦克追他的坦克",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "敌方坦克油尽被俘",
+        "process_text": "以后都也是油烧完了，也把他俘虏了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0003"
+        ],
+        "evidence_quote": "以后都也是油烧完了，也把他俘虏了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC06-DE001-P01",
+        "target_stage_id": "BATCH06-DOC06-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0003",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE001-P02",
+        "target_stage_id": "BATCH06-DOC06-DE001-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC06-S0003",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE001-P03",
+        "target_stage_id": "BATCH06-DOC06-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0003",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE001-P04",
+        "target_stage_id": "BATCH06-DOC06-DE001-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC06-S0003",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

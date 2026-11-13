@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T20:50:08",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC03-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC03-DE008",
+  "usage": {
+    "prompt_tokens": 1487,
+    "total_tokens": 5477,
+    "completion_tokens": 3990,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2876
+    },
+    "time_to_first_token_ms": 45214,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V1-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC03-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"新四军医院体系形成正规一套：前方医院、门诊部、后方医院齐备，内部结构、管理制度和管理要素按医院一套设置，医务人员按医科大学要求严格训练。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以S0057交代正规医务人员来源与沈其震身份为背景，S0059叙述来建医院、组成前方医院/门诊部/后方医院、自建房舍与制度、严格训练，至“就是正规”结束；不纳入后文统战工作。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"正规医务人员基础与沈其震领导身份作为建设医院体系的背景。\",\n      \"process_text\": \"这许多来的都是正规的，经过正规训练的是名牌大学来的护士、护士长或者护理部主任和医生，甚至于军医处的医务主任、科长，都是这批；新四军军医处的处长是沈其震。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0057\"\n      ],\n      \"evidence_quote\": \"这许多来的都是正规的，经过正规训练的是名牌大学来的护士、护士长或者护理部主任和医生，甚至于军医处的医务主任、科长，都是这批。而新四军军医处的处长是沈其震，他是留学日本，留学德国的，他懂四国语言。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"沈其震这一批人来建医院，组成前方医院、门诊部、后方医院，形成正规一套。\",\n      \"process_text\": \"沈其震这一批人来建医院，组成前方医院、门诊部、后方医院，完全是正规一套。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0059\"\n      ],\n      \"evidence_quote\": \"所以他来这一批人，来建的这个医院，组成的前方医院，组成的门诊部，组成的后方医院，完全是正规一套。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"自建竹房并借用民房食堂，按医院要求设置内部结构、管理制度和管理要素。\",\n      \"process_text\": \"房子是自己建的，是竹子建的，用的老百姓的民房、老百姓的食堂；内部结构、管理制度、管理的要素全是医院这一套。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0059\"\n      ],\n      \"evidence_quote\": \"房子是自己建的，是竹子建的，用的老百姓的民房，老百姓的食堂是不是。内部结构、管理制度、管理的要素全是医院这一套。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"对医务人员进行严格训练，完全按照医科大学要求。\",\n      \"process_text\": \"训练非常严格，完全按照医科大学的要求来训练。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0059\"\n      ],\n      \"evidence_quote\": \"训练非常严格，完全按照医科大学的要求来训练。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE008-P01\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0059\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE008-P02\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0059\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE008-P03\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE008-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0059\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC03-DE008",
+    "event_enrichment": {
+      "result_state": "新四军医院体系形成正规一套：前方医院、门诊部、后方医院齐备，内部结构、管理制度和管理要素按医院一套设置，医务人员按医科大学要求严格训练。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以S0057交代正规医务人员来源与沈其震身份为背景，S0059叙述来建医院、组成前方医院/门诊部/后方医院、自建房舍与制度、严格训练，至“就是正规”结束；不纳入后文统战工作。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC03-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "正规医务人员基础与沈其震领导身份作为建设医院体系的背景。",
+        "process_text": "这许多来的都是正规的，经过正规训练的是名牌大学来的护士、护士长或者护理部主任和医生，甚至于军医处的医务主任、科长，都是这批；新四军军医处的处长是沈其震。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0057"
+        ],
+        "evidence_quote": "这许多来的都是正规的，经过正规训练的是名牌大学来的护士、护士长或者护理部主任和医生，甚至于军医处的医务主任、科长，都是这批。而新四军军医处的处长是沈其震，他是留学日本，留学德国的，他懂四国语言。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "沈其震这一批人来建医院，组成前方医院、门诊部、后方医院，形成正规一套。",
+        "process_text": "沈其震这一批人来建医院，组成前方医院、门诊部、后方医院，完全是正规一套。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0059"
+        ],
+        "evidence_quote": "所以他来这一批人，来建的这个医院，组成的前方医院，组成的门诊部，组成的后方医院，完全是正规一套。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "自建竹房并借用民房食堂，按医院要求设置内部结构、管理制度和管理要素。",
+        "process_text": "房子是自己建的，是竹子建的，用的老百姓的民房、老百姓的食堂；内部结构、管理制度、管理的要素全是医院这一套。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0059"
+        ],
+        "evidence_quote": "房子是自己建的，是竹子建的，用的老百姓的民房，老百姓的食堂是不是。内部结构、管理制度、管理的要素全是医院这一套。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "对医务人员进行严格训练，完全按照医科大学要求。",
+        "process_text": "训练非常严格，完全按照医科大学的要求来训练。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0059"
+        ],
+        "evidence_quote": "训练非常严格，完全按照医科大学的要求来训练。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC03-DE008-P01",
+        "target_stage_id": "BATCH02-DOC03-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0059",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE008-P02",
+        "target_stage_id": "BATCH02-DOC03-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0059",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE008-P03",
+        "target_stage_id": "BATCH02-DOC03-DE008-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0059",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

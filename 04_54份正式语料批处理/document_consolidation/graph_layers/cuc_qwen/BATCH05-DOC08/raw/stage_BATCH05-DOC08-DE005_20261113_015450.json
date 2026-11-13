@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-13T01:54:50",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC08-DE005",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC08-DE005",
+  "usage": {
+    "prompt_tokens": 1329,
+    "total_tokens": 6623,
+    "completion_tokens": 5294,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4310
+    },
+    "time_to_first_token_ms": 78542,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-16\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC08-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"双方部队在孝丰县内互相攻打，处于拉锯战、歼灭战状态。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据 S0177 的孝丰县人口背景与 S0178 的双方兵力、在孝丰县内活动及拉锯战、歼灭战、互相攻打表述确定；未包含战斗胜负、伤亡或后续结果。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"孝丰县人口规模背景\",\n      \"process_text\": \"孝丰县全县只有九万多人口。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0177\"\n      ],\n      \"evidence_quote\": \"那么孝丰县呢，全县只有九万多人口。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"双方兵力合计十万并在孝丰县内活动\",\n      \"process_text\": \"我们是两万多，国民党是六万五到七万，那么就是十万。十万的部队在这个孝丰县里转，孝丰县只有9万多人，吃喝拉撒睡都在那里。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0178\"\n      ],\n      \"evidence_quote\": \"我们加上国民党的部队，我们是两万多，国民党是六万五到七万，那么就是十万。十万的部队在这个孝丰县里转，孝丰县只有9万多人，吃喝拉撒睡都在那里。双方的部队在那里（进行）拉锯战了，歼灭战了，你打我，我打你了，是不是。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"双方部队拉锯战、歼灭战并互相攻打\",\n      \"process_text\": \"双方的部队在那里（进行）拉锯战了，歼灭战了，你打我，我打你了，是不是。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0178\"\n      ],\n      \"evidence_quote\": \"我们加上国民党的部队，我们是两万多，国民党是六万五到七万，那么就是十万。十万的部队在这个孝丰县里转，孝丰县只有9万多人，吃喝拉撒睡都在那里。双方的部队在那里（进行）拉锯战了，歼灭战了，你打我，我打你了，是不是。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE005-P01\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0178\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE005-P02\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0178\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-16",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC08-DE005",
+    "event_enrichment": {
+      "result_state": "双方部队在孝丰县内互相攻打，处于拉锯战、歼灭战状态。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "依据 S0177 的孝丰县人口背景与 S0178 的双方兵力、在孝丰县内活动及拉锯战、歼灭战、互相攻打表述确定；未包含战斗胜负、伤亡或后续结果。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC08-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "孝丰县人口规模背景",
+        "process_text": "孝丰县全县只有九万多人口。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0177"
+        ],
+        "evidence_quote": "那么孝丰县呢，全县只有九万多人口。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "双方兵力合计十万并在孝丰县内活动",
+        "process_text": "我们是两万多，国民党是六万五到七万，那么就是十万。十万的部队在这个孝丰县里转，孝丰县只有9万多人，吃喝拉撒睡都在那里。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0178"
+        ],
+        "evidence_quote": "我们加上国民党的部队，我们是两万多，国民党是六万五到七万，那么就是十万。十万的部队在这个孝丰县里转，孝丰县只有9万多人，吃喝拉撒睡都在那里。双方的部队在那里（进行）拉锯战了，歼灭战了，你打我，我打你了，是不是。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "双方部队拉锯战、歼灭战并互相攻打",
+        "process_text": "双方的部队在那里（进行）拉锯战了，歼灭战了，你打我，我打你了，是不是。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0178"
+        ],
+        "evidence_quote": "我们加上国民党的部队，我们是两万多，国民党是六万五到七万，那么就是十万。十万的部队在这个孝丰县里转，孝丰县只有9万多人，吃喝拉撒睡都在那里。双方的部队在那里（进行）拉锯战了，歼灭战了，你打我，我打你了，是不是。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC08-DE005-P01",
+        "target_stage_id": "BATCH05-DOC08-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC08-S0178",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC08-DE005-P02",
+        "target_stage_id": "BATCH05-DOC08-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC08-S0178",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

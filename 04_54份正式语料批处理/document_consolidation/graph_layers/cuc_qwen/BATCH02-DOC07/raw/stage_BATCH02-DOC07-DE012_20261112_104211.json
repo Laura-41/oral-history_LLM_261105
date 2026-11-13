@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-12T10:42:11",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC07-DE012",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC07-DE012",
+  "usage": {
+    "prompt_tokens": 1817,
+    "total_tokens": 10043,
+    "completion_tokens": 8226,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6663
+    },
+    "time_to_first_token_ms": 199326,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8225000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC07-DE012\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰与何秋澄被留在三支队军医处，担任卫生巡视员，平时代表军医处管理部队卫生工作，战时到前方帮助抢救、搞前线包扎所、支援前方。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于S0061“8月8号我们毕业以后呢，三支队军医处处长叫黄农”，经S0063“黄农就挑了我们几个同学”，止于S0065“遇到打仗呢，就到前方去帮助抢救，搞前线包扎所，支援前方”。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE012-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"毕业以后，三支队军医处处长黄农被提及，形成后续挑选与留用背景\",\n      \"process_text\": \"8月8号我们毕业以后呢，三支队军医处处长叫黄农\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0061\"\n      ],\n      \"evidence_quote\": \"8月8号我们毕业以后呢，三支队军医处处长叫黄农，“红黄颜色”的“黄”，“农民”的“农”。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE012-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"黄农挑选毕业的几个同学，部分同学被放到五团一营和旅特务营当卫生指导员\",\n      \"process_text\": \"黄农就挑了我们几个同学，一个孙学、一个李桐铭，一个何秋澄，那个上海卫生局长何秋澄。两个同学呢，一个放到五团一营，当卫生指导员，一个放到旅的特务营。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0063\"\n      ],\n      \"evidence_quote\": \"黄农就挑了我们几个同学，一个孙学、一个李桐铭，一个何秋澄，那个上海卫生局长何秋澄。两个同学呢，一个放到五团一营，当卫生指导员，一个放到旅的特务营。那个特务营不是当特务的，“文化大革命”说当特务，实际上就是警卫营，当卫生指导员。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE012-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈海峰与何秋澄到三支队军医处后被留在军医处，叫卫生巡视员\",\n      \"process_text\": \"我们两个一到三支队军医处呢，军医处没有几个人。军医处医务主任李康侯（音），没几个人，把我们两个留在军医处，叫卫生巡视员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0065\"\n      ],\n      \"evidence_quote\": \"我们两个一到三支队军医处呢，军医处没有几个人。军医处医务主任李康侯（音），没几个人，把我们两个留在军医处，叫卫生巡视员。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE012-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"平时代表军医处管理部队卫生工作并去检查\",\n      \"process_text\": \"何秋澄和我就是管部队卫生工作，代表军医处去检查工作。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0065\"\n      ],\n      \"evidence_quote\": \"何秋澄和我就是管部队卫生工作，代表军医处去检查工作。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE012-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"遇到打仗时到前方帮助抢救、搞前线包扎所、支援前方\",\n      \"process_text\": \"遇到打仗呢，就到前方去帮助抢救，搞前线包扎所，支援前方。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0065\"\n      ],\n      \"evidence_quote\": \"遇到打仗呢，就到前方去帮助抢救，搞前线包扎所，支援前方。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE012-P01\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE012-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0063\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE012-P02\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE012-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0065\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE012-P03\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE012-P04\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0065\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE012-P04\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE012-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0065\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V2-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC07-DE012",
+    "event_enrichment": {
+      "result_state": "陈海峰与何秋澄被留在三支队军医处，担任卫生巡视员，平时代表军医处管理部队卫生工作，战时到前方帮助抢救、搞前线包扎所、支援前方。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于S0061“8月8号我们毕业以后呢，三支队军医处处长叫黄农”，经S0063“黄农就挑了我们几个同学”，止于S0065“遇到打仗呢，就到前方去帮助抢救，搞前线包扎所，支援前方”。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC07-DE012-P01",
+        "stage_order": 1,
+        "stage_summary": "毕业以后，三支队军医处处长黄农被提及，形成后续挑选与留用背景",
+        "process_text": "8月8号我们毕业以后呢，三支队军医处处长叫黄农",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0061"
+        ],
+        "evidence_quote": "8月8号我们毕业以后呢，三支队军医处处长叫黄农，“红黄颜色”的“黄”，“农民”的“农”。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE012-P02",
+        "stage_order": 2,
+        "stage_summary": "黄农挑选毕业的几个同学，部分同学被放到五团一营和旅特务营当卫生指导员",
+        "process_text": "黄农就挑了我们几个同学，一个孙学、一个李桐铭，一个何秋澄，那个上海卫生局长何秋澄。两个同学呢，一个放到五团一营，当卫生指导员，一个放到旅的特务营。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0063"
+        ],
+        "evidence_quote": "黄农就挑了我们几个同学，一个孙学、一个李桐铭，一个何秋澄，那个上海卫生局长何秋澄。两个同学呢，一个放到五团一营，当卫生指导员，一个放到旅的特务营。那个特务营不是当特务的，“文化大革命”说当特务，实际上就是警卫营，当卫生指导员。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE012-P03",
+        "stage_order": 3,
+        "stage_summary": "陈海峰与何秋澄到三支队军医处后被留在军医处，叫卫生巡视员",
+        "process_text": "我们两个一到三支队军医处呢，军医处没有几个人。军医处医务主任李康侯（音），没几个人，把我们两个留在军医处，叫卫生巡视员。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0065"
+        ],
+        "evidence_quote": "我们两个一到三支队军医处呢，军医处没有几个人。军医处医务主任李康侯（音），没几个人，把我们两个留在军医处，叫卫生巡视员。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE012-P04",
+        "stage_order": 4,
+        "stage_summary": "平时代表军医处管理部队卫生工作并去检查",
+        "process_text": "何秋澄和我就是管部队卫生工作，代表军医处去检查工作。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0065"
+        ],
+        "evidence_quote": "何秋澄和我就是管部队卫生工作，代表军医处去检查工作。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE012-P05",
+        "stage_order": 5,
+        "stage_summary": "遇到打仗时到前方帮助抢救、搞前线包扎所、支援前方",
+        "process_text": "遇到打仗呢，就到前方去帮助抢救，搞前线包扎所，支援前方。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0065"
+        ],
+        "evidence_quote": "遇到打仗呢，就到前方去帮助抢救，搞前线包扎所，支援前方。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC07-DE012-P01",
+        "target_stage_id": "BATCH02-DOC07-DE012-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0063",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE012-P02",
+        "target_stage_id": "BATCH02-DOC07-DE012-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0065",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE012-P03",
+        "target_stage_id": "BATCH02-DOC07-DE012-P04",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC07-S0065",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE012-P04",
+        "target_stage_id": "BATCH02-DOC07-DE012-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0065",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

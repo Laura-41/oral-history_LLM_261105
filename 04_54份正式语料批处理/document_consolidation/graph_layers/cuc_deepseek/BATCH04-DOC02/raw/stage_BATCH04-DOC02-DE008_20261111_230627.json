@@ -1,0 +1,145 @@
+{
+  "run_time": "2026-11-11T23:06:27",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC02-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC02-DE008",
+  "usage": {
+    "prompt_tokens": 1712,
+    "total_tokens": 11440,
+    "completion_tokens": 9728,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8134
+    },
+    "time_to_first_token_ms": 79078,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9727000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC02-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"后来编成12本书，其中专门有一本《卫生行政管理学》；相关课程当时叫部队卫生行政管理，并在此过程中积累知识、经验，总结理论与实际经验。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以S0078“后来我编了12本书”为总述和结果，S0080-S0089展开讲义制作、自编、找参考材料、结合实际整理理论的过程；S0090校部编制属背景性补充，未纳入阶段。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"在缺乏铅印条件下，以刻蜡版方式制作讲义，学生做笔记记录。\",\n      \"process_text\": \"讲义没有现在铅印条件，都是刻蜡版；学生都做笔记、记录。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0080\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那么讲义没有现在铅印条件了，都是刻蜡版的。学生都做笔记，都记录\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"自己编教材、寻找参考材料，并积累部队管理经验。\",\n      \"process_text\": \"自己编，自己找参考材料，平时积累经验，结合部队管理工作中遇到的问题如何处理、如何组织管理一个团和团的卫生工作。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0083\"\n      ],\n      \"evidence_quote\": \"    陈海峰：自己编，自己找参考材料，平时积累经验，平时部队管理工作遇到的问题怎么处理，怎么组织管理一个团，团的卫生工作怎么组织。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"围绕医院管理与业务培训，总结前一阶段经验教训，结合实际整理上升为理论，并参考国统区及国外材料。\",\n      \"process_text\": \"围绕医院怎么管、前方医院遇到情况怎么处理、平时怎么抓、抓住时间培训提高业务，总结前一阶段经验教训，结合实际为主，整理上升为理论；再参考国统区及国外材料。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0085\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那么医院怎么管，前方的医院遇到情况怎么处理，平时应该怎么抓，抓住时间培训、提高业务（水平）。总结前一个阶段的经验教训，那么这样子呢一说，结合实际为主，整理上升为理论。最后涉及理论，再参考这个国统区啊，参考国外的一些材料。当时国外材料很少，国外材料只有上海的《苏联医学》，班里有个《苏联医学》翻译本。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"参考介绍苏联经验的材料及英文版。\",\n      \"process_text\": \"介绍苏联的经验，每期都有；还有一些英文版。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0086\"\n      ],\n      \"evidence_quote\": \"这个介绍苏联的经验，我们每一期都有。还有一些英文版呢。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE008-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"购买上海出版的个人编书、护校和医科院校教材作参考。\",\n      \"process_text\": \"买上海出版的个人编书、上海护校和医科院校教材，买来做参考书。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0088\",\n        \"BATCH04-DOC02-S0089\"\n      ],\n      \"evidence_quote\": \"    陈海峰：英文版的，那么买点上海出版的个人编的一些书，那么买一些上海的护校的、上海医科院校的教材。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE008-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"后来编成12本书，其中包括《卫生行政管理学》，并由此积累知识、经验，总结理论与实际经验。\",\n      \"process_text\": \"后来编了12本书，专门有一本《卫生行政管理学》，从这开始积累知识、积累经验，总结理论与实际经验；这门课当时叫部队卫生行政管理。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0078\"\n      ],\n      \"evidence_quote\": \"后来我编了12本书啊，专门有一本书叫《卫生行政管理学》，就是从这开始积累知识，积累经验，总结理论与实际经验，这门课当时叫部队卫生行政管理。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE008-P01\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE008-P02\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE008-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE008-P03\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE008-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE008-P04\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE008-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE008-P05\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE008-P06\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC02-DE008",
+    "event_enrichment": {
+      "result_state": "后来编成12本书，其中专门有一本《卫生行政管理学》；相关课程当时叫部队卫生行政管理，并在此过程中积累知识、经验，总结理论与实际经验。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以S0078“后来我编了12本书”为总述和结果，S0080-S0089展开讲义制作、自编、找参考材料、结合实际整理理论的过程；S0090校部编制属背景性补充，未纳入阶段。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC02-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "在缺乏铅印条件下，以刻蜡版方式制作讲义，学生做笔记记录。",
+        "process_text": "讲义没有现在铅印条件，都是刻蜡版；学生都做笔记、记录。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0080"
+        ],
+        "evidence_quote": "    陈海峰：那么讲义没有现在铅印条件了，都是刻蜡版的。学生都做笔记，都记录",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "自己编教材、寻找参考材料，并积累部队管理经验。",
+        "process_text": "自己编，自己找参考材料，平时积累经验，结合部队管理工作中遇到的问题如何处理、如何组织管理一个团和团的卫生工作。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0083"
+        ],
+        "evidence_quote": "    陈海峰：自己编，自己找参考材料，平时积累经验，平时部队管理工作遇到的问题怎么处理，怎么组织管理一个团，团的卫生工作怎么组织。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "围绕医院管理与业务培训，总结前一阶段经验教训，结合实际整理上升为理论，并参考国统区及国外材料。",
+        "process_text": "围绕医院怎么管、前方医院遇到情况怎么处理、平时怎么抓、抓住时间培训提高业务，总结前一阶段经验教训，结合实际为主，整理上升为理论；再参考国统区及国外材料。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0085"
+        ],
+        "evidence_quote": "    陈海峰：那么医院怎么管，前方的医院遇到情况怎么处理，平时应该怎么抓，抓住时间培训、提高业务（水平）。总结前一个阶段的经验教训，那么这样子呢一说，结合实际为主，整理上升为理论。最后涉及理论，再参考这个国统区啊，参考国外的一些材料。当时国外材料很少，国外材料只有上海的《苏联医学》，班里有个《苏联医学》翻译本。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "参考介绍苏联经验的材料及英文版。",
+        "process_text": "介绍苏联的经验，每期都有；还有一些英文版。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0086"
+        ],
+        "evidence_quote": "这个介绍苏联的经验，我们每一期都有。还有一些英文版呢。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE008-P05",
+        "stage_order": 5,
+        "stage_summary": "购买上海出版的个人编书、护校和医科院校教材作参考。",
+        "process_text": "买上海出版的个人编书、上海护校和医科院校教材，买来做参考书。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0088",
+          "BATCH04-DOC02-S0089"
+        ],
+        "evidence_quote": "    陈海峰：英文版的，那么买点上海出版的个人编的一些书，那么买一些上海的护校的、上海医科院校的教材。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE008-P06",
+        "stage_order": 6,
+        "stage_summary": "后来编成12本书，其中包括《卫生行政管理学》，并由此积累知识、经验，总结理论与实际经验。",
+        "process_text": "后来编了12本书，专门有一本《卫生行政管理学》，从这开始积累知识、积累经验，总结理论与实际经验；这门课当时叫部队卫生行政管理。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0078"
+        ],
+        "evidence_quote": "后来我编了12本书啊，专门有一本书叫《卫生行政管理学》，就是从这开始积累知识，积累经验，总结理论与实际经验，这门课当时叫部队卫生行政管理。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC02-DE008-P01",
+        "target_stage_id": "BATCH04-DOC02-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE008-P02",
+        "target_stage_id": "BATCH04-DOC02-DE008-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE008-P03",
+        "target_stage_id": "BATCH04-DOC02-DE008-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE008-P04",
+        "target_stage_id": "BATCH04-DOC02-DE008-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE008-P05",
+        "target_stage_id": "BATCH04-DOC02-DE008-P06",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

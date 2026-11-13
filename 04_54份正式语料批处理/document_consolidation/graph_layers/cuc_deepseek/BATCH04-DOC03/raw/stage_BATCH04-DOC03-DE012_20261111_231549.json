@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-11T23:15:49",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC03-DE012",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC03-DE012",
+  "usage": {
+    "prompt_tokens": 1345,
+    "total_tokens": 3260,
+    "completion_tokens": 1915,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1331
+    },
+    "time_to_first_token_ms": 22763,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 1914000
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC03-DE012\",\n  \"event_enrichment\": {\n    \"result_state\": \"县的大队、县的区队较快组织起来\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于到达泰西后形成声势、宣传群众，止于动员参加并组织县的大队、县的区队；不纳入此前部队编组和此后转移、突围等内容。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE012-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"到达泰西后形成较大声势，群众情绪高涨，开展宣传群众工作\",\n      \"process_text\": \"到达泰西后声势较大，群众高兴、劲头足，宣传群众，群众知道老八路来了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0065\"\n      ],\n      \"evidence_quote\": \"我们到了泰西以后，那声势就比较大，因为大家都挺高兴，那个时候反正抗日嘛，都宣传，大家都劲头挺足，因为你要宣传群众，就不能保密了，内部是不讲，人家就知道老八路来了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE012-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"群众参加地方党，动员参加并较快组织起县大队、区队\",\n      \"process_text\": \"群众参加地方党，动员参加、组织县的大队、县的区队，也比较快地组织起来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0071\"\n      ],\n      \"evidence_quote\": \"声势大，群众也高兴，参加地方党，动员参加、组织县的大队、县的区队呀，也比较快地组织起来。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE012-P01\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE012-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0071\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC03-DE012",
+    "event_enrichment": {
+      "result_state": "县的大队、县的区队较快组织起来",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于到达泰西后形成声势、宣传群众，止于动员参加并组织县的大队、县的区队；不纳入此前部队编组和此后转移、突围等内容。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC03-DE012-P01",
+        "stage_order": 1,
+        "stage_summary": "到达泰西后形成较大声势，群众情绪高涨，开展宣传群众工作",
+        "process_text": "到达泰西后声势较大，群众高兴、劲头足，宣传群众，群众知道老八路来了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0065"
+        ],
+        "evidence_quote": "我们到了泰西以后，那声势就比较大，因为大家都挺高兴，那个时候反正抗日嘛，都宣传，大家都劲头挺足，因为你要宣传群众，就不能保密了，内部是不讲，人家就知道老八路来了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE012-P02",
+        "stage_order": 2,
+        "stage_summary": "群众参加地方党，动员参加并较快组织起县大队、区队",
+        "process_text": "群众参加地方党，动员参加、组织县的大队、县的区队，也比较快地组织起来。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0071"
+        ],
+        "evidence_quote": "声势大，群众也高兴，参加地方党，动员参加、组织县的大队、县的区队呀，也比较快地组织起来。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC03-DE012-P01",
+        "target_stage_id": "BATCH04-DOC03-DE012-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC03-S0071",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

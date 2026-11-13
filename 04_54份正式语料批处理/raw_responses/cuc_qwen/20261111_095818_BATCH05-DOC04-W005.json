@@ -1,0 +1,156 @@
+{
+  "run_time": "2026-11-11T09:58:18",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH05-DOC04-W005",
+  "technical_document_id": "BATCH05-DOC04",
+  "document_id": "14.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH05-DOC04-S0194",
+    "BATCH05-DOC04-S0195",
+    "BATCH05-DOC04-S0196",
+    "BATCH05-DOC04-S0197",
+    "BATCH05-DOC04-S0198",
+    "BATCH05-DOC04-S0199",
+    "BATCH05-DOC04-S0200",
+    "BATCH05-DOC04-S0201"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 5,
+    "unassigned_segment_count": 3,
+    "input_segment_count": 8,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH05-DOC04-W005-E02"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH05-DOC04-W005",
+    "events": [
+      {
+        "candidate_id": "BATCH05-DOC04-W005-E01",
+        "source_segment_ids": [
+          "BATCH05-DOC04-S0195",
+          "BATCH05-DOC04-S0196",
+          "BATCH05-DOC04-S0198"
+        ],
+        "event": {
+          "event_name": "我方连队冲锋作战并大量伤亡",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "一个连冲锋作战并基本报销",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们一个连",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "敌人",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "一个小时不到",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "敢死队一样地冲锋啊",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "战场",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那个时候，我们一个连上去啊，一个小时不到，基本报销了，下来没几个人，四五个人，七八个人，一百多人没有了。上去啊这个东西，敢死队一样地冲锋啊。",
+          "type_basis": "核心过程是连队冲锋、作战和伤亡，属于可观察的物质变化；Actor为我方连队，Goal为敌人，排除心理、言语、关系、存在和行为。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH05-DOC04-W005-E02",
+        "source_segment_ids": [
+          "BATCH05-DOC04-S0199",
+          "BATCH05-DOC04-S0200"
+        ],
+        "event": {
+          "event_name": "卫生队配合并建造土坦克渡河攻坚",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "卫生队配合并建造土坦克渡河",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们卫生队",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "土坦克",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "他暗堡就攻不下来，他都贴着这个水面，轻重机枪。那个河就渡不过去，他封锁这个水面",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "要渡过这水面",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "土办法",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们卫生队也配合。那个时候搞土坦克，他暗堡就攻不下来，他都贴着这个水面，轻重机枪。那个河就渡不过去，他封锁这个水面，",
+          "type_basis": "核心过程是卫生队配合、建造土坦克和渡河攻坚，属于组织行动与物质变化；Actor为我方卫生队，Goal为土坦克，敌方封锁作为原因，排除言语、心理、关系、存在和行为。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH05-DOC04-S0194",
+      "BATCH05-DOC04-S0197",
+      "BATCH05-DOC04-S0201"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH05-DOC04-W005\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH05-DOC04-W005-E01\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC04-S0195\",\n        \"BATCH05-DOC04-S0196\",\n        \"BATCH05-DOC04-S0198\"\n      ],\n      \"event\": {\n        \"event_name\": \"我方连队冲锋作战并大量伤亡\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"一个连冲锋作战并基本报销\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们一个连\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"敌人\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"一个小时不到\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"敢死队一样地冲锋啊\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"战场\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那个时候，我们一个连上去啊，一个小时不到，基本报销了，下来没几个人，四五个人，七八个人，一百多人没有了。上去啊这个东西，敢死队一样地冲锋啊。\",\n        \"type_basis\": \"核心过程是连队冲锋、作战和伤亡，属于可观察的物质变化；Actor为我方连队，Goal为敌人，排除心理、言语、关系、存在和行为。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH05-DOC04-W005-E02\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC04-S0199\",\n        \"BATCH05-DOC04-S0200\"\n      ],\n      \"event\": {\n        \"event_name\": \"卫生队配合并建造土坦克渡河攻坚\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"卫生队配合并建造土坦克渡河\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们卫生队\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"土坦克\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"他暗堡就攻不下来，他都贴着这个水面，轻重机枪。那个河就渡不过去，他封锁这个水面\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"要渡过这水面\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"土办法\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们卫生队也配合。那个时候搞土坦克，他暗堡就攻不下来，他都贴着这个水面，轻重机枪。那个河就渡不过去，他封锁这个水面，\",\n        \"type_basis\": \"核心过程是卫生队配合、建造土坦克和渡河攻坚，属于组织行动与物质变化；Actor为我方卫生队，Goal为土坦克，敌方封锁作为原因，排除言语、心理、关系、存在和行为。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH05-DOC04-S0194\",\n    \"BATCH05-DOC04-S0197\",\n    \"BATCH05-DOC04-S0201\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 4510,
+    "total_tokens": 16156,
+    "completion_tokens": 11646,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10562
+    },
+    "time_to_first_token_ms": 185269,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11645000
+  }
+}

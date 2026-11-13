@@ -1,0 +1,179 @@
+{
+  "run_time": "2026-11-12T22:58:54",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC07-DE005",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC07-DE005",
+  "usage": {
+    "prompt_tokens": 4304,
+    "total_tokens": 15244,
+    "completion_tokens": 10940,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7646
+    },
+    "time_to_first_token_ms": 161706,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 10939000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC07-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"六条船中三条船翻掉且去向不明，人员死亡、物资损失；剩余三条船到吕四港上岸并与师部会合，事情未公开。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为卫生部六条船从弶港出发、急于与1师师部会合；终点为剩余三条船到吕四港上岸、与师部会合且事情未公开。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"卫生部六条船从弶港出发，目标吕四港，急于会合师部且缺乏经验。\",\n      \"process_text\": \"我们卫生部有6条船，6条船后来走了。走那天，确实秩序都不好，我们没经验。急于呢要和1师师部会合，弶港到吕四港呢，差不多有二三百华里。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0080\"\n      ],\n      \"evidence_quote\": \"我们卫生部有6条船，6条船后来走了。走那天，确实秩序都不好，我们没经验。急于呢要和1师师部会合，弶港到吕四港呢，差不多有二三百华里。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"下海后起初风平浪静，但事前缺乏气象与海上经验。\",\n      \"process_text\": \"我们那天下海以后呢，还是风平浪静，这个事前没有知识，没有海上经验。就是我们打仗中间，天时地利人和，没有天时观念。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0082\"\n      ],\n      \"evidence_quote\": \"我们那天下海以后呢，还是风平浪静，这个事前没有知识，没有海上经验。就是我们打仗中间，天时地利人和，没有天时观念。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"六条船同时启航后不久遭遇狂风暴雨，失去通信联络，各走各的。\",\n      \"process_text\": \"    陈海峰：那么下海一走以后呢，我们6条船一块走，走了一半，不到三分之一，狂风暴雨。狂风暴雨以后，这个帆哪，我们是两个帆的，有一个船是三个帆的，我们坐在两个帆（那条船）上面。这个通信联络都没有啊，各走各的，也没有报话器啊，也没有联络，这个叫……我们现在（都有）手机啊，（那会儿）哪有啊？没有啊。天一抹黑，狂风暴雨啊，谁不知谁啊，各走各的，6个船同时出发，同时启航，那时太阳还在天上呢。走到晚上就狂风暴雨来了，谁知道啊？半夜不到，狂风暴雨大作，哎呀，糟糕了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0087\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那么下海一走以后呢，我们6条船一块走，走了一半，不到三分之一，狂风暴雨。狂风暴雨以后，这个帆哪，我们是两个帆的，有一个船是三个帆的，我们坐在两个帆（那条船）上面。这个通信联络都没有啊，各走各的，也没有报话器啊，也没有联络，这个叫……我们现在（都有）手机啊，（那会儿）哪有啊？没有啊。天一抹黑，狂风暴雨啊，谁不知谁啊，各走各的，6个船同时出发，同时启航，那时太阳还在天上呢。走到晚上就狂风暴雨来了，谁知道啊？半夜不到，狂风暴雨大作，哎呀，糟糕了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"台风造成三条船翻掉且去向不明，人员死亡、物资损失，六条船剩三条。\",\n      \"process_text\": \"    陈海峰：三条船吹得不知去向，到现在也不知去向。三条船是翻掉了，人也死掉了，东西物资也没有了。六条船就成了三条船。那么我们走还不知道呢，要到了吕四港以后，等等不来，等等不来，等到第二天还不来，完了。台风都过去了，太阳都出来了，还没来，知道了，出事了，没有了。再派人去查，查不到了，这三条船到现在都不知道去向，所以海上还（是）非常危险（的）。生活没有水吃，干得这个龇牙咧嘴啊，你没有口水喝的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0089\"\n      ],\n      \"evidence_quote\": \"    陈海峰：三条船吹得不知去向，到现在也不知去向。三条船是翻掉了，人也死掉了，东西物资也没有了。六条船就成了三条船。那么我们走还不知道呢，要到了吕四港以后，等等不来，等等不来，等到第二天还不来，完了。台风都过去了，太阳都出来了，还没来，知道了，出事了，没有了。再派人去查，查不到了，这三条船到现在都不知道去向，所以海上还（是）非常危险（的）。生活没有水吃，干得这个龇牙咧嘴啊，你没有口水喝的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE005-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"幸存船在狂风中颠簸，船老大下帆，船只顺水漂流。\",\n      \"process_text\": \"    陈海峰：就是要靠接水啊。哎呀，那狂风来了不得了，我们这条船颠簸得很厉害，这个船老大就慌了，跪下来烧香叫菩萨。我们说你没有用的，你想什么办法，你还是有经验，我们没有经验，是不是。他说帆一定要下，不下这个榄杆就断了，榄杆一断更糟糕。大家帮忙，把帆下来。下来帆以后，就顺水，等于失去驾驶了，就跟那个水走了，就是风吹我们到哪，到哪走。风吹到哪（是）小事，那个浪啊，海上是无风三尺浪啊。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0091\"\n      ],\n      \"evidence_quote\": \"    陈海峰：就是要靠接水啊。哎呀，那狂风来了不得了，我们这条船颠簸得很厉害，这个船老大就慌了，跪下来烧香叫菩萨。我们说你没有用的，你想什么办法，你还是有经验，我们没有经验，是不是。他说帆一定要下，不下这个榄杆就断了，榄杆一断更糟糕。大家帮忙，把帆下来。下来帆以后，就顺水，等于失去驾驶了，就跟那个水走了，就是风吹我们到哪，到哪走。风吹到哪（是）小事，那个浪啊，海上是无风三尺浪啊。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE005-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"巨浪多次冲击船只，船进水，众人用脸盆泼水并抛纱布棉花布吸水自救。\",\n      \"process_text\": \"    陈海峰：台风来的时候那都是七八米十几米浪啊！乖乖，这个浪啊，第一个浪打过来的时候啊，艄公慌得不得了，都叫唤。啊，救命，叫救命了都。（浪）打我们这个船上飞过去了，几个浪过去以后，就是浪头主要的水过去了，掉下来的水（灌了）半船水。哎呀，全船的人（用）这个脸盆啊，你有什么东西工具啊，把水快点往外泼。后来我们都下命令，我们都是纱布啊，棉花布，往海里扔。因为这个东西是重啊，它吸水啊。这个船要翻哪。后来又来了第二个浪，哎呀！第三个浪没有打到我们这船上。第二个浪也是漂过去的，侧面过来的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0093\"\n      ],\n      \"evidence_quote\": \"    陈海峰：台风来的时候那都是七八米十几米浪啊！乖乖，这个浪啊，第一个浪打过来的时候啊，艄公慌得不得了，都叫唤。啊，救命，叫救命了都。（浪）打我们这个船上飞过去了，几个浪过去以后，就是浪头主要的水过去了，掉下来的水（灌了）半船水。哎呀，全船的人（用）这个脸盆啊，你有什么东西工具啊，把水快点往外泼。后来我们都下命令，我们都是纱布啊，棉花布，往海里扔。因为这个东西是重啊，它吸水啊。这个船要翻哪。后来又来了第二个浪，哎呀！第三个浪没有打到我们这船上。第二个浪也是漂过去的，侧面过来的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE005-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"幸存船顺风顺水一个晚上漂到吕四港上岸。\",\n      \"process_text\": \"    陈海峰：顺风顺水，回去是曲线的。下来是一个晚上三百华里，回去是走了三天三晚，到了吕四港上岸，\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0124\"\n      ],\n      \"evidence_quote\": \"    陈海峰：顺风顺水，回去是曲线的。下来是一个晚上三百华里，回去是走了三天三晚，到了吕四港上岸，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE005-P08\",\n      \"stage_order\": 8,\n      \"stage_summary\": \"上岸后与师部会合，师部正在查，事情未公开。\",\n      \"process_text\": \"和我们师部会合。师部紧张得不得了，正在查，结果这个事情一直没有公开，就不知道了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0125\"\n      ],\n      \"evidence_quote\": \"和我们师部会合。师部紧张得不得了，正在查，结果这个事情一直没有公开，就不知道了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE005-P01\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0082\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE005-P02\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0087\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE005-P03\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE005-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0089\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE005-P04\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE005-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0091\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE005-P05\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE005-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0093\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE005-P06\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE005-P07\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0124\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE005-P07\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE005-P08\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0125\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC07-DE005",
+    "event_enrichment": {
+      "result_state": "六条船中三条船翻掉且去向不明，人员死亡、物资损失；剩余三条船到吕四港上岸并与师部会合，事情未公开。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为卫生部六条船从弶港出发、急于与1师师部会合；终点为剩余三条船到吕四港上岸、与师部会合且事情未公开。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC07-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "卫生部六条船从弶港出发，目标吕四港，急于会合师部且缺乏经验。",
+        "process_text": "我们卫生部有6条船，6条船后来走了。走那天，确实秩序都不好，我们没经验。急于呢要和1师师部会合，弶港到吕四港呢，差不多有二三百华里。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0080"
+        ],
+        "evidence_quote": "我们卫生部有6条船，6条船后来走了。走那天，确实秩序都不好，我们没经验。急于呢要和1师师部会合，弶港到吕四港呢，差不多有二三百华里。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "下海后起初风平浪静，但事前缺乏气象与海上经验。",
+        "process_text": "我们那天下海以后呢，还是风平浪静，这个事前没有知识，没有海上经验。就是我们打仗中间，天时地利人和，没有天时观念。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0082"
+        ],
+        "evidence_quote": "我们那天下海以后呢，还是风平浪静，这个事前没有知识，没有海上经验。就是我们打仗中间，天时地利人和，没有天时观念。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "六条船同时启航后不久遭遇狂风暴雨，失去通信联络，各走各的。",
+        "process_text": "    陈海峰：那么下海一走以后呢，我们6条船一块走，走了一半，不到三分之一，狂风暴雨。狂风暴雨以后，这个帆哪，我们是两个帆的，有一个船是三个帆的，我们坐在两个帆（那条船）上面。这个通信联络都没有啊，各走各的，也没有报话器啊，也没有联络，这个叫……我们现在（都有）手机啊，（那会儿）哪有啊？没有啊。天一抹黑，狂风暴雨啊，谁不知谁啊，各走各的，6个船同时出发，同时启航，那时太阳还在天上呢。走到晚上就狂风暴雨来了，谁知道啊？半夜不到，狂风暴雨大作，哎呀，糟糕了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0087"
+        ],
+        "evidence_quote": "    陈海峰：那么下海一走以后呢，我们6条船一块走，走了一半，不到三分之一，狂风暴雨。狂风暴雨以后，这个帆哪，我们是两个帆的，有一个船是三个帆的，我们坐在两个帆（那条船）上面。这个通信联络都没有啊，各走各的，也没有报话器啊，也没有联络，这个叫……我们现在（都有）手机啊，（那会儿）哪有啊？没有啊。天一抹黑，狂风暴雨啊，谁不知谁啊，各走各的，6个船同时出发，同时启航，那时太阳还在天上呢。走到晚上就狂风暴雨来了，谁知道啊？半夜不到，狂风暴雨大作，哎呀，糟糕了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "台风造成三条船翻掉且去向不明，人员死亡、物资损失，六条船剩三条。",
+        "process_text": "    陈海峰：三条船吹得不知去向，到现在也不知去向。三条船是翻掉了，人也死掉了，东西物资也没有了。六条船就成了三条船。那么我们走还不知道呢，要到了吕四港以后，等等不来，等等不来，等到第二天还不来，完了。台风都过去了，太阳都出来了，还没来，知道了，出事了，没有了。再派人去查，查不到了，这三条船到现在都不知道去向，所以海上还（是）非常危险（的）。生活没有水吃，干得这个龇牙咧嘴啊，你没有口水喝的。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0089"
+        ],
+        "evidence_quote": "    陈海峰：三条船吹得不知去向，到现在也不知去向。三条船是翻掉了，人也死掉了，东西物资也没有了。六条船就成了三条船。那么我们走还不知道呢，要到了吕四港以后，等等不来，等等不来，等到第二天还不来，完了。台风都过去了，太阳都出来了，还没来，知道了，出事了，没有了。再派人去查，查不到了，这三条船到现在都不知道去向，所以海上还（是）非常危险（的）。生活没有水吃，干得这个龇牙咧嘴啊，你没有口水喝的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE005-P05",
+        "stage_order": 5,
+        "stage_summary": "幸存船在狂风中颠簸，船老大下帆，船只顺水漂流。",
+        "process_text": "    陈海峰：就是要靠接水啊。哎呀，那狂风来了不得了，我们这条船颠簸得很厉害，这个船老大就慌了，跪下来烧香叫菩萨。我们说你没有用的，你想什么办法，你还是有经验，我们没有经验，是不是。他说帆一定要下，不下这个榄杆就断了，榄杆一断更糟糕。大家帮忙，把帆下来。下来帆以后，就顺水，等于失去驾驶了，就跟那个水走了，就是风吹我们到哪，到哪走。风吹到哪（是）小事，那个浪啊，海上是无风三尺浪啊。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0091"
+        ],
+        "evidence_quote": "    陈海峰：就是要靠接水啊。哎呀，那狂风来了不得了，我们这条船颠簸得很厉害，这个船老大就慌了，跪下来烧香叫菩萨。我们说你没有用的，你想什么办法，你还是有经验，我们没有经验，是不是。他说帆一定要下，不下这个榄杆就断了，榄杆一断更糟糕。大家帮忙，把帆下来。下来帆以后，就顺水，等于失去驾驶了，就跟那个水走了，就是风吹我们到哪，到哪走。风吹到哪（是）小事，那个浪啊，海上是无风三尺浪啊。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE005-P06",
+        "stage_order": 6,
+        "stage_summary": "巨浪多次冲击船只，船进水，众人用脸盆泼水并抛纱布棉花布吸水自救。",
+        "process_text": "    陈海峰：台风来的时候那都是七八米十几米浪啊！乖乖，这个浪啊，第一个浪打过来的时候啊，艄公慌得不得了，都叫唤。啊，救命，叫救命了都。（浪）打我们这个船上飞过去了，几个浪过去以后，就是浪头主要的水过去了，掉下来的水（灌了）半船水。哎呀，全船的人（用）这个脸盆啊，你有什么东西工具啊，把水快点往外泼。后来我们都下命令，我们都是纱布啊，棉花布，往海里扔。因为这个东西是重啊，它吸水啊。这个船要翻哪。后来又来了第二个浪，哎呀！第三个浪没有打到我们这船上。第二个浪也是漂过去的，侧面过来的。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0093"
+        ],
+        "evidence_quote": "    陈海峰：台风来的时候那都是七八米十几米浪啊！乖乖，这个浪啊，第一个浪打过来的时候啊，艄公慌得不得了，都叫唤。啊，救命，叫救命了都。（浪）打我们这个船上飞过去了，几个浪过去以后，就是浪头主要的水过去了，掉下来的水（灌了）半船水。哎呀，全船的人（用）这个脸盆啊，你有什么东西工具啊，把水快点往外泼。后来我们都下命令，我们都是纱布啊，棉花布，往海里扔。因为这个东西是重啊，它吸水啊。这个船要翻哪。后来又来了第二个浪，哎呀！第三个浪没有打到我们这船上。第二个浪也是漂过去的，侧面过来的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE005-P07",
+        "stage_order": 7,
+        "stage_summary": "幸存船顺风顺水一个晚上漂到吕四港上岸。",
+        "process_text": "    陈海峰：顺风顺水，回去是曲线的。下来是一个晚上三百华里，回去是走了三天三晚，到了吕四港上岸，",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0124"
+        ],
+        "evidence_quote": "    陈海峰：顺风顺水，回去是曲线的。下来是一个晚上三百华里，回去是走了三天三晚，到了吕四港上岸，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE005-P08",
+        "stage_order": 8,
+        "stage_summary": "上岸后与师部会合，师部正在查，事情未公开。",
+        "process_text": "和我们师部会合。师部紧张得不得了，正在查，结果这个事情一直没有公开，就不知道了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0125"
+        ],
+        "evidence_quote": "和我们师部会合。师部紧张得不得了，正在查，结果这个事情一直没有公开，就不知道了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC07-DE005-P01",
+        "target_stage_id": "BATCH04-DOC07-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0082",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE005-P02",
+        "target_stage_id": "BATCH04-DOC07-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0087",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE005-P03",
+        "target_stage_id": "BATCH04-DOC07-DE005-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH04-DOC07-S0089",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE005-P04",
+        "target_stage_id": "BATCH04-DOC07-DE005-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0091",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE005-P05",
+        "target_stage_id": "BATCH04-DOC07-DE005-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0093",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE005-P06",
+        "target_stage_id": "BATCH04-DOC07-DE005-P07",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC07-S0124",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE005-P07",
+        "target_stage_id": "BATCH04-DOC07-DE005-P08",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0125",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

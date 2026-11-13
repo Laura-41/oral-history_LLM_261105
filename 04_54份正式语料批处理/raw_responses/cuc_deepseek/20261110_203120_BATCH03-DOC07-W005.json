@@ -1,0 +1,124 @@
+{
+  "run_time": "2026-11-10T20:31:20",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC07-W005",
+  "technical_document_id": "BATCH03-DOC07",
+  "document_id": "08.陈海峰（二访）（三校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC07-S0067",
+    "BATCH03-DOC07-S0068",
+    "BATCH03-DOC07-S0069",
+    "BATCH03-DOC07-S0070",
+    "BATCH03-DOC07-S0071",
+    "BATCH03-DOC07-S0072",
+    "BATCH03-DOC07-S0073",
+    "BATCH03-DOC07-S0074",
+    "BATCH03-DOC07-S0075",
+    "BATCH03-DOC07-S0076",
+    "BATCH03-DOC07-S0077",
+    "BATCH03-DOC07-S0078",
+    "BATCH03-DOC07-S0079",
+    "BATCH03-DOC07-S0080",
+    "BATCH03-DOC07-S0081",
+    "BATCH03-DOC07-S0082",
+    "BATCH03-DOC07-S0083",
+    "BATCH03-DOC07-S0084",
+    "BATCH03-DOC07-S0085"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 5,
+    "unassigned_segment_count": 14,
+    "input_segment_count": 19,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC07-W005",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC07-W005-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC07-S0073",
+          "BATCH03-DOC07-S0075",
+          "BATCH03-DOC07-S0077",
+          "BATCH03-DOC07-S0078",
+          "BATCH03-DOC07-S0080"
+        ],
+        "event": {
+          "event_name": "车桥战役",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "攻打车桥",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰所在部队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "车桥",
+              "normalized_entity": "车桥",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "伪军据点",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "MANNER",
+              "value": "以少胜多",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "所以这个战役是以少胜多，又是攻坚增援（音），打得很漂亮，抓住鬼子又抓得最多。",
+          "type_basis": "核心过程为攻打车桥及作战结果，参与者为 Actor=我们、Goal=车桥/伪军据点，符合物质过程；非言语、心理或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC07-S0067",
+      "BATCH03-DOC07-S0068",
+      "BATCH03-DOC07-S0069",
+      "BATCH03-DOC07-S0070",
+      "BATCH03-DOC07-S0071",
+      "BATCH03-DOC07-S0072",
+      "BATCH03-DOC07-S0074",
+      "BATCH03-DOC07-S0076",
+      "BATCH03-DOC07-S0079",
+      "BATCH03-DOC07-S0081",
+      "BATCH03-DOC07-S0082",
+      "BATCH03-DOC07-S0083",
+      "BATCH03-DOC07-S0084",
+      "BATCH03-DOC07-S0085"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH03-DOC07-W005\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC07-W005-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC07-S0073\",\n        \"BATCH03-DOC07-S0075\",\n        \"BATCH03-DOC07-S0077\",\n        \"BATCH03-DOC07-S0078\",\n        \"BATCH03-DOC07-S0080\"\n      ],\n      \"event\": {\n        \"event_name\": \"车桥战役\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"攻打车桥\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰所在部队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"车桥\",\n            \"normalized_entity\": \"车桥\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"伪军据点\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"以少胜多\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"所以这个战役是以少胜多，又是攻坚增援（音），打得很漂亮，抓住鬼子又抓得最多。\",\n        \"type_basis\": \"核心过程为攻打车桥及作战结果，参与者为 Actor=我们、Goal=车桥/伪军据点，符合物质过程；非言语、心理或关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC07-S0067\",\n    \"BATCH03-DOC07-S0068\",\n    \"BATCH03-DOC07-S0069\",\n    \"BATCH03-DOC07-S0070\",\n    \"BATCH03-DOC07-S0071\",\n    \"BATCH03-DOC07-S0072\",\n    \"BATCH03-DOC07-S0074\",\n    \"BATCH03-DOC07-S0076\",\n    \"BATCH03-DOC07-S0079\",\n    \"BATCH03-DOC07-S0081\",\n    \"BATCH03-DOC07-S0082\",\n    \"BATCH03-DOC07-S0083\",\n    \"BATCH03-DOC07-S0084\",\n    \"BATCH03-DOC07-S0085\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5176,
+    "total_tokens": 14028,
+    "completion_tokens": 8852,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8228
+    },
+    "time_to_first_token_ms": 74339,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8851000
+  }
+}

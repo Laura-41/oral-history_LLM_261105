@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T22:32:35",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE007",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE007",
+  "usage": {
+    "prompt_tokens": 1348,
+    "total_tokens": 5718,
+    "completion_tokens": 4370,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3189
+    },
+    "tokens_per_second": 4369000,
+    "time_to_first_token_ms": 33676,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"冀鲁边纵队组建，肖华任司令兼政委；曾国华所部成为主力，地方部队合编为五团六团等支队，当地组织起一两万人。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为命令肖华带政治部和旅部一部分人东进；终点为冀鲁边纵队组建及当地部队合编、组织起一两万人。依据S0045、S0047。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"肖华奉命带领刚组织起来七八个月的政治部和旅部一部分人东进。\",\n      \"process_text\": \"命令肖华带政治部和旅部的一部分人东进。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0045\"\n      ],\n      \"evidence_quote\": \"也命令肖华带着他刚组织起来七八个月的政治部和旅部的一部分人东进。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"肖华经太行根据地到达冀鲁边；曾国华此前已奉总部命令从晋察冀东进至冀鲁边，其营扩编成团，另组相当于团的支队留在晋察冀。\",\n      \"process_text\": \"肖华经太行根据地往东到冀鲁边；曾国华此前从晋察冀东进，营扩大成团，另组支队留晋察冀，本人到达冀鲁边。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0045\"\n      ],\n      \"evidence_quote\": \"他就经过太行根据地往东，到了冀鲁边，就是河北和山东的附近。在那里，曾国华在这之前，也奉总部的命令从晋察冀东进，他这个营又扩大成团了。另外他又组织另外一部分人组织了一个支队，相当于一个团，留到晋察冀了，他就到了冀鲁边——就济南稍微偏西北一点的那个地区。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"肖华在冀鲁边组织冀鲁边纵队，并任司令兼政委。\",\n      \"process_text\": \"肖华去组织冀鲁边纵队，司令兼政委由他担任。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0047\"\n      ],\n      \"evidence_quote\": \"肖华去组织一个叫什么冀鲁边纵队，司令兼政委是他。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"曾国华团成为主力，地方部队合并组成五团六团等支队并保留老五团番号；该地区组织起一两万人。\",\n      \"process_text\": \"曾国华自己的团成为主力，地方部队合并组成五团六团等支队，保留老五团番号，当地组织起一两万人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0047\"\n      ],\n      \"evidence_quote\": \"这样呢，曾国华他自己的团成了主力了，另外当时地方的一些部队又合并，他就搞一个支队，叫五团六团，就把原来老五团的番号也保留下来了，五团六团。另外还有一个支队，那个地区他有一两万人在那里，组织起来了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE007-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0045\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE007-P02\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE007-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0047\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE007-P03\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE007-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0047\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE007",
+    "event_enrichment": {
+      "result_state": "冀鲁边纵队组建，肖华任司令兼政委；曾国华所部成为主力，地方部队合编为五团六团等支队，当地组织起一两万人。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起点为命令肖华带政治部和旅部一部分人东进；终点为冀鲁边纵队组建及当地部队合编、组织起一两万人。依据S0045、S0047。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "肖华奉命带领刚组织起来七八个月的政治部和旅部一部分人东进。",
+        "process_text": "命令肖华带政治部和旅部的一部分人东进。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0045"
+        ],
+        "evidence_quote": "也命令肖华带着他刚组织起来七八个月的政治部和旅部的一部分人东进。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "肖华经太行根据地到达冀鲁边；曾国华此前已奉总部命令从晋察冀东进至冀鲁边，其营扩编成团，另组相当于团的支队留在晋察冀。",
+        "process_text": "肖华经太行根据地往东到冀鲁边；曾国华此前从晋察冀东进，营扩大成团，另组支队留晋察冀，本人到达冀鲁边。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0045"
+        ],
+        "evidence_quote": "他就经过太行根据地往东，到了冀鲁边，就是河北和山东的附近。在那里，曾国华在这之前，也奉总部的命令从晋察冀东进，他这个营又扩大成团了。另外他又组织另外一部分人组织了一个支队，相当于一个团，留到晋察冀了，他就到了冀鲁边——就济南稍微偏西北一点的那个地区。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "肖华在冀鲁边组织冀鲁边纵队，并任司令兼政委。",
+        "process_text": "肖华去组织冀鲁边纵队，司令兼政委由他担任。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0047"
+        ],
+        "evidence_quote": "肖华去组织一个叫什么冀鲁边纵队，司令兼政委是他。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "曾国华团成为主力，地方部队合并组成五团六团等支队并保留老五团番号；该地区组织起一两万人。",
+        "process_text": "曾国华自己的团成为主力，地方部队合并组成五团六团等支队，保留老五团番号，当地组织起一两万人。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0047"
+        ],
+        "evidence_quote": "这样呢，曾国华他自己的团成了主力了，另外当时地方的一些部队又合并，他就搞一个支队，叫五团六团，就把原来老五团的番号也保留下来了，五团六团。另外还有一个支队，那个地区他有一两万人在那里，组织起来了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE007-P01",
+        "target_stage_id": "BATCH03-DOC06-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0045",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE007-P02",
+        "target_stage_id": "BATCH03-DOC06-DE007-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH03-DOC06-S0047",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE007-P03",
+        "target_stage_id": "BATCH03-DOC06-DE007-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0047",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

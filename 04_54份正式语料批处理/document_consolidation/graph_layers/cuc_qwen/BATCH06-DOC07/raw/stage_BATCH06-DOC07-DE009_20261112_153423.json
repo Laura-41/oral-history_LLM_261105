@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T15:34:23",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE009",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE009",
+  "usage": {
+    "prompt_tokens": 1472,
+    "total_tokens": 8515,
+    "completion_tokens": 7043,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5470
+    },
+    "time_to_first_token_ms": 104917,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7042000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰完成查看与感知：湖心寺现在一团糟、一天不如一天、被破坏；城东新辟风景区即周总理纪念馆，新风景区建设不错，周总理纪念亭设计很好，纪念堂透亮，内有周总理大塑像，自然光从头照到脚并被解释为“光照天下，日月同辉”的意思，指向周总理的伟大。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起始于S0170陈海峰自述查看湖心寺现状，结束于S0175对周总理塑像自然光寓意的描述；S0171、S0173、S0174均围绕同一查看感知过程推进。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"查看湖心寺现状并感知其衰败破坏\",\n      \"process_text\": \"陈海峰说现在一团糟，自己去看三四次，一天不如一天，现在被破坏掉了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0170\"\n      ],\n      \"evidence_quote\": \"    陈海峰：现在一团糟！我去看了三四次，一天不如一天，现在被破坏掉了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"回忆湖心寺昔日良好并批评建设思想，引出城东新辟周总理纪念馆\",\n      \"process_text\": \"那个时候很好，鸟语花香的，一个很好的风景区。这个地方干部建设思想太差。现在在淮安的城东，另外新辟了一个风景区，就是周总理纪念馆。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0171\"\n      ],\n      \"evidence_quote\": \"那个时候很好，鸟语花香的，一个很好的风景区。这个地方干部建设思想太差。现在在淮安的城东，另外新辟了一个风景区，就是周总理纪念馆。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"查看新风景区建设及周总理纪念亭的八一式设计\",\n      \"process_text\": \"那个地方新开辟了一个风景区，新风景区建设得不错，有一个周总理的纪念亭，设计得很好，窗子、大门都是八一式样。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0173\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那个地方新开辟了一个风景区，那新风景区还建设得不错，有一个周总理的纪念亭啊。这个纪念亭都设计得很好，窗子、大门都是八一（式样），他不解释你不知道。上面都是八，这个一横是一，都是八一八一八一，八一建军节嘛。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE009-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"查看纪念堂透亮与周总理大塑像\",\n      \"process_text\": \"那个纪念堂上面是透亮的，太阳一上来的时候，里面是周总理一个大的塑像，好几米高。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0174\"\n      ],\n      \"evidence_quote\": \"那个纪念堂上面是透亮的，太阳一上来的时候，里面是周总理一个大的塑像，好几米高。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE009-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"感知自然光寓意并评价周总理伟大\",\n      \"process_text\": \"那个自然光从头照到脚，是“光照天下，日月同辉”的意思，就是周总理的伟大。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0175\"\n      ],\n      \"evidence_quote\": \"那个自然光呢，从头照到脚，它是“光照天下，日月同辉”（的意思）。就是周总理的伟大，\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE009-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0171\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE009-P02\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE009-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0173\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE009-P03\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE009-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0174\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE009-P04\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE009-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0175\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE009",
+    "event_enrichment": {
+      "result_state": "陈海峰完成查看与感知：湖心寺现在一团糟、一天不如一天、被破坏；城东新辟风景区即周总理纪念馆，新风景区建设不错，周总理纪念亭设计很好，纪念堂透亮，内有周总理大塑像，自然光从头照到脚并被解释为“光照天下，日月同辉”的意思，指向周总理的伟大。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起始于S0170陈海峰自述查看湖心寺现状，结束于S0175对周总理塑像自然光寓意的描述；S0171、S0173、S0174均围绕同一查看感知过程推进。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "查看湖心寺现状并感知其衰败破坏",
+        "process_text": "陈海峰说现在一团糟，自己去看三四次，一天不如一天，现在被破坏掉了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0170"
+        ],
+        "evidence_quote": "    陈海峰：现在一团糟！我去看了三四次，一天不如一天，现在被破坏掉了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "回忆湖心寺昔日良好并批评建设思想，引出城东新辟周总理纪念馆",
+        "process_text": "那个时候很好，鸟语花香的，一个很好的风景区。这个地方干部建设思想太差。现在在淮安的城东，另外新辟了一个风景区，就是周总理纪念馆。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0171"
+        ],
+        "evidence_quote": "那个时候很好，鸟语花香的，一个很好的风景区。这个地方干部建设思想太差。现在在淮安的城东，另外新辟了一个风景区，就是周总理纪念馆。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "查看新风景区建设及周总理纪念亭的八一式设计",
+        "process_text": "那个地方新开辟了一个风景区，新风景区建设得不错，有一个周总理的纪念亭，设计得很好，窗子、大门都是八一式样。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0173"
+        ],
+        "evidence_quote": "    陈海峰：那个地方新开辟了一个风景区，那新风景区还建设得不错，有一个周总理的纪念亭啊。这个纪念亭都设计得很好，窗子、大门都是八一（式样），他不解释你不知道。上面都是八，这个一横是一，都是八一八一八一，八一建军节嘛。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE009-P04",
+        "stage_order": 4,
+        "stage_summary": "查看纪念堂透亮与周总理大塑像",
+        "process_text": "那个纪念堂上面是透亮的，太阳一上来的时候，里面是周总理一个大的塑像，好几米高。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0174"
+        ],
+        "evidence_quote": "那个纪念堂上面是透亮的，太阳一上来的时候，里面是周总理一个大的塑像，好几米高。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE009-P05",
+        "stage_order": 5,
+        "stage_summary": "感知自然光寓意并评价周总理伟大",
+        "process_text": "那个自然光从头照到脚，是“光照天下，日月同辉”的意思，就是周总理的伟大。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0175"
+        ],
+        "evidence_quote": "那个自然光呢，从头照到脚，它是“光照天下，日月同辉”（的意思）。就是周总理的伟大，",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE009-P01",
+        "target_stage_id": "BATCH06-DOC07-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0171",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE009-P02",
+        "target_stage_id": "BATCH06-DOC07-DE009-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0173",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE009-P03",
+        "target_stage_id": "BATCH06-DOC07-DE009-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0174",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE009-P04",
+        "target_stage_id": "BATCH06-DOC07-DE009-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0175",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

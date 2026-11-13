@@ -1,0 +1,131 @@
+{
+  "run_time": "2026-11-10T20:25:34",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC04-W005",
+  "technical_document_id": "BATCH03-DOC04",
+  "document_id": "07.陈海峰（二访）（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC04-S0063",
+    "BATCH03-DOC04-S0064",
+    "BATCH03-DOC04-S0065",
+    "BATCH03-DOC04-S0066",
+    "BATCH03-DOC04-S0067",
+    "BATCH03-DOC04-S0068",
+    "BATCH03-DOC04-S0069",
+    "BATCH03-DOC04-S0070",
+    "BATCH03-DOC04-S0071",
+    "BATCH03-DOC04-S0072",
+    "BATCH03-DOC04-S0073"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 4,
+    "unassigned_segment_count": 7,
+    "input_segment_count": 11,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC04-W005",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC04-W005-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC04-S0064",
+          "BATCH03-DOC04-S0066",
+          "BATCH03-DOC04-S0068",
+          "BATCH03-DOC04-S0070"
+        ],
+        "event": {
+          "event_name": "陈海峰所在部队在卢家滩韩庄车桥一带设伏并进入阵地",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "设伏部署并进入阵地",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "3月5号",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "半夜里",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "天拂晓之前",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "卢家滩这一带",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "韩庄到车桥之间",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "预伏地点",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "长距离奔袭",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "飞沙、大风",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那么鬼子来了。那一天呢，3月5号，我们半夜里就进入阵地了。我们这个部队都是很远，都是八十里一百里以外，奔袭到这个预伏地点，都是长距离奔袭的。",
+          "type_basis": "核心过程是部队选择地形、布置伏击、部署医院并长距离奔袭进入阵地，属于组织行动和空间移动；“我们”为Actor，目的地“预伏地点”用DIRECTION表示；不是心理、关系、言语、行为或存在过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC04-S0063",
+      "BATCH03-DOC04-S0065",
+      "BATCH03-DOC04-S0067",
+      "BATCH03-DOC04-S0069",
+      "BATCH03-DOC04-S0071",
+      "BATCH03-DOC04-S0072",
+      "BATCH03-DOC04-S0073"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH03-DOC04-W005\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC04-W005-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC04-S0064\",\n        \"BATCH03-DOC04-S0066\",\n        \"BATCH03-DOC04-S0068\",\n        \"BATCH03-DOC04-S0070\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰所在部队在卢家滩韩庄车桥一带设伏并进入阵地\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"设伏部署并进入阵地\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"3月5号\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"半夜里\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"天拂晓之前\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"卢家滩这一带\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"韩庄到车桥之间\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"预伏地点\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"长距离奔袭\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"飞沙、大风\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那么鬼子来了。那一天呢，3月5号，我们半夜里就进入阵地了。我们这个部队都是很远，都是八十里一百里以外，奔袭到这个预伏地点，都是长距离奔袭的。\",\n        \"type_basis\": \"核心过程是部队选择地形、布置伏击、部署医院并长距离奔袭进入阵地，属于组织行动和空间移动；“我们”为Actor，目的地“预伏地点”用DIRECTION表示；不是心理、关系、言语、行为或存在过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC04-S0063\",\n    \"BATCH03-DOC04-S0065\",\n    \"BATCH03-DOC04-S0067\",\n    \"BATCH03-DOC04-S0069\",\n    \"BATCH03-DOC04-S0071\",\n    \"BATCH03-DOC04-S0072\",\n    \"BATCH03-DOC04-S0073\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5429,
+    "total_tokens": 14573,
+    "completion_tokens": 9144,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8318
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 143832,
+    "time_per_output_token_ms": 0
+  }
+}

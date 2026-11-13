@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T20:33:49",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC02-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC02-DE006",
+  "usage": {
+    "prompt_tokens": 1261,
+    "total_tokens": 3808,
+    "completion_tokens": 2547,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1575
+    },
+    "time_to_first_token_ms": 28434,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC02-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"未接到周恩来；得知周恩来因情况变化从吉安离开，感到非常遗憾。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于接到东南局/新四军办事处电话通知去南昌迎接周恩来，止于到南昌询问后得知周恩来已从吉安离开、未能接上并感到遗憾。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"接到通知：周恩来将路过南昌，需前往迎接。\",\n      \"process_text\": \"春节前后，新四军办事处即东南局打电话告知周恩来同志要路过南昌，要陈锐霆到南昌去迎接。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0039\"\n      ],\n      \"evidence_quote\": \"那一年的春节前后，新四军办事处，就是东南局打电话，就说周恩来同志要路过南昌，找我到那去迎接迎接。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"冒雨从距南昌约20公里处跑步赶往南昌。\",\n      \"process_text\": \"当时下大雨，陈锐霆距南昌约20公里，跑着前往南昌。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0039\"\n      ],\n      \"evidence_quote\": \"（当时）下了大雨，我离南昌20公里吧，我跑着去了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"到南昌后询问，得知周恩来因情况变化已从吉安离开。\",\n      \"process_text\": \"到南昌那个地方一问，才知道接到周总理的电报，说他因为情况变化，从吉安走了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0041\"\n      ],\n      \"evidence_quote\": \"到那个地方一问，（知道）才接了周总理的电报，说他因为情况变化，他从吉安走了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"未能接上周恩来，感到非常遗憾。\",\n      \"process_text\": \"最终没有接上周恩来，陈锐霆对此非常遗憾。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0041\"\n      ],\n      \"evidence_quote\": \"没接上（周总理），非常地遗憾！\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE006-P01\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE006-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0039\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE006-P02\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE006-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0041\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE006-P03\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE006-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0041\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC02-DE006",
+    "event_enrichment": {
+      "result_state": "未接到周恩来；得知周恩来因情况变化从吉安离开，感到非常遗憾。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于接到东南局/新四军办事处电话通知去南昌迎接周恩来，止于到南昌询问后得知周恩来已从吉安离开、未能接上并感到遗憾。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC02-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "接到通知：周恩来将路过南昌，需前往迎接。",
+        "process_text": "春节前后，新四军办事处即东南局打电话告知周恩来同志要路过南昌，要陈锐霆到南昌去迎接。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0039"
+        ],
+        "evidence_quote": "那一年的春节前后，新四军办事处，就是东南局打电话，就说周恩来同志要路过南昌，找我到那去迎接迎接。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "冒雨从距南昌约20公里处跑步赶往南昌。",
+        "process_text": "当时下大雨，陈锐霆距南昌约20公里，跑着前往南昌。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0039"
+        ],
+        "evidence_quote": "（当时）下了大雨，我离南昌20公里吧，我跑着去了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "到南昌后询问，得知周恩来因情况变化已从吉安离开。",
+        "process_text": "到南昌那个地方一问，才知道接到周总理的电报，说他因为情况变化，从吉安走了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0041"
+        ],
+        "evidence_quote": "到那个地方一问，（知道）才接了周总理的电报，说他因为情况变化，他从吉安走了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "未能接上周恩来，感到非常遗憾。",
+        "process_text": "最终没有接上周恩来，陈锐霆对此非常遗憾。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0041"
+        ],
+        "evidence_quote": "没接上（周总理），非常地遗憾！",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC02-DE006-P01",
+        "target_stage_id": "BATCH02-DOC02-DE006-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC02-S0039",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC02-DE006-P02",
+        "target_stage_id": "BATCH02-DOC02-DE006-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC02-S0041",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC02-DE006-P03",
+        "target_stage_id": "BATCH02-DOC02-DE006-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC02-S0041",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

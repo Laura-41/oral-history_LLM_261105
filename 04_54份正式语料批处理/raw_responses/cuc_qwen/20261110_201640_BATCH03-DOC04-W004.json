@@ -1,0 +1,277 @@
+{
+  "run_time": "2026-11-10T20:16:40",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC04-W004",
+  "technical_document_id": "BATCH03-DOC04",
+  "document_id": "07.陈海峰（二访）（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC04-S0053",
+    "BATCH03-DOC04-S0054",
+    "BATCH03-DOC04-S0055",
+    "BATCH03-DOC04-S0056",
+    "BATCH03-DOC04-S0057",
+    "BATCH03-DOC04-S0058",
+    "BATCH03-DOC04-S0059",
+    "BATCH03-DOC04-S0060",
+    "BATCH03-DOC04-S0061",
+    "BATCH03-DOC04-S0062",
+    "BATCH03-DOC04-S0063",
+    "BATCH03-DOC04-S0064",
+    "BATCH03-DOC04-S0065",
+    "BATCH03-DOC04-S0066"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 7,
+    "unassigned_segment_count": 7,
+    "input_segment_count": 14,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH03-DOC04-W004-E02"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC04-W004",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC04-W004-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC04-S0054",
+          "BATCH03-DOC04-S0056"
+        ],
+        "event": {
+          "event_name": "团卫生队人员与装备提升",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "人员与装备提升",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "团卫生队",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "医务班",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "人员的素质",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "装备",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "手术器械",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "过去",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "现在",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "经过正规训练",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那个时候都经过正规训练的，所以人员的素质高了，装备也不一样了。",
+          "type_basis": "人员数量、人员素质和装备配置发生可观察变化，可用What happened to Y?测试；Actor为团卫生队，Goal为医务班、人员素质、装备和手术器械；排除RELATIONAL因不是静态属性识别，排除EXISTENTIAL因不是引入存在。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC04-W004-E02",
+        "source_segment_ids": [
+          "BATCH03-DOC04-S0056",
+          "BATCH03-DOC04-S0058",
+          "BATCH03-DOC04-S0060",
+          "BATCH03-DOC04-S0062",
+          "BATCH03-DOC04-S0064",
+          "BATCH03-DOC04-S0066"
+        ],
+        "event": {
+          "event_name": "车桥战役卫生准备、碉堡攻坚与阻击设伏",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "准备并实施车桥战役阻击与攻坚",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "卫生部门",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "部队",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "山炮连",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "突击排",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "三营",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "一个连",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "收容伤员",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "碉堡",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "中心碉堡",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "坟包",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "敌人",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Scope",
+              "mention": "阻击",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "准备阶段",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "车桥战役",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "韩庄到车桥之间",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "涧河的对面",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "河岸边上",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "曲射变平射",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "不用挖交通壕",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "你只准打三发",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "27发炮弹",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "部队在准备怎么打，我们卫生部门也准备怎么搞。",
+          "type_basis": "卫生准备、兵力部署、炮击、突击、设伏和埋雷均为组织行动或物质变化，共同指向车桥战役的阻击与攻坚；参与者配置为Actor+Goal/Scope；排除VERBAL因粟司令命令只是触发，排除RELATIONAL因不是静态属性，排除EXISTENTIAL因不是引入存在。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC04-S0053",
+      "BATCH03-DOC04-S0055",
+      "BATCH03-DOC04-S0057",
+      "BATCH03-DOC04-S0059",
+      "BATCH03-DOC04-S0061",
+      "BATCH03-DOC04-S0063",
+      "BATCH03-DOC04-S0065"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH03-DOC04-W004\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC04-W004-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC04-S0054\",\n        \"BATCH03-DOC04-S0056\"\n      ],\n      \"event\": {\n        \"event_name\": \"团卫生队人员与装备提升\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"人员与装备提升\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"团卫生队\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"医务班\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"人员的素质\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"装备\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"手术器械\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"过去\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"现在\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"经过正规训练\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那个时候都经过正规训练的，所以人员的素质高了，装备也不一样了。\",\n        \"type_basis\": \"人员数量、人员素质和装备配置发生可观察变化，可用What happened to Y?测试；Actor为团卫生队，Goal为医务班、人员素质、装备和手术器械；排除RELATIONAL因不是静态属性识别，排除EXISTENTIAL因不是引入存在。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC04-W004-E02\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC04-S0056\",\n        \"BATCH03-DOC04-S0058\",\n        \"BATCH03-DOC04-S0060\",\n        \"BATCH03-DOC04-S0062\",\n        \"BATCH03-DOC04-S0064\",\n        \"BATCH03-DOC04-S0066\"\n      ],\n      \"event\": {\n        \"event_name\": \"车桥战役卫生准备、碉堡攻坚与阻击设伏\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"准备并实施车桥战役阻击与攻坚\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"卫生部门\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"部队\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"山炮连\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"突击排\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"三营\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"一个连\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"收容伤员\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"碉堡\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"中心碉堡\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"坟包\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"敌人\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"阻击\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"准备阶段\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"车桥战役\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"韩庄到车桥之间\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"涧河的对面\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"河岸边上\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"曲射变平射\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"不用挖交通壕\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"你只准打三发\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"27发炮弹\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"部队在准备怎么打，我们卫生部门也准备怎么搞。\",\n        \"type_basis\": \"卫生准备、兵力部署、炮击、突击、设伏和埋雷均为组织行动或物质变化，共同指向车桥战役的阻击与攻坚；参与者配置为Actor+Goal/Scope；排除VERBAL因粟司令命令只是触发，排除RELATIONAL因不是静态属性，排除EXISTENTIAL因不是引入存在。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC04-S0053\",\n    \"BATCH03-DOC04-S0055\",\n    \"BATCH03-DOC04-S0057\",\n    \"BATCH03-DOC04-S0059\",\n    \"BATCH03-DOC04-S0061\",\n    \"BATCH03-DOC04-S0063\",\n    \"BATCH03-DOC04-S0065\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5821,
+    "total_tokens": 28041,
+    "completion_tokens": 22220,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 20345
+    },
+    "time_to_first_token_ms": 333873,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 22219000
+  }
+}

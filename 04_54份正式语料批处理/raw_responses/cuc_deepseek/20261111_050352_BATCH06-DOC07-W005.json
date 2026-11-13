@@ -1,0 +1,120 @@
+{
+  "run_time": "2026-11-11T05:03:52",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH06-DOC07-W005",
+  "technical_document_id": "BATCH06-DOC07",
+  "document_id": "21.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH06-DOC07-S0174",
+    "BATCH06-DOC07-S0175",
+    "BATCH06-DOC07-S0176",
+    "BATCH06-DOC07-S0177",
+    "BATCH06-DOC07-S0178",
+    "BATCH06-DOC07-S0179",
+    "BATCH06-DOC07-S0180",
+    "BATCH06-DOC07-S0181",
+    "BATCH06-DOC07-S0182",
+    "BATCH06-DOC07-S0183",
+    "BATCH06-DOC07-S0184",
+    "BATCH06-DOC07-S0185",
+    "BATCH06-DOC07-S0186",
+    "BATCH06-DOC07-S0187",
+    "BATCH06-DOC07-S0188",
+    "BATCH06-DOC07-S0189"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 3,
+    "unassigned_segment_count": 13,
+    "input_segment_count": 16,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH06-DOC07-W005-E01"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH06-DOC07-W005",
+    "events": [
+      {
+        "candidate_id": "BATCH06-DOC07-W005-E01",
+        "source_segment_ids": [
+          "BATCH06-DOC07-S0186",
+          "BATCH06-DOC07-S0187",
+          "BATCH06-DOC07-S0188"
+        ],
+        "event": {
+          "event_name": "党中央考察湖心寺并秘密通知迁驻计划",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "考察",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "党中央",
+              "normalized_entity": "中共中央",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "房子",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "地形",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "MANNER",
+              "value": "偷偷地",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道；如果中央搬来以后，淮安要变成叫江淮市。",
+          "evidence_quote": "党中央来看了房子，而且偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道。",
+          "type_basis": "核心过程为党中央考察房子和地形，属于组织行动/执行任务，主导类型为物质；参与者为 Actor=党中央，Goal=房子/地形，均符合物质过程角色词表；秘密告知迁驻计划是同一迁驻筹划中的言语阶段，其内容入 projected_content，不另立言语事件；非心理或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH06-DOC07-S0174",
+      "BATCH06-DOC07-S0175",
+      "BATCH06-DOC07-S0176",
+      "BATCH06-DOC07-S0177",
+      "BATCH06-DOC07-S0178",
+      "BATCH06-DOC07-S0179",
+      "BATCH06-DOC07-S0180",
+      "BATCH06-DOC07-S0181",
+      "BATCH06-DOC07-S0182",
+      "BATCH06-DOC07-S0183",
+      "BATCH06-DOC07-S0184",
+      "BATCH06-DOC07-S0185",
+      "BATCH06-DOC07-S0189"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH06-DOC07-W005\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH06-DOC07-W005-E01\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC07-S0186\",\n        \"BATCH06-DOC07-S0187\",\n        \"BATCH06-DOC07-S0188\"\n      ],\n      \"event\": {\n        \"event_name\": \"党中央考察湖心寺并秘密通知迁驻计划\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"考察\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"党中央\",\n            \"normalized_entity\": \"中共中央\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"房子\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"地形\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"偷偷地\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道；如果中央搬来以后，淮安要变成叫江淮市。\",\n        \"evidence_quote\": \"党中央来看了房子，而且偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道。\",\n        \"type_basis\": \"核心过程为党中央考察房子和地形，属于组织行动/执行任务，主导类型为物质；参与者为 Actor=党中央，Goal=房子/地形，均符合物质过程角色词表；秘密告知迁驻计划是同一迁驻筹划中的言语阶段，其内容入 projected_content，不另立言语事件；非心理或关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH06-DOC07-S0174\",\n    \"BATCH06-DOC07-S0175\",\n    \"BATCH06-DOC07-S0176\",\n    \"BATCH06-DOC07-S0177\",\n    \"BATCH06-DOC07-S0178\",\n    \"BATCH06-DOC07-S0179\",\n    \"BATCH06-DOC07-S0180\",\n    \"BATCH06-DOC07-S0181\",\n    \"BATCH06-DOC07-S0182\",\n    \"BATCH06-DOC07-S0183\",\n    \"BATCH06-DOC07-S0184\",\n    \"BATCH06-DOC07-S0185\",\n    \"BATCH06-DOC07-S0189\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 4749,
+    "total_tokens": 18139,
+    "completion_tokens": 13390,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12720
+    },
+    "time_to_first_token_ms": 119780,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13389000
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T01:31:12",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC05-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC05-DE003",
+  "usage": {
+    "prompt_tokens": 1282,
+    "total_tokens": 5965,
+    "completion_tokens": 4683,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3708
+    },
+    "time_to_first_token_ms": 36449,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC05-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"新6团突围出来，团长巫恒通牺牲，伤亡很大；朱潮在战斗中丢光个人物品、轻装作战。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于S0022所述新6团在茅山句容地区被包围，止于同段所述突围出来、团长牺牲、伤亡很大；S0024补充朱潮在战斗中的轻装作战细节。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC05-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"新6团在茅山句容地区被敌人包围。\",\n      \"process_text\": \"新6团在茅山句容地区被包围\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC05-S0022\"\n      ],\n      \"evidence_quote\": \"这个新6团在茅山句容地区被包围\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC05-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"全团六百多人投入战斗，战斗惨烈。\",\n      \"process_text\": \"他这一个团就六百多人，打得很惨哪\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC05-S0022\"\n      ],\n      \"evidence_quote\": \"那个时候他这一个团就六百多人，打得很惨哪\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC05-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"朱潮在战斗中丢光背包等物品，轻装持枪与战士一起作战。\",\n      \"process_text\": \"他就拿着枪打，什么卫生队不卫生队，和战士一块打仗啊！哪里还（管得了）这个背包，什么都丢掉了，轻装，一个多礼拜就丢光了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC05-S0024\"\n      ],\n      \"evidence_quote\": \"他就拿着枪打，什么卫生队不卫生队，和战士一块打仗啊！哪里还（管得了）这个背包，什么都丢掉了，轻装，一个多礼拜就丢光了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC05-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"新6团突围出来，但团长牺牲，伤亡很大。\",\n      \"process_text\": \"突围出来，团长牺牲，伤亡很大\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC05-S0022\"\n      ],\n      \"evidence_quote\": \"突围出来，团长牺牲，伤亡很大\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC05-DE003-P01\",\n      \"target_stage_id\": \"BATCH07-DOC05-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC05-S0022\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC05-DE003-P02\",\n      \"target_stage_id\": \"BATCH07-DOC05-DE003-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH07-DOC05-S0024\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC05-DE003-P03\",\n      \"target_stage_id\": \"BATCH07-DOC05-DE003-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC05-S0022\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC05-DE003",
+    "event_enrichment": {
+      "result_state": "新6团突围出来，团长巫恒通牺牲，伤亡很大；朱潮在战斗中丢光个人物品、轻装作战。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于S0022所述新6团在茅山句容地区被包围，止于同段所述突围出来、团长牺牲、伤亡很大；S0024补充朱潮在战斗中的轻装作战细节。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC05-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "新6团在茅山句容地区被敌人包围。",
+        "process_text": "新6团在茅山句容地区被包围",
+        "evidence_segment_ids": [
+          "BATCH07-DOC05-S0022"
+        ],
+        "evidence_quote": "这个新6团在茅山句容地区被包围",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC05-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "全团六百多人投入战斗，战斗惨烈。",
+        "process_text": "他这一个团就六百多人，打得很惨哪",
+        "evidence_segment_ids": [
+          "BATCH07-DOC05-S0022"
+        ],
+        "evidence_quote": "那个时候他这一个团就六百多人，打得很惨哪",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC05-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "朱潮在战斗中丢光背包等物品，轻装持枪与战士一起作战。",
+        "process_text": "他就拿着枪打，什么卫生队不卫生队，和战士一块打仗啊！哪里还（管得了）这个背包，什么都丢掉了，轻装，一个多礼拜就丢光了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC05-S0024"
+        ],
+        "evidence_quote": "他就拿着枪打，什么卫生队不卫生队，和战士一块打仗啊！哪里还（管得了）这个背包，什么都丢掉了，轻装，一个多礼拜就丢光了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC05-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "新6团突围出来，但团长牺牲，伤亡很大。",
+        "process_text": "突围出来，团长牺牲，伤亡很大",
+        "evidence_segment_ids": [
+          "BATCH07-DOC05-S0022"
+        ],
+        "evidence_quote": "突围出来，团长牺牲，伤亡很大",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC05-DE003-P01",
+        "target_stage_id": "BATCH07-DOC05-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC05-S0022",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC05-DE003-P02",
+        "target_stage_id": "BATCH07-DOC05-DE003-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH07-DOC05-S0024",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC05-DE003-P03",
+        "target_stage_id": "BATCH07-DOC05-DE003-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC05-S0022",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

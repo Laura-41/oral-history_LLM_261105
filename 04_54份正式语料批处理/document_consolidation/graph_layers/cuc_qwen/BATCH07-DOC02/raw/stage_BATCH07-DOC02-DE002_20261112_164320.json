@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T16:43:20",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC02-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC02-DE002",
+  "usage": {
+    "prompt_tokens": 1343,
+    "total_tokens": 10043,
+    "completion_tokens": 8700,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7296
+    },
+    "time_to_first_token_ms": 197305,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8699000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-23\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC02-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"转运站由临时设转为常设机构，并形成转运总站/华东军区转运总站的延续状态。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"边界覆盖 S0015 至 S0021：S0015 叙述设转运站、给队未还并变成转运总站；S0017/S0019/S0020 说明打大仗需要转运站并因此变成常设机构；S0021 补充原来在江南是临时设。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"泰州附近设转运站，所给队伍未还并变成转运总站\",\n      \"process_text\": \"在泰州附近设了好多转运站，不归我们指挥；就是给他一个队，以后就没还给我们，这个队一直变成转运总站。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0015\"\n      ],\n      \"evidence_quote\": \"作战地区啊，最近的话，就是在泰州附近呢，也有二百多里路，设了好多转运站。不归我们指挥，我们指挥不了。就是给他一个队，以后就没还给我们，这个队一直变成转运总站，以后到山东也是转运总站，变成华东军区转运总站了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"提出打大仗需要转运站\",\n      \"process_text\": \"陈海峰：常设机构了，要打大仗就要转运站。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0017\"\n      ],\n      \"evidence_quote\": \"    陈海峰：常设机构了，要打大仗就要转运站。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"强调每一次都要用转运站\",\n      \"process_text\": \"陈海峰：每一次都要用转运站了\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0019\"\n      ],\n      \"evidence_quote\": \"    陈海峰：每一次都要用转运站了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"因打大仗需要而变成常设机构\",\n      \"process_text\": \"每次打大仗都要转运站，所以变成常设机构了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0020\"\n      ],\n      \"evidence_quote\": \"，每次打大仗都要转运站，所以变成常设机构了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE002-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"补充原来在江南是临时设\",\n      \"process_text\": \"原来没有，原来我们在江南是临时设。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0021\"\n      ],\n      \"evidence_quote\": \"原来没有，原来我们在江南是临时设。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC02-DE002-P01\",\n      \"target_stage_id\": \"BATCH07-DOC02-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC02-S0017\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC02-DE002-P02\",\n      \"target_stage_id\": \"BATCH07-DOC02-DE002-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH07-DOC02-S0019\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC02-DE002-P03\",\n      \"target_stage_id\": \"BATCH07-DOC02-DE002-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH07-DOC02-S0020\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC02-DE002-P04\",\n      \"target_stage_id\": \"BATCH07-DOC02-DE002-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH07-DOC02-S0021\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-23",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC02-DE002",
+    "event_enrichment": {
+      "result_state": "转运站由临时设转为常设机构，并形成转运总站/华东军区转运总站的延续状态。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "边界覆盖 S0015 至 S0021：S0015 叙述设转运站、给队未还并变成转运总站；S0017/S0019/S0020 说明打大仗需要转运站并因此变成常设机构；S0021 补充原来在江南是临时设。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC02-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "泰州附近设转运站，所给队伍未还并变成转运总站",
+        "process_text": "在泰州附近设了好多转运站，不归我们指挥；就是给他一个队，以后就没还给我们，这个队一直变成转运总站。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0015"
+        ],
+        "evidence_quote": "作战地区啊，最近的话，就是在泰州附近呢，也有二百多里路，设了好多转运站。不归我们指挥，我们指挥不了。就是给他一个队，以后就没还给我们，这个队一直变成转运总站，以后到山东也是转运总站，变成华东军区转运总站了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC02-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "提出打大仗需要转运站",
+        "process_text": "陈海峰：常设机构了，要打大仗就要转运站。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0017"
+        ],
+        "evidence_quote": "    陈海峰：常设机构了，要打大仗就要转运站。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC02-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "强调每一次都要用转运站",
+        "process_text": "陈海峰：每一次都要用转运站了",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0019"
+        ],
+        "evidence_quote": "    陈海峰：每一次都要用转运站了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC02-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "因打大仗需要而变成常设机构",
+        "process_text": "每次打大仗都要转运站，所以变成常设机构了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0020"
+        ],
+        "evidence_quote": "，每次打大仗都要转运站，所以变成常设机构了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC02-DE002-P05",
+        "stage_order": 5,
+        "stage_summary": "补充原来在江南是临时设",
+        "process_text": "原来没有，原来我们在江南是临时设。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0021"
+        ],
+        "evidence_quote": "原来没有，原来我们在江南是临时设。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC02-DE002-P01",
+        "target_stage_id": "BATCH07-DOC02-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC02-S0017",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC02-DE002-P02",
+        "target_stage_id": "BATCH07-DOC02-DE002-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH07-DOC02-S0019",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC02-DE002-P03",
+        "target_stage_id": "BATCH07-DOC02-DE002-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH07-DOC02-S0020",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC02-DE002-P04",
+        "target_stage_id": "BATCH07-DOC02-DE002-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH07-DOC02-S0021",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

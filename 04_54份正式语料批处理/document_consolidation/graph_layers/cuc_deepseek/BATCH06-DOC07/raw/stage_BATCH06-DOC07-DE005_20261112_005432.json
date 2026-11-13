@@ -1,0 +1,130 @@
+{
+  "run_time": "2026-11-12T00:54:32",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE005",
+  "usage": {
+    "prompt_tokens": 1921,
+    "total_tokens": 7378,
+    "completion_tokens": 5457,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3869
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 42076
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"华中军区第一后方医院于1945年11月组建完毕，形成7个医疗队、一千四五百人的规模，并开始接收各军分区转来的重伤员，一次转入七八百人后住满。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于陈海峰自述担任院长及医院临时组建，止于1945年11月组建完毕并开始接收伤员；原文明确七战七捷时调走第三医疗队属“后面的话”，不纳入本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰担任华中军区第一后方医院院长，医院为临时组建，定位为华中军区直属医院。\",\n      \"process_text\": \"陈海峰自述担任华中军区第一后方医院院长；该医院为临时组建，是华中军区的直属医院。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0060\",\n        \"BATCH06-DOC07-S0061\",\n        \"BATCH06-DOC07-S0063\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我担任了华中军区第一后方医院院长。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"以苏浙军区一分区卫生部及休养所为基础，调入淮南新四军2师两个医疗队、苏中军区李兰丁医疗队和新四军4师医疗队，形成第一至第四医疗队。\",\n      \"process_text\": \"以苏浙军区一分区卫生部做基础，调淮南新四军2师两个医疗队加强，调苏中军区李兰丁一个医疗队作为第三医疗队，另有苏浙军区第一医疗队、淮南军区第二医疗队、新四军4师第四医疗队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0065\"\n      ],\n      \"evidence_quote\": \"以苏浙军区一分区卫生部做基础，一分区的休养所等于一个小野战医院。调了淮南新四军2师的两个医疗队来加强我们（的力量）。调了苏中军区李兰丁的一个医疗队，那变成第三医疗队。第一医疗队是我们苏浙军区的，第二医疗队是淮南军区的，第三医疗队是苏中军区的，第四医疗队是新四军4师的，是彭雪枫那里的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"补充第五、第六医疗队（淮南军区），并增设第七医疗队作为休养连，共7个医疗队，规模很大。\",\n      \"process_text\": \"第五、第六医疗队也是淮南军区的；第七医疗队实际是休养连，以功能锻炼、恢复功能为主；加第七医疗队后共7个医疗队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0068\",\n        \"BATCH06-DOC07-S0073\"\n      ],\n      \"evidence_quote\": \"    陈海峰：因为调三个医疗队，这样子呢，加强、组成这个医院。第七医疗队实际上是个休养连，就是治疗好了以后，准备出院。以功能锻炼为主的，恢复功能。加第七医疗队，一共7个医疗队，7个医疗队那（是）很大了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"医院工作人员达一千四五百人，超过开始编制的一千二百人。\",\n      \"process_text\": \"工作人员实际有一千四五百人，开始编制是一千二百人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0076\"\n      ],\n      \"evidence_quote\": \"    陈海峰：工作人员就一千四五百人，开始编制是一千二，实际上当时（有）一千四五百人。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE005-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"1945年11月组建完毕，开始接收各军分区转来的重伤员，一次转入七八百人，医院住满。\",\n      \"process_text\": \"11月组建完毕，开始接收伤员，把各军分区手里做不了手术、需要更高技术处理的重伤员转到医院来，一转来就七八百人，住得满满的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0081\",\n        \"BATCH06-DOC07-S0082\"\n      ],\n      \"evidence_quote\": \"11月组建完毕。开始呢，就是说接收伤员，把各个军分区他们手里的重伤员，他们做不了手术的，需要更高技术来处理的，都转到我们这儿来。一转来嘛，就七八百人。一家伙住了满满的呀。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE005-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0065\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE005-P02\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0073\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE005-P03\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE005-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0076\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE005-P04\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE005-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0082\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE005",
+    "event_enrichment": {
+      "result_state": "华中军区第一后方医院于1945年11月组建完毕，形成7个医疗队、一千四五百人的规模，并开始接收各军分区转来的重伤员，一次转入七八百人后住满。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于陈海峰自述担任院长及医院临时组建，止于1945年11月组建完毕并开始接收伤员；原文明确七战七捷时调走第三医疗队属“后面的话”，不纳入本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰担任华中军区第一后方医院院长，医院为临时组建，定位为华中军区直属医院。",
+        "process_text": "陈海峰自述担任华中军区第一后方医院院长；该医院为临时组建，是华中军区的直属医院。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0060",
+          "BATCH06-DOC07-S0061",
+          "BATCH06-DOC07-S0063"
+        ],
+        "evidence_quote": "    陈海峰：我担任了华中军区第一后方医院院长。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "以苏浙军区一分区卫生部及休养所为基础，调入淮南新四军2师两个医疗队、苏中军区李兰丁医疗队和新四军4师医疗队，形成第一至第四医疗队。",
+        "process_text": "以苏浙军区一分区卫生部做基础，调淮南新四军2师两个医疗队加强，调苏中军区李兰丁一个医疗队作为第三医疗队，另有苏浙军区第一医疗队、淮南军区第二医疗队、新四军4师第四医疗队。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0065"
+        ],
+        "evidence_quote": "以苏浙军区一分区卫生部做基础，一分区的休养所等于一个小野战医院。调了淮南新四军2师的两个医疗队来加强我们（的力量）。调了苏中军区李兰丁的一个医疗队，那变成第三医疗队。第一医疗队是我们苏浙军区的，第二医疗队是淮南军区的，第三医疗队是苏中军区的，第四医疗队是新四军4师的，是彭雪枫那里的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "补充第五、第六医疗队（淮南军区），并增设第七医疗队作为休养连，共7个医疗队，规模很大。",
+        "process_text": "第五、第六医疗队也是淮南军区的；第七医疗队实际是休养连，以功能锻炼、恢复功能为主；加第七医疗队后共7个医疗队。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0068",
+          "BATCH06-DOC07-S0073"
+        ],
+        "evidence_quote": "    陈海峰：因为调三个医疗队，这样子呢，加强、组成这个医院。第七医疗队实际上是个休养连，就是治疗好了以后，准备出院。以功能锻炼为主的，恢复功能。加第七医疗队，一共7个医疗队，7个医疗队那（是）很大了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "医院工作人员达一千四五百人，超过开始编制的一千二百人。",
+        "process_text": "工作人员实际有一千四五百人，开始编制是一千二百人。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0076"
+        ],
+        "evidence_quote": "    陈海峰：工作人员就一千四五百人，开始编制是一千二，实际上当时（有）一千四五百人。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE005-P05",
+        "stage_order": 5,
+        "stage_summary": "1945年11月组建完毕，开始接收各军分区转来的重伤员，一次转入七八百人，医院住满。",
+        "process_text": "11月组建完毕，开始接收伤员，把各军分区手里做不了手术、需要更高技术处理的重伤员转到医院来，一转来就七八百人，住得满满的。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0081",
+          "BATCH06-DOC07-S0082"
+        ],
+        "evidence_quote": "11月组建完毕。开始呢，就是说接收伤员，把各个军分区他们手里的重伤员，他们做不了手术的，需要更高技术来处理的，都转到我们这儿来。一转来嘛，就七八百人。一家伙住了满满的呀。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE005-P01",
+        "target_stage_id": "BATCH06-DOC07-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0065",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE005-P02",
+        "target_stage_id": "BATCH06-DOC07-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0073",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE005-P03",
+        "target_stage_id": "BATCH06-DOC07-DE005-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC07-S0076",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE005-P04",
+        "target_stage_id": "BATCH06-DOC07-DE005-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0082",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T22:13:04",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC02-DE009",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC02-DE009",
+  "usage": {
+    "prompt_tokens": 1132,
+    "total_tokens": 3695,
+    "completion_tokens": 2563,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1876
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 20212
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC02-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队奉命开赴阜阳集中，事件结束时处于向阜阳集中推进的状态。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“以后上面有命令，要赶快进入山东”为起点，以“部队开到阜阳去集中”为终点，涵盖奉命、开进与集中过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"上级下达尽快进入山东的命令，成为部队开赴阜阳集中的触发背景。\",\n      \"process_text\": \"上面有命令，要赶快进入山东\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0048\"\n      ],\n      \"evidence_quote\": \"以后上面有命令，要赶快进入山东\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"部队奉命向皖北安徽阜阳附近开进。\",\n      \"process_text\": \"把这部队要赶快到皖北进入安徽阜阳附近\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0048\"\n      ],\n      \"evidence_quote\": \"所以把这部队要赶快到皖北进入安徽阜阳附近\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"部队开到阜阳去集中。\",\n      \"process_text\": \"部队开到阜阳去集中\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0048\"\n      ],\n      \"evidence_quote\": \"部队开到阜阳去集中\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE009-P01\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE009-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0048\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE009-P02\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE009-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0048\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC02-DE009",
+    "event_enrichment": {
+      "result_state": "部队奉命开赴阜阳集中，事件结束时处于向阜阳集中推进的状态。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以“以后上面有命令，要赶快进入山东”为起点，以“部队开到阜阳去集中”为终点，涵盖奉命、开进与集中过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC02-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "上级下达尽快进入山东的命令，成为部队开赴阜阳集中的触发背景。",
+        "process_text": "上面有命令，要赶快进入山东",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0048"
+        ],
+        "evidence_quote": "以后上面有命令，要赶快进入山东",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "部队奉命向皖北安徽阜阳附近开进。",
+        "process_text": "把这部队要赶快到皖北进入安徽阜阳附近",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0048"
+        ],
+        "evidence_quote": "所以把这部队要赶快到皖北进入安徽阜阳附近",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "部队开到阜阳去集中。",
+        "process_text": "部队开到阜阳去集中",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0048"
+        ],
+        "evidence_quote": "部队开到阜阳去集中",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC02-DE009-P01",
+        "target_stage_id": "BATCH03-DOC02-DE009-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH03-DOC02-S0048",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC02-DE009-P02",
+        "target_stage_id": "BATCH03-DOC02-DE009-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC02-S0048",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

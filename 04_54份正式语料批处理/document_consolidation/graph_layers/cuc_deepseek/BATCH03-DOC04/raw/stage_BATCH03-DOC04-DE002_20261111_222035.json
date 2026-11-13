@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T22:20:35",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC04-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC04-DE002",
+  "usage": {
+    "prompt_tokens": 1239,
+    "total_tokens": 4757,
+    "completion_tokens": 3518,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2522
+    },
+    "time_to_first_token_ms": 27996,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-07\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC04-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"新四军在车桥地区完成八个月整训，日军未敢进入，创造抗战中同一地点连续驻训八个月的记录，大部队集中整训形成良好条件。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于‘这个镇子打完以后，我们上那里整训八个月’，止于‘八个月，没有，创造了一个非常好的条件’；均在同一片段S0026内。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC04-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"车桥镇战斗结束后，部队开赴车桥地区开始为期八个月的整训。\",\n      \"process_text\": \"车桥镇战斗结束后，部队上那里整训八个月。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC04-S0026\"\n      ],\n      \"evidence_quote\": \"这个镇子打完以后，我们上那里整训八个月\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC04-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"整训期间日军未敢进入车桥地区，部队获得安全驻训环境。\",\n      \"process_text\": \"整训期间鬼子都不敢进来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC04-S0026\"\n      ],\n      \"evidence_quote\": \"鬼子都不敢进来\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC04-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"此次整训创造连续八个月在同一地点驻训的记录，为抗战以来所未有。\",\n      \"process_text\": \"创造了八个月的记录，抗战记忆上从来都没有过。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC04-S0026\"\n      ],\n      \"evidence_quote\": \"我们创造了八个月的记录，抗战记忆上从来都没有的，没有说在一个地方能够待八个月的，没有的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC04-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"大部队、司令部、苏中公学及主力部队集中一地整训，形成良好条件。\",\n      \"process_text\": \"大部队、司令部、苏中公学及好多主力部队都在那儿一块整训，创造了非常好的条件。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC04-S0026\"\n      ],\n      \"evidence_quote\": \"你看，那么大的部队，是不是，司令部，苏中公学，好多主力部队都在那儿一块整训。八个月，没有，创造了一个非常好的条件。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC04-DE002-P01\",\n      \"target_stage_id\": \"BATCH03-DOC04-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC04-S0026\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC04-DE002-P02\",\n      \"target_stage_id\": \"BATCH03-DOC04-DE002-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH03-DOC04-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC04-DE002-P03\",\n      \"target_stage_id\": \"BATCH03-DOC04-DE002-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC04-S0026\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-07",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC04-DE002",
+    "event_enrichment": {
+      "result_state": "新四军在车桥地区完成八个月整训，日军未敢进入，创造抗战中同一地点连续驻训八个月的记录，大部队集中整训形成良好条件。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于‘这个镇子打完以后，我们上那里整训八个月’，止于‘八个月，没有，创造了一个非常好的条件’；均在同一片段S0026内。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC04-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "车桥镇战斗结束后，部队开赴车桥地区开始为期八个月的整训。",
+        "process_text": "车桥镇战斗结束后，部队上那里整训八个月。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC04-S0026"
+        ],
+        "evidence_quote": "这个镇子打完以后，我们上那里整训八个月",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC04-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "整训期间日军未敢进入车桥地区，部队获得安全驻训环境。",
+        "process_text": "整训期间鬼子都不敢进来。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC04-S0026"
+        ],
+        "evidence_quote": "鬼子都不敢进来",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC04-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "此次整训创造连续八个月在同一地点驻训的记录，为抗战以来所未有。",
+        "process_text": "创造了八个月的记录，抗战记忆上从来都没有过。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC04-S0026"
+        ],
+        "evidence_quote": "我们创造了八个月的记录，抗战记忆上从来都没有的，没有说在一个地方能够待八个月的，没有的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC04-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "大部队、司令部、苏中公学及主力部队集中一地整训，形成良好条件。",
+        "process_text": "大部队、司令部、苏中公学及好多主力部队都在那儿一块整训，创造了非常好的条件。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC04-S0026"
+        ],
+        "evidence_quote": "你看，那么大的部队，是不是，司令部，苏中公学，好多主力部队都在那儿一块整训。八个月，没有，创造了一个非常好的条件。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC04-DE002-P01",
+        "target_stage_id": "BATCH03-DOC04-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC04-S0026",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC04-DE002-P02",
+        "target_stage_id": "BATCH03-DOC04-DE002-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH03-DOC04-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC04-DE002-P03",
+        "target_stage_id": "BATCH03-DOC04-DE002-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC04-S0026",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

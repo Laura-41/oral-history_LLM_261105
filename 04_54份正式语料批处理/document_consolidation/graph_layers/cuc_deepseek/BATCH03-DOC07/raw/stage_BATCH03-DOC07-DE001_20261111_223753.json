@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-11T22:37:53",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC07-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC07-DE001",
+  "usage": {
+    "prompt_tokens": 1433,
+    "total_tokens": 8408,
+    "completion_tokens": 6975,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5567
+    },
+    "tokens_per_second": 6974000,
+    "time_to_first_token_ms": 53707,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC07-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"日军第一批增援被击退，死伤六十余人，山泽大佐重伤、指挥失灵，残部缩回韩庄不敢前进，丢弃尸首伤兵；我方战士缴获其枪械等物资。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以日军第一批增援进入韩庄并向车桥前进为起点，至其遭乱坟旁伏击后缩回韩庄、丢弃尸首伤兵、我方战士缴获武器为止；不含后续批次增援及更早的天气背景。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"日军第一批约二百四五十人进入韩庄，继续向里前进，准备增援车桥。\",\n      \"process_text\": \"日军第一批增援进入韩庄后继续向里，要往前进增援车桥。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0004\"\n      ],\n      \"evidence_quote\": \"鬼子第一批部队来的时候（陈海峰笑），他也倒霉。第一批大约二百四五十人这样子。一共是四批，八百多人，有的书上写是七百多人，我们那个时候讲是八百多人。进入韩庄以后，就继续向里，他要去增援车桥呀，他要往前进。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"日军进至乱坟旁时，我方正面轻重机枪以密集火力开火。\",\n      \"process_text\": \"进到乱坟旁，正面轻重机枪密集火力射击。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0004\"\n      ],\n      \"evidence_quote\": \"进到乱坟旁，我们正面的轻重机枪就打了，密集火力，“咵咵咵咵咵咵咵咵咵咵咵咵”一打\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"日军由山泽大佐指挥，遭射击后伏下并占领路边坟包。\",\n      \"process_text\": \"鬼子大佐山泽伏下，随后占领坟包。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0004\"\n      ],\n      \"evidence_quote\": \"鬼子一个大佐……他是大佐指挥的，山泽大佐，他就伏下来了。伏下来以后，他就占领这个坟包。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"日军占领坟包后地雷爆炸，敌人乱套，炸死六十余人，山泽大佐重伤，指挥失灵。\",\n      \"process_text\": \"日军占领坟包后地雷爆炸，敌人乱套，死伤惨重，大佐重伤指挥失灵。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0004\"\n      ],\n      \"evidence_quote\": \"一占了以后，那么坟包就爆炸，“哗哗哗哗咵咵哗啦”，地雷爆炸，（陈海峰笑）敌人乱了套了。这一家伙就炸死六十多人，那个大佐就炸（成）重伤了，就指挥失灵。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"日军停止前进缩回韩庄，丢弃尸首伤兵；我方战士上前缴获枪械等物资。\",\n      \"process_text\": \"日军停下来缩回韩庄，不敢前进，丢弃尸首伤兵；我方战士去抢枪械等物资。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0004\"\n      ],\n      \"evidence_quote\": \"马上停下来，就缩到韩庄去了，就不敢前进了。把那个尸首啊什么伤兵，都丢在那个坟包那儿（陈海峰笑）。我们战士都去抢他的枪啊什么东西。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE001-P01\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0004\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE001-P02\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE001-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0004\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE001-P03\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE001-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0004\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE001-P04\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE001-P05\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0004\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V2-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC07-DE001",
+    "event_enrichment": {
+      "result_state": "日军第一批增援被击退，死伤六十余人，山泽大佐重伤、指挥失灵，残部缩回韩庄不敢前进，丢弃尸首伤兵；我方战士缴获其枪械等物资。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以日军第一批增援进入韩庄并向车桥前进为起点，至其遭乱坟旁伏击后缩回韩庄、丢弃尸首伤兵、我方战士缴获武器为止；不含后续批次增援及更早的天气背景。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC07-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "日军第一批约二百四五十人进入韩庄，继续向里前进，准备增援车桥。",
+        "process_text": "日军第一批增援进入韩庄后继续向里，要往前进增援车桥。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0004"
+        ],
+        "evidence_quote": "鬼子第一批部队来的时候（陈海峰笑），他也倒霉。第一批大约二百四五十人这样子。一共是四批，八百多人，有的书上写是七百多人，我们那个时候讲是八百多人。进入韩庄以后，就继续向里，他要去增援车桥呀，他要往前进。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "日军进至乱坟旁时，我方正面轻重机枪以密集火力开火。",
+        "process_text": "进到乱坟旁，正面轻重机枪密集火力射击。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0004"
+        ],
+        "evidence_quote": "进到乱坟旁，我们正面的轻重机枪就打了，密集火力，“咵咵咵咵咵咵咵咵咵咵咵咵”一打",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "日军由山泽大佐指挥，遭射击后伏下并占领路边坟包。",
+        "process_text": "鬼子大佐山泽伏下，随后占领坟包。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0004"
+        ],
+        "evidence_quote": "鬼子一个大佐……他是大佐指挥的，山泽大佐，他就伏下来了。伏下来以后，他就占领这个坟包。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "日军占领坟包后地雷爆炸，敌人乱套，炸死六十余人，山泽大佐重伤，指挥失灵。",
+        "process_text": "日军占领坟包后地雷爆炸，敌人乱套，死伤惨重，大佐重伤指挥失灵。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0004"
+        ],
+        "evidence_quote": "一占了以后，那么坟包就爆炸，“哗哗哗哗咵咵哗啦”，地雷爆炸，（陈海峰笑）敌人乱了套了。这一家伙就炸死六十多人，那个大佐就炸（成）重伤了，就指挥失灵。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "日军停止前进缩回韩庄，丢弃尸首伤兵；我方战士上前缴获枪械等物资。",
+        "process_text": "日军停下来缩回韩庄，不敢前进，丢弃尸首伤兵；我方战士去抢枪械等物资。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0004"
+        ],
+        "evidence_quote": "马上停下来，就缩到韩庄去了，就不敢前进了。把那个尸首啊什么伤兵，都丢在那个坟包那儿（陈海峰笑）。我们战士都去抢他的枪啊什么东西。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC07-DE001-P01",
+        "target_stage_id": "BATCH03-DOC07-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC07-S0004",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC07-DE001-P02",
+        "target_stage_id": "BATCH03-DOC07-DE001-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH03-DOC07-S0004",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC07-DE001-P03",
+        "target_stage_id": "BATCH03-DOC07-DE001-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH03-DOC07-S0004",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC07-DE001-P04",
+        "target_stage_id": "BATCH03-DOC07-DE001-P05",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH03-DOC07-S0004",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T14:48:59",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC06-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC06-DE006",
+  "usage": {
+    "prompt_tokens": 1809,
+    "total_tokens": 10614,
+    "completion_tokens": 8805,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7446
+    },
+    "time_to_first_token_ms": 132660,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8804000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC06-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"渡江准备中，工兵被派出修桥补路，部队按中央统一命令整编并改变番号，炮兵编成六个团并进入长江沿线阵地。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为 S0013‘这个时候我们就准备渡江了’，终点为 S0015‘的确两个团火力拳头还是很硬的’；覆盖工兵修路、部队整编、炮兵进入阵地和炮兵编团。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"准备渡江，工兵分散前方修路\",\n      \"process_text\": \"准备渡江时，工兵分散到前面修路；因道路桥梁损坏及国民党撤退时毁掉一些，工程兵被派出修桥补路。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0013\"\n      ],\n      \"evidence_quote\": \"陈锐霆：这个时候我们就准备渡江了，我们的工兵都分散到前面去修路去了。很多的道路、桥梁都坏了嘛，国民党撤退的时候也毁掉了一些，我们这个工程兵就派出去修桥补路。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"按中央命令部队大整编\",\n      \"process_text\": \"按照中央统一命令，部队大整编，番号改变，另成立四个兵团十六个军、两广纵队和一个特纵，直属司令部、政治部领导。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0013\"\n      ],\n      \"evidence_quote\": \"这个时候按照中央统一的命令，部队大整编，番号改变了，另外成立了四个兵团十六个军，还有两广纵队，另外一个特纵，直属司令部、政治部的领导。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"到长江沿线，炮兵进入阵地\",\n      \"process_text\": \"接着部队到长江沿线，炮兵进入阵地。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0015\"\n      ],\n      \"evidence_quote\": \"陈锐霆：再接着我们就到了长江沿线，炮兵就进入阵地了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"炮兵编团及火力配置\",\n      \"process_text\": \"整编未说完，炮兵编了六个团：四个日式骡马牵引的105榴弹炮和75野战炮团，一个兵团给一个团；野战军掌握原炮一团美式105榴弹炮和新编六团，一、六团归野战军掌握；粟裕讲要建立强大火力拳头，两个团火力拳头很硬。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0015\"\n      ],\n      \"evidence_quote\": \"整编没说完，炮兵我们就编了六个团，四个团是个日式的，骡马牵引的，105榴弹炮跟75野战炮，编了四个团，一个兵团给一个团。另外野战军自己掌握的，原来是炮一团，有美式的105榴弹炮，是淮海战役的大缴获，我们又新编了一个六团，一、六这两个团都是归野战军自己掌握。粟裕同志讲，要建立强大的火力拳头，的确两个团火力拳头还是很硬的。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE006-P01\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0013\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE006-P02\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE006-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0015\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE006-P03\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE006-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0015\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC06-DE006",
+    "event_enrichment": {
+      "result_state": "渡江准备中，工兵被派出修桥补路，部队按中央统一命令整编并改变番号，炮兵编成六个团并进入长江沿线阵地。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起点为 S0013‘这个时候我们就准备渡江了’，终点为 S0015‘的确两个团火力拳头还是很硬的’；覆盖工兵修路、部队整编、炮兵进入阵地和炮兵编团。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC06-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "准备渡江，工兵分散前方修路",
+        "process_text": "准备渡江时，工兵分散到前面修路；因道路桥梁损坏及国民党撤退时毁掉一些，工程兵被派出修桥补路。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0013"
+        ],
+        "evidence_quote": "陈锐霆：这个时候我们就准备渡江了，我们的工兵都分散到前面去修路去了。很多的道路、桥梁都坏了嘛，国民党撤退的时候也毁掉了一些，我们这个工程兵就派出去修桥补路。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "按中央命令部队大整编",
+        "process_text": "按照中央统一命令，部队大整编，番号改变，另成立四个兵团十六个军、两广纵队和一个特纵，直属司令部、政治部领导。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0013"
+        ],
+        "evidence_quote": "这个时候按照中央统一的命令，部队大整编，番号改变了，另外成立了四个兵团十六个军，还有两广纵队，另外一个特纵，直属司令部、政治部的领导。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "到长江沿线，炮兵进入阵地",
+        "process_text": "接着部队到长江沿线，炮兵进入阵地。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0015"
+        ],
+        "evidence_quote": "陈锐霆：再接着我们就到了长江沿线，炮兵就进入阵地了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "炮兵编团及火力配置",
+        "process_text": "整编未说完，炮兵编了六个团：四个日式骡马牵引的105榴弹炮和75野战炮团，一个兵团给一个团；野战军掌握原炮一团美式105榴弹炮和新编六团，一、六团归野战军掌握；粟裕讲要建立强大火力拳头，两个团火力拳头很硬。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0015"
+        ],
+        "evidence_quote": "整编没说完，炮兵我们就编了六个团，四个团是个日式的，骡马牵引的，105榴弹炮跟75野战炮，编了四个团，一个兵团给一个团。另外野战军自己掌握的，原来是炮一团，有美式的105榴弹炮，是淮海战役的大缴获，我们又新编了一个六团，一、六这两个团都是归野战军自己掌握。粟裕同志讲，要建立强大的火力拳头，的确两个团火力拳头还是很硬的。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC06-DE006-P01",
+        "target_stage_id": "BATCH06-DOC06-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0013",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE006-P02",
+        "target_stage_id": "BATCH06-DOC06-DE006-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0015",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE006-P03",
+        "target_stage_id": "BATCH06-DOC06-DE006-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0015",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

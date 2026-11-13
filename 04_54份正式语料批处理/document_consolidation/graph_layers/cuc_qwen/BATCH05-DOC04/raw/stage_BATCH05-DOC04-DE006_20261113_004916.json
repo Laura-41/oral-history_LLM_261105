@@ -1,0 +1,132 @@
+{
+  "run_time": "2026-11-13T00:49:16",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC04-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC04-DE006",
+  "usage": {
+    "prompt_tokens": 2326,
+    "total_tokens": 13691,
+    "completion_tokens": 11365,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9698
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11364000,
+    "time_to_first_token_ms": 167974
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC04-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"苏中1师相关主力团经合并与加强，1944年底变成旅，1945年改成纵队，并上升为军建制；打天目山、苏浙军区时一个主力团变成一个军。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起自“那个时候呢，部队就整编”及老1团、1团和2团合并编主力团的叙述，止于“原来（19）43年清乡开始的时候的一个主力团就变成一个军了”。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"部队整编中，老1团作为师部主力团，1团和2团合并编成主力团，规模由两千人增至三千五百人，相当于一个旅。\",\n      \"process_text\": \"    陈海峰：廖政国，就是1团和2团合并，编个主力团。原来是两千人的一个团，就变成三千五百人一个大团，等于一个旅。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0116\",\n        \"BATCH05-DOC04-S0120\",\n        \"BATCH05-DOC04-S0121\",\n        \"BATCH05-DOC04-S0122\"\n      ],\n      \"evidence_quote\": \"    陈海峰：廖政国，就是1团和2团合并，编个主力团。原来是两千人的一个团，就变成三千五百人一个大团，等于一个旅。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"1师师部有3个主力团，老4团与江南46团合并为48团并加强主力团，地方部队称独立团，主力部队变成3个大主力团。\",\n      \"process_text\": \"那么这个就是地方斗争，地方叫独立团，那主力部队就变成3个大主力团。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0125\",\n        \"BATCH05-DOC04-S0129\",\n        \"BATCH05-DOC04-S0130\",\n        \"BATCH05-DOC04-S0133\"\n      ],\n      \"evidence_quote\": \"那么这个就是地方斗争，地方叫独立团，那主力部队就变成3个大主力团。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"1944年底主力团整编为旅。\",\n      \"process_text\": \"    陈海峰：没有多久，到（19）44年底，主力团都变成旅了，\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0135\"\n      ],\n      \"evidence_quote\": \"    陈海峰：没有多久，到（19）44年底，主力团都变成旅了，\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"1945年主力团改成纵队。\",\n      \"process_text\": \"到（19）45年就改成纵队了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0136\"\n      ],\n      \"evidence_quote\": \"到（19）45年就改成纵队了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE006-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"主力团上升为军建制，打天目山、苏浙军区时一个主力团变成一个军。\",\n      \"process_text\": \"军的建制了。打天目山的时候，打苏浙军区的时候，原来（19）43年清乡开始的时候的一个主力团就变成一个军了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0137\",\n        \"BATCH05-DOC04-S0138\"\n      ],\n      \"evidence_quote\": \"军的建制了。打天目山的时候，打苏浙军区的时候，原来（19）43年清乡开始的时候的一个主力团就变成一个军了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE006-P01\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0133\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE006-P02\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE006-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0135\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE006-P03\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE006-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0136\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE006-P04\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE006-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0137\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC04-DE006",
+    "event_enrichment": {
+      "result_state": "苏中1师相关主力团经合并与加强，1944年底变成旅，1945年改成纵队，并上升为军建制；打天目山、苏浙军区时一个主力团变成一个军。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起自“那个时候呢，部队就整编”及老1团、1团和2团合并编主力团的叙述，止于“原来（19）43年清乡开始的时候的一个主力团就变成一个军了”。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC04-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "部队整编中，老1团作为师部主力团，1团和2团合并编成主力团，规模由两千人增至三千五百人，相当于一个旅。",
+        "process_text": "    陈海峰：廖政国，就是1团和2团合并，编个主力团。原来是两千人的一个团，就变成三千五百人一个大团，等于一个旅。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0116",
+          "BATCH05-DOC04-S0120",
+          "BATCH05-DOC04-S0121",
+          "BATCH05-DOC04-S0122"
+        ],
+        "evidence_quote": "    陈海峰：廖政国，就是1团和2团合并，编个主力团。原来是两千人的一个团，就变成三千五百人一个大团，等于一个旅。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "1师师部有3个主力团，老4团与江南46团合并为48团并加强主力团，地方部队称独立团，主力部队变成3个大主力团。",
+        "process_text": "那么这个就是地方斗争，地方叫独立团，那主力部队就变成3个大主力团。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0125",
+          "BATCH05-DOC04-S0129",
+          "BATCH05-DOC04-S0130",
+          "BATCH05-DOC04-S0133"
+        ],
+        "evidence_quote": "那么这个就是地方斗争，地方叫独立团，那主力部队就变成3个大主力团。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "1944年底主力团整编为旅。",
+        "process_text": "    陈海峰：没有多久，到（19）44年底，主力团都变成旅了，",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0135"
+        ],
+        "evidence_quote": "    陈海峰：没有多久，到（19）44年底，主力团都变成旅了，",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "1945年主力团改成纵队。",
+        "process_text": "到（19）45年就改成纵队了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0136"
+        ],
+        "evidence_quote": "到（19）45年就改成纵队了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE006-P05",
+        "stage_order": 5,
+        "stage_summary": "主力团上升为军建制，打天目山、苏浙军区时一个主力团变成一个军。",
+        "process_text": "军的建制了。打天目山的时候，打苏浙军区的时候，原来（19）43年清乡开始的时候的一个主力团就变成一个军了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0137",
+          "BATCH05-DOC04-S0138"
+        ],
+        "evidence_quote": "军的建制了。打天目山的时候，打苏浙军区的时候，原来（19）43年清乡开始的时候的一个主力团就变成一个军了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC04-DE006-P01",
+        "target_stage_id": "BATCH05-DOC04-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC04-S0133",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC04-DE006-P02",
+        "target_stage_id": "BATCH05-DOC04-DE006-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC04-S0135",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC04-DE006-P03",
+        "target_stage_id": "BATCH05-DOC04-DE006-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC04-S0136",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC04-DE006-P04",
+        "target_stage_id": "BATCH05-DOC04-DE006-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC04-S0137",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

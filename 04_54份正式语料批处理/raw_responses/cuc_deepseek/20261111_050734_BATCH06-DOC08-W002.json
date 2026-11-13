@@ -1,0 +1,299 @@
+{
+  "run_time": "2026-11-11T05:07:34",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH06-DOC08-W002",
+  "technical_document_id": "BATCH06-DOC08",
+  "document_id": "10.杨永松100506（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH06-DOC08-S0035",
+    "BATCH06-DOC08-S0036",
+    "BATCH06-DOC08-S0037",
+    "BATCH06-DOC08-S0038",
+    "BATCH06-DOC08-S0039",
+    "BATCH06-DOC08-S0040",
+    "BATCH06-DOC08-S0041",
+    "BATCH06-DOC08-S0042",
+    "BATCH06-DOC08-S0043",
+    "BATCH06-DOC08-S0044",
+    "BATCH06-DOC08-S0045",
+    "BATCH06-DOC08-S0046",
+    "BATCH06-DOC08-S0047",
+    "BATCH06-DOC08-S0048",
+    "BATCH06-DOC08-S0049",
+    "BATCH06-DOC08-S0050",
+    "BATCH06-DOC08-S0051",
+    "BATCH06-DOC08-S0052",
+    "BATCH06-DOC08-S0053",
+    "BATCH06-DOC08-S0054",
+    "BATCH06-DOC08-S0055",
+    "BATCH06-DOC08-S0056",
+    "BATCH06-DOC08-S0057",
+    "BATCH06-DOC08-S0058",
+    "BATCH06-DOC08-S0059",
+    "BATCH06-DOC08-S0060",
+    "BATCH06-DOC08-S0061",
+    "BATCH06-DOC08-S0062",
+    "BATCH06-DOC08-S0063"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 6,
+    "assigned_segment_count": 7,
+    "unassigned_segment_count": 22,
+    "input_segment_count": 29,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH06-DOC08-W002-E06"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH06-DOC08-W002",
+    "events": [
+      {
+        "candidate_id": "BATCH06-DOC08-W002-E01",
+        "source_segment_ids": [
+          "BATCH06-DOC08-S0035",
+          "BATCH06-DOC08-S0037"
+        ],
+        "event": {
+          "event_name": "湖西和鲁南干部会议提出建设模范党军",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "提出建设模范党军",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "湖西的和在鲁南的",
+              "normalized_entity": "湖西和鲁南的干部",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": "建设模范党军等等，加强组织纪律性",
+          "evidence_quote": "提出要建设模范党军等等，加强组织纪律性",
+          "type_basis": "“提出”引入建设模范党军、加强纪律性的提议，Sayer为与会干部；核心是言语提议，不是物质行动。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC08-W002-E02",
+        "source_segment_ids": [
+          "BATCH06-DOC08-S0039"
+        ],
+        "event": {
+          "event_name": "朱瑞作四天报告",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "作报告",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "他",
+              "normalized_entity": "朱瑞",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "四天",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "严肃得很",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他在那里作了四天的报告，他严肃得很，一个小提纲一页纸讲四天。",
+          "type_basis": "“作报告”是言语过程，Sayer为朱瑞；四天和严肃得很分别说明时长与方式，不是物质变化。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC08-W002-E03",
+        "source_segment_ids": [
+          "BATCH06-DOC08-S0047"
+        ],
+        "event": {
+          "event_name": "高干会批评罗荣桓",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "批评罗帅",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "他们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Target",
+              "mention": "罗帅",
+              "normalized_entity": "罗荣桓",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "PURPOSE",
+              "value": "整顿部队",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "你这部队进到山东以来，个别犯错误犯纪律的怎么严重……",
+          "evidence_quote": "就开了个小会，把罗帅批了一顿",
+          "type_basis": "“批了一顿”是言语批评，Sayer为开会者，Target为罗帅；目的是整顿部队，核心不是物质行动。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC08-W002-E04",
+        "source_segment_ids": [
+          "BATCH06-DOC08-S0055"
+        ],
+        "event": {
+          "event_name": "罗荣桓患肾炎赴新四军治疗未愈返山东",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "赴新四军治疗未愈返山东",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他",
+              "normalized_entity": "罗荣桓",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "肾炎",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "不行不行，他身上有伤，你到医院一检查身体，一下就被人家抓走了",
+          "evidence_quote": "以后发现是肾炎，到新四军去治也没治好，新四军提意见要到上海去，毛主席说不行不行，他身上有伤，你到医院一检查身体，一下就被人家抓走了。",
+          "type_basis": "核心是患病后赴新四军治疗、未愈并返回山东的医疗与移动过程，Actor为罗荣桓；毛主席的话是嵌入言语内容，不改变物质过程主导。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC08-W002-E05",
+        "source_segment_ids": [
+          "BATCH06-DOC08-S0058"
+        ],
+        "event": {
+          "event_name": "会议决定编教导旅",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "决定编教导旅",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "这个会议",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": "编教导旅",
+          "evidence_quote": "但是在这个会议上决定了编教导旅，我在这跟你说一下。",
+          "type_basis": "“会议决定”引入编教导旅的提议，Sayer为会议；原文只明确决定，未明确执行后的物质变化。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC08-W002-E06",
+        "source_segment_ids": [
+          "BATCH06-DOC08-S0063"
+        ],
+        "event": {
+          "event_name": "陈士榘支队机关率一团调鲁南",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "率一团调鲁南",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "陈（士榘）支队的机关",
+              "normalized_entity": "陈士榘支队机关",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "他的一团",
+              "normalized_entity": "陈士榘支队一团",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "DIRECTION",
+              "value": "鲁南",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "陈（士榘）支队的机关就带着他的一团调到鲁南",
+          "type_basis": "“带着……调到鲁南”是空间移动，Actor为陈士榘支队机关，Goal为一团，鲁南表示移动方向；后续改编是结果细节。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH06-DOC08-S0036",
+      "BATCH06-DOC08-S0038",
+      "BATCH06-DOC08-S0040",
+      "BATCH06-DOC08-S0041",
+      "BATCH06-DOC08-S0042",
+      "BATCH06-DOC08-S0043",
+      "BATCH06-DOC08-S0044",
+      "BATCH06-DOC08-S0045",
+      "BATCH06-DOC08-S0046",
+      "BATCH06-DOC08-S0048",
+      "BATCH06-DOC08-S0049",
+      "BATCH06-DOC08-S0050",
+      "BATCH06-DOC08-S0051",
+      "BATCH06-DOC08-S0052",
+      "BATCH06-DOC08-S0053",
+      "BATCH06-DOC08-S0054",
+      "BATCH06-DOC08-S0056",
+      "BATCH06-DOC08-S0057",
+      "BATCH06-DOC08-S0059",
+      "BATCH06-DOC08-S0060",
+      "BATCH06-DOC08-S0061",
+      "BATCH06-DOC08-S0062"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH06-DOC08-W002\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH06-DOC08-W002-E01\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC08-S0035\",\n        \"BATCH06-DOC08-S0037\"\n      ],\n      \"event\": {\n        \"event_name\": \"湖西和鲁南干部会议提出建设模范党军\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"提出建设模范党军\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"湖西的和在鲁南的\",\n            \"normalized_entity\": \"湖西和鲁南的干部\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": \"建设模范党军等等，加强组织纪律性\",\n        \"evidence_quote\": \"提出要建设模范党军等等，加强组织纪律性\",\n        \"type_basis\": \"“提出”引入建设模范党军、加强纪律性的提议，Sayer为与会干部；核心是言语提议，不是物质行动。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC08-W002-E02\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC08-S0039\"\n      ],\n      \"event\": {\n        \"event_name\": \"朱瑞作四天报告\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"作报告\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"他\",\n            \"normalized_entity\": \"朱瑞\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"四天\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"严肃得很\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"他在那里作了四天的报告，他严肃得很，一个小提纲一页纸讲四天。\",\n        \"type_basis\": \"“作报告”是言语过程，Sayer为朱瑞；四天和严肃得很分别说明时长与方式，不是物质变化。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC08-W002-E03\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC08-S0047\"\n      ],\n      \"event\": {\n        \"event_name\": \"高干会批评罗荣桓\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"批评罗帅\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"他们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Target\",\n            \"mention\": \"罗帅\",\n            \"normalized_entity\": \"罗荣桓\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"整顿部队\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"你这部队进到山东以来，个别犯错误犯纪律的怎么严重……\",\n        \"evidence_quote\": \"就开了个小会，把罗帅批了一顿\",\n        \"type_basis\": \"“批了一顿”是言语批评，Sayer为开会者，Target为罗帅；目的是整顿部队，核心不是物质行动。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC08-W002-E04\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC08-S0055\"\n      ],\n      \"event\": {\n        \"event_name\": \"罗荣桓患肾炎赴新四军治疗未愈返山东\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"赴新四军治疗未愈返山东\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"他\",\n            \"normalized_entity\": \"罗荣桓\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"肾炎\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"不行不行，他身上有伤，你到医院一检查身体，一下就被人家抓走了\",\n        \"evidence_quote\": \"以后发现是肾炎，到新四军去治也没治好，新四军提意见要到上海去，毛主席说不行不行，他身上有伤，你到医院一检查身体，一下就被人家抓走了。\",\n        \"type_basis\": \"核心是患病后赴新四军治疗、未愈并返回山东的医疗与移动过程，Actor为罗荣桓；毛主席的话是嵌入言语内容，不改变物质过程主导。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC08-W002-E05\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC08-S0058\"\n      ],\n      \"event\": {\n        \"event_name\": \"会议决定编教导旅\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"决定编教导旅\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"这个会议\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": \"编教导旅\",\n        \"evidence_quote\": \"但是在这个会议上决定了编教导旅，我在这跟你说一下。\",\n        \"type_basis\": \"“会议决定”引入编教导旅的提议，Sayer为会议；原文只明确决定，未明确执行后的物质变化。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC08-W002-E06\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC08-S0063\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈士榘支队机关率一团调鲁南\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"率一团调鲁南\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"陈（士榘）支队的机关\",\n            \"normalized_entity\": \"陈士榘支队机关\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"他的一团\",\n            \"normalized_entity\": \"陈士榘支队一团\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"鲁南\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"陈（士榘）支队的机关就带着他的一团调到鲁南\",\n        \"type_basis\": \"“带着……调到鲁南”是空间移动，Actor为陈士榘支队机关，Goal为一团，鲁南表示移动方向；后续改编是结果细节。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH06-DOC08-S0036\",\n    \"BATCH06-DOC08-S0038\",\n    \"BATCH06-DOC08-S0040\",\n    \"BATCH06-DOC08-S0041\",\n    \"BATCH06-DOC08-S0042\",\n    \"BATCH06-DOC08-S0043\",\n    \"BATCH06-DOC08-S0044\",\n    \"BATCH06-DOC08-S0045\",\n    \"BATCH06-DOC08-S0046\",\n    \"BATCH06-DOC08-S0048\",\n    \"BATCH06-DOC08-S0049\",\n    \"BATCH06-DOC08-S0050\",\n    \"BATCH06-DOC08-S0051\",\n    \"BATCH06-DOC08-S0052\",\n    \"BATCH06-DOC08-S0053\",\n    \"BATCH06-DOC08-S0054\",\n    \"BATCH06-DOC08-S0056\",\n    \"BATCH06-DOC08-S0057\",\n    \"BATCH06-DOC08-S0059\",\n    \"BATCH06-DOC08-S0060\",\n    \"BATCH06-DOC08-S0061\",\n    \"BATCH06-DOC08-S0062\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5795,
+    "total_tokens": 33775,
+    "completion_tokens": 27980,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 25831
+    },
+    "time_to_first_token_ms": 235744,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13989500
+  }
+}

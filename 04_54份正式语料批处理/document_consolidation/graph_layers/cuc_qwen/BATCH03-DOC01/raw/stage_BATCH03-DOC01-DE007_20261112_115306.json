@@ -1,0 +1,41 @@
+{
+  "run_time": "2026-11-12T11:53:06",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC01-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC01-DE007",
+  "usage": {
+    "prompt_tokens": 1166,
+    "total_tokens": 4336,
+    "completion_tokens": 3170,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2920
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 76405,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC01-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"史沫特莱的评价被转述为：新四军医院比国民党医院更好，条件差但管理和技术水平最好。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"从陈海峰说“应该说是顶呱呱”并引出史沫特莱讲，到“而且那个技术水平是最好的”结束；仅覆盖该段转述评价。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [],\n  \"stage_next\": [],\n  \"no_stage_reason\": \"原文仅一段转述，核心为史沫特莱对新四军医院的评价，未呈现可复核的多步骤推进，故不拆分。\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC01-DE007",
+    "event_enrichment": {
+      "result_state": "史沫特莱的评价被转述为：新四军医院比国民党医院更好，条件差但管理和技术水平最好。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "从陈海峰说“应该说是顶呱呱”并引出史沫特莱讲，到“而且那个技术水平是最好的”结束；仅覆盖该段转述评价。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [],
+    "stage_next": [],
+    "no_stage_reason": "原文仅一段转述，核心为史沫特莱对新四军医院的评价，未呈现可复核的多步骤推进，故不拆分。"
+  },
+  "request_error": null
+}

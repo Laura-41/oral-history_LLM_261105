@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T21:43:23",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC06-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC06-DE003",
+  "usage": {
+    "prompt_tokens": 1336,
+    "total_tokens": 2407,
+    "completion_tokens": 1071,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 465
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 8359,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC06-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"炮兵营在旧街大坞附近休整约两个多月后，于第二年二三月转至修水防线担任防御。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“不久以后，我们的部队就是撤下战场”为起点，至“又上去在修水的防线上担任防御嘛”为终点，覆盖撤下战场、旧街大坞休整及转防修水的过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"炮兵营撤下战场，到旧街大坞附近休整约两个多月。\",\n      \"process_text\": \"不久以后部队撤下战场，142师师部在南昌到九江路上的旧街大坞（音），炮兵营也在那附近休息了大概两个多月。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0026\"\n      ],\n      \"evidence_quote\": \"不久以后，我们的部队就是撤下战场，南昌到九江的路上有旧街大坞（音），142师师部就在旧街大坞（音），我们炮兵营也就在那附近休息了大概两个多月吧。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"第二年二三月，炮兵营又上去在修水防线担任防御。\",\n      \"process_text\": \"第二年的二三月，又上去在修水的防线上担任防御。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0026\"\n      ],\n      \"evidence_quote\": \"第二年的二三月，又上去在修水的防线上担任防御嘛。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE003-P01\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0026\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC06-DE003",
+    "event_enrichment": {
+      "result_state": "炮兵营在旧街大坞附近休整约两个多月后，于第二年二三月转至修水防线担任防御。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以“不久以后，我们的部队就是撤下战场”为起点，至“又上去在修水的防线上担任防御嘛”为终点，覆盖撤下战场、旧街大坞休整及转防修水的过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC06-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "炮兵营撤下战场，到旧街大坞附近休整约两个多月。",
+        "process_text": "不久以后部队撤下战场，142师师部在南昌到九江路上的旧街大坞（音），炮兵营也在那附近休息了大概两个多月。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0026"
+        ],
+        "evidence_quote": "不久以后，我们的部队就是撤下战场，南昌到九江的路上有旧街大坞（音），142师师部就在旧街大坞（音），我们炮兵营也就在那附近休息了大概两个多月吧。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "第二年二三月，炮兵营又上去在修水防线担任防御。",
+        "process_text": "第二年的二三月，又上去在修水的防线上担任防御。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0026"
+        ],
+        "evidence_quote": "第二年的二三月，又上去在修水的防线上担任防御嘛。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC06-DE003-P01",
+        "target_stage_id": "BATCH02-DOC06-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC06-S0026",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

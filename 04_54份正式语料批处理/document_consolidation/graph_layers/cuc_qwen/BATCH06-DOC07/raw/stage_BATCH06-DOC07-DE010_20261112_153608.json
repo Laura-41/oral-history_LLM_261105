@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-12T15:36:08",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE010",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE010",
+  "usage": {
+    "prompt_tokens": 1313,
+    "total_tokens": 9381,
+    "completion_tokens": 8068,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7452
+    },
+    "time_to_first_token_ms": 121800,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"西边老风景区被毁掉，东边风景区被建设。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以S0180中‘他建东边风景区去了，西边这个风景区是老风景区，这个给毁掉了’为事件核心边界；S0182、S0184补充湖心寺老风景区原有景观，不改变事件边界。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"建设东边风景区\",\n      \"process_text\": \"他建东边风景区去了\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0180\"\n      ],\n      \"evidence_quote\": \"    陈海峰：他建东边风景区去了，西边这个风景区是老风景区，这个给毁掉了，当时那个风景非常好。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"毁弃西边老风景区\",\n      \"process_text\": \"西边这个风景区是老风景区，这个给毁掉了\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0180\"\n      ],\n      \"evidence_quote\": \"    陈海峰：他建东边风景区去了，西边这个风景区是老风景区，这个给毁掉了，当时那个风景非常好。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE010-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0180\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE010",
+    "event_enrichment": {
+      "result_state": "西边老风景区被毁掉，东边风景区被建设。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "以S0180中‘他建东边风景区去了，西边这个风景区是老风景区，这个给毁掉了’为事件核心边界；S0182、S0184补充湖心寺老风景区原有景观，不改变事件边界。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "建设东边风景区",
+        "process_text": "他建东边风景区去了",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0180"
+        ],
+        "evidence_quote": "    陈海峰：他建东边风景区去了，西边这个风景区是老风景区，这个给毁掉了，当时那个风景非常好。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "毁弃西边老风景区",
+        "process_text": "西边这个风景区是老风景区，这个给毁掉了",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0180"
+        ],
+        "evidence_quote": "    陈海峰：他建东边风景区去了，西边这个风景区是老风景区，这个给毁掉了，当时那个风景非常好。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE010-P01",
+        "target_stage_id": "BATCH06-DOC07-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0180",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

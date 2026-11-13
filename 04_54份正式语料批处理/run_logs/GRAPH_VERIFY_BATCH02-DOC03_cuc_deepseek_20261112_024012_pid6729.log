@@ -1,0 +1,43 @@
+单文档验证：BATCH02-DOC03 / cuc/deepseek
+日志：04_54份正式语料批处理/run_logs/GRAPH_VERIFY_BATCH02-DOC03_cuc_deepseek_20261112_024012_pid6729.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+
+===== L0 零 API 底座表 =====
+[落盘] BATCH02-DOC03 / cuc/deepseek
+  原文片段 69｜一级事件 9｜覆盖率 1.0000
+  人工视图：无
+    documents                  1 行
+    source_segments           69 行
+    source_attachments        72 行
+    coverage_audit             1 行
+    document_annotations      29 行
+    event_nodes                9 行
+    event_processes            9 行
+    event_participants        19 行
+    event_circumstances       15 行
+    event_next                 8 行
+  警告 5 条（详见 L0_report.json）
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH02-DOC03
+
+===== L1/L2 模型任务（真实 API 调用） =====
+[真实调用] BATCH02-DOC03 / cuc/deepseek / tasks=stage,entity_time
+  一级事件 9｜原文片段 69｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH02-DOC03/raw
+
+== stage：9 次调用 ==
+  [1/9] stage_BATCH02-DOC03-DE001 已有成功响应，跳过（断点续跑）
+  [2/9] stage_BATCH02-DOC03-DE002 已有成功响应，跳过（断点续跑）
+  [3/9] stage_BATCH02-DOC03-DE003 已有成功响应，跳过（断点续跑）
+  [4/9] stage_BATCH02-DOC03-DE004 已有成功响应，跳过（断点续跑）
+  [5/9] stage_BATCH02-DOC03-DE005 已有成功响应，跳过（断点续跑）
+  [6/9] stage_BATCH02-DOC03-DE006 已有成功响应，跳过（断点续跑）
+  [7/9] stage_BATCH02-DOC03-DE007 已有成功响应，跳过（断点续跑）
+  [8/9] stage_BATCH02-DOC03-DE008 已有成功响应，跳过（断点续跑）
+  [9/9] stage_BATCH02-DOC03-DE009 已有成功响应，跳过（断点续跑）
+
+== entity_time：1 次调用 ==
+  [1/1] 请求 entity_time/CHF-V1-04，输入 23,214 字符，最长等待 1200s……
+  失败并停止：读取响应超时（等待上限 1200 秒）
+
+entity_time 在第 1 次调用熔断；已完成结果全部保留，重跑同一命令即断点续跑。
+
+熔断于：L1/L2 模型任务（真实 API 调用）。已完成结果全部保留，修好后重跑同一命令即可。

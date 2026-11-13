@@ -1,0 +1,121 @@
+{
+  "run_time": "2026-11-12T15:16:34",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE004",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE004",
+  "usage": {
+    "prompt_tokens": 2352,
+    "total_tokens": 10563,
+    "completion_tokens": 8211,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6683
+    },
+    "time_to_first_token_ms": 123846,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"华中军区第一后方医院于1945年11月组建完毕，并接收各军分区转来的重伤员，住院人数达七八百人，住满。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"边界起于陈海峰担任华中军区第一后方医院院长及医院临时组建、性质说明，止于1945年11月组建完毕并接收各军分区重伤员、住院七八百人住满；淮安作为地点信息纳入边界。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"明确陈海峰担任院长及医院临时组建、直属性质与规模地位。\",\n      \"process_text\": \"陈海峰担任华中军区第一后方医院院长，医院临时组建，是华中军区直属医院，也是华中军区最大、最强的医院。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0060\",\n        \"BATCH06-DOC07-S0061\",\n        \"BATCH06-DOC07-S0063\",\n        \"BATCH06-DOC07-S0064\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我担任了华中军区第一后方医院院长。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"以苏浙军区一分区卫生部为基础，调多个医疗队加强并组成医院，形成7个医疗队和一千四五百人规模。\",\n      \"process_text\": \"以苏浙军区一分区卫生部做基础，调多个医疗队加强、组成医院，第七医疗队为休养连，共7个医疗队，工作人员一千四五百人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0065\",\n        \"BATCH06-DOC07-S0068\",\n        \"BATCH06-DOC07-S0071\",\n        \"BATCH06-DOC07-S0073\",\n        \"BATCH06-DOC07-S0076\",\n        \"BATCH06-DOC07-S0077\",\n        \"BATCH06-DOC07-S0079\"\n      ],\n      \"evidence_quote\": \"    陈海峰：因为调三个医疗队，这样子呢，加强、组成这个医院。第七医疗队实际上是个休养连，就是治疗好了以后，准备出院。以功能锻炼为主的，恢复功能。加第七医疗队，一共7个医疗队，7个医疗队那（是）很大了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"1945年11月医院组建完毕。\",\n      \"process_text\": \"11月组建完毕。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0081\",\n        \"BATCH06-DOC07-S0082\"\n      ],\n      \"evidence_quote\": \"11月组建完毕。开始呢，就是说接收伤员，把各个军分区他们手里的重伤员，他们做不了手术的，需要更高技术来处理的，都转到我们这儿来。一转来嘛，就七八百人。一家伙住了满满的呀。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"接收各军分区转来的重伤员，住院人数达七八百人并住满。\",\n      \"process_text\": \"开始呢，就是说接收伤员，把各个军分区他们手里的重伤员，他们做不了手术的，需要更高技术来处理的，都转到我们这儿来。一转来嘛，就七八百人。一家伙住了满满的呀。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0082\",\n        \"BATCH06-DOC07-S0084\",\n        \"BATCH06-DOC07-S0085\",\n        \"BATCH06-DOC07-S0087\"\n      ],\n      \"evidence_quote\": \"11月组建完毕。开始呢，就是说接收伤员，把各个军分区他们手里的重伤员，他们做不了手术的，需要更高技术来处理的，都转到我们这儿来。一转来嘛，就七八百人。一家伙住了满满的呀。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE004-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE004-P02\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE004-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0082\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE004-P03\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE004-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0082\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE004",
+    "event_enrichment": {
+      "result_state": "华中军区第一后方医院于1945年11月组建完毕，并接收各军分区转来的重伤员，住院人数达七八百人，住满。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "边界起于陈海峰担任华中军区第一后方医院院长及医院临时组建、性质说明，止于1945年11月组建完毕并接收各军分区重伤员、住院七八百人住满；淮安作为地点信息纳入边界。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "明确陈海峰担任院长及医院临时组建、直属性质与规模地位。",
+        "process_text": "陈海峰担任华中军区第一后方医院院长，医院临时组建，是华中军区直属医院，也是华中军区最大、最强的医院。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0060",
+          "BATCH06-DOC07-S0061",
+          "BATCH06-DOC07-S0063",
+          "BATCH06-DOC07-S0064"
+        ],
+        "evidence_quote": "    陈海峰：我担任了华中军区第一后方医院院长。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "以苏浙军区一分区卫生部为基础，调多个医疗队加强并组成医院，形成7个医疗队和一千四五百人规模。",
+        "process_text": "以苏浙军区一分区卫生部做基础，调多个医疗队加强、组成医院，第七医疗队为休养连，共7个医疗队，工作人员一千四五百人。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0065",
+          "BATCH06-DOC07-S0068",
+          "BATCH06-DOC07-S0071",
+          "BATCH06-DOC07-S0073",
+          "BATCH06-DOC07-S0076",
+          "BATCH06-DOC07-S0077",
+          "BATCH06-DOC07-S0079"
+        ],
+        "evidence_quote": "    陈海峰：因为调三个医疗队，这样子呢，加强、组成这个医院。第七医疗队实际上是个休养连，就是治疗好了以后，准备出院。以功能锻炼为主的，恢复功能。加第七医疗队，一共7个医疗队，7个医疗队那（是）很大了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "1945年11月医院组建完毕。",
+        "process_text": "11月组建完毕。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0081",
+          "BATCH06-DOC07-S0082"
+        ],
+        "evidence_quote": "11月组建完毕。开始呢，就是说接收伤员，把各个军分区他们手里的重伤员，他们做不了手术的，需要更高技术来处理的，都转到我们这儿来。一转来嘛，就七八百人。一家伙住了满满的呀。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "接收各军分区转来的重伤员，住院人数达七八百人并住满。",
+        "process_text": "开始呢，就是说接收伤员，把各个军分区他们手里的重伤员，他们做不了手术的，需要更高技术来处理的，都转到我们这儿来。一转来嘛，就七八百人。一家伙住了满满的呀。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0082",
+          "BATCH06-DOC07-S0084",
+          "BATCH06-DOC07-S0085",
+          "BATCH06-DOC07-S0087"
+        ],
+        "evidence_quote": "11月组建完毕。开始呢，就是说接收伤员，把各个军分区他们手里的重伤员，他们做不了手术的，需要更高技术来处理的，都转到我们这儿来。一转来嘛，就七八百人。一家伙住了满满的呀。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE004-P01",
+        "target_stage_id": "BATCH06-DOC07-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE004-P02",
+        "target_stage_id": "BATCH06-DOC07-DE004-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC07-S0082",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE004-P03",
+        "target_stage_id": "BATCH06-DOC07-DE004-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0082",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

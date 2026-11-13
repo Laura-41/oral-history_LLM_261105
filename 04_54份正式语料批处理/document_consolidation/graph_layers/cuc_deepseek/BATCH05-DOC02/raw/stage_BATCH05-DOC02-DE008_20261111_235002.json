@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T23:50:02",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC02-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC02-DE008",
+  "usage": {
+    "prompt_tokens": 1248,
+    "total_tokens": 2822,
+    "completion_tokens": 1574,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 774
+    },
+    "time_to_first_token_ms": 12406,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-13\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC02-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"伤员队伍转移至东台海边原后方医院医疗队所在地蒋家墩子，并在该地实施手术。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件起于带一百多伤员转移及沿途减员，止于到达蒋家墩子后实施手术。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"带百余名伤员转移，沿途部分轻伤者要求归队或去旅部，人数减至几十人、不到一百人。\",\n      \"process_text\": \"带着一百多伤员沿路转移，部分轻伤者要求归队，有的去自己旅部；又走了一部分，留下几十个，不到一百人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0198\"\n      ],\n      \"evidence_quote\": \"那么我们带着这一百多伤员呢，沿路呢，有一部分要求归队了，他轻伤，有的就到自己旅部去了。又走了一部（分），我们留了几十个，不到一百人了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"转移到东台海边原后方医院一个医疗队所在地蒋家墩子。\",\n      \"process_text\": \"转移到东台的海边上，原来后方医院的一个医疗队的所在地，叫蒋家墩子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0198\"\n      ],\n      \"evidence_quote\": \"我们就转移到东台的海边上的，原来后方医院的一个医疗队的所在地，叫蒋家墩子（音），我厚书上有。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"到达蒋家墩子后才实施手术，此前尚未开刀。\",\n      \"process_text\": \"到达蒋家墩子后才开刀实施手术。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0200\"\n      ],\n      \"evidence_quote\": \"刀还都没开呢，到了蒋家墩子才开那个刀的。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE008-P01\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0198\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE008-P02\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0200\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-13",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC02-DE008",
+    "event_enrichment": {
+      "result_state": "伤员队伍转移至东台海边原后方医院医疗队所在地蒋家墩子，并在该地实施手术。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件起于带一百多伤员转移及沿途减员，止于到达蒋家墩子后实施手术。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC02-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "带百余名伤员转移，沿途部分轻伤者要求归队或去旅部，人数减至几十人、不到一百人。",
+        "process_text": "带着一百多伤员沿路转移，部分轻伤者要求归队，有的去自己旅部；又走了一部分，留下几十个，不到一百人。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0198"
+        ],
+        "evidence_quote": "那么我们带着这一百多伤员呢，沿路呢，有一部分要求归队了，他轻伤，有的就到自己旅部去了。又走了一部（分），我们留了几十个，不到一百人了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "转移到东台海边原后方医院一个医疗队所在地蒋家墩子。",
+        "process_text": "转移到东台的海边上，原来后方医院的一个医疗队的所在地，叫蒋家墩子。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0198"
+        ],
+        "evidence_quote": "我们就转移到东台的海边上的，原来后方医院的一个医疗队的所在地，叫蒋家墩子（音），我厚书上有。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "到达蒋家墩子后才实施手术，此前尚未开刀。",
+        "process_text": "到达蒋家墩子后才开刀实施手术。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0200"
+        ],
+        "evidence_quote": "刀还都没开呢，到了蒋家墩子才开那个刀的。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC02-DE008-P01",
+        "target_stage_id": "BATCH05-DOC02-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC02-S0198",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE008-P02",
+        "target_stage_id": "BATCH05-DOC02-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC02-S0200",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

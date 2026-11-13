@@ -1,0 +1,231 @@
+{
+  "run_time": "2026-11-11T02:45:40",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH04-DOC02-W005",
+  "technical_document_id": "BATCH04-DOC02",
+  "document_id": "08.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH04-DOC02-S0121",
+    "BATCH04-DOC02-S0122",
+    "BATCH04-DOC02-S0123",
+    "BATCH04-DOC02-S0124",
+    "BATCH04-DOC02-S0125",
+    "BATCH04-DOC02-S0126",
+    "BATCH04-DOC02-S0127",
+    "BATCH04-DOC02-S0128",
+    "BATCH04-DOC02-S0129",
+    "BATCH04-DOC02-S0130"
+  ],
+  "json_valid": true,
+  "validation_errors": [
+    "events[1].event：RELATIONAL必须且只能使用Carrier＋Attribute或Token＋Value中的一组"
+  ],
+  "technical_passed": false,
+  "metrics": {
+    "event_count": 3,
+    "assigned_segment_count": 7,
+    "unassigned_segment_count": 3,
+    "input_segment_count": 10,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH04-DOC02-W005",
+    "events": [
+      {
+        "candidate_id": "BATCH04-DOC02-W005-E01",
+        "source_segment_ids": [
+          "BATCH04-DOC02-S0121",
+          "BATCH04-DOC02-S0125"
+        ],
+        "event": {
+          "event_name": "四大副官之一到苏中卫校任行政副队长并与陈海峰共事，后任福建医科大学副校长等并病逝",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "到苏中卫校担任行政副队长，后任福建医科大学副校长等并病逝",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他",
+              "normalized_entity": null,
+              "certainty": "LOW"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "皖南事变以后",
+              "normalized_value": "皖南事变以后"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "苏中卫校",
+              "normalized_value": "苏中卫校"
+            },
+            {
+              "kind": "TIME",
+              "value": "解放以后",
+              "normalized_value": "解放以后"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "到了苏北以后，皖南事变以后呢，他到苏中卫校，他本来是在粟裕身边，就到卫校来当行政副队长。一直和我在一块，我们两个很要好，现在已经死了。解放以后呢，他就是福建医科大学的副校长，也是福建省建设厅的副厅长，他以后生癌症死了。",
+          "type_basis": "核心是“他到苏中卫校当行政副队长”，属于移动和任职行动，可用 What did X do? 测试；后续共事、解放后任职和病逝作为同一人物经历的阶段性结果合并。“行政副队长”不标 Scope，融入规范化过程。排除 RELATIONAL，因为不是单纯身份判断，而是到某处任职的行动；排除 MENTAL，因为“很要好”只是关系背景，不主导事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC02-W005-E02",
+        "source_segment_ids": [
+          "BATCH04-DOC02-S0121",
+          "BATCH04-DOC02-S0123",
+          "BATCH04-DOC02-S0124",
+          "BATCH04-DOC02-S0125"
+        ],
+        "event": {
+          "event_name": "指导员苏君彦及行政副队长与陈海峰构成队部领导",
+          "event_type": "RELATIONAL",
+          "event_type_zh": "关系",
+          "core_process": "指导员叫苏君彦，任辽宁省地委主任，三人构成队部领导",
+          "participants": [
+            {
+              "role": "Token",
+              "mention": "指导员",
+              "normalized_entity": "指导员",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Value",
+              "mention": "苏君彦",
+              "normalized_entity": "苏君彦",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Carrier",
+              "mention": "这个人",
+              "normalized_entity": "苏君彦",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Attribute",
+              "mention": "辽宁省的地委主任",
+              "normalized_entity": "辽宁省地委主任",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Carrier",
+              "mention": "我们三个人",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Attribute",
+              "mention": "队部的领导",
+              "normalized_entity": "队部领导",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "解放以后",
+              "normalized_value": "解放以后"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "指导员呢，叫苏君彦。",
+          "type_basis": "核心是身份、称谓和领导构成：“叫苏君彦”为识别关系，“是辽宁省的地委主任”和“是队部的领导”为归属关系；不是正在实施的行动。“这两个都已经过世了”作为关系结果背景，不单独建事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC02-W005-E03",
+        "source_segment_ids": [
+          "BATCH04-DOC02-S0126",
+          "BATCH04-DOC02-S0128",
+          "BATCH04-DOC02-S0129"
+        ],
+        "event": {
+          "event_name": "教育干事进入卫校兼基础课和护理课并带新学生班",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "进入卫校当教育干事，兼基础课和护理课，带新学生班讲生理解剖",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他",
+              "normalized_entity": null,
+              "certainty": "LOW"
+            },
+            {
+              "role": "Goal",
+              "mention": "新的学生班",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Scope",
+              "mention": "基础课",
+              "normalized_entity": "基础课",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Scope",
+              "mention": "一部分护理课",
+              "normalized_entity": "护理课",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Scope",
+              "mention": "生理解剖",
+              "normalized_entity": "生理解剖",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "我们卫校",
+              "normalized_value": "卫校"
+            },
+            {
+              "kind": "TIME",
+              "value": "进来以后",
+              "normalized_value": "进入卫校以后"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那么专职教员呢，有一个教育干事，是外边学的，是中级护校毕业的，他（在）中级护校教过课。那么进来以后，在我们卫校当教育干事，他就兼基础课，兼一部分护理课。",
+          "type_basis": "核心是进入卫校从事教育干事和教学劳动，属于职业劳动和执行任务，可用 What did X do? 测试；“基础课”“护理课”“生理解剖”作为教学范围标 Scope，“新的学生班”作为教学对象标 Goal。排除 VERBAL，因为“对他们讲”没有具体言语内容；排除 RELATIONAL，因为不是单纯身份判断，而是进入并兼课、带班的行动。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH04-DOC02-S0122",
+      "BATCH04-DOC02-S0127",
+      "BATCH04-DOC02-S0130"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH04-DOC02-W005\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH04-DOC02-W005-E01\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC02-S0121\",\n        \"BATCH04-DOC02-S0125\"\n      ],\n      \"event\": {\n        \"event_name\": \"四大副官之一到苏中卫校任行政副队长并与陈海峰共事，后任福建医科大学副校长等并病逝\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"到苏中卫校担任行政副队长，后任福建医科大学副校长等并病逝\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"他\",\n            \"normalized_entity\": null,\n            \"certainty\": \"LOW\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"皖南事变以后\",\n            \"normalized_value\": \"皖南事变以后\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"苏中卫校\",\n            \"normalized_value\": \"苏中卫校\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"解放以后\",\n            \"normalized_value\": \"解放以后\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"到了苏北以后，皖南事变以后呢，他到苏中卫校，他本来是在粟裕身边，就到卫校来当行政副队长。一直和我在一块，我们两个很要好，现在已经死了。解放以后呢，他就是福建医科大学的副校长，也是福建省建设厅的副厅长，他以后生癌症死了。\",\n        \"type_basis\": \"核心是“他到苏中卫校当行政副队长”，属于移动和任职行动，可用 What did X do? 测试；后续共事、解放后任职和病逝作为同一人物经历的阶段性结果合并。“行政副队长”不标 Scope，融入规范化过程。排除 RELATIONAL，因为不是单纯身份判断，而是到某处任职的行动；排除 MENTAL，因为“很要好”只是关系背景，不主导事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC02-W005-E02\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC02-S0121\",\n        \"BATCH04-DOC02-S0123\",\n        \"BATCH04-DOC02-S0124\",\n        \"BATCH04-DOC02-S0125\"\n      ],\n      \"event\": {\n        \"event_name\": \"指导员苏君彦及行政副队长与陈海峰构成队部领导\",\n        \"event_type\": \"RELATIONAL\",\n        \"event_type_zh\": \"关系\",\n        \"core_process\": \"指导员叫苏君彦，任辽宁省地委主任，三人构成队部领导\",\n        \"participants\": [\n          {\n            \"role\": \"Token\",\n            \"mention\": \"指导员\",\n            \"normalized_entity\": \"指导员\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Value\",\n            \"mention\": \"苏君彦\",\n            \"normalized_entity\": \"苏君彦\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"这个人\",\n            \"normalized_entity\": \"苏君彦\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"辽宁省的地委主任\",\n            \"normalized_entity\": \"辽宁省地委主任\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"我们三个人\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"队部的领导\",\n            \"normalized_entity\": \"队部领导\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"解放以后\",\n            \"normalized_value\": \"解放以后\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"指导员呢，叫苏君彦。\",\n        \"type_basis\": \"核心是身份、称谓和领导构成：“叫苏君彦”为识别关系，“是辽宁省的地委主任”和“是队部的领导”为归属关系；不是正在实施的行动。“这两个都已经过世了”作为关系结果背景，不单独建事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC02-W005-E03\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC02-S0126\",\n        \"BATCH04-DOC02-S0128\",\n        \"BATCH04-DOC02-S0129\"\n      ],\n      \"event\": {\n        \"event_name\": \"教育干事进入卫校兼基础课和护理课并带新学生班\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"进入卫校当教育干事，兼基础课和护理课，带新学生班讲生理解剖\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"他\",\n            \"normalized_entity\": null,\n            \"certainty\": \"LOW\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"新的学生班\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"基础课\",\n            \"normalized_entity\": \"基础课\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"一部分护理课\",\n            \"normalized_entity\": \"护理课\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"生理解剖\",\n            \"normalized_entity\": \"生理解剖\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"我们卫校\",\n            \"normalized_value\": \"卫校\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"进来以后\",\n            \"normalized_value\": \"进入卫校以后\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那么专职教员呢，有一个教育干事，是外边学的，是中级护校毕业的，他（在）中级护校教过课。那么进来以后，在我们卫校当教育干事，他就兼基础课，兼一部分护理课。\",\n        \"type_basis\": \"核心是进入卫校从事教育干事和教学劳动，属于职业劳动和执行任务，可用 What did X do? 测试；“基础课”“护理课”“生理解剖”作为教学范围标 Scope，“新的学生班”作为教学对象标 Goal。排除 VERBAL，因为“对他们讲”没有具体言语内容；排除 RELATIONAL，因为不是单纯身份判断，而是进入并兼课、带班的行动。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH04-DOC02-S0122\",\n    \"BATCH04-DOC02-S0127\",\n    \"BATCH04-DOC02-S0130\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 4678,
+    "total_tokens": 22802,
+    "completion_tokens": 18124,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 16187
+    },
+    "time_to_first_token_ms": 274224,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9061500
+  }
+}

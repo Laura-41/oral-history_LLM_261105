@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T22:25:57",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC05-DE009",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC05-DE009",
+  "usage": {
+    "prompt_tokens": 1409,
+    "total_tokens": 10189,
+    "completion_tokens": 8780,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7559
+    },
+    "time_to_first_token_ms": 139842,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8779000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC05-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈仁洪负伤，并在皖南8次繁昌战斗、三年中间54次仗中每次都记录，记录载体为小本子。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于S0159对皖南繁昌战斗8次及陈仁洪营长身份的交代，经S0161负伤与记录、S0162小本子，S0166补充现有资料5次与实际8次差异，作为事件背景/边界说明。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"交代皖南繁昌战斗次数及陈仁洪营长身份\",\n      \"process_text\": \"皖南“繁昌战斗”有记录的、正规的、大的是8次；陈仁洪是营长，陈海峰在他营里当卫生指导员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0159\"\n      ],\n      \"evidence_quote\": \"    陈海峰：你像这个皖南“繁昌战斗”，那有记录的、正规的、大的是8次。我们一个营，那个陈仁洪后来当济南军区政委、北京军区政委啊，24集团军政委啊。后来还是“文化大革命”（时期），卫生部的军管会主任啊！陈仁洪，也是我的领导啊。我在他营里当卫生指导员，他是营长啊。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈仁洪负伤\",\n      \"process_text\": \"他也负伤过。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0161\"\n      ],\n      \"evidence_quote\": \"    陈海峰：他也负伤过。皖南8次“繁昌战斗”，三年中间打了54次（仗）。他每次都记录，\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈仁洪在多次战斗中每次都记录\",\n      \"process_text\": \"皖南8次“繁昌战斗”，三年中间打了54次（仗），他每次都记录。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0161\"\n      ],\n      \"evidence_quote\": \"    陈海峰：他也负伤过。皖南8次“繁昌战斗”，三年中间打了54次（仗）。他每次都记录，\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE009-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"记录载体为小本子\",\n      \"process_text\": \"他有一个小本子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0162\"\n      ],\n      \"evidence_quote\": \"他有一个小本子。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE009-P01\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0161\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE009-P02\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE009-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0161\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE009-P03\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE009-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0162\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC05-DE009",
+    "event_enrichment": {
+      "result_state": "陈仁洪负伤，并在皖南8次繁昌战斗、三年中间54次仗中每次都记录，记录载体为小本子。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于S0159对皖南繁昌战斗8次及陈仁洪营长身份的交代，经S0161负伤与记录、S0162小本子，S0166补充现有资料5次与实际8次差异，作为事件背景/边界说明。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC05-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "交代皖南繁昌战斗次数及陈仁洪营长身份",
+        "process_text": "皖南“繁昌战斗”有记录的、正规的、大的是8次；陈仁洪是营长，陈海峰在他营里当卫生指导员。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0159"
+        ],
+        "evidence_quote": "    陈海峰：你像这个皖南“繁昌战斗”，那有记录的、正规的、大的是8次。我们一个营，那个陈仁洪后来当济南军区政委、北京军区政委啊，24集团军政委啊。后来还是“文化大革命”（时期），卫生部的军管会主任啊！陈仁洪，也是我的领导啊。我在他营里当卫生指导员，他是营长啊。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "陈仁洪负伤",
+        "process_text": "他也负伤过。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0161"
+        ],
+        "evidence_quote": "    陈海峰：他也负伤过。皖南8次“繁昌战斗”，三年中间打了54次（仗）。他每次都记录，",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "陈仁洪在多次战斗中每次都记录",
+        "process_text": "皖南8次“繁昌战斗”，三年中间打了54次（仗），他每次都记录。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0161"
+        ],
+        "evidence_quote": "    陈海峰：他也负伤过。皖南8次“繁昌战斗”，三年中间打了54次（仗）。他每次都记录，",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE009-P04",
+        "stage_order": 4,
+        "stage_summary": "记录载体为小本子",
+        "process_text": "他有一个小本子。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0162"
+        ],
+        "evidence_quote": "他有一个小本子。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC05-DE009-P01",
+        "target_stage_id": "BATCH04-DOC05-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC05-S0161",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC05-DE009-P02",
+        "target_stage_id": "BATCH04-DOC05-DE009-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC05-S0161",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC05-DE009-P03",
+        "target_stage_id": "BATCH04-DOC05-DE009-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC05-S0162",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

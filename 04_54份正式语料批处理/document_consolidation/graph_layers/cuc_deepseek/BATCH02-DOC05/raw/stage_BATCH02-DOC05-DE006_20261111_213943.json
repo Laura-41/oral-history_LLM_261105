@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T21:39:43",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC05-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC05-DE006",
+  "usage": {
+    "prompt_tokens": 1241,
+    "total_tokens": 3061,
+    "completion_tokens": 1820,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1247
+    },
+    "time_to_first_token_ms": 14246,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 1819000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC05-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰毕业后被派到三支队任营卫生指导员，并按技术待遇领取八元津贴。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈海峰自述“毕业以后，派到三支队当营卫生指导员，拿八块”为边界；谭震林、张云逸指挥背景及六团调茅山、二支队待遇比较作为背景，不纳入核心过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰毕业后被派到三支队担任营卫生指导员。\",\n      \"process_text\": \"毕业以后，被派到三支队当营卫生指导员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0061\"\n      ],\n      \"evidence_quote\": \"我毕业以后，派到三支队当营卫生指导员，拿八块。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈海峰领取八元技术津贴，体现尊重技术的基本政策。\",\n      \"process_text\": \"拿八块，作为技术津贴，属于尊重技术的基本政策。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0063\"\n      ],\n      \"evidence_quote\": \"我们就拿八块，我们自己培养的拿八块，但是在二支队，到前方部队里面，最低他们也拿五块，拿团以上干部的待遇，叫做技术津贴。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE006-P01\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0061\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC05-DE006",
+    "event_enrichment": {
+      "result_state": "陈海峰毕业后被派到三支队任营卫生指导员，并按技术待遇领取八元津贴。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以陈海峰自述“毕业以后，派到三支队当营卫生指导员，拿八块”为边界；谭震林、张云逸指挥背景及六团调茅山、二支队待遇比较作为背景，不纳入核心过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC05-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰毕业后被派到三支队担任营卫生指导员。",
+        "process_text": "毕业以后，被派到三支队当营卫生指导员。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0061"
+        ],
+        "evidence_quote": "我毕业以后，派到三支队当营卫生指导员，拿八块。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "陈海峰领取八元技术津贴，体现尊重技术的基本政策。",
+        "process_text": "拿八块，作为技术津贴，属于尊重技术的基本政策。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0063"
+        ],
+        "evidence_quote": "我们就拿八块，我们自己培养的拿八块，但是在二支队，到前方部队里面，最低他们也拿五块，拿团以上干部的待遇，叫做技术津贴。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC05-DE006-P01",
+        "target_stage_id": "BATCH02-DOC05-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC05-S0061",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

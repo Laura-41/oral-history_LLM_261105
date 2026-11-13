@@ -1,0 +1,112 @@
+{
+  "run_time": "2026-11-11T22:54:10",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC01-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC01-DE001",
+  "usage": {
+    "prompt_tokens": 1591,
+    "total_tokens": 7351,
+    "completion_tokens": 5760,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4556
+    },
+    "time_to_first_token_ms": 45288,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5759000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-07\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC01-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"李长江部被俘五千余人，约近万人跑走；被俘人员部分遣送、部分参加新四军，新四军部队得到壮大；缴获枪弹物资；战斗速战速决并于19号晚至20号凌晨结束。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件边界从战斗开始（18号）到19号晚至20号凌晨结束，并涵盖战后俘虏处理与缴获枪弹物资；不扩展到更早的战役背景或后续影响。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"战斗速战速决，18号开始，19号晚上到20号凌晨结束。\",\n      \"process_text\": \"实际上18号开始， 19号晚上到20号凌晨就结束了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0012\",\n        \"BATCH04-DOC01-S0013\",\n        \"BATCH04-DOC01-S0014\"\n      ],\n      \"evidence_quote\": \"实际上18号开始， 19号晚上到20号凌晨就结束了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"俘获李长江部五千余人，其部一万五千余人中跑走将近一万人。\",\n      \"process_text\": \"    陈海峰：抓了他五千多人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0004\",\n        \"BATCH04-DOC01-S0005\"\n      ],\n      \"evidence_quote\": \"    陈海峰：抓了他五千多人。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"战后处理被俘人员：部分遣送回去，愿意参加新四军的参加新四军，至少一半以上参加，部队壮大。\",\n      \"process_text\": \"    陈海峰：有的是遣送回去啊，有愿意参加新四军的就参加新四军啊，我们的部队壮大了一批了，起码一半以上都参加新四军了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0007\"\n      ],\n      \"evidence_quote\": \"    陈海峰：有的是遣送回去啊，有愿意参加新四军的就参加新四军啊，我们的部队壮大了一批了，起码一半以上都参加新四军了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"缴获大量物资和枪弹，主要拿枪、子弹；所缴枪械数量有限，因对方并非人人有枪。\",\n      \"process_text\": \"缴了好多物资，缴了好多枪，他物资呢，带不走，来不及。主要是拿枪、子弹。他也不是每个人都有支枪，小泰山一个中队，他一百多人，一个中队长，（一个）副中队长，我们也就是缴他几十条枪，大概是四五十条枪。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0008\",\n        \"BATCH04-DOC01-S0010\",\n        \"BATCH04-DOC01-S0011\"\n      ],\n      \"evidence_quote\": \"缴了好多物资，缴了好多枪，他物资呢，带不走，来不及。主要是拿枪、子弹。他也不是每个人都有支枪，小泰山一个中队，他一百多人，一个中队长，（一个）副中队长，我们也就是缴他几十条枪，大概是四五十条枪。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE001-P01\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE001-P02\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0004\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE001-P02\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE001-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0007\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE001-P03\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0008\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-07",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC01-DE001",
+    "event_enrichment": {
+      "result_state": "李长江部被俘五千余人，约近万人跑走；被俘人员部分遣送、部分参加新四军，新四军部队得到壮大；缴获枪弹物资；战斗速战速决并于19号晚至20号凌晨结束。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件边界从战斗开始（18号）到19号晚至20号凌晨结束，并涵盖战后俘虏处理与缴获枪弹物资；不扩展到更早的战役背景或后续影响。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC01-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "战斗速战速决，18号开始，19号晚上到20号凌晨结束。",
+        "process_text": "实际上18号开始， 19号晚上到20号凌晨就结束了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0012",
+          "BATCH04-DOC01-S0013",
+          "BATCH04-DOC01-S0014"
+        ],
+        "evidence_quote": "实际上18号开始， 19号晚上到20号凌晨就结束了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "俘获李长江部五千余人，其部一万五千余人中跑走将近一万人。",
+        "process_text": "    陈海峰：抓了他五千多人。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0004",
+          "BATCH04-DOC01-S0005"
+        ],
+        "evidence_quote": "    陈海峰：抓了他五千多人。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "战后处理被俘人员：部分遣送回去，愿意参加新四军的参加新四军，至少一半以上参加，部队壮大。",
+        "process_text": "    陈海峰：有的是遣送回去啊，有愿意参加新四军的就参加新四军啊，我们的部队壮大了一批了，起码一半以上都参加新四军了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0007"
+        ],
+        "evidence_quote": "    陈海峰：有的是遣送回去啊，有愿意参加新四军的就参加新四军啊，我们的部队壮大了一批了，起码一半以上都参加新四军了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "缴获大量物资和枪弹，主要拿枪、子弹；所缴枪械数量有限，因对方并非人人有枪。",
+        "process_text": "缴了好多物资，缴了好多枪，他物资呢，带不走，来不及。主要是拿枪、子弹。他也不是每个人都有支枪，小泰山一个中队，他一百多人，一个中队长，（一个）副中队长，我们也就是缴他几十条枪，大概是四五十条枪。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0008",
+          "BATCH04-DOC01-S0010",
+          "BATCH04-DOC01-S0011"
+        ],
+        "evidence_quote": "缴了好多物资，缴了好多枪，他物资呢，带不走，来不及。主要是拿枪、子弹。他也不是每个人都有支枪，小泰山一个中队，他一百多人，一个中队长，（一个）副中队长，我们也就是缴他几十条枪，大概是四五十条枪。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC01-DE001-P01",
+        "target_stage_id": "BATCH04-DOC01-DE001-P02",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC01-S0004",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC01-DE001-P02",
+        "target_stage_id": "BATCH04-DOC01-DE001-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC01-S0007",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC01-DE001-P03",
+        "target_stage_id": "BATCH04-DOC01-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC01-S0008",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

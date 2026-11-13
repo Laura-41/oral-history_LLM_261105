@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T19:02:40",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC08-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC08-DE008",
+  "usage": {
+    "prompt_tokens": 1566,
+    "total_tokens": 11787,
+    "completion_tokens": 10221,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9030
+    },
+    "time_to_first_token_ms": 154001,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 10220000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC08-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"傅秋涛醉酒拔枪质问县长，众人紧张并赔礼道歉，县长受惊躲到桌下，驳壳枪子弹上膛。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件从春节繁昌县政府请宴开始，到傅秋涛醉酒拔枪质问、众人紧张道歉、县长躲桌下且子弹上膛结束；S0042 提供春节部队集中中分村的背景，S0044 提供请宴与冲突经过。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"春节繁昌县政府请宴背景\",\n      \"process_text\": \"过春节的时候，县长请他们到繁昌县政府附近一个小村子吃饭。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0044\"\n      ],\n      \"evidence_quote\": \"过春节的时候呀，县长请我们到他这个县政府，离开我们（这里）还有好几里路，（在）一个小村子请我们吃饭。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"傅秋涛醉酒拔枪质问县长\",\n      \"process_text\": \"傅秋涛吃醉了酒，骂县长是国民党反动派不抗战躲在后面，质问请吃饭是不是摆鸿门宴，并拉出驳壳枪。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0044\"\n      ],\n      \"evidence_quote\": \"傅秋涛吃醉了酒，就骂呀，把驳壳枪一拉出来（陈海峰做掏枪动作）：“他妈的，你这国民党反动派，不抗战躲在后面，你今天请我们吃饭，什么意思啊？你是不是摆鸿门宴？”\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"众人紧张并赔礼道歉\",\n      \"process_text\": \"大家当时都紧张了，催促处理，随后向县长赔礼道歉。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0044\"\n      ],\n      \"evidence_quote\": \"大家当时都紧张了，“快点快点把他……”哎呀，对不起对不起，还给这个县长赔礼道歉。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"县长受惊躲桌下且子弹上膛\",\n      \"process_text\": \"县长吓得钻到桌子底下去了，驳壳枪子弹上了膛。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0044\"\n      ],\n      \"evidence_quote\": \"县长吓得钻到桌子底下去了，他“啪啦”这子弹上了膛了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE008-P01\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0044\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE008-P02\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE008-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0044\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE008-P03\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE008-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0044\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC08-DE008",
+    "event_enrichment": {
+      "result_state": "傅秋涛醉酒拔枪质问县长，众人紧张并赔礼道歉，县长受惊躲到桌下，驳壳枪子弹上膛。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件从春节繁昌县政府请宴开始，到傅秋涛醉酒拔枪质问、众人紧张道歉、县长躲桌下且子弹上膛结束；S0042 提供春节部队集中中分村的背景，S0044 提供请宴与冲突经过。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC08-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "春节繁昌县政府请宴背景",
+        "process_text": "过春节的时候，县长请他们到繁昌县政府附近一个小村子吃饭。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0044"
+        ],
+        "evidence_quote": "过春节的时候呀，县长请我们到他这个县政府，离开我们（这里）还有好几里路，（在）一个小村子请我们吃饭。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "傅秋涛醉酒拔枪质问县长",
+        "process_text": "傅秋涛吃醉了酒，骂县长是国民党反动派不抗战躲在后面，质问请吃饭是不是摆鸿门宴，并拉出驳壳枪。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0044"
+        ],
+        "evidence_quote": "傅秋涛吃醉了酒，就骂呀，把驳壳枪一拉出来（陈海峰做掏枪动作）：“他妈的，你这国民党反动派，不抗战躲在后面，你今天请我们吃饭，什么意思啊？你是不是摆鸿门宴？”",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "众人紧张并赔礼道歉",
+        "process_text": "大家当时都紧张了，催促处理，随后向县长赔礼道歉。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0044"
+        ],
+        "evidence_quote": "大家当时都紧张了，“快点快点把他……”哎呀，对不起对不起，还给这个县长赔礼道歉。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "县长受惊躲桌下且子弹上膛",
+        "process_text": "县长吓得钻到桌子底下去了，驳壳枪子弹上了膛。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0044"
+        ],
+        "evidence_quote": "县长吓得钻到桌子底下去了，他“啪啦”这子弹上了膛了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC08-DE008-P01",
+        "target_stage_id": "BATCH02-DOC08-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0044",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE008-P02",
+        "target_stage_id": "BATCH02-DOC08-DE008-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH02-DOC08-S0044",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE008-P03",
+        "target_stage_id": "BATCH02-DOC08-DE008-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0044",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

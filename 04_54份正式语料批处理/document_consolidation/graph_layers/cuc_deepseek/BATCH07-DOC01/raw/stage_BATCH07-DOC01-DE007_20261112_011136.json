@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T01:11:36",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC01-DE007",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC01-DE007",
+  "usage": {
+    "prompt_tokens": 1353,
+    "total_tokens": 5998,
+    "completion_tokens": 4645,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3462
+    },
+    "time_to_first_token_ms": 38130,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4644000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-15\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC01-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"特纵在南京完成历史任务，分建为炮兵（工兵）一系与装甲兵一系两个司令部；炮兵司令部继续管炮三师、炮七师、高炮六十三师及军械部、迫击炮工厂等，装甲兵司令部由何克希任司令。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以S0029中中央军委建立炮、装、工司令部及特纵随之分建为起点，至S0031分建后炮兵司令部建制与归属说明为终点；不含此前剿匪、编师、炮九师等背景。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"中央军委建立炮、装、工司令部，特纵据此分建\",\n      \"process_text\": \"第二年中央军委在炮、装、工方面都建立了司令部，特纵因此也分建。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0029\"\n      ],\n      \"evidence_quote\": \"第二年因为我们都是平行的（听不清）嘛，中央军委这个地方，炮、装、工，都建立了司令部。所以我们特纵就也分建了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"特纵最初分建为炮兵与工兵、坦克两个司令部\",\n      \"process_text\": \"最初分建两个司令部：一个炮兵跟工兵，另一个坦克，成为两个司令部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0029\"\n      ],\n      \"evidence_quote\": \"最初分建两个（司令部），就是一个炮兵跟工兵，因为他是一个大头嘛，另外一个坦克吧，就成两个司令部了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"分建后陈锐霆负责炮兵工兵，何克希赴徐州任装甲兵司令\",\n      \"process_text\": \"陈锐霆担任炮兵跟工兵这一头领导，政治委员何克希到徐州当装甲兵司令。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0031\"\n      ],\n      \"evidence_quote\": \"我就担任炮兵跟工兵这一头（的领导），政治委员（何克希）就到徐州去了当装甲兵司令。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"特纵在南京完成历史任务，炮兵司令部接续管理炮兵师及军械、工厂\",\n      \"process_text\": \"在南京特纵完成历史任务；分建后称炮兵司令部，管炮三师、炮七师、高炮六十三师，主要训练干部，并管军械部和迫击炮工厂，归三野炮兵司令部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0031\"\n      ],\n      \"evidence_quote\": \"这个时候在南京特纵就完成历史任务了。分建了以后我们就叫炮兵司令部，管炮三师，还有以后又建的一个炮七师，还有一个高炮六十三师，三个师嘛，主要是训练干部。那个时候这个建制，分出去一个装甲兵，进来一个，炮兵那个时候管军械部，还有一个迫击炮的工厂，在南京挺大的，就归到三野这个炮兵司令部。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE007-P01\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0029\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE007-P02\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0031\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE007-P03\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE007-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0031\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-15",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC01-DE007",
+    "event_enrichment": {
+      "result_state": "特纵在南京完成历史任务，分建为炮兵（工兵）一系与装甲兵一系两个司令部；炮兵司令部继续管炮三师、炮七师、高炮六十三师及军械部、迫击炮工厂等，装甲兵司令部由何克希任司令。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以S0029中中央军委建立炮、装、工司令部及特纵随之分建为起点，至S0031分建后炮兵司令部建制与归属说明为终点；不含此前剿匪、编师、炮九师等背景。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC01-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "中央军委建立炮、装、工司令部，特纵据此分建",
+        "process_text": "第二年中央军委在炮、装、工方面都建立了司令部，特纵因此也分建。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0029"
+        ],
+        "evidence_quote": "第二年因为我们都是平行的（听不清）嘛，中央军委这个地方，炮、装、工，都建立了司令部。所以我们特纵就也分建了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "特纵最初分建为炮兵与工兵、坦克两个司令部",
+        "process_text": "最初分建两个司令部：一个炮兵跟工兵，另一个坦克，成为两个司令部。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0029"
+        ],
+        "evidence_quote": "最初分建两个（司令部），就是一个炮兵跟工兵，因为他是一个大头嘛，另外一个坦克吧，就成两个司令部了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "分建后陈锐霆负责炮兵工兵，何克希赴徐州任装甲兵司令",
+        "process_text": "陈锐霆担任炮兵跟工兵这一头领导，政治委员何克希到徐州当装甲兵司令。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0031"
+        ],
+        "evidence_quote": "我就担任炮兵跟工兵这一头（的领导），政治委员（何克希）就到徐州去了当装甲兵司令。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "特纵在南京完成历史任务，炮兵司令部接续管理炮兵师及军械、工厂",
+        "process_text": "在南京特纵完成历史任务；分建后称炮兵司令部，管炮三师、炮七师、高炮六十三师，主要训练干部，并管军械部和迫击炮工厂，归三野炮兵司令部。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0031"
+        ],
+        "evidence_quote": "这个时候在南京特纵就完成历史任务了。分建了以后我们就叫炮兵司令部，管炮三师，还有以后又建的一个炮七师，还有一个高炮六十三师，三个师嘛，主要是训练干部。那个时候这个建制，分出去一个装甲兵，进来一个，炮兵那个时候管军械部，还有一个迫击炮的工厂，在南京挺大的，就归到三野这个炮兵司令部。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC01-DE007-P01",
+        "target_stage_id": "BATCH07-DOC01-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC01-S0029",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC01-DE007-P02",
+        "target_stage_id": "BATCH07-DOC01-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC01-S0031",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC01-DE007-P03",
+        "target_stage_id": "BATCH07-DOC01-DE007-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC01-S0031",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

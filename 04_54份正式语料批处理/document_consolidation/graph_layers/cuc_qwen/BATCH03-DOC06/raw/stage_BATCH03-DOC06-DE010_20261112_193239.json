@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T19:32:39",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE010",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE010",
+  "usage": {
+    "prompt_tokens": 1297,
+    "total_tokens": 6934,
+    "completion_tokens": 5637,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4733
+    },
+    "time_to_first_token_ms": 181212,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5636000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"罗帅去参加扩大的六中全会；115师派邱子明、邓福生跟着罗帅去开西北青救会代表大会。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据 S0057 从「罗帅罗荣桓他去参加扩大的六中全会」到「跟着罗帅去开会了」的连续叙述；其后「我们就在那里继续打小仗」转入其他活动。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"罗帅参加扩大的六中全会\",\n      \"process_text\": \"罗帅罗荣桓他去参加扩大的六中全会。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0057\"\n      ],\n      \"evidence_quote\": \"罗帅罗荣桓他去参加扩大的六中全会。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"西北青救会改组后召开代表大会\",\n      \"process_text\": \"另外西北青救会，就是青年团改变性质以后，原来不是共青团嘛，以后改为西北青年抗日救国会，开代表大会。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0057\"\n      ],\n      \"evidence_quote\": \"另外西北青救会，就是青年团改变性质以后，原来不是共青团嘛，以后改为西北青年抗日救国会，开代表大会。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"115师派邱子明、邓福生随罗帅参加青救会代表大会\",\n      \"process_text\": \"115师派了两个人，一个叫邱子明，一个叫邓福生，跟着罗帅去开会了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0057\"\n      ],\n      \"evidence_quote\": \"115师派了两个人，一个叫邱子明，一个叫邓福生，跟着罗帅去开会了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE010-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0057\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE010-P02\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE010-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0057\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE010",
+    "event_enrichment": {
+      "result_state": "罗帅去参加扩大的六中全会；115师派邱子明、邓福生跟着罗帅去开西北青救会代表大会。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "依据 S0057 从「罗帅罗荣桓他去参加扩大的六中全会」到「跟着罗帅去开会了」的连续叙述；其后「我们就在那里继续打小仗」转入其他活动。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "罗帅参加扩大的六中全会",
+        "process_text": "罗帅罗荣桓他去参加扩大的六中全会。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0057"
+        ],
+        "evidence_quote": "罗帅罗荣桓他去参加扩大的六中全会。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "西北青救会改组后召开代表大会",
+        "process_text": "另外西北青救会，就是青年团改变性质以后，原来不是共青团嘛，以后改为西北青年抗日救国会，开代表大会。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0057"
+        ],
+        "evidence_quote": "另外西北青救会，就是青年团改变性质以后，原来不是共青团嘛，以后改为西北青年抗日救国会，开代表大会。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "115师派邱子明、邓福生随罗帅参加青救会代表大会",
+        "process_text": "115师派了两个人，一个叫邱子明，一个叫邓福生，跟着罗帅去开会了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0057"
+        ],
+        "evidence_quote": "115师派了两个人，一个叫邱子明，一个叫邓福生，跟着罗帅去开会了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE010-P01",
+        "target_stage_id": "BATCH03-DOC06-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0057",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE010-P02",
+        "target_stage_id": "BATCH03-DOC06-DE010-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0057",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

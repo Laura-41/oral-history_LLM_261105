@@ -1,0 +1,107 @@
+单文档验证：BATCH03-DOC03 / cuc/qwen
+日志：04_54份正式语料批处理/run_logs/GRAPH_VERIFY_BATCH03-DOC03_cuc_qwen_20261113_065413_pid27890.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+
+===== L0 零 API 底座表 =====
+[落盘] BATCH03-DOC03 / cuc/qwen
+  原文片段 92｜一级事件 6｜覆盖率 1.0000
+  人工视图：无
+    documents                  1 行
+    source_segments           92 行
+    source_attachments        94 行
+    coverage_audit             1 行
+    document_annotations      28 行
+    event_nodes                6 行
+    event_processes            6 行
+    event_participants        34 行
+    event_circumstances       55 行
+    event_next                 5 行
+  警告 2 条（详见 L0_report.json）
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC03
+
+===== L1/L2 模型任务（真实 API 调用） =====
+[真实调用] BATCH03-DOC03 / cuc/qwen / tasks=stage,entity_time
+  一级事件 6｜原文片段 92｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC03/raw
+
+== stage：6 次调用 ==
+  [1/6] stage_BATCH03-DOC03-DE001 已有成功响应，跳过（断点续跑）
+  [2/6] stage_BATCH03-DOC03-DE002 已有成功响应，跳过（断点续跑）
+  [3/6] stage_BATCH03-DOC03-DE003 已有成功响应，跳过（断点续跑）
+  [4/6] stage_BATCH03-DOC03-DE004 已有成功响应，跳过（断点续跑）
+  [5/6] stage_BATCH03-DOC03-DE005 已有成功响应，跳过（断点续跑）
+  [6/6] stage_BATCH03-DOC03-DE006 已有成功响应，跳过（断点续跑）
+
+== entity_time：1 次调用 ==
+  [1/1] 请求 entity_time/CHF-V2-06，输入 28,974 字符，最长等待 3600s……
+  完成：total_tokens=118015
+
+全部完成：7 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH03-DOC03 --model cuc/qwen --write
+
+===== 后处理：校验、算偏移、生成 18 张 CSV =====
+  环境成分待人工复核 18 条（就近归类／规范值待补，另出清单）
+[落盘] BATCH03-DOC03 / cuc/qwen
+  stage 响应 6｜entity_time 响应 1｜覆盖率 1.0000
+    documents                  1 行
+    source_segments           92 行
+    source_attachments       125 行
+    coverage_audit             1 行
+    document_annotations      28 行
+    event_nodes                6 行
+    event_processes            6 行
+    event_participants        34 行
+    event_circumstances       55 行
+    event_next                 5 行
+    process_stages            30 行
+    stage_next                24 行
+    event_times                6 行
+    time_expressions          21 行
+    entities                 138 行
+    entity_mentions          189 行
+    entity_aliases            18 行
+    entity_relations          73 行
+  校验问题 0 条｜偏移待核 62 条
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC03
+
+===== 18 表完整性验收 =====
+[通过] BATCH03-DOC03 / cuc/qwen
+  片段 92｜事件 6｜阶段 30｜实体 138｜提及 189｜时间表达 21｜覆盖率 1.0000
+  报告：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC03/VALIDATION_report.json
+
+===== L3/L4 导出 24 张 import CSV =====
+[落盘] 模型线 cuc/qwen｜已验收文档 15 份
+  生平叠加视图：疑似同一经历 0 组（只标 NEEDS_REVIEW，交人工）；人工 MERGE 生效 0 组，KEEP_SEPARATE 0 组
+
+== 24 张 import CSV 规模 ==
+  documents                    15 行
+  source_segments            1174 行
+  source_attachments         1810 行
+  event_nodes                 127 行
+  event_processes             127 行
+  event_participants          427 行
+  event_circumstances         688 行
+  process_stages              553 行
+  stage_next                  429 行
+  event_next                  112 行
+  entities                    987 行
+  entity_mentions             695 行
+  entity_aliases              115 行
+  entity_relations            243 行
+  event_times                 127 行
+  time_expressions            367 行
+  document_annotations        444 行
+  coverage_audit               15 行
+  person_subjects               3 行
+  document_persons             15 行
+  life_episodes                95 行
+  life_episode_sources         95 行
+  life_episode_next            92 行
+  narrated_contexts            31 行
+
+  警告 3741 条（详见报告）
+
+  已写入：05_合并与Neo4j/import_cuc_qwen
+
+===== 完成 =====
+结果：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC03/
+图谱导入：05_合并与Neo4j/import_cuc_qwen/
+请把 VALIDATION_report.json 与 prepare_summary.json 交助手复核，再决定是否放行 BATCH03。

@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T08:45:37",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC02-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC02-DE003",
+  "usage": {
+    "prompt_tokens": 1319,
+    "total_tokens": 6784,
+    "completion_tokens": 5465,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4290
+    },
+    "time_to_first_token_ms": 80725,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5464000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC02-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"32军在豫西收容部队后奉命南调，经长沙、浏阳到达南昌，商震在南昌担任守备任务。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据片段从“以后就到了豫西，把部队都收容了”开始，到“就在那个地方担任守备任务”结束，覆盖豫西收容、奉命南调、长沙浏阳停留、南昌守备。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"32军到豫西收容部队，河防连及爬城出来人员返回，损失不大。\",\n      \"process_text\": \"以后就到了豫西，把部队都收容了。河防的连也回来了，另外一些部队爬城出来的人都回来了，损失没有好多。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0033\"\n      ],\n      \"evidence_quote\": \"陈锐霆：以后就到了豫西，把部队都收容了。河防的连也回来了，另外一些部队爬城出来的人都回来了，损失没有好多。以后就是32军奉命南调，先到了长沙，在浏阳待了大概一两个礼拜吧，以后又被命令到南昌。到了南昌啊，我们32军的军长商震，也就是20集团军的司令，就在那个地方担任守备任务。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"32军奉命南调，先到长沙，在浏阳停留约一两个礼拜，再奉命到南昌。\",\n      \"process_text\": \"以后就是32军奉命南调，先到了长沙，在浏阳待了大概一两个礼拜吧，以后又被命令到南昌。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0033\"\n      ],\n      \"evidence_quote\": \"陈锐霆：以后就到了豫西，把部队都收容了。河防的连也回来了，另外一些部队爬城出来的人都回来了，损失没有好多。以后就是32军奉命南调，先到了长沙，在浏阳待了大概一两个礼拜吧，以后又被命令到南昌。到了南昌啊，我们32军的军长商震，也就是20集团军的司令，就在那个地方担任守备任务。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"32军到达南昌，军长商震（20集团军司令）在当地担任守备任务。\",\n      \"process_text\": \"到了南昌啊，我们32军的军长商震，也就是20集团军的司令，就在那个地方担任守备任务。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0033\"\n      ],\n      \"evidence_quote\": \"陈锐霆：以后就到了豫西，把部队都收容了。河防的连也回来了，另外一些部队爬城出来的人都回来了，损失没有好多。以后就是32军奉命南调，先到了长沙，在浏阳待了大概一两个礼拜吧，以后又被命令到南昌。到了南昌啊，我们32军的军长商震，也就是20集团军的司令，就在那个地方担任守备任务。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE003-P01\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0033\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE003-P02\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0033\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC02-DE003",
+    "event_enrichment": {
+      "result_state": "32军在豫西收容部队后奉命南调，经长沙、浏阳到达南昌，商震在南昌担任守备任务。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "依据片段从“以后就到了豫西，把部队都收容了”开始，到“就在那个地方担任守备任务”结束，覆盖豫西收容、奉命南调、长沙浏阳停留、南昌守备。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC02-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "32军到豫西收容部队，河防连及爬城出来人员返回，损失不大。",
+        "process_text": "以后就到了豫西，把部队都收容了。河防的连也回来了，另外一些部队爬城出来的人都回来了，损失没有好多。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0033"
+        ],
+        "evidence_quote": "陈锐霆：以后就到了豫西，把部队都收容了。河防的连也回来了，另外一些部队爬城出来的人都回来了，损失没有好多。以后就是32军奉命南调，先到了长沙，在浏阳待了大概一两个礼拜吧，以后又被命令到南昌。到了南昌啊，我们32军的军长商震，也就是20集团军的司令，就在那个地方担任守备任务。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "32军奉命南调，先到长沙，在浏阳停留约一两个礼拜，再奉命到南昌。",
+        "process_text": "以后就是32军奉命南调，先到了长沙，在浏阳待了大概一两个礼拜吧，以后又被命令到南昌。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0033"
+        ],
+        "evidence_quote": "陈锐霆：以后就到了豫西，把部队都收容了。河防的连也回来了，另外一些部队爬城出来的人都回来了，损失没有好多。以后就是32军奉命南调，先到了长沙，在浏阳待了大概一两个礼拜吧，以后又被命令到南昌。到了南昌啊，我们32军的军长商震，也就是20集团军的司令，就在那个地方担任守备任务。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "32军到达南昌，军长商震（20集团军司令）在当地担任守备任务。",
+        "process_text": "到了南昌啊，我们32军的军长商震，也就是20集团军的司令，就在那个地方担任守备任务。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0033"
+        ],
+        "evidence_quote": "陈锐霆：以后就到了豫西，把部队都收容了。河防的连也回来了，另外一些部队爬城出来的人都回来了，损失没有好多。以后就是32军奉命南调，先到了长沙，在浏阳待了大概一两个礼拜吧，以后又被命令到南昌。到了南昌啊，我们32军的军长商震，也就是20集团军的司令，就在那个地方担任守备任务。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC02-DE003-P01",
+        "target_stage_id": "BATCH02-DOC02-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC02-S0033",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC02-DE003-P02",
+        "target_stage_id": "BATCH02-DOC02-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC02-S0033",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T01:20:16",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC04-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC04-DE001",
+  "usage": {
+    "prompt_tokens": 1781,
+    "total_tokens": 7053,
+    "completion_tokens": 5272,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4183
+    },
+    "time_to_first_token_ms": 40684,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC04-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰在吕坵镇住下并开展群众工作、抗日宣传；三人小组分散居住，地下党活动仍保持秘密。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“我做群众工作，搞抗日宣传工作，在一个镇上住，叫吕坵镇”为核心，向前取三人小组分散居住，向后取春耕时村中宣传及秘密开会安排；不含锄奸队具体行动等外围内容。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"三人小组分散居住，为在各自地点开展工作做准备。\",\n      \"process_text\": \"我们这个三人小组，三个人住三个地方。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0012\"\n      ],\n      \"evidence_quote\": \"我们这个三人小组，三个人住三个地方。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈海峰在吕坵镇住下，开展群众工作和抗日宣传。\",\n      \"process_text\": \"我做群众工作，搞抗日宣传工作，在一个镇上住，叫吕坵镇。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0012\"\n      ],\n      \"evidence_quote\": \"我做群众工作，搞抗日宣传工作，在一个镇上住，叫吕坵镇。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"利用春耕等时机在村中做群众工作、组织宣传，同时地下党活动保持秘密。\",\n      \"process_text\": \"日本鬼子经常下来，我们埋伏在老百姓家里，等春耕，在一个村子里头，做做群众工作，顺便组织宣传工作。我们地下党当时党员开会都是秘密的，不能跟自己的人讲。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0023\"\n      ],\n      \"evidence_quote\": \"日本鬼子经常下来，我们埋伏在老百姓家里，等春耕，在一个村子里头，做做群众工作，顺便组织宣传工作。我们地下党当时党员开会都是秘密的，不能跟自己的人讲。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"地下党秘密开会地点设在大羊庄，当地有白皮红心两面派乡长吴甲寅。\",\n      \"process_text\": \"我们开会到哪里呢？到大羊庄，唐志炯待的那个地方。那个地方有一个白皮红心（的）两面派乡长，这个乡长叫吴甲寅。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0029\"\n      ],\n      \"evidence_quote\": \"我们开会到哪里呢？到大羊庄，唐志炯待的那个地方。那个地方有一个白皮红心（的）两面派乡长，这个乡长叫吴甲寅。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE001-P01\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE001-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0012\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE001-P02\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE001-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0023\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE001-P03\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE001-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0029\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC04-DE001",
+    "event_enrichment": {
+      "result_state": "陈海峰在吕坵镇住下并开展群众工作、抗日宣传；三人小组分散居住，地下党活动仍保持秘密。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以“我做群众工作，搞抗日宣传工作，在一个镇上住，叫吕坵镇”为核心，向前取三人小组分散居住，向后取春耕时村中宣传及秘密开会安排；不含锄奸队具体行动等外围内容。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC04-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "三人小组分散居住，为在各自地点开展工作做准备。",
+        "process_text": "我们这个三人小组，三个人住三个地方。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0012"
+        ],
+        "evidence_quote": "我们这个三人小组，三个人住三个地方。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "陈海峰在吕坵镇住下，开展群众工作和抗日宣传。",
+        "process_text": "我做群众工作，搞抗日宣传工作，在一个镇上住，叫吕坵镇。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0012"
+        ],
+        "evidence_quote": "我做群众工作，搞抗日宣传工作，在一个镇上住，叫吕坵镇。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "利用春耕等时机在村中做群众工作、组织宣传，同时地下党活动保持秘密。",
+        "process_text": "日本鬼子经常下来，我们埋伏在老百姓家里，等春耕，在一个村子里头，做做群众工作，顺便组织宣传工作。我们地下党当时党员开会都是秘密的，不能跟自己的人讲。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0023"
+        ],
+        "evidence_quote": "日本鬼子经常下来，我们埋伏在老百姓家里，等春耕，在一个村子里头，做做群众工作，顺便组织宣传工作。我们地下党当时党员开会都是秘密的，不能跟自己的人讲。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "地下党秘密开会地点设在大羊庄，当地有白皮红心两面派乡长吴甲寅。",
+        "process_text": "我们开会到哪里呢？到大羊庄，唐志炯待的那个地方。那个地方有一个白皮红心（的）两面派乡长，这个乡长叫吴甲寅。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0029"
+        ],
+        "evidence_quote": "我们开会到哪里呢？到大羊庄，唐志炯待的那个地方。那个地方有一个白皮红心（的）两面派乡长，这个乡长叫吴甲寅。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC04-DE001-P01",
+        "target_stage_id": "BATCH07-DOC04-DE001-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH07-DOC04-S0012",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE001-P02",
+        "target_stage_id": "BATCH07-DOC04-DE001-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH07-DOC04-S0023",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE001-P03",
+        "target_stage_id": "BATCH07-DOC04-DE001-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH07-DOC04-S0029",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

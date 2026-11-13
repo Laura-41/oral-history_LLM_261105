@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-12T00:04:30",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC06-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC06-DE005",
+  "usage": {
+    "prompt_tokens": 1199,
+    "total_tokens": 3692,
+    "completion_tokens": 2493,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1926
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 19386,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC06-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"七团在费县西北地区开展抗日宣传和部队训练，叙述者一行也在此地。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以七团到达费县西北并开展宣传抗日、训练部队为边界；前文敌人意图与后文地形描述不作为本事件核心过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"冀鲁边某支队七团约千人到达费县西北地区。\",\n      \"process_text\": \"过了几天，就是冀鲁边的哪个支队的七团，这个团有千把人，也过来了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0022\"\n      ],\n      \"evidence_quote\": \"过了几天，就是冀鲁边的哪个支队的七团，这个团有千把人，也过来了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"七团到达后在费县西北开展抗日宣传和部队训练，叙述者一行也在该地。\",\n      \"process_text\": \"过来以后，他就在费（县）西北这个地区做宣传抗日、训练部队这样的，我们也在那里。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0022\"\n      ],\n      \"evidence_quote\": \"过来以后，他就在费（县）西北这个地区做宣传抗日、训练部队这样的，我们也在那里。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC06-DE005-P01\",\n      \"target_stage_id\": \"BATCH05-DOC06-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC06-S0022\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC06-DE005",
+    "event_enrichment": {
+      "result_state": "七团在费县西北地区开展抗日宣传和部队训练，叙述者一行也在此地。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以七团到达费县西北并开展宣传抗日、训练部队为边界；前文敌人意图与后文地形描述不作为本事件核心过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC06-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "冀鲁边某支队七团约千人到达费县西北地区。",
+        "process_text": "过了几天，就是冀鲁边的哪个支队的七团，这个团有千把人，也过来了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0022"
+        ],
+        "evidence_quote": "过了几天，就是冀鲁边的哪个支队的七团，这个团有千把人，也过来了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC06-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "七团到达后在费县西北开展抗日宣传和部队训练，叙述者一行也在该地。",
+        "process_text": "过来以后，他就在费（县）西北这个地区做宣传抗日、训练部队这样的，我们也在那里。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0022"
+        ],
+        "evidence_quote": "过来以后，他就在费（县）西北这个地区做宣传抗日、训练部队这样的，我们也在那里。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC06-DE005-P01",
+        "target_stage_id": "BATCH05-DOC06-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC06-S0022",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

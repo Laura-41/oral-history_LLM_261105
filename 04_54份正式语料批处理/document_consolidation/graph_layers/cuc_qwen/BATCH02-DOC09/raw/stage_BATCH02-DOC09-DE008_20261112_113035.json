@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T11:30:35",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC09-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC09-DE008",
+  "usage": {
+    "prompt_tokens": 1380,
+    "total_tokens": 8610,
+    "completion_tokens": 7230,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5760
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 156886
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC09-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"卫立煌在延安见到毛主席，朱德回延安经过洛阳时受到卫立煌招待和保护，另听说卫立煌给八路军一些步枪子弹。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起自 S0090 中‘卫立煌到了延安以后，他要求见毛主席’，覆盖到洛阳招待保护朱德；止于 S0092 中‘他还给过一些子弹，步枪子弹’。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"卫立煌到延安后要求并见到毛主席\",\n      \"process_text\": \"卫立煌到了延安以后，他要求见毛主席，我听他们说，毛主席见了他\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0090\"\n      ],\n      \"evidence_quote\": \"    杨永松：嗯，卫立煌到了延安以后，他要求见毛主席，我听他们说，毛主席见了他，卫立煌本来他对蒋介石来说是比较反动的，鄂豫皖就是他领着把四方面军赶出鄂豫皖根据地。但是经过抗战啊，大概他也是黄埔的学生，他就思想进步。他去见了毛主席，大概以后听说啊，到了洛阳以后啊，他对八路军啊……朱老总他们在太行山，跟后方联系呀，就要经过洛阳。朱老总回延安的时候，他是经过洛阳回延安的，卫立煌还招待他，而且保护他。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"口述背景：经过抗战后卫立煌思想进步\",\n      \"process_text\": \"但是经过抗战啊，大概他也是黄埔的学生，他就思想进步。他去见了毛主席\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0090\"\n      ],\n      \"evidence_quote\": \"    杨永松：嗯，卫立煌到了延安以后，他要求见毛主席，我听他们说，毛主席见了他，卫立煌本来他对蒋介石来说是比较反动的，鄂豫皖就是他领着把四方面军赶出鄂豫皖根据地。但是经过抗战啊，大概他也是黄埔的学生，他就思想进步。他去见了毛主席，大概以后听说啊，到了洛阳以后啊，他对八路军啊……朱老总他们在太行山，跟后方联系呀，就要经过洛阳。朱老总回延安的时候，他是经过洛阳回延安的，卫立煌还招待他，而且保护他。\",\n      \"confidence\": \"LOW\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"朱德回延安经过洛阳，卫立煌招待并保护他\",\n      \"process_text\": \"朱老总回延安的时候，他是经过洛阳回延安的，卫立煌还招待他，而且保护他。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0090\"\n      ],\n      \"evidence_quote\": \"    杨永松：嗯，卫立煌到了延安以后，他要求见毛主席，我听他们说，毛主席见了他，卫立煌本来他对蒋介石来说是比较反动的，鄂豫皖就是他领着把四方面军赶出鄂豫皖根据地。但是经过抗战啊，大概他也是黄埔的学生，他就思想进步。他去见了毛主席，大概以后听说啊，到了洛阳以后啊，他对八路军啊……朱老总他们在太行山，跟后方联系呀，就要经过洛阳。朱老总回延安的时候，他是经过洛阳回延安的，卫立煌还招待他，而且保护他。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"听说卫立煌给八路军一些步枪子弹\",\n      \"process_text\": \"另外我也听说，他知道我们八路军弹药很困难，他还给过一些子弹，步枪子弹。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0092\"\n      ],\n      \"evidence_quote\": \"    杨永松：另外我也听说，他知道我们八路军弹药很困难，他还给过一些子弹，步枪子弹。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE008-P01\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE008-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0090\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE008-P02\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0090\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE008-P03\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE008-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0092\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC09-DE008",
+    "event_enrichment": {
+      "result_state": "卫立煌在延安见到毛主席，朱德回延安经过洛阳时受到卫立煌招待和保护，另听说卫立煌给八路军一些步枪子弹。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起自 S0090 中‘卫立煌到了延安以后，他要求见毛主席’，覆盖到洛阳招待保护朱德；止于 S0092 中‘他还给过一些子弹，步枪子弹’。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC09-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "卫立煌到延安后要求并见到毛主席",
+        "process_text": "卫立煌到了延安以后，他要求见毛主席，我听他们说，毛主席见了他",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0090"
+        ],
+        "evidence_quote": "    杨永松：嗯，卫立煌到了延安以后，他要求见毛主席，我听他们说，毛主席见了他，卫立煌本来他对蒋介石来说是比较反动的，鄂豫皖就是他领着把四方面军赶出鄂豫皖根据地。但是经过抗战啊，大概他也是黄埔的学生，他就思想进步。他去见了毛主席，大概以后听说啊，到了洛阳以后啊，他对八路军啊……朱老总他们在太行山，跟后方联系呀，就要经过洛阳。朱老总回延安的时候，他是经过洛阳回延安的，卫立煌还招待他，而且保护他。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "口述背景：经过抗战后卫立煌思想进步",
+        "process_text": "但是经过抗战啊，大概他也是黄埔的学生，他就思想进步。他去见了毛主席",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0090"
+        ],
+        "evidence_quote": "    杨永松：嗯，卫立煌到了延安以后，他要求见毛主席，我听他们说，毛主席见了他，卫立煌本来他对蒋介石来说是比较反动的，鄂豫皖就是他领着把四方面军赶出鄂豫皖根据地。但是经过抗战啊，大概他也是黄埔的学生，他就思想进步。他去见了毛主席，大概以后听说啊，到了洛阳以后啊，他对八路军啊……朱老总他们在太行山，跟后方联系呀，就要经过洛阳。朱老总回延安的时候，他是经过洛阳回延安的，卫立煌还招待他，而且保护他。",
+        "confidence": "LOW"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "朱德回延安经过洛阳，卫立煌招待并保护他",
+        "process_text": "朱老总回延安的时候，他是经过洛阳回延安的，卫立煌还招待他，而且保护他。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0090"
+        ],
+        "evidence_quote": "    杨永松：嗯，卫立煌到了延安以后，他要求见毛主席，我听他们说，毛主席见了他，卫立煌本来他对蒋介石来说是比较反动的，鄂豫皖就是他领着把四方面军赶出鄂豫皖根据地。但是经过抗战啊，大概他也是黄埔的学生，他就思想进步。他去见了毛主席，大概以后听说啊，到了洛阳以后啊，他对八路军啊……朱老总他们在太行山，跟后方联系呀，就要经过洛阳。朱老总回延安的时候，他是经过洛阳回延安的，卫立煌还招待他，而且保护他。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "听说卫立煌给八路军一些步枪子弹",
+        "process_text": "另外我也听说，他知道我们八路军弹药很困难，他还给过一些子弹，步枪子弹。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0092"
+        ],
+        "evidence_quote": "    杨永松：另外我也听说，他知道我们八路军弹药很困难，他还给过一些子弹，步枪子弹。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC09-DE008-P01",
+        "target_stage_id": "BATCH02-DOC09-DE008-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC09-S0090",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE008-P02",
+        "target_stage_id": "BATCH02-DOC09-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0090",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE008-P03",
+        "target_stage_id": "BATCH02-DOC09-DE008-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0092",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

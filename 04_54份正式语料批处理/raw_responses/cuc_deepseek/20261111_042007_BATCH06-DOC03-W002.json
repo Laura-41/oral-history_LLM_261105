@@ -1,0 +1,195 @@
+{
+  "run_time": "2026-11-11T04:20:07",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH06-DOC03-W002",
+  "technical_document_id": "BATCH06-DOC03",
+  "document_id": "09.杨永松100507（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH06-DOC03-S0020",
+    "BATCH06-DOC03-S0021",
+    "BATCH06-DOC03-S0022",
+    "BATCH06-DOC03-S0023",
+    "BATCH06-DOC03-S0024",
+    "BATCH06-DOC03-S0025",
+    "BATCH06-DOC03-S0026",
+    "BATCH06-DOC03-S0027",
+    "BATCH06-DOC03-S0028",
+    "BATCH06-DOC03-S0029",
+    "BATCH06-DOC03-S0030",
+    "BATCH06-DOC03-S0031",
+    "BATCH06-DOC03-S0032",
+    "BATCH06-DOC03-S0033",
+    "BATCH06-DOC03-S0034",
+    "BATCH06-DOC03-S0035",
+    "BATCH06-DOC03-S0036",
+    "BATCH06-DOC03-S0037"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 3,
+    "assigned_segment_count": 7,
+    "unassigned_segment_count": 11,
+    "input_segment_count": 18,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH06-DOC03-W002-E03"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH06-DOC03-W002",
+    "events": [
+      {
+        "candidate_id": "BATCH06-DOC03-W002-E01",
+        "source_segment_ids": [
+          "BATCH06-DOC03-S0022",
+          "BATCH06-DOC03-S0024"
+        ],
+        "event": {
+          "event_name": "特务营打四各哨地主武装后返回四县边联",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "打四各哨地主武装",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "咱们",
+              "normalized_entity": "特务营",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "四各哨（音）那个地主武装那个地方",
+              "normalized_entity": "四各哨地主武装",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "群众要求我们去打",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "结果人家弹药很充足，咱们打了一下，要攻的话伤亡很大，可是打这么一下，他知道八路军正规部队来了，不好惹，他这个反动的气焰就有所收敛，不敢随便出来抓我们的干部。",
+          "type_basis": "核心过程“打”为物质行动，Actor=咱们（特务营），Goal=四各哨地主武装；有实际军事行动和敌方反应，非言语或心理过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC03-W002-E02",
+        "source_segment_ids": [
+          "BATCH06-DOC03-S0028",
+          "BATCH06-DOC03-S0030"
+        ],
+        "event": {
+          "event_name": "杨永松任特务团政治主任",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "任政治主任",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "杨永松",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "我就去当政治主任",
+          "type_basis": "“去当”表示就任职务，是岗位/身份变化，按物质过程处理；Actor=我（杨永松），非关系判断。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC03-W002-E03",
+        "source_segment_ids": [
+          "BATCH06-DOC03-S0028",
+          "BATCH06-DOC03-S0032",
+          "BATCH06-DOC03-S0034",
+          "BATCH06-DOC03-S0037"
+        ],
+        "event": {
+          "event_name": "决定开辟鲁南新区并选定白彦为攻击目标",
+          "event_type": "MENTAL",
+          "event_type_zh": "心理",
+          "core_process": "决定开辟新区",
+          "participants": [
+            {
+              "role": "Senser",
+              "mention": "师部",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Senser",
+              "mention": "罗帅",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Phenomenon",
+              "mention": "开辟新区",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Phenomenon",
+              "mention": "白彦",
+              "normalized_entity": "白彦",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "日本人当时调了兵出去了",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "就决定要开辟新区，就罗帅说的，用“挤”的办法，那几个字我背不下来，“穿、插、挤”，还有一个“统”吧，统一战线吧，六个字。当时比较有利的地方就是滕县到临沂的公路的中间，一个是城前、城后，一个是白彦，白彦孙鹤龄是个大地主，房子很漂亮，很结实，（这个人）挺坏啊。",
+          "type_basis": "核心过程“决定”为心理过程，Senser=师部/罗帅，Phenomenon=开辟新区、白彦；“考虑”也指向计划，非实际物质行动。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH06-DOC03-S0020",
+      "BATCH06-DOC03-S0021",
+      "BATCH06-DOC03-S0023",
+      "BATCH06-DOC03-S0025",
+      "BATCH06-DOC03-S0026",
+      "BATCH06-DOC03-S0027",
+      "BATCH06-DOC03-S0029",
+      "BATCH06-DOC03-S0031",
+      "BATCH06-DOC03-S0033",
+      "BATCH06-DOC03-S0035",
+      "BATCH06-DOC03-S0036"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH06-DOC03-W002\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH06-DOC03-W002-E01\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC03-S0022\",\n        \"BATCH06-DOC03-S0024\"\n      ],\n      \"event\": {\n        \"event_name\": \"特务营打四各哨地主武装后返回四县边联\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"打四各哨地主武装\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"咱们\",\n            \"normalized_entity\": \"特务营\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"四各哨（音）那个地主武装那个地方\",\n            \"normalized_entity\": \"四各哨地主武装\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"群众要求我们去打\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"结果人家弹药很充足，咱们打了一下，要攻的话伤亡很大，可是打这么一下，他知道八路军正规部队来了，不好惹，他这个反动的气焰就有所收敛，不敢随便出来抓我们的干部。\",\n        \"type_basis\": \"核心过程“打”为物质行动，Actor=咱们（特务营），Goal=四各哨地主武装；有实际军事行动和敌方反应，非言语或心理过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC03-W002-E02\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC03-S0028\",\n        \"BATCH06-DOC03-S0030\"\n      ],\n      \"event\": {\n        \"event_name\": \"杨永松任特务团政治主任\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"任政治主任\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"杨永松\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我就去当政治主任\",\n        \"type_basis\": \"“去当”表示就任职务，是岗位/身份变化，按物质过程处理；Actor=我（杨永松），非关系判断。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC03-W002-E03\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC03-S0028\",\n        \"BATCH06-DOC03-S0032\",\n        \"BATCH06-DOC03-S0034\",\n        \"BATCH06-DOC03-S0037\"\n      ],\n      \"event\": {\n        \"event_name\": \"决定开辟鲁南新区并选定白彦为攻击目标\",\n        \"event_type\": \"MENTAL\",\n        \"event_type_zh\": \"心理\",\n        \"core_process\": \"决定开辟新区\",\n        \"participants\": [\n          {\n            \"role\": \"Senser\",\n            \"mention\": \"师部\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Senser\",\n            \"mention\": \"罗帅\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Phenomenon\",\n            \"mention\": \"开辟新区\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Phenomenon\",\n            \"mention\": \"白彦\",\n            \"normalized_entity\": \"白彦\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"日本人当时调了兵出去了\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"就决定要开辟新区，就罗帅说的，用“挤”的办法，那几个字我背不下来，“穿、插、挤”，还有一个“统”吧，统一战线吧，六个字。当时比较有利的地方就是滕县到临沂的公路的中间，一个是城前、城后，一个是白彦，白彦孙鹤龄是个大地主，房子很漂亮，很结实，（这个人）挺坏啊。\",\n        \"type_basis\": \"核心过程“决定”为心理过程，Senser=师部/罗帅，Phenomenon=开辟新区、白彦；“考虑”也指向计划，非实际物质行动。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH06-DOC03-S0020\",\n    \"BATCH06-DOC03-S0021\",\n    \"BATCH06-DOC03-S0023\",\n    \"BATCH06-DOC03-S0025\",\n    \"BATCH06-DOC03-S0026\",\n    \"BATCH06-DOC03-S0027\",\n    \"BATCH06-DOC03-S0029\",\n    \"BATCH06-DOC03-S0031\",\n    \"BATCH06-DOC03-S0033\",\n    \"BATCH06-DOC03-S0035\",\n    \"BATCH06-DOC03-S0036\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5559,
+    "total_tokens": 26377,
+    "completion_tokens": 20818,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 19487
+    },
+    "time_to_first_token_ms": 196379,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 20817000
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T15:49:08",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC02-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC02-DE004",
+  "usage": {
+    "prompt_tokens": 1817,
+    "total_tokens": 5526,
+    "completion_tokens": 3709,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2528
+    },
+    "time_to_first_token_ms": 31515,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3708000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC02-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆所带连队经邢台、辽县转移至长治，与军部联系上，随后奉命到新乡、往北打焦作并归队；连队没有损失，路上还招了一个青年。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为元氏作战后陈锐霆判断形势不利并带连转移；终点为到长治联系上军部并归队。元氏作战本身及此前背景不作为本事件内部阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC02-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆判断形势不利，带部队经赞皇到邢台，再转山西辽县。\",\n      \"process_text\": \"陈锐霆见形势不好，带部队沿太行山西边马路经赞皇县到邢台，随后过太行山转到山西辽县。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC02-S0039\"\n      ],\n      \"evidence_quote\": \"我一看这个情况不好，他们两拨人回来都没跟717团联系上。所以我看了形势不好啊，我又把部队带着，沿着太行山的西边跟前那个马路经过赞皇县以后到了邢台。以后就过了太行山转到山西那个辽县。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC02-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"在辽县停留三四天，先前派出的两批人未联系上，遂继续向南到长治。\",\n      \"process_text\": \"在辽县待了三四天，派出的两个人回来都说没联系上，陈锐霆便带着部队继续向南，到达山西长治。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC02-S0041\"\n      ],\n      \"evidence_quote\": \"在辽县待了三四天，派那两个人回来都（说）没联系上，我就带着部队继续向南。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC02-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"到长治后再次派人联络，成功联系上军部/部队，对方得知连队仍存在。\",\n      \"process_text\": \"到山西长治后又派人出去联系，联系上了；对方很高兴，原以为他们已被敌人消灭。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC02-S0041\"\n      ],\n      \"evidence_quote\": \"到了山西长治，又派人出去，给我联系上了。哎呀，他们挺高兴的，听说我们还存在，他们认为我们已经叫敌人消灭了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC02-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"奉命到新乡、往北打焦作，随后回到部队；连队无损失并沿途招一青年。\",\n      \"process_text\": \"军部叫陈锐霆到新乡，先到新乡后往北打焦作，一直向新乡方向，以后回到部队；部队没有损失，路上还招了一个青年。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC02-S0057\"\n      ],\n      \"evidence_quote\": \"（军部）叫我到新乡啊，先到新乡以后往北，打焦作，一直向新乡方向，以后就回到部队。回到部队我这个部队不仅没有损失，路上还招了一个青年，一个当兵的，我那个连100多人嘛。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC02-DE004-P01\",\n      \"target_stage_id\": \"BATCH01-DOC02-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC02-S0041\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC02-DE004-P02\",\n      \"target_stage_id\": \"BATCH01-DOC02-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC02-S0041\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC02-DE004-P03\",\n      \"target_stage_id\": \"BATCH01-DOC02-DE004-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC02-S0057\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC02-DE004",
+    "event_enrichment": {
+      "result_state": "陈锐霆所带连队经邢台、辽县转移至长治，与军部联系上，随后奉命到新乡、往北打焦作并归队；连队没有损失，路上还招了一个青年。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起点为元氏作战后陈锐霆判断形势不利并带连转移；终点为到长治联系上军部并归队。元氏作战本身及此前背景不作为本事件内部阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC02-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆判断形势不利，带部队经赞皇到邢台，再转山西辽县。",
+        "process_text": "陈锐霆见形势不好，带部队沿太行山西边马路经赞皇县到邢台，随后过太行山转到山西辽县。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC02-S0039"
+        ],
+        "evidence_quote": "我一看这个情况不好，他们两拨人回来都没跟717团联系上。所以我看了形势不好啊，我又把部队带着，沿着太行山的西边跟前那个马路经过赞皇县以后到了邢台。以后就过了太行山转到山西那个辽县。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC02-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "在辽县停留三四天，先前派出的两批人未联系上，遂继续向南到长治。",
+        "process_text": "在辽县待了三四天，派出的两个人回来都说没联系上，陈锐霆便带着部队继续向南，到达山西长治。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC02-S0041"
+        ],
+        "evidence_quote": "在辽县待了三四天，派那两个人回来都（说）没联系上，我就带着部队继续向南。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC02-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "到长治后再次派人联络，成功联系上军部/部队，对方得知连队仍存在。",
+        "process_text": "到山西长治后又派人出去联系，联系上了；对方很高兴，原以为他们已被敌人消灭。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC02-S0041"
+        ],
+        "evidence_quote": "到了山西长治，又派人出去，给我联系上了。哎呀，他们挺高兴的，听说我们还存在，他们认为我们已经叫敌人消灭了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC02-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "奉命到新乡、往北打焦作，随后回到部队；连队无损失并沿途招一青年。",
+        "process_text": "军部叫陈锐霆到新乡，先到新乡后往北打焦作，一直向新乡方向，以后回到部队；部队没有损失，路上还招了一个青年。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC02-S0057"
+        ],
+        "evidence_quote": "（军部）叫我到新乡啊，先到新乡以后往北，打焦作，一直向新乡方向，以后就回到部队。回到部队我这个部队不仅没有损失，路上还招了一个青年，一个当兵的，我那个连100多人嘛。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC02-DE004-P01",
+        "target_stage_id": "BATCH01-DOC02-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC02-S0041",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC02-DE004-P02",
+        "target_stage_id": "BATCH01-DOC02-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC02-S0041",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC02-DE004-P03",
+        "target_stage_id": "BATCH01-DOC02-DE004-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC02-S0057",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

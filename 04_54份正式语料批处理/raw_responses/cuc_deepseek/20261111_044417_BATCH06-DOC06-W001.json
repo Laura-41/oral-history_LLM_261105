@@ -1,0 +1,515 @@
+{
+  "run_time": "2026-11-11T04:44:17",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH06-DOC06-W001",
+  "technical_document_id": "BATCH06-DOC06",
+  "document_id": "14.陈锐霆 090510（二校完 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH06-DOC06-S0002",
+    "BATCH06-DOC06-S0003",
+    "BATCH06-DOC06-S0004",
+    "BATCH06-DOC06-S0005",
+    "BATCH06-DOC06-S0006",
+    "BATCH06-DOC06-S0007",
+    "BATCH06-DOC06-S0008",
+    "BATCH06-DOC06-S0009",
+    "BATCH06-DOC06-S0010",
+    "BATCH06-DOC06-S0011",
+    "BATCH06-DOC06-S0012",
+    "BATCH06-DOC06-S0013",
+    "BATCH06-DOC06-S0014",
+    "BATCH06-DOC06-S0015",
+    "BATCH06-DOC06-S0016",
+    "BATCH06-DOC06-S0017",
+    "BATCH06-DOC06-S0018",
+    "BATCH06-DOC06-S0019",
+    "BATCH06-DOC06-S0020"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 9,
+    "assigned_segment_count": 9,
+    "unassigned_segment_count": 10,
+    "input_segment_count": 19,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH06-DOC06-W001-E08",
+    "BATCH06-DOC06-W001-E09"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH06-DOC06-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH06-DOC06-W001-E01",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0003"
+        ],
+        "event": {
+          "event_name": "骑兵和坦克追击俘获突围敌军坦克",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "追坦克，烧油，俘虏",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们骑兵",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我们的坦克",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "敌人坦克",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "人、车",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "陈官庄合围以后",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "陈官庄合围以后，敌人坦克有两次出动逃跑。一个是我们骑兵追坦克，最后把他的油烧完了，车也停了，人、车都俘虏了。另外一个就是我们的坦克追他的坦克，以后都也是油烧完了，也把他俘虏了。",
+          "type_basis": "核心过程为骑兵和坦克追击、耗尽油料并俘获敌军坦克及人员，属物质行动；参与者为行动者与受影响目标，符合MATERIAL角色词表。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W001-E02",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0003",
+          "BATCH06-DOC06-S0005"
+        ],
+        "event": {
+          "event_name": "炮击和喊话宣传促使被围国民党军投降",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "打五发炮弹，宣传喊话，促敌投降",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "国民党被围的部队",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "快过新年了，停战五天了",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "五天里面",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "所以这个时候一个是我们打了五发炮弹，加上我们口头的宣传、喊话，敌人三三两两，一个班，一个排，都向我们这个地方来投降，因为没东西吃嘛。国民党五天里面有三千人跑到我们这边来投降。",
+          "type_basis": "核心是炮击与喊话宣传共同促成被围国民党军投降，整体为军事围困下的物质行动；喊话为手段，未给出可投射的言语内容，故不单建言语事件。",
+          "alternative_event_type": "VERBAL",
+          "ambiguity_reason": "炮击为物质行动，喊话宣传为言语过程，二者共同促成投降，主导类型存在混合。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W001-E03",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0007"
+        ],
+        "event": {
+          "event_name": "迫击炮送炸药试制爆炸致七人牺牲",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "搞迫击炮送炸药，发生爆炸，牺牲",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "参谋长韩联生",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "工兵团的副团长刘金山",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "大炮弹不够",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们那个参谋长是一个很有经验的老工兵，卸去领导到后方来搞这个东西，不行，搞爆炸了，参谋长韩联生牺牲了，还有一个工兵团的副团长刘金山也牺牲了，一共七个同志吧，牺牲了。",
+          "type_basis": "试制迫击炮送炸药发生爆炸并造成人员死亡，是物理变化和人员伤亡，属物质过程；不是单纯存在或关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W001-E04",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0007"
+        ],
+        "event": {
+          "event_name": "任战地接收司令并组织接收车辆火炮",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "任战地接收司令，组织战地接收，收集车辆火炮",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "战地接收委员会",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "车辆",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "火炮",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "战役最后快要结束的时候",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "总部下了命令",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "另外战役最后快要结束的时候，总部下了命令任我为战地接收的司令，因为我们自己的炮兵部队为主，还有后勤部合着搞一个战地接收委员会吧，来接收这个战地的一些车辆啊，火炮啊，把它收集起来，来做这个事情。",
+          "type_basis": "总部任命为事件起点，核心是组织战地接收委员会并收集车辆、火炮，属组织行动和物资接收，归MATERIAL；任命关系不单独建节点。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W001-E05",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0009",
+          "BATCH06-DOC06-S0011"
+        ],
+        "event": {
+          "event_name": "敌机轰炸战场及战地接收部队造成人员伤亡",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "敌机投弹，炸毁车辆火炮和作战室，人员伤亡",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "敌人（能载）一千磅的炸弹的飞机",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "车辆、火炮",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "作战室",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "公务员",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "南宫黄（音）",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "敌人最后（被）消灭以后的第二天",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "敌人（能载）一千磅的炸弹的飞机来了好多，就是拽炸弹，一个炸战场那个车辆、火炮，他自己要炸掉；另一个炸掉我们的人，想着救他们自己的人，实际上他自己的人已经不在了。（敌人）用大炸弹，一个炸弹就在我们的作战室附近炸了，亏着是吃饭的时候，我们都到饭堂去吃饭了，（炸弹）把作战室都打掉了。另外我们一个掩体就在近旁，我一个公务员被大炸弹那个气浪呛得都休克了，以后抢救才弄过来。",
+          "type_basis": "敌机投弹造成车辆火炮、作战室毁坏和人员伤亡，是物理破坏和人员状态变化，属物质过程；不是存在或行为。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W001-E06",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0013"
+        ],
+        "event": {
+          "event_name": "渡江前工程兵修桥补路",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "派工程兵修桥补路",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们的工兵",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "道路、桥梁",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "PURPOSE",
+              "value": "准备渡江",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "这个时候我们就准备渡江了，我们的工兵都分散到前面去修路去了。很多的道路、桥梁都坏了嘛，国民党撤退的时候也毁掉了一些，我们这个工程兵就派出去修桥补路。",
+          "type_basis": "工程兵被派往前方修桥补路，是职业劳动和空间移动，属物质过程；目的为准备渡江。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W001-E07",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0013",
+          "BATCH06-DOC06-S0015"
+        ],
+        "event": {
+          "event_name": "部队大整编及炮兵编成六个团",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "部队大整编，炮兵编了六个团",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "部队",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "炮兵",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "四个兵团十六个军",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "六个团",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "按照中央统一的命令",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "这个时候按照中央统一的命令，部队大整编，番号改变了，另外成立了四个兵团十六个军，还有两广纵队，另外一个特纵，直属司令部、政治部的领导。",
+          "type_basis": "部队整编、番号改变和炮兵编团是组织编制行动，属物质过程；编制关系是结果，不单独建关系节点。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W001-E08",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0015",
+          "BATCH06-DOC06-S0017",
+          "BATCH06-DOC06-S0020"
+        ],
+        "event": {
+          "event_name": "渡江并解放南京",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "渡江，解放南京",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "南京",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "渡江的时候",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "长江沿线",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "敌人基本上都撤了，没有进行大的战斗",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "渡江的时候敌人基本上都撤了，没有进行大的战斗，就把南京解放了，南京是国民党那个时候国家的首府嘛。",
+          "type_basis": "渡江和解放南京是空间移动与军事行动，属物质过程；作诗是事后表达，不单独建节点。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W001-E09",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0020"
+        ],
+        "event": {
+          "event_name": "警告紫石英号不要继续前进",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "警告紫石英号",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "我们炮三团",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "紫石英号",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "20号",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "离镇江不太远，有个三岔口的江面",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "不要继续前进了，我们要过江了嘛",
+          "evidence_quote": "这个时候20号吧，敌人从上海派的一艘兵舰“紫石英”号，要到南京的大使馆保护他们大使馆的人员。到了离镇江不太远，有个三岔口的江面，紫石英号往南走的时候，我们炮三团团长跟我商量了以后，就是警告他，不要继续前进了，我们要过江了嘛。我们警告他的炮弹，离他的兵舰还有好几百公尺。",
+          "type_basis": "核心是向紫石英号发出警告，属言语过程；警告炮弹是伴随手段，不改变主导类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH06-DOC06-S0002",
+      "BATCH06-DOC06-S0004",
+      "BATCH06-DOC06-S0006",
+      "BATCH06-DOC06-S0008",
+      "BATCH06-DOC06-S0010",
+      "BATCH06-DOC06-S0012",
+      "BATCH06-DOC06-S0014",
+      "BATCH06-DOC06-S0016",
+      "BATCH06-DOC06-S0018",
+      "BATCH06-DOC06-S0019"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH06-DOC06-W001\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W001-E01\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0003\"\n      ],\n      \"event\": {\n        \"event_name\": \"骑兵和坦克追击俘获突围敌军坦克\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"追坦克，烧油，俘虏\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们骑兵\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们的坦克\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"敌人坦克\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"人、车\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"陈官庄合围以后\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"陈官庄合围以后，敌人坦克有两次出动逃跑。一个是我们骑兵追坦克，最后把他的油烧完了，车也停了，人、车都俘虏了。另外一个就是我们的坦克追他的坦克，以后都也是油烧完了，也把他俘虏了。\",\n        \"type_basis\": \"核心过程为骑兵和坦克追击、耗尽油料并俘获敌军坦克及人员，属物质行动；参与者为行动者与受影响目标，符合MATERIAL角色词表。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W001-E02\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0003\",\n        \"BATCH06-DOC06-S0005\"\n      ],\n      \"event\": {\n        \"event_name\": \"炮击和喊话宣传促使被围国民党军投降\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"打五发炮弹，宣传喊话，促敌投降\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"国民党被围的部队\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"快过新年了，停战五天了\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"五天里面\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"所以这个时候一个是我们打了五发炮弹，加上我们口头的宣传、喊话，敌人三三两两，一个班，一个排，都向我们这个地方来投降，因为没东西吃嘛。国民党五天里面有三千人跑到我们这边来投降。\",\n        \"type_basis\": \"核心是炮击与喊话宣传共同促成被围国民党军投降，整体为军事围困下的物质行动；喊话为手段，未给出可投射的言语内容，故不单建言语事件。\",\n        \"alternative_event_type\": \"VERBAL\",\n        \"ambiguity_reason\": \"炮击为物质行动，喊话宣传为言语过程，二者共同促成投降，主导类型存在混合。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W001-E03\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0007\"\n      ],\n      \"event\": {\n        \"event_name\": \"迫击炮送炸药试制爆炸致七人牺牲\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"搞迫击炮送炸药，发生爆炸，牺牲\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"参谋长韩联生\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"工兵团的副团长刘金山\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"大炮弹不够\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们那个参谋长是一个很有经验的老工兵，卸去领导到后方来搞这个东西，不行，搞爆炸了，参谋长韩联生牺牲了，还有一个工兵团的副团长刘金山也牺牲了，一共七个同志吧，牺牲了。\",\n        \"type_basis\": \"试制迫击炮送炸药发生爆炸并造成人员死亡，是物理变化和人员伤亡，属物质过程；不是单纯存在或关系。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W001-E04\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0007\"\n      ],\n      \"event\": {\n        \"event_name\": \"任战地接收司令并组织接收车辆火炮\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"任战地接收司令，组织战地接收，收集车辆火炮\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"战地接收委员会\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"车辆\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"火炮\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"战役最后快要结束的时候\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"总部下了命令\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"另外战役最后快要结束的时候，总部下了命令任我为战地接收的司令，因为我们自己的炮兵部队为主，还有后勤部合着搞一个战地接收委员会吧，来接收这个战地的一些车辆啊，火炮啊，把它收集起来，来做这个事情。\",\n        \"type_basis\": \"总部任命为事件起点，核心是组织战地接收委员会并收集车辆、火炮，属组织行动和物资接收，归MATERIAL；任命关系不单独建节点。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W001-E05\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0009\",\n        \"BATCH06-DOC06-S0011\"\n      ],\n      \"event\": {\n        \"event_name\": \"敌机轰炸战场及战地接收部队造成人员伤亡\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"敌机投弹，炸毁车辆火炮和作战室，人员伤亡\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"敌人（能载）一千磅的炸弹的飞机\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"车辆、火炮\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"作战室\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"公务员\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"南宫黄（音）\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"敌人最后（被）消灭以后的第二天\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"敌人（能载）一千磅的炸弹的飞机来了好多，就是拽炸弹，一个炸战场那个车辆、火炮，他自己要炸掉；另一个炸掉我们的人，想着救他们自己的人，实际上他自己的人已经不在了。（敌人）用大炸弹，一个炸弹就在我们的作战室附近炸了，亏着是吃饭的时候，我们都到饭堂去吃饭了，（炸弹）把作战室都打掉了。另外我们一个掩体就在近旁，我一个公务员被大炸弹那个气浪呛得都休克了，以后抢救才弄过来。\",\n        \"type_basis\": \"敌机投弹造成车辆火炮、作战室毁坏和人员伤亡，是物理破坏和人员状态变化，属物质过程；不是存在或行为。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W001-E06\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0013\"\n      ],\n      \"event\": {\n        \"event_name\": \"渡江前工程兵修桥补路\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"派工程兵修桥补路\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们的工兵\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"道路、桥梁\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"准备渡江\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"这个时候我们就准备渡江了，我们的工兵都分散到前面去修路去了。很多的道路、桥梁都坏了嘛，国民党撤退的时候也毁掉了一些，我们这个工程兵就派出去修桥补路。\",\n        \"type_basis\": \"工程兵被派往前方修桥补路，是职业劳动和空间移动，属物质过程；目的为准备渡江。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W001-E07\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0013\",\n        \"BATCH06-DOC06-S0015\"\n      ],\n      \"event\": {\n        \"event_name\": \"部队大整编及炮兵编成六个团\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"部队大整编，炮兵编了六个团\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"部队\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"炮兵\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"四个兵团十六个军\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"六个团\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"按照中央统一的命令\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"这个时候按照中央统一的命令，部队大整编，番号改变了，另外成立了四个兵团十六个军，还有两广纵队，另外一个特纵，直属司令部、政治部的领导。\",\n        \"type_basis\": \"部队整编、番号改变和炮兵编团是组织编制行动，属物质过程；编制关系是结果，不单独建关系节点。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W001-E08\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0015\",\n        \"BATCH06-DOC06-S0017\",\n        \"BATCH06-DOC06-S0020\"\n      ],\n      \"event\": {\n        \"event_name\": \"渡江并解放南京\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"渡江，解放南京\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"南京\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"渡江的时候\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"长江沿线\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"敌人基本上都撤了，没有进行大的战斗\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"渡江的时候敌人基本上都撤了，没有进行大的战斗，就把南京解放了，南京是国民党那个时候国家的首府嘛。\",\n        \"type_basis\": \"渡江和解放南京是空间移动与军事行动，属物质过程；作诗是事后表达，不单独建节点。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W001-E09\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0020\"\n      ],\n      \"event\": {\n        \"event_name\": \"警告紫石英号不要继续前进\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"警告紫石英号\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"我们炮三团\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"紫石英号\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"20号\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"离镇江不太远，有个三岔口的江面\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"不要继续前进了，我们要过江了嘛\",\n        \"evidence_quote\": \"这个时候20号吧，敌人从上海派的一艘兵舰“紫石英”号，要到南京的大使馆保护他们大使馆的人员。到了离镇江不太远，有个三岔口的江面，紫石英号往南走的时候，我们炮三团团长跟我商量了以后，就是警告他，不要继续前进了，我们要过江了嘛。我们警告他的炮弹，离他的兵舰还有好几百公尺。\",\n        \"type_basis\": \"核心是向紫石英号发出警告，属言语过程；警告炮弹是伴随手段，不改变主导类型。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH06-DOC06-S0002\",\n    \"BATCH06-DOC06-S0004\",\n    \"BATCH06-DOC06-S0006\",\n    \"BATCH06-DOC06-S0008\",\n    \"BATCH06-DOC06-S0010\",\n    \"BATCH06-DOC06-S0012\",\n    \"BATCH06-DOC06-S0014\",\n    \"BATCH06-DOC06-S0016\",\n    \"BATCH06-DOC06-S0018\",\n    \"BATCH06-DOC06-S0019\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5585,
+    "total_tokens": 36078,
+    "completion_tokens": 30493,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 26383
+    },
+    "time_to_first_token_ms": 269546,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 10164000
+  }
+}

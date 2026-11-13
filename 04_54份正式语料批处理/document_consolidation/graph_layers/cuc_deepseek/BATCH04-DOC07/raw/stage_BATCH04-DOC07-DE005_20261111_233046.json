@@ -1,0 +1,132 @@
+{
+  "run_time": "2026-11-11T23:30:46",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC07-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC07-DE005",
+  "usage": {
+    "prompt_tokens": 1893,
+    "total_tokens": 10279,
+    "completion_tokens": 8386,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7057
+    },
+    "time_to_first_token_ms": 70971,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8385000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC07-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰在抗大九分校第六队任队长并参加整训，整训持续至1943年2月左右。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于卫校停办后陈海峰转任抗大九分校第六队队长，止于第六队整训至1943年2月左右；不包含此前卫校经历及此后抗大南下等。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"卫校暂时停办，陈海峰不再任卫校队长，转到抗大九分校任第六队队长。\",\n      \"process_text\": \"卫校暂时停办，我不当卫校队长，到九分校当第六队队长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0163\"\n      ],\n      \"evidence_quote\": \"就分散到后方医院，学员就到了前方医院，那么卫校暂时停办。我呢，卫校就不当队长了，我到了九分校，当了几个月抗大九分校第六队的队长。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"第六队留驻当地。\",\n      \"process_text\": \"我们这一个队就留下来了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0175\"\n      ],\n      \"evidence_quote\": \"我们这一个队就留下来了，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"该队即抗大九分校第六队、苏中卫校，在当地进行整训并把课上完。\",\n      \"process_text\": \"抗大九分校第六队就是苏中卫校，我们在这个地方整训，就是把课上完。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0176\",\n        \"BATCH04-DOC07-S0177\",\n        \"BATCH04-DOC07-S0178\",\n        \"BATCH04-DOC07-S0179\"\n      ],\n      \"evidence_quote\": \"我们在这个地方呢，我们整训\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"整训从1942年七八月持续到1943年2月，约半年。\",\n      \"process_text\": \"从1942年七八月一直到1943年2月，差不多半年左右。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0181\",\n        \"BATCH04-DOC07-S0182\"\n      ],\n      \"evidence_quote\": \"一直到（19）43年的2月，差不多半年左右吧。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE005-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"整训期间环境稳定，海复镇驻有师部等单位，彭康、姚鼐等理论家来队作报告。\",\n      \"process_text\": \"环境稳定，师部、粟裕等在海复镇，彭康、姚鼐等来我们那里做报告。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0183\",\n        \"BATCH04-DOC07-S0184\",\n        \"BATCH04-DOC07-S0186\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那个彭康啊，姚鼐（音）啊，什么理论家啊，那都是有名的，都来我们那里做报告。当时这个地方热闹得很，那个时候靠上海很近啊。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE005-P01\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0175\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE005-P02\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE005-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0178\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE005-P03\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE005-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0182\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE005-P04\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE005-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0186\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC07-DE005",
+    "event_enrichment": {
+      "result_state": "陈海峰在抗大九分校第六队任队长并参加整训，整训持续至1943年2月左右。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于卫校停办后陈海峰转任抗大九分校第六队队长，止于第六队整训至1943年2月左右；不包含此前卫校经历及此后抗大南下等。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC07-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "卫校暂时停办，陈海峰不再任卫校队长，转到抗大九分校任第六队队长。",
+        "process_text": "卫校暂时停办，我不当卫校队长，到九分校当第六队队长。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0163"
+        ],
+        "evidence_quote": "就分散到后方医院，学员就到了前方医院，那么卫校暂时停办。我呢，卫校就不当队长了，我到了九分校，当了几个月抗大九分校第六队的队长。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "第六队留驻当地。",
+        "process_text": "我们这一个队就留下来了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0175"
+        ],
+        "evidence_quote": "我们这一个队就留下来了，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "该队即抗大九分校第六队、苏中卫校，在当地进行整训并把课上完。",
+        "process_text": "抗大九分校第六队就是苏中卫校，我们在这个地方整训，就是把课上完。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0176",
+          "BATCH04-DOC07-S0177",
+          "BATCH04-DOC07-S0178",
+          "BATCH04-DOC07-S0179"
+        ],
+        "evidence_quote": "我们在这个地方呢，我们整训",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "整训从1942年七八月持续到1943年2月，约半年。",
+        "process_text": "从1942年七八月一直到1943年2月，差不多半年左右。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0181",
+          "BATCH04-DOC07-S0182"
+        ],
+        "evidence_quote": "一直到（19）43年的2月，差不多半年左右吧。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE005-P05",
+        "stage_order": 5,
+        "stage_summary": "整训期间环境稳定，海复镇驻有师部等单位，彭康、姚鼐等理论家来队作报告。",
+        "process_text": "环境稳定，师部、粟裕等在海复镇，彭康、姚鼐等来我们那里做报告。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0183",
+          "BATCH04-DOC07-S0184",
+          "BATCH04-DOC07-S0186"
+        ],
+        "evidence_quote": "    陈海峰：那个彭康啊，姚鼐（音）啊，什么理论家啊，那都是有名的，都来我们那里做报告。当时这个地方热闹得很，那个时候靠上海很近啊。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC07-DE005-P01",
+        "target_stage_id": "BATCH04-DOC07-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0175",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE005-P02",
+        "target_stage_id": "BATCH04-DOC07-DE005-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC07-S0178",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE005-P03",
+        "target_stage_id": "BATCH04-DOC07-DE005-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC07-S0182",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE005-P04",
+        "target_stage_id": "BATCH04-DOC07-DE005-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0186",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

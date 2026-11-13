@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-12T09:42:01",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC04-DE009",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC04-DE009",
+  "usage": {
+    "prompt_tokens": 1375,
+    "total_tokens": 6511,
+    "completion_tokens": 5136,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3652
+    },
+    "time_to_first_token_ms": 75047,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5135000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC04-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"中央东进扩军指示被提出，口述者及当时讨论认为一个月扩大五万人可行，事后证明可以。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于S0045‘我们从那里撤下来以后……中央有指示，要我们东进’，止于S0049‘中央估计可能，事后证明是可以的’，覆盖指示内容、质疑与可行性论证。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"撤下后考虑补充兵员，中央指示东进\",\n      \"process_text\": \"撤下来以后还要考虑补充兵员，中央有指示要东进，因为日本人要占领保定。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0045\"\n      ],\n      \"evidence_quote\": \"我们从那里撤下来以后，就还要考虑就是怎么补充兵员，但是中央有指示，要我们东进，就是那时候日本人要占领保定。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"中央说明东进路线与一个月扩大五万人的要求\",\n      \"process_text\": \"中央意思是主力攻保定时从后面插出去到河北，前方可到山东，希望一个月扩大五万人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0047\"\n      ],\n      \"evidence_quote\": \"中央的意思呢，他的主力过去攻保定时候，我们就从他后面插出去，插到河北，前方可以到山东去。希望你们一个月就扩大五万人。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"大家质疑一个月能否扩大五万人\",\n      \"process_text\": \"大家一讲，质疑五万人能否扩大。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0047\"\n      ],\n      \"evidence_quote\": \"那个时候大家一讲，哎呦，这五万人能扩大吗？\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE009-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"以115师和344旅扩编可能论证可行性\",\n      \"process_text\": \"如果115师不再往回、不往五台山那边去，插出去，一个月没问题；344旅四个团出去，一个团扩大成一个旅没问题。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0047\"\n      ],\n      \"evidence_quote\": \"以后事实证明，如果我们115师从那就不要再往回去，不要往五台山那边去，从那就插出去，没问题一个月（扩五万人），你一个师要是把344旅，你四个团出去，一个团扩大成一个旅没问题。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE009-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"群众与游击队多，收编后扩军可行，事后证明可以\",\n      \"process_text\": \"群众和游击队多，收编后一个月扩大五万人大概不成问题，中央估计可能，事后证明可以。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0049\"\n      ],\n      \"evidence_quote\": \"那个时候群众在后面，游击队，真抗日的假抗日的，司令多如牛毛，到处都是。你只要过去以后一收编，这一个月之内扩大五万人，大概不成问题。中央估计可能，事后证明是可以的。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE009-P01\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0047\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE009-P02\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE009-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0047\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE009-P03\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE009-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0047\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE009-P04\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE009-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0049\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC04-DE009",
+    "event_enrichment": {
+      "result_state": "中央东进扩军指示被提出，口述者及当时讨论认为一个月扩大五万人可行，事后证明可以。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于S0045‘我们从那里撤下来以后……中央有指示，要我们东进’，止于S0049‘中央估计可能，事后证明是可以的’，覆盖指示内容、质疑与可行性论证。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC04-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "撤下后考虑补充兵员，中央指示东进",
+        "process_text": "撤下来以后还要考虑补充兵员，中央有指示要东进，因为日本人要占领保定。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0045"
+        ],
+        "evidence_quote": "我们从那里撤下来以后，就还要考虑就是怎么补充兵员，但是中央有指示，要我们东进，就是那时候日本人要占领保定。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "中央说明东进路线与一个月扩大五万人的要求",
+        "process_text": "中央意思是主力攻保定时从后面插出去到河北，前方可到山东，希望一个月扩大五万人。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0047"
+        ],
+        "evidence_quote": "中央的意思呢，他的主力过去攻保定时候，我们就从他后面插出去，插到河北，前方可以到山东去。希望你们一个月就扩大五万人。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "大家质疑一个月能否扩大五万人",
+        "process_text": "大家一讲，质疑五万人能否扩大。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0047"
+        ],
+        "evidence_quote": "那个时候大家一讲，哎呦，这五万人能扩大吗？",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE009-P04",
+        "stage_order": 4,
+        "stage_summary": "以115师和344旅扩编可能论证可行性",
+        "process_text": "如果115师不再往回、不往五台山那边去，插出去，一个月没问题；344旅四个团出去，一个团扩大成一个旅没问题。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0047"
+        ],
+        "evidence_quote": "以后事实证明，如果我们115师从那就不要再往回去，不要往五台山那边去，从那就插出去，没问题一个月（扩五万人），你一个师要是把344旅，你四个团出去，一个团扩大成一个旅没问题。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE009-P05",
+        "stage_order": 5,
+        "stage_summary": "群众与游击队多，收编后扩军可行，事后证明可以",
+        "process_text": "群众和游击队多，收编后一个月扩大五万人大概不成问题，中央估计可能，事后证明可以。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0049"
+        ],
+        "evidence_quote": "那个时候群众在后面，游击队，真抗日的假抗日的，司令多如牛毛，到处都是。你只要过去以后一收编，这一个月之内扩大五万人，大概不成问题。中央估计可能，事后证明是可以的。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC04-DE009-P01",
+        "target_stage_id": "BATCH02-DOC04-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0047",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE009-P02",
+        "target_stage_id": "BATCH02-DOC04-DE009-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH02-DOC04-S0047",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE009-P03",
+        "target_stage_id": "BATCH02-DOC04-DE009-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0047",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE009-P04",
+        "target_stage_id": "BATCH02-DOC04-DE009-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC04-S0049",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

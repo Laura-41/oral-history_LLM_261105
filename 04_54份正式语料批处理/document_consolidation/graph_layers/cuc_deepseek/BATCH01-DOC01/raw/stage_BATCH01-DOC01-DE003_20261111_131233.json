@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-11T13:12:33",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC01-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC01-DE003",
+  "usage": {
+    "prompt_tokens": 1470,
+    "total_tokens": 8550,
+    "completion_tokens": 7080,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5658
+    },
+    "time_to_first_token_ms": 55591,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7079000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V1-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC01-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"该部队在叙述中被说明为已由地方抗日武装改编为正规军（一师二旅六团），并进一步发展为第24集团军；其所属警卫三师等编制关系得到补充说明。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以1941年“皖南事变”后并入粟裕一师、改编为一师二旅六团为起点，以叙述该部后续发展为第24集团军及对其编制来源的补充说明为终点；S0020为回顾性总结，作为结果/总结阶段处理。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"1941年皖南事变后，该部并入粟裕一师，改编为一师二旅六团，成为正规军。\",\n      \"process_text\": \"到1941年“皖南事变”以后，就并到粟裕的一师，就变成一师二旅六团，变成正规军了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0016\"\n      ],\n      \"evidence_quote\": \"到1941年“皖南事变”以后，就并到粟裕的一师，就变成一师二旅六团，变成正规军了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"一师二旅后续继续发展，叙述者称其发展到北京军区驻承德的第24集团军。\",\n      \"process_text\": \"一师二旅这个部队呢，以后发展到什么呢？以后就发展到现在北京军区（的），（驻）承德的第24集团军。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0016\"\n      ],\n      \"evidence_quote\": \"一师二旅这个部队呢，以后发展到什么呢？以后就发展到现在北京军区（的），（驻）承德的第24集团军。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"叙述者补充说明：1941年时该部是一个旅，后发展到下辖三个军的第24集团军；警卫三师属于该旅/六纵24集团军的一个师。\",\n      \"process_text\": \"1941年是一个旅，发展到24集团军，集团军就是下面三个军。每年我们北京天安门城楼那个阅兵啊，形成一个方块团，方块团那个先导团就是警卫三师。每年这一个方块都是警卫三师的，（警卫三师）就是在顺义的。警卫三师就是我们这个旅的，我们后来六纵24集团军里面的一个师，现在在顺义，还是算警卫三师。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0018\"\n      ],\n      \"evidence_quote\": \"1941年是一个旅，发展到24集团军，集团军就是下面三个军。每年我们北京天安门城楼那个阅兵啊，形成一个方块团，方块团那个先导团就是警卫三师。每年这一个方块都是警卫三师的，（警卫三师）就是在顺义的。警卫三师就是我们这个旅的，我们后来六纵24集团军里面的一个师，现在在顺义，还是算警卫三师。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"叙述者最后总结：江抗三路由一百多人发展到一个团，参加主力军，主力军一个旅后变成六纵队，打孟良崮的部队后变成24集团军。\",\n      \"process_text\": \"“江抗三路”由一百多人发展到一个团，一个团参加主力军，主力军的一个旅以后就变成（第）六纵队。就是你们看到打孟良崮的（部队），打孟良崮的那个军长就是叶挺、王必成，叶帅（听不清）打74师的，以后打孟良崮的那个部队就变成24集团军。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0020\"\n      ],\n      \"evidence_quote\": \"“江抗三路”由一百多人发展到一个团，一个团参加主力军，主力军的一个旅以后就变成（第）六纵队。就是你们看到打孟良崮的（部队），打孟良崮的那个军长就是叶挺、王必成，叶帅（听不清）打74师的，以后打孟良崮的那个部队就变成24集团军。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE003-P01\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0016\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE003-P02\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE003-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0018\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE003-P03\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE003-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0020\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V1-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC01-DE003",
+    "event_enrichment": {
+      "result_state": "该部队在叙述中被说明为已由地方抗日武装改编为正规军（一师二旅六团），并进一步发展为第24集团军；其所属警卫三师等编制关系得到补充说明。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以1941年“皖南事变”后并入粟裕一师、改编为一师二旅六团为起点，以叙述该部后续发展为第24集团军及对其编制来源的补充说明为终点；S0020为回顾性总结，作为结果/总结阶段处理。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC01-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "1941年皖南事变后，该部并入粟裕一师，改编为一师二旅六团，成为正规军。",
+        "process_text": "到1941年“皖南事变”以后，就并到粟裕的一师，就变成一师二旅六团，变成正规军了。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0016"
+        ],
+        "evidence_quote": "到1941年“皖南事变”以后，就并到粟裕的一师，就变成一师二旅六团，变成正规军了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "一师二旅后续继续发展，叙述者称其发展到北京军区驻承德的第24集团军。",
+        "process_text": "一师二旅这个部队呢，以后发展到什么呢？以后就发展到现在北京军区（的），（驻）承德的第24集团军。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0016"
+        ],
+        "evidence_quote": "一师二旅这个部队呢，以后发展到什么呢？以后就发展到现在北京军区（的），（驻）承德的第24集团军。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "叙述者补充说明：1941年时该部是一个旅，后发展到下辖三个军的第24集团军；警卫三师属于该旅/六纵24集团军的一个师。",
+        "process_text": "1941年是一个旅，发展到24集团军，集团军就是下面三个军。每年我们北京天安门城楼那个阅兵啊，形成一个方块团，方块团那个先导团就是警卫三师。每年这一个方块都是警卫三师的，（警卫三师）就是在顺义的。警卫三师就是我们这个旅的，我们后来六纵24集团军里面的一个师，现在在顺义，还是算警卫三师。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0018"
+        ],
+        "evidence_quote": "1941年是一个旅，发展到24集团军，集团军就是下面三个军。每年我们北京天安门城楼那个阅兵啊，形成一个方块团，方块团那个先导团就是警卫三师。每年这一个方块都是警卫三师的，（警卫三师）就是在顺义的。警卫三师就是我们这个旅的，我们后来六纵24集团军里面的一个师，现在在顺义，还是算警卫三师。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "叙述者最后总结：江抗三路由一百多人发展到一个团，参加主力军，主力军一个旅后变成六纵队，打孟良崮的部队后变成24集团军。",
+        "process_text": "“江抗三路”由一百多人发展到一个团，一个团参加主力军，主力军的一个旅以后就变成（第）六纵队。就是你们看到打孟良崮的（部队），打孟良崮的那个军长就是叶挺、王必成，叶帅（听不清）打74师的，以后打孟良崮的那个部队就变成24集团军。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0020"
+        ],
+        "evidence_quote": "“江抗三路”由一百多人发展到一个团，一个团参加主力军，主力军的一个旅以后就变成（第）六纵队。就是你们看到打孟良崮的（部队），打孟良崮的那个军长就是叶挺、王必成，叶帅（听不清）打74师的，以后打孟良崮的那个部队就变成24集团军。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC01-DE003-P01",
+        "target_stage_id": "BATCH01-DOC01-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC01-S0016",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE003-P02",
+        "target_stage_id": "BATCH01-DOC01-DE003-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH01-DOC01-S0018",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE003-P03",
+        "target_stage_id": "BATCH01-DOC01-DE003-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH01-DOC01-S0020",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

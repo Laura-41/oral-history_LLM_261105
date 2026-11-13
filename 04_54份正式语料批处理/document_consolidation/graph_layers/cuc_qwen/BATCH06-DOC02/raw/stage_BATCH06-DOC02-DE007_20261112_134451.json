@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T13:44:51",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC02-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC02-DE007",
+  "usage": {
+    "prompt_tokens": 1959,
+    "total_tokens": 10183,
+    "completion_tokens": 8224,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7049
+    },
+    "time_to_first_token_ms": 123418,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8223000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-18\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC02-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰等已到达吴家道小木棚，并立即用随身保健盒中的药品给粟司令打针；原文未交代打针后的恢复情况。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件核心从 S0083“就商量了，去找粟司令”开始，经冒雨到吴家道，至 S0085“马上就给粟司令打针”结束；S0088—S0099 为口述补充的医生不在、门诊部/保健科/卫生战士及奎宁针情况，作为背景引用，不扩展为独立事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"商量后去找粟司令\",\n      \"process_text\": \"商量后去找粟司令。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0083\"\n      ],\n      \"evidence_quote\": \"就商量了，去找粟司令。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"冒雨跑了二十多华里到吴家道\",\n      \"process_text\": \"下大雨，跑了二十多华里，到吴家道一个小村子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0083\"\n      ],\n      \"evidence_quote\": \"下大雨啊，就跑了二十多华里，到了吴家道，一个小村子。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"进入小木棚发现粟司令打摆子\",\n      \"process_text\": \"进小木棚后发现粟司令还在打摆子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0085\"\n      ],\n      \"evidence_quote\": \"粟司令就在小木棚子里头，那吴家道那个指挥所。外面下大雨，哎呀，一进那个小木棚子啊，粟司令啊，还在打摆子，我们还不知道。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"用随身保健盒药品马上给粟司令打针\",\n      \"process_text\": \"随身带着保健盒、奎宁针等药品，马上给粟司令打针。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0085\"\n      ],\n      \"evidence_quote\": \"那么我们就随身都带着了，给干部看病的保健盒，里面（有）各种贵重药品，镇痛药呀，吗啡片啦，打针的啦。南方摆子都有奎宁针啊，都带着了，消炎药啊，马上就给粟司令打针。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE007-P01\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0083\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE007-P02\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0085\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE007-P03\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE007-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0085\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-18",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC02-DE007",
+    "event_enrichment": {
+      "result_state": "陈海峰等已到达吴家道小木棚，并立即用随身保健盒中的药品给粟司令打针；原文未交代打针后的恢复情况。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "事件核心从 S0083“就商量了，去找粟司令”开始，经冒雨到吴家道，至 S0085“马上就给粟司令打针”结束；S0088—S0099 为口述补充的医生不在、门诊部/保健科/卫生战士及奎宁针情况，作为背景引用，不扩展为独立事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC02-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "商量后去找粟司令",
+        "process_text": "商量后去找粟司令。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0083"
+        ],
+        "evidence_quote": "就商量了，去找粟司令。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "冒雨跑了二十多华里到吴家道",
+        "process_text": "下大雨，跑了二十多华里，到吴家道一个小村子。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0083"
+        ],
+        "evidence_quote": "下大雨啊，就跑了二十多华里，到了吴家道，一个小村子。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "进入小木棚发现粟司令打摆子",
+        "process_text": "进小木棚后发现粟司令还在打摆子。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0085"
+        ],
+        "evidence_quote": "粟司令就在小木棚子里头，那吴家道那个指挥所。外面下大雨，哎呀，一进那个小木棚子啊，粟司令啊，还在打摆子，我们还不知道。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "用随身保健盒药品马上给粟司令打针",
+        "process_text": "随身带着保健盒、奎宁针等药品，马上给粟司令打针。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0085"
+        ],
+        "evidence_quote": "那么我们就随身都带着了，给干部看病的保健盒，里面（有）各种贵重药品，镇痛药呀，吗啡片啦，打针的啦。南方摆子都有奎宁针啊，都带着了，消炎药啊，马上就给粟司令打针。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC02-DE007-P01",
+        "target_stage_id": "BATCH06-DOC02-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0083",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE007-P02",
+        "target_stage_id": "BATCH06-DOC02-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0085",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE007-P03",
+        "target_stage_id": "BATCH06-DOC02-DE007-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC02-S0085",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

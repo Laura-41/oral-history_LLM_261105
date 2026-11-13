@@ -1,0 +1,127 @@
+{
+  "run_time": "2026-11-11T20:47:46",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC03-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC03-DE006",
+  "usage": {
+    "prompt_tokens": 1801,
+    "total_tokens": 8637,
+    "completion_tokens": 6836,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5437
+    },
+    "tokens_per_second": 6835000,
+    "time_to_first_token_ms": 76663,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V1-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC03-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰完成报名学医，同批报名者共66人。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以史沫特莱到教导队作动员报告为起点，以“我”报名及66人一同报名为终点；不延伸到后续入学或医疗工作。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"史沫特莱到教导队并作报告，讲国民党部队医院混乱、伤员痛苦。\",\n      \"process_text\": \"史沫特莱到新四军教导队动员并作报告，讲国民党部队医院乱七八糟、伤员痛苦的情况。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0027\"\n      ],\n      \"evidence_quote\": \"10月到12月呢，就是国际友人史沫特莱来了。（她）到了新四军以后，就到教导队动员，她把（在）国民党部队里看到医院的乱七八糟，伤员的痛苦情况，做了一个报告。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"一千多人在大操场听史沫特莱作报告。\",\n      \"process_text\": \"在徐懋公（音）大祠堂前的大操场上，一千多人听史沫特莱作报告。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0029\"\n      ],\n      \"evidence_quote\": \"那么在这个徐懋公（音）大祠堂前面（有）一个大操场，一千多人，那么在那里听史沫特莱做报告。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"吴之理翻译并动员学生学医，讲前方缺医少药、需自己培养医生。\",\n      \"process_text\": \"吴之理当翻译，向初中毕业、高中文化水平的学生动员学医，讲部队前方非常需要医生、缺医少药，要自己培养医生。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0031\"\n      ],\n      \"evidence_quote\": \"他当翻译给我们动员，翻译得挺好。就动员初中毕业，高中生文化水平的，在教导队的、政治队的。军事队都是老红军了，老红军不参加。都是学生来参军的，来动员学医，就讲部队前方非常需要医生，缺医少药，部队里面没有医生，我们自己培养医生。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"报告以四吨奎宁未发挥作用、国民党军队腐败、野战医院伤兵伙食差等为例，说明不懂预防卫生和医疗技术。\",\n      \"process_text\": \"报告以四吨奎宁未发挥作用、国民党军队腐败、野战医院伤兵伙食差等为例，说明不懂预防卫生和医疗技术。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0031\",\n        \"BATCH02-DOC03-S0033\"\n      ],\n      \"evidence_quote\": \"撒芝麻撒掉了，四吨奎宁不浪费，不懂预防卫生，不懂医疗的技术。就是国民党军队腐败的情况，看到他们那个野战医院里面伤兵伙食的差，看到我们军医院伙食的好，对比，给她很感动。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE006-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"报告后“我”报名学医，同批报名66人。\",\n      \"process_text\": \"报告后，动员新四军缺医少药、需要一批人学医；“我”报名，同批报名66人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0033\"\n      ],\n      \"evidence_quote\": \"讲了以后，就是你们新四军现在缺医少药，需要一批人来学医。那么我就报名了。我们一块报名是66个人\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE006-P01\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0029\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE006-P02\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE006-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0031\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE006-P03\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE006-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0033\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE006-P04\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE006-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0033\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC03-DE006",
+    "event_enrichment": {
+      "result_state": "陈海峰完成报名学医，同批报名者共66人。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以史沫特莱到教导队作动员报告为起点，以“我”报名及66人一同报名为终点；不延伸到后续入学或医疗工作。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC03-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "史沫特莱到教导队并作报告，讲国民党部队医院混乱、伤员痛苦。",
+        "process_text": "史沫特莱到新四军教导队动员并作报告，讲国民党部队医院乱七八糟、伤员痛苦的情况。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0027"
+        ],
+        "evidence_quote": "10月到12月呢，就是国际友人史沫特莱来了。（她）到了新四军以后，就到教导队动员，她把（在）国民党部队里看到医院的乱七八糟，伤员的痛苦情况，做了一个报告。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "一千多人在大操场听史沫特莱作报告。",
+        "process_text": "在徐懋公（音）大祠堂前的大操场上，一千多人听史沫特莱作报告。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0029"
+        ],
+        "evidence_quote": "那么在这个徐懋公（音）大祠堂前面（有）一个大操场，一千多人，那么在那里听史沫特莱做报告。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "吴之理翻译并动员学生学医，讲前方缺医少药、需自己培养医生。",
+        "process_text": "吴之理当翻译，向初中毕业、高中文化水平的学生动员学医，讲部队前方非常需要医生、缺医少药，要自己培养医生。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0031"
+        ],
+        "evidence_quote": "他当翻译给我们动员，翻译得挺好。就动员初中毕业，高中生文化水平的，在教导队的、政治队的。军事队都是老红军了，老红军不参加。都是学生来参军的，来动员学医，就讲部队前方非常需要医生，缺医少药，部队里面没有医生，我们自己培养医生。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "报告以四吨奎宁未发挥作用、国民党军队腐败、野战医院伤兵伙食差等为例，说明不懂预防卫生和医疗技术。",
+        "process_text": "报告以四吨奎宁未发挥作用、国民党军队腐败、野战医院伤兵伙食差等为例，说明不懂预防卫生和医疗技术。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0031",
+          "BATCH02-DOC03-S0033"
+        ],
+        "evidence_quote": "撒芝麻撒掉了，四吨奎宁不浪费，不懂预防卫生，不懂医疗的技术。就是国民党军队腐败的情况，看到他们那个野战医院里面伤兵伙食的差，看到我们军医院伙食的好，对比，给她很感动。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE006-P05",
+        "stage_order": 5,
+        "stage_summary": "报告后“我”报名学医，同批报名66人。",
+        "process_text": "报告后，动员新四军缺医少药、需要一批人学医；“我”报名，同批报名66人。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0033"
+        ],
+        "evidence_quote": "讲了以后，就是你们新四军现在缺医少药，需要一批人来学医。那么我就报名了。我们一块报名是66个人",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC03-DE006-P01",
+        "target_stage_id": "BATCH02-DOC03-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0029",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE006-P02",
+        "target_stage_id": "BATCH02-DOC03-DE006-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0031",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE006-P03",
+        "target_stage_id": "BATCH02-DOC03-DE006-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC03-S0033",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE006-P04",
+        "target_stage_id": "BATCH02-DOC03-DE006-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC03-S0033",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

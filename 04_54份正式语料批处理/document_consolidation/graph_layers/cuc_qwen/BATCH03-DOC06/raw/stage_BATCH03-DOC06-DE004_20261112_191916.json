@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T19:19:16",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE004",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE004",
+  "usage": {
+    "prompt_tokens": 1378,
+    "total_tokens": 9836,
+    "completion_tokens": 8458,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6962
+    },
+    "time_to_first_token_ms": 125001,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"林彪被阎锡山部队枪击，肺被打穿，负伤。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件起于阎锡山部队抢占大宁县城和隰县县城、林彪前往，止于林彪被枪击、肺被打穿；S0015 前段同蒲路运动为背景，S0017、S0019 为出行与枪击经过。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"阎锡山部队抢占大宁、隰县县城，林彪前往\",\n      \"process_text\": \"阎锡山部队在日本人退了以后很快抢占大宁县城和隰县县城，林彪要到那里去不知干什么。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0015\"\n      ],\n      \"evidence_quote\": \"但是林彪就是那个时候负伤了，就是阎锡山部队，日本人退了以后，他就很快地抢占大宁县城和隰县县城，林彪要到那里去不知干什么。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"派侦察员通知师长要来，提及日本大衣与骑兵班威风\",\n      \"process_text\": \"他派了侦察员去，告诉我们师长要来，林彪不是平型关缴了日本大衣，骑兵班都穿的日本大衣好威风。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0017\"\n      ],\n      \"evidence_quote\": \"他派了侦察员去，告诉我们师长要来，林彪不是平型关缴了日本大衣，骑兵班都穿的日本大衣好威风。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"马匹不一定全是日本马，日本大洋马比蒙古马高大\",\n      \"process_text\": \"也不一定全是日本马，日本是大洋马，他那个（是）军用的，比咱们蒙古马高大。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0019\"\n      ],\n      \"evidence_quote\": \"也不一定全是日本马，日本是大洋马，他那个（是）军用的，比咱们蒙古马高大。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"林彪接近时遭机枪步枪射击，被打下马\",\n      \"process_text\": \"所以他一往那里去呢，离人不远的时候，人家机枪除了没开炮，步枪机枪一打，他没有思想准备呀，一下子被打下马来了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0019\"\n      ],\n      \"evidence_quote\": \"所以他一往那里去呢，离人不远的时候，人家机枪除了没开炮，步枪机枪一打，他没有思想准备呀，一下子被打下马来了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE004-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"林彪肺被打穿，负伤\",\n      \"process_text\": \"结果肺给打穿了，林彪打这么多仗他都没受伤，结果被阎锡山打了一枪。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0019\"\n      ],\n      \"evidence_quote\": \"结果肺给打穿了，林彪打这么多仗他都没受伤，结果被阎锡山打了一枪。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE004-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0017\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE004-P02\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0019\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE004-P03\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE004-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0019\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE004-P04\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE004-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0019\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": null\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE004",
+    "event_enrichment": {
+      "result_state": "林彪被阎锡山部队枪击，肺被打穿，负伤。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件起于阎锡山部队抢占大宁县城和隰县县城、林彪前往，止于林彪被枪击、肺被打穿；S0015 前段同蒲路运动为背景，S0017、S0019 为出行与枪击经过。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "阎锡山部队抢占大宁、隰县县城，林彪前往",
+        "process_text": "阎锡山部队在日本人退了以后很快抢占大宁县城和隰县县城，林彪要到那里去不知干什么。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0015"
+        ],
+        "evidence_quote": "但是林彪就是那个时候负伤了，就是阎锡山部队，日本人退了以后，他就很快地抢占大宁县城和隰县县城，林彪要到那里去不知干什么。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "派侦察员通知师长要来，提及日本大衣与骑兵班威风",
+        "process_text": "他派了侦察员去，告诉我们师长要来，林彪不是平型关缴了日本大衣，骑兵班都穿的日本大衣好威风。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0017"
+        ],
+        "evidence_quote": "他派了侦察员去，告诉我们师长要来，林彪不是平型关缴了日本大衣，骑兵班都穿的日本大衣好威风。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "马匹不一定全是日本马，日本大洋马比蒙古马高大",
+        "process_text": "也不一定全是日本马，日本是大洋马，他那个（是）军用的，比咱们蒙古马高大。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0019"
+        ],
+        "evidence_quote": "也不一定全是日本马，日本是大洋马，他那个（是）军用的，比咱们蒙古马高大。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "林彪接近时遭机枪步枪射击，被打下马",
+        "process_text": "所以他一往那里去呢，离人不远的时候，人家机枪除了没开炮，步枪机枪一打，他没有思想准备呀，一下子被打下马来了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0019"
+        ],
+        "evidence_quote": "所以他一往那里去呢，离人不远的时候，人家机枪除了没开炮，步枪机枪一打，他没有思想准备呀，一下子被打下马来了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE004-P05",
+        "stage_order": 5,
+        "stage_summary": "林彪肺被打穿，负伤",
+        "process_text": "结果肺给打穿了，林彪打这么多仗他都没受伤，结果被阎锡山打了一枪。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0019"
+        ],
+        "evidence_quote": "结果肺给打穿了，林彪打这么多仗他都没受伤，结果被阎锡山打了一枪。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE004-P01",
+        "target_stage_id": "BATCH03-DOC06-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0017",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE004-P02",
+        "target_stage_id": "BATCH03-DOC06-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0019",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE004-P03",
+        "target_stage_id": "BATCH03-DOC06-DE004-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0019",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE004-P04",
+        "target_stage_id": "BATCH03-DOC06-DE004-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC06-S0019",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": null
+  },
+  "request_error": null
+}

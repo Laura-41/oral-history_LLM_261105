@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T13:41:22",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC02-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC02-DE006",
+  "usage": {
+    "prompt_tokens": 1447,
+    "total_tokens": 10150,
+    "completion_tokens": 8703,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7687
+    },
+    "time_to_first_token_ms": 209110,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-18\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC02-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"孝丰镇周围一直到港口、白水湾、王落其（音）这一带靠天目山边一圈的“口袋”已准备，军事要地及准备歼灭敌人处的散兵壕已挖好，部队日夜加紧弄。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于S0064“在孝丰呢，部队就准备，就准备好，准备好一个口袋”，止于S0066“这都准备好，日夜加紧弄”；S0068主要转入雨季、部队撤完及医院搬迁、港口要地说明，不作为准备动作阶段。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"部队在孝丰准备“口袋”\",\n      \"process_text\": \"在孝丰，部队准备并准备好一个口袋。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0064\"\n      ],\n      \"evidence_quote\": \"我们这边呢，在孝丰呢，部队就准备，就准备好，准备好一个口袋。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"布置观察地形，将“口袋”准备范围覆盖孝丰镇周围至港口、白水湾、王落其（音）一带靠天目山边一圈\",\n      \"process_text\": \"再布置地形，观察好地形，准备好一个“口袋”；从孝丰镇周围一直到港口、白水湾、王落其（音）这一带，靠天目山边一圈，都准备了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0066\"\n      ],\n      \"evidence_quote\": \"再布置啊地形，观察好地形呢，准备好一个“口袋”。从孝丰镇周围一直到港口、白水湾、王落其（音）这一带，靠天目山边一圈，那都准备了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"在军事要地及准备歼敌处挖散兵壕，日夜加紧完成准备\",\n      \"process_text\": \"在有的军事要地、准备歼灭敌人的地方挖了散兵壕，这都准备好，日夜加紧弄。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0066\"\n      ],\n      \"evidence_quote\": \"有的（军事）要地的地方，准备歼灭敌人（的）那个地方呢，挖了散兵壕，这都准备好，日夜加紧弄。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE006-P01\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0066\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE006-P02\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE006-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0066\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-18",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC02-DE006",
+    "event_enrichment": {
+      "result_state": "孝丰镇周围一直到港口、白水湾、王落其（音）这一带靠天目山边一圈的“口袋”已准备，军事要地及准备歼灭敌人处的散兵壕已挖好，部队日夜加紧弄。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于S0064“在孝丰呢，部队就准备，就准备好，准备好一个口袋”，止于S0066“这都准备好，日夜加紧弄”；S0068主要转入雨季、部队撤完及医院搬迁、港口要地说明，不作为准备动作阶段。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC02-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "部队在孝丰准备“口袋”",
+        "process_text": "在孝丰，部队准备并准备好一个口袋。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0064"
+        ],
+        "evidence_quote": "我们这边呢，在孝丰呢，部队就准备，就准备好，准备好一个口袋。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "布置观察地形，将“口袋”准备范围覆盖孝丰镇周围至港口、白水湾、王落其（音）一带靠天目山边一圈",
+        "process_text": "再布置地形，观察好地形，准备好一个“口袋”；从孝丰镇周围一直到港口、白水湾、王落其（音）这一带，靠天目山边一圈，都准备了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0066"
+        ],
+        "evidence_quote": "再布置啊地形，观察好地形呢，准备好一个“口袋”。从孝丰镇周围一直到港口、白水湾、王落其（音）这一带，靠天目山边一圈，那都准备了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "在军事要地及准备歼敌处挖散兵壕，日夜加紧完成准备",
+        "process_text": "在有的军事要地、准备歼灭敌人的地方挖了散兵壕，这都准备好，日夜加紧弄。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0066"
+        ],
+        "evidence_quote": "有的（军事）要地的地方，准备歼灭敌人（的）那个地方呢，挖了散兵壕，这都准备好，日夜加紧弄。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC02-DE006-P01",
+        "target_stage_id": "BATCH06-DOC02-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0066",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE006-P02",
+        "target_stage_id": "BATCH06-DOC02-DE006-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0066",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

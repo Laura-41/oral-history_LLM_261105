@@ -1,0 +1,130 @@
+{
+  "run_time": "2026-11-12T01:16:01",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC02-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC02-DE004",
+  "usage": {
+    "prompt_tokens": 1484,
+    "total_tokens": 7167,
+    "completion_tokens": 5683,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4322
+    },
+    "time_to_first_token_ms": 47299,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-23\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC02-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"三个转运分站临时设立并投入转运，伤员沿途得到照护，死亡和残废减少，战斗力与归队率得到保障；该做法被称为阶梯治疗，即分级治疗、分阶转运。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以天目山战役中设转运站为起点，至说明阶梯治疗即分级治疗、分阶转运为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"天目山战役中，苏浙军区设有转运站。\",\n      \"process_text\": \"苏浙军区打天目山战役时设立转运站。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0023\"\n      ],\n      \"evidence_quote\": \"陈海峰：苏浙军区，打天目山战役不是设了转运站嘛。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"保健科长李甲光临时派人在灵峰寺、景坞里、白水湾设立三个分站。\",\n      \"process_text\": \"在灵峰寺，保健科长李甲光临时派一些人，在景坞里设立一个分站，在白水湾设立一个分站，共三个站。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0024\"\n      ],\n      \"evidence_quote\": \"在那个灵峰寺啊，有我们保健科长李甲光（音）啊，临时派一些人啊，在景坞里设立一个分站，在这个白水湾设了一个分站，三个站。从这个地方，今年来的，来了以后设转运站。使沿途的不脱离治疗，沿途的伤员都有照顾，转运过程中间，都有医务人员在身边。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"转运途中使伤员不脱离治疗、得到照顾，并有医务人员随行。\",\n      \"process_text\": \"转运过程中，沿途伤员不脱离治疗、有人照顾，医务人员在伤员身边。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0024\"\n      ],\n      \"evidence_quote\": \"使沿途的不脱离治疗，沿途的伤员都有照顾，转运过程中间，都有医务人员在身边。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"取得减少死亡、减少残废、保证战斗力、提高归队率的效果。\",\n      \"process_text\": \"减少死亡和残废，保证战斗力，归队率提高。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0025\",\n        \"BATCH07-DOC02-S0026\",\n        \"BATCH07-DOC02-S0027\"\n      ],\n      \"evidence_quote\": \"这样子啊，减少死亡，减少残废。这样子呢，保证这个战斗力，归队率就高了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE004-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"说明该转运系统借鉴二战经验，称为阶梯治疗，即分级治疗、分阶转运。\",\n      \"process_text\": \"该转运系统借鉴第二次世界大战经验，称为阶梯治疗，实际是一节一节分级治疗、分阶转运。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0027\",\n        \"BATCH07-DOC02-S0028\",\n        \"BATCH07-DOC02-S0029\"\n      ],\n      \"evidence_quote\": \"所以这个转运系统，也是学的那个第二次世界大战中间。他们不叫转（运），叫什么不知道了，叫阶梯治疗。阶梯治疗实际上一节一节一节，分级治疗，分阶转运。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC02-DE004-P01\",\n      \"target_stage_id\": \"BATCH07-DOC02-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC02-S0024\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC02-DE004-P02\",\n      \"target_stage_id\": \"BATCH07-DOC02-DE004-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH07-DOC02-S0024\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC02-DE004-P03\",\n      \"target_stage_id\": \"BATCH07-DOC02-DE004-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH07-DOC02-S0025\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC02-DE004-P04\",\n      \"target_stage_id\": \"BATCH07-DOC02-DE004-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC02-S0027\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-23",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC02-DE004",
+    "event_enrichment": {
+      "result_state": "三个转运分站临时设立并投入转运，伤员沿途得到照护，死亡和残废减少，战斗力与归队率得到保障；该做法被称为阶梯治疗，即分级治疗、分阶转运。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以天目山战役中设转运站为起点，至说明阶梯治疗即分级治疗、分阶转运为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC02-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "天目山战役中，苏浙军区设有转运站。",
+        "process_text": "苏浙军区打天目山战役时设立转运站。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0023"
+        ],
+        "evidence_quote": "陈海峰：苏浙军区，打天目山战役不是设了转运站嘛。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC02-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "保健科长李甲光临时派人在灵峰寺、景坞里、白水湾设立三个分站。",
+        "process_text": "在灵峰寺，保健科长李甲光临时派一些人，在景坞里设立一个分站，在白水湾设立一个分站，共三个站。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0024"
+        ],
+        "evidence_quote": "在那个灵峰寺啊，有我们保健科长李甲光（音）啊，临时派一些人啊，在景坞里设立一个分站，在这个白水湾设了一个分站，三个站。从这个地方，今年来的，来了以后设转运站。使沿途的不脱离治疗，沿途的伤员都有照顾，转运过程中间，都有医务人员在身边。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC02-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "转运途中使伤员不脱离治疗、得到照顾，并有医务人员随行。",
+        "process_text": "转运过程中，沿途伤员不脱离治疗、有人照顾，医务人员在伤员身边。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0024"
+        ],
+        "evidence_quote": "使沿途的不脱离治疗，沿途的伤员都有照顾，转运过程中间，都有医务人员在身边。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC02-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "取得减少死亡、减少残废、保证战斗力、提高归队率的效果。",
+        "process_text": "减少死亡和残废，保证战斗力，归队率提高。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0025",
+          "BATCH07-DOC02-S0026",
+          "BATCH07-DOC02-S0027"
+        ],
+        "evidence_quote": "这样子啊，减少死亡，减少残废。这样子呢，保证这个战斗力，归队率就高了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC02-DE004-P05",
+        "stage_order": 5,
+        "stage_summary": "说明该转运系统借鉴二战经验，称为阶梯治疗，即分级治疗、分阶转运。",
+        "process_text": "该转运系统借鉴第二次世界大战经验，称为阶梯治疗，实际是一节一节分级治疗、分阶转运。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0027",
+          "BATCH07-DOC02-S0028",
+          "BATCH07-DOC02-S0029"
+        ],
+        "evidence_quote": "所以这个转运系统，也是学的那个第二次世界大战中间。他们不叫转（运），叫什么不知道了，叫阶梯治疗。阶梯治疗实际上一节一节一节，分级治疗，分阶转运。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC02-DE004-P01",
+        "target_stage_id": "BATCH07-DOC02-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC02-S0024",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC02-DE004-P02",
+        "target_stage_id": "BATCH07-DOC02-DE004-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH07-DOC02-S0024",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC02-DE004-P03",
+        "target_stage_id": "BATCH07-DOC02-DE004-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH07-DOC02-S0025",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC02-DE004-P04",
+        "target_stage_id": "BATCH07-DOC02-DE004-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC02-S0027",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

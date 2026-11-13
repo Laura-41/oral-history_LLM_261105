@@ -1,0 +1,39 @@
+单文档验证：BATCH04-DOC04 / cuc/qwen
+日志：04_54份正式语料批处理/run_logs/GRAPH_VERIFY_BATCH04-DOC04_cuc_qwen_20261113_115933_pid8162.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+
+===== L0 零 API 底座表 =====
+[落盘] BATCH04-DOC04 / cuc/qwen
+  原文片段 78｜一级事件 5｜覆盖率 1.0000
+  人工视图：无
+    documents                  1 行
+    source_segments           78 行
+    source_attachments        80 行
+    coverage_audit             1 行
+    document_annotations      44 行
+    event_nodes                5 行
+    event_processes            5 行
+    event_participants        12 行
+    event_circumstances       17 行
+    event_next                 4 行
+  警告 16 条（详见 L0_report.json）
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH04-DOC04
+
+===== L1/L2 模型任务（真实 API 调用） =====
+[真实调用] BATCH04-DOC04 / cuc/qwen / tasks=stage,entity_time
+  一级事件 5｜原文片段 78｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH04-DOC04/raw
+
+== stage：5 次调用 ==
+  [1/5] stage_BATCH04-DOC04-DE001 已有成功响应，跳过（断点续跑）
+  [2/5] stage_BATCH04-DOC04-DE002 已有成功响应，跳过（断点续跑）
+  [3/5] stage_BATCH04-DOC04-DE003 已有成功响应，跳过（断点续跑）
+  [4/5] stage_BATCH04-DOC04-DE004 已有成功响应，跳过（断点续跑）
+  [5/5] stage_BATCH04-DOC04-DE005 已有成功响应，跳过（断点续跑）
+
+== entity_time：1 次调用 ==
+  [1/1] 请求 entity_time/CRT-09，输入 23,867 字符，最长等待 3600s……
+  失败并停止：HTTP 500: {"error":{"message":"upstream error: do request failed (request id: 202611130359336797620068268d9d6af1wZSjD)","type":"new_api_error","param":"","code":"do_request_failed"}}
+
+entity_time 在第 1 次调用熔断；已完成结果全部保留，重跑同一命令即断点续跑。
+
+熔断于：L1/L2 模型任务（真实 API 调用）。已完成结果全部保留，修好后重跑同一命令即可。

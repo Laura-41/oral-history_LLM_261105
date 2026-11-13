@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T00:46:30",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC06-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC06-DE005",
+  "usage": {
+    "prompt_tokens": 1502,
+    "total_tokens": 5481,
+    "completion_tokens": 3979,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2535
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3978000,
+    "time_to_first_token_ms": 34113
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC06-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"作战室被炸毁，车辆火炮遭轰炸；一名公务员被气浪呛至休克后抢救恢复，一名朝鲜族维修队副队长在接收物资时被炸牺牲；叙述者评估炸弹数量与落点有限、整体危险不大。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以敌机在敌人被消灭后第二天来袭投弹为起点，至战地接收司令部部队接收物资时朝鲜族维修队副队长牺牲及危险评估为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"敌机在敌人被消灭后第二天来袭投弹，分别轰炸战场车辆火炮和人员。\",\n      \"process_text\": \"敌人在被消灭后的第二天，多架可载一千磅炸弹的敌机来袭投弹，分别轰炸战场车辆、火炮和人员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0009\"\n      ],\n      \"evidence_quote\": \"到了敌人最后（被）消灭以后的第二天，敌人（能载）一千磅的炸弹的飞机来了好多，就是拽炸弹，一个炸战场那个车辆、火炮，他自己要炸掉；另一个炸掉我们的人，想着救他们自己的人，实际上他自己的人已经不在了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"大炸弹在作战室附近爆炸，人员因在饭堂吃饭而幸免，作战室被炸毁。\",\n      \"process_text\": \"大炸弹在作战室附近爆炸，因人员正在饭堂吃饭，作战室被炸毁。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0009\"\n      ],\n      \"evidence_quote\": \"（敌人）用大炸弹，一个炸弹就在我们的作战室附近炸了，亏着是吃饭的时候，我们都到饭堂去吃饭了，（炸弹）把作战室都打掉了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"近旁掩体中的一名公务员被炸弹气浪呛至休克，经抢救恢复。\",\n      \"process_text\": \"近旁掩体中的一名公务员被炸弹气浪呛至休克，经抢救恢复。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0009\"\n      ],\n      \"evidence_quote\": \"另外我们一个掩体就在近旁，我一个公务员被大炸弹那个气浪呛得都休克了，以后抢救才弄过来。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"村子边界也落下一枚大炸弹，叙述者事后测量弹坑并判断危险不大。\",\n      \"process_text\": \"村子边界也落下一枚大炸弹，叙述者事后测量弹坑口径23公尺、最深12米，并判断炸弹和落点有限、危险不大。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0011\"\n      ],\n      \"evidence_quote\": \"另外在这个村子的边界，也拽了一个大炸弹。我以后亲自到那个地方去测量了一下子，这个口径23公尺，深度最深的地方12米。但是那都是有限的，炸弹也有限，在这里打的地方有限，对我们来说，危险并不大。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE005-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"战地接收司令部部队接收物资时，一名朝鲜族维修队副队长被炸弹击中牺牲。\",\n      \"process_text\": \"战地接收司令部部队接收物资时，一名朝鲜族维修队副队长被炸弹击中牺牲。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0011\"\n      ],\n      \"evidence_quote\": \"但是我们这个战地接收司令部的部队（在）接收东西（时），我们一个朝鲜族的维修队的副队长，（被）炸弹（击中）牺牲了。哎呀，很可惜的，很好的一个同志，所以（这是）我付的代价最明显的，我记得他是叫南宫黄（音），朝鲜人，很久（之前）就到了中国来，参加中国解放军。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE005-P01\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0009\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE005-P02\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0009\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE005-P03\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE005-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0011\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE005-P04\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE005-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0011\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC06-DE005",
+    "event_enrichment": {
+      "result_state": "作战室被炸毁，车辆火炮遭轰炸；一名公务员被气浪呛至休克后抢救恢复，一名朝鲜族维修队副队长在接收物资时被炸牺牲；叙述者评估炸弹数量与落点有限、整体危险不大。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以敌机在敌人被消灭后第二天来袭投弹为起点，至战地接收司令部部队接收物资时朝鲜族维修队副队长牺牲及危险评估为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC06-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "敌机在敌人被消灭后第二天来袭投弹，分别轰炸战场车辆火炮和人员。",
+        "process_text": "敌人在被消灭后的第二天，多架可载一千磅炸弹的敌机来袭投弹，分别轰炸战场车辆、火炮和人员。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0009"
+        ],
+        "evidence_quote": "到了敌人最后（被）消灭以后的第二天，敌人（能载）一千磅的炸弹的飞机来了好多，就是拽炸弹，一个炸战场那个车辆、火炮，他自己要炸掉；另一个炸掉我们的人，想着救他们自己的人，实际上他自己的人已经不在了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "大炸弹在作战室附近爆炸，人员因在饭堂吃饭而幸免，作战室被炸毁。",
+        "process_text": "大炸弹在作战室附近爆炸，因人员正在饭堂吃饭，作战室被炸毁。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0009"
+        ],
+        "evidence_quote": "（敌人）用大炸弹，一个炸弹就在我们的作战室附近炸了，亏着是吃饭的时候，我们都到饭堂去吃饭了，（炸弹）把作战室都打掉了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "近旁掩体中的一名公务员被炸弹气浪呛至休克，经抢救恢复。",
+        "process_text": "近旁掩体中的一名公务员被炸弹气浪呛至休克，经抢救恢复。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0009"
+        ],
+        "evidence_quote": "另外我们一个掩体就在近旁，我一个公务员被大炸弹那个气浪呛得都休克了，以后抢救才弄过来。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "村子边界也落下一枚大炸弹，叙述者事后测量弹坑并判断危险不大。",
+        "process_text": "村子边界也落下一枚大炸弹，叙述者事后测量弹坑口径23公尺、最深12米，并判断炸弹和落点有限、危险不大。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0011"
+        ],
+        "evidence_quote": "另外在这个村子的边界，也拽了一个大炸弹。我以后亲自到那个地方去测量了一下子，这个口径23公尺，深度最深的地方12米。但是那都是有限的，炸弹也有限，在这里打的地方有限，对我们来说，危险并不大。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE005-P05",
+        "stage_order": 5,
+        "stage_summary": "战地接收司令部部队接收物资时，一名朝鲜族维修队副队长被炸弹击中牺牲。",
+        "process_text": "战地接收司令部部队接收物资时，一名朝鲜族维修队副队长被炸弹击中牺牲。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0011"
+        ],
+        "evidence_quote": "但是我们这个战地接收司令部的部队（在）接收东西（时），我们一个朝鲜族的维修队的副队长，（被）炸弹（击中）牺牲了。哎呀，很可惜的，很好的一个同志，所以（这是）我付的代价最明显的，我记得他是叫南宫黄（音），朝鲜人，很久（之前）就到了中国来，参加中国解放军。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC06-DE005-P01",
+        "target_stage_id": "BATCH06-DOC06-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0009",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE005-P02",
+        "target_stage_id": "BATCH06-DOC06-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0009",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE005-P03",
+        "target_stage_id": "BATCH06-DOC06-DE005-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0011",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE005-P04",
+        "target_stage_id": "BATCH06-DOC06-DE005-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0011",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

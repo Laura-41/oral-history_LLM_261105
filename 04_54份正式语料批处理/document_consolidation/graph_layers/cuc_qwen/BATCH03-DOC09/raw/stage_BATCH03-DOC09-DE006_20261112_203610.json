@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T20:36:10",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC09-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC09-DE006",
+  "usage": {
+    "prompt_tokens": 1377,
+    "total_tokens": 7501,
+    "completion_tokens": 6124,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4914
+    },
+    "time_to_first_token_ms": 89957,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC09-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆在口述中完成表态：即使中央不同意、即使只剩一人也要起义并回到党的队伍，同时说明敌我兵力悬殊、自身缺乏党组织和基础。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件边界依据 source_segment_ids：S0069 起始表达“不同意也要起义”，S0071 表达“剩一个人也要回到党的队伍”的决心，S0074 补充缺乏党组织和基础，S0079 结束于“愿意回到自己的部队”。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"表明即使中央不同意也要起义\",\n      \"process_text\": \"陈锐霆说，如果不同意，他能带多少带多少，自己也要起义，因为自己是共产党，不能带着人打共产党。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0069\"\n      ],\n      \"evidence_quote\": \"陈锐霆：不同意（的话，）我能带多少带多少，我自己也要起义嘛。自己是共产党，带着人打共产党，那算个什么东西，那不是犯罪嘛。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"表明即使只剩一人也要回到党的队伍并说明决心\",\n      \"process_text\": \"陈锐霆说当时讲就算剩一个人也要回去，要回到党的队伍，那是他的决心，明知不可为而为之，并指出兵力相差悬殊、敌强我弱、敌多我少、装备不能比。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0071\"\n      ],\n      \"evidence_quote\": \"陈锐霆：我当时讲（就算）剩一个人我也要回去，要回到党的队伍，那就是我的决心，明知其不可为而为之嘛。那个我们兵力相差太悬殊了，敌强我弱，敌多我少，敌人的装备我们不能比啊！\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"说明自身缺乏党组织和基础\",\n      \"process_text\": \"陈锐霆说自己根本没有党的组织，光是自己一个人，没有党，底下没有基础。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0074\"\n      ],\n      \"evidence_quote\": \"陈锐霆：我根本没党的组织，光（是自己）一个人，没有党，底下没有基础。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"重申愿意回到自己的部队\",\n      \"process_text\": \"陈锐霆说愿意回到自己的部队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0079\"\n      ],\n      \"evidence_quote\": \"陈锐霆：愿意回到自己的部队嘛。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE006-P01\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0071\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE006-P02\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE006-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0074\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE006-P03\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE006-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0079\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC09-DE006",
+    "event_enrichment": {
+      "result_state": "陈锐霆在口述中完成表态：即使中央不同意、即使只剩一人也要起义并回到党的队伍，同时说明敌我兵力悬殊、自身缺乏党组织和基础。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "事件边界依据 source_segment_ids：S0069 起始表达“不同意也要起义”，S0071 表达“剩一个人也要回到党的队伍”的决心，S0074 补充缺乏党组织和基础，S0079 结束于“愿意回到自己的部队”。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC09-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "表明即使中央不同意也要起义",
+        "process_text": "陈锐霆说，如果不同意，他能带多少带多少，自己也要起义，因为自己是共产党，不能带着人打共产党。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0069"
+        ],
+        "evidence_quote": "陈锐霆：不同意（的话，）我能带多少带多少，我自己也要起义嘛。自己是共产党，带着人打共产党，那算个什么东西，那不是犯罪嘛。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "表明即使只剩一人也要回到党的队伍并说明决心",
+        "process_text": "陈锐霆说当时讲就算剩一个人也要回去，要回到党的队伍，那是他的决心，明知不可为而为之，并指出兵力相差悬殊、敌强我弱、敌多我少、装备不能比。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0071"
+        ],
+        "evidence_quote": "陈锐霆：我当时讲（就算）剩一个人我也要回去，要回到党的队伍，那就是我的决心，明知其不可为而为之嘛。那个我们兵力相差太悬殊了，敌强我弱，敌多我少，敌人的装备我们不能比啊！",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "说明自身缺乏党组织和基础",
+        "process_text": "陈锐霆说自己根本没有党的组织，光是自己一个人，没有党，底下没有基础。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0074"
+        ],
+        "evidence_quote": "陈锐霆：我根本没党的组织，光（是自己）一个人，没有党，底下没有基础。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "重申愿意回到自己的部队",
+        "process_text": "陈锐霆说愿意回到自己的部队。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0079"
+        ],
+        "evidence_quote": "陈锐霆：愿意回到自己的部队嘛。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC09-DE006-P01",
+        "target_stage_id": "BATCH03-DOC09-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC09-S0071",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE006-P02",
+        "target_stage_id": "BATCH03-DOC09-DE006-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC09-S0074",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE006-P03",
+        "target_stage_id": "BATCH03-DOC09-DE006-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC09-S0079",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T23:27:28",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC06-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC06-DE008",
+  "usage": {
+    "prompt_tokens": 1180,
+    "total_tokens": 3797,
+    "completion_tokens": 2617,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1676
+    },
+    "time_to_first_token_ms": 20200,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2616000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC06-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"山炮经涂油、油布包裹后埋入地下，山炮连改编为步枪连。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“这个炮就打埋伏”为埋藏行动起点，以“山炮连变成个步枪连”为改编结果终点；过程在同一片段内完成。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"山炮连计划让山炮隐蔽埋藏，作为“打埋伏”的处理方式。\",\n      \"process_text\": \"这个炮就打埋伏\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0107\"\n      ],\n      \"evidence_quote\": \"这个炮就打埋伏\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"用凡士林擦满炮身，再用油布包裹，为埋藏作保护处理。\",\n      \"process_text\": \"用凡士林擦满后，用油布包好\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0107\"\n      ],\n      \"evidence_quote\": \"（用）那个凡士林把它擦满了以后，用油布包好\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"挖深坑，将包裹好的山炮埋到地下。\",\n      \"process_text\": \"挖一个深坑，把包好的山炮埋到地下\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0107\"\n      ],\n      \"evidence_quote\": \"挖一个深坑，用这个……现在有塑料布啊，那时候没有塑料布。（用）那个凡士林把它擦满了以后，用油布包好，埋到地下。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"部队编制调整，山炮连改编为步枪连。\",\n      \"process_text\": \"山炮连变成个步枪连\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0107\"\n      ],\n      \"evidence_quote\": \"这个部队呢，山炮连变成个步枪连。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE008-P01\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0107\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE008-P02\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE008-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0107\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE008-P03\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE008-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0107\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC06-DE008",
+    "event_enrichment": {
+      "result_state": "山炮经涂油、油布包裹后埋入地下，山炮连改编为步枪连。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以“这个炮就打埋伏”为埋藏行动起点，以“山炮连变成个步枪连”为改编结果终点；过程在同一片段内完成。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC06-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "山炮连计划让山炮隐蔽埋藏，作为“打埋伏”的处理方式。",
+        "process_text": "这个炮就打埋伏",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0107"
+        ],
+        "evidence_quote": "这个炮就打埋伏",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "用凡士林擦满炮身，再用油布包裹，为埋藏作保护处理。",
+        "process_text": "用凡士林擦满后，用油布包好",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0107"
+        ],
+        "evidence_quote": "（用）那个凡士林把它擦满了以后，用油布包好",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "挖深坑，将包裹好的山炮埋到地下。",
+        "process_text": "挖一个深坑，把包好的山炮埋到地下",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0107"
+        ],
+        "evidence_quote": "挖一个深坑，用这个……现在有塑料布啊，那时候没有塑料布。（用）那个凡士林把它擦满了以后，用油布包好，埋到地下。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "部队编制调整，山炮连改编为步枪连。",
+        "process_text": "山炮连变成个步枪连",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0107"
+        ],
+        "evidence_quote": "这个部队呢，山炮连变成个步枪连。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC06-DE008-P01",
+        "target_stage_id": "BATCH04-DOC06-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC06-S0107",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE008-P02",
+        "target_stage_id": "BATCH04-DOC06-DE008-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC06-S0107",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE008-P03",
+        "target_stage_id": "BATCH04-DOC06-DE008-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC06-S0107",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

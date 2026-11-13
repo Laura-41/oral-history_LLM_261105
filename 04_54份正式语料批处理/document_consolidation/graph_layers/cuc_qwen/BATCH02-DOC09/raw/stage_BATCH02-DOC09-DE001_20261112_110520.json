@@ -1,0 +1,162 @@
+{
+  "run_time": "2026-11-12T11:05:20",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC09-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC09-DE001",
+  "usage": {
+    "prompt_tokens": 2188,
+    "total_tokens": 11932,
+    "completion_tokens": 9744,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7489
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 193971
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC09-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"343旅（含685团）从豆村镇奉命南下，经滹沱河方向到盂县附近，因阳泉被占迅速南下至正太路并于晚上过铁路，进入昔阳、和顺一带；随后在中央军撤退造成的破坏与政权缺失中继续南行，部队限食，至再往南走才有政权、可领到粮食。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据S0004起于豆村镇集结期间接到娘子关吃紧命令并匆匆出发；依据S0015至S0024止于过正太路后进入昔阳、和顺一带，并叙述中央军撤退影响与再往南走才有政权领粮；不展开临汾集合等后续安排。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"奉命南下并匆匆出发\",\n      \"process_text\": \"豆村镇集结期间干部调整后，很快接到娘子关吃紧命令，343旅在师部带领下迅速南下支援，部队匆匆出发。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0004\"\n      ],\n      \"evidence_quote\": \"但是很快就接到命令，就是娘子关吃紧，要我们343旅，师部带着我们迅速南下，去支援娘子关的战斗，当时部队就匆匆忙忙地出发了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"沿滹沱河方向南下\",\n      \"process_text\": \"部队从豆村镇南下，沿滹沱河方向往南走，到平山附近可能往东拐，不再跟着河走。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0015\"\n      ],\n      \"evidence_quote\": \"所以我们从豆村镇南下沿着那条河，是叫滹沱河什么河，当时我也不知道，从那个山里面一直往南走，那个河大概是到了平山附近——我们没到平山县城，可能就得往东拐了，我们就不跟着河走了。\",\n      \"confidence\": \"LOW\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"685团被抽调并获阳泉被占情报\",\n      \"process_text\": \"上级命令周建屏从685团抽调二营及一营一个连，685团不足两个营；走到盂县附近得到日本人占领阳泉的情报。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0017\"\n      ],\n      \"evidence_quote\": \"上级有个命令，就是我们旅的副旅长叫周建屏，要685团调一个多营的部队，就是叫当时的二营，这是红军时候的红五团，就是井冈山下山的底子，（另外）他把一营，就红四团底子的一营，又调了一个连给他。这样的话呢，我们685团就不足两个营了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"迅速南下过正太路\",\n      \"process_text\": \"因阳泉被占，部队迅速南下到正太路，等待后于晚上过铁路。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0017\"\n      ],\n      \"evidence_quote\": \"我们走到盂县附近就已经得到情报，日本人已经占领了阳泉，所以我们就迅速地南下到了正太路，正太路等一等，晚上就过了铁路了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"过路后进入昔阳和顺一带\",\n      \"process_text\": \"过铁路后到昔阳、和顺一带，已知娘子关失守、国民党军队南撤，沿途老百姓家被糟蹋。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0019\"\n      ],\n      \"evidence_quote\": \"过了铁路，就到昔阳、和顺那一带吧。我们已经知道娘子关失守以后，国民党军队已经从那里退了，往南撤了，所以沿途老百姓家给糟蹋得不像样子。\",\n      \"confidence\": \"LOW\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE001-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"中央军撤退造成沿途破坏\",\n      \"process_text\": \"叙述中央军撤退后旧军队散漫，奸淫掳抢，造成沿途破坏。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0021\"\n      ],\n      \"evidence_quote\": \"中央军呀。他那个部队娘子关撤退以后啊，就是（告诉他们）半个月以后到临汾集合，你们怎么走怎么样（不管），就是旧军队呀，估计古代旧军队打进城要屠城要发财，打败仗以后就散了，奸淫掳抢什么都干。\",\n      \"confidence\": \"LOW\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE001-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"政权缺失与部队限食\",\n      \"process_text\": \"中央军撤退主要道路上当地政权不在，部队吃饭困难，带十个干粮一天吃一个，再往南走才有政权领粮。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0024\"\n      ],\n      \"evidence_quote\": \"我们在那几天呢，中央军退的那些主要的道路上，当地政权也已经不在了，连我们吃饭都吃不上。我们就带着十个干粮，不敢多吃了，以后一天吃一个，两三天我们就看到一个人。以后再往南走的时候呢，才有了政权，才可以领到粮食了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE001-P01\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0015\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE001-P02\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0017\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE001-P03\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE001-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0017\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE001-P04\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE001-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0019\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE001-P05\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE001-P06\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0021\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE001-P06\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE001-P07\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0024\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": null\n}",
+  "parsed": {
+    "document_id": "YYS-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC09-DE001",
+    "event_enrichment": {
+      "result_state": "343旅（含685团）从豆村镇奉命南下，经滹沱河方向到盂县附近，因阳泉被占迅速南下至正太路并于晚上过铁路，进入昔阳、和顺一带；随后在中央军撤退造成的破坏与政权缺失中继续南行，部队限食，至再往南走才有政权、可领到粮食。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据S0004起于豆村镇集结期间接到娘子关吃紧命令并匆匆出发；依据S0015至S0024止于过正太路后进入昔阳、和顺一带，并叙述中央军撤退影响与再往南走才有政权领粮；不展开临汾集合等后续安排。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC09-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "奉命南下并匆匆出发",
+        "process_text": "豆村镇集结期间干部调整后，很快接到娘子关吃紧命令，343旅在师部带领下迅速南下支援，部队匆匆出发。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0004"
+        ],
+        "evidence_quote": "但是很快就接到命令，就是娘子关吃紧，要我们343旅，师部带着我们迅速南下，去支援娘子关的战斗，当时部队就匆匆忙忙地出发了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "沿滹沱河方向南下",
+        "process_text": "部队从豆村镇南下，沿滹沱河方向往南走，到平山附近可能往东拐，不再跟着河走。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0015"
+        ],
+        "evidence_quote": "所以我们从豆村镇南下沿着那条河，是叫滹沱河什么河，当时我也不知道，从那个山里面一直往南走，那个河大概是到了平山附近——我们没到平山县城，可能就得往东拐了，我们就不跟着河走了。",
+        "confidence": "LOW"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "685团被抽调并获阳泉被占情报",
+        "process_text": "上级命令周建屏从685团抽调二营及一营一个连，685团不足两个营；走到盂县附近得到日本人占领阳泉的情报。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0017"
+        ],
+        "evidence_quote": "上级有个命令，就是我们旅的副旅长叫周建屏，要685团调一个多营的部队，就是叫当时的二营，这是红军时候的红五团，就是井冈山下山的底子，（另外）他把一营，就红四团底子的一营，又调了一个连给他。这样的话呢，我们685团就不足两个营了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "迅速南下过正太路",
+        "process_text": "因阳泉被占，部队迅速南下到正太路，等待后于晚上过铁路。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0017"
+        ],
+        "evidence_quote": "我们走到盂县附近就已经得到情报，日本人已经占领了阳泉，所以我们就迅速地南下到了正太路，正太路等一等，晚上就过了铁路了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "过路后进入昔阳和顺一带",
+        "process_text": "过铁路后到昔阳、和顺一带，已知娘子关失守、国民党军队南撤，沿途老百姓家被糟蹋。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0019"
+        ],
+        "evidence_quote": "过了铁路，就到昔阳、和顺那一带吧。我们已经知道娘子关失守以后，国民党军队已经从那里退了，往南撤了，所以沿途老百姓家给糟蹋得不像样子。",
+        "confidence": "LOW"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE001-P06",
+        "stage_order": 6,
+        "stage_summary": "中央军撤退造成沿途破坏",
+        "process_text": "叙述中央军撤退后旧军队散漫，奸淫掳抢，造成沿途破坏。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0021"
+        ],
+        "evidence_quote": "中央军呀。他那个部队娘子关撤退以后啊，就是（告诉他们）半个月以后到临汾集合，你们怎么走怎么样（不管），就是旧军队呀，估计古代旧军队打进城要屠城要发财，打败仗以后就散了，奸淫掳抢什么都干。",
+        "confidence": "LOW"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE001-P07",
+        "stage_order": 7,
+        "stage_summary": "政权缺失与部队限食",
+        "process_text": "中央军撤退主要道路上当地政权不在，部队吃饭困难，带十个干粮一天吃一个，再往南走才有政权领粮。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0024"
+        ],
+        "evidence_quote": "我们在那几天呢，中央军退的那些主要的道路上，当地政权也已经不在了，连我们吃饭都吃不上。我们就带着十个干粮，不敢多吃了，以后一天吃一个，两三天我们就看到一个人。以后再往南走的时候呢，才有了政权，才可以领到粮食了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC09-DE001-P01",
+        "target_stage_id": "BATCH02-DOC09-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0015",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE001-P02",
+        "target_stage_id": "BATCH02-DOC09-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0017",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE001-P03",
+        "target_stage_id": "BATCH02-DOC09-DE001-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH02-DOC09-S0017",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE001-P04",
+        "target_stage_id": "BATCH02-DOC09-DE001-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0019",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE001-P05",
+        "target_stage_id": "BATCH02-DOC09-DE001-P06",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC09-S0021",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE001-P06",
+        "target_stage_id": "BATCH02-DOC09-DE001-P07",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH02-DOC09-S0024",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": null
+  },
+  "request_error": null
+}

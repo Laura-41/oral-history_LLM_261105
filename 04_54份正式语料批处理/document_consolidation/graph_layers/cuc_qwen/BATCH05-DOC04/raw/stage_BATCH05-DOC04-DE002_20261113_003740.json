@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-13T00:37:40",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC04-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC04-DE002",
+  "usage": {
+    "prompt_tokens": 1649,
+    "total_tokens": 17454,
+    "completion_tokens": 15805,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14399
+    },
+    "tokens_per_second": 15804000,
+    "time_to_first_token_ms": 250881,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC04-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"驱避剂在抗美援越期间研究出来，现在用于防护，身上一抹可驱避蚊子，有效时间从一小时到八小时，南方部队北方部队都使用。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为 S0050 所述蚊虫严重背景，核心为 S0050 所述抗美援越期间研究工作及 S0055 所述研究出来，终点为 S0056 所述驱避剂现在使用、有效时间延长、南方北方部队使用；S0053/S0054 为字义说明，S0058 为笠帽驱避补充，不改变事件边界。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"蚊虫严重，驱避防护背景。\",\n      \"process_text\": \"那个绑腿你要不打的话，那简直不能过。你那个绑腿不打，你这个脚啊，你稍微放在那里，不要两分钟三分钟，这个小腿上面都（是）黑的，都是蚊子啊。那个芦苇荡啊，白天都有蚊子啊！\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0050\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那个绑腿你要不打的话，那简直不能过。你那个绑腿不打，你这个脚啊，你稍微放在那里，不要两分钟三分钟，这个小腿上面都（是）黑的，都是蚊子啊。那个芦苇荡啊，白天都有蚊子啊！现在好了，现在都有防护设备了，有驱避剂了。我们抗美援越（时候），我们都（有）研究工作，现在都装备那个的，都是我们地方上配合研究的。现在戴上那个驱避剂的笠帽啊，一米左右范围以内，那个蚊子不敢来的。它在外面嗡嗡叫，它不接近的，放哨你照样放，没关系。那个树上旱蚂蟥多得都掉下来，都吃你血。都可以驱避的，它见到怕的，这个就（是我们）研究的驱避剂。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"抗美援越期间开展驱避剂研究工作，地方配合研究。\",\n      \"process_text\": \"我们抗美援越（时候），我们都（有）研究工作，现在都装备那个的，都是我们地方上配合研究的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0050\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那个绑腿你要不打的话，那简直不能过。你那个绑腿不打，你这个脚啊，你稍微放在那里，不要两分钟三分钟，这个小腿上面都（是）黑的，都是蚊子啊。那个芦苇荡啊，白天都有蚊子啊！现在好了，现在都有防护设备了，有驱避剂了。我们抗美援越（时候），我们都（有）研究工作，现在都装备那个的，都是我们地方上配合研究的。现在戴上那个驱避剂的笠帽啊，一米左右范围以内，那个蚊子不敢来的。它在外面嗡嗡叫，它不接近的，放哨你照样放，没关系。那个树上旱蚂蟥多得都掉下来，都吃你血。都可以驱避的，它见到怕的，这个就（是我们）研究的驱避剂。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"驱避剂现在使用，有效时间延长，南方北方部队使用。\",\n      \"process_text\": \"那个时候就没有了，那个驱避剂现在身上一抹，原来开始一个小时有效，蚊子不敢来。以后一抹三个小时，又一抹可以五个小时，一抹八个小时。你站岗只站两个小时就换了嘛，所以呢，暴露部分，手、脚、脸上这一抹。现在南方部队北方部队都用这个驱避剂的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0056\"\n      ],\n      \"evidence_quote\": \"那个时候就没有了，那个驱避剂现在身上一抹，原来开始一个小时有效，蚊子不敢来。以后一抹三个小时，又一抹可以五个小时，一抹八个小时。你站岗只站两个小时就换了嘛，所以呢，暴露部分，手、脚、脸上这一抹。现在南方部队北方部队都用这个驱避剂的。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE002-P01\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0050\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE002-P02\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE002-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0055\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC04-DE002",
+    "event_enrichment": {
+      "result_state": "驱避剂在抗美援越期间研究出来，现在用于防护，身上一抹可驱避蚊子，有效时间从一小时到八小时，南方部队北方部队都使用。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为 S0050 所述蚊虫严重背景，核心为 S0050 所述抗美援越期间研究工作及 S0055 所述研究出来，终点为 S0056 所述驱避剂现在使用、有效时间延长、南方北方部队使用；S0053/S0054 为字义说明，S0058 为笠帽驱避补充，不改变事件边界。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC04-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "蚊虫严重，驱避防护背景。",
+        "process_text": "那个绑腿你要不打的话，那简直不能过。你那个绑腿不打，你这个脚啊，你稍微放在那里，不要两分钟三分钟，这个小腿上面都（是）黑的，都是蚊子啊。那个芦苇荡啊，白天都有蚊子啊！",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0050"
+        ],
+        "evidence_quote": "    陈海峰：那个绑腿你要不打的话，那简直不能过。你那个绑腿不打，你这个脚啊，你稍微放在那里，不要两分钟三分钟，这个小腿上面都（是）黑的，都是蚊子啊。那个芦苇荡啊，白天都有蚊子啊！现在好了，现在都有防护设备了，有驱避剂了。我们抗美援越（时候），我们都（有）研究工作，现在都装备那个的，都是我们地方上配合研究的。现在戴上那个驱避剂的笠帽啊，一米左右范围以内，那个蚊子不敢来的。它在外面嗡嗡叫，它不接近的，放哨你照样放，没关系。那个树上旱蚂蟥多得都掉下来，都吃你血。都可以驱避的，它见到怕的，这个就（是我们）研究的驱避剂。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "抗美援越期间开展驱避剂研究工作，地方配合研究。",
+        "process_text": "我们抗美援越（时候），我们都（有）研究工作，现在都装备那个的，都是我们地方上配合研究的。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0050"
+        ],
+        "evidence_quote": "    陈海峰：那个绑腿你要不打的话，那简直不能过。你那个绑腿不打，你这个脚啊，你稍微放在那里，不要两分钟三分钟，这个小腿上面都（是）黑的，都是蚊子啊。那个芦苇荡啊，白天都有蚊子啊！现在好了，现在都有防护设备了，有驱避剂了。我们抗美援越（时候），我们都（有）研究工作，现在都装备那个的，都是我们地方上配合研究的。现在戴上那个驱避剂的笠帽啊，一米左右范围以内，那个蚊子不敢来的。它在外面嗡嗡叫，它不接近的，放哨你照样放，没关系。那个树上旱蚂蟥多得都掉下来，都吃你血。都可以驱避的，它见到怕的，这个就（是我们）研究的驱避剂。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "驱避剂现在使用，有效时间延长，南方北方部队使用。",
+        "process_text": "那个时候就没有了，那个驱避剂现在身上一抹，原来开始一个小时有效，蚊子不敢来。以后一抹三个小时，又一抹可以五个小时，一抹八个小时。你站岗只站两个小时就换了嘛，所以呢，暴露部分，手、脚、脸上这一抹。现在南方部队北方部队都用这个驱避剂的。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0056"
+        ],
+        "evidence_quote": "那个时候就没有了，那个驱避剂现在身上一抹，原来开始一个小时有效，蚊子不敢来。以后一抹三个小时，又一抹可以五个小时，一抹八个小时。你站岗只站两个小时就换了嘛，所以呢，暴露部分，手、脚、脸上这一抹。现在南方部队北方部队都用这个驱避剂的。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC04-DE002-P01",
+        "target_stage_id": "BATCH05-DOC04-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC04-S0050",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC04-DE002-P02",
+        "target_stage_id": "BATCH05-DOC04-DE002-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC04-S0055",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

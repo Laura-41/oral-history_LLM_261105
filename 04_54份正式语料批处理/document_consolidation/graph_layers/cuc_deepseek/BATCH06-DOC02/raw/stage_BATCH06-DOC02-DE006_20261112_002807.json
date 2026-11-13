@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T00:28:07",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC02-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC02-DE006",
+  "usage": {
+    "prompt_tokens": 1355,
+    "total_tokens": 4202,
+    "completion_tokens": 2847,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1913
+    },
+    "time_to_first_token_ms": 22060,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-18\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC02-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"医院共收治新登战役伤员及原有伤病员一千二百多人，工作人员经调来新学生等增至三百多人，处于粮食供应紧张、照护负担沉重的状态。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以新登战役后大批伤员后送、重伤员到“我们这里”为起点，以医院收治总数、人员调配及“肚子吃不饱”的困难状态为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"新登战役后大批伤员后送，重伤员被送到医院。\",\n      \"process_text\": \"新登战役打下来后，大批伤员往后送，伤亡很大；新登战役有七百多伤员，其中重伤员送到“我们这里”。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0029\"\n      ],\n      \"evidence_quote\": \"第二呢，新登战役打下来，大批伤员往后送，我们伤亡很大。我们当时新登战役有七百多伤员，轻伤的好多，整个这次战役（有）四千多伤员呢。那么新登战役是七八百，下来都是重伤的到我们这里来。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"医院收治新登战役伤员七百多，并接收重伤员及原有伤病员。\",\n      \"process_text\": \"医院收治新登战役伤员七百多，接收重伤员，加上原来的一二百名伤病员和重病人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0031\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那么我们收了新登战役伤员七百多。我们这个医院接收了重伤员，加上原来的一二百，加上重病人，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"伤病员总数达一千二百多，调来新学生和工作人员后仍面临照护与粮食困难。\",\n      \"process_text\": \"伤病员总数达一千二百多；原有工作人员一百二十多人，后调来一百多新学生及一二十人工作人员，合计三百多人，要照护一千二百多重伤员，仍感到肚子吃不饱。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0032\"\n      ],\n      \"evidence_quote\": \"一共一千二百多伤（病）员。人还是一百二十多人，后来把后面的一百多新学生调来了。把他们的工作人员都调进来，一二十人，加起来就是三百多人。三百多人呢，就要带一千二百多重伤员。哎呀，肚子吃不饱。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE006-P01\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0031\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE006-P02\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE006-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0032\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-18",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC02-DE006",
+    "event_enrichment": {
+      "result_state": "医院共收治新登战役伤员及原有伤病员一千二百多人，工作人员经调来新学生等增至三百多人，处于粮食供应紧张、照护负担沉重的状态。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以新登战役后大批伤员后送、重伤员到“我们这里”为起点，以医院收治总数、人员调配及“肚子吃不饱”的困难状态为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC02-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "新登战役后大批伤员后送，重伤员被送到医院。",
+        "process_text": "新登战役打下来后，大批伤员往后送，伤亡很大；新登战役有七百多伤员，其中重伤员送到“我们这里”。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0029"
+        ],
+        "evidence_quote": "第二呢，新登战役打下来，大批伤员往后送，我们伤亡很大。我们当时新登战役有七百多伤员，轻伤的好多，整个这次战役（有）四千多伤员呢。那么新登战役是七八百，下来都是重伤的到我们这里来。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "医院收治新登战役伤员七百多，并接收重伤员及原有伤病员。",
+        "process_text": "医院收治新登战役伤员七百多，接收重伤员，加上原来的一二百名伤病员和重病人。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0031"
+        ],
+        "evidence_quote": "    陈海峰：那么我们收了新登战役伤员七百多。我们这个医院接收了重伤员，加上原来的一二百，加上重病人，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "伤病员总数达一千二百多，调来新学生和工作人员后仍面临照护与粮食困难。",
+        "process_text": "伤病员总数达一千二百多；原有工作人员一百二十多人，后调来一百多新学生及一二十人工作人员，合计三百多人，要照护一千二百多重伤员，仍感到肚子吃不饱。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0032"
+        ],
+        "evidence_quote": "一共一千二百多伤（病）员。人还是一百二十多人，后来把后面的一百多新学生调来了。把他们的工作人员都调进来，一二十人，加起来就是三百多人。三百多人呢，就要带一千二百多重伤员。哎呀，肚子吃不饱。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC02-DE006-P01",
+        "target_stage_id": "BATCH06-DOC02-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0031",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE006-P02",
+        "target_stage_id": "BATCH06-DOC02-DE006-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC02-S0032",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

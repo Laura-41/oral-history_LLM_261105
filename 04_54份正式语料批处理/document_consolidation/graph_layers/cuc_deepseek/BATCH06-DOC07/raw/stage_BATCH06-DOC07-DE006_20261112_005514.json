@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-12T00:55:14",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE006",
+  "usage": {
+    "prompt_tokens": 1218,
+    "total_tokens": 4136,
+    "completion_tokens": 2918,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2339
+    },
+    "time_to_first_token_ms": 22524,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"各军分区无法手术、需更高技术处理的重伤员已转到华中军区第一后方医院，人数达七八百人，医院住满。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以1945年11月组建完毕后开始接收伤员为起点，以重伤员转来达七八百人、住满为终点；不展开后续治疗过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"各军分区将无法手术、需更高技术处理的重伤员转至第一后方医院。\",\n      \"process_text\": \"开始接收伤员，把各个军分区他们手里的重伤员，他们做不了手术的，需要更高技术来处理的，都转到我们这儿来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0082\"\n      ],\n      \"evidence_quote\": \"开始呢，就是说接收伤员，把各个军分区他们手里的重伤员，他们做不了手术的，需要更高技术来处理的，都转到我们这儿来。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"重伤员转来后人数达七八百人，医院住满。\",\n      \"process_text\": \"一转来嘛，就七八百人。一家伙住了满满的呀。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0082\"\n      ],\n      \"evidence_quote\": \"一转来嘛，就七八百人。一家伙住了满满的呀。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE006-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE006-P02\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0082\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE006",
+    "event_enrichment": {
+      "result_state": "各军分区无法手术、需更高技术处理的重伤员已转到华中军区第一后方医院，人数达七八百人，医院住满。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以1945年11月组建完毕后开始接收伤员为起点，以重伤员转来达七八百人、住满为终点；不展开后续治疗过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "各军分区将无法手术、需更高技术处理的重伤员转至第一后方医院。",
+        "process_text": "开始接收伤员，把各个军分区他们手里的重伤员，他们做不了手术的，需要更高技术来处理的，都转到我们这儿来。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0082"
+        ],
+        "evidence_quote": "开始呢，就是说接收伤员，把各个军分区他们手里的重伤员，他们做不了手术的，需要更高技术来处理的，都转到我们这儿来。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "重伤员转来后人数达七八百人，医院住满。",
+        "process_text": "一转来嘛，就七八百人。一家伙住了满满的呀。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0082"
+        ],
+        "evidence_quote": "一转来嘛，就七八百人。一家伙住了满满的呀。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE006-P01",
+        "target_stage_id": "BATCH06-DOC07-DE006-P02",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC07-S0082",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

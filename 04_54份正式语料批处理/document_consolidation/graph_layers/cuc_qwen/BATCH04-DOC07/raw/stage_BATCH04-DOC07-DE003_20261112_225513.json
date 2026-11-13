@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T22:55:13",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC07-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC07-DE003",
+  "usage": {
+    "prompt_tokens": 1339,
+    "total_tokens": 6312,
+    "completion_tokens": 4973,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4002
+    },
+    "time_to_first_token_ms": 74625,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC07-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"人躲入海岸芦苇荡，船被弃置并放有渔网，以躲避敌人巡逻艇和飞机侦察。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件边界从 S0058 提到海边芦苇、弃船躲入芦苇开始，经 S0059 说明怕敌人巡逻艇来，到 S0061 说明敌人飞机低空侦察时看到捕鱼船有渔网、人实际躲入芦苇荡结束；S0061 后半段关于材料未公开及新四军海军的内容不属于本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"叙述者称有的船被扔掉，人躲到海边芦苇里。\",\n      \"process_text\": \"我们有的船都扔掉，躲到芦苇里面，海边上有好多芦苇啊\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0058\"\n      ],\n      \"evidence_quote\": \"少数的有芦苇。我们有的船都扔掉，躲到芦苇里面，海边上有好多芦苇啊\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"说明躲避原因是怕敌人巡逻艇来。\",\n      \"process_text\": \"怕敌人巡逻艇来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0059\"\n      ],\n      \"evidence_quote\": \"，怕敌人巡逻艇来。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"敌人飞机低空侦察时看到捕鱼船上有渔网，而人实际已躲入海岸芦苇荡。\",\n      \"process_text\": \"敌人飞机低空侦察的时候，看到就捕鱼的船，有渔网放在上面。实际上呢，人都到海岸的芦苇荡里躲着了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0061\"\n      ],\n      \"evidence_quote\": \"    陈海峰：敌人飞机低空侦察的时候，看到就捕鱼的船，有渔网放在上面。实际上呢，人都到海岸的芦苇荡里躲着了。这个地方还讲到一个，这个材料没公开过。（19）41年年底到（19）42年年底之前，实际上当时我们新四军已经有海军了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE003-P01\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE003-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0059\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE003-P02\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0061\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC07-DE003",
+    "event_enrichment": {
+      "result_state": "人躲入海岸芦苇荡，船被弃置并放有渔网，以躲避敌人巡逻艇和飞机侦察。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件边界从 S0058 提到海边芦苇、弃船躲入芦苇开始，经 S0059 说明怕敌人巡逻艇来，到 S0061 说明敌人飞机低空侦察时看到捕鱼船有渔网、人实际躲入芦苇荡结束；S0061 后半段关于材料未公开及新四军海军的内容不属于本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC07-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "叙述者称有的船被扔掉，人躲到海边芦苇里。",
+        "process_text": "我们有的船都扔掉，躲到芦苇里面，海边上有好多芦苇啊",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0058"
+        ],
+        "evidence_quote": "少数的有芦苇。我们有的船都扔掉，躲到芦苇里面，海边上有好多芦苇啊",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "说明躲避原因是怕敌人巡逻艇来。",
+        "process_text": "怕敌人巡逻艇来。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0059"
+        ],
+        "evidence_quote": "，怕敌人巡逻艇来。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "敌人飞机低空侦察时看到捕鱼船上有渔网，而人实际已躲入海岸芦苇荡。",
+        "process_text": "敌人飞机低空侦察的时候，看到就捕鱼的船，有渔网放在上面。实际上呢，人都到海岸的芦苇荡里躲着了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0061"
+        ],
+        "evidence_quote": "    陈海峰：敌人飞机低空侦察的时候，看到就捕鱼的船，有渔网放在上面。实际上呢，人都到海岸的芦苇荡里躲着了。这个地方还讲到一个，这个材料没公开过。（19）41年年底到（19）42年年底之前，实际上当时我们新四军已经有海军了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC07-DE003-P01",
+        "target_stage_id": "BATCH04-DOC07-DE003-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC07-S0059",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE003-P02",
+        "target_stage_id": "BATCH04-DOC07-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0061",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

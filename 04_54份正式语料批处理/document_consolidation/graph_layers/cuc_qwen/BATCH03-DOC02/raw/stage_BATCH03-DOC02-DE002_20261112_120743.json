@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T12:07:43",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC02-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC02-DE002",
+  "usage": {
+    "prompt_tokens": 1316,
+    "total_tokens": 6534,
+    "completion_tokens": 5218,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4040
+    },
+    "time_to_first_token_ms": 105021,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC02-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"小峰山未被敌人突破，但两侧主力团均被敌人突破。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件边界依据原文片段：起于“以后我到了补充团当团长，这一年的12月”日军扫荡武汉外围并从信阳、孝感向西进攻，止于“敌人没突破；但两边的我们的主力团，都被敌人突破了。”\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"日军12月扫荡武汉外围，从信阳、孝感向西进攻。\",\n      \"process_text\": \"以后我到了补充团当团长，这一年的12月，日本鬼子要扫荡武汉周围的这些外围部队，就从信阳、孝感就向西边进攻了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0020\"\n      ],\n      \"evidence_quote\": \"以后我到了补充团当团长，这一年的12月，日本鬼子要扫荡武汉周围的这些外围部队，就从信阳、孝感就向西边进攻了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"该师在随县以南驻守，涉及万家岭、高城一段的“万高战役”。\",\n      \"process_text\": \"我这个师就在随县以南担任（驻守），那儿有个“万高战役”嘛，万家岭、高城那一段。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0020\"\n      ],\n      \"evidence_quote\": \"我这个师就在随县以南担任（驻守），那儿有个“万高战役”嘛，万家岭、高城那一段。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆分工驻守小峰山。\",\n      \"process_text\": \"在敌人进攻的时候，我分工驻守的地方叫小峰山（音）\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0020\"\n      ],\n      \"evidence_quote\": \"在敌人进攻的时候，我分工驻守的地方叫小峰山（音）\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"敌人进攻时小峰山未被突破，两侧主力团被突破。\",\n      \"process_text\": \"敌人没突破；但两边的我们的主力团，都被敌人突破了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0020\"\n      ],\n      \"evidence_quote\": \"敌人没突破；但两边的我们的主力团，都被敌人突破了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE002-P01\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0020\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE002-P02\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0020\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE002-P03\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE002-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0020\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": null\n}",
+  "parsed": {
+    "document_id": "CRT-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC02-DE002",
+    "event_enrichment": {
+      "result_state": "小峰山未被敌人突破，但两侧主力团均被敌人突破。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件边界依据原文片段：起于“以后我到了补充团当团长，这一年的12月”日军扫荡武汉外围并从信阳、孝感向西进攻，止于“敌人没突破；但两边的我们的主力团，都被敌人突破了。”",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC02-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "日军12月扫荡武汉外围，从信阳、孝感向西进攻。",
+        "process_text": "以后我到了补充团当团长，这一年的12月，日本鬼子要扫荡武汉周围的这些外围部队，就从信阳、孝感就向西边进攻了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0020"
+        ],
+        "evidence_quote": "以后我到了补充团当团长，这一年的12月，日本鬼子要扫荡武汉周围的这些外围部队，就从信阳、孝感就向西边进攻了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "该师在随县以南驻守，涉及万家岭、高城一段的“万高战役”。",
+        "process_text": "我这个师就在随县以南担任（驻守），那儿有个“万高战役”嘛，万家岭、高城那一段。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0020"
+        ],
+        "evidence_quote": "我这个师就在随县以南担任（驻守），那儿有个“万高战役”嘛，万家岭、高城那一段。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆分工驻守小峰山。",
+        "process_text": "在敌人进攻的时候，我分工驻守的地方叫小峰山（音）",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0020"
+        ],
+        "evidence_quote": "在敌人进攻的时候，我分工驻守的地方叫小峰山（音）",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "敌人进攻时小峰山未被突破，两侧主力团被突破。",
+        "process_text": "敌人没突破；但两边的我们的主力团，都被敌人突破了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0020"
+        ],
+        "evidence_quote": "敌人没突破；但两边的我们的主力团，都被敌人突破了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC02-DE002-P01",
+        "target_stage_id": "BATCH03-DOC02-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC02-S0020",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC02-DE002-P02",
+        "target_stage_id": "BATCH03-DOC02-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC02-S0020",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC02-DE002-P03",
+        "target_stage_id": "BATCH03-DOC02-DE002-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC02-S0020",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": null
+  },
+  "request_error": null
+}

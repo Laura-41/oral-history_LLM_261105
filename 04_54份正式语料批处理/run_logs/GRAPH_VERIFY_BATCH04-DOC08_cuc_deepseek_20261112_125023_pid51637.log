@@ -1,0 +1,111 @@
+单文档验证：BATCH04-DOC08 / cuc/deepseek
+日志：04_54份正式语料批处理/run_logs/GRAPH_VERIFY_BATCH04-DOC08_cuc_deepseek_20261112_125023_pid51637.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+
+===== L0 零 API 底座表 =====
+[落盘] BATCH04-DOC08 / cuc/deepseek
+  原文片段 54｜一级事件 10｜覆盖率 1.0000
+  人工视图：无
+    documents                  1 行
+    source_segments           54 行
+    source_attachments        59 行
+    coverage_audit             1 行
+    document_annotations      29 行
+    event_nodes               10 行
+    event_processes           10 行
+    event_participants        20 行
+    event_circumstances       15 行
+    event_next                 9 行
+  警告 10 条（详见 L0_report.json）
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH04-DOC08
+
+===== L1/L2 模型任务（真实 API 调用） =====
+[真实调用] BATCH04-DOC08 / cuc/deepseek / tasks=stage,entity_time
+  一级事件 10｜原文片段 54｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH04-DOC08/raw
+
+== stage：10 次调用 ==
+  [1/10] stage_BATCH04-DOC08-DE001 已有成功响应，跳过（断点续跑）
+  [2/10] stage_BATCH04-DOC08-DE002 已有成功响应，跳过（断点续跑）
+  [3/10] stage_BATCH04-DOC08-DE003 已有成功响应，跳过（断点续跑）
+  [4/10] stage_BATCH04-DOC08-DE004 已有成功响应，跳过（断点续跑）
+  [5/10] stage_BATCH04-DOC08-DE005 已有成功响应，跳过（断点续跑）
+  [6/10] stage_BATCH04-DOC08-DE006 已有成功响应，跳过（断点续跑）
+  [7/10] stage_BATCH04-DOC08-DE007 已有成功响应，跳过（断点续跑）
+  [8/10] stage_BATCH04-DOC08-DE008 已有成功响应，跳过（断点续跑）
+  [9/10] stage_BATCH04-DOC08-DE009 已有成功响应，跳过（断点续跑）
+  [10/10] stage_BATCH04-DOC08-DE010 已有成功响应，跳过（断点续跑）
+
+== entity_time：1 次调用 ==
+  [1/1] 请求 entity_time/CRT-10，输入 19,383 字符，最长等待 1200s……
+  完成：total_tokens=57464
+
+全部完成：11 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH04-DOC08 --model cuc/deepseek --write
+
+===== 后处理：校验、算偏移、生成 18 张 CSV =====
+  环境成分待人工复核 4 条（就近归类／规范值待补，另出清单）
+[落盘] BATCH04-DOC08 / cuc/deepseek
+  stage 响应 10｜entity_time 响应 1｜覆盖率 1.0000
+    documents                  1 行
+    source_segments           54 行
+    source_attachments        93 行
+    coverage_audit             1 行
+    document_annotations      29 行
+    event_nodes               10 行
+    event_processes           10 行
+    event_participants        20 行
+    event_circumstances       15 行
+    event_next                 9 行
+    process_stages            34 行
+    stage_next                25 行
+    event_times               10 行
+    time_expressions          43 行
+    entities                 107 行
+    entity_mentions           87 行
+    entity_aliases            12 行
+    entity_relations          70 行
+  校验问题 0 条｜偏移待核 13 条
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH04-DOC08
+
+===== 18 表完整性验收 =====
+[通过] BATCH04-DOC08 / cuc/deepseek
+  片段 54｜事件 10｜阶段 34｜实体 107｜提及 87｜时间表达 43｜覆盖率 1.0000
+  报告：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH04-DOC08/VALIDATION_report.json
+
+===== L3/L4 导出 24 张 import CSV =====
+[落盘] 模型线 cuc/deepseek｜已验收文档 20 份
+  生平叠加视图：疑似同一经历 0 组（只标 NEEDS_REVIEW，交人工）；人工 MERGE 生效 0 组，KEEP_SEPARATE 0 组
+
+== 24 张 import CSV 规模 ==
+  documents                    20 行
+  source_segments            1791 行
+  source_attachments         2536 行
+  event_nodes                 174 行
+  event_processes             174 行
+  event_participants          380 行
+  event_circumstances         352 行
+  process_stages              657 行
+  stage_next                  499 行
+  event_next                  154 行
+  entities                    508 行
+  entity_mentions             321 行
+  entity_aliases               50 行
+  entity_relations            105 行
+  event_times                 174 行
+  time_expressions            510 行
+  document_annotations        619 行
+  coverage_audit               20 行
+  person_subjects               3 行
+  document_persons             20 行
+  life_episodes               140 行
+  life_episode_sources        140 行
+  life_episode_next           137 行
+  narrated_contexts            29 行
+
+  警告 4123 条（详见报告）
+
+  已写入：05_合并与Neo4j/import_cuc_deepseek
+
+===== 完成 =====
+结果：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH04-DOC08/
+图谱导入：05_合并与Neo4j/import_cuc_deepseek/
+请把 VALIDATION_report.json 与 prepare_summary.json 交助手复核，再决定是否放行 BATCH03。

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T08:55:41",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC03-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC03-DE001",
+  "usage": {
+    "prompt_tokens": 1321,
+    "total_tokens": 11868,
+    "completion_tokens": 10547,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9165
+    },
+    "time_to_first_token_ms": 156970,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 10546000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V1-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC03-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"后藤勇被该部队抓捕，期间与敌工股长接触并在碉堡底下喊话、陪伴数日，之后到了新四军军部，半个月以后跳日本舞。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于 S0005 所述“抓日本鬼子这一段和他接触了一下，去到碉堡底下喊话”，止于 S0007 所述“后来后藤勇到了新四军军部，半个月以后，他跳日本舞”；S0007 中“梅多尼亚夫”被明确不是本部队抓的，不纳入本事件主体。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"部队抓捕后藤勇\",\n      \"process_text\": \"我们这个部队抓的是后藤勇。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0007\"\n      ],\n      \"evidence_quote\": \"    陈海峰：好，他们讲得很流利，日本人和他对话呢，在一块，以后那几天都陪着这个日本鬼子。后来还抓了一个叫梅多尼亚夫（音），那个翻译日本的（名字），我记不清楚了。那个不是我们这个部队抓的，我们这个部队抓的是后藤勇。后来后藤勇到了新四军军部，半个月以后，他跳日本舞。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"与敌工股长接触并同去碉堡底下喊话\",\n      \"process_text\": \"和他接触了一下，去到碉堡底下喊话，他也带着去的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0005\"\n      ],\n      \"evidence_quote\": \"他的事情我不知道。那个时候，我们就是抓日本鬼子这一段和他接触了一下，去到碉堡底下喊话，他也带着去的，在一块没几天。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"数日内陪伴并与日本俘虏对话\",\n      \"process_text\": \"日本人和他对话呢，在一块，以后那几天都陪着这个日本鬼子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0007\"\n      ],\n      \"evidence_quote\": \"    陈海峰：好，他们讲得很流利，日本人和他对话呢，在一块，以后那几天都陪着这个日本鬼子。后来还抓了一个叫梅多尼亚夫（音），那个翻译日本的（名字），我记不清楚了。那个不是我们这个部队抓的，我们这个部队抓的是后藤勇。后来后藤勇到了新四军军部，半个月以后，他跳日本舞。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"后藤勇到新四军军部并跳日本舞\",\n      \"process_text\": \"后来后藤勇到了新四军军部，半个月以后，他跳日本舞。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0007\"\n      ],\n      \"evidence_quote\": \"    陈海峰：好，他们讲得很流利，日本人和他对话呢，在一块，以后那几天都陪着这个日本鬼子。后来还抓了一个叫梅多尼亚夫（音），那个翻译日本的（名字），我记不清楚了。那个不是我们这个部队抓的，我们这个部队抓的是后藤勇。后来后藤勇到了新四军军部，半个月以后，他跳日本舞。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE001-P01\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0005\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE001-P02\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0007\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE001-P03\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0007\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC03-DE001",
+    "event_enrichment": {
+      "result_state": "后藤勇被该部队抓捕，期间与敌工股长接触并在碉堡底下喊话、陪伴数日，之后到了新四军军部，半个月以后跳日本舞。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于 S0005 所述“抓日本鬼子这一段和他接触了一下，去到碉堡底下喊话”，止于 S0007 所述“后来后藤勇到了新四军军部，半个月以后，他跳日本舞”；S0007 中“梅多尼亚夫”被明确不是本部队抓的，不纳入本事件主体。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC03-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "部队抓捕后藤勇",
+        "process_text": "我们这个部队抓的是后藤勇。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0007"
+        ],
+        "evidence_quote": "    陈海峰：好，他们讲得很流利，日本人和他对话呢，在一块，以后那几天都陪着这个日本鬼子。后来还抓了一个叫梅多尼亚夫（音），那个翻译日本的（名字），我记不清楚了。那个不是我们这个部队抓的，我们这个部队抓的是后藤勇。后来后藤勇到了新四军军部，半个月以后，他跳日本舞。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "与敌工股长接触并同去碉堡底下喊话",
+        "process_text": "和他接触了一下，去到碉堡底下喊话，他也带着去的。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0005"
+        ],
+        "evidence_quote": "他的事情我不知道。那个时候，我们就是抓日本鬼子这一段和他接触了一下，去到碉堡底下喊话，他也带着去的，在一块没几天。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "数日内陪伴并与日本俘虏对话",
+        "process_text": "日本人和他对话呢，在一块，以后那几天都陪着这个日本鬼子。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0007"
+        ],
+        "evidence_quote": "    陈海峰：好，他们讲得很流利，日本人和他对话呢，在一块，以后那几天都陪着这个日本鬼子。后来还抓了一个叫梅多尼亚夫（音），那个翻译日本的（名字），我记不清楚了。那个不是我们这个部队抓的，我们这个部队抓的是后藤勇。后来后藤勇到了新四军军部，半个月以后，他跳日本舞。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "后藤勇到新四军军部并跳日本舞",
+        "process_text": "后来后藤勇到了新四军军部，半个月以后，他跳日本舞。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0007"
+        ],
+        "evidence_quote": "    陈海峰：好，他们讲得很流利，日本人和他对话呢，在一块，以后那几天都陪着这个日本鬼子。后来还抓了一个叫梅多尼亚夫（音），那个翻译日本的（名字），我记不清楚了。那个不是我们这个部队抓的，我们这个部队抓的是后藤勇。后来后藤勇到了新四军军部，半个月以后，他跳日本舞。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC03-DE001-P01",
+        "target_stage_id": "BATCH02-DOC03-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0005",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE001-P02",
+        "target_stage_id": "BATCH02-DOC03-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0007",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE001-P03",
+        "target_stage_id": "BATCH02-DOC03-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0007",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T01:06:56",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC09-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC09-DE008",
+  "usage": {
+    "prompt_tokens": 1431,
+    "total_tokens": 6287,
+    "completion_tokens": 4856,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3668
+    },
+    "time_to_first_token_ms": 42681,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4855000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-22\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC09-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰出任苏北国际和平医院驻院总医师，统管全部医疗与病房管理，实际承担院长职责并管理7个医疗队；在统管过程中陪同医生、请教经验并接受其影响。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据S0092至S0097，事件从医院对外对内名称及陈海峰任驻院总医师的说明开始，到其统管医疗、病房管理、管理7个医疗队及陪医生请教结束；医生后来的惊奇评价作为影响提及，不另拆为独立事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"明确医院对外称苏北国际和平医院、对内为华中军区第一后方医院，院长副院长由上级兼任，陈海峰任驻院总医师。\",\n      \"process_text\": \"医院对外对内名称与领导兼任安排确定，陈海峰作为驻院总医师。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0092\"\n      ],\n      \"evidence_quote\": \"对外，我们叫苏北国际和平医院，对内，我们是华中军区第一后方医院。第一后方医院实际上除了一个医疗队，第一医疗队全部变成苏北国际和平医院。名义上这个院长就是华中军区卫生部长齐仲桓兼，副院长（由）副部长李振湘兼。我呢，作为驻院总医师。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"解释“总医师”的“总”为统管，全部医疗事务由陈海峰负责，包括是否开刀、手术室准备和术后安排。\",\n      \"process_text\": \"陈海峰统管一切医疗，负责手术决策、手术室准备与术后管理。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0095\"\n      ],\n      \"evidence_quote\": \"“总经理”的“总”。我统管一切，所有的医疗都我管了，这个开不开刀啊，那个手术室的准备啊，手术后怎么样啊。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"医生术后离开后，病房管理由陈海峰全面负责，他实际承担院长职责并管理7个医疗队。\",\n      \"process_text\": \"医生开完刀离开，陈海峰接管整个病房管理，实际以院长身份管理7个医疗队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0097\"\n      ],\n      \"evidence_quote\": \"那个医生开完刀，他就走了，整个的病房管理都由我来管了，实际上我是院长。内部呢，我是院长，我要管7个医疗队，是不是。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"陈海峰在统管医疗病房期间，大部分时间陪同医生，个别请教，吸取其经验与思路并接受影响。\",\n      \"process_text\": \"陈海峰花绝大部分时间陪同医生，个别讨教，取经验和思路，接受了不少影响。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0097\"\n      ],\n      \"evidence_quote\": \"我要绝大部分时间陪着这个医生，个别的讨教，取他的经验，取他的思路，也接受了不少影响。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE008-P01\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0095\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE008-P02\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0097\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE008-P03\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE008-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0097\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-22",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC09-DE008",
+    "event_enrichment": {
+      "result_state": "陈海峰出任苏北国际和平医院驻院总医师，统管全部医疗与病房管理，实际承担院长职责并管理7个医疗队；在统管过程中陪同医生、请教经验并接受其影响。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "依据S0092至S0097，事件从医院对外对内名称及陈海峰任驻院总医师的说明开始，到其统管医疗、病房管理、管理7个医疗队及陪医生请教结束；医生后来的惊奇评价作为影响提及，不另拆为独立事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC09-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "明确医院对外称苏北国际和平医院、对内为华中军区第一后方医院，院长副院长由上级兼任，陈海峰任驻院总医师。",
+        "process_text": "医院对外对内名称与领导兼任安排确定，陈海峰作为驻院总医师。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0092"
+        ],
+        "evidence_quote": "对外，我们叫苏北国际和平医院，对内，我们是华中军区第一后方医院。第一后方医院实际上除了一个医疗队，第一医疗队全部变成苏北国际和平医院。名义上这个院长就是华中军区卫生部长齐仲桓兼，副院长（由）副部长李振湘兼。我呢，作为驻院总医师。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "解释“总医师”的“总”为统管，全部医疗事务由陈海峰负责，包括是否开刀、手术室准备和术后安排。",
+        "process_text": "陈海峰统管一切医疗，负责手术决策、手术室准备与术后管理。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0095"
+        ],
+        "evidence_quote": "“总经理”的“总”。我统管一切，所有的医疗都我管了，这个开不开刀啊，那个手术室的准备啊，手术后怎么样啊。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "医生术后离开后，病房管理由陈海峰全面负责，他实际承担院长职责并管理7个医疗队。",
+        "process_text": "医生开完刀离开，陈海峰接管整个病房管理，实际以院长身份管理7个医疗队。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0097"
+        ],
+        "evidence_quote": "那个医生开完刀，他就走了，整个的病房管理都由我来管了，实际上我是院长。内部呢，我是院长，我要管7个医疗队，是不是。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "陈海峰在统管医疗病房期间，大部分时间陪同医生，个别请教，吸取其经验与思路并接受影响。",
+        "process_text": "陈海峰花绝大部分时间陪同医生，个别讨教，取经验和思路，接受了不少影响。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0097"
+        ],
+        "evidence_quote": "我要绝大部分时间陪着这个医生，个别的讨教，取他的经验，取他的思路，也接受了不少影响。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC09-DE008-P01",
+        "target_stage_id": "BATCH06-DOC09-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0095",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE008-P02",
+        "target_stage_id": "BATCH06-DOC09-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0097",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE008-P03",
+        "target_stage_id": "BATCH06-DOC09-DE008-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0097",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

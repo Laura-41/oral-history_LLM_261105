@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-07T19:56:23",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC01-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC01-DE001",
+  "usage": {
+    "prompt_tokens": 1751,
+    "total_tokens": 9053,
+    "completion_tokens": 7302,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5740
+    },
+    "time_to_first_token_ms": 107306,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V1-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC01-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"打狗运动结束后，老百姓有的将狗肉送交部队，部队给每个战士发一条腌狗腿，用于改善伙食；根据地/中心区较易动员，边远地区较难动员。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于 S0008 提到狗影响大并发动“打狗运动”，止于 S0014 总结“打狗运动”在根据地、中心区、边远地区的动员难易。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"因狗影响大，提出发动打狗运动\",\n      \"process_text\": \"我再补充几句，刚才不是（讲）打狗（嘛），狗给我们影响也很大嘛，以后就发动“打狗运动”。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0008\"\n      ],\n      \"evidence_quote\": \"我再补充几句，刚才不是（讲）打狗（嘛），狗给我们影响也很大嘛，以后就发动“打狗运动”。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"根据地内部动员杀狗，大狗小狗都被宰\",\n      \"process_text\": \"根据地内部的地方，好动员，人家容易接受，他虽然不愿意，但还是可以。而且不但是愿意，家里狗杀掉，一只狗两只狗，他有的狗还有几个小狗，大狗小狗都得宰啊。动员以后，他家里一下子狗都（死了）。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0010\"\n      ],\n      \"evidence_quote\": \"根据地内部的地方，好动员，人家容易接受，他虽然不愿意，但还是可以。而且不但是愿意，家里狗杀掉，一只狗两只狗，他有的狗还有几个小狗，大狗小狗都得宰啊。动员以后，他家里一下子狗都（死了）。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"狗肉被送交，部队改善伙食\",\n      \"process_text\": \"狗肉，他有的不愿意吃，有的埋起来，有的不埋，狗肉送给我们了，我们就改善伙食了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0010\"\n      ],\n      \"evidence_quote\": \"狗肉，他有的不愿意吃，有的埋起来，有的不埋，狗肉送给我们了，我们就改善伙食了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"每个战士发一条狗腿，盐腌后随身携带\",\n      \"process_text\": \"“打狗运动”中有许多狗，我们一个战士都发一条狗腿，把狗腿子（用）盐腌一腌，放在挎包里头，自己要想吃（的时候就可以吃）。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0010\"\n      ],\n      \"evidence_quote\": \"“打狗运动”中有许多狗，我们一个战士都发一条狗腿，把狗腿子（用）盐腌一腌，放在挎包里头，自己要想吃（的时候就可以吃）。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"总结打狗运动在根据地、中心区、边远地区的动员差异\",\n      \"process_text\": \"这个就是“打狗运动”，根据地比较好一点，中心区好点，边远地区难一点，难动员，他一般都不愿意。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0014\"\n      ],\n      \"evidence_quote\": \"这个就是“打狗运动”，根据地比较好一点，中心区好点，边远地区难一点，难动员，他一般都不愿意。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC01-DE001-P01\",\n      \"target_stage_id\": \"BATCH02-DOC01-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC01-S0010\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC01-DE001-P02\",\n      \"target_stage_id\": \"BATCH02-DOC01-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC01-S0010\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC01-DE001-P03\",\n      \"target_stage_id\": \"BATCH02-DOC01-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC01-S0010\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC01-DE001-P04\",\n      \"target_stage_id\": \"BATCH02-DOC01-DE001-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC01-S0014\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V1-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC01-DE001",
+    "event_enrichment": {
+      "result_state": "打狗运动结束后，老百姓有的将狗肉送交部队，部队给每个战士发一条腌狗腿，用于改善伙食；根据地/中心区较易动员，边远地区较难动员。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于 S0008 提到狗影响大并发动“打狗运动”，止于 S0014 总结“打狗运动”在根据地、中心区、边远地区的动员难易。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC01-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "因狗影响大，提出发动打狗运动",
+        "process_text": "我再补充几句，刚才不是（讲）打狗（嘛），狗给我们影响也很大嘛，以后就发动“打狗运动”。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0008"
+        ],
+        "evidence_quote": "我再补充几句，刚才不是（讲）打狗（嘛），狗给我们影响也很大嘛，以后就发动“打狗运动”。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC01-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "根据地内部动员杀狗，大狗小狗都被宰",
+        "process_text": "根据地内部的地方，好动员，人家容易接受，他虽然不愿意，但还是可以。而且不但是愿意，家里狗杀掉，一只狗两只狗，他有的狗还有几个小狗，大狗小狗都得宰啊。动员以后，他家里一下子狗都（死了）。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0010"
+        ],
+        "evidence_quote": "根据地内部的地方，好动员，人家容易接受，他虽然不愿意，但还是可以。而且不但是愿意，家里狗杀掉，一只狗两只狗，他有的狗还有几个小狗，大狗小狗都得宰啊。动员以后，他家里一下子狗都（死了）。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC01-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "狗肉被送交，部队改善伙食",
+        "process_text": "狗肉，他有的不愿意吃，有的埋起来，有的不埋，狗肉送给我们了，我们就改善伙食了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0010"
+        ],
+        "evidence_quote": "狗肉，他有的不愿意吃，有的埋起来，有的不埋，狗肉送给我们了，我们就改善伙食了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC01-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "每个战士发一条狗腿，盐腌后随身携带",
+        "process_text": "“打狗运动”中有许多狗，我们一个战士都发一条狗腿，把狗腿子（用）盐腌一腌，放在挎包里头，自己要想吃（的时候就可以吃）。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0010"
+        ],
+        "evidence_quote": "“打狗运动”中有许多狗，我们一个战士都发一条狗腿，把狗腿子（用）盐腌一腌，放在挎包里头，自己要想吃（的时候就可以吃）。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC01-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "总结打狗运动在根据地、中心区、边远地区的动员差异",
+        "process_text": "这个就是“打狗运动”，根据地比较好一点，中心区好点，边远地区难一点，难动员，他一般都不愿意。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0014"
+        ],
+        "evidence_quote": "这个就是“打狗运动”，根据地比较好一点，中心区好点，边远地区难一点，难动员，他一般都不愿意。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC01-DE001-P01",
+        "target_stage_id": "BATCH02-DOC01-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC01-S0010",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC01-DE001-P02",
+        "target_stage_id": "BATCH02-DOC01-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC01-S0010",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC01-DE001-P03",
+        "target_stage_id": "BATCH02-DOC01-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC01-S0010",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC01-DE001-P04",
+        "target_stage_id": "BATCH02-DOC01-DE001-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC01-S0014",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

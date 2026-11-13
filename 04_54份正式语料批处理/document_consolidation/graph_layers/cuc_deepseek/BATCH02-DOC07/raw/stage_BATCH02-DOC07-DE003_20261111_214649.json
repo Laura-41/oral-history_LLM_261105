@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-11T21:46:49",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC07-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC07-DE003",
+  "usage": {
+    "prompt_tokens": 1417,
+    "total_tokens": 4609,
+    "completion_tokens": 3192,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1931
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3191000,
+    "time_to_first_token_ms": 27675
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC07-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"小河口后方医院建成，内部管理制度正规、设备较全，并获得史沫特莱多次表扬。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于留守处选址小河口并自建房屋，止于后方医院建立正规管理制度及史沫特莱参观表扬。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"留守处设在小河口，位于安徽屯溪太平县青弋江上游的山坡。\",\n      \"process_text\": \"留守处设在小河口，位于安徽屯溪太平县青弋江上游的山坡。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0020\"\n      ],\n      \"evidence_quote\": \"留守处在小河口，小河口属于安徽屯溪的太平县。太平县那个地方呢，那个青弋江上游那个地方有一个山坡\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"自己动手盖房子，利用山里的竹木建成后方医院，并利用小土地庙作手术室。\",\n      \"process_text\": \"自己动手盖房子，利用山里的竹木建成后方医院，并利用小土地庙作手术室。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0020\"\n      ],\n      \"evidence_quote\": \"我们自己盖房子。山里面有竹子啊、树啊，盖成一个后方医院，陈毅在那儿当部长，利用了一个小土地庙当做手术室。那是一个瓦房子，其他房子都是自己盖的，亲手盖的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"后方医院内部管理正规，制度与大城市医院相同。\",\n      \"process_text\": \"后方医院内部管理正规，制度与大城市医院相同。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0020\"\n      ],\n      \"evidence_quote\": \"内部管理非常正规，我们的前方医院，南堡村医院，军医处直接管了，没有院长。后方医院完全和大城市医院内部管理制度一样的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"实行交接班、行政、检查病人等制度，配备X光、冰箱，自制冰块，检验科较全。\",\n      \"process_text\": \"实行交接班、行政、检查病人等制度，配备X光、冰箱，自制冰块，检验科较全。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0022\"\n      ],\n      \"evidence_quote\": \"交接班制度、行政制度、检查病人制度呀。有X光，有冰箱，自己做冰块什么东西，检验科都很全。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"史沫特莱参观前方医院和后方医院后多次表扬。\",\n      \"process_text\": \"史沫特莱参观前方医院和后方医院后多次表扬。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0022\"\n      ],\n      \"evidence_quote\": \"所以史沫特莱看过了前方医院，看过了后方医院，她多次表扬。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE003-P01\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0020\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE003-P02\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0020\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE003-P03\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE003-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0022\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE003-P04\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE003-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0022\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC07-DE003",
+    "event_enrichment": {
+      "result_state": "小河口后方医院建成，内部管理制度正规、设备较全，并获得史沫特莱多次表扬。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于留守处选址小河口并自建房屋，止于后方医院建立正规管理制度及史沫特莱参观表扬。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC07-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "留守处设在小河口，位于安徽屯溪太平县青弋江上游的山坡。",
+        "process_text": "留守处设在小河口，位于安徽屯溪太平县青弋江上游的山坡。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0020"
+        ],
+        "evidence_quote": "留守处在小河口，小河口属于安徽屯溪的太平县。太平县那个地方呢，那个青弋江上游那个地方有一个山坡",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "自己动手盖房子，利用山里的竹木建成后方医院，并利用小土地庙作手术室。",
+        "process_text": "自己动手盖房子，利用山里的竹木建成后方医院，并利用小土地庙作手术室。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0020"
+        ],
+        "evidence_quote": "我们自己盖房子。山里面有竹子啊、树啊，盖成一个后方医院，陈毅在那儿当部长，利用了一个小土地庙当做手术室。那是一个瓦房子，其他房子都是自己盖的，亲手盖的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "后方医院内部管理正规，制度与大城市医院相同。",
+        "process_text": "后方医院内部管理正规，制度与大城市医院相同。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0020"
+        ],
+        "evidence_quote": "内部管理非常正规，我们的前方医院，南堡村医院，军医处直接管了，没有院长。后方医院完全和大城市医院内部管理制度一样的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "实行交接班、行政、检查病人等制度，配备X光、冰箱，自制冰块，检验科较全。",
+        "process_text": "实行交接班、行政、检查病人等制度，配备X光、冰箱，自制冰块，检验科较全。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0022"
+        ],
+        "evidence_quote": "交接班制度、行政制度、检查病人制度呀。有X光，有冰箱，自己做冰块什么东西，检验科都很全。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "史沫特莱参观前方医院和后方医院后多次表扬。",
+        "process_text": "史沫特莱参观前方医院和后方医院后多次表扬。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0022"
+        ],
+        "evidence_quote": "所以史沫特莱看过了前方医院，看过了后方医院，她多次表扬。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC07-DE003-P01",
+        "target_stage_id": "BATCH02-DOC07-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0020",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE003-P02",
+        "target_stage_id": "BATCH02-DOC07-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0020",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE003-P03",
+        "target_stage_id": "BATCH02-DOC07-DE003-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC07-S0022",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE003-P04",
+        "target_stage_id": "BATCH02-DOC07-DE003-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC07-S0022",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T00:49:43",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC06-DE011",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC06-DE011",
+  "usage": {
+    "prompt_tokens": 1411,
+    "total_tokens": 6141,
+    "completion_tokens": 4730,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3494
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 36485,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC06-DE011\",\n  \"event_enrichment\": {\n    \"result_state\": \"江阴要塞接收完成，政治委员接管要塞军官，唐君照受命在江阴主持相关任务并后任政治委员。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于叙述者23号过江并接收江阴要塞，止于将任务交给唐君照在江阴主持、后任政治委员；不扩展到三野后续向上海行动。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE011-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"23号过江后接收江阴要塞；要塞内已有地下党活动，两个团长为党员，司令被迫起义，约三千人。\",\n      \"process_text\": \"过江就接收江阴要塞，要塞内有地下党活动，两个团长是党员，炮兵向国民党地区打；司令被迫起义，有三千来人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0032\"\n      ],\n      \"evidence_quote\": \"我是23号过的江吧，我记不太清楚了。过江就接收江阴要塞，江阴要塞有我们地下党的活动啊，有两个团长是我们的党员，他们大炮就是向他们自己，向国民党地区打，不向我们这个地方打。他这个司令实际上被迫地起义了，有三千来人嘛。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE011-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"政治委员从后方来，接管江阴要塞的军官。\",\n      \"process_text\": \"接收后，政治委员从后边来，接管江阴要塞的军官。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0032\"\n      ],\n      \"evidence_quote\": \"我一过了江就接收这个，以后我们的政治委员从后边来，他就接管这个江阴要塞的军官嘛。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE011-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"说明政治委员为张凯；接收后由地方党唐君照过去主持，另有原新四军干部在过江前已到江阴动员起义。\",\n      \"process_text\": \"张凯任政治委员；接收江阴要塞后，唐君照过去主持；另有原新四军二科副科长先过江到江阴动员起义。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0034\"\n      ],\n      \"evidence_quote\": \"叫张凯，我们的政治委员。我接收江阴要塞之后，地方党的一个同志叫唐君照，他就过去主持这一件事情。另外原来在新四军，我当参谋处长的时候，二科的副科长调到华中局地方去担任社会部的一个科长，他也到江阴。我们没过江以前，他先过去了，就在江阴，动员他们起义。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE011-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"汇报唐君照到来及三野准备过江后向上海行动后，将任务交给唐君照在江阴主持，后任政治委员。\",\n      \"process_text\": \"汇报后，因三野准备过江后接着往上海走，将任务交给唐君照在江阴搞，后任政治委员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0040\"\n      ],\n      \"evidence_quote\": \"当然汇报了。他的汇报主要是说唐君照来了，马上三野准备过了江以后接着往上海走，那个时候中央还没来指示，我就准备走嘛。所以我就把这个任务交给唐君照同志在那搞，以后他在江阴当我们的政治委员嘛。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE011-P01\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE011-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0032\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE011-P02\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE011-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0034\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE011-P03\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE011-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0040\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC06-DE011",
+    "event_enrichment": {
+      "result_state": "江阴要塞接收完成，政治委员接管要塞军官，唐君照受命在江阴主持相关任务并后任政治委员。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于叙述者23号过江并接收江阴要塞，止于将任务交给唐君照在江阴主持、后任政治委员；不扩展到三野后续向上海行动。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC06-DE011-P01",
+        "stage_order": 1,
+        "stage_summary": "23号过江后接收江阴要塞；要塞内已有地下党活动，两个团长为党员，司令被迫起义，约三千人。",
+        "process_text": "过江就接收江阴要塞，要塞内有地下党活动，两个团长是党员，炮兵向国民党地区打；司令被迫起义，有三千来人。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0032"
+        ],
+        "evidence_quote": "我是23号过的江吧，我记不太清楚了。过江就接收江阴要塞，江阴要塞有我们地下党的活动啊，有两个团长是我们的党员，他们大炮就是向他们自己，向国民党地区打，不向我们这个地方打。他这个司令实际上被迫地起义了，有三千来人嘛。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE011-P02",
+        "stage_order": 2,
+        "stage_summary": "政治委员从后方来，接管江阴要塞的军官。",
+        "process_text": "接收后，政治委员从后边来，接管江阴要塞的军官。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0032"
+        ],
+        "evidence_quote": "我一过了江就接收这个，以后我们的政治委员从后边来，他就接管这个江阴要塞的军官嘛。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE011-P03",
+        "stage_order": 3,
+        "stage_summary": "说明政治委员为张凯；接收后由地方党唐君照过去主持，另有原新四军干部在过江前已到江阴动员起义。",
+        "process_text": "张凯任政治委员；接收江阴要塞后，唐君照过去主持；另有原新四军二科副科长先过江到江阴动员起义。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0034"
+        ],
+        "evidence_quote": "叫张凯，我们的政治委员。我接收江阴要塞之后，地方党的一个同志叫唐君照，他就过去主持这一件事情。另外原来在新四军，我当参谋处长的时候，二科的副科长调到华中局地方去担任社会部的一个科长，他也到江阴。我们没过江以前，他先过去了，就在江阴，动员他们起义。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE011-P04",
+        "stage_order": 4,
+        "stage_summary": "汇报唐君照到来及三野准备过江后向上海行动后，将任务交给唐君照在江阴主持，后任政治委员。",
+        "process_text": "汇报后，因三野准备过江后接着往上海走，将任务交给唐君照在江阴搞，后任政治委员。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0040"
+        ],
+        "evidence_quote": "当然汇报了。他的汇报主要是说唐君照来了，马上三野准备过了江以后接着往上海走，那个时候中央还没来指示，我就准备走嘛。所以我就把这个任务交给唐君照同志在那搞，以后他在江阴当我们的政治委员嘛。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC06-DE011-P01",
+        "target_stage_id": "BATCH06-DOC06-DE011-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0032",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE011-P02",
+        "target_stage_id": "BATCH06-DOC06-DE011-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0034",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE011-P03",
+        "target_stage_id": "BATCH06-DOC06-DE011-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0040",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

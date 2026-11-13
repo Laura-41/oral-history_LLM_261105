@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T21:59:22",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC09-DE007",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC09-DE007",
+  "usage": {
+    "prompt_tokens": 1228,
+    "total_tokens": 3551,
+    "completion_tokens": 2323,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1806
+    },
+    "time_to_first_token_ms": 17947,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC09-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"扩军人员于12月底奉命撤回，回到在洪洞附近集结的部队。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以12月底接到上级撤回指示为起点，以回到洪洞附近集结的部队为终点；后续关于补充团的内容属于归队后的见闻，不纳入本事件阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"12月底接到上级指示，要求撤回部队。\",\n      \"process_text\": \"12月底，上面来指示，要我们撤回到部队去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0052\"\n      ],\n      \"evidence_quote\": \"我们在12月底，上面就来指示，要我们撤回到部队去。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"回到部队时，部队正在洪洞附近集结。\",\n      \"process_text\": \"我们回到部队的时候，部队就在洪洞附近集结。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0054\"\n      ],\n      \"evidence_quote\": \"我们回到部队的时候呢，部队就在洪洞附近集结。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE007-P01\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE007-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0052\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC09-DE007",
+    "event_enrichment": {
+      "result_state": "扩军人员于12月底奉命撤回，回到在洪洞附近集结的部队。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以12月底接到上级撤回指示为起点，以回到洪洞附近集结的部队为终点；后续关于补充团的内容属于归队后的见闻，不纳入本事件阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC09-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "12月底接到上级指示，要求撤回部队。",
+        "process_text": "12月底，上面来指示，要我们撤回到部队去。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0052"
+        ],
+        "evidence_quote": "我们在12月底，上面就来指示，要我们撤回到部队去。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "回到部队时，部队正在洪洞附近集结。",
+        "process_text": "我们回到部队的时候，部队就在洪洞附近集结。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0054"
+        ],
+        "evidence_quote": "我们回到部队的时候呢，部队就在洪洞附近集结。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC09-DE007-P01",
+        "target_stage_id": "BATCH02-DOC09-DE007-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC09-S0052",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

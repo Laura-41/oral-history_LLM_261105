@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-12T01:19:51",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC03-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC03-DE004",
+  "usage": {
+    "prompt_tokens": 1438,
+    "total_tokens": 4460,
+    "completion_tokens": 3022,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1596
+    },
+    "time_to_first_token_ms": 24784,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3021000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC03-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"人员已分散编组并换便衣，在溧阳、金坛、句容农村打埋伏等待，同时进行过江路线侦察、联络和可能情况准备。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以住宿后人员分散、等待过江为起点，至准备过江路线、联络、可能情况准备及说明埋伏地点在金坛为终点；不扩展到实际过江行动。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC03-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"住宿后人员分散，换便衣并按大组、小组编组，等待过江。\",\n      \"process_text\": \"住宿以后人员分散，因过江铁路线不能武装而换便衣，三百多人分编为大组和小组，等待过江。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC03-S0108\"\n      ],\n      \"evidence_quote\": \"    陈海峰：才有接应，安排我们住宿。住宿以后，我们就分散了，要等待过江。过江的铁路线不能武装，我们都换便衣。我们三百多人分了好多小组，20个人1个大组。3个人1个小组。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC03-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"一百多人分散到溧阳、金坛、句容一带农村打埋伏，等待过江。\",\n      \"process_text\": \"一百多人分散到溧阳、金坛、句容这一带，到农村里面去打埋伏，等待过江。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC03-S0110\"\n      ],\n      \"evidence_quote\": \"    陈海峰：一百多人，都分散到溧阳、金坛、句容这一带，（到）农村里面去打埋伏，等待过江。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC03-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"等待期间做抗日宣传、民运工作和发展农村群众组织；中队取消后改为大组。\",\n      \"process_text\": \"在等待过江期间做抗日宣传，帮助做民运工作，帮助发展农村群众组织；时间不长，中队取消，变成一个大组。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC03-S0112\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那么在等待的时间里面，就做抗日宣传，帮助做民运工作，帮助发展农村群众组织。时间不长，中队取消了，就变成一个大组。大组是18个人，组长由皖南政治部的一个政治干事姚念（担任），姚念后来是驻印度、突尼斯的大使，（他住在）西苑的社会部，我们搞敌工工作的那个。（在）资本主义国家的（中国驻外）机关的工作人员，（他是）大使级的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC03-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"18人编成6个小组，陈海峰带一个3人小组。\",\n      \"process_text\": \"陈海峰带一个3人小组，18个人编成6个小组。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC03-S0114\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我带一个3人小组，我们18个人编成6个小组。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC03-DE004-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"进行过江路线侦察、联络和可能遇到情况的准备，并说明埋伏地点在金坛。\",\n      \"process_text\": \"准备过江，包括准备过江路线的侦察、准备过江路线的联络、准备过江可能遇到情况的准备；打埋伏地方在金坛。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC03-S0116\"\n      ],\n      \"evidence_quote\": \"    陈海峰：准备过江。准备过江的路线的侦察，准备过江的路线的联络，准备过江可能遇到情况的准备。我们打埋伏地方在哪呢？在金坛。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC03-DE004-P01\",\n      \"target_stage_id\": \"BATCH07-DOC03-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC03-S0110\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC03-DE004-P02\",\n      \"target_stage_id\": \"BATCH07-DOC03-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC03-S0112\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC03-DE004-P03\",\n      \"target_stage_id\": \"BATCH07-DOC03-DE004-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH07-DOC03-S0114\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC03-DE004-P04\",\n      \"target_stage_id\": \"BATCH07-DOC03-DE004-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC03-S0116\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC03-DE004",
+    "event_enrichment": {
+      "result_state": "人员已分散编组并换便衣，在溧阳、金坛、句容农村打埋伏等待，同时进行过江路线侦察、联络和可能情况准备。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以住宿后人员分散、等待过江为起点，至准备过江路线、联络、可能情况准备及说明埋伏地点在金坛为终点；不扩展到实际过江行动。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC03-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "住宿后人员分散，换便衣并按大组、小组编组，等待过江。",
+        "process_text": "住宿以后人员分散，因过江铁路线不能武装而换便衣，三百多人分编为大组和小组，等待过江。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC03-S0108"
+        ],
+        "evidence_quote": "    陈海峰：才有接应，安排我们住宿。住宿以后，我们就分散了，要等待过江。过江的铁路线不能武装，我们都换便衣。我们三百多人分了好多小组，20个人1个大组。3个人1个小组。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC03-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "一百多人分散到溧阳、金坛、句容一带农村打埋伏，等待过江。",
+        "process_text": "一百多人分散到溧阳、金坛、句容这一带，到农村里面去打埋伏，等待过江。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC03-S0110"
+        ],
+        "evidence_quote": "    陈海峰：一百多人，都分散到溧阳、金坛、句容这一带，（到）农村里面去打埋伏，等待过江。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC03-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "等待期间做抗日宣传、民运工作和发展农村群众组织；中队取消后改为大组。",
+        "process_text": "在等待过江期间做抗日宣传，帮助做民运工作，帮助发展农村群众组织；时间不长，中队取消，变成一个大组。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC03-S0112"
+        ],
+        "evidence_quote": "    陈海峰：那么在等待的时间里面，就做抗日宣传，帮助做民运工作，帮助发展农村群众组织。时间不长，中队取消了，就变成一个大组。大组是18个人，组长由皖南政治部的一个政治干事姚念（担任），姚念后来是驻印度、突尼斯的大使，（他住在）西苑的社会部，我们搞敌工工作的那个。（在）资本主义国家的（中国驻外）机关的工作人员，（他是）大使级的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC03-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "18人编成6个小组，陈海峰带一个3人小组。",
+        "process_text": "陈海峰带一个3人小组，18个人编成6个小组。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC03-S0114"
+        ],
+        "evidence_quote": "    陈海峰：我带一个3人小组，我们18个人编成6个小组。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC03-DE004-P05",
+        "stage_order": 5,
+        "stage_summary": "进行过江路线侦察、联络和可能遇到情况的准备，并说明埋伏地点在金坛。",
+        "process_text": "准备过江，包括准备过江路线的侦察、准备过江路线的联络、准备过江可能遇到情况的准备；打埋伏地方在金坛。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC03-S0116"
+        ],
+        "evidence_quote": "    陈海峰：准备过江。准备过江的路线的侦察，准备过江的路线的联络，准备过江可能遇到情况的准备。我们打埋伏地方在哪呢？在金坛。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC03-DE004-P01",
+        "target_stage_id": "BATCH07-DOC03-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC03-S0110",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC03-DE004-P02",
+        "target_stage_id": "BATCH07-DOC03-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC03-S0112",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC03-DE004-P03",
+        "target_stage_id": "BATCH07-DOC03-DE004-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH07-DOC03-S0114",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC03-DE004-P04",
+        "target_stage_id": "BATCH07-DOC03-DE004-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC03-S0116",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

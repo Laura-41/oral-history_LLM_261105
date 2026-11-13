@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T23:51:16",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC03-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC03-DE003",
+  "usage": {
+    "prompt_tokens": 1457,
+    "total_tokens": 4294,
+    "completion_tokens": 2837,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1988
+    },
+    "time_to_first_token_ms": 21947,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2836000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC03-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"炮兵司令部已成立并开始运作，军政大学六大队炮兵大队建立用于训练干部，且以司令部名义下达了加强炮兵建设的指示。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈锐霆被留在临沂后向张副军长提议增加炮兵参谋为起点，以炮兵司令部成立、建立炮兵大队并下达加强炮兵建设指示为终点；两淮失守、宿迁胜仗不属于本事件内部阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆向张副军长提议在参谋处增加炮兵参谋。\",\n      \"process_text\": \"陈锐霆向张副军长提出，在参谋处加几个炮兵参谋。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0015\"\n      ],\n      \"evidence_quote\": \"我就跟他讲，在我们参谋处加几个炮兵参谋。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"加副参谋长和炮兵参谋，与参谋处合并成立炮兵司令部；在军政大学建立六大队炮兵大队训练干部。\",\n      \"process_text\": \"加一个副参谋长、两个炮兵参谋，与参谋处弄在一起成立炮兵司令部，并在军政大学建立相当于团级机构的六大队炮兵大队来训练干部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0017\"\n      ],\n      \"evidence_quote\": \"就是加一个副参谋长，加了两个炮兵参谋，就跟参谋处弄在一起，成立了炮兵司令部，就做了几件大事情：一个是在军政大学，建立一个六大队的炮兵大队来训练干部，炮兵大队相当于团级的机构。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"以炮兵司令部名义下达加强炮兵建设指示，要求各地收集炮兵武器、网罗炮兵人才。\",\n      \"process_text\": \"用司令部的名义下达加强炮兵建设的指示，叫各个地方收集炮兵武器、网罗炮兵人才。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0019\"\n      ],\n      \"evidence_quote\": \"另外就是用司令部的名义，下达了加强炮兵建设（的指示），叫各个地方收集炮兵武器，网罗炮兵人才，下了这么一个指示。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE003-P01\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE003-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0017\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE003-P02\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE003-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0019\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC03-DE003",
+    "event_enrichment": {
+      "result_state": "炮兵司令部已成立并开始运作，军政大学六大队炮兵大队建立用于训练干部，且以司令部名义下达了加强炮兵建设的指示。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以陈锐霆被留在临沂后向张副军长提议增加炮兵参谋为起点，以炮兵司令部成立、建立炮兵大队并下达加强炮兵建设指示为终点；两淮失守、宿迁胜仗不属于本事件内部阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC03-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆向张副军长提议在参谋处增加炮兵参谋。",
+        "process_text": "陈锐霆向张副军长提出，在参谋处加几个炮兵参谋。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0015"
+        ],
+        "evidence_quote": "我就跟他讲，在我们参谋处加几个炮兵参谋。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "加副参谋长和炮兵参谋，与参谋处合并成立炮兵司令部；在军政大学建立六大队炮兵大队训练干部。",
+        "process_text": "加一个副参谋长、两个炮兵参谋，与参谋处弄在一起成立炮兵司令部，并在军政大学建立相当于团级机构的六大队炮兵大队来训练干部。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0017"
+        ],
+        "evidence_quote": "就是加一个副参谋长，加了两个炮兵参谋，就跟参谋处弄在一起，成立了炮兵司令部，就做了几件大事情：一个是在军政大学，建立一个六大队的炮兵大队来训练干部，炮兵大队相当于团级的机构。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "以炮兵司令部名义下达加强炮兵建设指示，要求各地收集炮兵武器、网罗炮兵人才。",
+        "process_text": "用司令部的名义下达加强炮兵建设的指示，叫各个地方收集炮兵武器、网罗炮兵人才。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0019"
+        ],
+        "evidence_quote": "另外就是用司令部的名义，下达了加强炮兵建设（的指示），叫各个地方收集炮兵武器，网罗炮兵人才，下了这么一个指示。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC03-DE003-P01",
+        "target_stage_id": "BATCH05-DOC03-DE003-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH05-DOC03-S0017",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC03-DE003-P02",
+        "target_stage_id": "BATCH05-DOC03-DE003-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH05-DOC03-S0019",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

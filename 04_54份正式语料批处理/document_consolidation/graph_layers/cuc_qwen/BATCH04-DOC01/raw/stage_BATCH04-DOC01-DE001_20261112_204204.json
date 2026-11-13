@@ -1,0 +1,197 @@
+{
+  "run_time": "2026-11-12T20:42:04",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC01-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC01-DE001",
+  "usage": {
+    "prompt_tokens": 2295,
+    "total_tokens": 15621,
+    "completion_tokens": 13326,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10702
+    },
+    "time_to_first_token_ms": 196482,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13325000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-07\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC01-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"俘虏被遣送或参加新四军，枪支子弹等物资被缴获，部队未与日军接触且没有损失，经北面水网村庄及村庄后面分散多路突围。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据片段从 S0004 抓获敌军开始，经 S0007 处理俘虏、S0008 缴获枪支物资、S0013 战斗结束、S0015 撤退遭遇日军、S0019 避免接触、S0020/S0022 绕行路线，到 S0024 分散突围结束；S0005、S0010、S0011、S0012、S0014、S0017 为同一过程的补充说明。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"战斗后抓获五千多名敌军\",\n      \"process_text\": \"抓了他五千多人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0004\"\n      ],\n      \"evidence_quote\": \"    陈海峰：抓了他五千多人。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"俘虏被遣送或参加新四军\",\n      \"process_text\": \"有的是遣送回去啊，有愿意参加新四军的就参加新四军啊，我们的部队壮大了一批了，起码一半以上都参加新四军了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0007\"\n      ],\n      \"evidence_quote\": \"    陈海峰：有的是遣送回去啊，有愿意参加新四军的就参加新四军啊，我们的部队壮大了一批了，起码一半以上都参加新四军了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"缴获枪支子弹等物资\",\n      \"process_text\": \"缴了好多物资，缴了好多枪，他物资呢，带不走，来不及。主要是拿枪、子弹。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0008\"\n      ],\n      \"evidence_quote\": \"缴了好多物资，缴了好多枪，他物资呢，带不走，来不及。主要是拿枪、子弹。他也不是每个人都有支枪，小泰山一个中队，他一百多人，一个中队长，（一个）副中队长，我们也就是缴他几十条枪，大概是四五十条枪。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"战斗于18号开始，19号晚上到20号凌晨结束\",\n      \"process_text\": \"实际上18号开始， 19号晚上到20号凌晨就结束了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0013\"\n      ],\n      \"evidence_quote\": \"实际上18号开始， 19号晚上到20号凌晨就结束了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"部队开始撤退，尚未撤完日军到达\",\n      \"process_text\": \"开始撤退了，上午不到……还没撤完呢，敌人就到了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0015\"\n      ],\n      \"evidence_quote\": \"开始撤退了，上午不到……还没撤完呢，敌人就到了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE001-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"不与日军接触，部队快速走且没有损失\",\n      \"process_text\": \"没有损失。不跟他接触了，我们部队走得快啊。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0019\"\n      ],\n      \"evidence_quote\": \"    陈海峰：没有损失。不跟他接触了，我们部队走得快啊。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE001-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"部队绕北面水网地区及村庄路线\",\n      \"process_text\": \"部队绕的路，他从北面，再向北是水网地区，叫里下河地区，都是芦苇荡。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0020\"\n      ],\n      \"evidence_quote\": \"部队绕的路，他从北面，再向北是水网地区，叫里下河地区，都是芦苇荡。那么他靠芦苇荡到泰州城之间，这个地方有好多村庄都是陆路，就是苏陈庄的以北。苏陈庄以西是到泰州到扬州去的，苏陈庄以东就到姜堰，到瞿塘，到海安去的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE001-P08\",\n      \"stage_order\": 8,\n      \"stage_summary\": \"从村庄后面绕\",\n      \"process_text\": \"靠公路的两旁啊，那个地方都是村庄，他可以从村庄的后面绕。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0022\"\n      ],\n      \"evidence_quote\": \"    陈海峰：靠公路的两旁啊，那个地方都是村庄，他可以从村庄的后面绕。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE001-P09\",\n      \"stage_order\": 9,\n      \"stage_summary\": \"分散多路突围\",\n      \"process_text\": \"分散走了，分好多路了，大家不是一路两路走了，那就几十路，只要有路口走的地方呢，都（突围了）。反正我们侦察员都熟悉，还有当地的地方武装、地方人员配合，带路。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0024\"\n      ],\n      \"evidence_quote\": \"    陈海峰：分散走了，分好多路了，大家不是一路两路走了，那就几十路，只要有路口走的地方呢，都（突围了）。反正我们侦察员都熟悉，还有当地的地方武装、地方人员配合，带路。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE001-P01\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0007\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE001-P02\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0008\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE001-P03\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0013\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE001-P04\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE001-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0015\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE001-P05\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE001-P06\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0019\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE001-P06\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE001-P07\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0020\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE001-P07\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE001-P08\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0022\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE001-P08\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE001-P09\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0024\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-07",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC01-DE001",
+    "event_enrichment": {
+      "result_state": "俘虏被遣送或参加新四军，枪支子弹等物资被缴获，部队未与日军接触且没有损失，经北面水网村庄及村庄后面分散多路突围。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据片段从 S0004 抓获敌军开始，经 S0007 处理俘虏、S0008 缴获枪支物资、S0013 战斗结束、S0015 撤退遭遇日军、S0019 避免接触、S0020/S0022 绕行路线，到 S0024 分散突围结束；S0005、S0010、S0011、S0012、S0014、S0017 为同一过程的补充说明。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC01-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "战斗后抓获五千多名敌军",
+        "process_text": "抓了他五千多人。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0004"
+        ],
+        "evidence_quote": "    陈海峰：抓了他五千多人。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "俘虏被遣送或参加新四军",
+        "process_text": "有的是遣送回去啊，有愿意参加新四军的就参加新四军啊，我们的部队壮大了一批了，起码一半以上都参加新四军了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0007"
+        ],
+        "evidence_quote": "    陈海峰：有的是遣送回去啊，有愿意参加新四军的就参加新四军啊，我们的部队壮大了一批了，起码一半以上都参加新四军了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "缴获枪支子弹等物资",
+        "process_text": "缴了好多物资，缴了好多枪，他物资呢，带不走，来不及。主要是拿枪、子弹。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0008"
+        ],
+        "evidence_quote": "缴了好多物资，缴了好多枪，他物资呢，带不走，来不及。主要是拿枪、子弹。他也不是每个人都有支枪，小泰山一个中队，他一百多人，一个中队长，（一个）副中队长，我们也就是缴他几十条枪，大概是四五十条枪。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "战斗于18号开始，19号晚上到20号凌晨结束",
+        "process_text": "实际上18号开始， 19号晚上到20号凌晨就结束了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0013"
+        ],
+        "evidence_quote": "实际上18号开始， 19号晚上到20号凌晨就结束了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "部队开始撤退，尚未撤完日军到达",
+        "process_text": "开始撤退了，上午不到……还没撤完呢，敌人就到了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0015"
+        ],
+        "evidence_quote": "开始撤退了，上午不到……还没撤完呢，敌人就到了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE001-P06",
+        "stage_order": 6,
+        "stage_summary": "不与日军接触，部队快速走且没有损失",
+        "process_text": "没有损失。不跟他接触了，我们部队走得快啊。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0019"
+        ],
+        "evidence_quote": "    陈海峰：没有损失。不跟他接触了，我们部队走得快啊。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE001-P07",
+        "stage_order": 7,
+        "stage_summary": "部队绕北面水网地区及村庄路线",
+        "process_text": "部队绕的路，他从北面，再向北是水网地区，叫里下河地区，都是芦苇荡。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0020"
+        ],
+        "evidence_quote": "部队绕的路，他从北面，再向北是水网地区，叫里下河地区，都是芦苇荡。那么他靠芦苇荡到泰州城之间，这个地方有好多村庄都是陆路，就是苏陈庄的以北。苏陈庄以西是到泰州到扬州去的，苏陈庄以东就到姜堰，到瞿塘，到海安去的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE001-P08",
+        "stage_order": 8,
+        "stage_summary": "从村庄后面绕",
+        "process_text": "靠公路的两旁啊，那个地方都是村庄，他可以从村庄的后面绕。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0022"
+        ],
+        "evidence_quote": "    陈海峰：靠公路的两旁啊，那个地方都是村庄，他可以从村庄的后面绕。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE001-P09",
+        "stage_order": 9,
+        "stage_summary": "分散多路突围",
+        "process_text": "分散走了，分好多路了，大家不是一路两路走了，那就几十路，只要有路口走的地方呢，都（突围了）。反正我们侦察员都熟悉，还有当地的地方武装、地方人员配合，带路。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0024"
+        ],
+        "evidence_quote": "    陈海峰：分散走了，分好多路了，大家不是一路两路走了，那就几十路，只要有路口走的地方呢，都（突围了）。反正我们侦察员都熟悉，还有当地的地方武装、地方人员配合，带路。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC01-DE001-P01",
+        "target_stage_id": "BATCH04-DOC01-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC01-S0007",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC01-DE001-P02",
+        "target_stage_id": "BATCH04-DOC01-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC01-S0008",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC01-DE001-P03",
+        "target_stage_id": "BATCH04-DOC01-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC01-S0013",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC01-DE001-P04",
+        "target_stage_id": "BATCH04-DOC01-DE001-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC01-S0015",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC01-DE001-P05",
+        "target_stage_id": "BATCH04-DOC01-DE001-P06",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH04-DOC01-S0019",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC01-DE001-P06",
+        "target_stage_id": "BATCH04-DOC01-DE001-P07",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC01-S0020",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC01-DE001-P07",
+        "target_stage_id": "BATCH04-DOC01-DE001-P08",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC01-S0022",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC01-DE001-P08",
+        "target_stage_id": "BATCH04-DOC01-DE001-P09",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC01-S0024",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

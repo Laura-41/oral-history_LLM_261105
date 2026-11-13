@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-12T00:21:13",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC09-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC09-DE005",
+  "usage": {
+    "prompt_tokens": 1206,
+    "total_tokens": 3108,
+    "completion_tokens": 1902,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1433
+    },
+    "tokens_per_second": 1901000,
+    "time_to_first_token_ms": 14770,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-17\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC09-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"大批伤员被送到陈海峰所在医疗单位接收。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“大批伤员下来”为起点，以“都送到我们那来”为终点；其后关于前方伤员收得少和粮食供应困难的叙述属于背景解释，不纳入本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"大批伤员从前线下来，形成接收任务。\",\n      \"process_text\": \"大批伤员下来\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0175\"\n      ],\n      \"evidence_quote\": \"大批伤员下来\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"下来的伤员都被送到“我们”所在医疗单位接收。\",\n      \"process_text\": \"都送到我们那来\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0175\"\n      ],\n      \"evidence_quote\": \"都送到我们那来。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE005-P01\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC09-S0175\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-17",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC09-DE005",
+    "event_enrichment": {
+      "result_state": "大批伤员被送到陈海峰所在医疗单位接收。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以“大批伤员下来”为起点，以“都送到我们那来”为终点；其后关于前方伤员收得少和粮食供应困难的叙述属于背景解释，不纳入本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC09-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "大批伤员从前线下来，形成接收任务。",
+        "process_text": "大批伤员下来",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0175"
+        ],
+        "evidence_quote": "大批伤员下来",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "下来的伤员都被送到“我们”所在医疗单位接收。",
+        "process_text": "都送到我们那来",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0175"
+        ],
+        "evidence_quote": "都送到我们那来。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC09-DE005-P01",
+        "target_stage_id": "BATCH05-DOC09-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC09-S0175",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

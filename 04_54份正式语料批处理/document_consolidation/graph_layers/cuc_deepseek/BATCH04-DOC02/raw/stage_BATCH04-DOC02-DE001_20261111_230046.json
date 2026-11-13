@@ -1,0 +1,127 @@
+{
+  "run_time": "2026-11-11T23:00:46",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC02-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC02-DE001",
+  "usage": {
+    "prompt_tokens": 1771,
+    "total_tokens": 7654,
+    "completion_tokens": 5883,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4459
+    },
+    "time_to_first_token_ms": 45333,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5882000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC02-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"公筷运动在团内推行并得到团长、政治处主任表扬，团里要求巩固公筷运动、卫生机关和卫生制度，并号召大家支持卫生工作。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以团长批准并发放公筷为起点，以团级干部会议上表扬卫生部门并号召支持卫生工作为终点；中间包含使用规定、防病理由、与3师交流及汇报表扬。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"团长批准“公筷运动”，用团里的钱给每一个班发放公筷。\",\n      \"process_text\": \"团长批准公筷运动，团里出钱，每一个班都发到公筷。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0003\"\n      ],\n      \"evidence_quote\": \"“公筷运动”，这个是团长批准，团里面的钱，每一个班都发到公筷。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"班里由班长、副班长保管公筷，餐前用开水烫，并规定只准用公筷夹菜。\",\n      \"process_text\": \"班长、副班长保存公筷，每次吃之前用开水烫一下；只准用公筷夹菜放到自己碗上，不准自己的筷子到菜里面去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0005\"\n      ],\n      \"evidence_quote\": \"每人自己一双筷子，那么班长、副班长呢，他有公筷，他保存。有几双公筷，每次放在里面，吃之前用开水烫一下。只准用公筷夹菜，放在自己的碗上面，不准自己的筷子到菜里面去。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"以“病从口入”说明公筷运动防病目的，并提到与3师交流。\",\n      \"process_text\": \"说明公筷运动是为了防止夏天各种传染病、病从口入；并提到3师没有、1师有，双方进行交流。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0006\",\n        \"BATCH04-DOC02-S0007\"\n      ],\n      \"evidence_quote\": \"这样子呢，防止夏天的各种传染病啊，病从口入。“公筷运动“，3师没有，我们1师（有），我们就交流。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"交流后整理记录向团长汇报，团长高兴并在全团大会上表扬，要求巩固公筷运动、争取戒烟。\",\n      \"process_text\": \"把交流资料和记录带回来整理，记录完后向团长汇报；团长很高兴，更注意卫生，在全团大会上表扬，并提出要巩固公筷运动、卫生机关和卫生制度，以后争取戒烟。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0009\"\n      ],\n      \"evidence_quote\": \"记录完了以后，我们给团长汇报，哎，团长很高兴。搞成以后，那个团长更注意卫生，表扬我们一番，在全团大会上也表扬，“我们也一定要巩固好公筷运动。我们的卫生机关、卫生制度，晓得嘛，我们以后要争取戒烟。”\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"团长、政治处主任在团级干部会议上表扬卫生部门和卫生队，要求大家支持卫生工作。\",\n      \"process_text\": \"团长和政治处主任在团级干部会议上表扬卫生部门、卫生队，要大家更好地支持卫生工作。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0013\"\n      ],\n      \"evidence_quote\": \"团长啊，政治处主任啊，在团级干部会议上啊，就表扬卫生部门啊，卫生队啊，要大家更好地来支持卫生工作。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE001-P01\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE001-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0005\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE001-P02\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE001-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0007\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE001-P03\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE001-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0009\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE001-P04\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE001-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0013\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC02-DE001",
+    "event_enrichment": {
+      "result_state": "公筷运动在团内推行并得到团长、政治处主任表扬，团里要求巩固公筷运动、卫生机关和卫生制度，并号召大家支持卫生工作。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以团长批准并发放公筷为起点，以团级干部会议上表扬卫生部门并号召支持卫生工作为终点；中间包含使用规定、防病理由、与3师交流及汇报表扬。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC02-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "团长批准“公筷运动”，用团里的钱给每一个班发放公筷。",
+        "process_text": "团长批准公筷运动，团里出钱，每一个班都发到公筷。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0003"
+        ],
+        "evidence_quote": "“公筷运动”，这个是团长批准，团里面的钱，每一个班都发到公筷。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "班里由班长、副班长保管公筷，餐前用开水烫，并规定只准用公筷夹菜。",
+        "process_text": "班长、副班长保存公筷，每次吃之前用开水烫一下；只准用公筷夹菜放到自己碗上，不准自己的筷子到菜里面去。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0005"
+        ],
+        "evidence_quote": "每人自己一双筷子，那么班长、副班长呢，他有公筷，他保存。有几双公筷，每次放在里面，吃之前用开水烫一下。只准用公筷夹菜，放在自己的碗上面，不准自己的筷子到菜里面去。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "以“病从口入”说明公筷运动防病目的，并提到与3师交流。",
+        "process_text": "说明公筷运动是为了防止夏天各种传染病、病从口入；并提到3师没有、1师有，双方进行交流。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0006",
+          "BATCH04-DOC02-S0007"
+        ],
+        "evidence_quote": "这样子呢，防止夏天的各种传染病啊，病从口入。“公筷运动“，3师没有，我们1师（有），我们就交流。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "交流后整理记录向团长汇报，团长高兴并在全团大会上表扬，要求巩固公筷运动、争取戒烟。",
+        "process_text": "把交流资料和记录带回来整理，记录完后向团长汇报；团长很高兴，更注意卫生，在全团大会上表扬，并提出要巩固公筷运动、卫生机关和卫生制度，以后争取戒烟。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0009"
+        ],
+        "evidence_quote": "记录完了以后，我们给团长汇报，哎，团长很高兴。搞成以后，那个团长更注意卫生，表扬我们一番，在全团大会上也表扬，“我们也一定要巩固好公筷运动。我们的卫生机关、卫生制度，晓得嘛，我们以后要争取戒烟。”",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "团长、政治处主任在团级干部会议上表扬卫生部门和卫生队，要求大家支持卫生工作。",
+        "process_text": "团长和政治处主任在团级干部会议上表扬卫生部门、卫生队，要大家更好地支持卫生工作。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0013"
+        ],
+        "evidence_quote": "团长啊，政治处主任啊，在团级干部会议上啊，就表扬卫生部门啊，卫生队啊，要大家更好地来支持卫生工作。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC02-DE001-P01",
+        "target_stage_id": "BATCH04-DOC02-DE001-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC02-S0005",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE001-P02",
+        "target_stage_id": "BATCH04-DOC02-DE001-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC02-S0007",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE001-P03",
+        "target_stage_id": "BATCH04-DOC02-DE001-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC02-S0009",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE001-P04",
+        "target_stage_id": "BATCH04-DOC02-DE001-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0013",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

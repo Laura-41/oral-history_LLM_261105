@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T13:12:10",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC01-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC01-DE002",
+  "usage": {
+    "prompt_tokens": 1312,
+    "total_tokens": 4295,
+    "completion_tokens": 2983,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2155
+    },
+    "time_to_first_token_ms": 23113,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2982000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V1-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC01-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"该部队被改编为“江南抗日义勇军第三路”，并称第三路司令部。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以新四军第一批部队到家乡并与该武装接头为起点，以陈毅将该部队改编为江南抗日义勇军第三路为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"新四军第一批部队到达陈海峰家乡，陈海峰所在武装与新四军接上头。\",\n      \"process_text\": \"新四军第一批部队由王必成等带领到达家乡，陈海峰所在武装随即与新四军接上头。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0012\"\n      ],\n      \"evidence_quote\": \"带了部队，第一批到我们家乡。我们就和新四军接上头了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"该武装原归上海地下党领导，上海地下党决定并到新四军处，随后与陈毅见面。\",\n      \"process_text\": \"该武装归上海地下党领导，上海地下党要并到那里去；并到那里后与陈毅元帅见面。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0014\"\n      ],\n      \"evidence_quote\": \"那我们这个武装是归上海地下党领导的，就是上海地下党要并到那里去。以后并到那里去，就和陈毅元帅见面了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈毅将该部队改编为“江南抗日义勇军第三路”，并称第三路司令部。\",\n      \"process_text\": \"陈毅元帅把该部队改成“江南抗日义勇军第三路”，称江南抗日义勇军第三路司令部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0014\"\n      ],\n      \"evidence_quote\": \"陈毅元帅把我们这个部队改成“江南抗日义勇军第三路”，没有第一路，也没有第二路，也没有第四路，也没有第五路，就是第三路。叫江南抗日义勇军第三路司令部。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE002-P01\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0014\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE002-P02\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0014\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC01-DE002",
+    "event_enrichment": {
+      "result_state": "该部队被改编为“江南抗日义勇军第三路”，并称第三路司令部。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以新四军第一批部队到家乡并与该武装接头为起点，以陈毅将该部队改编为江南抗日义勇军第三路为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC01-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "新四军第一批部队到达陈海峰家乡，陈海峰所在武装与新四军接上头。",
+        "process_text": "新四军第一批部队由王必成等带领到达家乡，陈海峰所在武装随即与新四军接上头。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0012"
+        ],
+        "evidence_quote": "带了部队，第一批到我们家乡。我们就和新四军接上头了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "该武装原归上海地下党领导，上海地下党决定并到新四军处，随后与陈毅见面。",
+        "process_text": "该武装归上海地下党领导，上海地下党要并到那里去；并到那里后与陈毅元帅见面。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0014"
+        ],
+        "evidence_quote": "那我们这个武装是归上海地下党领导的，就是上海地下党要并到那里去。以后并到那里去，就和陈毅元帅见面了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "陈毅将该部队改编为“江南抗日义勇军第三路”，并称第三路司令部。",
+        "process_text": "陈毅元帅把该部队改成“江南抗日义勇军第三路”，称江南抗日义勇军第三路司令部。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0014"
+        ],
+        "evidence_quote": "陈毅元帅把我们这个部队改成“江南抗日义勇军第三路”，没有第一路，也没有第二路，也没有第四路，也没有第五路，就是第三路。叫江南抗日义勇军第三路司令部。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC01-DE002-P01",
+        "target_stage_id": "BATCH01-DOC01-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC01-S0014",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE002-P02",
+        "target_stage_id": "BATCH01-DOC01-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC01-S0014",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

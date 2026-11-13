@@ -1,0 +1,155 @@
+{
+  "run_time": "2026-11-12T08:29:50",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC03-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC03-DE002",
+  "usage": {
+    "prompt_tokens": 4182,
+    "total_tokens": 19771,
+    "completion_tokens": 15589,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 13009
+    },
+    "time_to_first_token_ms": 230451,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 15588000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC03-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"战斗进行到第二天后，685团攻东西跑池、686团攻老爷庙，687团从右翼参战；部队伤亡较大，685团参加战斗人员实际去了一半，685团第二天晚上攻东西跑池时天亮以前撤到山头，686团攻老爷庙伤亡不小，685团没有抓住活的。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"边界依据口述推进：从冉庄集结、平型关方向战前态势与师里决心发起战斗，到夜间出发、天亮进攻、雨裂沟顽抗、改变方法、干部带头冲锋，再到第二天攻东西跑池/老爷庙、敌增援、687团参战及伤亡结果；未扩展到片段之外的后续事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"战前集结、态势通报与发起战斗决心\",\n      \"process_text\": \"部队在冉庄集结，平型关沿长城线集中中国军队，日军已到达东西跑池并囤积物资；老百姓报告日本人野蛮，群众恨，八路军到了通报情况；杨成武独立团到涞源方向准备打敌人后边，邓华带685团两个连在灵丘和广陵中间扰乱打击敌人；口述说可能是22号，师里决心要在23号发起战斗，就在22号往作战方向去、往前走。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0004\",\n        \"BATCH01-DOC03-S0006\",\n        \"BATCH01-DOC03-S0008\",\n        \"BATCH01-DOC03-S0010\",\n        \"BATCH01-DOC03-S0012\"\n      ],\n      \"evidence_quote\": \"    杨永松：所以当时看起来，平型关那么多人，那么多兵，那么多武器在那里，所以我们从后面打下去，很有把握了。我们在可能是22号吧，师里面就决心要在23号发起战斗，就在22号往这个作战方向去，往前走。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"夜间出发、天亮后发起进攻\",\n      \"process_text\": \"部队晚上12点出发，出发后下雨，到山上等待进攻开始；天亮以后敌人警觉，双方好像发现情况，部队发起进攻；信号弹由师部、旅部发出，团以下吹冲锋号，685团在左翼、686团在右翼冲下去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0023\",\n        \"BATCH01-DOC03-S0026\"\n      ],\n      \"evidence_quote\": \"    杨永松：那天晚上12点我们部队就出发了，部队出发以后就下雨，到山上，在那里等着进攻开始。部队也淋湿了，也比较冷，但是大家都不会因为这个冷情绪不高，就是第一仗一定要打好。在天亮以后啊，敌人他很警觉，也好像发现了情况，我们看着他好像也发现我们了，我们就发起进攻。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"日军退入雨裂沟隐蔽顽抗\",\n      \"process_text\": \"没有跑掉的敌人被手榴弹、机枪、步枪打击，部队进入雨裂沟搜索；敌人非常顽强、枪打得很准，一露头就牺牲，雨裂沟里有人挤在隐蔽处利用沟边打我军。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0028\"\n      ],\n      \"evidence_quote\": \"    杨永松：没有跑掉的，后面的没有进去的，我们的手榴弹和机枪、步枪不就打他嘛！把敌人赶到那个雨裂沟里面去以后啊，部队又去搜索。按照我们国内战争的办法，我们下去（就可以）抓俘虏了。结果他那个非常顽强，枪也打得很准，你要一露头，他一枪就把你这个头上打个洞，就牺牲了。这一个雨裂沟里呀，人多人少也没准，一个的有，两个的有，上十个人的也有，他都挤到雨裂沟里隐蔽，利用那个沟边上可以打我们。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"改变方法、干部带头冲锋与战斗持续到下午\",\n      \"process_text\": \"因伤亡一些人，马上改变方法，先投一两个手榴弹再下去，使敌人不是伤就是亡并缴枪；685团连长、指导员带头冲锋，连长牺牲、指导员负伤；战斗打到下午，685团方向敌人占据东西跑池利用村庄顽抗，686团方向敌人爬到山上老爷庙顽抗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0030\",\n        \"BATCH01-DOC03-S0032\"\n      ],\n      \"evidence_quote\": \"    杨永松：他们两个人啊，就在冲这个的时候……他们两个不在一个连，这个连长牺牲了，指导员负伤了，因为干部带头啊。这个战斗打到下午，我们685团这个方向的敌人就占据东西跑池，利用村庄顽抗，右边686团这个方向的敌人呢，爬到山上一个老爷庙，在那个地方顽抗。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"第二天继续进攻、敌增援与687团参战\",\n      \"process_text\": \"第二天685团攻东西跑池，686团攻老爷庙；下午敌人增援，情况紧张；687团在离战场几里路的地方休息，准备随时加入战斗，后从右翼参加战斗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0091\",\n        \"BATCH01-DOC03-S0095\"\n      ],\n      \"evidence_quote\": \"    杨永松：“哎，同志，你干嘛去呀？”我说部队打了两天了，我去看看去。“哎！没有特殊情况不让去，现在这个情况紧张，敌人增援了。”他说那个方向已经发现了。大概我就往回走的时候，687团他就从右翼参加战斗了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"战斗结果：较大伤亡、撤到山头与没有抓活的\",\n      \"process_text\": \"685团三个营伤亡很大，686团伤亡不小；参加战斗的人来说实际去了一半；第二天晚上685团攻东西跑池时天亮以前撤到山头；686团打老爷庙时因为露在外边、敌人守在庙里，伤亡比较大；平型关战斗中685团没有抓住活的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0041\",\n        \"BATCH01-DOC03-S0045\",\n        \"BATCH01-DOC03-S0047\",\n        \"BATCH01-DOC03-S0070\",\n        \"BATCH01-DOC03-S0077\",\n        \"BATCH01-DOC03-S0080\"\n      ],\n      \"evidence_quote\": \"    杨永松：最左边那个营啊，就是梁兴初的营长，所以685团的这三个营啊，打得伤亡都很大，686团伤亡也不小，但具体数（字）因为我们不在一起，不知道，反正伤亡都很大。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE002-P01\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0023\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE002-P02\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE002-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE002-P03\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE002-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0030\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE002-P04\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE002-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0091\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE002-P05\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE002-P06\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0041\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC03-DE002",
+    "event_enrichment": {
+      "result_state": "战斗进行到第二天后，685团攻东西跑池、686团攻老爷庙，687团从右翼参战；部队伤亡较大，685团参加战斗人员实际去了一半，685团第二天晚上攻东西跑池时天亮以前撤到山头，686团攻老爷庙伤亡不小，685团没有抓住活的。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "边界依据口述推进：从冉庄集结、平型关方向战前态势与师里决心发起战斗，到夜间出发、天亮进攻、雨裂沟顽抗、改变方法、干部带头冲锋，再到第二天攻东西跑池/老爷庙、敌增援、687团参战及伤亡结果；未扩展到片段之外的后续事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "战前集结、态势通报与发起战斗决心",
+        "process_text": "部队在冉庄集结，平型关沿长城线集中中国军队，日军已到达东西跑池并囤积物资；老百姓报告日本人野蛮，群众恨，八路军到了通报情况；杨成武独立团到涞源方向准备打敌人后边，邓华带685团两个连在灵丘和广陵中间扰乱打击敌人；口述说可能是22号，师里决心要在23号发起战斗，就在22号往作战方向去、往前走。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0004",
+          "BATCH01-DOC03-S0006",
+          "BATCH01-DOC03-S0008",
+          "BATCH01-DOC03-S0010",
+          "BATCH01-DOC03-S0012"
+        ],
+        "evidence_quote": "    杨永松：所以当时看起来，平型关那么多人，那么多兵，那么多武器在那里，所以我们从后面打下去，很有把握了。我们在可能是22号吧，师里面就决心要在23号发起战斗，就在22号往这个作战方向去，往前走。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "夜间出发、天亮后发起进攻",
+        "process_text": "部队晚上12点出发，出发后下雨，到山上等待进攻开始；天亮以后敌人警觉，双方好像发现情况，部队发起进攻；信号弹由师部、旅部发出，团以下吹冲锋号，685团在左翼、686团在右翼冲下去。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0023",
+          "BATCH01-DOC03-S0026"
+        ],
+        "evidence_quote": "    杨永松：那天晚上12点我们部队就出发了，部队出发以后就下雨，到山上，在那里等着进攻开始。部队也淋湿了，也比较冷，但是大家都不会因为这个冷情绪不高，就是第一仗一定要打好。在天亮以后啊，敌人他很警觉，也好像发现了情况，我们看着他好像也发现我们了，我们就发起进攻。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "日军退入雨裂沟隐蔽顽抗",
+        "process_text": "没有跑掉的敌人被手榴弹、机枪、步枪打击，部队进入雨裂沟搜索；敌人非常顽强、枪打得很准，一露头就牺牲，雨裂沟里有人挤在隐蔽处利用沟边打我军。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0028"
+        ],
+        "evidence_quote": "    杨永松：没有跑掉的，后面的没有进去的，我们的手榴弹和机枪、步枪不就打他嘛！把敌人赶到那个雨裂沟里面去以后啊，部队又去搜索。按照我们国内战争的办法，我们下去（就可以）抓俘虏了。结果他那个非常顽强，枪也打得很准，你要一露头，他一枪就把你这个头上打个洞，就牺牲了。这一个雨裂沟里呀，人多人少也没准，一个的有，两个的有，上十个人的也有，他都挤到雨裂沟里隐蔽，利用那个沟边上可以打我们。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "改变方法、干部带头冲锋与战斗持续到下午",
+        "process_text": "因伤亡一些人，马上改变方法，先投一两个手榴弹再下去，使敌人不是伤就是亡并缴枪；685团连长、指导员带头冲锋，连长牺牲、指导员负伤；战斗打到下午，685团方向敌人占据东西跑池利用村庄顽抗，686团方向敌人爬到山上老爷庙顽抗。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0030",
+          "BATCH01-DOC03-S0032"
+        ],
+        "evidence_quote": "    杨永松：他们两个人啊，就在冲这个的时候……他们两个不在一个连，这个连长牺牲了，指导员负伤了，因为干部带头啊。这个战斗打到下午，我们685团这个方向的敌人就占据东西跑池，利用村庄顽抗，右边686团这个方向的敌人呢，爬到山上一个老爷庙，在那个地方顽抗。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P05",
+        "stage_order": 5,
+        "stage_summary": "第二天继续进攻、敌增援与687团参战",
+        "process_text": "第二天685团攻东西跑池，686团攻老爷庙；下午敌人增援，情况紧张；687团在离战场几里路的地方休息，准备随时加入战斗，后从右翼参加战斗。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0091",
+          "BATCH01-DOC03-S0095"
+        ],
+        "evidence_quote": "    杨永松：“哎，同志，你干嘛去呀？”我说部队打了两天了，我去看看去。“哎！没有特殊情况不让去，现在这个情况紧张，敌人增援了。”他说那个方向已经发现了。大概我就往回走的时候，687团他就从右翼参加战斗了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P06",
+        "stage_order": 6,
+        "stage_summary": "战斗结果：较大伤亡、撤到山头与没有抓活的",
+        "process_text": "685团三个营伤亡很大，686团伤亡不小；参加战斗的人来说实际去了一半；第二天晚上685团攻东西跑池时天亮以前撤到山头；686团打老爷庙时因为露在外边、敌人守在庙里，伤亡比较大；平型关战斗中685团没有抓住活的。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0041",
+          "BATCH01-DOC03-S0045",
+          "BATCH01-DOC03-S0047",
+          "BATCH01-DOC03-S0070",
+          "BATCH01-DOC03-S0077",
+          "BATCH01-DOC03-S0080"
+        ],
+        "evidence_quote": "    杨永松：最左边那个营啊，就是梁兴初的营长，所以685团的这三个营啊，打得伤亡都很大，686团伤亡也不小，但具体数（字）因为我们不在一起，不知道，反正伤亡都很大。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC03-DE002-P01",
+        "target_stage_id": "BATCH01-DOC03-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC03-S0023",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE002-P02",
+        "target_stage_id": "BATCH01-DOC03-DE002-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH01-DOC03-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE002-P03",
+        "target_stage_id": "BATCH01-DOC03-DE002-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH01-DOC03-S0030",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE002-P04",
+        "target_stage_id": "BATCH01-DOC03-DE002-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC03-S0091",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE002-P05",
+        "target_stage_id": "BATCH01-DOC03-DE002-P06",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH01-DOC03-S0041",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

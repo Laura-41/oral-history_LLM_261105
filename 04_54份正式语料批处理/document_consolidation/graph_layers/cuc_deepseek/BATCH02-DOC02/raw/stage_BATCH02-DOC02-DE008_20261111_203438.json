@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-11T20:34:38",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC02-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC02-DE008",
+  "usage": {
+    "prompt_tokens": 1123,
+    "total_tokens": 3530,
+    "completion_tokens": 2407,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1474
+    },
+    "time_to_first_token_ms": 19488,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC02-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"我们购买了一些马列主义书籍并进行了阅读，感到非常高兴。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以‘另外他还介绍……’为起点，至‘……非常高兴的。’结束，均在同一片段内，围绕购书与阅读展开。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"他人介绍浙江金华三联书店有列宁主义、马列主义书籍。\",\n      \"process_text\": \"他介绍我们在浙江金华，三联书店出了一些列宁主义、马列主义这一类的书。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0045\"\n      ],\n      \"evidence_quote\": \"另外他还介绍我们在浙江金华，三联书店还出了一些列宁主义、马列主义这一类的书\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"我们购买了一些马列主义书籍。\",\n      \"process_text\": \"我们买了一些。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0045\"\n      ],\n      \"evidence_quote\": \"（我们）买了一些。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"交代此前为抗日党员、因共产党抗日而参加党且未看过马列主义的背景。\",\n      \"process_text\": \"我们原来就是抗日党员，因为共产党抗日而参加党，对于马列主义根本没有看过。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0045\"\n      ],\n      \"evidence_quote\": \"我们原来就是抗日党员，就是因为共产党抗日，所以才参加了党，对于马列主义根本没有看过。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"我们阅读毛泽东“持久论”及列宁主义、马列主义书籍，感到非常高兴。\",\n      \"process_text\": \"这个时候有毛泽东的“持久论”，列宁主义、马列主义的书籍，我们看了一下，非常高兴的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0045\"\n      ],\n      \"evidence_quote\": \"这个时候有毛泽东的“持久论”，列宁主义、马列主义的书籍，我们看了一下，非常高兴的。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE008-P01\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0045\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE008-P02\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0045\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE008-P03\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE008-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0045\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC02-DE008",
+    "event_enrichment": {
+      "result_state": "我们购买了一些马列主义书籍并进行了阅读，感到非常高兴。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以‘另外他还介绍……’为起点，至‘……非常高兴的。’结束，均在同一片段内，围绕购书与阅读展开。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC02-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "他人介绍浙江金华三联书店有列宁主义、马列主义书籍。",
+        "process_text": "他介绍我们在浙江金华，三联书店出了一些列宁主义、马列主义这一类的书。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0045"
+        ],
+        "evidence_quote": "另外他还介绍我们在浙江金华，三联书店还出了一些列宁主义、马列主义这一类的书",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "我们购买了一些马列主义书籍。",
+        "process_text": "我们买了一些。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0045"
+        ],
+        "evidence_quote": "（我们）买了一些。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "交代此前为抗日党员、因共产党抗日而参加党且未看过马列主义的背景。",
+        "process_text": "我们原来就是抗日党员，因为共产党抗日而参加党，对于马列主义根本没有看过。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0045"
+        ],
+        "evidence_quote": "我们原来就是抗日党员，就是因为共产党抗日，所以才参加了党，对于马列主义根本没有看过。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "我们阅读毛泽东“持久论”及列宁主义、马列主义书籍，感到非常高兴。",
+        "process_text": "这个时候有毛泽东的“持久论”，列宁主义、马列主义的书籍，我们看了一下，非常高兴的。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0045"
+        ],
+        "evidence_quote": "这个时候有毛泽东的“持久论”，列宁主义、马列主义的书籍，我们看了一下，非常高兴的。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC02-DE008-P01",
+        "target_stage_id": "BATCH02-DOC02-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC02-S0045",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC02-DE008-P02",
+        "target_stage_id": "BATCH02-DOC02-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC02-S0045",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC02-DE008-P03",
+        "target_stage_id": "BATCH02-DOC02-DE008-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC02-S0045",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T14:11:16",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC03-DE012",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC03-DE012",
+  "usage": {
+    "prompt_tokens": 1515,
+    "total_tokens": 8306,
+    "completion_tokens": 6791,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5451
+    },
+    "time_to_first_token_ms": 99238,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC03-DE012\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队在敌人扫荡后撤至四县边联整训，一大队参加政工会后未打城前城后据点而撤回，我们营返回大炉附近根据地，一大队过后才来。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为 S0054 中“等我们开辟根据地任务完成了，敌人扫荡来了”的触发；终点为 S0059 中“反正我们营又回到大炉附近的根据地，我们在那里时候，那一大队过后才来”的返回结果；中间 S0054 政工会与一大队未打仗属于整训过程。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE012-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"开辟根据地任务完成，敌人扫荡到来。\",\n      \"process_text\": \"等我们开辟根据地任务完成了，敌人扫荡来了\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0054\"\n      ],\n      \"evidence_quote\": \"等我们开辟根据地任务完成了，敌人扫荡来了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE012-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"部队撤至四县边联整训，罗政委召开政工会并叫一大队参加。\",\n      \"process_text\": \"我们又撤回到四县边联整训，罗政委要开政工会，叫那个一大队也参加了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0054\"\n      ],\n      \"evidence_quote\": \"我们又撤回到四县边联整训，罗政委要开政工会，叫那个一大队也参加了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE012-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"一大队参加后未打城前城后据点，因上级电报和告中央而撤回。\",\n      \"process_text\": \"他来了还没（打仗），本来我们师部要他去打城前、城后那个据点，他那个大队根本没有问题，三个营打它一个据点几百人，是没问题的。结果刘少奇又来电报了，还告了中央了。罗政委他比较气魄宽大，对上级很尊重。好吧，叫他不打，叫他回去算了，省得麻烦。这来了以后，没有打仗，就这么回去了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0054\"\n      ],\n      \"evidence_quote\": \"他来了还没（打仗），本来我们师部要他去打城前、城后那个据点，他那个大队根本没有问题，三个营打它一个据点几百人，是没问题的。结果刘少奇又来电报了，还告了中央了。罗政委他比较气魄宽大，对上级很尊重。好吧，叫他不打，叫他回去算了，省得麻烦。这来了以后，没有打仗，就这么回去了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE012-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"我们营返回大炉附近根据地，一大队过后才来。\",\n      \"process_text\": \"反正我们营又回到大炉附近的根据地，我们在那里时候，那一大队过后才来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0059\"\n      ],\n      \"evidence_quote\": \"反正我们营又回到大炉附近的根据地，我们在那里时候，那一大队过后才来。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE012-P01\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE012-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0054\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE012-P02\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE012-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0054\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE012-P03\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE012-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0059\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC03-DE012",
+    "event_enrichment": {
+      "result_state": "部队在敌人扫荡后撤至四县边联整训，一大队参加政工会后未打城前城后据点而撤回，我们营返回大炉附近根据地，一大队过后才来。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为 S0054 中“等我们开辟根据地任务完成了，敌人扫荡来了”的触发；终点为 S0059 中“反正我们营又回到大炉附近的根据地，我们在那里时候，那一大队过后才来”的返回结果；中间 S0054 政工会与一大队未打仗属于整训过程。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC03-DE012-P01",
+        "stage_order": 1,
+        "stage_summary": "开辟根据地任务完成，敌人扫荡到来。",
+        "process_text": "等我们开辟根据地任务完成了，敌人扫荡来了",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0054"
+        ],
+        "evidence_quote": "等我们开辟根据地任务完成了，敌人扫荡来了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE012-P02",
+        "stage_order": 2,
+        "stage_summary": "部队撤至四县边联整训，罗政委召开政工会并叫一大队参加。",
+        "process_text": "我们又撤回到四县边联整训，罗政委要开政工会，叫那个一大队也参加了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0054"
+        ],
+        "evidence_quote": "我们又撤回到四县边联整训，罗政委要开政工会，叫那个一大队也参加了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE012-P03",
+        "stage_order": 3,
+        "stage_summary": "一大队参加后未打城前城后据点，因上级电报和告中央而撤回。",
+        "process_text": "他来了还没（打仗），本来我们师部要他去打城前、城后那个据点，他那个大队根本没有问题，三个营打它一个据点几百人，是没问题的。结果刘少奇又来电报了，还告了中央了。罗政委他比较气魄宽大，对上级很尊重。好吧，叫他不打，叫他回去算了，省得麻烦。这来了以后，没有打仗，就这么回去了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0054"
+        ],
+        "evidence_quote": "他来了还没（打仗），本来我们师部要他去打城前、城后那个据点，他那个大队根本没有问题，三个营打它一个据点几百人，是没问题的。结果刘少奇又来电报了，还告了中央了。罗政委他比较气魄宽大，对上级很尊重。好吧，叫他不打，叫他回去算了，省得麻烦。这来了以后，没有打仗，就这么回去了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE012-P04",
+        "stage_order": 4,
+        "stage_summary": "我们营返回大炉附近根据地，一大队过后才来。",
+        "process_text": "反正我们营又回到大炉附近的根据地，我们在那里时候，那一大队过后才来。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0059"
+        ],
+        "evidence_quote": "反正我们营又回到大炉附近的根据地，我们在那里时候，那一大队过后才来。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC03-DE012-P01",
+        "target_stage_id": "BATCH06-DOC03-DE012-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC03-S0054",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE012-P02",
+        "target_stage_id": "BATCH06-DOC03-DE012-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC03-S0054",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE012-P03",
+        "target_stage_id": "BATCH06-DOC03-DE012-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC03-S0059",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

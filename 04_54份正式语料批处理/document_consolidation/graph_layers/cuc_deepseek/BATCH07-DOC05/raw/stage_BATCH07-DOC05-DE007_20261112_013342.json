@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T01:33:42",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC05-DE007",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC05-DE007",
+  "usage": {
+    "prompt_tokens": 1401,
+    "total_tokens": 6190,
+    "completion_tokens": 4789,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3675
+    },
+    "time_to_first_token_ms": 39393,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC05-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰及同行二十多人结束在靖江毗卢寺的停留，被送往东台。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于被护送抵达靖江毗卢寺，止于住两三天后被送往东台；中间包含见到自己政权、县长接待及伙食困难等经历。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC05-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"被护送抵达靖江毗卢寺\",\n      \"process_text\": \"同行二十多人受招待吃住后，被送出几十里地，送到靖江毗卢寺。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC05-S0079\"\n      ],\n      \"evidence_quote\": \"我们二十多个人，招待我们吃，（陈海峰大笑）招待我们住，送我们几十里地，送到靖江毗卢寺。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC05-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"在毗卢寺见到自己的政权并受县长接待\",\n      \"process_text\": \"一到毗卢寺，大家非常高兴，看到自己的政权，县长来接待，县里负责人一起吃饭。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC05-S0079\"\n      ],\n      \"evidence_quote\": \"一到毗卢寺，哎呀，我们非常高兴，看到我们自己的政权。我们革命多少年，第一次见到我们有政权，见到我们的县长来接待我们，见到县里面的负责人来和我们一块吃饭。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC05-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"在靖江停留期间伙食艰苦并得知粮食困难\",\n      \"process_text\": \"在刚建立政权、粮食缺乏的情况下，吃的饭很艰苦；一打听，因江南部队过来很多，粮食很困难。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC05-S0082\"\n      ],\n      \"evidence_quote\": \"虽然吃的饭很艰苦，刚建立政权，粮食都没有。那个泰兴啊，那是穷地方，没有江南富啊。我们江南都吃白米饭，他都是那个五路泊（音）的山芋藤，那么切切段，那么就弄的杂粮啊，煮了一锅粥，那等于我们江南喂猪吃的。那个他就很好的，实际今天讲起来（是一个）很好的杂粮饭，一个很好的保底饭（音）。那个时候讲起来，很差，很苦。这么多人，一个县政府（把）猪吃的粮食给我们吃，是那样。一打听啊，粮食很困难，因为江南部队过来很多，很多部队压到靖江县政府。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC05-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"住两三天后被送往东台\",\n      \"process_text\": \"在靖江住了两三天以后，被送到东台，整个海岸。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC05-S0082\"\n      ],\n      \"evidence_quote\": \"在这个地方，我们住了两三天，以后把我们就送到了东台，整个海岸。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC05-DE007-P01\",\n      \"target_stage_id\": \"BATCH07-DOC05-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC05-S0079\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC05-DE007-P02\",\n      \"target_stage_id\": \"BATCH07-DOC05-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC05-S0082\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC05-DE007-P03\",\n      \"target_stage_id\": \"BATCH07-DOC05-DE007-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC05-S0082\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC05-DE007",
+    "event_enrichment": {
+      "result_state": "陈海峰及同行二十多人结束在靖江毗卢寺的停留，被送往东台。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于被护送抵达靖江毗卢寺，止于住两三天后被送往东台；中间包含见到自己政权、县长接待及伙食困难等经历。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC05-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "被护送抵达靖江毗卢寺",
+        "process_text": "同行二十多人受招待吃住后，被送出几十里地，送到靖江毗卢寺。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC05-S0079"
+        ],
+        "evidence_quote": "我们二十多个人，招待我们吃，（陈海峰大笑）招待我们住，送我们几十里地，送到靖江毗卢寺。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC05-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "在毗卢寺见到自己的政权并受县长接待",
+        "process_text": "一到毗卢寺，大家非常高兴，看到自己的政权，县长来接待，县里负责人一起吃饭。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC05-S0079"
+        ],
+        "evidence_quote": "一到毗卢寺，哎呀，我们非常高兴，看到我们自己的政权。我们革命多少年，第一次见到我们有政权，见到我们的县长来接待我们，见到县里面的负责人来和我们一块吃饭。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC05-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "在靖江停留期间伙食艰苦并得知粮食困难",
+        "process_text": "在刚建立政权、粮食缺乏的情况下，吃的饭很艰苦；一打听，因江南部队过来很多，粮食很困难。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC05-S0082"
+        ],
+        "evidence_quote": "虽然吃的饭很艰苦，刚建立政权，粮食都没有。那个泰兴啊，那是穷地方，没有江南富啊。我们江南都吃白米饭，他都是那个五路泊（音）的山芋藤，那么切切段，那么就弄的杂粮啊，煮了一锅粥，那等于我们江南喂猪吃的。那个他就很好的，实际今天讲起来（是一个）很好的杂粮饭，一个很好的保底饭（音）。那个时候讲起来，很差，很苦。这么多人，一个县政府（把）猪吃的粮食给我们吃，是那样。一打听啊，粮食很困难，因为江南部队过来很多，很多部队压到靖江县政府。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC05-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "住两三天后被送往东台",
+        "process_text": "在靖江住了两三天以后，被送到东台，整个海岸。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC05-S0082"
+        ],
+        "evidence_quote": "在这个地方，我们住了两三天，以后把我们就送到了东台，整个海岸。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC05-DE007-P01",
+        "target_stage_id": "BATCH07-DOC05-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC05-S0079",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC05-DE007-P02",
+        "target_stage_id": "BATCH07-DOC05-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC05-S0082",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC05-DE007-P03",
+        "target_stage_id": "BATCH07-DOC05-DE007-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC05-S0082",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

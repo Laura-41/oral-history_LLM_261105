@@ -1,0 +1,202 @@
+{
+  "run_time": "2026-11-10T20:44:46",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC09-W001",
+  "technical_document_id": "BATCH03-DOC09",
+  "document_id": "08.陈锐霆 090509（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC09-S0002",
+    "BATCH03-DOC09-S0003",
+    "BATCH03-DOC09-S0004",
+    "BATCH03-DOC09-S0005",
+    "BATCH03-DOC09-S0006",
+    "BATCH03-DOC09-S0007",
+    "BATCH03-DOC09-S0008",
+    "BATCH03-DOC09-S0009",
+    "BATCH03-DOC09-S0010",
+    "BATCH03-DOC09-S0011",
+    "BATCH03-DOC09-S0012",
+    "BATCH03-DOC09-S0013",
+    "BATCH03-DOC09-S0014",
+    "BATCH03-DOC09-S0015",
+    "BATCH03-DOC09-S0016",
+    "BATCH03-DOC09-S0017",
+    "BATCH03-DOC09-S0018",
+    "BATCH03-DOC09-S0019",
+    "BATCH03-DOC09-S0020",
+    "BATCH03-DOC09-S0021",
+    "BATCH03-DOC09-S0022",
+    "BATCH03-DOC09-S0023",
+    "BATCH03-DOC09-S0024",
+    "BATCH03-DOC09-S0025",
+    "BATCH03-DOC09-S0026",
+    "BATCH03-DOC09-S0027",
+    "BATCH03-DOC09-S0028",
+    "BATCH03-DOC09-S0029",
+    "BATCH03-DOC09-S0030"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 14,
+    "unassigned_segment_count": 15,
+    "input_segment_count": 29,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH03-DOC09-W001-E02"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC09-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC09-W001-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC09-S0004",
+          "BATCH03-DOC09-S0006",
+          "BATCH03-DOC09-S0008",
+          "BATCH03-DOC09-S0010",
+          "BATCH03-DOC09-S0012",
+          "BATCH03-DOC09-S0014"
+        ],
+        "event": {
+          "event_name": "陈锐霆遭暗杀袭击受伤后装死脱险",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "遭暗杀袭击",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "暗杀我的人",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "午夜",
+              "normalized_value": "午夜"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "我宿舍门前",
+              "normalized_value": "陈锐霆宿舍门前"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "有两个人就跑到我宿舍门前，我听到外边有声音，我就刚躺下不久，马上起来。（当时）午夜了嘛，一出来两把刺刀就对着我来了。",
+          "type_basis": "核心过程为遭暗杀袭击，暗杀者实施物质行动，陈锐霆为受影响 Goal；装死、被发现、补枪未中及获救均属同一突发经历的结果阶段，不另立事件。角色均在 MATERIAL 词表内。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC09-W001-E02",
+        "source_segment_ids": [
+          "BATCH03-DOC09-S0014",
+          "BATCH03-DOC09-S0016",
+          "BATCH03-DOC09-S0018",
+          "BATCH03-DOC09-S0020",
+          "BATCH03-DOC09-S0022",
+          "BATCH03-DOC09-S0024",
+          "BATCH03-DOC09-S0026",
+          "BATCH03-DOC09-S0028",
+          "BATCH03-DOC09-S0030"
+        ],
+        "event": {
+          "event_name": "陈锐霆重伤后转送淮南二师治疗脱险",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "转送治疗",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他",
+              "normalized_entity": "张云逸",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "宫乃泉",
+              "normalized_entity": "宫乃泉",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "我们那个师里",
+              "normalized_entity": "淮南二师",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "当夜",
+              "normalized_value": "当夜"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "当夜就抬着到了淮南二师，宫乃泉是卫生部长啊，也是医院的院长，那是非常负责任的，技术（方面）也是高手，照顾我也特殊照顾，最初很危险了，以后算是弄过来了。",
+          "type_basis": "核心过程为转送并治疗重伤，属物质过程；张云逸决定转送、宫乃泉实施治疗，陈锐霆为 Goal，淮南二师为 Recipient；发烧、半昏迷及康复为同一医疗经历阶段，不另立事件。角色均在 MATERIAL 词表内。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC09-S0002",
+      "BATCH03-DOC09-S0003",
+      "BATCH03-DOC09-S0005",
+      "BATCH03-DOC09-S0007",
+      "BATCH03-DOC09-S0009",
+      "BATCH03-DOC09-S0011",
+      "BATCH03-DOC09-S0013",
+      "BATCH03-DOC09-S0015",
+      "BATCH03-DOC09-S0017",
+      "BATCH03-DOC09-S0019",
+      "BATCH03-DOC09-S0021",
+      "BATCH03-DOC09-S0023",
+      "BATCH03-DOC09-S0025",
+      "BATCH03-DOC09-S0027",
+      "BATCH03-DOC09-S0029"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH03-DOC09-W001\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC09-W001-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC09-S0004\",\n        \"BATCH03-DOC09-S0006\",\n        \"BATCH03-DOC09-S0008\",\n        \"BATCH03-DOC09-S0010\",\n        \"BATCH03-DOC09-S0012\",\n        \"BATCH03-DOC09-S0014\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆遭暗杀袭击受伤后装死脱险\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"遭暗杀袭击\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"暗杀我的人\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"午夜\",\n            \"normalized_value\": \"午夜\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"我宿舍门前\",\n            \"normalized_value\": \"陈锐霆宿舍门前\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"有两个人就跑到我宿舍门前，我听到外边有声音，我就刚躺下不久，马上起来。（当时）午夜了嘛，一出来两把刺刀就对着我来了。\",\n        \"type_basis\": \"核心过程为遭暗杀袭击，暗杀者实施物质行动，陈锐霆为受影响 Goal；装死、被发现、补枪未中及获救均属同一突发经历的结果阶段，不另立事件。角色均在 MATERIAL 词表内。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC09-W001-E02\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC09-S0014\",\n        \"BATCH03-DOC09-S0016\",\n        \"BATCH03-DOC09-S0018\",\n        \"BATCH03-DOC09-S0020\",\n        \"BATCH03-DOC09-S0022\",\n        \"BATCH03-DOC09-S0024\",\n        \"BATCH03-DOC09-S0026\",\n        \"BATCH03-DOC09-S0028\",\n        \"BATCH03-DOC09-S0030\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆重伤后转送淮南二师治疗脱险\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"转送治疗\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"他\",\n            \"normalized_entity\": \"张云逸\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"宫乃泉\",\n            \"normalized_entity\": \"宫乃泉\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"我们那个师里\",\n            \"normalized_entity\": \"淮南二师\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"当夜\",\n            \"normalized_value\": \"当夜\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"当夜就抬着到了淮南二师，宫乃泉是卫生部长啊，也是医院的院长，那是非常负责任的，技术（方面）也是高手，照顾我也特殊照顾，最初很危险了，以后算是弄过来了。\",\n        \"type_basis\": \"核心过程为转送并治疗重伤，属物质过程；张云逸决定转送、宫乃泉实施治疗，陈锐霆为 Goal，淮南二师为 Recipient；发烧、半昏迷及康复为同一医疗经历阶段，不另立事件。角色均在 MATERIAL 词表内。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC09-S0002\",\n    \"BATCH03-DOC09-S0003\",\n    \"BATCH03-DOC09-S0005\",\n    \"BATCH03-DOC09-S0007\",\n    \"BATCH03-DOC09-S0009\",\n    \"BATCH03-DOC09-S0011\",\n    \"BATCH03-DOC09-S0013\",\n    \"BATCH03-DOC09-S0015\",\n    \"BATCH03-DOC09-S0017\",\n    \"BATCH03-DOC09-S0019\",\n    \"BATCH03-DOC09-S0021\",\n    \"BATCH03-DOC09-S0023\",\n    \"BATCH03-DOC09-S0025\",\n    \"BATCH03-DOC09-S0027\",\n    \"BATCH03-DOC09-S0029\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5835,
+    "total_tokens": 18215,
+    "completion_tokens": 12380,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 11093
+    },
+    "time_to_first_token_ms": 101001,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 12379000
+  }
+}

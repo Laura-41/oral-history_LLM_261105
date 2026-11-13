@@ -1,0 +1,198 @@
+{
+  "run_time": "2026-11-12T23:53:34",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC02-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC02-DE002",
+  "usage": {
+    "prompt_tokens": 7316,
+    "total_tokens": 25775,
+    "completion_tokens": 18459,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 15589
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 18458000,
+    "time_to_first_token_ms": 283219
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-13\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC02-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰所在医院/休养所完成紧急突围并转移到蒋家墩子，伤员在蒋家墩子开刀。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于苏中全面清乡包围威胁（S0039），止于转移到达蒋家墩子并开刀（S0198、S0200）。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"苏中全面清乡包围威胁\",\n      \"process_text\": \"4月11号正式开始苏中全面清乡，拂晓以前包围四分区，海上封锁、陆地包围、分进合击。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0039\"\n      ],\n      \"evidence_quote\": \"    陈海峰：这个保密保得很厉害，结果呢，就是在4月11号正式开始苏中全面清乡。拂晓以前要全部把四分区啊，把陶勇部队和1师师部范围（内）的这四个县啊，全部包围，海上封锁，陆地包围，分进合击。分了多少路就搞不清楚了，拂晓之前要全部占领。半夜行动，他都离很近啊，他（有）汽划子了，他这个东西渡江快得很。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"紧急突围通知\",\n      \"process_text\": \"来人通知，说拂晓之前不突围出去就会被消灭，要立刻转移。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0046\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我在师部当保健科科长，天天见面的，是吧。“哎呀，你这个老陈！”我说：“怎么的啦？”我一看（他）那个样子紧张了，我也紧张起来了，我们正在吃饭哪。看他气呼呼的，气喘喘的，满头大汗，驳壳两支枪插在这里。（陈海峰大笑）子弹都上了膛啊。哎呦，看这个形势那么紧张，我知道不对。我说：“怎么回事？”“哎呀，你们还在吃晚饭。快点走！快点走，立刻转移。”哎呦，我说这个不得了了，哪能你看哪能走，走不动啊。“哎呀！”他说：“你们在拂晓之前，如果不突围出去，你们全部（都得）被消灭。就有一股敌人要进攻你们这个地区，你们首当其冲，就在你们河的对面。”\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"紧急集合与动员渡河准备\",\n      \"process_text\": \"立刻不吃饭，紧急集合，马上动员老百姓，准备渡河过对面马路。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0048\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我们在河边上，河对面（有）一个小马路，（是个）土马路，敌人要走这个土马路。有一个镇啊，要到石港去，要从那地方走。他说敌人这里就是一路，我们是来对付这一路的。他说你们马上动员。好在那是老根据地呀，地下党员也多呀，立刻动员。当时我们（是）全数动员，紧急动员，立刻不吃饭了，把饭碗也扔了，大家都是紧急集合，吹紧急集合号啊。紧急集合以后，就是讲这个事，马上动员老百姓。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"全乡动员支援转移并分批转移\",\n      \"process_text\": \"全乡动员支援转移，一个伤员不丢，分批转移。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0069\"\n      ],\n      \"evidence_quote\": \"    陈海峰：来配合我们。这样子呢，全乡动员，支援我们转移，一个伤员不丢，那么就分批转移。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE002-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"分批渡河，最后四个担架在天快亮时转移\",\n      \"process_text\": \"轻伤先过，重伤用船连起来抬过，陈海峰最后一批四个担架，敌人已经到了，天快亮了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0071\"\n      ],\n      \"evidence_quote\": \"    陈海峰：哎呀，轻伤很容易了，过去了，那么重症伤员还马马虎虎过去了。重伤最麻烦，再加上那个船比较小——后来找了两个大船来，基本上那个船像走了浮桥一样，两三条船连起来以后呢，这样抬过去的。抬的时候我是最后了，领导干部作战要求就是冲锋在前，退却在后，你不能在前面先走的，所以我是最后一批。最后一批是四个担架，哎呀，这四个担架来的时候啊，敌人已经到了，天快亮了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE002-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"短枪队岸两边掩护分批过\",\n      \"process_text\": \"短枪队放在岸两边掩护，一批一批过，前面轻伤早都走了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0075\"\n      ],\n      \"evidence_quote\": \"    陈海峰：看到，这个（看着）曚曚的，隐隐约约的，来了。我们这个短枪队呢，都放在岸两边，掩护我们，一批一批过，前面那轻伤早都走了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE002-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"过公路后担架夫扔担架要回去与处置\",\n      \"process_text\": \"最后四个担架过公路后，一个担架夫扔了担架非要回去，陈海峰发脾气，违反纪律。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0100\"\n      ],\n      \"evidence_quote\": \"    陈海峰：所以到后面呢，总算（只有）最后四个。哎呀，那四个真费劲。我还犯了个错误呢。结果过去了，这四个担架走了大概一百多米，离开小公路，有几家人家。有一副担架不干了，他扔了，他非要回去。（陈海峰拍大腿）这个糟糕啊！这个伤员谁来抬啊？怎么跟他好好说，（他光）哭，他还向我下跪。我说你不用向我下跪，我向你下跪！我说。最后他哭着非要走，哎呀，我发脾气了，我那就违反纪律了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE002-P08\",\n      \"stage_order\": 8,\n      \"stage_summary\": \"转移到达蒋家墩子\",\n      \"process_text\": \"带着伤员沿路转移，部分轻伤归队，最后转移到东台海边蒋家墩子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0198\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那么我们带着这一百多伤员呢，沿路呢，有一部分要求归队了，他轻伤，有的就到自己旅部去了。又走了一部（分），我们留了几十个，不到一百人了。我们就转移到东台的海边上的，原来后方医院的一个医疗队的所在地，叫蒋家墩子（音），我厚书上有。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE002-P09\",\n      \"stage_order\": 9,\n      \"stage_summary\": \"在蒋家墩子开刀\",\n      \"process_text\": \"刀还没开，到了蒋家墩子才开刀。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0200\"\n      ],\n      \"evidence_quote\": \"刀还都没开呢，到了蒋家墩子才开那个刀的。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE002-P01\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE002-P02\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE002-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE002-P03\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE002-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE002-P04\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE002-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE002-P05\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE002-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE002-P06\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE002-P07\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE002-P07\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE002-P08\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE002-P08\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE002-P09\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": null\n}",
+  "parsed": {
+    "document_id": "CHF-V3-13",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC02-DE002",
+    "event_enrichment": {
+      "result_state": "陈海峰所在医院/休养所完成紧急突围并转移到蒋家墩子，伤员在蒋家墩子开刀。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于苏中全面清乡包围威胁（S0039），止于转移到达蒋家墩子并开刀（S0198、S0200）。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC02-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "苏中全面清乡包围威胁",
+        "process_text": "4月11号正式开始苏中全面清乡，拂晓以前包围四分区，海上封锁、陆地包围、分进合击。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0039"
+        ],
+        "evidence_quote": "    陈海峰：这个保密保得很厉害，结果呢，就是在4月11号正式开始苏中全面清乡。拂晓以前要全部把四分区啊，把陶勇部队和1师师部范围（内）的这四个县啊，全部包围，海上封锁，陆地包围，分进合击。分了多少路就搞不清楚了，拂晓之前要全部占领。半夜行动，他都离很近啊，他（有）汽划子了，他这个东西渡江快得很。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "紧急突围通知",
+        "process_text": "来人通知，说拂晓之前不突围出去就会被消灭，要立刻转移。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0046"
+        ],
+        "evidence_quote": "    陈海峰：我在师部当保健科科长，天天见面的，是吧。“哎呀，你这个老陈！”我说：“怎么的啦？”我一看（他）那个样子紧张了，我也紧张起来了，我们正在吃饭哪。看他气呼呼的，气喘喘的，满头大汗，驳壳两支枪插在这里。（陈海峰大笑）子弹都上了膛啊。哎呦，看这个形势那么紧张，我知道不对。我说：“怎么回事？”“哎呀，你们还在吃晚饭。快点走！快点走，立刻转移。”哎呦，我说这个不得了了，哪能你看哪能走，走不动啊。“哎呀！”他说：“你们在拂晓之前，如果不突围出去，你们全部（都得）被消灭。就有一股敌人要进攻你们这个地区，你们首当其冲，就在你们河的对面。”",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "紧急集合与动员渡河准备",
+        "process_text": "立刻不吃饭，紧急集合，马上动员老百姓，准备渡河过对面马路。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0048"
+        ],
+        "evidence_quote": "    陈海峰：我们在河边上，河对面（有）一个小马路，（是个）土马路，敌人要走这个土马路。有一个镇啊，要到石港去，要从那地方走。他说敌人这里就是一路，我们是来对付这一路的。他说你们马上动员。好在那是老根据地呀，地下党员也多呀，立刻动员。当时我们（是）全数动员，紧急动员，立刻不吃饭了，把饭碗也扔了，大家都是紧急集合，吹紧急集合号啊。紧急集合以后，就是讲这个事，马上动员老百姓。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "全乡动员支援转移并分批转移",
+        "process_text": "全乡动员支援转移，一个伤员不丢，分批转移。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0069"
+        ],
+        "evidence_quote": "    陈海峰：来配合我们。这样子呢，全乡动员，支援我们转移，一个伤员不丢，那么就分批转移。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE002-P05",
+        "stage_order": 5,
+        "stage_summary": "分批渡河，最后四个担架在天快亮时转移",
+        "process_text": "轻伤先过，重伤用船连起来抬过，陈海峰最后一批四个担架，敌人已经到了，天快亮了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0071"
+        ],
+        "evidence_quote": "    陈海峰：哎呀，轻伤很容易了，过去了，那么重症伤员还马马虎虎过去了。重伤最麻烦，再加上那个船比较小——后来找了两个大船来，基本上那个船像走了浮桥一样，两三条船连起来以后呢，这样抬过去的。抬的时候我是最后了，领导干部作战要求就是冲锋在前，退却在后，你不能在前面先走的，所以我是最后一批。最后一批是四个担架，哎呀，这四个担架来的时候啊，敌人已经到了，天快亮了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE002-P06",
+        "stage_order": 6,
+        "stage_summary": "短枪队岸两边掩护分批过",
+        "process_text": "短枪队放在岸两边掩护，一批一批过，前面轻伤早都走了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0075"
+        ],
+        "evidence_quote": "    陈海峰：看到，这个（看着）曚曚的，隐隐约约的，来了。我们这个短枪队呢，都放在岸两边，掩护我们，一批一批过，前面那轻伤早都走了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE002-P07",
+        "stage_order": 7,
+        "stage_summary": "过公路后担架夫扔担架要回去与处置",
+        "process_text": "最后四个担架过公路后，一个担架夫扔了担架非要回去，陈海峰发脾气，违反纪律。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0100"
+        ],
+        "evidence_quote": "    陈海峰：所以到后面呢，总算（只有）最后四个。哎呀，那四个真费劲。我还犯了个错误呢。结果过去了，这四个担架走了大概一百多米，离开小公路，有几家人家。有一副担架不干了，他扔了，他非要回去。（陈海峰拍大腿）这个糟糕啊！这个伤员谁来抬啊？怎么跟他好好说，（他光）哭，他还向我下跪。我说你不用向我下跪，我向你下跪！我说。最后他哭着非要走，哎呀，我发脾气了，我那就违反纪律了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE002-P08",
+        "stage_order": 8,
+        "stage_summary": "转移到达蒋家墩子",
+        "process_text": "带着伤员沿路转移，部分轻伤归队，最后转移到东台海边蒋家墩子。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0198"
+        ],
+        "evidence_quote": "    陈海峰：那么我们带着这一百多伤员呢，沿路呢，有一部分要求归队了，他轻伤，有的就到自己旅部去了。又走了一部（分），我们留了几十个，不到一百人了。我们就转移到东台的海边上的，原来后方医院的一个医疗队的所在地，叫蒋家墩子（音），我厚书上有。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE002-P09",
+        "stage_order": 9,
+        "stage_summary": "在蒋家墩子开刀",
+        "process_text": "刀还没开，到了蒋家墩子才开刀。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0200"
+        ],
+        "evidence_quote": "刀还都没开呢，到了蒋家墩子才开那个刀的。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC02-DE002-P01",
+        "target_stage_id": "BATCH05-DOC02-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE002-P02",
+        "target_stage_id": "BATCH05-DOC02-DE002-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE002-P03",
+        "target_stage_id": "BATCH05-DOC02-DE002-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE002-P04",
+        "target_stage_id": "BATCH05-DOC02-DE002-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE002-P05",
+        "target_stage_id": "BATCH05-DOC02-DE002-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE002-P06",
+        "target_stage_id": "BATCH05-DOC02-DE002-P07",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE002-P07",
+        "target_stage_id": "BATCH05-DOC02-DE002-P08",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE002-P08",
+        "target_stage_id": "BATCH05-DOC02-DE002-P09",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": null
+  },
+  "request_error": null
+}

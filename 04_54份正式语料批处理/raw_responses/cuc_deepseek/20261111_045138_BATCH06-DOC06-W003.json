@@ -1,0 +1,220 @@
+{
+  "run_time": "2026-11-11T04:51:38",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH06-DOC06-W003",
+  "technical_document_id": "BATCH06-DOC06",
+  "document_id": "14.陈锐霆 090510（二校完 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH06-DOC06-S0038",
+    "BATCH06-DOC06-S0039",
+    "BATCH06-DOC06-S0040",
+    "BATCH06-DOC06-S0041",
+    "BATCH06-DOC06-S0042",
+    "BATCH06-DOC06-S0043",
+    "BATCH06-DOC06-S0044",
+    "BATCH06-DOC06-S0045",
+    "BATCH06-DOC06-S0046",
+    "BATCH06-DOC06-S0047"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 4,
+    "assigned_segment_count": 4,
+    "unassigned_segment_count": 6,
+    "input_segment_count": 10,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH06-DOC06-W003-E04"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH06-DOC06-W003",
+    "events": [
+      {
+        "candidate_id": "BATCH06-DOC06-W003-E01",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0040"
+        ],
+        "event": {
+          "event_name": "陈锐霆将任务交给唐君照",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "交给任务",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "唐君照同志",
+              "normalized_entity": "唐君照",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Verbiage",
+              "mention": "这个任务",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "所以我就把这个任务交给唐君照同志在那搞，以后他在江阴当我们的政治委员嘛。",
+          "type_basis": "核心过程为向唐君照交代/交付任务，属于言语性指令；参与者为Sayer、Receiver、Verbiage，符合VERBAL词表；不是单纯物质转移，因为对象是任务/职责。",
+          "alternative_event_type": "MATERIAL",
+          "ambiguity_reason": "“交给任务”也可视为职责转移的物质性组织行动，原文未出现明确言说动词。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W003-E02",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0042"
+        ],
+        "event": {
+          "event_name": "陈锐霆赴常州参与上海接收筹备",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "赴常州参与上海接收筹备",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "4月30号",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "常州、武进",
+              "normalized_value": "常州、武进"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我就到了常州，到了武进嘛，在那个地方三野开两次会，这是4月30号了。这个时候接收上海的委员会，由政治部主任唐亮做接收的主任嘛。",
+          "type_basis": "核心过程为赴常州、开会及参与组建上海接收机构，属于组织行动和空间移动，Actor为陈锐霆；‘我说’等言语环节服务于机构调整，不改变整体物质/组织行动类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W003-E03",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0044"
+        ],
+        "event": {
+          "event_name": "陈锐霆分设吴淞、江湾军分区并任主任",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "分设军分区并任主任",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "进攻上海的时候",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "我的部队是炮兵，进了城以后不打炮",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "另外一个就是到了进攻上海的时候，我又分了吴淞区跟江湾区两个分区的，因为我的部队是炮兵，进了城以后不打炮，所以让我当这两个军分区的负责的主任嘛。",
+          "type_basis": "核心过程为分设军分区并担任主任，属于组织行动/职务承担，Actor为陈锐霆；不是单纯身份关系，因为原文强调战役组织中的任命和任务安排。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W003-E04",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0046"
+        ],
+        "event": {
+          "event_name": "陈锐霆参与上海军管接收并将最好车辆送给邓小平",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "参与军管接收并送车",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "最好的一部车子",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "邓书记",
+              "normalized_entity": "邓小平",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "江湾的五角场",
+              "normalized_value": "江湾五角场"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我的特纵的司令部就驻在江湾的五角场，就现在空军在的那地方，我一百岁做寿的时候，现在的空军司令，他说住我原来住的房子住了十七年，那儿以后是空军管的地方。在上海军管的事情非常地多，另外陆军都没有好多东西留下，国民党把它都搬走了，接收的东西不多，接收了一点车辆吧。最好的一部车子，陈老总要我送给邓书记，淮海战役的时候前委书记邓小平嘛，过江的战役也归他指挥，就送给他了。",
+          "type_basis": "核心过程为上海军管接收及车辆转送，属于物质/组织行动；Actor为陈锐霆，Goal为车辆，Recipient为邓小平；‘他说’等为背景，不构成独立言语事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH06-DOC06-S0038",
+      "BATCH06-DOC06-S0039",
+      "BATCH06-DOC06-S0041",
+      "BATCH06-DOC06-S0043",
+      "BATCH06-DOC06-S0045",
+      "BATCH06-DOC06-S0047"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH06-DOC06-W003\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W003-E01\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0040\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆将任务交给唐君照\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"交给任务\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"唐君照同志\",\n            \"normalized_entity\": \"唐君照\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Verbiage\",\n            \"mention\": \"这个任务\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": null,\n        \"evidence_quote\": \"所以我就把这个任务交给唐君照同志在那搞，以后他在江阴当我们的政治委员嘛。\",\n        \"type_basis\": \"核心过程为向唐君照交代/交付任务，属于言语性指令；参与者为Sayer、Receiver、Verbiage，符合VERBAL词表；不是单纯物质转移，因为对象是任务/职责。\",\n        \"alternative_event_type\": \"MATERIAL\",\n        \"ambiguity_reason\": \"“交给任务”也可视为职责转移的物质性组织行动，原文未出现明确言说动词。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W003-E02\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0042\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆赴常州参与上海接收筹备\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"赴常州参与上海接收筹备\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"4月30号\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"常州、武进\",\n            \"normalized_value\": \"常州、武进\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我就到了常州，到了武进嘛，在那个地方三野开两次会，这是4月30号了。这个时候接收上海的委员会，由政治部主任唐亮做接收的主任嘛。\",\n        \"type_basis\": \"核心过程为赴常州、开会及参与组建上海接收机构，属于组织行动和空间移动，Actor为陈锐霆；‘我说’等言语环节服务于机构调整，不改变整体物质/组织行动类型。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W003-E03\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0044\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆分设吴淞、江湾军分区并任主任\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"分设军分区并任主任\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"进攻上海的时候\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"我的部队是炮兵，进了城以后不打炮\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"另外一个就是到了进攻上海的时候，我又分了吴淞区跟江湾区两个分区的，因为我的部队是炮兵，进了城以后不打炮，所以让我当这两个军分区的负责的主任嘛。\",\n        \"type_basis\": \"核心过程为分设军分区并担任主任，属于组织行动/职务承担，Actor为陈锐霆；不是单纯身份关系，因为原文强调战役组织中的任命和任务安排。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W003-E04\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0046\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆参与上海军管接收并将最好车辆送给邓小平\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"参与军管接收并送车\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"最好的一部车子\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"邓书记\",\n            \"normalized_entity\": \"邓小平\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"江湾的五角场\",\n            \"normalized_value\": \"江湾五角场\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我的特纵的司令部就驻在江湾的五角场，就现在空军在的那地方，我一百岁做寿的时候，现在的空军司令，他说住我原来住的房子住了十七年，那儿以后是空军管的地方。在上海军管的事情非常地多，另外陆军都没有好多东西留下，国民党把它都搬走了，接收的东西不多，接收了一点车辆吧。最好的一部车子，陈老总要我送给邓书记，淮海战役的时候前委书记邓小平嘛，过江的战役也归他指挥，就送给他了。\",\n        \"type_basis\": \"核心过程为上海军管接收及车辆转送，属于物质/组织行动；Actor为陈锐霆，Goal为车辆，Recipient为邓小平；‘他说’等为背景，不构成独立言语事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH06-DOC06-S0038\",\n    \"BATCH06-DOC06-S0039\",\n    \"BATCH06-DOC06-S0041\",\n    \"BATCH06-DOC06-S0043\",\n    \"BATCH06-DOC06-S0045\",\n    \"BATCH06-DOC06-S0047\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 4652,
+    "total_tokens": 24024,
+    "completion_tokens": 19372,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 17683
+    },
+    "time_to_first_token_ms": 162228,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 19371000
+  }
+}

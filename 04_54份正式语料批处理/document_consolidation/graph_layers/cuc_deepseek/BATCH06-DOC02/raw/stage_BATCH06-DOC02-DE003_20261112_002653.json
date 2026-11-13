@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-12T00:26:53",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC02-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC02-DE003",
+  "usage": {
+    "prompt_tokens": 1258,
+    "total_tokens": 2833,
+    "completion_tokens": 1575,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1004
+    },
+    "time_to_first_token_ms": 12199,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-18\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC02-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"医务人员不能吃缴获食品，每天吃两顿稀饭；伤员的食品不准动，优先保证伤员营养。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于医务人员也不能吃缴获食品并一天吃两顿稀饭，止于稀饭很稀、米少且伤员食品不准动、先保证伤员营养。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"后方医务人员同样不能吃缴获食品，每天只吃两顿稀饭。\",\n      \"process_text\": \"医务人员不能吃缴获食品，一天吃两顿稀饭。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0017\"\n      ],\n      \"evidence_quote\": \"我们医务人员也不能吃，我们医务人员也是一天吃两顿稀饭。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"稀饭很稀、米很少，伤员食品根本不准动，先保证伤员营养。\",\n      \"process_text\": \"稀饭稀、里面没几颗米；伤员的东西根本不准动，先保证伤员营养。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0019\"\n      ],\n      \"evidence_quote\": \"那个稀稀的，里面没几颗米啊。那个（是）伤员（的），你根本不准动，保证伤员的营养不够呢，（先）来保证伤员。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE003-P01\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0019\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-18",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC02-DE003",
+    "event_enrichment": {
+      "result_state": "医务人员不能吃缴获食品，每天吃两顿稀饭；伤员的食品不准动，优先保证伤员营养。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于医务人员也不能吃缴获食品并一天吃两顿稀饭，止于稀饭很稀、米少且伤员食品不准动、先保证伤员营养。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC02-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "后方医务人员同样不能吃缴获食品，每天只吃两顿稀饭。",
+        "process_text": "医务人员不能吃缴获食品，一天吃两顿稀饭。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0017"
+        ],
+        "evidence_quote": "我们医务人员也不能吃，我们医务人员也是一天吃两顿稀饭。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "稀饭很稀、米很少，伤员食品根本不准动，先保证伤员营养。",
+        "process_text": "稀饭稀、里面没几颗米；伤员的东西根本不准动，先保证伤员营养。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0019"
+        ],
+        "evidence_quote": "那个稀稀的，里面没几颗米啊。那个（是）伤员（的），你根本不准动，保证伤员的营养不够呢，（先）来保证伤员。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC02-DE003-P01",
+        "target_stage_id": "BATCH06-DOC02-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0019",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T11:51:24",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC01-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC01-DE006",
+  "usage": {
+    "prompt_tokens": 1280,
+    "total_tokens": 5543,
+    "completion_tokens": 4263,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3273
+    },
+    "time_to_first_token_ms": 102133,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC01-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"江北指挥部建立后，那边基本和皖南军部水平持平，开始有一点差异后来慢慢地拉平了。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 S0047 从“后来我们军部派了大批医务人员到四支队，到高敬亭那边”开始，到“后来慢慢地拉平了”结束，覆盖派医务人员、建立江北指挥部及水平拉平。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"军部派大批医务人员到四支队、高敬亭那边\",\n      \"process_text\": \"后来我们军部派了大批医务人员到四支队，到高敬亭那边。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0047\"\n      ],\n      \"evidence_quote\": \"陈海峰：后来我们军部派了大批医务人员到四支队，到高敬亭那边。建立了江北指挥部，宫乃泉就带来一大批人过去，过去以后，那边基本和皖南军部水平就持平了。开始有一点差异，后来慢慢地拉平了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"建立江北指挥部，宫乃泉带来一大批人过去\",\n      \"process_text\": \"建立了江北指挥部，宫乃泉就带来一大批人过去\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0047\"\n      ],\n      \"evidence_quote\": \"陈海峰：后来我们军部派了大批医务人员到四支队，到高敬亭那边。建立了江北指挥部，宫乃泉就带来一大批人过去，过去以后，那边基本和皖南军部水平就持平了。开始有一点差异，后来慢慢地拉平了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"过去以后那边基本与皖南军部水平持平，差异慢慢拉平\",\n      \"process_text\": \"过去以后，那边基本和皖南军部水平就持平了。开始有一点差异，后来慢慢地拉平了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0047\"\n      ],\n      \"evidence_quote\": \"陈海峰：后来我们军部派了大批医务人员到四支队，到高敬亭那边。建立了江北指挥部，宫乃泉就带来一大批人过去，过去以后，那边基本和皖南军部水平就持平了。开始有一点差异，后来慢慢地拉平了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE006-P01\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0047\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE006-P02\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE006-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0047\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V2-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC01-DE006",
+    "event_enrichment": {
+      "result_state": "江北指挥部建立后，那边基本和皖南军部水平持平，开始有一点差异后来慢慢地拉平了。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 S0047 从“后来我们军部派了大批医务人员到四支队，到高敬亭那边”开始，到“后来慢慢地拉平了”结束，覆盖派医务人员、建立江北指挥部及水平拉平。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC01-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "军部派大批医务人员到四支队、高敬亭那边",
+        "process_text": "后来我们军部派了大批医务人员到四支队，到高敬亭那边。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0047"
+        ],
+        "evidence_quote": "陈海峰：后来我们军部派了大批医务人员到四支队，到高敬亭那边。建立了江北指挥部，宫乃泉就带来一大批人过去，过去以后，那边基本和皖南军部水平就持平了。开始有一点差异，后来慢慢地拉平了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "建立江北指挥部，宫乃泉带来一大批人过去",
+        "process_text": "建立了江北指挥部，宫乃泉就带来一大批人过去",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0047"
+        ],
+        "evidence_quote": "陈海峰：后来我们军部派了大批医务人员到四支队，到高敬亭那边。建立了江北指挥部，宫乃泉就带来一大批人过去，过去以后，那边基本和皖南军部水平就持平了。开始有一点差异，后来慢慢地拉平了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "过去以后那边基本与皖南军部水平持平，差异慢慢拉平",
+        "process_text": "过去以后，那边基本和皖南军部水平就持平了。开始有一点差异，后来慢慢地拉平了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0047"
+        ],
+        "evidence_quote": "陈海峰：后来我们军部派了大批医务人员到四支队，到高敬亭那边。建立了江北指挥部，宫乃泉就带来一大批人过去，过去以后，那边基本和皖南军部水平就持平了。开始有一点差异，后来慢慢地拉平了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC01-DE006-P01",
+        "target_stage_id": "BATCH03-DOC01-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0047",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC01-DE006-P02",
+        "target_stage_id": "BATCH03-DOC01-DE006-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC01-S0047",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

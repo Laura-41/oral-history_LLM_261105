@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-12T00:22:08",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC01-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC01-DE001",
+  "usage": {
+    "prompt_tokens": 1502,
+    "total_tokens": 6001,
+    "completion_tokens": 4499,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3097
+    },
+    "time_to_first_token_ms": 34596,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-13\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC01-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"济南被攻克，王耀武化装成老百姓逃跑后被民兵捉到；徐州方向国民党军增援力量虽强，但始终未敢来援，济南战役胜利结束。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件从西线三纵、八纵攻打普利门及东线攻打东门的攻城过程开始，止于济南胜利结束、王耀武被捉、徐州援敌未敢来援；后续9月会议及毛主席指示不属于本事件内部阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC01-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"西线三纵、八纵等部队攻打普利门，遭遇洋灰工事和恶仗，有名师长在打普利门时牺牲。\",\n      \"process_text\": \"西线主要由三纵、八纵等山东部队攻打普利门；普利门有洋灰工事，战斗是恶仗，一名能打仗的师长在打普利门时牺牲。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC01-S0003\"\n      ],\n      \"evidence_quote\": \"西线也主要都是原来山东的部队，三纵跟八纵的部队在西线那个地方，主要是三纵打。我们一个很有名的很能打仗的师长打普利门（的时候）也牺牲了。普利门都是洋灰工事，外边是商埠，济南一个旧城，一个新发展的商埠。西线就在普利门是个恶仗\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC01-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"炮一团、榴弹炮团团长和主力部队上去增援，最终攻下普利门。\",\n      \"process_text\": \"后来炮一团、榴弹炮团的团长也去了，主力部队也上去，最后攻下普利门。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC01-S0003\"\n      ],\n      \"evidence_quote\": \"后来炮一团，榴弹炮团的团长也去了，主力部队也上去，最后也攻下来了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC01-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"东线攻打东门，东门虽然坚固，但也被攻下。\",\n      \"process_text\": \"东线东门也是坚固的地方，最终也被攻下来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC01-S0003\"\n      ],\n      \"evidence_quote\": \"东线东门也是个坚固的（地方），也攻下来的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC01-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"王耀武装成老百姓从北城逃跑，后来被民兵捉到。\",\n      \"process_text\": \"王耀武化装成老百姓从北城逃跑，以后被民兵捉到。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC01-S0003\"\n      ],\n      \"evidence_quote\": \"王耀武就装成老百姓从北城逃跑了，以后叫民兵捉到了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC01-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"济南战役胜利结束；徐州方向国民党军五个兵团增援力量强，但打援部队部署强大，敌人始终未敢来援。\",\n      \"process_text\": \"济南胜利结束；打济南时徐州敌人有五个兵团，增援力量很强，但打援部队部署得和攻城部队一样强大，敌人始终没有敢动，没敢来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC01-S0005\"\n      ],\n      \"evidence_quote\": \"济南胜利地结束了，打济南最大的一个问题，就是在徐州敌人有五个兵团，增援的力量很强啊！但是我们打的时候，（他们）始终没有敢动。我们打援的部队，部署得也跟攻城的部队一样，都比国民党的力量还强大得多，敌人没敢来。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC01-DE001-P01\",\n      \"target_stage_id\": \"BATCH06-DOC01-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC01-S0003\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC01-DE001-P02\",\n      \"target_stage_id\": \"BATCH06-DOC01-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC01-S0003\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC01-DE001-P03\",\n      \"target_stage_id\": \"BATCH06-DOC01-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC01-S0003\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC01-DE001-P04\",\n      \"target_stage_id\": \"BATCH06-DOC01-DE001-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC01-S0005\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-13",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC01-DE001",
+    "event_enrichment": {
+      "result_state": "济南被攻克，王耀武化装成老百姓逃跑后被民兵捉到；徐州方向国民党军增援力量虽强，但始终未敢来援，济南战役胜利结束。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件从西线三纵、八纵攻打普利门及东线攻打东门的攻城过程开始，止于济南胜利结束、王耀武被捉、徐州援敌未敢来援；后续9月会议及毛主席指示不属于本事件内部阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC01-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "西线三纵、八纵等部队攻打普利门，遭遇洋灰工事和恶仗，有名师长在打普利门时牺牲。",
+        "process_text": "西线主要由三纵、八纵等山东部队攻打普利门；普利门有洋灰工事，战斗是恶仗，一名能打仗的师长在打普利门时牺牲。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC01-S0003"
+        ],
+        "evidence_quote": "西线也主要都是原来山东的部队，三纵跟八纵的部队在西线那个地方，主要是三纵打。我们一个很有名的很能打仗的师长打普利门（的时候）也牺牲了。普利门都是洋灰工事，外边是商埠，济南一个旧城，一个新发展的商埠。西线就在普利门是个恶仗",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC01-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "炮一团、榴弹炮团团长和主力部队上去增援，最终攻下普利门。",
+        "process_text": "后来炮一团、榴弹炮团的团长也去了，主力部队也上去，最后攻下普利门。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC01-S0003"
+        ],
+        "evidence_quote": "后来炮一团，榴弹炮团的团长也去了，主力部队也上去，最后也攻下来了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC01-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "东线攻打东门，东门虽然坚固，但也被攻下。",
+        "process_text": "东线东门也是坚固的地方，最终也被攻下来。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC01-S0003"
+        ],
+        "evidence_quote": "东线东门也是个坚固的（地方），也攻下来的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC01-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "王耀武装成老百姓从北城逃跑，后来被民兵捉到。",
+        "process_text": "王耀武化装成老百姓从北城逃跑，以后被民兵捉到。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC01-S0003"
+        ],
+        "evidence_quote": "王耀武就装成老百姓从北城逃跑了，以后叫民兵捉到了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC01-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "济南战役胜利结束；徐州方向国民党军五个兵团增援力量强，但打援部队部署强大，敌人始终未敢来援。",
+        "process_text": "济南胜利结束；打济南时徐州敌人有五个兵团，增援力量很强，但打援部队部署得和攻城部队一样强大，敌人始终没有敢动，没敢来。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC01-S0005"
+        ],
+        "evidence_quote": "济南胜利地结束了，打济南最大的一个问题，就是在徐州敌人有五个兵团，增援的力量很强啊！但是我们打的时候，（他们）始终没有敢动。我们打援的部队，部署得也跟攻城的部队一样，都比国民党的力量还强大得多，敌人没敢来。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC01-DE001-P01",
+        "target_stage_id": "BATCH06-DOC01-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC01-S0003",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC01-DE001-P02",
+        "target_stage_id": "BATCH06-DOC01-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC01-S0003",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC01-DE001-P03",
+        "target_stage_id": "BATCH06-DOC01-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC01-S0003",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC01-DE001-P04",
+        "target_stage_id": "BATCH06-DOC01-DE001-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC01-S0005",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

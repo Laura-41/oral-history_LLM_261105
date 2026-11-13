@@ -1,0 +1,41 @@
+单文档验证：BATCH01-DOC03 / cuc/deepseek
+日志：04_54份正式语料批处理/run_logs/GRAPH_VERIFY_BATCH01-DOC03_cuc_deepseek_20261111_170702_pid70336.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+
+===== L0 零 API 底座表 =====
+[落盘] BATCH01-DOC03 / cuc/deepseek
+  原文片段 97｜一级事件 7｜覆盖率 1.0000
+  人工视图：无
+    documents                  1 行
+    source_segments           97 行
+    source_attachments        97 行
+    coverage_audit             1 行
+    document_annotations      35 行
+    event_nodes                7 行
+    event_processes            7 行
+    event_participants        14 行
+    event_circumstances       21 行
+    event_next                 6 行
+  警告 1 条（详见 L0_report.json）
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH01-DOC03
+
+===== L1/L2 模型任务（真实 API 调用） =====
+[真实调用] BATCH01-DOC03 / cuc/deepseek / tasks=stage,entity_time
+  一级事件 7｜原文片段 97｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH01-DOC03/raw
+
+== stage：7 次调用 ==
+  [1/7] stage_BATCH01-DOC03-DE001 已有成功响应，跳过（断点续跑）
+  [2/7] stage_BATCH01-DOC03-DE002 已有成功响应，跳过（断点续跑）
+  [3/7] stage_BATCH01-DOC03-DE003 已有成功响应，跳过（断点续跑）
+  [4/7] stage_BATCH01-DOC03-DE004 已有成功响应，跳过（断点续跑）
+  [5/7] stage_BATCH01-DOC03-DE005 已有成功响应，跳过（断点续跑）
+  [6/7] stage_BATCH01-DOC03-DE006 已有成功响应，跳过（断点续跑）
+  [7/7] stage_BATCH01-DOC03-DE007 已有成功响应，跳过（断点续跑）
+
+== entity_time：1 次调用 ==
+  [1/1] 请求 entity_time/YYS-02，输入 28,873 字符，最长等待 3600s……
+  失败并停止：HTTP 500: {"error":{"message":"upstream error: do request failed (request id: 202611110907023521103538268d9d6jlznph2i)","type":"new_api_error","param":"","code":"do_request_failed"}}
+
+entity_time 在第 1 次调用熔断；已完成结果全部保留，重跑同一命令即断点续跑。
+
+熔断于：L1/L2 模型任务（真实 API 调用）。已完成结果全部保留，修好后重跑同一命令即可。

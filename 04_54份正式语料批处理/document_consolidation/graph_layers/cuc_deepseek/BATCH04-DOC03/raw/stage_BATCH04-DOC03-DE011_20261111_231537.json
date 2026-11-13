@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-11T23:15:37",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC03-DE011",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC03-DE011",
+  "usage": {
+    "prompt_tokens": 1134,
+    "total_tokens": 2587,
+    "completion_tokens": 1453,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 969
+    },
+    "time_to_first_token_ms": 11956,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC03-DE011\",\n  \"event_enrichment\": {\n    \"result_state\": \"师部因目标暴露离开常村，转移到其他地方，未继续在常村驻扎。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件边界从师部在常村驻扎、目标暴露开始，到‘又转移了地方’结束；后续关于驻地时长和群众动员的叙述不作为本事件阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE011-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"师部驻常村期间目标暴露\",\n      \"process_text\": \"师部在常村住着，目标暴露。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0071\"\n      ],\n      \"evidence_quote\": \"我们自己以后，就在常村住着，目标也暴露了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE011-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"师部再次转移驻地\",\n      \"process_text\": \"目标暴露后，师部又转移了地方。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0071\"\n      ],\n      \"evidence_quote\": \"又转移了地方。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE011-P01\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE011-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0071\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC03-DE011",
+    "event_enrichment": {
+      "result_state": "师部因目标暴露离开常村，转移到其他地方，未继续在常村驻扎。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件边界从师部在常村驻扎、目标暴露开始，到‘又转移了地方’结束；后续关于驻地时长和群众动员的叙述不作为本事件阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC03-DE011-P01",
+        "stage_order": 1,
+        "stage_summary": "师部驻常村期间目标暴露",
+        "process_text": "师部在常村住着，目标暴露。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0071"
+        ],
+        "evidence_quote": "我们自己以后，就在常村住着，目标也暴露了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE011-P02",
+        "stage_order": 2,
+        "stage_summary": "师部再次转移驻地",
+        "process_text": "目标暴露后，师部又转移了地方。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0071"
+        ],
+        "evidence_quote": "又转移了地方。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC03-DE011-P01",
+        "target_stage_id": "BATCH04-DOC03-DE011-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH04-DOC03-S0071",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

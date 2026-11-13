@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-12T21:56:49",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC04-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC04-DE001",
+  "usage": {
+    "prompt_tokens": 1221,
+    "total_tokens": 7700,
+    "completion_tokens": 6479,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5725
+    },
+    "time_to_first_token_ms": 99044,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC04-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆在访谈中将该行动概括为转变根本立场的翻天覆地事情，并说明其国民党党员身份来自集体参加且无实际党的活动。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件从 BATCH04-DOC04-S0004 陈锐霆评价行动开始，经 BATCH04-DOC04-S0006 补充说明集体参加国民党，到 BATCH04-DOC04-S0008 以“就是。”收束，均围绕同一访谈回答。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆评价该行动是转变根本立场的翻天覆地事情，并说明自己原来是国民党党员。\",\n      \"process_text\": \"陈锐霆称该行动是翻天覆地的事情，是转变根本立场的时候，并说明自己原来是国民党党员，国民党规定在河北军事政治学校当军官的都要是国民党员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0004\"\n      ],\n      \"evidence_quote\": \"陈锐霆：当然是一个翻天覆地的事情，（那是）转变根本立场的时候，是这么个行动。原来是国民党嘛，我也是国民党党员。国民党规定，在河北军事政治学校当军官的，都要是国民党员。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈锐霆补充说明军官和学生集体参加国民党，因此自己也是国民党党员，且实际上没有党的活动。\",\n      \"process_text\": \"陈锐霆说明军官、学生都是集体参加国民党，因此自己也是国民党党员，实际上没有任何党的活动，就是开了那一次会。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0006\"\n      ],\n      \"evidence_quote\": \"陈锐霆：所以我们军官、学生，都是集体参加国民党，所以我也是国民党党员，实际上没有任何党的活动了，就是开了那一次会。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE001-P01\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE001-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0006\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC04-DE001",
+    "event_enrichment": {
+      "result_state": "陈锐霆在访谈中将该行动概括为转变根本立场的翻天覆地事情，并说明其国民党党员身份来自集体参加且无实际党的活动。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "事件从 BATCH04-DOC04-S0004 陈锐霆评价行动开始，经 BATCH04-DOC04-S0006 补充说明集体参加国民党，到 BATCH04-DOC04-S0008 以“就是。”收束，均围绕同一访谈回答。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC04-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆评价该行动是转变根本立场的翻天覆地事情，并说明自己原来是国民党党员。",
+        "process_text": "陈锐霆称该行动是翻天覆地的事情，是转变根本立场的时候，并说明自己原来是国民党党员，国民党规定在河北军事政治学校当军官的都要是国民党员。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0004"
+        ],
+        "evidence_quote": "陈锐霆：当然是一个翻天覆地的事情，（那是）转变根本立场的时候，是这么个行动。原来是国民党嘛，我也是国民党党员。国民党规定，在河北军事政治学校当军官的，都要是国民党员。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "陈锐霆补充说明军官和学生集体参加国民党，因此自己也是国民党党员，且实际上没有党的活动。",
+        "process_text": "陈锐霆说明军官、学生都是集体参加国民党，因此自己也是国民党党员，实际上没有任何党的活动，就是开了那一次会。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0006"
+        ],
+        "evidence_quote": "陈锐霆：所以我们军官、学生，都是集体参加国民党，所以我也是国民党党员，实际上没有任何党的活动了，就是开了那一次会。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC04-DE001-P01",
+        "target_stage_id": "BATCH04-DOC04-DE001-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC04-S0006",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

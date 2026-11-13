@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T22:33:59",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE010",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE010",
+  "usage": {
+    "prompt_tokens": 1171,
+    "total_tokens": 5160,
+    "completion_tokens": 3989,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2948
+    },
+    "time_to_first_token_ms": 34598,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"685团等部先期东进至微山湖西（后称苏鲁边），到达目的地。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以8月685团等部先期出发为起点，以685团到达微山湖西（后称苏鲁边）为终点；山西作战、太行休整作为途中阶段纳入，不扩展到12月罗帅回中央及调部队到山东的部署。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"8月，685团等部先后先期出发；杨得志任344旅副旅长后该部先行。\",\n      \"process_text\": \"8月份685团走了，肖华走，他们前后，杨得志去当344旅的副旅长之后，这个部队就先走了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0059\"\n      ],\n      \"evidence_quote\": \"8月份685团走了，肖华走，他们前后，杨得志去当344旅的副旅长之后，这个部队就先走了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"该部先在山西太谷或平遥附近作战，有年轻排长（警卫员）牺牲。\",\n      \"process_text\": \"先在山西，好像在太谷还是平遥附近，还打了几仗，我们有一个排长，是个警卫员，年纪挺轻牺牲了\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0059\"\n      ],\n      \"evidence_quote\": \"先在山西，好像在太谷还是平遥附近，还打了几仗，我们有一个排长，是个警卫员，年纪挺轻牺牲了\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"在太行稍事休整后继续东进。\",\n      \"process_text\": \"他们在太行稍事休息一下以后，就东进了\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0059\"\n      ],\n      \"evidence_quote\": \"他们在太行稍事休息一下以后，就东进了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE010-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"685团到达微山湖西，即后来所称苏鲁边。\",\n      \"process_text\": \"685团就到了微山湖西——以后叫苏鲁边，就到那里去了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0059\"\n      ],\n      \"evidence_quote\": \"685团就到了微山湖西——以后叫苏鲁边，就到那里去了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE010-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0059\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE010-P02\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE010-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0059\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE010-P03\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE010-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0059\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE010",
+    "event_enrichment": {
+      "result_state": "685团等部先期东进至微山湖西（后称苏鲁边），到达目的地。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以8月685团等部先期出发为起点，以685团到达微山湖西（后称苏鲁边）为终点；山西作战、太行休整作为途中阶段纳入，不扩展到12月罗帅回中央及调部队到山东的部署。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "8月，685团等部先后先期出发；杨得志任344旅副旅长后该部先行。",
+        "process_text": "8月份685团走了，肖华走，他们前后，杨得志去当344旅的副旅长之后，这个部队就先走了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0059"
+        ],
+        "evidence_quote": "8月份685团走了，肖华走，他们前后，杨得志去当344旅的副旅长之后，这个部队就先走了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "该部先在山西太谷或平遥附近作战，有年轻排长（警卫员）牺牲。",
+        "process_text": "先在山西，好像在太谷还是平遥附近，还打了几仗，我们有一个排长，是个警卫员，年纪挺轻牺牲了",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0059"
+        ],
+        "evidence_quote": "先在山西，好像在太谷还是平遥附近，还打了几仗，我们有一个排长，是个警卫员，年纪挺轻牺牲了",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "在太行稍事休整后继续东进。",
+        "process_text": "他们在太行稍事休息一下以后，就东进了",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0059"
+        ],
+        "evidence_quote": "他们在太行稍事休息一下以后，就东进了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE010-P04",
+        "stage_order": 4,
+        "stage_summary": "685团到达微山湖西，即后来所称苏鲁边。",
+        "process_text": "685团就到了微山湖西——以后叫苏鲁边，就到那里去了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0059"
+        ],
+        "evidence_quote": "685团就到了微山湖西——以后叫苏鲁边，就到那里去了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE010-P01",
+        "target_stage_id": "BATCH03-DOC06-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0059",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE010-P02",
+        "target_stage_id": "BATCH03-DOC06-DE010-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0059",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE010-P03",
+        "target_stage_id": "BATCH03-DOC06-DE010-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0059",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T23:53:46",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC03-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC03-DE008",
+  "usage": {
+    "prompt_tokens": 1312,
+    "total_tokens": 4677,
+    "completion_tokens": 3365,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2270
+    },
+    "tokens_per_second": 3364000,
+    "time_to_first_token_ms": 26494,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC03-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"整编第74师被消灭，蒋介石方面很长时间未再下命令作战。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以莱芜战役后国民党重点进攻山东、5月份孟良崮战役为背景起点，至整编第74师被消灭、蒋介石长时间未再下命令作战为止；依据S0052、S0054。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"战役背景：国民党重点进攻山东，整编第74师自恃装备与战力。\",\n      \"process_text\": \"莱芜战役后，国民党重点进攻延安和山东；进攻山东的部队密集推进，整编第74师自认装备好、能打仗，是主力中的主力、王牌中的王牌。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0052\"\n      ],\n      \"evidence_quote\": \"莱芜战役完了，国民党的重点进攻，一个是进攻延安，一个是进攻山东。进攻山东的部队，都是一个旅紧挨着一个旅往下推进。74师感觉自己这个部队装备也好，部队的确也能打仗，张灵甫的部队是主力的主力、王牌的王牌嘛，很能打的，也是原来王耀武带的部队。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"整编第74师单独前出，被引诱进入山区，双方重武器均难以进入。\",\n      \"process_text\": \"整编第74师单独前出后，部队引诱其进入山区，使其重武器进不去，我方重武器也进不去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0054\"\n      ],\n      \"evidence_quote\": \"他自己单独地前出了，我们部队引诱他，把他弄到山区里边，他的重武器进不去，我们也进不去\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"将炮兵布置在两翼交通要道，阻止敌人增援。\",\n      \"process_text\": \"把重武器即炮兵布置在两翼的交通要道，使敌人不能往此处增援。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0054\"\n      ],\n      \"evidence_quote\": \"但是我们把重武器就是我这个炮兵啊都（布置）在两翼的交通要道，敌人不能往这儿增援\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"歼灭整编第74师，并产生后续影响。\",\n      \"process_text\": \"通过上述部署将整编第74师消灭；消灭后，蒋介石很长时间没有再下命令作战。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0054\"\n      ],\n      \"evidence_quote\": \"（这样）把这个74师就消灭了。消灭了以后，蒋介石很长时间就没有（再下命令）打了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE008-P01\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0054\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE008-P02\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0054\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE008-P03\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE008-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0054\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC03-DE008",
+    "event_enrichment": {
+      "result_state": "整编第74师被消灭，蒋介石方面很长时间未再下命令作战。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以莱芜战役后国民党重点进攻山东、5月份孟良崮战役为背景起点，至整编第74师被消灭、蒋介石长时间未再下命令作战为止；依据S0052、S0054。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC03-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "战役背景：国民党重点进攻山东，整编第74师自恃装备与战力。",
+        "process_text": "莱芜战役后，国民党重点进攻延安和山东；进攻山东的部队密集推进，整编第74师自认装备好、能打仗，是主力中的主力、王牌中的王牌。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0052"
+        ],
+        "evidence_quote": "莱芜战役完了，国民党的重点进攻，一个是进攻延安，一个是进攻山东。进攻山东的部队，都是一个旅紧挨着一个旅往下推进。74师感觉自己这个部队装备也好，部队的确也能打仗，张灵甫的部队是主力的主力、王牌的王牌嘛，很能打的，也是原来王耀武带的部队。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "整编第74师单独前出，被引诱进入山区，双方重武器均难以进入。",
+        "process_text": "整编第74师单独前出后，部队引诱其进入山区，使其重武器进不去，我方重武器也进不去。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0054"
+        ],
+        "evidence_quote": "他自己单独地前出了，我们部队引诱他，把他弄到山区里边，他的重武器进不去，我们也进不去",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "将炮兵布置在两翼交通要道，阻止敌人增援。",
+        "process_text": "把重武器即炮兵布置在两翼的交通要道，使敌人不能往此处增援。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0054"
+        ],
+        "evidence_quote": "但是我们把重武器就是我这个炮兵啊都（布置）在两翼的交通要道，敌人不能往这儿增援",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "歼灭整编第74师，并产生后续影响。",
+        "process_text": "通过上述部署将整编第74师消灭；消灭后，蒋介石很长时间没有再下命令作战。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0054"
+        ],
+        "evidence_quote": "（这样）把这个74师就消灭了。消灭了以后，蒋介石很长时间就没有（再下命令）打了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC03-DE008-P01",
+        "target_stage_id": "BATCH05-DOC03-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC03-S0054",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC03-DE008-P02",
+        "target_stage_id": "BATCH05-DOC03-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC03-S0054",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC03-DE008-P03",
+        "target_stage_id": "BATCH05-DOC03-DE008-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC03-S0054",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

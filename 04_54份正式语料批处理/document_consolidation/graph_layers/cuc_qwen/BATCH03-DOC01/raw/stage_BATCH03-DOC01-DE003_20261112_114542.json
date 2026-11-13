@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T11:45:42",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC01-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC01-DE003",
+  "usage": {
+    "prompt_tokens": 1301,
+    "total_tokens": 8584,
+    "completion_tokens": 7283,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6085
+    },
+    "time_to_first_token_ms": 159998,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC01-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"妇女会承担弄水、喂饭、送吃喝和处理排泄等照料，儿童团在外放哨，剩下的战士大部分去支援前线、仅留少部分，包扎所处于接近前线并能听到炮声和机枪声的状态。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 BATCH03-DOC01-S0023，从“那个妇女会帮我们弄水了”起，到“打机枪也都听（得）到。”止，内容围绕妇女会、儿童团对包扎所的支援及包扎所接近前线的环境。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"妇女会承担弄水、喂饭、送吃喝及处理排泄等生活照料。\",\n      \"process_text\": \"那个妇女会帮我们弄水了，喂饭了，喂水了，送吃的喝的了什么东西，拉屎拉尿啦，都是训练她们搞。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0023\"\n      ],\n      \"evidence_quote\": \"那个妇女会帮我们弄水了，喂饭了，喂水了，送吃的喝的了什么东西，拉屎拉尿啦，都是训练她们搞。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"儿童团在包扎所外面放哨。\",\n      \"process_text\": \"儿童团就在外面放哨。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0023\"\n      ],\n      \"evidence_quote\": \"儿童团就在外面放哨。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"剩下的战士大部分去支援前线，这里只留少部分。\",\n      \"process_text\": \"剩下的战士呢，都去支援前线去了，这里只留了一少部分。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0023\"\n      ],\n      \"evidence_quote\": \"剩下的战士呢，都去支援前线去了，这里只留了一少部分。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"包扎所接近前线，能听到炮声和机枪声。\",\n      \"process_text\": \"所以这个包扎所本身也是接近前线，很近，离得并不远，那炮声都听（得）到，打机枪也都听（得）到。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0023\"\n      ],\n      \"evidence_quote\": \"所以这个包扎所本身也是接近前线，很近，离得并不远，那炮声都听（得）到，打机枪也都听（得）到。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE003-P01\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0023\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE003-P02\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0023\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE003-P03\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE003-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0023\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": null\n}",
+  "parsed": {
+    "document_id": "CHF-V2-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC01-DE003",
+    "event_enrichment": {
+      "result_state": "妇女会承担弄水、喂饭、送吃喝和处理排泄等照料，儿童团在外放哨，剩下的战士大部分去支援前线、仅留少部分，包扎所处于接近前线并能听到炮声和机枪声的状态。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 BATCH03-DOC01-S0023，从“那个妇女会帮我们弄水了”起，到“打机枪也都听（得）到。”止，内容围绕妇女会、儿童团对包扎所的支援及包扎所接近前线的环境。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC01-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "妇女会承担弄水、喂饭、送吃喝及处理排泄等生活照料。",
+        "process_text": "那个妇女会帮我们弄水了，喂饭了，喂水了，送吃的喝的了什么东西，拉屎拉尿啦，都是训练她们搞。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0023"
+        ],
+        "evidence_quote": "那个妇女会帮我们弄水了，喂饭了，喂水了，送吃的喝的了什么东西，拉屎拉尿啦，都是训练她们搞。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "儿童团在包扎所外面放哨。",
+        "process_text": "儿童团就在外面放哨。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0023"
+        ],
+        "evidence_quote": "儿童团就在外面放哨。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "剩下的战士大部分去支援前线，这里只留少部分。",
+        "process_text": "剩下的战士呢，都去支援前线去了，这里只留了一少部分。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0023"
+        ],
+        "evidence_quote": "剩下的战士呢，都去支援前线去了，这里只留了一少部分。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "包扎所接近前线，能听到炮声和机枪声。",
+        "process_text": "所以这个包扎所本身也是接近前线，很近，离得并不远，那炮声都听（得）到，打机枪也都听（得）到。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0023"
+        ],
+        "evidence_quote": "所以这个包扎所本身也是接近前线，很近，离得并不远，那炮声都听（得）到，打机枪也都听（得）到。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC01-DE003-P01",
+        "target_stage_id": "BATCH03-DOC01-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0023",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC01-DE003-P02",
+        "target_stage_id": "BATCH03-DOC01-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0023",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC01-DE003-P03",
+        "target_stage_id": "BATCH03-DOC01-DE003-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC01-S0023",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": null
+  },
+  "request_error": null
+}

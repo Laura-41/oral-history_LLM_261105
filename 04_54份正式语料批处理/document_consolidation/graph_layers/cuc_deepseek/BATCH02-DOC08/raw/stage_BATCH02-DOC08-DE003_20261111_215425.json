@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-11T21:54:25",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC08-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC08-DE003",
+  "usage": {
+    "prompt_tokens": 1581,
+    "total_tokens": 5027,
+    "completion_tokens": 3446,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2170
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 26932,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC08-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"144师多次秘密向三支队提供手榴弹和79步枪子弹，并以对日作战消耗名义上报；三支队以宴请回馈，双方关系维持良好。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以S0033所述144师与三支队关系不错为背景，S0036从关系好了以后争取送子弹起，到每次秘密带弹药并以宴请回馈止。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"144师与三支队建立并保持较好关系，双方人员有联系和友好往来。\",\n      \"process_text\": \"144师与三支队关系不错，政训处人员与三支队有联系，并通过打篮球、请吃饭等方式保持友好。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0033\"\n      ],\n      \"evidence_quote\": \"但是和我们三支队关系还不错，我们经常和他司令部他们政治部的人（联系），他们也有，他叫政训处。政训处的人啊，一些学生啊，政工人员和我们有联系。联系以后，就打篮球比赛呀，一个月两个月打一次，我们请他吃顿饭，大家比较友好。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"三支队在关系良好后争取144师提供子弹。\",\n      \"process_text\": \"关系好了以后，三支队争取144师送子弹，原因是三支队子弹少。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0036\"\n      ],\n      \"evidence_quote\": \"关系好了以后干什么呢？争取他送我们子弹，我们子弹少\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"144师每次来访时携带手榴弹和79步枪子弹。\",\n      \"process_text\": \"144师每次来都带几箱手榴弹和几箱79步枪子弹。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0036\"\n      ],\n      \"evidence_quote\": \"他每次来都带几箱手榴弹，带几箱79步枪的子弹。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"144师以对日作战消耗名义上报，并秘密携带弹药给三支队。\",\n      \"process_text\": \"144师报告称打日本鬼子消耗了弹药，每一次都偷偷地把弹药带过来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0036\"\n      ],\n      \"evidence_quote\": \"他呢，报（告）说打日本鬼子消耗了，每一次都偷偷地带过来。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"三支队以丰盛宴请回馈144师人员，维系双方关系。\",\n      \"process_text\": \"因为关系比较好，144师来一次，三支队就丰盛地请他们吃一顿，包括红烧肉。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0036\"\n      ],\n      \"evidence_quote\": \"我们的关系比较好，所以来一次，都丰盛地请他们吃一顿，红烧肉了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE003-P01\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE003-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0036\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE003-P02\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE003-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0036\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE003-P03\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE003-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0036\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE003-P04\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE003-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0036\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC08-DE003",
+    "event_enrichment": {
+      "result_state": "144师多次秘密向三支队提供手榴弹和79步枪子弹，并以对日作战消耗名义上报；三支队以宴请回馈，双方关系维持良好。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以S0033所述144师与三支队关系不错为背景，S0036从关系好了以后争取送子弹起，到每次秘密带弹药并以宴请回馈止。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC08-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "144师与三支队建立并保持较好关系，双方人员有联系和友好往来。",
+        "process_text": "144师与三支队关系不错，政训处人员与三支队有联系，并通过打篮球、请吃饭等方式保持友好。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0033"
+        ],
+        "evidence_quote": "但是和我们三支队关系还不错，我们经常和他司令部他们政治部的人（联系），他们也有，他叫政训处。政训处的人啊，一些学生啊，政工人员和我们有联系。联系以后，就打篮球比赛呀，一个月两个月打一次，我们请他吃顿饭，大家比较友好。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "三支队在关系良好后争取144师提供子弹。",
+        "process_text": "关系好了以后，三支队争取144师送子弹，原因是三支队子弹少。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0036"
+        ],
+        "evidence_quote": "关系好了以后干什么呢？争取他送我们子弹，我们子弹少",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "144师每次来访时携带手榴弹和79步枪子弹。",
+        "process_text": "144师每次来都带几箱手榴弹和几箱79步枪子弹。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0036"
+        ],
+        "evidence_quote": "他每次来都带几箱手榴弹，带几箱79步枪的子弹。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "144师以对日作战消耗名义上报，并秘密携带弹药给三支队。",
+        "process_text": "144师报告称打日本鬼子消耗了弹药，每一次都偷偷地把弹药带过来。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0036"
+        ],
+        "evidence_quote": "他呢，报（告）说打日本鬼子消耗了，每一次都偷偷地带过来。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "三支队以丰盛宴请回馈144师人员，维系双方关系。",
+        "process_text": "因为关系比较好，144师来一次，三支队就丰盛地请他们吃一顿，包括红烧肉。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0036"
+        ],
+        "evidence_quote": "我们的关系比较好，所以来一次，都丰盛地请他们吃一顿，红烧肉了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC08-DE003-P01",
+        "target_stage_id": "BATCH02-DOC08-DE003-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC08-S0036",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE003-P02",
+        "target_stage_id": "BATCH02-DOC08-DE003-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC08-S0036",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE003-P03",
+        "target_stage_id": "BATCH02-DOC08-DE003-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC08-S0036",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE003-P04",
+        "target_stage_id": "BATCH02-DOC08-DE003-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0036",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

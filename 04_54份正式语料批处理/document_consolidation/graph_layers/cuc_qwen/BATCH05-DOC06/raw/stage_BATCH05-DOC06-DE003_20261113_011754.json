@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-13T01:17:54",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC06-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC06-DE003",
+  "usage": {
+    "prompt_tokens": 1474,
+    "total_tokens": 8061,
+    "completion_tokens": 6587,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5365
+    },
+    "time_to_first_token_ms": 97903,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC06-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队与冀鲁边七团在费县西北驻扎两个多月，开展宣传抗日和训练部队，并提及驻扎期间粮食消耗问题。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于 S0022 中七团到来并在费县西北做宣传抗日、训练部队；止于 S0024 中驻扎两个多月及粮食消耗叙述；S0024 后半段夜渡黄河至临沂西边、费县西南边梁邱、柱子属于后续转移，不纳入本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"七团到来并进入费县西北\",\n      \"process_text\": \"敌人要占领那个地方，我们过了几天，冀鲁边某支队七团千把人过来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0022\"\n      ],\n      \"evidence_quote\": \"因为敌人不是要去占领那个地方嘛，我们过了几天，就是冀鲁边的哪个支队的七团，这个团有千把人，也过来了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"在费县西北开展宣传抗日与训练部队\",\n      \"process_text\": \"七团过来以后，在费县西北地区做宣传抗日、训练部队，我们也在那里。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0022\"\n      ],\n      \"evidence_quote\": \"过来以后，他就在费（县）西北这个地区做宣传抗日、训练部队这样的，我们也在那里。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"部队在费西北驻扎两个多月\",\n      \"process_text\": \"我们在费西北住了差不多两个多月，5月底过去，6月、7月。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0024\"\n      ],\n      \"evidence_quote\": \"我们在费西北住了有差不多两个多月吧，我们是5月底过去的，6月、7月，两个多月。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"驻扎期间粮食消耗问题被提出\",\n      \"process_text\": \"黄励跟干部说，我们在这里已经吃了人家一百多万斤粮食，一人一天一斤半粗粮，加上七团三千人左右，要吃不少粮食。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0024\"\n      ],\n      \"evidence_quote\": \"当时我们在那里，黄励跟干部说过一次话，他说不得了啊，你们不知道吧，我们在这里已经吃了人家一百多万斤粮食啦！（杨永松笑）就一个人一天的一斤半粗粮，加上七团是三千人左右啊，要吃不少粮食的。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC06-DE003-P01\",\n      \"target_stage_id\": \"BATCH05-DOC06-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC06-S0022\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC06-DE003-P02\",\n      \"target_stage_id\": \"BATCH05-DOC06-DE003-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC06-S0024\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC06-DE003-P03\",\n      \"target_stage_id\": \"BATCH05-DOC06-DE003-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC06-S0024\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC06-DE003",
+    "event_enrichment": {
+      "result_state": "部队与冀鲁边七团在费县西北驻扎两个多月，开展宣传抗日和训练部队，并提及驻扎期间粮食消耗问题。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于 S0022 中七团到来并在费县西北做宣传抗日、训练部队；止于 S0024 中驻扎两个多月及粮食消耗叙述；S0024 后半段夜渡黄河至临沂西边、费县西南边梁邱、柱子属于后续转移，不纳入本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC06-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "七团到来并进入费县西北",
+        "process_text": "敌人要占领那个地方，我们过了几天，冀鲁边某支队七团千把人过来。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0022"
+        ],
+        "evidence_quote": "因为敌人不是要去占领那个地方嘛，我们过了几天，就是冀鲁边的哪个支队的七团，这个团有千把人，也过来了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC06-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "在费县西北开展宣传抗日与训练部队",
+        "process_text": "七团过来以后，在费县西北地区做宣传抗日、训练部队，我们也在那里。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0022"
+        ],
+        "evidence_quote": "过来以后，他就在费（县）西北这个地区做宣传抗日、训练部队这样的，我们也在那里。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC06-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "部队在费西北驻扎两个多月",
+        "process_text": "我们在费西北住了差不多两个多月，5月底过去，6月、7月。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0024"
+        ],
+        "evidence_quote": "我们在费西北住了有差不多两个多月吧，我们是5月底过去的，6月、7月，两个多月。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC06-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "驻扎期间粮食消耗问题被提出",
+        "process_text": "黄励跟干部说，我们在这里已经吃了人家一百多万斤粮食，一人一天一斤半粗粮，加上七团三千人左右，要吃不少粮食。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0024"
+        ],
+        "evidence_quote": "当时我们在那里，黄励跟干部说过一次话，他说不得了啊，你们不知道吧，我们在这里已经吃了人家一百多万斤粮食啦！（杨永松笑）就一个人一天的一斤半粗粮，加上七团是三千人左右啊，要吃不少粮食的。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC06-DE003-P01",
+        "target_stage_id": "BATCH05-DOC06-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC06-S0022",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC06-DE003-P02",
+        "target_stage_id": "BATCH05-DOC06-DE003-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC06-S0024",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC06-DE003-P03",
+        "target_stage_id": "BATCH05-DOC06-DE003-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC06-S0024",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

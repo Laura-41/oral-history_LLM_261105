@@ -1,0 +1,150 @@
+{
+  "run_time": "2026-11-13T01:49:17",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC08-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC08-DE003",
+  "usage": {
+    "prompt_tokens": 1943,
+    "total_tokens": 14295,
+    "completion_tokens": 12352,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10292
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 182368,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-16\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC08-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰自述已参观仰峰岕司令部旧居，并凭吊过粟裕多处骨灰安放地；湖南怀化家乡一处因校庆电报催、科研会议和行程改道未去成。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件从S0106-S0107叙述粟裕住仰峰岕司令部房子现在还在且陈海峰去看过开始，到S0120叙述会开完后本打算去看并自述凭吊过粟裕7个骨灰地方结束；S0108-S0119为同一叙述中的交流、评价、骨灰安放地说明及未去成原因。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"参观仰峰岕粟裕司令部旧居\",\n      \"process_text\": \"粟裕住在仰峰岕，那个司令部的房子现在还在，陈海峰还去看过。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0106\",\n        \"BATCH05-DOC08-S0107\"\n      ],\n      \"evidence_quote\": \"那么粟裕就住在仰峰岕，那个司令部的房子现在还在，我还去看过。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"向楚青讲述旧居并引发回忆\",\n      \"process_text\": \"陈海峰给粟裕夫人楚青讲这个事情，楚青很高兴，并回忆当年住在那个房子里。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0108\"\n      ],\n      \"evidence_quote\": \"我还给粟裕的夫人楚青啊，讲这个事情，她还很高兴，“我当年也住在那个房子里……”她住在哪个房间，住怎么样，和我一起讲得津津乐道。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"当地群众怀念粟裕及其作风评价\",\n      \"process_text\": \"庄子老百姓非常怀念粟裕，粟司令平易近人、没有架子、和善，待干部和群众很好。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0109\",\n        \"BATCH05-DOC08-S0110\",\n        \"BATCH05-DOC08-S0112\"\n      ],\n      \"evidence_quote\": \"那个庄子（的）老百姓啊，还非常怀念粟裕。因为粟司令平易近人啊，他没有一点架子，很和善的，待干部很好。    陈海峰：待周围的群众很好。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"说明粟裕骨灰安放地及未去成的家乡一处\",\n      \"process_text\": \"粟司令住这几个地方，陈海峰只有一个地方没有到过；粟裕骨灰放在7个地方，包括三仓河、海安、黄桥、临沂、江南指挥部、福建崇安和平阳干部学校，还有一个在湖南怀化家乡，陈海峰说只有那个地方没去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0113\",\n        \"BATCH05-DOC08-S0115\",\n        \"BATCH05-DOC08-S0117\",\n        \"BATCH05-DOC08-S0118\"\n      ],\n      \"evidence_quote\": \"所以粟司令住这几个地方，我只有一个地方没有到过。粟裕的骨灰放在7个（地方）。三仓河、海安、黄桥、临沂、（江苏溧阳）江南指挥部、福建的崇安——红军时代的，那加上（浙江）平阳的干部学校，都有他的骨灰。    陈海峰：7个地方，还有一个地方在他家乡。    陈海峰：他家乡在湖南怀化，他是侗族，他是少数民族。单人旁一个“同志”的“同”，侗族，江华是瑶族。那么只有那个地方我没去。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"校庆电报催与科研会议导致行程改道\",\n      \"process_text\": \"整40年校庆时三四个电报催陈海峰，他在怀化开科研会议，直接到长沙飞到上海，所以那地方没去成，本来计划里有。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0119\"\n      ],\n      \"evidence_quote\": \"我在上海医科大学六年半嘛，办公共卫生学校。整40年的校庆，三四个电报催我，我在怀化开科研会议。我就直接到长沙，飞到上海去了，所以那地方没去成，本来计划里有。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE003-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"自述会开完后本打算去看并凭吊过多处骨灰安放地\",\n      \"process_text\": \"本来会开完了，陈海峰打算到那里去看，并说粟裕7个骨灰地方他都凭吊过。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0120\"\n      ],\n      \"evidence_quote\": \"本来会开完了，我（打算）到那里去看，他7个骨灰地方我都凭吊过。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE003-P01\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0108\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE003-P02\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0109\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE003-P03\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE003-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0113\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE003-P04\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE003-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0119\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE003-P05\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE003-P06\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0120\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-16",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC08-DE003",
+    "event_enrichment": {
+      "result_state": "陈海峰自述已参观仰峰岕司令部旧居，并凭吊过粟裕多处骨灰安放地；湖南怀化家乡一处因校庆电报催、科研会议和行程改道未去成。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件从S0106-S0107叙述粟裕住仰峰岕司令部房子现在还在且陈海峰去看过开始，到S0120叙述会开完后本打算去看并自述凭吊过粟裕7个骨灰地方结束；S0108-S0119为同一叙述中的交流、评价、骨灰安放地说明及未去成原因。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC08-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "参观仰峰岕粟裕司令部旧居",
+        "process_text": "粟裕住在仰峰岕，那个司令部的房子现在还在，陈海峰还去看过。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0106",
+          "BATCH05-DOC08-S0107"
+        ],
+        "evidence_quote": "那么粟裕就住在仰峰岕，那个司令部的房子现在还在，我还去看过。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "向楚青讲述旧居并引发回忆",
+        "process_text": "陈海峰给粟裕夫人楚青讲这个事情，楚青很高兴，并回忆当年住在那个房子里。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0108"
+        ],
+        "evidence_quote": "我还给粟裕的夫人楚青啊，讲这个事情，她还很高兴，“我当年也住在那个房子里……”她住在哪个房间，住怎么样，和我一起讲得津津乐道。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "当地群众怀念粟裕及其作风评价",
+        "process_text": "庄子老百姓非常怀念粟裕，粟司令平易近人、没有架子、和善，待干部和群众很好。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0109",
+          "BATCH05-DOC08-S0110",
+          "BATCH05-DOC08-S0112"
+        ],
+        "evidence_quote": "那个庄子（的）老百姓啊，还非常怀念粟裕。因为粟司令平易近人啊，他没有一点架子，很和善的，待干部很好。    陈海峰：待周围的群众很好。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "说明粟裕骨灰安放地及未去成的家乡一处",
+        "process_text": "粟司令住这几个地方，陈海峰只有一个地方没有到过；粟裕骨灰放在7个地方，包括三仓河、海安、黄桥、临沂、江南指挥部、福建崇安和平阳干部学校，还有一个在湖南怀化家乡，陈海峰说只有那个地方没去。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0113",
+          "BATCH05-DOC08-S0115",
+          "BATCH05-DOC08-S0117",
+          "BATCH05-DOC08-S0118"
+        ],
+        "evidence_quote": "所以粟司令住这几个地方，我只有一个地方没有到过。粟裕的骨灰放在7个（地方）。三仓河、海安、黄桥、临沂、（江苏溧阳）江南指挥部、福建的崇安——红军时代的，那加上（浙江）平阳的干部学校，都有他的骨灰。    陈海峰：7个地方，还有一个地方在他家乡。    陈海峰：他家乡在湖南怀化，他是侗族，他是少数民族。单人旁一个“同志”的“同”，侗族，江华是瑶族。那么只有那个地方我没去。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "校庆电报催与科研会议导致行程改道",
+        "process_text": "整40年校庆时三四个电报催陈海峰，他在怀化开科研会议，直接到长沙飞到上海，所以那地方没去成，本来计划里有。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0119"
+        ],
+        "evidence_quote": "我在上海医科大学六年半嘛，办公共卫生学校。整40年的校庆，三四个电报催我，我在怀化开科研会议。我就直接到长沙，飞到上海去了，所以那地方没去成，本来计划里有。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE003-P06",
+        "stage_order": 6,
+        "stage_summary": "自述会开完后本打算去看并凭吊过多处骨灰安放地",
+        "process_text": "本来会开完了，陈海峰打算到那里去看，并说粟裕7个骨灰地方他都凭吊过。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0120"
+        ],
+        "evidence_quote": "本来会开完了，我（打算）到那里去看，他7个骨灰地方我都凭吊过。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC08-DE003-P01",
+        "target_stage_id": "BATCH05-DOC08-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC08-S0108",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC08-DE003-P02",
+        "target_stage_id": "BATCH05-DOC08-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC08-S0109",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC08-DE003-P03",
+        "target_stage_id": "BATCH05-DOC08-DE003-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC08-S0113",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC08-DE003-P04",
+        "target_stage_id": "BATCH05-DOC08-DE003-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC08-S0119",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC08-DE003-P05",
+        "target_stage_id": "BATCH05-DOC08-DE003-P06",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC08-S0120",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

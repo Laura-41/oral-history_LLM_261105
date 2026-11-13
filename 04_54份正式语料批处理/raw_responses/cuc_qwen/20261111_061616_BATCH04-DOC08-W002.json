@@ -1,0 +1,364 @@
+{
+  "run_time": "2026-11-11T06:16:16",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH04-DOC08-W002",
+  "technical_document_id": "BATCH04-DOC08",
+  "document_id": "10.陈锐霆 090509（三校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH04-DOC08-S0021",
+    "BATCH04-DOC08-S0022",
+    "BATCH04-DOC08-S0023",
+    "BATCH04-DOC08-S0024",
+    "BATCH04-DOC08-S0025",
+    "BATCH04-DOC08-S0026",
+    "BATCH04-DOC08-S0027",
+    "BATCH04-DOC08-S0028",
+    "BATCH04-DOC08-S0029",
+    "BATCH04-DOC08-S0030",
+    "BATCH04-DOC08-S0031",
+    "BATCH04-DOC08-S0032",
+    "BATCH04-DOC08-S0033",
+    "BATCH04-DOC08-S0034",
+    "BATCH04-DOC08-S0035",
+    "BATCH04-DOC08-S0036",
+    "BATCH04-DOC08-S0037",
+    "BATCH04-DOC08-S0038",
+    "BATCH04-DOC08-S0039",
+    "BATCH04-DOC08-S0040",
+    "BATCH04-DOC08-S0041",
+    "BATCH04-DOC08-S0042",
+    "BATCH04-DOC08-S0043",
+    "BATCH04-DOC08-S0044"
+  ],
+  "json_valid": true,
+  "validation_errors": [
+    "events[0].event.evidence_quote不在该事件所列原文片段中"
+  ],
+  "technical_passed": false,
+  "metrics": {
+    "event_count": 4,
+    "assigned_segment_count": 14,
+    "unassigned_segment_count": 10,
+    "input_segment_count": 24,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH04-DOC08-W002",
+    "events": [
+      {
+        "candidate_id": "BATCH04-DOC08-W002-E01",
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0022",
+          "BATCH04-DOC08-S0024",
+          "BATCH04-DOC08-S0025",
+          "BATCH04-DOC08-S0026"
+        ],
+        "event": {
+          "event_name": "欢迎美国代表时陈老总讲话及言语交锋",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "讲话批评",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "陈老总",
+              "normalized_entity": "陈毅",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Sayer",
+              "mention": "他们",
+              "normalized_entity": "美国代表",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Sayer",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "LOW"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "LOW"
+            },
+            {
+              "role": "Target",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "LOW"
+            },
+            {
+              "role": "Target",
+              "mention": "美国的这位先生",
+              "normalized_entity": "美国代表",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "停战了",
+              "normalized_value": "停战时期"
+            }
+          ],
+          "projected_content": "他们批评我们没出息、自己打自己；陈老总告诫不能忘记过去；我们以美国南北战争类比说明不能忘记。",
+          "evidence_quote": "但是我们欢迎他（时候），他们讲话里边就是批评我们没出息，自己打自己。最后陈老总接着又讲话，他说无论如何不能够忘记过去啊，他说现在我们从战争中（走出来），现在停战了，但是不要忘了过去。",
+          "type_basis": "核心是陈老总和“我们”的讲话、批评与告诫，属于可识别的象征交换；“欢迎”只是场合，不改变主导言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W002-E02",
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0026",
+          "BATCH04-DOC08-S0028",
+          "BATCH04-DOC08-S0030"
+        ],
+        "event": {
+          "event_name": "陈老总阻止陈锐霆赴济南",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "阻止前往",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "陈老总",
+              "normalized_entity": "陈毅",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Receiver",
+              "mention": "有些人",
+              "normalized_entity": null,
+              "certainty": "LOW"
+            },
+            {
+              "role": "Target",
+              "mention": "他",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "DIRECTION",
+              "value": "到济南去",
+              "normalized_value": "济南"
+            }
+          ],
+          "projected_content": "他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。",
+          "evidence_quote": "另外到济南去的时候，有些人提议，我对国民党那个部队熟悉，叫我也跟着去。陈老总一听，“他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。”",
+          "type_basis": "陈老总以直接引语阻止“他”赴济南，核心是言语命令或阻止；“到济南去”是方向环境，不是实际移动。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W002-E03",
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0031",
+          "BATCH04-DOC08-S0033",
+          "BATCH04-DOC08-S0035",
+          "BATCH04-DOC08-S0037",
+          "BATCH04-DOC08-S0039"
+        ],
+        "event": {
+          "event_name": "陈锐霆参加临沂孔庙二一指示传达会议",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "传达二一指示",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "陈毅同志",
+              "normalized_entity": "陈毅",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "党政军的人",
+              "normalized_entity": "党政军干部",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Receiver",
+              "mention": "团以上的干部",
+              "normalized_entity": "军队团以上干部",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "县以上的干部",
+              "normalized_entity": "地方县以上干部",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Verbiage",
+              "mention": "二一指示",
+              "normalized_entity": "二一指示",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "停战之后",
+              "normalized_value": "停战之后"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "临沂西关孔庙",
+              "normalized_value": "临沂西关孔庙"
+            },
+            {
+              "kind": "MANNER",
+              "value": "非常地透彻",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "首先要肯定和平，高高举起和平旗帜；不把共产党消灭了，蒋介石一定还要打；山东不能复员青年，老病残要安置；准备游击战争；加强军队训练。",
+          "evidence_quote": "陈老总都是很有经验的。他对停战（之后有自己的看法），那个时候中央有一个指示，叫“和平民主新阶段”，也叫“二一指示”，2月1号嘛。他把党政军的人都集合到一起，到临沂西关孔庙来，开了一个传达会议，由陈毅同志来传达。",
+          "type_basis": "陈毅同志传达指示，接收者为党政军干部，核心是言语或象征交换；集合和负责是辅助组织过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W002-E04",
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0039",
+          "BATCH04-DOC08-S0040",
+          "BATCH04-DOC08-S0041",
+          "BATCH04-DOC08-S0043"
+        ],
+        "event": {
+          "event_name": "陈锐霆部队分兵支援刘邓并转移渤海整编",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "分兵转移整编",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们主力",
+              "normalized_entity": "陈锐霆部队主力",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "陈士榘、唐亮",
+              "normalized_entity": "陈士榘、唐亮",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "一、四、六纵队，还有三纵队、八纵队",
+              "normalized_entity": "五个纵队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "西兵团",
+              "normalized_entity": "西兵团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈锐霆部队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "缴获的车辆、大炮",
+              "normalized_entity": "缴获车辆和大炮",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "七月",
+              "normalized_value": "七月"
+            },
+            {
+              "kind": "TIME",
+              "value": "南麻、临朐战役后",
+              "normalized_value": "南麻临朐战役后"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "河南",
+              "normalized_value": "河南"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "外线",
+              "normalized_value": "外线"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "渤海地区",
+              "normalized_value": "渤海"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "胶东",
+              "normalized_value": "胶东"
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "支援刘邓进大别山",
+              "normalized_value": "支援刘邓进入大别山"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "这叫西兵团，我们都跟着去了，在西边。一部分随着部队到了外线，去支援刘邓，其余的我们就南麻、临朐（战役）后就到了渤海地区了。",
+          "type_basis": "部队分兵、支援、转移、整编和修理车辆大炮，造成空间位置和状态可观察改变，属于物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH04-DOC08-S0021",
+      "BATCH04-DOC08-S0023",
+      "BATCH04-DOC08-S0027",
+      "BATCH04-DOC08-S0029",
+      "BATCH04-DOC08-S0032",
+      "BATCH04-DOC08-S0034",
+      "BATCH04-DOC08-S0036",
+      "BATCH04-DOC08-S0038",
+      "BATCH04-DOC08-S0042",
+      "BATCH04-DOC08-S0044"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH04-DOC08-W002\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W002-E01\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0022\",\n        \"BATCH04-DOC08-S0024\",\n        \"BATCH04-DOC08-S0025\",\n        \"BATCH04-DOC08-S0026\"\n      ],\n      \"event\": {\n        \"event_name\": \"欢迎美国代表时陈老总讲话及言语交锋\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"讲话批评\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"陈老总\",\n            \"normalized_entity\": \"陈毅\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"他们\",\n            \"normalized_entity\": \"美国代表\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"LOW\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"LOW\"\n          },\n          {\n            \"role\": \"Target\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"LOW\"\n          },\n          {\n            \"role\": \"Target\",\n            \"mention\": \"美国的这位先生\",\n            \"normalized_entity\": \"美国代表\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"停战了\",\n            \"normalized_value\": \"停战时期\"\n          }\n        ],\n        \"projected_content\": \"他们批评我们没出息、自己打自己；陈老总告诫不能忘记过去；我们以美国南北战争类比说明不能忘记。\",\n        \"evidence_quote\": \"但是我们欢迎他（时候），他们讲话里边就是批评我们没出息，自己打自己。最后陈老总接着又讲话，他说无论如何不能够忘记过去啊，他说现在我们从战争中（走出来），现在停战了，但是不要忘了过去。\",\n        \"type_basis\": \"核心是陈老总和“我们”的讲话、批评与告诫，属于可识别的象征交换；“欢迎”只是场合，不改变主导言语过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W002-E02\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0026\",\n        \"BATCH04-DOC08-S0028\",\n        \"BATCH04-DOC08-S0030\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈老总阻止陈锐霆赴济南\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"阻止前往\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"陈老总\",\n            \"normalized_entity\": \"陈毅\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"有些人\",\n            \"normalized_entity\": null,\n            \"certainty\": \"LOW\"\n          },\n          {\n            \"role\": \"Target\",\n            \"mention\": \"他\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"到济南去\",\n            \"normalized_value\": \"济南\"\n          }\n        ],\n        \"projected_content\": \"他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。\",\n        \"evidence_quote\": \"另外到济南去的时候，有些人提议，我对国民党那个部队熟悉，叫我也跟着去。陈老总一听，“他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。”\",\n        \"type_basis\": \"陈老总以直接引语阻止“他”赴济南，核心是言语命令或阻止；“到济南去”是方向环境，不是实际移动。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W002-E03\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0031\",\n        \"BATCH04-DOC08-S0033\",\n        \"BATCH04-DOC08-S0035\",\n        \"BATCH04-DOC08-S0037\",\n        \"BATCH04-DOC08-S0039\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆参加临沂孔庙二一指示传达会议\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"传达二一指示\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"陈毅同志\",\n            \"normalized_entity\": \"陈毅\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"党政军的人\",\n            \"normalized_entity\": \"党政军干部\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"团以上的干部\",\n            \"normalized_entity\": \"军队团以上干部\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"县以上的干部\",\n            \"normalized_entity\": \"地方县以上干部\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Verbiage\",\n            \"mention\": \"二一指示\",\n            \"normalized_entity\": \"二一指示\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"停战之后\",\n            \"normalized_value\": \"停战之后\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"临沂西关孔庙\",\n            \"normalized_value\": \"临沂西关孔庙\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"非常地透彻\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"首先要肯定和平，高高举起和平旗帜；不把共产党消灭了，蒋介石一定还要打；山东不能复员青年，老病残要安置；准备游击战争；加强军队训练。\",\n        \"evidence_quote\": \"陈老总都是很有经验的。他对停战（之后有自己的看法），那个时候中央有一个指示，叫“和平民主新阶段”，也叫“二一指示”，2月1号嘛。他把党政军的人都集合到一起，到临沂西关孔庙来，开了一个传达会议，由陈毅同志来传达。\",\n        \"type_basis\": \"陈毅同志传达指示，接收者为党政军干部，核心是言语或象征交换；集合和负责是辅助组织过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W002-E04\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0039\",\n        \"BATCH04-DOC08-S0040\",\n        \"BATCH04-DOC08-S0041\",\n        \"BATCH04-DOC08-S0043\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆部队分兵支援刘邓并转移渤海整编\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"分兵转移整编\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们主力\",\n            \"normalized_entity\": \"陈锐霆部队主力\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"陈士榘、唐亮\",\n            \"normalized_entity\": \"陈士榘、唐亮\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"一、四、六纵队，还有三纵队、八纵队\",\n            \"normalized_entity\": \"五个纵队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"西兵团\",\n            \"normalized_entity\": \"西兵团\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈锐霆部队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"缴获的车辆、大炮\",\n            \"normalized_entity\": \"缴获车辆和大炮\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"七月\",\n            \"normalized_value\": \"七月\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"南麻、临朐战役后\",\n            \"normalized_value\": \"南麻临朐战役后\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"河南\",\n            \"normalized_value\": \"河南\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"外线\",\n            \"normalized_value\": \"外线\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"渤海地区\",\n            \"normalized_value\": \"渤海\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"胶东\",\n            \"normalized_value\": \"胶东\"\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"支援刘邓进大别山\",\n            \"normalized_value\": \"支援刘邓进入大别山\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"这叫西兵团，我们都跟着去了，在西边。一部分随着部队到了外线，去支援刘邓，其余的我们就南麻、临朐（战役）后就到了渤海地区了。\",\n        \"type_basis\": \"部队分兵、支援、转移、整编和修理车辆大炮，造成空间位置和状态可观察改变，属于物质过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH04-DOC08-S0021\",\n    \"BATCH04-DOC08-S0023\",\n    \"BATCH04-DOC08-S0027\",\n    \"BATCH04-DOC08-S0029\",\n    \"BATCH04-DOC08-S0032\",\n    \"BATCH04-DOC08-S0034\",\n    \"BATCH04-DOC08-S0036\",\n    \"BATCH04-DOC08-S0038\",\n    \"BATCH04-DOC08-S0042\",\n    \"BATCH04-DOC08-S0044\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5701,
+    "total_tokens": 32233,
+    "completion_tokens": 26532,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 23565
+    },
+    "time_to_first_token_ms": 400216,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13265500
+  }
+}

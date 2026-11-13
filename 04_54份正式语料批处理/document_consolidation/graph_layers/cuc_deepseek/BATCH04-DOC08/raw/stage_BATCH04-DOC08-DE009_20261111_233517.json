@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T23:35:17",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC08-DE009",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC08-DE009",
+  "usage": {
+    "prompt_tokens": 1276,
+    "total_tokens": 4187,
+    "completion_tokens": 2911,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2028
+    },
+    "time_to_first_token_ms": 22434,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2910000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC08-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"分兵完成：陈士榘、唐亮率五个纵队到河南；部分部队到外线支援刘邓，其余在南麻、临朐战役后到渤海地区。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以S0039所述南麻、临朐失利后因七月分兵、主力支援刘邓进大别山为起点，以S0041所述西兵团及部分外线支援、其余到渤海地区为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"南麻、临朐失利后，因七月分兵，主力承担支援刘邓进大别山的任务。\",\n      \"process_text\": \"南麻、临朐失利后，因七月分兵，主力支援刘邓进大别山。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0039\"\n      ],\n      \"evidence_quote\": \"以后我们南麻、临朐（失利），因为（七月）分兵嘛，我们主力支援刘邓进大别山\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈士榘、唐亮率一、四、六纵及三、八纵共五个纵队到河南。\",\n      \"process_text\": \"由陈士榘、唐亮带着一、四、六纵队，还有三纵队、八纵队，共五个纵队到河南。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0039\"\n      ],\n      \"evidence_quote\": \"由陈士榘、唐亮带着一、四、六纵队，还有三纵队、八纵队，（总共）五个纵队吧，到河南去了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"该部称西兵团；部分到外线支援刘邓，其余在南麻、临朐战役后到渤海地区。\",\n      \"process_text\": \"称西兵团，部分随部队到外线支援刘邓，其余在南麻、临朐战役后到渤海地区。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0041\"\n      ],\n      \"evidence_quote\": \"这叫西兵团，我们都跟着去了，在西边。一部分随着部队到了外线，去支援刘邓，其余的我们就南麻、临朐（战役）后就到了渤海地区了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE009-P01\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE009-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0039\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE009-P02\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE009-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0041\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC08-DE009",
+    "event_enrichment": {
+      "result_state": "分兵完成：陈士榘、唐亮率五个纵队到河南；部分部队到外线支援刘邓，其余在南麻、临朐战役后到渤海地区。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以S0039所述南麻、临朐失利后因七月分兵、主力支援刘邓进大别山为起点，以S0041所述西兵团及部分外线支援、其余到渤海地区为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC08-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "南麻、临朐失利后，因七月分兵，主力承担支援刘邓进大别山的任务。",
+        "process_text": "南麻、临朐失利后，因七月分兵，主力支援刘邓进大别山。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0039"
+        ],
+        "evidence_quote": "以后我们南麻、临朐（失利），因为（七月）分兵嘛，我们主力支援刘邓进大别山",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "陈士榘、唐亮率一、四、六纵及三、八纵共五个纵队到河南。",
+        "process_text": "由陈士榘、唐亮带着一、四、六纵队，还有三纵队、八纵队，共五个纵队到河南。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0039"
+        ],
+        "evidence_quote": "由陈士榘、唐亮带着一、四、六纵队，还有三纵队、八纵队，（总共）五个纵队吧，到河南去了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "该部称西兵团；部分到外线支援刘邓，其余在南麻、临朐战役后到渤海地区。",
+        "process_text": "称西兵团，部分随部队到外线支援刘邓，其余在南麻、临朐战役后到渤海地区。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0041"
+        ],
+        "evidence_quote": "这叫西兵团，我们都跟着去了，在西边。一部分随着部队到了外线，去支援刘邓，其余的我们就南麻、临朐（战役）后就到了渤海地区了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC08-DE009-P01",
+        "target_stage_id": "BATCH04-DOC08-DE009-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC08-S0039",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC08-DE009-P02",
+        "target_stage_id": "BATCH04-DOC08-DE009-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC08-S0041",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T20:33:49",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC09-DE005",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC09-DE005",
+  "usage": {
+    "prompt_tokens": 1529,
+    "total_tokens": 11032,
+    "completion_tokens": 9503,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8262
+    },
+    "time_to_first_token_ms": 141538,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC09-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆通过彭雪枫向中央提出起义请示，中央批准同意，并由罗会廉到其处取联系、口头传达中央回电。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为 S0058 所述通过彭雪枫向中央提出起义请示；终点为 S0066 所述中央回电后口头传达，未包含后续起义实施。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆通过彭雪枫向中央提出起义请示。\",\n      \"process_text\": \"我通过彭雪枫同志向中央（提出请示），起义不能自己做决定，还是要请示中央嘛。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0058\"\n      ],\n      \"evidence_quote\": \"陈锐霆：我通过彭雪枫同志向中央（提出请示），起义不能自己做决定，还是要请示中央嘛。中央批准了，同意了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"中央批准同意起义请示。\",\n      \"process_text\": \"中央批准了，同意了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0058\"\n      ],\n      \"evidence_quote\": \"陈锐霆：我通过彭雪枫同志向中央（提出请示），起义不能自己做决定，还是要请示中央嘛。中央批准了，同意了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"接到电报后，罗会廉到陈锐霆处取联系。\",\n      \"process_text\": \"接到电报罗会廉就来了，就是彭雪枫派到我那里一个侦察科长，他知道我这个地方，到我这个地方来跟我取联系。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0061\"\n      ],\n      \"evidence_quote\": \"陈锐霆：接到电报罗会廉就来了，就是彭雪枫派到我那里一个侦察科长，他知道我这个地方，到我这个地方来跟我取联系。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"罗会廉回去发电报，中央回电后口头向陈锐霆传达。\",\n      \"process_text\": \"开过会以后，还有三四天的时间，他也回去一趟然后又回来。他回去发电报，党中央回了电报以后，电报原文没有带，就是口头来跟我讲。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0066\"\n      ],\n      \"evidence_quote\": \"陈锐霆：开过会以后，还有三四天的时间，他也回去一趟然后又回来。他回去发电报，党中央回了电报以后，电报原文没有带，就是口头来跟我讲。电报在中央档案馆现在还在，（我书里）就在这里抄的全文。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE005-P01\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE005-P02\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0058\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE005-P02\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE005-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0061\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE005-P03\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE005-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0066\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC09-DE005",
+    "event_enrichment": {
+      "result_state": "陈锐霆通过彭雪枫向中央提出起义请示，中央批准同意，并由罗会廉到其处取联系、口头传达中央回电。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起点为 S0058 所述通过彭雪枫向中央提出起义请示；终点为 S0066 所述中央回电后口头传达，未包含后续起义实施。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC09-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆通过彭雪枫向中央提出起义请示。",
+        "process_text": "我通过彭雪枫同志向中央（提出请示），起义不能自己做决定，还是要请示中央嘛。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0058"
+        ],
+        "evidence_quote": "陈锐霆：我通过彭雪枫同志向中央（提出请示），起义不能自己做决定，还是要请示中央嘛。中央批准了，同意了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "中央批准同意起义请示。",
+        "process_text": "中央批准了，同意了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0058"
+        ],
+        "evidence_quote": "陈锐霆：我通过彭雪枫同志向中央（提出请示），起义不能自己做决定，还是要请示中央嘛。中央批准了，同意了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "接到电报后，罗会廉到陈锐霆处取联系。",
+        "process_text": "接到电报罗会廉就来了，就是彭雪枫派到我那里一个侦察科长，他知道我这个地方，到我这个地方来跟我取联系。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0061"
+        ],
+        "evidence_quote": "陈锐霆：接到电报罗会廉就来了，就是彭雪枫派到我那里一个侦察科长，他知道我这个地方，到我这个地方来跟我取联系。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "罗会廉回去发电报，中央回电后口头向陈锐霆传达。",
+        "process_text": "开过会以后，还有三四天的时间，他也回去一趟然后又回来。他回去发电报，党中央回了电报以后，电报原文没有带，就是口头来跟我讲。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0066"
+        ],
+        "evidence_quote": "陈锐霆：开过会以后，还有三四天的时间，他也回去一趟然后又回来。他回去发电报，党中央回了电报以后，电报原文没有带，就是口头来跟我讲。电报在中央档案馆现在还在，（我书里）就在这里抄的全文。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC09-DE005-P01",
+        "target_stage_id": "BATCH03-DOC09-DE005-P02",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC09-S0058",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE005-P02",
+        "target_stage_id": "BATCH03-DOC09-DE005-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC09-S0061",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE005-P03",
+        "target_stage_id": "BATCH03-DOC09-DE005-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC09-S0066",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

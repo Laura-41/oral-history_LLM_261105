@@ -1,0 +1,491 @@
+{
+  "run_time": "2026-11-12T07:03:06",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH01-DOC01-W004",
+  "technical_document_id": "BATCH01-DOC01",
+  "document_id": "02.陈海峰（一访）（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH01-DOC01-S0049",
+    "BATCH01-DOC01-S0050",
+    "BATCH01-DOC01-S0051",
+    "BATCH01-DOC01-S0052",
+    "BATCH01-DOC01-S0053",
+    "BATCH01-DOC01-S0054",
+    "BATCH01-DOC01-S0055",
+    "BATCH01-DOC01-S0056",
+    "BATCH01-DOC01-S0057",
+    "BATCH01-DOC01-S0058",
+    "BATCH01-DOC01-S0059",
+    "BATCH01-DOC01-S0060",
+    "BATCH01-DOC01-S0061",
+    "BATCH01-DOC01-S0062",
+    "BATCH01-DOC01-S0063",
+    "BATCH01-DOC01-S0064",
+    "BATCH01-DOC01-S0065",
+    "BATCH01-DOC01-S0066",
+    "BATCH01-DOC01-S0067",
+    "BATCH01-DOC01-S0068"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 5,
+    "assigned_segment_count": 9,
+    "unassigned_segment_count": 11,
+    "input_segment_count": 20,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH01-DOC01-W004-E05"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH01-DOC01-W004",
+    "events": [
+      {
+        "candidate_id": "BATCH01-DOC01-W004-E01",
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0050",
+          "BATCH01-DOC01-S0052"
+        ],
+        "event": {
+          "event_name": "陈海峰所在部队利用情报分散游击作战",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "利用情报打游击并与日伪战斗",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们部队",
+              "normalized_entity": "陈海峰所在部队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "日本鬼子",
+              "normalized_entity": "日军",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Scope",
+              "mention": "游击",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "茅山地区",
+              "normalized_value": "茅山地区"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "江阴",
+              "normalized_value": "江阴"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "江阴东乡",
+              "normalized_value": "江阴东乡"
+            },
+            {
+              "kind": "MANNER",
+              "value": "经常是一个排，最多一个连",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "以多胜少",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "情报来源多了",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他一得到什么情报，他的亲戚朋友在这个伪军里面，亲戚朋友在日本鬼子政权里面搞工作，得到什么消息，马上送给我们。所以我们的情报来源就多了，我们活动的自由就多了，所以我们在敌人的鼻子底下，没有问题。",
+          "type_basis": "核心过程是部队依靠情报进行分散游击和作战，可用 What did X do? 测试；参与者为 Actor、Goal 和 Scope，排除心理、言语、关系、存在和行为。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W004-E02",
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0052"
+        ],
+        "event": {
+          "event_name": "陈海峰所在部队渡运河遭遇战",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "渡运河时打遭遇战",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰所在部队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "日本鬼子",
+              "normalized_entity": "日军",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Scope",
+              "mention": "遭遇战",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "江南",
+              "normalized_value": "江南"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "常州的南门外",
+              "normalized_value": "常州南门外"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "坂上李家桥",
+              "normalized_value": "坂上李家桥"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "运河",
+              "normalized_value": "运河"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "十余个鬼子盯上我们了",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "开辟武南根据地",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "牺牲了18个人，还牺牲一个营长，我掉到河里去了",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "在渡运河的时候，打了一场遭遇战，我们牺牲了18个人，还牺牲一个营长呢，那次我还掉到河里去了。",
+          "type_basis": "核心过程是渡河时与日军遭遇并发生战斗，有可观察的人员牺牲和掉河结果，属于物质过程；不是存在或关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W004-E03",
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0054",
+          "BATCH01-DOC01-S0056",
+          "BATCH01-DOC01-S0058",
+          "BATCH01-DOC01-S0061",
+          "BATCH01-DOC01-S0063"
+        ],
+        "event": {
+          "event_name": "武南夜间警戒、封锁村庄与频繁转移",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "夜间警戒、封锁村庄并频繁转移",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们部队",
+              "normalized_entity": "陈海峰所在部队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "日本鬼子",
+              "normalized_entity": "日军",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "武南",
+              "normalized_value": "武南"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "坂上李家桥这一带",
+              "normalized_value": "坂上李家桥一带"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "庄子",
+              "normalized_value": "村庄"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "碉堡",
+              "normalized_value": "碉堡"
+            },
+            {
+              "kind": "TIME",
+              "value": "晚上",
+              "normalized_value": "夜间"
+            },
+            {
+              "kind": "TIME",
+              "value": "到天亮",
+              "normalized_value": "天亮"
+            },
+            {
+              "kind": "MANNER",
+              "value": "四边警戒",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "只准进不准出",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "封锁消息",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "狗一路叫",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "鬼子在碉堡上听得清清楚楚",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "保证我们部队安全",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "搬家18次",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "一晚上没睡觉",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "鬼子盯着我们，那天一晚上没睡觉，搬家搬多少次？18次！",
+          "type_basis": "核心过程是部队夜间警戒、封锁村庄和频繁转移，属于组织行动；狗叫是暴露原因，不是独立行为事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W004-E04",
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0058",
+          "BATCH01-DOC01-S0065"
+        ],
+        "event": {
+          "event_name": "庙桥战斗与突围望山桥休整",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "在庙桥与日军遭遇战并突围到望山桥休整",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰所在部队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "日本鬼子",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Scope",
+              "mention": "庙桥战斗",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Scope",
+              "mention": "突围",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "庙桥",
+              "normalized_value": "庙桥"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "望山桥",
+              "normalized_value": "望山桥"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "平原",
+              "normalized_value": "平原"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "桑园",
+              "normalized_value": "桑园"
+            },
+            {
+              "kind": "TIME",
+              "value": "几天",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "正面遭遇",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "走小路",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "侦察部队一个小组一个小组",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "拿短枪、手榴弹进去活动",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "这个地方都是平原，对我们非常不利",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "休整",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "庙桥打了一仗以后，我们等于（是）突围，就突出了，我们就到望山桥，再往前有一片山。这个地方都是平原，对我们非常不利，我们到望山桥那边去了。（在）望山桥休整了几天，后来才叫武工队，那个时候不叫武工队，我们侦察部队一个小组一个小组，三个人一个小组，五个人一个小组，都（拿）短枪、手榴弹进去活动。",
+          "type_basis": "核心过程是战斗、突围、转移休整和侦察活动，属于物质过程；不是存在或关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W004-E05",
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0066"
+        ],
+        "event": {
+          "event_name": "在敌占区建立地方与地下抗日政权",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "建立地方政权和地下政权",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰所在部队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "地方政权",
+              "normalized_entity": "抗日地方政权",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "地下政权",
+              "normalized_entity": "抗日地下政权",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "当地",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "敌占区",
+              "normalized_value": "敌占区"
+            },
+            {
+              "kind": "MANNER",
+              "value": "部队一面，情报站一面",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "抗日",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们那个地方，我们这是部队一面，我们有情报站一面，但是我们（在）当地建立我们的地方政权，还有我们（的）地下政权，在敌占区的抗日政权。",
+          "type_basis": "核心过程是建立政权这一组织行动，创造新的政治组织对象，属于物质过程；不是单纯拥有关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH01-DOC01-S0049",
+      "BATCH01-DOC01-S0051",
+      "BATCH01-DOC01-S0053",
+      "BATCH01-DOC01-S0055",
+      "BATCH01-DOC01-S0057",
+      "BATCH01-DOC01-S0059",
+      "BATCH01-DOC01-S0060",
+      "BATCH01-DOC01-S0062",
+      "BATCH01-DOC01-S0064",
+      "BATCH01-DOC01-S0067",
+      "BATCH01-DOC01-S0068"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH01-DOC01-W004\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W004-E01\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0050\",\n        \"BATCH01-DOC01-S0052\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰所在部队利用情报分散游击作战\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"利用情报打游击并与日伪战斗\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们部队\",\n            \"normalized_entity\": \"陈海峰所在部队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"日本鬼子\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"游击\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"茅山地区\",\n            \"normalized_value\": \"茅山地区\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"江阴\",\n            \"normalized_value\": \"江阴\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"江阴东乡\",\n            \"normalized_value\": \"江阴东乡\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"经常是一个排，最多一个连\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"以多胜少\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"情报来源多了\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"他一得到什么情报，他的亲戚朋友在这个伪军里面，亲戚朋友在日本鬼子政权里面搞工作，得到什么消息，马上送给我们。所以我们的情报来源就多了，我们活动的自由就多了，所以我们在敌人的鼻子底下，没有问题。\",\n        \"type_basis\": \"核心过程是部队依靠情报进行分散游击和作战，可用 What did X do? 测试；参与者为 Actor、Goal 和 Scope，排除心理、言语、关系、存在和行为。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W004-E02\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0052\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰所在部队渡运河遭遇战\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"渡运河时打遭遇战\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰所在部队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"日本鬼子\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"遭遇战\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"江南\",\n            \"normalized_value\": \"江南\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"常州的南门外\",\n            \"normalized_value\": \"常州南门外\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"坂上李家桥\",\n            \"normalized_value\": \"坂上李家桥\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"运河\",\n            \"normalized_value\": \"运河\"\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"十余个鬼子盯上我们了\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"开辟武南根据地\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"牺牲了18个人，还牺牲一个营长，我掉到河里去了\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"在渡运河的时候，打了一场遭遇战，我们牺牲了18个人，还牺牲一个营长呢，那次我还掉到河里去了。\",\n        \"type_basis\": \"核心过程是渡河时与日军遭遇并发生战斗，有可观察的人员牺牲和掉河结果，属于物质过程；不是存在或关系。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W004-E03\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0054\",\n        \"BATCH01-DOC01-S0056\",\n        \"BATCH01-DOC01-S0058\",\n        \"BATCH01-DOC01-S0061\",\n        \"BATCH01-DOC01-S0063\"\n      ],\n      \"event\": {\n        \"event_name\": \"武南夜间警戒、封锁村庄与频繁转移\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"夜间警戒、封锁村庄并频繁转移\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们部队\",\n            \"normalized_entity\": \"陈海峰所在部队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"日本鬼子\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"武南\",\n            \"normalized_value\": \"武南\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"坂上李家桥这一带\",\n            \"normalized_value\": \"坂上李家桥一带\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"庄子\",\n            \"normalized_value\": \"村庄\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"碉堡\",\n            \"normalized_value\": \"碉堡\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"晚上\",\n            \"normalized_value\": \"夜间\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"到天亮\",\n            \"normalized_value\": \"天亮\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"四边警戒\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"只准进不准出\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"封锁消息\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"狗一路叫\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"鬼子在碉堡上听得清清楚楚\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"保证我们部队安全\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"搬家18次\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"一晚上没睡觉\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"鬼子盯着我们，那天一晚上没睡觉，搬家搬多少次？18次！\",\n        \"type_basis\": \"核心过程是部队夜间警戒、封锁村庄和频繁转移，属于组织行动；狗叫是暴露原因，不是独立行为事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W004-E04\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0058\",\n        \"BATCH01-DOC01-S0065\"\n      ],\n      \"event\": {\n        \"event_name\": \"庙桥战斗与突围望山桥休整\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"在庙桥与日军遭遇战并突围到望山桥休整\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰所在部队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"日本鬼子\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"庙桥战斗\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"突围\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"庙桥\",\n            \"normalized_value\": \"庙桥\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"望山桥\",\n            \"normalized_value\": \"望山桥\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"平原\",\n            \"normalized_value\": \"平原\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"桑园\",\n            \"normalized_value\": \"桑园\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"几天\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"正面遭遇\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"走小路\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"侦察部队一个小组一个小组\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"拿短枪、手榴弹进去活动\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"这个地方都是平原，对我们非常不利\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"休整\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"庙桥打了一仗以后，我们等于（是）突围，就突出了，我们就到望山桥，再往前有一片山。这个地方都是平原，对我们非常不利，我们到望山桥那边去了。（在）望山桥休整了几天，后来才叫武工队，那个时候不叫武工队，我们侦察部队一个小组一个小组，三个人一个小组，五个人一个小组，都（拿）短枪、手榴弹进去活动。\",\n        \"type_basis\": \"核心过程是战斗、突围、转移休整和侦察活动，属于物质过程；不是存在或关系。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W004-E05\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0066\"\n      ],\n      \"event\": {\n        \"event_name\": \"在敌占区建立地方与地下抗日政权\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"建立地方政权和地下政权\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰所在部队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"地方政权\",\n            \"normalized_entity\": \"抗日地方政权\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"地下政权\",\n            \"normalized_entity\": \"抗日地下政权\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"当地\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"敌占区\",\n            \"normalized_value\": \"敌占区\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"部队一面，情报站一面\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"抗日\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们那个地方，我们这是部队一面，我们有情报站一面，但是我们（在）当地建立我们的地方政权，还有我们（的）地下政权，在敌占区的抗日政权。\",\n        \"type_basis\": \"核心过程是建立政权这一组织行动，创造新的政治组织对象，属于物质过程；不是单纯拥有关系。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH01-DOC01-S0049\",\n    \"BATCH01-DOC01-S0051\",\n    \"BATCH01-DOC01-S0053\",\n    \"BATCH01-DOC01-S0055\",\n    \"BATCH01-DOC01-S0057\",\n    \"BATCH01-DOC01-S0059\",\n    \"BATCH01-DOC01-S0060\",\n    \"BATCH01-DOC01-S0062\",\n    \"BATCH01-DOC01-S0064\",\n    \"BATCH01-DOC01-S0067\",\n    \"BATCH01-DOC01-S0068\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5797,
+    "total_tokens": 26502,
+    "completion_tokens": 20705,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 16940
+    },
+    "time_to_first_token_ms": 307003,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 20704000
+  }
+}

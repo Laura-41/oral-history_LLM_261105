@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T13:53:37",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC03-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC03-DE003",
+  "usage": {
+    "prompt_tokens": 1213,
+    "total_tokens": 6212,
+    "completion_tokens": 4999,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4151
+    },
+    "time_to_first_token_ms": 73752,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4998000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC03-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"政治部在西边留了一两个干事跟着领导，其他人过来，并形成在鲁南建立比较巩固根据地的计划。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件核心从“师部要我们政治部、司令部要留一部分嘛”开始，到“因为山区嘛比较好”结束；片段开头的“杨永松：两门大炮。师部他们那个时候还在那里。所以”为前接背景，不作为本事件核心边界。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"师部要求政治部、司令部留一部分人员\",\n      \"process_text\": \"师部要我们政治部、司令部要留一部分嘛\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0008\"\n      ],\n      \"evidence_quote\": \"师部要我们政治部、司令部要留一部分嘛\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"政治部在西边留一两个干事，其他人过来\",\n      \"process_text\": \"政治部在西边就留了一两个干事跟着领导，其他人都过来了\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0008\"\n      ],\n      \"evidence_quote\": \"政治部在西边就留了一两个干事跟着领导，其他人都过来了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"提出在鲁南建立比较巩固根据地的计划\",\n      \"process_text\": \"想在鲁南建立一个比较巩固的根据地吧，因为山区嘛比较好\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0008\"\n      ],\n      \"evidence_quote\": \"想在鲁南建立一个比较巩固的根据地吧，因为山区嘛比较好\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE003-P01\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0008\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE003-P02\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0008\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC03-DE003",
+    "event_enrichment": {
+      "result_state": "政治部在西边留了一两个干事跟着领导，其他人过来，并形成在鲁南建立比较巩固根据地的计划。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件核心从“师部要我们政治部、司令部要留一部分嘛”开始，到“因为山区嘛比较好”结束；片段开头的“杨永松：两门大炮。师部他们那个时候还在那里。所以”为前接背景，不作为本事件核心边界。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC03-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "师部要求政治部、司令部留一部分人员",
+        "process_text": "师部要我们政治部、司令部要留一部分嘛",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0008"
+        ],
+        "evidence_quote": "师部要我们政治部、司令部要留一部分嘛",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "政治部在西边留一两个干事，其他人过来",
+        "process_text": "政治部在西边就留了一两个干事跟着领导，其他人都过来了",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0008"
+        ],
+        "evidence_quote": "政治部在西边就留了一两个干事跟着领导，其他人都过来了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "提出在鲁南建立比较巩固根据地的计划",
+        "process_text": "想在鲁南建立一个比较巩固的根据地吧，因为山区嘛比较好",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0008"
+        ],
+        "evidence_quote": "想在鲁南建立一个比较巩固的根据地吧，因为山区嘛比较好",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC03-DE003-P01",
+        "target_stage_id": "BATCH06-DOC03-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC03-S0008",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE003-P02",
+        "target_stage_id": "BATCH06-DOC03-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC03-S0008",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

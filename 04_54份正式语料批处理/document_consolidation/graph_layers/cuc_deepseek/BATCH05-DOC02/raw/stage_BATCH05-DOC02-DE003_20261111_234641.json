@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-11T23:46:41",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC02-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC02-DE003",
+  "usage": {
+    "prompt_tokens": 1680,
+    "total_tokens": 5958,
+    "completion_tokens": 4278,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2889
+    },
+    "time_to_first_token_ms": 33018,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-13\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC02-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"担架员继续抬运伤员；陈海峰事后多次检讨并书面请求处分，最终被免于处分。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于最后一批转运中一副担架员弃担并要求回去，止于其继续抬运以及陈海峰事后检讨、请求处分并获免于处分。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"最后一批转运中，一副担架员弃担，坚持要回去。\",\n      \"process_text\": \"最后四个担架走了约一百多米，离开小公路后，有一副担架员扔下担架，非要回去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0100\"\n      ],\n      \"evidence_quote\": \"有一副担架不干了，他扔了，他非要回去。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈海峰先劝解，说明抬到前面安全地方再换人，但担架员仍哭闹要回家。\",\n      \"process_text\": \"陈海峰告诉他抬到前面庄子安全处，再找地下工作人员替换，让他们返回；担架员仍哭哭啼啼，担心家里遭日本鬼子，要求回去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0107\"\n      ],\n      \"evidence_quote\": \"告诉他，你抬到前面几个庄子，到前面安全的地方啊，我们再找人，找到地下工作（的）同志，再换你们，你们再回来，没关系，你们护送离开这个危险区。“哎呦，这个家里有日本鬼子来了，我家里怎么样，我要知道啊，我这个家没有了，你给我回去啊！”哭哭啼啼，哎呀，真要命这事。这个老百姓没办法，这东西。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"劝说无效后，陈海峰打骂并持枪威胁担架员。\",\n      \"process_text\": \"陈海峰发脾气，打了担架员两个巴掌，拿出真枪上膛，威胁“你不走，我枪毙你”。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0102\"\n      ],\n      \"evidence_quote\": \"我给他两个巴掌（陈海峰大笑）。“你不走，我枪毙你！”我把真枪拿出来了，“哗”子弹一上膛\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"担架员受惊惧服，答应继续抬运。\",\n      \"process_text\": \"担架员被吓住，连说“我走我走我走”，又接着抬运。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0102\"\n      ],\n      \"evidence_quote\": \"他他也吓死了，“我走我走我走……”他又接着走了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"陈海峰事后多次检讨、书面请求处分，最终免于处分。\",\n      \"process_text\": \"陈海峰就此事多次检讨，称自己第一次在新四军犯群众纪律，第一次当众检讨并写书面报告请求处分；后因自我认识较好、检讨态度认真，批了免于处分。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0102\"\n      ],\n      \"evidence_quote\": \"关于这个事情啊，我检讨不知多少次了，我参加革命从来没有犯群众纪律，我是模范卫生队长，结果我第一次在新四军犯错误，以后到了根据地以后啊，第一次当众检讨，写书面报告请求处分。后来没有处分，就是自我认识较好，检讨态度认真，批了个免于处分。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE003-P01\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0100\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE003-P02\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE003-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0100\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE003-P03\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE003-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0102\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE003-P04\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE003-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0102\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-13",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC02-DE003",
+    "event_enrichment": {
+      "result_state": "担架员继续抬运伤员；陈海峰事后多次检讨并书面请求处分，最终被免于处分。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于最后一批转运中一副担架员弃担并要求回去，止于其继续抬运以及陈海峰事后检讨、请求处分并获免于处分。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC02-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "最后一批转运中，一副担架员弃担，坚持要回去。",
+        "process_text": "最后四个担架走了约一百多米，离开小公路后，有一副担架员扔下担架，非要回去。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0100"
+        ],
+        "evidence_quote": "有一副担架不干了，他扔了，他非要回去。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "陈海峰先劝解，说明抬到前面安全地方再换人，但担架员仍哭闹要回家。",
+        "process_text": "陈海峰告诉他抬到前面庄子安全处，再找地下工作人员替换，让他们返回；担架员仍哭哭啼啼，担心家里遭日本鬼子，要求回去。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0107"
+        ],
+        "evidence_quote": "告诉他，你抬到前面几个庄子，到前面安全的地方啊，我们再找人，找到地下工作（的）同志，再换你们，你们再回来，没关系，你们护送离开这个危险区。“哎呦，这个家里有日本鬼子来了，我家里怎么样，我要知道啊，我这个家没有了，你给我回去啊！”哭哭啼啼，哎呀，真要命这事。这个老百姓没办法，这东西。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "劝说无效后，陈海峰打骂并持枪威胁担架员。",
+        "process_text": "陈海峰发脾气，打了担架员两个巴掌，拿出真枪上膛，威胁“你不走，我枪毙你”。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0102"
+        ],
+        "evidence_quote": "我给他两个巴掌（陈海峰大笑）。“你不走，我枪毙你！”我把真枪拿出来了，“哗”子弹一上膛",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "担架员受惊惧服，答应继续抬运。",
+        "process_text": "担架员被吓住，连说“我走我走我走”，又接着抬运。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0102"
+        ],
+        "evidence_quote": "他他也吓死了，“我走我走我走……”他又接着走了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "陈海峰事后多次检讨、书面请求处分，最终免于处分。",
+        "process_text": "陈海峰就此事多次检讨，称自己第一次在新四军犯群众纪律，第一次当众检讨并写书面报告请求处分；后因自我认识较好、检讨态度认真，批了免于处分。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0102"
+        ],
+        "evidence_quote": "关于这个事情啊，我检讨不知多少次了，我参加革命从来没有犯群众纪律，我是模范卫生队长，结果我第一次在新四军犯错误，以后到了根据地以后啊，第一次当众检讨，写书面报告请求处分。后来没有处分，就是自我认识较好，检讨态度认真，批了个免于处分。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC02-DE003-P01",
+        "target_stage_id": "BATCH05-DOC02-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC02-S0100",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE003-P02",
+        "target_stage_id": "BATCH05-DOC02-DE003-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH05-DOC02-S0100",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE003-P03",
+        "target_stage_id": "BATCH05-DOC02-DE003-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC02-S0102",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE003-P04",
+        "target_stage_id": "BATCH05-DOC02-DE003-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC02-S0102",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

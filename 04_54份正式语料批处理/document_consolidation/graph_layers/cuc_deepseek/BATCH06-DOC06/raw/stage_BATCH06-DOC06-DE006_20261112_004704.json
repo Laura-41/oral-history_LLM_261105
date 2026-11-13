@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-12T00:47:04",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC06-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC06-DE006",
+  "usage": {
+    "prompt_tokens": 1133,
+    "total_tokens": 3272,
+    "completion_tokens": 2139,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1579
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 17878,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC06-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"工程兵已分散到前方修桥补路，以保障渡江准备；原文未说明道路桥梁修复完成。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以‘这个时候我们就准备渡江了’起，至‘我们这个工程兵就派出去修桥补路’止；后文转入部队大整编、番号改变，属于另一过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"渡江准备启动，工兵向前方分散修路。\",\n      \"process_text\": \"准备渡江，工兵分散到前面去修路。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0013\"\n      ],\n      \"evidence_quote\": \"这个时候我们就准备渡江了，我们的工兵都分散到前面去修路去了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"因道路桥梁损坏（含国民党撤退时破坏），工程兵被派去修桥补路。\",\n      \"process_text\": \"道路、桥梁损坏，工程兵被派出去修桥补路。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0013\"\n      ],\n      \"evidence_quote\": \"很多的道路、桥梁都坏了嘛，国民党撤退的时候也毁掉了一些，我们这个工程兵就派出去修桥补路。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE006-P01\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE006-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0013\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC06-DE006",
+    "event_enrichment": {
+      "result_state": "工程兵已分散到前方修桥补路，以保障渡江准备；原文未说明道路桥梁修复完成。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以‘这个时候我们就准备渡江了’起，至‘我们这个工程兵就派出去修桥补路’止；后文转入部队大整编、番号改变，属于另一过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC06-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "渡江准备启动，工兵向前方分散修路。",
+        "process_text": "准备渡江，工兵分散到前面去修路。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0013"
+        ],
+        "evidence_quote": "这个时候我们就准备渡江了，我们的工兵都分散到前面去修路去了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "因道路桥梁损坏（含国民党撤退时破坏），工程兵被派去修桥补路。",
+        "process_text": "道路、桥梁损坏，工程兵被派出去修桥补路。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0013"
+        ],
+        "evidence_quote": "很多的道路、桥梁都坏了嘛，国民党撤退的时候也毁掉了一些，我们这个工程兵就派出去修桥补路。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC06-DE006-P01",
+        "target_stage_id": "BATCH06-DOC06-DE006-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC06-S0013",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

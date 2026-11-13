@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T10:59:11",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC08-DE004",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC08-DE004",
+  "usage": {
+    "prompt_tokens": 1722,
+    "total_tokens": 11136,
+    "completion_tokens": 9414,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7768
+    },
+    "time_to_first_token_ms": 168574,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC08-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"三支队与144师政训处人员保持友好联系，144师以报告打日本鬼子消耗为名，每次来都偷偷带几箱手榴弹和79步枪子弹，三支队每次丰盛请他们吃一顿。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件从S0033中144师沿江驻防、政训处人员与三支队有联系开始，经篮球比赛、请吃饭到S0036中关系好后争取子弹、144师带弹及三支队宴请；S0033开头日本资源与扫荡为更大背景，S0036后半段关于红烧肉来源、老虎、猎户队、县政府和抗日群众团体为口述延伸背景，不作为该事件阶段。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"144师驻沿江且与三支队政训处人员建立联系\",\n      \"process_text\": \"那么铜陵、青阳和贵池这个沿江呢，是144师，144师是川军，是杂牌军，战斗力比较弱，他缩在后面。但是和我们三支队关系还不错，我们经常和他司令部他们政治部的人（联系），他们也有，他叫政训处。政训处的人啊，一些学生啊，政工人员和我们有联系。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0033\"\n      ],\n      \"evidence_quote\": \"那么铜陵、青阳和贵池这个沿江呢，是144师，144师是川军，是杂牌军，战斗力比较弱，他缩在后面。但是和我们三支队关系还不错，我们经常和他司令部他们政治部的人（联系），他们也有，他叫政训处。政训处的人啊，一些学生啊，政工人员和我们有联系。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"联系后通过篮球比赛和请吃饭形成友好关系\",\n      \"process_text\": \"联系以后，就打篮球比赛呀，一个月两个月打一次，我们请他吃顿饭，大家比较友好。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0033\"\n      ],\n      \"evidence_quote\": \"联系以后，就打篮球比赛呀，一个月两个月打一次，我们请他吃顿饭，大家比较友好。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"关系好后三支队争取144师送子弹\",\n      \"process_text\": \"关系好了以后干什么呢？争取他送我们子弹，我们子弹少，\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0036\"\n      ],\n      \"evidence_quote\": \"关系好了以后干什么呢？争取他送我们子弹，我们子弹少，\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"144师以报告消耗为名偷偷带来手榴弹和79步枪子弹\",\n      \"process_text\": \"他每次来都带几箱手榴弹，带几箱79步枪的子弹。他呢，报（告）说打日本鬼子消耗了，每一次都偷偷地带过来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0036\"\n      ],\n      \"evidence_quote\": \"他每次来都带几箱手榴弹，带几箱79步枪的子弹。他呢，报（告）说打日本鬼子消耗了，每一次都偷偷地带过来。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE004-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"三支队每次以丰盛红烧肉宴请回应\",\n      \"process_text\": \"我们的关系比较好，所以来一次，都丰盛地请他们吃一顿，红烧肉了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0036\"\n      ],\n      \"evidence_quote\": \"我们的关系比较好，所以来一次，都丰盛地请他们吃一顿，红烧肉了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE004-P01\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0033\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE004-P02\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0036\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE004-P03\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE004-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0036\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE004-P04\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE004-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0036\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC08-DE004",
+    "event_enrichment": {
+      "result_state": "三支队与144师政训处人员保持友好联系，144师以报告打日本鬼子消耗为名，每次来都偷偷带几箱手榴弹和79步枪子弹，三支队每次丰盛请他们吃一顿。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件从S0033中144师沿江驻防、政训处人员与三支队有联系开始，经篮球比赛、请吃饭到S0036中关系好后争取子弹、144师带弹及三支队宴请；S0033开头日本资源与扫荡为更大背景，S0036后半段关于红烧肉来源、老虎、猎户队、县政府和抗日群众团体为口述延伸背景，不作为该事件阶段。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC08-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "144师驻沿江且与三支队政训处人员建立联系",
+        "process_text": "那么铜陵、青阳和贵池这个沿江呢，是144师，144师是川军，是杂牌军，战斗力比较弱，他缩在后面。但是和我们三支队关系还不错，我们经常和他司令部他们政治部的人（联系），他们也有，他叫政训处。政训处的人啊，一些学生啊，政工人员和我们有联系。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0033"
+        ],
+        "evidence_quote": "那么铜陵、青阳和贵池这个沿江呢，是144师，144师是川军，是杂牌军，战斗力比较弱，他缩在后面。但是和我们三支队关系还不错，我们经常和他司令部他们政治部的人（联系），他们也有，他叫政训处。政训处的人啊，一些学生啊，政工人员和我们有联系。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "联系后通过篮球比赛和请吃饭形成友好关系",
+        "process_text": "联系以后，就打篮球比赛呀，一个月两个月打一次，我们请他吃顿饭，大家比较友好。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0033"
+        ],
+        "evidence_quote": "联系以后，就打篮球比赛呀，一个月两个月打一次，我们请他吃顿饭，大家比较友好。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "关系好后三支队争取144师送子弹",
+        "process_text": "关系好了以后干什么呢？争取他送我们子弹，我们子弹少，",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0036"
+        ],
+        "evidence_quote": "关系好了以后干什么呢？争取他送我们子弹，我们子弹少，",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "144师以报告消耗为名偷偷带来手榴弹和79步枪子弹",
+        "process_text": "他每次来都带几箱手榴弹，带几箱79步枪的子弹。他呢，报（告）说打日本鬼子消耗了，每一次都偷偷地带过来。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0036"
+        ],
+        "evidence_quote": "他每次来都带几箱手榴弹，带几箱79步枪的子弹。他呢，报（告）说打日本鬼子消耗了，每一次都偷偷地带过来。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE004-P05",
+        "stage_order": 5,
+        "stage_summary": "三支队每次以丰盛红烧肉宴请回应",
+        "process_text": "我们的关系比较好，所以来一次，都丰盛地请他们吃一顿，红烧肉了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0036"
+        ],
+        "evidence_quote": "我们的关系比较好，所以来一次，都丰盛地请他们吃一顿，红烧肉了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC08-DE004-P01",
+        "target_stage_id": "BATCH02-DOC08-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0033",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE004-P02",
+        "target_stage_id": "BATCH02-DOC08-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0036",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE004-P03",
+        "target_stage_id": "BATCH02-DOC08-DE004-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC08-S0036",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE004-P04",
+        "target_stage_id": "BATCH02-DOC08-DE004-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0036",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

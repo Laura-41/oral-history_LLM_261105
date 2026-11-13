@@ -1,0 +1,170 @@
+{
+  "run_time": "2026-11-12T01:03:54",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC09-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC09-DE004",
+  "usage": {
+    "prompt_tokens": 2521,
+    "total_tokens": 10140,
+    "completion_tokens": 7619,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5365
+    },
+    "tokens_per_second": 7618000,
+    "time_to_first_token_ms": 63748,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-22\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC09-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"我方高级医务干部在轮训队听课后接受第二次世界大战战伤救护基本经验，战伤救护、扩创、延期缝合、输液防休克等观点和技术得到训练提高。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈海峰叙述外籍医生同意讲课并传授二战经验为起点，以我方接受这些基本经验并得到训练提高为终点；中间按讲课内容推进拆分阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"外籍医生同意讲课，开始向我方传授第二次世界大战经验。\",\n      \"process_text\": \"后来要他讲课，他也同意讲了，给我们讲了好多课。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0059\"\n      ],\n      \"evidence_quote\": \"    陈海峰：不一样，他无菌的条件要求更严格。他把第二次世界大战的经验呢，就传给我们，后来要他讲课，他也同意讲了，给我们讲了好多课。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"将第四大殿吃饭处辟为课堂，组织轮训队，部长和高级医务干部前来听课。\",\n      \"process_text\": \"我们那个第四大殿，吃饭的地方辟出来变成课堂，那部长都来听课，我们高级医务干部都来听课。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0061\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我们那个第四大殿，吃饭的地方辟出来变成课堂，那部长都来听课，我们高级医务干部都来听课。我们办了个轮训队，就住在河下对面，他讲课都来听，就是吸取他第二次世界大战中间的经验。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"讲授战伤救护与阶梯治疗，强调医院尽量接近前线并在6至8小时内送达。\",\n      \"process_text\": \"战伤救护的医院必须接近前线，越接近前线越好\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0062\"\n      ],\n      \"evidence_quote\": \"一个就是说战伤救护，阶梯治疗。战伤救护的医院必须接近前线，越接近前线越好，不管你是野战医院也好，重伤医院也好，你医院要尽可能地接近这些（前线），减少这个战伤的死亡。这是一个大问题，不能距离太远，要求是6小时之内一定要送到医院，最多不能超过8小时。这个战伤的成活率高，他好多数据讲给你听。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"讲授正规扩创术，主张扩大创口、切除坏疽，以纠正旧法只做表面处理的问题。\",\n      \"process_text\": \"他就要扩大创口，把那个坏疽都切掉，下来就要切，坏疽要切，不要可惜，这是为了治疗效果。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0064\",\n        \"BATCH06-DOC09-S0066\",\n        \"BATCH06-DOC09-S0069\",\n        \"BATCH06-DOC09-S0070\"\n      ],\n      \"evidence_quote\": \"    陈海峰：他有第二次世界大战的一些数据。第二个（是）扩创术，我们的扩创术已经把红军时代的改正了，红军时代都上镊子，这个创口很小一个洞，把那个纱布条往里塞。塞里面以后，里面化脓，拿出来以后，伤员形成瘘管，瘘管是好不了。他就要扩大创口，把那个坏疽都切掉，下来就要切，坏疽要切，不要可惜，这是为了治疗效果。第二次世界大战正规扩创术，这是第二个不同的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE004-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"讲授延期治疗和延期缝合，强调战伤创口均污染，彻底扩创后不要立即缝合，改变我方旧有观念。\",\n      \"process_text\": \"他就告诉我延期缝合，这个所有创口都是污染的，这个思想我们改变了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0070\",\n        \"BATCH06-DOC09-S0072\",\n        \"BATCH06-DOC09-S0075\",\n        \"BATCH06-DOC09-S0078\"\n      ],\n      \"evidence_quote\": \"    陈海峰：在战场上面，牛粪、马粪啊，烂泥巴，炮弹炸的稻草灰了什么东西，乱七八糟，伤口里都有，细菌不止万万千。你说要无菌伤口，战伤那条件不可能伤口没有污染，全部是污染的。那么经过彻底扩创以后，你延期缝合，你不要马上缝合。拿过去呢，看到个伤口清理过了，干净啊，把那个磺胺粉啊，消毒的粉哪，消毒的药水上面一洒，缝起来了，留一个小口子。它再化脓，再把那个线拿掉，让它敞开再清洗。他就告诉我延期缝合，这个所有创口都是污染的，这个思想我们改变了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE004-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"讲授及时输液防止战伤休克等新观点、新技术，说明失血过多需尽早补液。\",\n      \"process_text\": \"就是说要及时输液，防止休克。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0079\",\n        \"BATCH06-DOC09-S0081\",\n        \"BATCH06-DOC09-S0082\"\n      ],\n      \"evidence_quote\": \"    陈海峰：不一定死人，结果（可能）他由于失血过多引起休克死亡，过去我们这个观点不明确。这样子呢，这个观点才是输给我们了，就是防止战伤休克，要从伤员一下来，有条件马上进行输液。输盐水也好，要他喝水也好，喝盐水，喝糖水，打这个葡萄糖液。你有血浆粉更好，你输血更好，是不是。就是说要及时输液，防止休克。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE004-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"我方接受第二次世界大战基本经验，相关观点和技术得到训练提高，并扩展到更多伤病治疗。\",\n      \"process_text\": \"我们接受了第二次世界大战的一些基本经验\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0084\"\n      ],\n      \"evidence_quote\": \"    陈海峰：这许多观点过去没有。这样子一来以后呢，我们接受了第二次世界大战的一些基本经验。现在各个地区送来的病人里面，各种各样的病人都有，我们平时战斗部队里面止血知识很少。妇产科我们经验很差，接个普通产可以，要有难产的糟糕了，是不是。他们都可以。这样子就说妇产科的手术，那正常的腹部手术，肠子缝合的手术，气疽的缝合，绝对无菌的手术。我们过去这些条件都差，观点也差，（从这里）得到了训练，得到了提高。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE004-P01\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0061\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE004-P02\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0062\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE004-P03\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE004-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0064\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE004-P04\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE004-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0070\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE004-P05\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE004-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0079\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE004-P06\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE004-P07\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0084\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-22",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC09-DE004",
+    "event_enrichment": {
+      "result_state": "我方高级医务干部在轮训队听课后接受第二次世界大战战伤救护基本经验，战伤救护、扩创、延期缝合、输液防休克等观点和技术得到训练提高。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以陈海峰叙述外籍医生同意讲课并传授二战经验为起点，以我方接受这些基本经验并得到训练提高为终点；中间按讲课内容推进拆分阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC09-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "外籍医生同意讲课，开始向我方传授第二次世界大战经验。",
+        "process_text": "后来要他讲课，他也同意讲了，给我们讲了好多课。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0059"
+        ],
+        "evidence_quote": "    陈海峰：不一样，他无菌的条件要求更严格。他把第二次世界大战的经验呢，就传给我们，后来要他讲课，他也同意讲了，给我们讲了好多课。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "将第四大殿吃饭处辟为课堂，组织轮训队，部长和高级医务干部前来听课。",
+        "process_text": "我们那个第四大殿，吃饭的地方辟出来变成课堂，那部长都来听课，我们高级医务干部都来听课。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0061"
+        ],
+        "evidence_quote": "    陈海峰：我们那个第四大殿，吃饭的地方辟出来变成课堂，那部长都来听课，我们高级医务干部都来听课。我们办了个轮训队，就住在河下对面，他讲课都来听，就是吸取他第二次世界大战中间的经验。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "讲授战伤救护与阶梯治疗，强调医院尽量接近前线并在6至8小时内送达。",
+        "process_text": "战伤救护的医院必须接近前线，越接近前线越好",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0062"
+        ],
+        "evidence_quote": "一个就是说战伤救护，阶梯治疗。战伤救护的医院必须接近前线，越接近前线越好，不管你是野战医院也好，重伤医院也好，你医院要尽可能地接近这些（前线），减少这个战伤的死亡。这是一个大问题，不能距离太远，要求是6小时之内一定要送到医院，最多不能超过8小时。这个战伤的成活率高，他好多数据讲给你听。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "讲授正规扩创术，主张扩大创口、切除坏疽，以纠正旧法只做表面处理的问题。",
+        "process_text": "他就要扩大创口，把那个坏疽都切掉，下来就要切，坏疽要切，不要可惜，这是为了治疗效果。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0064",
+          "BATCH06-DOC09-S0066",
+          "BATCH06-DOC09-S0069",
+          "BATCH06-DOC09-S0070"
+        ],
+        "evidence_quote": "    陈海峰：他有第二次世界大战的一些数据。第二个（是）扩创术，我们的扩创术已经把红军时代的改正了，红军时代都上镊子，这个创口很小一个洞，把那个纱布条往里塞。塞里面以后，里面化脓，拿出来以后，伤员形成瘘管，瘘管是好不了。他就要扩大创口，把那个坏疽都切掉，下来就要切，坏疽要切，不要可惜，这是为了治疗效果。第二次世界大战正规扩创术，这是第二个不同的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE004-P05",
+        "stage_order": 5,
+        "stage_summary": "讲授延期治疗和延期缝合，强调战伤创口均污染，彻底扩创后不要立即缝合，改变我方旧有观念。",
+        "process_text": "他就告诉我延期缝合，这个所有创口都是污染的，这个思想我们改变了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0070",
+          "BATCH06-DOC09-S0072",
+          "BATCH06-DOC09-S0075",
+          "BATCH06-DOC09-S0078"
+        ],
+        "evidence_quote": "    陈海峰：在战场上面，牛粪、马粪啊，烂泥巴，炮弹炸的稻草灰了什么东西，乱七八糟，伤口里都有，细菌不止万万千。你说要无菌伤口，战伤那条件不可能伤口没有污染，全部是污染的。那么经过彻底扩创以后，你延期缝合，你不要马上缝合。拿过去呢，看到个伤口清理过了，干净啊，把那个磺胺粉啊，消毒的粉哪，消毒的药水上面一洒，缝起来了，留一个小口子。它再化脓，再把那个线拿掉，让它敞开再清洗。他就告诉我延期缝合，这个所有创口都是污染的，这个思想我们改变了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE004-P06",
+        "stage_order": 6,
+        "stage_summary": "讲授及时输液防止战伤休克等新观点、新技术，说明失血过多需尽早补液。",
+        "process_text": "就是说要及时输液，防止休克。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0079",
+          "BATCH06-DOC09-S0081",
+          "BATCH06-DOC09-S0082"
+        ],
+        "evidence_quote": "    陈海峰：不一定死人，结果（可能）他由于失血过多引起休克死亡，过去我们这个观点不明确。这样子呢，这个观点才是输给我们了，就是防止战伤休克，要从伤员一下来，有条件马上进行输液。输盐水也好，要他喝水也好，喝盐水，喝糖水，打这个葡萄糖液。你有血浆粉更好，你输血更好，是不是。就是说要及时输液，防止休克。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE004-P07",
+        "stage_order": 7,
+        "stage_summary": "我方接受第二次世界大战基本经验，相关观点和技术得到训练提高，并扩展到更多伤病治疗。",
+        "process_text": "我们接受了第二次世界大战的一些基本经验",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0084"
+        ],
+        "evidence_quote": "    陈海峰：这许多观点过去没有。这样子一来以后呢，我们接受了第二次世界大战的一些基本经验。现在各个地区送来的病人里面，各种各样的病人都有，我们平时战斗部队里面止血知识很少。妇产科我们经验很差，接个普通产可以，要有难产的糟糕了，是不是。他们都可以。这样子就说妇产科的手术，那正常的腹部手术，肠子缝合的手术，气疽的缝合，绝对无菌的手术。我们过去这些条件都差，观点也差，（从这里）得到了训练，得到了提高。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC09-DE004-P01",
+        "target_stage_id": "BATCH06-DOC09-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0061",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE004-P02",
+        "target_stage_id": "BATCH06-DOC09-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0062",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE004-P03",
+        "target_stage_id": "BATCH06-DOC09-DE004-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0064",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE004-P04",
+        "target_stage_id": "BATCH06-DOC09-DE004-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0070",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE004-P05",
+        "target_stage_id": "BATCH06-DOC09-DE004-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0079",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE004-P06",
+        "target_stage_id": "BATCH06-DOC09-DE004-P07",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0084",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

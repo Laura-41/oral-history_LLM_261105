@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-11T20:49:03",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC03-DE007",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC03-DE007",
+  "usage": {
+    "prompt_tokens": 1650,
+    "total_tokens": 6790,
+    "completion_tokens": 5140,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3933
+    },
+    "time_to_first_token_ms": 64712,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V1-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC03-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰完成医学训练并毕业，1939年9月被派到三支队任营卫生指导员、卫生巡视员，四个月后任团卫生队队长（少校卫生队长），此后长期从医。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以陈海峰自述开始学医为起点，覆盖报名参加训练、训练毕业、1939年9月派到三支队任营卫生指导员/卫生巡视员，以及四个月后任团卫生队队长；不扩展到此前情报站任职和训练待遇等旁支。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"学医动因：部队需要与家庭祖传中医背景\",\n      \"process_text\": \"因部队需要和家庭祖传中医的耳闻目睹，开始学医。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0039\"\n      ],\n      \"evidence_quote\": \"所以呢，开始学医。为什么学医？一个是部队需要。第二个为什么学医？我家里是祖传中医\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"报名参加医学训练并开始训练\",\n      \"process_text\": \"1939年12月底报名参加，1939年1月开始训练。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0037\"\n      ],\n      \"evidence_quote\": \"那就（是）1939年的12月底，报名参加，那么1939年1月开始训练\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"完成训练并于8月8日毕业\",\n      \"process_text\": \"训练至8月8日毕业。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0037\"\n      ],\n      \"evidence_quote\": \"到8月8号毕业\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"1939年9月被派到三支队任营卫生指导员、卫生巡视员\",\n      \"process_text\": \"1939年9月被派到三支队，任营卫生指导员、卫生巡视员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0037\"\n      ],\n      \"evidence_quote\": \"1939年的9月我就派到三支队当营卫生指导员，当卫生巡视员。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE007-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"四个月后任团卫生队队长（少校卫生队长）\",\n      \"process_text\": \"到三支队四个月后，任团卫生队队长，即少校卫生队长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0037\"\n      ],\n      \"evidence_quote\": \"四个月以后，我就当团卫生队队长了，就是少校卫生队长。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE007-P01\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE007-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0041\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE007-P02\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0037\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE007-P03\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE007-P04\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0037\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE007-P04\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE007-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0037\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC03-DE007",
+    "event_enrichment": {
+      "result_state": "陈海峰完成医学训练并毕业，1939年9月被派到三支队任营卫生指导员、卫生巡视员，四个月后任团卫生队队长（少校卫生队长），此后长期从医。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以陈海峰自述开始学医为起点，覆盖报名参加训练、训练毕业、1939年9月派到三支队任营卫生指导员/卫生巡视员，以及四个月后任团卫生队队长；不扩展到此前情报站任职和训练待遇等旁支。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC03-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "学医动因：部队需要与家庭祖传中医背景",
+        "process_text": "因部队需要和家庭祖传中医的耳闻目睹，开始学医。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0039"
+        ],
+        "evidence_quote": "所以呢，开始学医。为什么学医？一个是部队需要。第二个为什么学医？我家里是祖传中医",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "报名参加医学训练并开始训练",
+        "process_text": "1939年12月底报名参加，1939年1月开始训练。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0037"
+        ],
+        "evidence_quote": "那就（是）1939年的12月底，报名参加，那么1939年1月开始训练",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "完成训练并于8月8日毕业",
+        "process_text": "训练至8月8日毕业。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0037"
+        ],
+        "evidence_quote": "到8月8号毕业",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "1939年9月被派到三支队任营卫生指导员、卫生巡视员",
+        "process_text": "1939年9月被派到三支队，任营卫生指导员、卫生巡视员。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0037"
+        ],
+        "evidence_quote": "1939年的9月我就派到三支队当营卫生指导员，当卫生巡视员。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE007-P05",
+        "stage_order": 5,
+        "stage_summary": "四个月后任团卫生队队长（少校卫生队长）",
+        "process_text": "到三支队四个月后，任团卫生队队长，即少校卫生队长。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0037"
+        ],
+        "evidence_quote": "四个月以后，我就当团卫生队队长了，就是少校卫生队长。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC03-DE007-P01",
+        "target_stage_id": "BATCH02-DOC03-DE007-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC03-S0041",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE007-P02",
+        "target_stage_id": "BATCH02-DOC03-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0037",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE007-P03",
+        "target_stage_id": "BATCH02-DOC03-DE007-P04",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC03-S0037",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE007-P04",
+        "target_stage_id": "BATCH02-DOC03-DE007-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0037",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

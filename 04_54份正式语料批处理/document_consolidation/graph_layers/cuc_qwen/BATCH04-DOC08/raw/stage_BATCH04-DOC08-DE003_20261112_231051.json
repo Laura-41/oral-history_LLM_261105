@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T23:10:51",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC08-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC08-DE003",
+  "usage": {
+    "prompt_tokens": 1518,
+    "total_tokens": 6574,
+    "completion_tokens": 5056,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4123
+    },
+    "tokens_per_second": 5055000,
+    "time_to_first_token_ms": 74833,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC08-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"日本投降消息经三科报告给陈锐霆并上报上边，随后开大会庆祝胜利并向地方做宣传。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于S0005所述整风学习将结束、日本天皇广播宣布投降；止于S0010所述开大会庆祝胜利、给地方上做宣传；S0010后续三师打淮阴、军部转淮阴、调东北等不纳入本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"整风学习将结束，日本天皇广播宣布投降\",\n      \"process_text\": \"不久鬼子投降了，日本天皇广播（宣布）投降了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0005\"\n      ],\n      \"evidence_quote\": \"不久鬼子投降了，日本天皇广播（宣布）投降了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"三科通过广播和电报获知消息并逐级报告\",\n      \"process_text\": \"三科跟中央也有联系，他也有广播，听广播，中央也有电报告诉他们。他们以后就报告我，我又报告了上边。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0008\"\n      ],\n      \"evidence_quote\": \"他也有广播，听广播，中央也有电报告诉他们。他们以后就报告我，我又报告了上边。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"开大会庆祝胜利并向地方做宣传\",\n      \"process_text\": \"开大会，庆祝胜利，人们都流泪了！听到日本投降，都是狂欢啊！开大会庆祝嘛，给地方上也做宣传。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0010\"\n      ],\n      \"evidence_quote\": \"哎呦，那个时候开大会，庆祝胜利，人们都流泪了！打了八年，他妈！死了那么多的同志！听到日本投降，都是狂欢啊！开大会庆祝嘛，给地方上也做宣传。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE003-P01\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0008\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE003-P02\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE003-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0010\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC08-DE003",
+    "event_enrichment": {
+      "result_state": "日本投降消息经三科报告给陈锐霆并上报上边，随后开大会庆祝胜利并向地方做宣传。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于S0005所述整风学习将结束、日本天皇广播宣布投降；止于S0010所述开大会庆祝胜利、给地方上做宣传；S0010后续三师打淮阴、军部转淮阴、调东北等不纳入本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC08-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "整风学习将结束，日本天皇广播宣布投降",
+        "process_text": "不久鬼子投降了，日本天皇广播（宣布）投降了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0005"
+        ],
+        "evidence_quote": "不久鬼子投降了，日本天皇广播（宣布）投降了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "三科通过广播和电报获知消息并逐级报告",
+        "process_text": "三科跟中央也有联系，他也有广播，听广播，中央也有电报告诉他们。他们以后就报告我，我又报告了上边。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0008"
+        ],
+        "evidence_quote": "他也有广播，听广播，中央也有电报告诉他们。他们以后就报告我，我又报告了上边。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "开大会庆祝胜利并向地方做宣传",
+        "process_text": "开大会，庆祝胜利，人们都流泪了！听到日本投降，都是狂欢啊！开大会庆祝嘛，给地方上也做宣传。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "evidence_quote": "哎呦，那个时候开大会，庆祝胜利，人们都流泪了！打了八年，他妈！死了那么多的同志！听到日本投降，都是狂欢啊！开大会庆祝嘛，给地方上也做宣传。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC08-DE003-P01",
+        "target_stage_id": "BATCH04-DOC08-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC08-S0008",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC08-DE003-P02",
+        "target_stage_id": "BATCH04-DOC08-DE003-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH04-DOC08-S0010",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

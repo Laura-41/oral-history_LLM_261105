@@ -1,0 +1,73 @@
+{
+  "run_time": "2026-11-12T00:57:21",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE011",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE011",
+  "usage": {
+    "prompt_tokens": 1198,
+    "total_tokens": 5549,
+    "completion_tokens": 4351,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3715
+    },
+    "time_to_first_token_ms": 33492,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE011\",\n  \"event_enrichment\": {\n    \"result_state\": \"党中央已查看房子和地形，并私下告知可能搬来、要求对外保密；搬迁是否实际执行尚未确定。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于党中央来看房子，止于查看地形并谈及实现后的安排；不延伸到中央是否实际搬迁或江淮市计划落实。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE011-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"党中央来看房子，并私下告知可能搬来、要求对外保密。\",\n      \"process_text\": \"党中央来看了房子，而且偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0186\",\n        \"BATCH06-DOC07-S0187\"\n      ],\n      \"evidence_quote\": \"党中央来看了房子，而且偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE011-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"党中央来看地形，并谈及如果实现后的安排。\",\n      \"process_text\": \"已经来看地形了，如果实现的话，怎么搞法。第二个，如果中央搬来以后，而且里面有一个计划，那个时候讨论中间，大家都知道的，（淮安）要变成叫江淮市。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0188\"\n      ],\n      \"evidence_quote\": \"已经来看地形了，如果实现的话，怎么搞法。第二个，如果中央搬来以后，而且里面有一个计划，那个时候讨论中间，大家都知道的，（淮安）要变成叫江淮市。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE011-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE011-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0188\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE011",
+    "event_enrichment": {
+      "result_state": "党中央已查看房子和地形，并私下告知可能搬来、要求对外保密；搬迁是否实际执行尚未确定。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于党中央来看房子，止于查看地形并谈及实现后的安排；不延伸到中央是否实际搬迁或江淮市计划落实。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE011-P01",
+        "stage_order": 1,
+        "stage_summary": "党中央来看房子，并私下告知可能搬来、要求对外保密。",
+        "process_text": "党中央来看了房子，而且偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0186",
+          "BATCH06-DOC07-S0187"
+        ],
+        "evidence_quote": "党中央来看了房子，而且偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE011-P02",
+        "stage_order": 2,
+        "stage_summary": "党中央来看地形，并谈及如果实现后的安排。",
+        "process_text": "已经来看地形了，如果实现的话，怎么搞法。第二个，如果中央搬来以后，而且里面有一个计划，那个时候讨论中间，大家都知道的，（淮安）要变成叫江淮市。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0188"
+        ],
+        "evidence_quote": "已经来看地形了，如果实现的话，怎么搞法。第二个，如果中央搬来以后，而且里面有一个计划，那个时候讨论中间，大家都知道的，（淮安）要变成叫江淮市。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE011-P01",
+        "target_stage_id": "BATCH06-DOC07-DE011-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0188",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

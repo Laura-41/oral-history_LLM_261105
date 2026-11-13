@@ -1,0 +1,421 @@
+{
+  "run_time": "2026-11-10T20:49:30",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC06-W001",
+  "technical_document_id": "BATCH03-DOC06",
+  "document_id": "05.杨永松100506（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC06-S0002",
+    "BATCH03-DOC06-S0003",
+    "BATCH03-DOC06-S0004",
+    "BATCH03-DOC06-S0005",
+    "BATCH03-DOC06-S0006",
+    "BATCH03-DOC06-S0007",
+    "BATCH03-DOC06-S0008",
+    "BATCH03-DOC06-S0009",
+    "BATCH03-DOC06-S0010",
+    "BATCH03-DOC06-S0011",
+    "BATCH03-DOC06-S0012",
+    "BATCH03-DOC06-S0013",
+    "BATCH03-DOC06-S0014",
+    "BATCH03-DOC06-S0015",
+    "BATCH03-DOC06-S0016",
+    "BATCH03-DOC06-S0017",
+    "BATCH03-DOC06-S0018",
+    "BATCH03-DOC06-S0019",
+    "BATCH03-DOC06-S0020",
+    "BATCH03-DOC06-S0021",
+    "BATCH03-DOC06-S0022",
+    "BATCH03-DOC06-S0023",
+    "BATCH03-DOC06-S0024",
+    "BATCH03-DOC06-S0025",
+    "BATCH03-DOC06-S0026"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 5,
+    "assigned_segment_count": 11,
+    "unassigned_segment_count": 14,
+    "input_segment_count": 25,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH03-DOC06-W001-E05"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC06-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC06-W001-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0005",
+          "BATCH03-DOC06-S0007",
+          "BATCH03-DOC06-S0009"
+        ],
+        "event": {
+          "event_name": "日军突破川口防线后沿河推进受阻并占领隰县午城镇",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "日军突破川口防线，沿河推进受阻后撤退，占领隰县、午城镇",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "日本人",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "川口防线",
+              "normalized_entity": "川口防线",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "隰县",
+              "normalized_entity": "隰县",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "午城镇",
+              "normalized_entity": "午城镇",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "双城（音）附近的一条河",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "山上",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "村子边上",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "往上",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "往东",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "下午",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "开着汽车“嗡嗡”一百多辆",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "所以川口被突破以后，就占领隰县，占领午城镇，往东他就经过还有一个蒲县吧，（与）占领临汾的部队就合并了。",
+          "type_basis": "核心是日军军事行动和占领结果，可用What happened to Y?测试；Actor为日军，Goal为川口防线、隰县、午城镇；电报和飞机只是伴随信息，不改变物质过程主导。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W001-E02",
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0011",
+          "BATCH03-DOC06-S0013"
+        ],
+        "event": {
+          "event_name": "部队收容学生未果后侧击西进大宁之敌并交战",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "部队到吉县收容学生未果，返回午城镇附近侧击西进大宁之敌并交战",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们这个团",
+              "normalized_entity": "我方部队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "686团",
+              "normalized_entity": "686团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "临汾撤退的学生",
+              "normalized_entity": "临汾撤退的学生",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "敌人",
+              "normalized_entity": "敌人",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "敌人一个大队",
+              "normalized_entity": "敌人一个大队",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "午城镇附近",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "吉县附近",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "午城镇和井沟的中间",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "靠西边那个山上",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "往西",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "往东",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "从屁股一打",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "686团大概弄住敌人一个大队，相当于我们一个营，它就打得比较激烈，伤亡也比较大。",
+          "type_basis": "核心是部队移动、收容、侧击和交战，MATERIAL；Actor为我方部队和686团，Goal为学生和敌人；战斗结果敌东撤，不单独建事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W001-E03",
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0015",
+          "BATCH03-DOC06-S0017",
+          "BATCH03-DOC06-S0019"
+        ],
+        "event": {
+          "event_name": "林彪被阎锡山部队枪击负伤",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "林彪被阎锡山部队枪击，肺被打穿",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "阎锡山部队",
+              "normalized_entity": "阎锡山部队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "林彪",
+              "normalized_entity": "林彪",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "大宁县城和隰县县城",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "没有思想准备",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "结果肺给打穿了，林彪打这么多仗他都没受伤，结果被阎锡山打了一枪。",
+          "type_basis": "核心是枪击造成身体伤害，MATERIAL；Actor为阎锡山部队，Goal为林彪；不是单纯存在或行为外显。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W001-E04",
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0021",
+          "BATCH03-DOC06-S0023"
+        ],
+        "event": {
+          "event_name": "林彪负伤后代理师长命令调整",
+          "event_type": "RELATIONAL",
+          "event_type_zh": "关系",
+          "core_process": "总部和中央先后指定罗荣桓、陈光代理师长/旅长",
+          "participants": [
+            {
+              "role": "Carrier",
+              "mention": "罗荣桓",
+              "normalized_entity": "罗荣桓",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Attribute",
+              "mention": "代理师长兼政委",
+              "normalized_entity": "代理师长兼政委",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Carrier",
+              "mention": "陈光",
+              "normalized_entity": "陈光",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Attribute",
+              "mention": "代理旅长",
+              "normalized_entity": "代理旅长",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Attribute",
+              "mention": "代理师长",
+              "normalized_entity": "代理师长",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "林彪负伤",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "电报",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "延安",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "太行",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "一听说林彪一负伤，总部就赶快指定陈光代理师长。",
+          "type_basis": "核心是建立代理师长/旅长身份关系，RELATIONAL；Carrier为罗荣桓、陈光，Attribute为代理师长兼政委、代理旅长、代理师长；电报是手段，不主导为VERBAL。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W001-E05",
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0025"
+        ],
+        "event": {
+          "event_name": "部队返回汾阳孝义附近训练",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "部队返回汾阳、孝义附近并组织训练",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "我方部队",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "汾阳、孝义附近",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "往东北",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "组织训练",
+              "normalized_value": "组织训练"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "这个地方比较富裕",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们在这里打完仗以后，就往东北就回到汾阳、孝义附近，这个地方比较富裕，你在山沟里吃饭都困难，在这边比较富裕，也便于我们组织训练。",
+          "type_basis": "核心是部队移动和训练准备，MATERIAL；Actor为我方部队，地点和目的作为环境；不是身份关系或言说。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC06-S0002",
+      "BATCH03-DOC06-S0003",
+      "BATCH03-DOC06-S0004",
+      "BATCH03-DOC06-S0006",
+      "BATCH03-DOC06-S0008",
+      "BATCH03-DOC06-S0010",
+      "BATCH03-DOC06-S0012",
+      "BATCH03-DOC06-S0014",
+      "BATCH03-DOC06-S0016",
+      "BATCH03-DOC06-S0018",
+      "BATCH03-DOC06-S0020",
+      "BATCH03-DOC06-S0022",
+      "BATCH03-DOC06-S0024",
+      "BATCH03-DOC06-S0026"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH03-DOC06-W001\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W001-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0005\",\n        \"BATCH03-DOC06-S0007\",\n        \"BATCH03-DOC06-S0009\"\n      ],\n      \"event\": {\n        \"event_name\": \"日军突破川口防线后沿河推进受阻并占领隰县午城镇\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"日军突破川口防线，沿河推进受阻后撤退，占领隰县、午城镇\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"日本人\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"川口防线\",\n            \"normalized_entity\": \"川口防线\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"隰县\",\n            \"normalized_entity\": \"隰县\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"午城镇\",\n            \"normalized_entity\": \"午城镇\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"双城（音）附近的一条河\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"山上\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"村子边上\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"往上\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"往东\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"下午\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"开着汽车“嗡嗡”一百多辆\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"所以川口被突破以后，就占领隰县，占领午城镇，往东他就经过还有一个蒲县吧，（与）占领临汾的部队就合并了。\",\n        \"type_basis\": \"核心是日军军事行动和占领结果，可用What happened to Y?测试；Actor为日军，Goal为川口防线、隰县、午城镇；电报和飞机只是伴随信息，不改变物质过程主导。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W001-E02\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0011\",\n        \"BATCH03-DOC06-S0013\"\n      ],\n      \"event\": {\n        \"event_name\": \"部队收容学生未果后侧击西进大宁之敌并交战\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"部队到吉县收容学生未果，返回午城镇附近侧击西进大宁之敌并交战\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们这个团\",\n            \"normalized_entity\": \"我方部队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"686团\",\n            \"normalized_entity\": \"686团\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"临汾撤退的学生\",\n            \"normalized_entity\": \"临汾撤退的学生\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"敌人\",\n            \"normalized_entity\": \"敌人\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"敌人一个大队\",\n            \"normalized_entity\": \"敌人一个大队\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"午城镇附近\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"吉县附近\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"午城镇和井沟的中间\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"靠西边那个山上\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"往西\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"往东\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"从屁股一打\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"686团大概弄住敌人一个大队，相当于我们一个营，它就打得比较激烈，伤亡也比较大。\",\n        \"type_basis\": \"核心是部队移动、收容、侧击和交战，MATERIAL；Actor为我方部队和686团，Goal为学生和敌人；战斗结果敌东撤，不单独建事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W001-E03\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0015\",\n        \"BATCH03-DOC06-S0017\",\n        \"BATCH03-DOC06-S0019\"\n      ],\n      \"event\": {\n        \"event_name\": \"林彪被阎锡山部队枪击负伤\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"林彪被阎锡山部队枪击，肺被打穿\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"阎锡山部队\",\n            \"normalized_entity\": \"阎锡山部队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"林彪\",\n            \"normalized_entity\": \"林彪\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"大宁县城和隰县县城\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"没有思想准备\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"结果肺给打穿了，林彪打这么多仗他都没受伤，结果被阎锡山打了一枪。\",\n        \"type_basis\": \"核心是枪击造成身体伤害，MATERIAL；Actor为阎锡山部队，Goal为林彪；不是单纯存在或行为外显。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W001-E04\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0021\",\n        \"BATCH03-DOC06-S0023\"\n      ],\n      \"event\": {\n        \"event_name\": \"林彪负伤后代理师长命令调整\",\n        \"event_type\": \"RELATIONAL\",\n        \"event_type_zh\": \"关系\",\n        \"core_process\": \"总部和中央先后指定罗荣桓、陈光代理师长/旅长\",\n        \"participants\": [\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"罗荣桓\",\n            \"normalized_entity\": \"罗荣桓\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"代理师长兼政委\",\n            \"normalized_entity\": \"代理师长兼政委\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"陈光\",\n            \"normalized_entity\": \"陈光\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"代理旅长\",\n            \"normalized_entity\": \"代理旅长\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"代理师长\",\n            \"normalized_entity\": \"代理师长\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"林彪负伤\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"电报\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"延安\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"太行\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"一听说林彪一负伤，总部就赶快指定陈光代理师长。\",\n        \"type_basis\": \"核心是建立代理师长/旅长身份关系，RELATIONAL；Carrier为罗荣桓、陈光，Attribute为代理师长兼政委、代理旅长、代理师长；电报是手段，不主导为VERBAL。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W001-E05\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0025\"\n      ],\n      \"event\": {\n        \"event_name\": \"部队返回汾阳孝义附近训练\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"部队返回汾阳、孝义附近并组织训练\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"我方部队\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"汾阳、孝义附近\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"往东北\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"组织训练\",\n            \"normalized_value\": \"组织训练\"\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"这个地方比较富裕\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们在这里打完仗以后，就往东北就回到汾阳、孝义附近，这个地方比较富裕，你在山沟里吃饭都困难，在这边比较富裕，也便于我们组织训练。\",\n        \"type_basis\": \"核心是部队移动和训练准备，MATERIAL；Actor为我方部队，地点和目的作为环境；不是身份关系或言说。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC06-S0002\",\n    \"BATCH03-DOC06-S0003\",\n    \"BATCH03-DOC06-S0004\",\n    \"BATCH03-DOC06-S0006\",\n    \"BATCH03-DOC06-S0008\",\n    \"BATCH03-DOC06-S0010\",\n    \"BATCH03-DOC06-S0012\",\n    \"BATCH03-DOC06-S0014\",\n    \"BATCH03-DOC06-S0016\",\n    \"BATCH03-DOC06-S0018\",\n    \"BATCH03-DOC06-S0020\",\n    \"BATCH03-DOC06-S0022\",\n    \"BATCH03-DOC06-S0024\",\n    \"BATCH03-DOC06-S0026\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5922,
+    "total_tokens": 32418,
+    "completion_tokens": 26496,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 23222
+    },
+    "time_to_first_token_ms": 413349,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 26495000
+  }
+}

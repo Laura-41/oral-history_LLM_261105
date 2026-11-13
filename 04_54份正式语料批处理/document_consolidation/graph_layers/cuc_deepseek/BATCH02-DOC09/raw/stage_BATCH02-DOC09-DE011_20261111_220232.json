@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T22:02:32",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC09-DE011",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC09-DE011",
+  "usage": {
+    "prompt_tokens": 1154,
+    "total_tokens": 5360,
+    "completion_tokens": 4206,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3448
+    },
+    "time_to_first_token_ms": 33412,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC09-DE011\",\n  \"event_enrichment\": {\n    \"result_state\": \"新营接到自行向西转移的命令，并获知在敌人追击紧迫、实在不行时可主动过黄河。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件边界从交代685团仅有两个老营、新营如何处置的背景开始，到发出自行向西转移及必要时可过黄河的命令为止；“因为他没武器呀”是命令原因说明，未另立阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE011-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"背景：685团仅有两个老营，新营的处置问题在敌人南下作战时被提出。\",\n      \"process_text\": \"当时685团只有两个老营，新营如何处置成为问题；敌人南下时进行作战活动。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0079\"\n      ],\n      \"evidence_quote\": \"当时我们685团只有两个老营，这个新营怎么办？敌人南下我们进行作战活动的时候\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE011-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"发出命令：让新营自行向西转移。\",\n      \"process_text\": \"叫新营自行往西走。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0079\"\n      ],\n      \"evidence_quote\": \"叫这个新营啊，叫他自行往西走\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE011-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"补充条件：若敌人追击紧迫，允许新营主动过黄河。\",\n      \"process_text\": \"如果敌人追得紧，实在不行可以主动地过黄河去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0079\"\n      ],\n      \"evidence_quote\": \"就是如果敌人要追得紧，实在不行你可以主动地过黄河去。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE011-P01\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE011-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0079\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE011-P02\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE011-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0079\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC09-DE011",
+    "event_enrichment": {
+      "result_state": "新营接到自行向西转移的命令，并获知在敌人追击紧迫、实在不行时可主动过黄河。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件边界从交代685团仅有两个老营、新营如何处置的背景开始，到发出自行向西转移及必要时可过黄河的命令为止；“因为他没武器呀”是命令原因说明，未另立阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC09-DE011-P01",
+        "stage_order": 1,
+        "stage_summary": "背景：685团仅有两个老营，新营的处置问题在敌人南下作战时被提出。",
+        "process_text": "当时685团只有两个老营，新营如何处置成为问题；敌人南下时进行作战活动。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0079"
+        ],
+        "evidence_quote": "当时我们685团只有两个老营，这个新营怎么办？敌人南下我们进行作战活动的时候",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE011-P02",
+        "stage_order": 2,
+        "stage_summary": "发出命令：让新营自行向西转移。",
+        "process_text": "叫新营自行往西走。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0079"
+        ],
+        "evidence_quote": "叫这个新营啊，叫他自行往西走",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE011-P03",
+        "stage_order": 3,
+        "stage_summary": "补充条件：若敌人追击紧迫，允许新营主动过黄河。",
+        "process_text": "如果敌人追得紧，实在不行可以主动地过黄河去。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0079"
+        ],
+        "evidence_quote": "就是如果敌人要追得紧，实在不行你可以主动地过黄河去。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC09-DE011-P01",
+        "target_stage_id": "BATCH02-DOC09-DE011-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0079",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE011-P02",
+        "target_stage_id": "BATCH02-DOC09-DE011-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC09-S0079",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

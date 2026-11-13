@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T07:51:09",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC01-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC01-DE002",
+  "usage": {
+    "prompt_tokens": 1621,
+    "total_tokens": 14022,
+    "completion_tokens": 12401,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10925
+    },
+    "tokens_per_second": 12400000,
+    "time_to_first_token_ms": 183618,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V1-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC01-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"当地武装与新四军接上头，上海地下党领导的武装并入后由陈毅改编为江南抗日义勇军第三路司令部；原文并交代江抗三路由一百多人发展到一个团、一个团参加主力军、主力军的一个旅以后变成（第）六纵队。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于S0012所述当地部队发展及新四军第一批部队到家乡，止于S0014所述并入后由陈毅改编为江南抗日义勇军第三路司令部；S0020作为该部队后续发展的结果/影响纳入。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"新四军第一批部队到达当地武装家乡，形成接上头背景\",\n      \"process_text\": \"这个部队发展，新四军成立后第一批部队于1938年5月左右由王必成带一个营到家乡。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0012\"\n      ],\n      \"evidence_quote\": \"这样子，这个部队（就开始）发展，发展到新四军到我们那个家乡呢。他新四军成立是1937年12月，在武汉组建，叶挺成立的。成立以后呢，第一批新四军部队到我们家乡来的时候呢，也就是1938年的5月份左右了。是由后来的新四军一师二旅的旅长王必成，原来的军科院副院长，昆明军区的司令员，南京军区的副司令员。王必成带他这个团的副团长兼参谋长，带了一个营。这个营长叫段焕竞，以后当南京军区副司令员，当时是一个营的营长，带了部队，第一批到我们家乡。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"当地武装与新四军接上头\",\n      \"process_text\": \"我们就和新四军接上头了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0012\"\n      ],\n      \"evidence_quote\": \"我们就和新四军接上头了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"上海地下党领导武装并入并由陈毅改编为江南抗日义勇军第三路司令部\",\n      \"process_text\": \"我们这个武装归上海地下党领导，要并到那里去，以后并到那里去就和陈毅元帅见面，陈毅元帅把部队改成江南抗日义勇军第三路司令部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0014\"\n      ],\n      \"evidence_quote\": \"那我们这个武装是归上海地下党领导的，就是上海地下党要并到那里去。以后并到那里去，就和陈毅元帅见面了。陈毅元帅把我们这个部队改成“江南抗日义勇军第三路”，没有第一路，也没有第二路，也没有第四路，也没有第五路，就是第三路。叫江南抗日义勇军第三路司令部。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"交代江抗三路后续发展到一个团、参加主力军及变成（第）六纵队\",\n      \"process_text\": \"我们八个人是哥哥带下来发展的，发展了五十几个抗日青年，选了八个人来参加“江抗三路”；“江抗三路”由一百多人发展到一个团，一个团参加主力军，主力军的一个旅以后变成（第）六纵队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0020\"\n      ],\n      \"evidence_quote\": \"所以这一个部队，我在这里就交代完了。就是说我们八个人是哥哥带下来发展的，发展了五十几个抗日青年，选了八个人来参加“江抗三路”。“江抗三路”由一百多人发展到一个团，一个团参加主力军，主力军的一个旅以后就变成（第）六纵队。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE002-P01\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0012\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE002-P02\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0014\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE002-P03\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE002-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0020\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC01-DE002",
+    "event_enrichment": {
+      "result_state": "当地武装与新四军接上头，上海地下党领导的武装并入后由陈毅改编为江南抗日义勇军第三路司令部；原文并交代江抗三路由一百多人发展到一个团、一个团参加主力军、主力军的一个旅以后变成（第）六纵队。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于S0012所述当地部队发展及新四军第一批部队到家乡，止于S0014所述并入后由陈毅改编为江南抗日义勇军第三路司令部；S0020作为该部队后续发展的结果/影响纳入。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC01-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "新四军第一批部队到达当地武装家乡，形成接上头背景",
+        "process_text": "这个部队发展，新四军成立后第一批部队于1938年5月左右由王必成带一个营到家乡。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0012"
+        ],
+        "evidence_quote": "这样子，这个部队（就开始）发展，发展到新四军到我们那个家乡呢。他新四军成立是1937年12月，在武汉组建，叶挺成立的。成立以后呢，第一批新四军部队到我们家乡来的时候呢，也就是1938年的5月份左右了。是由后来的新四军一师二旅的旅长王必成，原来的军科院副院长，昆明军区的司令员，南京军区的副司令员。王必成带他这个团的副团长兼参谋长，带了一个营。这个营长叫段焕竞，以后当南京军区副司令员，当时是一个营的营长，带了部队，第一批到我们家乡。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "当地武装与新四军接上头",
+        "process_text": "我们就和新四军接上头了。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0012"
+        ],
+        "evidence_quote": "我们就和新四军接上头了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "上海地下党领导武装并入并由陈毅改编为江南抗日义勇军第三路司令部",
+        "process_text": "我们这个武装归上海地下党领导，要并到那里去，以后并到那里去就和陈毅元帅见面，陈毅元帅把部队改成江南抗日义勇军第三路司令部。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0014"
+        ],
+        "evidence_quote": "那我们这个武装是归上海地下党领导的，就是上海地下党要并到那里去。以后并到那里去，就和陈毅元帅见面了。陈毅元帅把我们这个部队改成“江南抗日义勇军第三路”，没有第一路，也没有第二路，也没有第四路，也没有第五路，就是第三路。叫江南抗日义勇军第三路司令部。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "交代江抗三路后续发展到一个团、参加主力军及变成（第）六纵队",
+        "process_text": "我们八个人是哥哥带下来发展的，发展了五十几个抗日青年，选了八个人来参加“江抗三路”；“江抗三路”由一百多人发展到一个团，一个团参加主力军，主力军的一个旅以后变成（第）六纵队。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0020"
+        ],
+        "evidence_quote": "所以这一个部队，我在这里就交代完了。就是说我们八个人是哥哥带下来发展的，发展了五十几个抗日青年，选了八个人来参加“江抗三路”。“江抗三路”由一百多人发展到一个团，一个团参加主力军，主力军的一个旅以后就变成（第）六纵队。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC01-DE002-P01",
+        "target_stage_id": "BATCH01-DOC01-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC01-S0012",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE002-P02",
+        "target_stage_id": "BATCH01-DOC01-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC01-S0014",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE002-P03",
+        "target_stage_id": "BATCH01-DOC01-DE002-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH01-DOC01-S0020",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,144 @@
+{
+  "run_time": "2026-11-12T16:08:25",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC09-DE005",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC09-DE005",
+  "usage": {
+    "prompt_tokens": 1725,
+    "total_tokens": 15126,
+    "completion_tokens": 13401,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 11620
+    },
+    "tokens_per_second": 13400000,
+    "time_to_first_token_ms": 250157,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-22\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC09-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"医院遭轰炸扫射，伤员出现二次负伤；司机驾驶吉普车遭低空扫射未中，返回后满头大汗。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起自 S0086 所述医院协议背景与国民党轰炸扫射湖心寺，止于 S0090 所述司机遇袭后回来满头大汗；S0090 末尾挂牌仪式为同段后续，不纳入本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"医院有不准轰炸并放置红十字标志的协议背景\",\n      \"process_text\": \"定好协议呀，就是医院不准轰炸，要我们屋顶上放红十字。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0086\"\n      ],\n      \"evidence_quote\": \"定好协议呀，就是医院不准轰炸，要我们屋顶上放红十字。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"国民党轰炸并隔一两天扫射湖心寺医院\",\n      \"process_text\": \"国民党轰炸我们湖心寺，隔了一两天来扫射。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0086\"\n      ],\n      \"evidence_quote\": \"国民党轰炸我们湖心寺，隔了一两天来扫射。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"扫射造成前方负伤伤员二次负伤，外科医生目击\",\n      \"process_text\": \"有些伤员前方负伤，到这里来第二次负伤，这个外科医生亲眼都看到了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0088\"\n      ],\n      \"evidence_quote\": \"有些伤员前方负伤，到这里来第二次负伤，这个外科医生亲眼都看到了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"医生向国民党政府提出严正抗议\",\n      \"process_text\": \"他向国民党政府提出严正抗议，你们不执行协议，是宋庆龄女士请我来的，我差点被你们打死了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0088\"\n      ],\n      \"evidence_quote\": \"他向国民党政府提出严正抗议，你们不执行协议，是宋庆龄女士请我来的，我差点被你们打死了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE005-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"派一辆美国吉普车给相关人员\",\n      \"process_text\": \"回来我们派了一个美国的吉普车给他。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0088\"\n      ],\n      \"evidence_quote\": \"回来我们派了一个美国的吉普车给他。\",\n      \"confidence\": \"LOW\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE005-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"司机驾驶吉普车遭国民党飞机低空扫射，未中，差点被打死，返回后满头大汗\",\n      \"process_text\": \"国民党飞机以为是我们新四军华中军区的领导干部呢，吉普车嘛，低空扫射，对那个吉普车后面啪啪啪啪啪打。好在我们这个司机啊，有经验，从淮阴这个市区到我们湖心寺有将近三十华里。那个飞机跟着他打没有打中，他跟着绕，那公路也不宽，差点被打死了，他气坏了，回来以后满头大汗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0090\"\n      ],\n      \"evidence_quote\": \"国民党飞机以为是我们新四军华中军区的领导干部呢，吉普车嘛，低空扫射，对那个吉普车后面啪啪啪啪啪打。好在我们这个司机啊，有经验，从淮阴这个市区到我们湖心寺有将近三十华里。那个飞机跟着他打没有打中，他跟着绕，那公路也不宽，差点被打死了，他气坏了，回来以后满头大汗。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE005-P01\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0086\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE005-P02\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE005-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0086\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE005-P03\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE005-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0088\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE005-P04\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE005-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0088\",\n      \"confidence\": \"LOW\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE005-P05\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE005-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0090\",\n      \"confidence\": \"LOW\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-22",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC09-DE005",
+    "event_enrichment": {
+      "result_state": "医院遭轰炸扫射，伤员出现二次负伤；司机驾驶吉普车遭低空扫射未中，返回后满头大汗。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起自 S0086 所述医院协议背景与国民党轰炸扫射湖心寺，止于 S0090 所述司机遇袭后回来满头大汗；S0090 末尾挂牌仪式为同段后续，不纳入本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC09-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "医院有不准轰炸并放置红十字标志的协议背景",
+        "process_text": "定好协议呀，就是医院不准轰炸，要我们屋顶上放红十字。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0086"
+        ],
+        "evidence_quote": "定好协议呀，就是医院不准轰炸，要我们屋顶上放红十字。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "国民党轰炸并隔一两天扫射湖心寺医院",
+        "process_text": "国民党轰炸我们湖心寺，隔了一两天来扫射。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0086"
+        ],
+        "evidence_quote": "国民党轰炸我们湖心寺，隔了一两天来扫射。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "扫射造成前方负伤伤员二次负伤，外科医生目击",
+        "process_text": "有些伤员前方负伤，到这里来第二次负伤，这个外科医生亲眼都看到了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0088"
+        ],
+        "evidence_quote": "有些伤员前方负伤，到这里来第二次负伤，这个外科医生亲眼都看到了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "医生向国民党政府提出严正抗议",
+        "process_text": "他向国民党政府提出严正抗议，你们不执行协议，是宋庆龄女士请我来的，我差点被你们打死了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0088"
+        ],
+        "evidence_quote": "他向国民党政府提出严正抗议，你们不执行协议，是宋庆龄女士请我来的，我差点被你们打死了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE005-P05",
+        "stage_order": 5,
+        "stage_summary": "派一辆美国吉普车给相关人员",
+        "process_text": "回来我们派了一个美国的吉普车给他。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0088"
+        ],
+        "evidence_quote": "回来我们派了一个美国的吉普车给他。",
+        "confidence": "LOW"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE005-P06",
+        "stage_order": 6,
+        "stage_summary": "司机驾驶吉普车遭国民党飞机低空扫射，未中，差点被打死，返回后满头大汗",
+        "process_text": "国民党飞机以为是我们新四军华中军区的领导干部呢，吉普车嘛，低空扫射，对那个吉普车后面啪啪啪啪啪打。好在我们这个司机啊，有经验，从淮阴这个市区到我们湖心寺有将近三十华里。那个飞机跟着他打没有打中，他跟着绕，那公路也不宽，差点被打死了，他气坏了，回来以后满头大汗。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0090"
+        ],
+        "evidence_quote": "国民党飞机以为是我们新四军华中军区的领导干部呢，吉普车嘛，低空扫射，对那个吉普车后面啪啪啪啪啪打。好在我们这个司机啊，有经验，从淮阴这个市区到我们湖心寺有将近三十华里。那个飞机跟着他打没有打中，他跟着绕，那公路也不宽，差点被打死了，他气坏了，回来以后满头大汗。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC09-DE005-P01",
+        "target_stage_id": "BATCH06-DOC09-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0086",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE005-P02",
+        "target_stage_id": "BATCH06-DOC09-DE005-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC09-S0086",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE005-P03",
+        "target_stage_id": "BATCH06-DOC09-DE005-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC09-S0088",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE005-P04",
+        "target_stage_id": "BATCH06-DOC09-DE005-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0088",
+        "confidence": "LOW"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE005-P05",
+        "target_stage_id": "BATCH06-DOC09-DE005-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0090",
+        "confidence": "LOW"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

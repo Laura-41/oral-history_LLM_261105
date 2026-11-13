@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-11T20:32:18",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC02-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC02-DE002",
+  "usage": {
+    "prompt_tokens": 1186,
+    "total_tokens": 6048,
+    "completion_tokens": 4862,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4216
+    },
+    "tokens_per_second": 4861000,
+    "time_to_first_token_ms": 44075,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC02-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆于1935年以连长职务在南京炮校学习。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以原文所述1935年赴南京炮校及在炮校以连长职务学习为界；前引九一八后蒋介石整军设校为背景。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"背景：九一八事变后蒋介石整顿部队，设立专门学校培养连、营干部。\",\n      \"process_text\": \"九一八事变后，蒋介石要整顿部队，把步兵、骑兵、炮兵、装甲兵等搞了几个专门学校来培养干部，先培养连、营干部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0022\"\n      ],\n      \"evidence_quote\": \"那是（19）31年九·一八事变以后，蒋介石要整（顿）他的部队，把步兵、骑兵、炮兵，还有装甲（兵）吧，搞了几个专门学校来培养干部。先培养连、营干部\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈锐霆1935年以连长职务赴南京炮校学习。\",\n      \"process_text\": \"我1935年到南京炮校去，在那学习的时候是以连长职务去的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0022\"\n      ],\n      \"evidence_quote\": \"陈锐霆：我（19）35年到南京炮校去，那是（19）31年九·一八事变以后，蒋介石要整（顿）他的部队，把步兵、骑兵、炮兵，还有装甲（兵）吧，搞了几个专门学校来培养干部。先培养连、营干部，我这个（19）35年在那学习的时候是（以）连长（职务）去的嘛。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE002-P01\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE002-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0022\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC02-DE002",
+    "event_enrichment": {
+      "result_state": "陈锐霆于1935年以连长职务在南京炮校学习。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以原文所述1935年赴南京炮校及在炮校以连长职务学习为界；前引九一八后蒋介石整军设校为背景。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC02-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "背景：九一八事变后蒋介石整顿部队，设立专门学校培养连、营干部。",
+        "process_text": "九一八事变后，蒋介石要整顿部队，把步兵、骑兵、炮兵、装甲兵等搞了几个专门学校来培养干部，先培养连、营干部。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0022"
+        ],
+        "evidence_quote": "那是（19）31年九·一八事变以后，蒋介石要整（顿）他的部队，把步兵、骑兵、炮兵，还有装甲（兵）吧，搞了几个专门学校来培养干部。先培养连、营干部",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "陈锐霆1935年以连长职务赴南京炮校学习。",
+        "process_text": "我1935年到南京炮校去，在那学习的时候是以连长职务去的。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0022"
+        ],
+        "evidence_quote": "陈锐霆：我（19）35年到南京炮校去，那是（19）31年九·一八事变以后，蒋介石要整（顿）他的部队，把步兵、骑兵、炮兵，还有装甲（兵）吧，搞了几个专门学校来培养干部。先培养连、营干部，我这个（19）35年在那学习的时候是（以）连长（职务）去的嘛。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC02-DE002-P01",
+        "target_stage_id": "BATCH02-DOC02-DE002-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC02-S0022",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

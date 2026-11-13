@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T23:17:28",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC04-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC04-DE003",
+  "usage": {
+    "prompt_tokens": 1313,
+    "total_tokens": 5153,
+    "completion_tokens": 3840,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2779
+    },
+    "time_to_first_token_ms": 57002,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3839000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC04-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"在党校学习中国问题、列宁主义问题，随后参加全校整风运动，与老干部同队同支部学习并开展批评与自我批评，自述学习了不少东西。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件从在党校最初学习中国问题、列宁主义问题开始，到整风文件到来转为全校整风运动、与老干部同队同支部学习并开展批评与自我批评结束；后续日军扫荡情报和军部转移不属于本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"在党校最初学习中国问题、列宁主义问题，政治经济学尚未正式开课。\",\n      \"process_text\": \"在那个地方最初学一点中国问题，列宁主义问题啊，政治经济学还没有正式教\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0031\"\n      ],\n      \"evidence_quote\": \"在那个地方最初学一点中国问题，列宁主义问题啊，政治经济学还没有正式教\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"整风文件到来，学习转为全校整风运动。\",\n      \"process_text\": \"接着就整风文件就来了，就转成全校的整风运动。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0031\"\n      ],\n      \"evidence_quote\": \"接着就整风文件就来了，就转成全校的整风运动。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"整风运动中与老干部同队同支部，一起学习。\",\n      \"process_text\": \"在整风运动的时候，我们是跟老干部在一个队上嘛，跟老干部在一起，一个支部里边，学习了好多东西。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0031\"\n      ],\n      \"evidence_quote\": \"在整风运动的时候，我们是跟老干部在一个队上嘛，跟老干部在一起，一个支部里边，学习了好多东西。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"在党校过集体党的生活，开展批评与自我批评，向老同志学习。\",\n      \"process_text\": \"我原来是集体的党的生活也没过过，（但是）在党校里边（很多人）都是很熟悉的，自己都批评与自我批评，老同志都讲得非常实在了，我们学习了不少东西。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0033\"\n      ],\n      \"evidence_quote\": \"我原来是集体的党的生活也没过过，（但是）在党校里边（很多人）都是很熟悉的，自己都批评与自我批评，老同志都讲得非常实在了，我们学习了不少东西。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE003-P01\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0031\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE003-P02\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0031\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE003-P03\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE003-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0033\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC04-DE003",
+    "event_enrichment": {
+      "result_state": "在党校学习中国问题、列宁主义问题，随后参加全校整风运动，与老干部同队同支部学习并开展批评与自我批评，自述学习了不少东西。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件从在党校最初学习中国问题、列宁主义问题开始，到整风文件到来转为全校整风运动、与老干部同队同支部学习并开展批评与自我批评结束；后续日军扫荡情报和军部转移不属于本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC04-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "在党校最初学习中国问题、列宁主义问题，政治经济学尚未正式开课。",
+        "process_text": "在那个地方最初学一点中国问题，列宁主义问题啊，政治经济学还没有正式教",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0031"
+        ],
+        "evidence_quote": "在那个地方最初学一点中国问题，列宁主义问题啊，政治经济学还没有正式教",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "整风文件到来，学习转为全校整风运动。",
+        "process_text": "接着就整风文件就来了，就转成全校的整风运动。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0031"
+        ],
+        "evidence_quote": "接着就整风文件就来了，就转成全校的整风运动。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "整风运动中与老干部同队同支部，一起学习。",
+        "process_text": "在整风运动的时候，我们是跟老干部在一个队上嘛，跟老干部在一起，一个支部里边，学习了好多东西。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0031"
+        ],
+        "evidence_quote": "在整风运动的时候，我们是跟老干部在一个队上嘛，跟老干部在一起，一个支部里边，学习了好多东西。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "在党校过集体党的生活，开展批评与自我批评，向老同志学习。",
+        "process_text": "我原来是集体的党的生活也没过过，（但是）在党校里边（很多人）都是很熟悉的，自己都批评与自我批评，老同志都讲得非常实在了，我们学习了不少东西。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0033"
+        ],
+        "evidence_quote": "我原来是集体的党的生活也没过过，（但是）在党校里边（很多人）都是很熟悉的，自己都批评与自我批评，老同志都讲得非常实在了，我们学习了不少东西。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC04-DE003-P01",
+        "target_stage_id": "BATCH04-DOC04-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC04-S0031",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC04-DE003-P02",
+        "target_stage_id": "BATCH04-DOC04-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC04-S0031",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC04-DE003-P03",
+        "target_stage_id": "BATCH04-DOC04-DE003-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC04-S0033",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

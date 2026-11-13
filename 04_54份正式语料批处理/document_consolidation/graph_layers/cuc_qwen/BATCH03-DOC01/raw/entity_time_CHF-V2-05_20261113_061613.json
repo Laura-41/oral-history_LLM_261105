@@ -1,0 +1,3053 @@
+{
+  "run_time": "2026-11-13T06:16:13",
+  "run_stage": "GRAPH_ENRICHMENT_ENTITY_TIME",
+  "task": "entity_time",
+  "packet_key": "CHF-V2-05",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "CHF-V2-05",
+  "usage": {
+    "prompt_tokens": 12325,
+    "total_tokens": 76677,
+    "completion_tokens": 64352,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 40357
+    },
+    "time_to_first_token_ms": 952744,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 12870200
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-05\",\n  \"task\": \"entity_time\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"entities\": [\n    {\"entity_id\": \"ENT001\", \"canonical_name\": \"陈海峰\", \"entity_type\": \"PERSON\", \"entity_subtype\": \"INDIVIDUAL\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT002\", \"canonical_name\": \"孙康清\", \"entity_type\": \"PERSON\", \"entity_subtype\": \"INDIVIDUAL\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT003\", \"canonical_name\": \"王涛\", \"entity_type\": \"PERSON\", \"entity_subtype\": \"INDIVIDUAL\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT004\", \"canonical_name\": \"黄农\", \"entity_type\": \"PERSON\", \"entity_subtype\": \"INDIVIDUAL\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"MEDIUM\"},\n    {\"entity_id\": \"ENT005\", \"canonical_name\": \"粟裕\", \"entity_type\": \"PERSON\", \"entity_subtype\": \"INDIVIDUAL\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT006\", \"canonical_name\": \"高敬亭\", \"entity_type\": \"PERSON\", \"entity_subtype\": \"INDIVIDUAL\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT007\", \"canonical_name\": \"宫乃泉\", \"entity_type\": \"PERSON\", \"entity_subtype\": \"INDIVIDUAL\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT008\", \"canonical_name\": \"史沫特莱\", \"entity_type\": \"PERSON\", \"entity_subtype\": \"INDIVIDUAL\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT009\", \"canonical_name\": \"孙科\", \"entity_type\": \"PERSON\", \"entity_subtype\": \"INDIVIDUAL\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT010\", \"canonical_name\": \"宋庆龄\", \"entity_type\": \"PERSON\", \"entity_subtype\": \"INDIVIDUAL\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT011\", \"canonical_name\": \"林可胜\", \"entity_type\": \"PERSON\", \"entity_subtype\": \"INDIVIDUAL\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT012\", \"canonical_name\": \"沈其震\", \"entity_type\": \"PERSON\", \"entity_subtype\": \"INDIVIDUAL\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT013\", \"canonical_name\": \"陈仁洪\", \"entity_type\": \"PERSON\", \"entity_subtype\": \"INDIVIDUAL\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT014\", \"canonical_name\": \"新四军\", \"entity_type\": \"MILITARY_UNIT\", \"entity_subtype\": \"MILITARY_FORMATION\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT015\", \"canonical_name\": \"江南抗日义勇军第三路\", \"entity_type\": \"MILITARY_UNIT\", \"entity_subtype\": \"MILITARY_FORMATION\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT016\", \"canonical_name\": \"新四军军部教导总队\", \"entity_type\": \"MILITARY_UNIT\", \"entity_subtype\": \"MILITARY_FORMATION\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT017\", \"canonical_name\": \"新四军军医处\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"OTHER\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT018\", \"canonical_name\": \"三支队军医处\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"OTHER\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT019\", \"canonical_name\": \"五团二营\", \"entity_type\": \"MILITARY_UNIT\", \"entity_subtype\": \"MILITARY_FORMATION\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT020\", \"canonical_name\": \"五团\", \"entity_type\": \"MILITARY_UNIT\", \"entity_subtype\": \"MILITARY_FORMATION\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT021\", \"canonical_name\": \"新四军一师二旅五团\", \"entity_type\": \"MILITARY_UNIT\", \"entity_subtype\": \"MILITARY_FORMATION\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT022\", \"canonical_name\": \"皖南新四军前方医院\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"HOSPITAL\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT023\", \"canonical_name\": \"新四军苏中卫生学校\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"SCHOOL\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT024\", \"canonical_name\": \"一师老一团\", \"entity_type\": \"MILITARY_UNIT\", \"entity_subtype\": \"MILITARY_FORMATION\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT025\", \"canonical_name\": \"苏浙军区卫生部\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"OTHER\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT026\", \"canonical_name\": \"华中军区第一后方医院\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"HOSPITAL\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT027\", \"canonical_name\": \"华东军区第一重伤医院\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"HOSPITAL\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT028\", \"canonical_name\": \"福州卫生局\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"GOVERNMENT_AGENCY\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT029\", \"canonical_name\": \"卫生部咨询委员会\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"OTHER\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT030\", \"canonical_name\": \"上海荣华印书馆\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"PRINTING_HOUSE\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT031\", \"canonical_name\": \"地下党\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"PARTY_ORGANIZATION\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT032\", \"canonical_name\": \"猎户队\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"MASS_ORGANIZATION\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT033\", \"canonical_name\": \"妇女会\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"MASS_ORGANIZATION\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT034\", \"canonical_name\": \"儿童团\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"MASS_ORGANIZATION\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT035\", \"canonical_name\": \"三支队\", \"entity_type\": \"MILITARY_UNIT\", \"entity_subtype\": \"MILITARY_FORMATION\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT037\", \"canonical_name\": \"机炮连\", \"entity_type\": \"MILITARY_UNIT\", \"entity_subtype\": \"MILITARY_FORMATION\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT038\", \"canonical_name\": \"团部\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"OTHER\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"MEDIUM\"},\n    {\"entity_id\": \"ENT039\", \"canonical_name\": \"江北指挥部\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"OTHER\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT040\", \"canonical_name\": \"四支队\", \"entity_type\": \"MILITARY_UNIT\", \"entity_subtype\": \"MILITARY_FORMATION\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT041\", \"canonical_name\": \"二支队\", \"entity_type\": \"MILITARY_UNIT\", \"entity_subtype\": \"MILITARY_FORMATION\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT042\", \"canonical_name\": \"一支队\", \"entity_type\": \"MILITARY_UNIT\", \"entity_subtype\": \"MILITARY_FORMATION\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT043\", \"canonical_name\": \"新四军卫生部\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"OTHER\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT044\", \"canonical_name\": \"红十字会总会\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"OTHER\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT045\", \"canonical_name\": \"协和医院\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"HOSPITAL\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT046\", \"canonical_name\": \"国民党\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"PARTY_ORGANIZATION\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT047\", \"canonical_name\": \"国民党军队\", \"entity_type\": \"MILITARY_UNIT\", \"entity_subtype\": \"MILITARY_FORMATION\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT048\", \"canonical_name\": \"八路军\", \"entity_type\": \"MILITARY_UNIT\", \"entity_subtype\": \"MILITARY_FORMATION\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT049\", \"canonical_name\": \"上海地下党\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"PARTY_ORGANIZATION\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT050\", \"canonical_name\": \"地方党\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"PARTY_ORGANIZATION\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT051\", \"canonical_name\": \"日本鬼子\", \"entity_type\": \"MILITARY_UNIT\", \"entity_subtype\": \"OTHER\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT052\", \"canonical_name\": \"伪军\", \"entity_type\": \"MILITARY_UNIT\", \"entity_subtype\": \"OTHER\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT053\", \"canonical_name\": \"新四军军部\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"OTHER\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT054\", \"canonical_name\": \"江苏江阴前周乡东篁村\", \"entity_type\": \"PLACE\", \"entity_subtype\": \"ADDRESS\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT055\", \"canonical_name\": \"上海\", \"entity_type\": \"PLACE\", \"entity_subtype\": \"SETTLEMENT\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT056\", \"canonical_name\": \"南京\", \"entity_type\": \"PLACE\", \"entity_subtype\": \"SETTLEMENT\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT057\", \"canonical_name\": \"北京和平里陈海峰家里\", \"entity_type\": \"PLACE\", \"entity_subtype\": \"ADDRESS\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT058\", \"canonical_name\": \"中分村\", \"entity_type\": \"PLACE\", \"entity_subtype\": \"SETTLEMENT\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT059\", \"canonical_name\": \"繁昌\", \"entity_type\": \"PLACE\", \"entity_subtype\": \"SETTLEMENT\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT060\", \"canonical_name\": \"铁门闩\", \"entity_type\": \"PLACE\", \"entity_subtype\": \"LANDMARK\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT061\", \"canonical_name\": \"碾庄圩\", \"entity_type\": \"PLACE\", \"entity_subtype\": \"SETTLEMENT\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT062\", \"canonical_name\": \"五里亭\", \"entity_type\": \"PLACE\", \"entity_subtype\": \"SETTLEMENT\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT063\", \"canonical_name\": \"老虎山\", \"entity_type\": \"PLACE\", \"entity_subtype\": \"LANDMARK\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT064\", \"canonical_name\": \"皖南\", \"entity_type\": \"PLACE\", \"entity_subtype\": \"ADMINISTRATIVE_PLACE\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT065\", \"canonical_name\": \"江北\", \"entity_type\": \"PLACE\", \"entity_subtype\": \"ADMINISTRATIVE_PLACE\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT066\", \"canonical_name\": \"长江\", \"entity_type\": \"PLACE\", \"entity_subtype\": \"ROUTE\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT067\", \"canonical_name\": \"香港\", \"entity_type\": \"PLACE\", \"entity_subtype\": \"SETTLEMENT\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT068\", \"canonical_name\": \"第一次繁昌战斗\", \"entity_type\": \"HISTORICAL_EVENT\", \"entity_subtype\": \"BATTLE\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT069\", \"canonical_name\": \"第二次繁昌战斗\", \"entity_type\": \"HISTORICAL_EVENT\", \"entity_subtype\": \"BATTLE\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT070\", \"canonical_name\": \"第六次繁昌战斗\", \"entity_type\": \"HISTORICAL_EVENT\", \"entity_subtype\": \"BATTLE\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT071\", \"canonical_name\": \"八次繁昌战斗\", \"entity_type\": \"HISTORICAL_EVENT\", \"entity_subtype\": \"BATTLE\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT072\", \"canonical_name\": \"铁门闩战斗\", \"entity_type\": \"HISTORICAL_EVENT\", \"entity_subtype\": \"BATTLE\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT073\", \"canonical_name\": \"车桥战役\", \"entity_type\": \"HISTORICAL_EVENT\", \"entity_subtype\": \"BATTLE\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT074\", \"canonical_name\": \"淮海战役\", \"entity_type\": \"HISTORICAL_EVENT\", \"entity_subtype\": \"BATTLE\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT075\", \"canonical_name\": \"浙赣会战\", \"entity_type\": \"HISTORICAL_EVENT\", \"entity_subtype\": \"BATTLE\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT076\", \"canonical_name\": \"大炼钢铁\", \"entity_type\": \"HISTORICAL_EVENT\", \"entity_subtype\": \"POLITICAL_EVENT\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT077\", \"canonical_name\": \"解放战争\", \"entity_type\": \"HISTORICAL_EVENT\", \"entity_subtype\": \"WAR\", \"description\": \"\", \"authority_status\": \"CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT078\", \"canonical_name\": \"抗战\", \"entity_type\": \"HISTORICAL_EVENT\", \"entity_subtype\": \"WAR\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT079\", \"canonical_name\": \"繁昌之战\", \"entity_type\": \"PUBLICATION\", \"entity_subtype\": \"OTHER\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT080\", \"canonical_name\": \"新四军军医处第二期公共卫生人员训练班\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"SCHOOL\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"HIGH\"},\n    {\"entity_id\": \"ENT081\", \"canonical_name\": \"医疗队\", \"entity_type\": \"ORGANIZATION\", \"entity_subtype\": \"OTHER\", \"description\": \"\", \"authority_status\": \"LOCAL_CANONICAL\", \"confidence\": \"MEDIUM\"}\n  ],\n  \"entity_mentions\": [\n    {\"mention_id\": \"MENT001\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT001\", \"mention_text\": \"陈海峰\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT002\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT002\", \"mention_text\": \"孙康清\", \"mention_function\": \"ANNOTATION_SUBJECT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT003\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT003\", \"mention_text\": \"王涛\", \"mention_function\": \"ANNOTATION_SUBJECT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT004\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT054\", \"mention_text\": \"江苏江阴前周乡东篁村\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT005\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT030\", \"mention_text\": \"上海荣华印书馆\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT006\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT055\", \"mention_text\": \"上海\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT007\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT015\", \"mention_text\": \"江南抗日义勇军第三路\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT008\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT016\", \"mention_text\": \"新四军军部教导总队\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT009\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT080\", \"mention_text\": \"新四军军医处第二期公共卫生人员训练班\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT010\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT018\", \"mention_text\": \"三支队军医处\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT011\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT019\", \"mention_text\": \"五团二营\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT012\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT020\", \"mention_text\": \"五团\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT013\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT021\", \"mention_text\": \"新四军一师二旅五团\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT014\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT022\", \"mention_text\": \"皖南新四军前方医院\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT015\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT023\", \"mention_text\": \"新四军苏中卫生学校\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT016\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT024\", \"mention_text\": \"一师老一团\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT017\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT025\", \"mention_text\": \"苏浙军区卫生部\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT018\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT026\", \"mention_text\": \"华中军区第一后方医院\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT019\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT027\", \"mention_text\": \"华东军区第一重伤医院\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT020\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT028\", \"mention_text\": \"福州卫生局\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT021\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT029\", \"mention_text\": \"卫生部咨询委员会\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT022\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT057\", \"mention_text\": \"北京和平里陈海峰家里\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT023\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT070\", \"mention_text\": \"第六次繁昌战斗\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT024\", \"segment_id\": \"BATCH03-DOC01-S0001\", \"entity_id\": \"ENT014\", \"mention_text\": \"新四军\", \"mention_function\": \"PROFILE_FACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT025\", \"segment_id\": \"BATCH03-DOC01-S0003\", \"entity_id\": \"ENT001\", \"mention_text\": \"陈老\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"INTERVIEWER_QUESTION\", \"confidence\": \"MEDIUM\"},\n    {\"mention_id\": \"MENT026\", \"segment_id\": \"BATCH03-DOC01-S0003\", \"entity_id\": \"ENT068\", \"mention_text\": \"第一次“繁昌战斗”\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"INTERVIEWER_QUESTION\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT027\", \"segment_id\": \"BATCH03-DOC01-S0004\", \"entity_id\": \"ENT001\", \"mention_text\": \"陈海峰\", \"mention_function\": \"SPEAKER\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT028\", \"segment_id\": \"BATCH03-DOC01-S0006\", \"entity_id\": \"ENT001\", \"mention_text\": \"陈海峰\", \"mention_function\": \"SPEAKER\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT029\", \"segment_id\": \"BATCH03-DOC01-S0006\", \"entity_id\": \"ENT017\", \"mention_text\": \"军医处\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"mention_id\": \"MENT030\", \"segment_id\": \"BATCH03-DOC01-S0006\", \"entity_id\": \"ENT068\", \"mention_text\": \"第一次“繁昌战斗”\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT031\", \"segment_id\": \"BATCH03-DOC01-S0006\", \"entity_id\": \"ENT069\", \"mention_text\": \"第二次“繁昌战斗”\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT032\", \"segment_id\": \"BATCH03-DOC01-S0006\", \"entity_id\": \"ENT058\", \"mention_text\": \"中分村\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT033\", \"segment_id\": \"BATCH03-DOC01-S0006\", \"entity_id\": \"ENT031\", \"mention_text\": \"地下党\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT034\", \"segment_id\": \"BATCH03-DOC01-S0006\", \"entity_id\": \"ENT035\", \"mention_text\": \"三支队\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT035\", \"segment_id\": \"BATCH03-DOC01-S0012\", \"entity_id\": \"ENT074\", \"mention_text\": \"淮海战役\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT036\", \"segment_id\": \"BATCH03-DOC01-S0012\", \"entity_id\": \"ENT061\", \"mention_text\": \"碾庄圩\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT037\", \"segment_id\": \"BATCH03-DOC01-S0021\", \"entity_id\": \"ENT058\", \"mention_text\": \"中分村\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT038\", \"segment_id\": \"BATCH03-DOC01-S0021\", \"entity_id\": \"ENT051\", \"mention_text\": \"日本鬼子\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT039\", \"segment_id\": \"BATCH03-DOC01-S0021\", \"entity_id\": \"ENT059\", \"mention_text\": \"繁昌\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT040\", \"segment_id\": \"BATCH03-DOC01-S0021\", \"entity_id\": \"ENT032\", \"mention_text\": \"猎户队\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT041\", \"segment_id\": \"BATCH03-DOC01-S0023\", \"entity_id\": \"ENT033\", \"mention_text\": \"妇女会\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT042\", \"segment_id\": \"BATCH03-DOC01-S0023\", \"entity_id\": \"ENT034\", \"mention_text\": \"儿童团\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT043\", \"segment_id\": \"BATCH03-DOC01-S0025\", \"entity_id\": \"ENT073\", \"mention_text\": \"车桥战役\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT044\", \"segment_id\": \"BATCH03-DOC01-S0025\", \"entity_id\": \"ENT077\", \"mention_text\": \"解放战争\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT045\", \"segment_id\": \"BATCH03-DOC01-S0025\", \"entity_id\": \"ENT078\", \"mention_text\": \"抗战\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT046\", \"segment_id\": \"BATCH03-DOC01-S0027\", \"entity_id\": \"ENT073\", \"mention_text\": \"车桥战役\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT047\", \"segment_id\": \"BATCH03-DOC01-S0028\", \"entity_id\": \"ENT068\", \"mention_text\": \"第一次“繁昌战斗”\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT048\", \"segment_id\": \"BATCH03-DOC01-S0031\", \"entity_id\": \"ENT001\", \"mention_text\": \"陈老\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"INTERVIEWER_QUESTION\", \"confidence\": \"MEDIUM\"},\n    {\"mention_id\": \"MENT049\", \"segment_id\": \"BATCH03-DOC01-S0031\", \"entity_id\": \"ENT046\", \"mention_text\": \"国民党\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"INTERVIEWER_QUESTION\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT050\", \"segment_id\": \"BATCH03-DOC01-S0031\", \"entity_id\": \"ENT075\", \"mention_text\": \"浙赣会战\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"INTERVIEWER_QUESTION\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT051\", \"segment_id\": \"BATCH03-DOC01-S0033\", \"entity_id\": \"ENT075\", \"mention_text\": \"浙赣会战\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"INTERVIEWER_QUESTION\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT052\", \"segment_id\": \"BATCH03-DOC01-S0034\", \"entity_id\": \"ENT014\", \"mention_text\": \"新四军\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"INTERVIEWER_QUESTION\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT053\", \"segment_id\": \"BATCH03-DOC01-S0037\", \"entity_id\": \"ENT078\", \"mention_text\": \"抗战\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT054\", \"segment_id\": \"BATCH03-DOC01-S0039\", \"entity_id\": \"ENT035\", \"mention_text\": \"三支队\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT055\", \"segment_id\": \"BATCH03-DOC01-S0041\", \"entity_id\": \"ENT074\", \"mention_text\": \"淮海战役\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT056\", \"segment_id\": \"BATCH03-DOC01-S0042\", \"entity_id\": \"ENT014\", \"mention_text\": \"新四军\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"INTERVIEWER_QUESTION\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT057\", \"segment_id\": \"BATCH03-DOC01-S0043\", \"entity_id\": \"ENT004\", \"mention_text\": \"黄农\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT058\", \"segment_id\": \"BATCH03-DOC01-S0045\", \"entity_id\": \"ENT041\", \"mention_text\": \"二支队\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT059\", \"segment_id\": \"BATCH03-DOC01-S0045\", \"entity_id\": \"ENT005\", \"mention_text\": \"粟裕\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT060\", \"segment_id\": \"BATCH03-DOC01-S0045\", \"entity_id\": \"ENT042\", \"mention_text\": \"一支队\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT061\", \"segment_id\": \"BATCH03-DOC01-S0045\", \"entity_id\": \"ENT035\", \"mention_text\": \"三支队\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT062\", \"segment_id\": \"BATCH03-DOC01-S0045\", \"entity_id\": \"ENT040\", \"mention_text\": \"四支队\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT063\", \"segment_id\": \"BATCH03-DOC01-S0047\", \"entity_id\": \"ENT053\", \"mention_text\": \"军部\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"mention_id\": \"MENT064\", \"segment_id\": \"BATCH03-DOC01-S0047\", \"entity_id\": \"ENT040\", \"mention_text\": \"四支队\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT065\", \"segment_id\": \"BATCH03-DOC01-S0047\", \"entity_id\": \"ENT006\", \"mention_text\": \"高敬亭\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT066\", \"segment_id\": \"BATCH03-DOC01-S0047\", \"entity_id\": \"ENT039\", \"mention_text\": \"江北指挥部\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT067\", \"segment_id\": \"BATCH03-DOC01-S0047\", \"entity_id\": \"ENT007\", \"mention_text\": \"宫乃泉\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT068\", \"segment_id\": \"BATCH03-DOC01-S0047\", \"entity_id\": \"ENT064\", \"mention_text\": \"皖南\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT069\", \"segment_id\": \"BATCH03-DOC01-S0048\", \"entity_id\": \"ENT014\", \"mention_text\": \"新四军\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"INTERVIEWER_QUESTION\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT070\", \"segment_id\": \"BATCH03-DOC01-S0048\", \"entity_id\": \"ENT047\", \"mention_text\": \"国民党军队\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"INTERVIEWER_QUESTION\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT071\", \"segment_id\": \"BATCH03-DOC01-S0049\", \"entity_id\": \"ENT008\", \"mention_text\": \"史沫特莱\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT072\", \"segment_id\": \"BATCH03-DOC01-S0049\", \"entity_id\": \"ENT046\", \"mention_text\": \"国民党\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT073\", \"segment_id\": \"BATCH03-DOC01-S0051\", \"entity_id\": \"ENT048\", \"mention_text\": \"八路军\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT074\", \"segment_id\": \"BATCH03-DOC01-S0051\", \"entity_id\": \"ENT055\", \"mention_text\": \"上海\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT075\", \"segment_id\": \"BATCH03-DOC01-S0051\", \"entity_id\": \"ENT056\", \"mention_text\": \"南京\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT076\", \"segment_id\": \"BATCH03-DOC01-S0051\", \"entity_id\": \"ENT049\", \"mention_text\": \"上海地下党\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT077\", \"segment_id\": \"BATCH03-DOC01-S0051\", \"entity_id\": \"ENT067\", \"mention_text\": \"香港\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT078\", \"segment_id\": \"BATCH03-DOC01-S0051\", \"entity_id\": \"ENT046\", \"mention_text\": \"国民党\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT079\", \"segment_id\": \"BATCH03-DOC01-S0051\", \"entity_id\": \"ENT009\", \"mention_text\": \"孙科\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT080\", \"segment_id\": \"BATCH03-DOC01-S0051\", \"entity_id\": \"ENT010\", \"mention_text\": \"宋庆龄\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT081\", \"segment_id\": \"BATCH03-DOC01-S0051\", \"entity_id\": \"ENT044\", \"mention_text\": \"红十字会总会\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT082\", \"segment_id\": \"BATCH03-DOC01-S0051\", \"entity_id\": \"ENT011\", \"mention_text\": \"林可胜\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT083\", \"segment_id\": \"BATCH03-DOC01-S0051\", \"entity_id\": \"ENT045\", \"mention_text\": \"协和医院\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT084\", \"segment_id\": \"BATCH03-DOC01-S0051\", \"entity_id\": \"ENT014\", \"mention_text\": \"新四军\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT085\", \"segment_id\": \"BATCH03-DOC01-S0051\", \"entity_id\": \"ENT012\", \"mention_text\": \"沈其震\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT086\", \"segment_id\": \"BATCH03-DOC01-S0051\", \"entity_id\": \"ENT081\", \"mention_text\": \"医疗队\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"mention_id\": \"MENT087\", \"segment_id\": \"BATCH03-DOC01-S0053\", \"entity_id\": \"ENT081\", \"mention_text\": \"医疗队\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"mention_id\": \"MENT088\", \"segment_id\": \"BATCH03-DOC01-S0057\", \"entity_id\": \"ENT064\", \"mention_text\": \"皖南\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT089\", \"segment_id\": \"BATCH03-DOC01-S0057\", \"entity_id\": \"ENT014\", \"mention_text\": \"新四军\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT090\", \"segment_id\": \"BATCH03-DOC01-S0057\", \"entity_id\": \"ENT053\", \"mention_text\": \"军部\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"mention_id\": \"MENT091\", \"segment_id\": \"BATCH03-DOC01-S0057\", \"entity_id\": \"ENT017\", \"mention_text\": \"军医处\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"mention_id\": \"MENT092\", \"segment_id\": \"BATCH03-DOC01-S0059\", \"entity_id\": \"ENT043\", \"mention_text\": \"卫生部\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"mention_id\": \"MENT093\", \"segment_id\": \"BATCH03-DOC01-S0059\", \"entity_id\": \"ENT050\", \"mention_text\": \"地方党\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT094\", \"segment_id\": \"BATCH03-DOC01-S0061\", \"entity_id\": \"ENT035\", \"mention_text\": \"三支队\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT095\", \"segment_id\": \"BATCH03-DOC01-S0063\", \"entity_id\": \"ENT001\", \"mention_text\": \"陈海峰\", \"mention_function\": \"SPEAKER\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT096\", \"segment_id\": \"BATCH03-DOC01-S0063\", \"entity_id\": \"ENT071\", \"mention_text\": \"八次“繁昌战斗”\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT097\", \"segment_id\": \"BATCH03-DOC01-S0063\", \"entity_id\": \"ENT070\", \"mention_text\": \"第六次“繁昌战斗”\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT098\", \"segment_id\": \"BATCH03-DOC01-S0063\", \"entity_id\": \"ENT072\", \"mention_text\": \"铁门闩战斗\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT099\", \"segment_id\": \"BATCH03-DOC01-S0063\", \"entity_id\": \"ENT059\", \"mention_text\": \"繁昌\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT100\", \"segment_id\": \"BATCH03-DOC01-S0063\", \"entity_id\": \"ENT058\", \"mention_text\": \"中分村\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT101\", \"segment_id\": \"BATCH03-DOC01-S0063\", \"entity_id\": \"ENT019\", \"mention_text\": \"二营\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT102\", \"segment_id\": \"BATCH03-DOC01-S0065\", \"entity_id\": \"ENT013\", \"mention_text\": \"陈仁洪\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT103\", \"segment_id\": \"BATCH03-DOC01-S0065\", \"entity_id\": \"ENT019\", \"mention_text\": \"二营\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT104\", \"segment_id\": \"BATCH03-DOC01-S0065\", \"entity_id\": \"ENT038\", \"mention_text\": \"团部\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"mention_id\": \"MENT105\", \"segment_id\": \"BATCH03-DOC01-S0065\", \"entity_id\": \"ENT037\", \"mention_text\": \"机炮连\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT106\", \"segment_id\": \"BATCH03-DOC01-S0065\", \"entity_id\": \"ENT060\", \"mention_text\": \"铁门闩\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT107\", \"segment_id\": \"BATCH03-DOC01-S0065\", \"entity_id\": \"ENT059\", \"mention_text\": \"繁昌\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT108\", \"segment_id\": \"BATCH03-DOC01-S0067\", \"entity_id\": \"ENT051\", \"mention_text\": \"鬼子\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT109\", \"segment_id\": \"BATCH03-DOC01-S0067\", \"entity_id\": \"ENT064\", \"mention_text\": \"皖南\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT110\", \"segment_id\": \"BATCH03-DOC01-S0067\", \"entity_id\": \"ENT076\", \"mention_text\": \"大炼钢铁\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT111\", \"segment_id\": \"BATCH03-DOC01-S0069\", \"entity_id\": \"ENT001\", \"mention_text\": \"小书呆子\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"mention_id\": \"MENT112\", \"segment_id\": \"BATCH03-DOC01-S0069\", \"entity_id\": \"ENT060\", \"mention_text\": \"铁门闩\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT113\", \"segment_id\": \"BATCH03-DOC01-S0071\", \"entity_id\": \"ENT013\", \"mention_text\": \"营长\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"mention_id\": \"MENT114\", \"segment_id\": \"BATCH03-DOC01-S0071\", \"entity_id\": \"ENT051\", \"mention_text\": \"鬼子\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT115\", \"segment_id\": \"BATCH03-DOC01-S0073\", \"entity_id\": \"ENT052\", \"mention_text\": \"伪军\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT116\", \"segment_id\": \"BATCH03-DOC01-S0073\", \"entity_id\": \"ENT051\", \"mention_text\": \"鬼子\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT117\", \"segment_id\": \"BATCH03-DOC01-S0073\", \"entity_id\": \"ENT013\", \"mention_text\": \"营长\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"mention_id\": \"MENT118\", \"segment_id\": \"BATCH03-DOC01-S0075\", \"entity_id\": \"ENT062\", \"mention_text\": \"五里亭\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT119\", \"segment_id\": \"BATCH03-DOC01-S0075\", \"entity_id\": \"ENT060\", \"mention_text\": \"铁门闩\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT120\", \"segment_id\": \"BATCH03-DOC01-S0075\", \"entity_id\": \"ENT051\", \"mention_text\": \"日本鬼子\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT121\", \"segment_id\": \"BATCH03-DOC01-S0077\", \"entity_id\": \"ENT051\", \"mention_text\": \"日本鬼子\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT122\", \"segment_id\": \"BATCH03-DOC01-S0077\", \"entity_id\": \"ENT037\", \"mention_text\": \"机炮连\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT123\", \"segment_id\": \"BATCH03-DOC01-S0079\", \"entity_id\": \"ENT059\", \"mention_text\": \"繁昌城\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT124\", \"segment_id\": \"BATCH03-DOC01-S0079\", \"entity_id\": \"ENT059\", \"mention_text\": \"繁昌\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT125\", \"segment_id\": \"BATCH03-DOC01-S0079\", \"entity_id\": \"ENT058\", \"mention_text\": \"中分村\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT126\", \"segment_id\": \"BATCH03-DOC01-S0079\", \"entity_id\": \"ENT063\", \"mention_text\": \"老虎山\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT127\", \"segment_id\": \"BATCH03-DOC01-S0079\", \"entity_id\": \"ENT019\", \"mention_text\": \"二营\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT128\", \"segment_id\": \"BATCH03-DOC01-S0079\", \"entity_id\": \"ENT064\", \"mention_text\": \"皖南\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT129\", \"segment_id\": \"BATCH03-DOC01-S0079\", \"entity_id\": \"ENT066\", \"mention_text\": \"长江\", \"mention_function\": \"CIRCUMSTANCE\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT130\", \"segment_id\": \"BATCH03-DOC01-S0079\", \"entity_id\": \"ENT079\", \"mention_text\": \"繁昌之战\", \"mention_function\": \"MENTION_ONLY\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT131\", \"segment_id\": \"BATCH03-DOC01-S0081\", \"entity_id\": \"ENT001\", \"mention_text\": \"陈海峰\", \"mention_function\": \"SPEAKER\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"mention_id\": \"MENT132\", \"segment_id\": \"BATCH03-DOC01-S0081\", \"entity_id\": \"ENT013\", \"mention_text\": \"营长\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"mention_id\": \"MENT133\", \"segment_id\": \"BATCH03-DOC01-S0083\", \"entity_id\": \"ENT013\", \"mention_text\": \"营长\", \"mention_function\": \"PARTICIPANT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"}\n  ],\n  \"entity_aliases\": [\n    {\"alias_id\": \"ALI001\", \"entity_id\": \"ENT001\", \"alias_text\": \"永嘉\", \"alias_type\": \"ALIAS\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"confidence\": \"HIGH\"},\n    {\"alias_id\": \"ALI002\", \"entity_id\": \"ENT001\", \"alias_text\": \"陈老\", \"alias_type\": \"ALIAS\", \"evidence_segment_id\": \"BATCH03-DOC01-S0003\", \"confidence\": \"MEDIUM\"},\n    {\"alias_id\": \"ALI003\", \"entity_id\": \"ENT001\", \"alias_text\": \"小书呆子\", \"alias_type\": \"ALIAS\", \"evidence_segment_id\": \"BATCH03-DOC01-S0069\", \"confidence\": \"MEDIUM\"},\n    {\"alias_id\": \"ALI004\", \"entity_id\": \"ENT017\", \"alias_text\": \"军医处\", \"alias_type\": \"ABBREVIATION\", \"evidence_segment_id\": \"BATCH03-DOC01-S0006\", \"confidence\": \"MEDIUM\"},\n    {\"alias_id\": \"ALI005\", \"entity_id\": \"ENT019\", \"alias_text\": \"二营\", \"alias_type\": \"ABBREVIATION\", \"evidence_segment_id\": \"BATCH03-DOC01-S0063\", \"confidence\": \"MEDIUM\"},\n    {\"alias_id\": \"ALI006\", \"entity_id\": \"ENT059\", \"alias_text\": \"繁昌城\", \"alias_type\": \"ALIAS\", \"evidence_segment_id\": \"BATCH03-DOC01-S0079\", \"confidence\": \"MEDIUM\"},\n    {\"alias_id\": \"ALI007\", \"entity_id\": \"ENT051\", \"alias_text\": \"鬼子\", \"alias_type\": \"ALIAS\", \"evidence_segment_id\": \"BATCH03-DOC01-S0067\", \"confidence\": \"MEDIUM\"},\n    {\"alias_id\": \"ALI008\", \"entity_id\": \"ENT053\", \"alias_text\": \"军部\", \"alias_type\": \"ABBREVIATION\", \"evidence_segment_id\": \"BATCH03-DOC01-S0047\", \"confidence\": \"MEDIUM\"},\n    {\"alias_id\": \"ALI009\", \"entity_id\": \"ENT043\", \"alias_text\": \"卫生部\", \"alias_type\": \"ABBREVIATION\", \"evidence_segment_id\": \"BATCH03-DOC01-S0059\", \"confidence\": \"MEDIUM\"},\n    {\"alias_id\": \"ALI010\", \"entity_id\": \"ENT068\", \"alias_text\": \"第一次“繁昌战斗”\", \"alias_type\": \"HISTORICAL_NAME\", \"evidence_segment_id\": \"BATCH03-DOC01-S0003\", \"confidence\": \"HIGH\"},\n    {\"alias_id\": \"ALI011\", \"entity_id\": \"ENT069\", \"alias_text\": \"第二次“繁昌战斗”\", \"alias_type\": \"HISTORICAL_NAME\", \"evidence_segment_id\": \"BATCH03-DOC01-S0006\", \"confidence\": \"HIGH\"},\n    {\"alias_id\": \"ALI012\", \"entity_id\": \"ENT070\", \"alias_text\": \"第六次“繁昌战斗”\", \"alias_type\": \"HISTORICAL_NAME\", \"evidence_segment_id\": \"BATCH03-DOC01-S0063\", \"confidence\": \"HIGH\"},\n    {\"alias_id\": \"ALI013\", \"entity_id\": \"ENT071\", \"alias_text\": \"八次“繁昌战斗”\", \"alias_type\": \"HISTORICAL_NAME\", \"evidence_segment_id\": \"BATCH03-DOC01-S0063\", \"confidence\": \"HIGH\"}\n  ],\n  \"entity_relations\": [\n    {\"relation_id\": \"REL001\", \"source_entity_id\": \"ENT001\", \"relation_type\": \"BORN_IN\", \"target_entity_id\": \"ENT054\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL002\", \"source_entity_id\": \"ENT001\", \"relation_type\": \"WORKED_AT\", \"target_entity_id\": \"ENT030\", \"role_label\": \"排字工人\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL003\", \"source_entity_id\": \"ENT001\", \"relation_type\": \"MEMBER_OF\", \"target_entity_id\": \"ENT015\", \"role_label\": \"宣传、情报站长\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL004\", \"source_entity_id\": \"ENT001\", \"relation_type\": \"STUDIED_AT\", \"target_entity_id\": \"ENT016\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL005\", \"source_entity_id\": \"ENT001\", \"relation_type\": \"STUDIED_AT\", \"target_entity_id\": \"ENT080\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL006\", \"source_entity_id\": \"ENT001\", \"relation_type\": \"HELD_POSITION_AT\", \"target_entity_id\": \"ENT018\", \"role_label\": \"卫生巡视员\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL007\", \"source_entity_id\": \"ENT001\", \"relation_type\": \"HELD_POSITION_AT\", \"target_entity_id\": \"ENT019\", \"role_label\": \"卫生指导员\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL008\", \"source_entity_id\": \"ENT001\", \"relation_type\": \"HELD_POSITION_AT\", \"target_entity_id\": \"ENT020\", \"role_label\": \"卫生队长\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL009\", \"source_entity_id\": \"ENT001\", \"relation_type\": \"HELD_POSITION_AT\", \"target_entity_id\": \"ENT021\", \"role_label\": \"卫生队长\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL010\", \"source_entity_id\": \"ENT001\", \"relation_type\": \"HELD_POSITION_AT\", \"target_entity_id\": \"ENT022\", \"role_label\": \"外科病室副室长\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL011\", \"source_entity_id\": \"ENT001\", \"relation_type\": \"HELD_POSITION_AT\", \"target_entity_id\": \"ENT023\", \"role_label\": \"教务主任\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL012\", \"source_entity_id\": \"ENT001\", \"relation_type\": \"HELD_POSITION_AT\", \"target_entity_id\": \"ENT024\", \"role_label\": \"卫生队长\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL013\", \"source_entity_id\": \"ENT001\", \"relation_type\": \"HELD_POSITION_AT\", \"target_entity_id\": \"ENT025\", \"role_label\": \"医政科长兼野战医院院长\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL014\", \"source_entity_id\": \"ENT001\", \"relation_type\": \"HELD_POSITION_AT\", \"target_entity_id\": \"ENT026\", \"role_label\": \"院长\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL015\", \"source_entity_id\": \"ENT001\", \"relation_type\": \"HELD_POSITION_AT\", \"target_entity_id\": \"ENT027\", \"role_label\": \"院长\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL016\", \"source_entity_id\": \"ENT001\", \"relation_type\": \"HELD_POSITION_AT\", \"target_entity_id\": \"ENT028\", \"role_label\": \"局长\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL017\", \"source_entity_id\": \"ENT001\", \"relation_type\": \"MEMBER_OF\", \"target_entity_id\": \"ENT029\", \"role_label\": \"委员\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL018\", \"source_entity_id\": \"ENT017\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT014\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL019\", \"source_entity_id\": \"ENT018\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT035\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL020\", \"source_entity_id\": \"ENT019\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT020\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL021\", \"source_entity_id\": \"ENT021\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT014\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL022\", \"source_entity_id\": \"ENT024\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT014\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL023\", \"source_entity_id\": \"ENT022\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT014\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL024\", \"source_entity_id\": \"ENT043\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT014\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0051\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL025\", \"source_entity_id\": \"ENT047\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT046\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0048\", \"source_status\": \"INTERVIEWER_QUESTION\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL026\", \"source_entity_id\": \"ENT049\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT031\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0051\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL027\", \"source_entity_id\": \"ENT049\", \"relation_type\": \"LOCATED_IN\", \"target_entity_id\": \"ENT055\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0051\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL028\", \"source_entity_id\": \"ENT030\", \"relation_type\": \"LOCATED_IN\", \"target_entity_id\": \"ENT055\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL029\", \"source_entity_id\": \"ENT011\", \"relation_type\": \"HELD_POSITION_AT\", \"target_entity_id\": \"ENT045\", \"role_label\": \"生理科主任\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0051\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL030\", \"source_entity_id\": \"ENT011\", \"relation_type\": \"HELD_POSITION_AT\", \"target_entity_id\": \"ENT044\", \"role_label\": \"总的医疗队大队长\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0051\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL031\", \"source_entity_id\": \"ENT012\", \"relation_type\": \"HELD_POSITION_AT\", \"target_entity_id\": \"ENT043\", \"role_label\": \"卫生部长\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0051\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL032\", \"source_entity_id\": \"ENT012\", \"relation_type\": \"RELATED_TO\", \"target_entity_id\": \"ENT011\", \"role_label\": \"学生/进修\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0051\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL033\", \"source_entity_id\": \"ENT006\", \"relation_type\": \"RELATED_TO\", \"target_entity_id\": \"ENT040\", \"role_label\": \"部队方面\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0047\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL034\", \"source_entity_id\": \"ENT007\", \"relation_type\": \"MEMBER_OF\", \"target_entity_id\": \"ENT039\", \"role_label\": \"带来人员\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0047\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL035\", \"source_entity_id\": \"ENT005\", \"relation_type\": \"RELATED_TO\", \"target_entity_id\": \"ENT041\", \"role_label\": \"部队\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0045\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL036\", \"source_entity_id\": \"ENT013\", \"relation_type\": \"MEMBER_OF\", \"target_entity_id\": \"ENT019\", \"role_label\": \"营长\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0065\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"HIGH\"},\n    {\"relation_id\": \"REL037\", \"source_entity_id\": \"ENT039\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT040\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0047\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL038\", \"source_entity_id\": \"ENT058\", \"relation_type\": \"LOCATED_IN\", \"target_entity_id\": \"ENT064\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0067\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL039\", \"source_entity_id\": \"ENT060\", \"relation_type\": \"LOCATED_IN\", \"target_entity_id\": \"ENT059\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0065\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL040\", \"source_entity_id\": \"ENT063\", \"relation_type\": \"LOCATED_IN\", \"target_entity_id\": \"ENT058\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0079\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL041\", \"source_entity_id\": \"ENT074\", \"relation_type\": \"RELATED_TO\", \"target_entity_id\": \"ENT061\", \"role_label\": \"分类站地点\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0012\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL042\", \"source_entity_id\": \"ENT070\", \"relation_type\": \"RELATED_TO\", \"target_entity_id\": \"ENT060\", \"role_label\": \"史书称铁门闩战斗\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0063\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL043\", \"source_entity_id\": \"ENT068\", \"relation_type\": \"RELATED_TO\", \"target_entity_id\": \"ENT059\", \"role_label\": \"战斗地点\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0003\", \"source_status\": \"INTERVIEWER_QUESTION\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL044\", \"source_entity_id\": \"ENT070\", \"relation_type\": \"RELATED_TO\", \"target_entity_id\": \"ENT059\", \"role_label\": \"战斗地点\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0063\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL045\", \"source_entity_id\": \"ENT071\", \"relation_type\": \"RELATED_TO\", \"target_entity_id\": \"ENT059\", \"role_label\": \"战斗地点\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0063\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL046\", \"source_entity_id\": \"ENT079\", \"relation_type\": \"RELATED_TO\", \"target_entity_id\": \"ENT059\", \"role_label\": \"歌曲标题\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0079\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL047\", \"source_entity_id\": \"ENT053\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT014\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0047\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL048\", \"source_entity_id\": \"ENT035\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT014\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0006\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL049\", \"source_entity_id\": \"ENT040\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT014\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0045\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL050\", \"source_entity_id\": \"ENT041\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT014\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0045\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL051\", \"source_entity_id\": \"ENT042\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT014\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0045\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL052\", \"source_entity_id\": \"ENT016\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT053\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL053\", \"source_entity_id\": \"ENT080\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT017\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0001\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL054\", \"source_entity_id\": \"ENT081\", \"relation_type\": \"PART_OF\", \"target_entity_id\": \"ENT044\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0051\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"relation_id\": \"REL055\", \"source_entity_id\": \"ENT039\", \"relation_type\": \"LOCATED_IN\", \"target_entity_id\": \"ENT065\", \"role_label\": \"\", \"start_date\": \"\", \"end_date\": \"\", \"evidence_segment_id\": \"BATCH03-DOC01-S0047\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"}\n  ],\n  \"event_times\": [\n    {\"event_id\": \"BATCH03-DOC01-DE001\", \"raw_text\": \"11月7号\", \"normalized_start\": \"11-07\", \"normalized_end\": \"11-07\", \"precision\": \"DAY\", \"certainty\": \"EXACT\", \"source_status\": \"MIXED\", \"evidence_segment_id\": \"BATCH03-DOC01-S0003\", \"confidence\": \"MEDIUM\"},\n    {\"event_id\": \"BATCH03-DOC01-DE002\", \"raw_text\": \"车桥战役\", \"normalized_start\": \"\", \"normalized_end\": \"\", \"precision\": \"RELATIVE\", \"certainty\": \"EXACT\", \"source_status\": \"ORAL_TESTIMONY\", \"evidence_segment_id\": \"BATCH03-DOC01-S0025\", \"confidence\": \"MEDIUM\"},\n    {\"event_id\": \"BATCH03-DOC01-DE003\", \"raw_text\": \"\", \"normalized_start\": \"\", \"normalized_end\": \"\", \"precision\": \"RELATIVE\", \"certainty\": \"UNCERTAIN\", \"source_status\": \"STRUCTURAL_INFERENCE\", \"evidence_segment_id\": \"BATCH03-DOC01-S0023\", \"confidence\": \"LOW\"},\n    {\"event_id\": \"BATCH03-DOC01-DE004\", \"raw_text\": \"到淮海战役\", \"normalized_start\": \"\", \"normalized_end\": \"\", \"precision\": \"RELATIVE\", \"certainty\": \"EXACT\", \"source_status\": \"ORAL_TESTIMONY\", \"evidence_segment_id\": \"BATCH03-DOC01-S0041\", \"confidence\": \"MEDIUM\"},\n    {\"event_id\": \"BATCH03-DOC01-DE005\", \"raw_text\": \"\", \"normalized_start\": \"\", \"normalized_end\": \"\", \"precision\": \"RELATIVE\", \"certainty\": \"UNCERTAIN\", \"source_status\": \"STRUCTURAL_INFERENCE\", \"evidence_segment_id\": \"BATCH03-DOC01-S0045\", \"confidence\": \"LOW\"},\n    {\"event_id\": \"BATCH03-DOC01-DE006\", \"raw_text\": \"后来\", \"normalized_start\": \"\", \"normalized_end\": \"\", \"precision\": \"RELATIVE\", \"certainty\": \"UNCERTAIN\", \"source_status\": \"ORAL_TESTIMONY\", \"evidence_segment_id\": \"BATCH03-DOC01-S0047\", \"confidence\": \"LOW\"},\n    {\"event_id\": \"BATCH03-DOC01-DE007\", \"raw_text\": \"\", \"normalized_start\": \"\", \"normalized_end\": \"\", \"precision\": \"RELATIVE\", \"certainty\": \"UNCERTAIN\", \"source_status\": \"STRUCTURAL_INFERENCE\", \"evidence_segment_id\": \"BATCH03-DOC01-S0049\", \"confidence\": \"LOW\"},\n    {\"event_id\": \"BATCH03-DOC01-DE008\", \"raw_text\": \"\", \"normalized_start\": \"\", \"normalized_end\": \"\", \"precision\": \"RELATIVE\", \"certainty\": \"UNCERTAIN\", \"source_status\": \"STRUCTURAL_INFERENCE\", \"evidence_segment_id\": \"BATCH03-DOC01-S0051\", \"confidence\": \"LOW\"},\n    {\"event_id\": \"BATCH03-DOC01-DE009\", \"raw_text\": \"\", \"normalized_start\": \"\", \"normalized_end\": \"\", \"precision\": \"RELATIVE\", \"certainty\": \"UNCERTAIN\", \"source_status\": \"STRUCTURAL_INFERENCE\", \"evidence_segment_id\": \"BATCH03-DOC01-S0057\", \"confidence\": \"LOW\"},\n    {\"event_id\": \"BATCH03-DOC01-DE010\", \"raw_text\": \"第六次“繁昌战斗”\", \"normalized_start\": \"\", \"normalized_end\": \"\", \"precision\": \"RELATIVE\", \"certainty\": \"EXACT\", \"source_status\": \"ORAL_TESTIMONY\", \"evidence_segment_id\": \"BATCH03-DOC01-S0063\", \"confidence\": \"MEDIUM\"}\n  ],\n  \"time_expressions\": [\n    {\"segment_id\": \"BATCH03-DOC01-S0001\", \"raw_text\": \"1912年8月4日\", \"normalized_start\": \"1912-08-04\", \"normalized_end\": \"1912-08-04\", \"precision\": \"DAY\", \"expression_type\": \"DATE\", \"certainty\": \"EXACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0001\", \"raw_text\": \"1935年\", \"normalized_start\": \"1935\", \"normalized_end\": \"1935\", \"precision\": \"YEAR\", \"expression_type\": \"DATE\", \"certainty\": \"EXACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0001\", \"raw_text\": \"1938年2月\", \"normalized_start\": \"1938-02\", \"normalized_end\": \"1938-02\", \"precision\": \"MONTH\", \"expression_type\": \"DATE\", \"certainty\": \"EXACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0001\", \"raw_text\": \"1938年10月\", \"normalized_start\": \"1938-10\", \"normalized_end\": \"1938-10\", \"precision\": \"MONTH\", \"expression_type\": \"DATE\", \"certainty\": \"EXACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0001\", \"raw_text\": \"1939年8月\", \"normalized_start\": \"1939-08\", \"normalized_end\": \"1939-08\", \"precision\": \"MONTH\", \"expression_type\": \"DATE\", \"certainty\": \"EXACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0001\", \"raw_text\": \"1939年至1941年12月\", \"normalized_start\": \"1939\", \"normalized_end\": \"1941-12\", \"precision\": \"INTERVAL\", \"expression_type\": \"INTERVAL\", \"certainty\": \"EXACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0001\", \"raw_text\": \"1940年12月6日\", \"normalized_start\": \"1940-12-06\", \"normalized_end\": \"1940-12-06\", \"precision\": \"DAY\", \"expression_type\": \"DATE\", \"certainty\": \"EXACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0001\", \"raw_text\": \"1942年\", \"normalized_start\": \"1942\", \"normalized_end\": \"1942\", \"precision\": \"YEAR\", \"expression_type\": \"DATE\", \"certainty\": \"EXACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0001\", \"raw_text\": \"1943年\", \"normalized_start\": \"1943\", \"normalized_end\": \"1943\", \"precision\": \"YEAR\", \"expression_type\": \"DATE\", \"certainty\": \"EXACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0001\", \"raw_text\": \"1945年\", \"normalized_start\": \"1945\", \"normalized_end\": \"1945\", \"precision\": \"YEAR\", \"expression_type\": \"DATE\", \"certainty\": \"EXACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0001\", \"raw_text\": \"1946年\", \"normalized_start\": \"1946\", \"normalized_end\": \"1946\", \"precision\": \"YEAR\", \"expression_type\": \"DATE\", \"certainty\": \"EXACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0001\", \"raw_text\": \"1948年8月\", \"normalized_start\": \"1948-08\", \"normalized_end\": \"1948-08\", \"precision\": \"MONTH\", \"expression_type\": \"DATE\", \"certainty\": \"EXACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0001\", \"raw_text\": \"1949年8月\", \"normalized_start\": \"1949-08\", \"normalized_end\": \"1949-08\", \"precision\": \"MONTH\", \"expression_type\": \"DATE\", \"certainty\": \"EXACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0001\", \"raw_text\": \"1982年\", \"normalized_start\": \"1982\", \"normalized_end\": \"1982\", \"precision\": \"YEAR\", \"expression_type\": \"DATE\", \"certainty\": \"EXACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0001\", \"raw_text\": \"2013年6月17日\", \"normalized_start\": \"2013-06-17\", \"normalized_end\": \"2013-06-17\", \"precision\": \"DAY\", \"expression_type\": \"DATE\", \"certainty\": \"EXACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0001\", \"raw_text\": \"2010-02-28\", \"normalized_start\": \"2010-02-28\", \"normalized_end\": \"2010-02-28\", \"precision\": \"DAY\", \"expression_type\": \"DATE\", \"certainty\": \"EXACT\", \"source_status\": \"EDITORIAL_PROFILE\", \"confidence\": \"HIGH\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0003\", \"raw_text\": \"11月7号\", \"normalized_start\": \"11-07\", \"normalized_end\": \"11-07\", \"precision\": \"DAY\", \"expression_type\": \"DATE\", \"certainty\": \"EXACT\", \"source_status\": \"INTERVIEWER_QUESTION\", \"confidence\": \"MEDIUM\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0063\", \"raw_text\": \"5月2号5月3号\", \"normalized_start\": \"05-02\", \"normalized_end\": \"05-03\", \"precision\": \"INTERVAL\", \"expression_type\": \"INTERVAL\", \"certainty\": \"EXACT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0071\", \"raw_text\": \"1938、1939、1940前面三年\", \"normalized_start\": \"1938\", \"normalized_end\": \"1940\", \"precision\": \"INTERVAL\", \"expression_type\": \"INTERVAL\", \"certainty\": \"EXACT\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"},\n    {\"segment_id\": \"BATCH03-DOC01-S0073\", \"raw_text\": \"1940年以后\", \"normalized_start\": \"1940\", \"normalized_end\": \"\", \"precision\": \"INTERVAL\", \"expression_type\": \"INTERVAL\", \"certainty\": \"OPEN_END\", \"source_status\": \"ORAL_TESTIMONY\", \"confidence\": \"MEDIUM\"}\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V2-05",
+    "task": "entity_time",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "entities": [
+      {
+        "entity_id": "ENT001",
+        "canonical_name": "陈海峰",
+        "entity_type": "PERSON",
+        "entity_subtype": "INDIVIDUAL",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT002",
+        "canonical_name": "孙康清",
+        "entity_type": "PERSON",
+        "entity_subtype": "INDIVIDUAL",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT003",
+        "canonical_name": "王涛",
+        "entity_type": "PERSON",
+        "entity_subtype": "INDIVIDUAL",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT004",
+        "canonical_name": "黄农",
+        "entity_type": "PERSON",
+        "entity_subtype": "INDIVIDUAL",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "MEDIUM"
+      },
+      {
+        "entity_id": "ENT005",
+        "canonical_name": "粟裕",
+        "entity_type": "PERSON",
+        "entity_subtype": "INDIVIDUAL",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT006",
+        "canonical_name": "高敬亭",
+        "entity_type": "PERSON",
+        "entity_subtype": "INDIVIDUAL",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT007",
+        "canonical_name": "宫乃泉",
+        "entity_type": "PERSON",
+        "entity_subtype": "INDIVIDUAL",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT008",
+        "canonical_name": "史沫特莱",
+        "entity_type": "PERSON",
+        "entity_subtype": "INDIVIDUAL",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT009",
+        "canonical_name": "孙科",
+        "entity_type": "PERSON",
+        "entity_subtype": "INDIVIDUAL",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT010",
+        "canonical_name": "宋庆龄",
+        "entity_type": "PERSON",
+        "entity_subtype": "INDIVIDUAL",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT011",
+        "canonical_name": "林可胜",
+        "entity_type": "PERSON",
+        "entity_subtype": "INDIVIDUAL",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT012",
+        "canonical_name": "沈其震",
+        "entity_type": "PERSON",
+        "entity_subtype": "INDIVIDUAL",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT013",
+        "canonical_name": "陈仁洪",
+        "entity_type": "PERSON",
+        "entity_subtype": "INDIVIDUAL",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT014",
+        "canonical_name": "新四军",
+        "entity_type": "MILITARY_UNIT",
+        "entity_subtype": "MILITARY_FORMATION",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT015",
+        "canonical_name": "江南抗日义勇军第三路",
+        "entity_type": "MILITARY_UNIT",
+        "entity_subtype": "MILITARY_FORMATION",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT016",
+        "canonical_name": "新四军军部教导总队",
+        "entity_type": "MILITARY_UNIT",
+        "entity_subtype": "MILITARY_FORMATION",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT017",
+        "canonical_name": "新四军军医处",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "OTHER",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT018",
+        "canonical_name": "三支队军医处",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "OTHER",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT019",
+        "canonical_name": "五团二营",
+        "entity_type": "MILITARY_UNIT",
+        "entity_subtype": "MILITARY_FORMATION",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT020",
+        "canonical_name": "五团",
+        "entity_type": "MILITARY_UNIT",
+        "entity_subtype": "MILITARY_FORMATION",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT021",
+        "canonical_name": "新四军一师二旅五团",
+        "entity_type": "MILITARY_UNIT",
+        "entity_subtype": "MILITARY_FORMATION",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT022",
+        "canonical_name": "皖南新四军前方医院",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "HOSPITAL",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT023",
+        "canonical_name": "新四军苏中卫生学校",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "SCHOOL",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT024",
+        "canonical_name": "一师老一团",
+        "entity_type": "MILITARY_UNIT",
+        "entity_subtype": "MILITARY_FORMATION",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT025",
+        "canonical_name": "苏浙军区卫生部",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "OTHER",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT026",
+        "canonical_name": "华中军区第一后方医院",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "HOSPITAL",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT027",
+        "canonical_name": "华东军区第一重伤医院",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "HOSPITAL",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT028",
+        "canonical_name": "福州卫生局",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "GOVERNMENT_AGENCY",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT029",
+        "canonical_name": "卫生部咨询委员会",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "OTHER",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT030",
+        "canonical_name": "上海荣华印书馆",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "PRINTING_HOUSE",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT031",
+        "canonical_name": "地下党",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "PARTY_ORGANIZATION",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT032",
+        "canonical_name": "猎户队",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "MASS_ORGANIZATION",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT033",
+        "canonical_name": "妇女会",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "MASS_ORGANIZATION",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT034",
+        "canonical_name": "儿童团",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "MASS_ORGANIZATION",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT035",
+        "canonical_name": "三支队",
+        "entity_type": "MILITARY_UNIT",
+        "entity_subtype": "MILITARY_FORMATION",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT037",
+        "canonical_name": "机炮连",
+        "entity_type": "MILITARY_UNIT",
+        "entity_subtype": "MILITARY_FORMATION",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT038",
+        "canonical_name": "团部",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "OTHER",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "MEDIUM"
+      },
+      {
+        "entity_id": "ENT039",
+        "canonical_name": "江北指挥部",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "OTHER",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT040",
+        "canonical_name": "四支队",
+        "entity_type": "MILITARY_UNIT",
+        "entity_subtype": "MILITARY_FORMATION",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT041",
+        "canonical_name": "二支队",
+        "entity_type": "MILITARY_UNIT",
+        "entity_subtype": "MILITARY_FORMATION",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT042",
+        "canonical_name": "一支队",
+        "entity_type": "MILITARY_UNIT",
+        "entity_subtype": "MILITARY_FORMATION",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT043",
+        "canonical_name": "新四军卫生部",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "OTHER",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT044",
+        "canonical_name": "红十字会总会",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "OTHER",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT045",
+        "canonical_name": "协和医院",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "HOSPITAL",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT046",
+        "canonical_name": "国民党",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "PARTY_ORGANIZATION",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT047",
+        "canonical_name": "国民党军队",
+        "entity_type": "MILITARY_UNIT",
+        "entity_subtype": "MILITARY_FORMATION",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT048",
+        "canonical_name": "八路军",
+        "entity_type": "MILITARY_UNIT",
+        "entity_subtype": "MILITARY_FORMATION",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT049",
+        "canonical_name": "上海地下党",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "PARTY_ORGANIZATION",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT050",
+        "canonical_name": "地方党",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "PARTY_ORGANIZATION",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT051",
+        "canonical_name": "日本鬼子",
+        "entity_type": "MILITARY_UNIT",
+        "entity_subtype": "OTHER",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT052",
+        "canonical_name": "伪军",
+        "entity_type": "MILITARY_UNIT",
+        "entity_subtype": "OTHER",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT053",
+        "canonical_name": "新四军军部",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "OTHER",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT054",
+        "canonical_name": "江苏江阴前周乡东篁村",
+        "entity_type": "PLACE",
+        "entity_subtype": "ADDRESS",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT055",
+        "canonical_name": "上海",
+        "entity_type": "PLACE",
+        "entity_subtype": "SETTLEMENT",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT056",
+        "canonical_name": "南京",
+        "entity_type": "PLACE",
+        "entity_subtype": "SETTLEMENT",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT057",
+        "canonical_name": "北京和平里陈海峰家里",
+        "entity_type": "PLACE",
+        "entity_subtype": "ADDRESS",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT058",
+        "canonical_name": "中分村",
+        "entity_type": "PLACE",
+        "entity_subtype": "SETTLEMENT",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT059",
+        "canonical_name": "繁昌",
+        "entity_type": "PLACE",
+        "entity_subtype": "SETTLEMENT",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT060",
+        "canonical_name": "铁门闩",
+        "entity_type": "PLACE",
+        "entity_subtype": "LANDMARK",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT061",
+        "canonical_name": "碾庄圩",
+        "entity_type": "PLACE",
+        "entity_subtype": "SETTLEMENT",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT062",
+        "canonical_name": "五里亭",
+        "entity_type": "PLACE",
+        "entity_subtype": "SETTLEMENT",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT063",
+        "canonical_name": "老虎山",
+        "entity_type": "PLACE",
+        "entity_subtype": "LANDMARK",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT064",
+        "canonical_name": "皖南",
+        "entity_type": "PLACE",
+        "entity_subtype": "ADMINISTRATIVE_PLACE",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT065",
+        "canonical_name": "江北",
+        "entity_type": "PLACE",
+        "entity_subtype": "ADMINISTRATIVE_PLACE",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT066",
+        "canonical_name": "长江",
+        "entity_type": "PLACE",
+        "entity_subtype": "ROUTE",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT067",
+        "canonical_name": "香港",
+        "entity_type": "PLACE",
+        "entity_subtype": "SETTLEMENT",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT068",
+        "canonical_name": "第一次繁昌战斗",
+        "entity_type": "HISTORICAL_EVENT",
+        "entity_subtype": "BATTLE",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT069",
+        "canonical_name": "第二次繁昌战斗",
+        "entity_type": "HISTORICAL_EVENT",
+        "entity_subtype": "BATTLE",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT070",
+        "canonical_name": "第六次繁昌战斗",
+        "entity_type": "HISTORICAL_EVENT",
+        "entity_subtype": "BATTLE",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT071",
+        "canonical_name": "八次繁昌战斗",
+        "entity_type": "HISTORICAL_EVENT",
+        "entity_subtype": "BATTLE",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT072",
+        "canonical_name": "铁门闩战斗",
+        "entity_type": "HISTORICAL_EVENT",
+        "entity_subtype": "BATTLE",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT073",
+        "canonical_name": "车桥战役",
+        "entity_type": "HISTORICAL_EVENT",
+        "entity_subtype": "BATTLE",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT074",
+        "canonical_name": "淮海战役",
+        "entity_type": "HISTORICAL_EVENT",
+        "entity_subtype": "BATTLE",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT075",
+        "canonical_name": "浙赣会战",
+        "entity_type": "HISTORICAL_EVENT",
+        "entity_subtype": "BATTLE",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT076",
+        "canonical_name": "大炼钢铁",
+        "entity_type": "HISTORICAL_EVENT",
+        "entity_subtype": "POLITICAL_EVENT",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT077",
+        "canonical_name": "解放战争",
+        "entity_type": "HISTORICAL_EVENT",
+        "entity_subtype": "WAR",
+        "description": "",
+        "authority_status": "CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT078",
+        "canonical_name": "抗战",
+        "entity_type": "HISTORICAL_EVENT",
+        "entity_subtype": "WAR",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT079",
+        "canonical_name": "繁昌之战",
+        "entity_type": "PUBLICATION",
+        "entity_subtype": "OTHER",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT080",
+        "canonical_name": "新四军军医处第二期公共卫生人员训练班",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "SCHOOL",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "HIGH"
+      },
+      {
+        "entity_id": "ENT081",
+        "canonical_name": "医疗队",
+        "entity_type": "ORGANIZATION",
+        "entity_subtype": "OTHER",
+        "description": "",
+        "authority_status": "LOCAL_CANONICAL",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "entity_mentions": [
+      {
+        "mention_id": "MENT001",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT001",
+        "mention_text": "陈海峰",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT002",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT002",
+        "mention_text": "孙康清",
+        "mention_function": "ANNOTATION_SUBJECT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT003",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT003",
+        "mention_text": "王涛",
+        "mention_function": "ANNOTATION_SUBJECT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT004",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT054",
+        "mention_text": "江苏江阴前周乡东篁村",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT005",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT030",
+        "mention_text": "上海荣华印书馆",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT006",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT055",
+        "mention_text": "上海",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT007",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT015",
+        "mention_text": "江南抗日义勇军第三路",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT008",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT016",
+        "mention_text": "新四军军部教导总队",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT009",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT080",
+        "mention_text": "新四军军医处第二期公共卫生人员训练班",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT010",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT018",
+        "mention_text": "三支队军医处",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT011",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT019",
+        "mention_text": "五团二营",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT012",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT020",
+        "mention_text": "五团",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT013",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT021",
+        "mention_text": "新四军一师二旅五团",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT014",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT022",
+        "mention_text": "皖南新四军前方医院",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT015",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT023",
+        "mention_text": "新四军苏中卫生学校",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT016",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT024",
+        "mention_text": "一师老一团",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT017",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT025",
+        "mention_text": "苏浙军区卫生部",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT018",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT026",
+        "mention_text": "华中军区第一后方医院",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT019",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT027",
+        "mention_text": "华东军区第一重伤医院",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT020",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT028",
+        "mention_text": "福州卫生局",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT021",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT029",
+        "mention_text": "卫生部咨询委员会",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT022",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT057",
+        "mention_text": "北京和平里陈海峰家里",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT023",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT070",
+        "mention_text": "第六次繁昌战斗",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT024",
+        "segment_id": "BATCH03-DOC01-S0001",
+        "entity_id": "ENT014",
+        "mention_text": "新四军",
+        "mention_function": "PROFILE_FACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT025",
+        "segment_id": "BATCH03-DOC01-S0003",
+        "entity_id": "ENT001",
+        "mention_text": "陈老",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "INTERVIEWER_QUESTION",
+        "confidence": "MEDIUM"
+      },
+      {
+        "mention_id": "MENT026",
+        "segment_id": "BATCH03-DOC01-S0003",
+        "entity_id": "ENT068",
+        "mention_text": "第一次“繁昌战斗”",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "INTERVIEWER_QUESTION",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT027",
+        "segment_id": "BATCH03-DOC01-S0004",
+        "entity_id": "ENT001",
+        "mention_text": "陈海峰",
+        "mention_function": "SPEAKER",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT028",
+        "segment_id": "BATCH03-DOC01-S0006",
+        "entity_id": "ENT001",
+        "mention_text": "陈海峰",
+        "mention_function": "SPEAKER",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT029",
+        "segment_id": "BATCH03-DOC01-S0006",
+        "entity_id": "ENT017",
+        "mention_text": "军医处",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "mention_id": "MENT030",
+        "segment_id": "BATCH03-DOC01-S0006",
+        "entity_id": "ENT068",
+        "mention_text": "第一次“繁昌战斗”",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT031",
+        "segment_id": "BATCH03-DOC01-S0006",
+        "entity_id": "ENT069",
+        "mention_text": "第二次“繁昌战斗”",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT032",
+        "segment_id": "BATCH03-DOC01-S0006",
+        "entity_id": "ENT058",
+        "mention_text": "中分村",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT033",
+        "segment_id": "BATCH03-DOC01-S0006",
+        "entity_id": "ENT031",
+        "mention_text": "地下党",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT034",
+        "segment_id": "BATCH03-DOC01-S0006",
+        "entity_id": "ENT035",
+        "mention_text": "三支队",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT035",
+        "segment_id": "BATCH03-DOC01-S0012",
+        "entity_id": "ENT074",
+        "mention_text": "淮海战役",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT036",
+        "segment_id": "BATCH03-DOC01-S0012",
+        "entity_id": "ENT061",
+        "mention_text": "碾庄圩",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT037",
+        "segment_id": "BATCH03-DOC01-S0021",
+        "entity_id": "ENT058",
+        "mention_text": "中分村",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT038",
+        "segment_id": "BATCH03-DOC01-S0021",
+        "entity_id": "ENT051",
+        "mention_text": "日本鬼子",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT039",
+        "segment_id": "BATCH03-DOC01-S0021",
+        "entity_id": "ENT059",
+        "mention_text": "繁昌",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT040",
+        "segment_id": "BATCH03-DOC01-S0021",
+        "entity_id": "ENT032",
+        "mention_text": "猎户队",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT041",
+        "segment_id": "BATCH03-DOC01-S0023",
+        "entity_id": "ENT033",
+        "mention_text": "妇女会",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT042",
+        "segment_id": "BATCH03-DOC01-S0023",
+        "entity_id": "ENT034",
+        "mention_text": "儿童团",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT043",
+        "segment_id": "BATCH03-DOC01-S0025",
+        "entity_id": "ENT073",
+        "mention_text": "车桥战役",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT044",
+        "segment_id": "BATCH03-DOC01-S0025",
+        "entity_id": "ENT077",
+        "mention_text": "解放战争",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT045",
+        "segment_id": "BATCH03-DOC01-S0025",
+        "entity_id": "ENT078",
+        "mention_text": "抗战",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT046",
+        "segment_id": "BATCH03-DOC01-S0027",
+        "entity_id": "ENT073",
+        "mention_text": "车桥战役",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT047",
+        "segment_id": "BATCH03-DOC01-S0028",
+        "entity_id": "ENT068",
+        "mention_text": "第一次“繁昌战斗”",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT048",
+        "segment_id": "BATCH03-DOC01-S0031",
+        "entity_id": "ENT001",
+        "mention_text": "陈老",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "INTERVIEWER_QUESTION",
+        "confidence": "MEDIUM"
+      },
+      {
+        "mention_id": "MENT049",
+        "segment_id": "BATCH03-DOC01-S0031",
+        "entity_id": "ENT046",
+        "mention_text": "国民党",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "INTERVIEWER_QUESTION",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT050",
+        "segment_id": "BATCH03-DOC01-S0031",
+        "entity_id": "ENT075",
+        "mention_text": "浙赣会战",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "INTERVIEWER_QUESTION",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT051",
+        "segment_id": "BATCH03-DOC01-S0033",
+        "entity_id": "ENT075",
+        "mention_text": "浙赣会战",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "INTERVIEWER_QUESTION",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT052",
+        "segment_id": "BATCH03-DOC01-S0034",
+        "entity_id": "ENT014",
+        "mention_text": "新四军",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "INTERVIEWER_QUESTION",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT053",
+        "segment_id": "BATCH03-DOC01-S0037",
+        "entity_id": "ENT078",
+        "mention_text": "抗战",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT054",
+        "segment_id": "BATCH03-DOC01-S0039",
+        "entity_id": "ENT035",
+        "mention_text": "三支队",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT055",
+        "segment_id": "BATCH03-DOC01-S0041",
+        "entity_id": "ENT074",
+        "mention_text": "淮海战役",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT056",
+        "segment_id": "BATCH03-DOC01-S0042",
+        "entity_id": "ENT014",
+        "mention_text": "新四军",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "INTERVIEWER_QUESTION",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT057",
+        "segment_id": "BATCH03-DOC01-S0043",
+        "entity_id": "ENT004",
+        "mention_text": "黄农",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT058",
+        "segment_id": "BATCH03-DOC01-S0045",
+        "entity_id": "ENT041",
+        "mention_text": "二支队",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT059",
+        "segment_id": "BATCH03-DOC01-S0045",
+        "entity_id": "ENT005",
+        "mention_text": "粟裕",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT060",
+        "segment_id": "BATCH03-DOC01-S0045",
+        "entity_id": "ENT042",
+        "mention_text": "一支队",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT061",
+        "segment_id": "BATCH03-DOC01-S0045",
+        "entity_id": "ENT035",
+        "mention_text": "三支队",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT062",
+        "segment_id": "BATCH03-DOC01-S0045",
+        "entity_id": "ENT040",
+        "mention_text": "四支队",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT063",
+        "segment_id": "BATCH03-DOC01-S0047",
+        "entity_id": "ENT053",
+        "mention_text": "军部",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "mention_id": "MENT064",
+        "segment_id": "BATCH03-DOC01-S0047",
+        "entity_id": "ENT040",
+        "mention_text": "四支队",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT065",
+        "segment_id": "BATCH03-DOC01-S0047",
+        "entity_id": "ENT006",
+        "mention_text": "高敬亭",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT066",
+        "segment_id": "BATCH03-DOC01-S0047",
+        "entity_id": "ENT039",
+        "mention_text": "江北指挥部",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT067",
+        "segment_id": "BATCH03-DOC01-S0047",
+        "entity_id": "ENT007",
+        "mention_text": "宫乃泉",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT068",
+        "segment_id": "BATCH03-DOC01-S0047",
+        "entity_id": "ENT064",
+        "mention_text": "皖南",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT069",
+        "segment_id": "BATCH03-DOC01-S0048",
+        "entity_id": "ENT014",
+        "mention_text": "新四军",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "INTERVIEWER_QUESTION",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT070",
+        "segment_id": "BATCH03-DOC01-S0048",
+        "entity_id": "ENT047",
+        "mention_text": "国民党军队",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "INTERVIEWER_QUESTION",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT071",
+        "segment_id": "BATCH03-DOC01-S0049",
+        "entity_id": "ENT008",
+        "mention_text": "史沫特莱",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT072",
+        "segment_id": "BATCH03-DOC01-S0049",
+        "entity_id": "ENT046",
+        "mention_text": "国民党",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT073",
+        "segment_id": "BATCH03-DOC01-S0051",
+        "entity_id": "ENT048",
+        "mention_text": "八路军",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT074",
+        "segment_id": "BATCH03-DOC01-S0051",
+        "entity_id": "ENT055",
+        "mention_text": "上海",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT075",
+        "segment_id": "BATCH03-DOC01-S0051",
+        "entity_id": "ENT056",
+        "mention_text": "南京",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT076",
+        "segment_id": "BATCH03-DOC01-S0051",
+        "entity_id": "ENT049",
+        "mention_text": "上海地下党",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT077",
+        "segment_id": "BATCH03-DOC01-S0051",
+        "entity_id": "ENT067",
+        "mention_text": "香港",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT078",
+        "segment_id": "BATCH03-DOC01-S0051",
+        "entity_id": "ENT046",
+        "mention_text": "国民党",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT079",
+        "segment_id": "BATCH03-DOC01-S0051",
+        "entity_id": "ENT009",
+        "mention_text": "孙科",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT080",
+        "segment_id": "BATCH03-DOC01-S0051",
+        "entity_id": "ENT010",
+        "mention_text": "宋庆龄",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT081",
+        "segment_id": "BATCH03-DOC01-S0051",
+        "entity_id": "ENT044",
+        "mention_text": "红十字会总会",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT082",
+        "segment_id": "BATCH03-DOC01-S0051",
+        "entity_id": "ENT011",
+        "mention_text": "林可胜",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT083",
+        "segment_id": "BATCH03-DOC01-S0051",
+        "entity_id": "ENT045",
+        "mention_text": "协和医院",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT084",
+        "segment_id": "BATCH03-DOC01-S0051",
+        "entity_id": "ENT014",
+        "mention_text": "新四军",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT085",
+        "segment_id": "BATCH03-DOC01-S0051",
+        "entity_id": "ENT012",
+        "mention_text": "沈其震",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT086",
+        "segment_id": "BATCH03-DOC01-S0051",
+        "entity_id": "ENT081",
+        "mention_text": "医疗队",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "mention_id": "MENT087",
+        "segment_id": "BATCH03-DOC01-S0053",
+        "entity_id": "ENT081",
+        "mention_text": "医疗队",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "mention_id": "MENT088",
+        "segment_id": "BATCH03-DOC01-S0057",
+        "entity_id": "ENT064",
+        "mention_text": "皖南",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT089",
+        "segment_id": "BATCH03-DOC01-S0057",
+        "entity_id": "ENT014",
+        "mention_text": "新四军",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT090",
+        "segment_id": "BATCH03-DOC01-S0057",
+        "entity_id": "ENT053",
+        "mention_text": "军部",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "mention_id": "MENT091",
+        "segment_id": "BATCH03-DOC01-S0057",
+        "entity_id": "ENT017",
+        "mention_text": "军医处",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "mention_id": "MENT092",
+        "segment_id": "BATCH03-DOC01-S0059",
+        "entity_id": "ENT043",
+        "mention_text": "卫生部",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "mention_id": "MENT093",
+        "segment_id": "BATCH03-DOC01-S0059",
+        "entity_id": "ENT050",
+        "mention_text": "地方党",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT094",
+        "segment_id": "BATCH03-DOC01-S0061",
+        "entity_id": "ENT035",
+        "mention_text": "三支队",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT095",
+        "segment_id": "BATCH03-DOC01-S0063",
+        "entity_id": "ENT001",
+        "mention_text": "陈海峰",
+        "mention_function": "SPEAKER",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT096",
+        "segment_id": "BATCH03-DOC01-S0063",
+        "entity_id": "ENT071",
+        "mention_text": "八次“繁昌战斗”",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT097",
+        "segment_id": "BATCH03-DOC01-S0063",
+        "entity_id": "ENT070",
+        "mention_text": "第六次“繁昌战斗”",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT098",
+        "segment_id": "BATCH03-DOC01-S0063",
+        "entity_id": "ENT072",
+        "mention_text": "铁门闩战斗",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT099",
+        "segment_id": "BATCH03-DOC01-S0063",
+        "entity_id": "ENT059",
+        "mention_text": "繁昌",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT100",
+        "segment_id": "BATCH03-DOC01-S0063",
+        "entity_id": "ENT058",
+        "mention_text": "中分村",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT101",
+        "segment_id": "BATCH03-DOC01-S0063",
+        "entity_id": "ENT019",
+        "mention_text": "二营",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT102",
+        "segment_id": "BATCH03-DOC01-S0065",
+        "entity_id": "ENT013",
+        "mention_text": "陈仁洪",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT103",
+        "segment_id": "BATCH03-DOC01-S0065",
+        "entity_id": "ENT019",
+        "mention_text": "二营",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT104",
+        "segment_id": "BATCH03-DOC01-S0065",
+        "entity_id": "ENT038",
+        "mention_text": "团部",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "mention_id": "MENT105",
+        "segment_id": "BATCH03-DOC01-S0065",
+        "entity_id": "ENT037",
+        "mention_text": "机炮连",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT106",
+        "segment_id": "BATCH03-DOC01-S0065",
+        "entity_id": "ENT060",
+        "mention_text": "铁门闩",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT107",
+        "segment_id": "BATCH03-DOC01-S0065",
+        "entity_id": "ENT059",
+        "mention_text": "繁昌",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT108",
+        "segment_id": "BATCH03-DOC01-S0067",
+        "entity_id": "ENT051",
+        "mention_text": "鬼子",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT109",
+        "segment_id": "BATCH03-DOC01-S0067",
+        "entity_id": "ENT064",
+        "mention_text": "皖南",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT110",
+        "segment_id": "BATCH03-DOC01-S0067",
+        "entity_id": "ENT076",
+        "mention_text": "大炼钢铁",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT111",
+        "segment_id": "BATCH03-DOC01-S0069",
+        "entity_id": "ENT001",
+        "mention_text": "小书呆子",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "mention_id": "MENT112",
+        "segment_id": "BATCH03-DOC01-S0069",
+        "entity_id": "ENT060",
+        "mention_text": "铁门闩",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT113",
+        "segment_id": "BATCH03-DOC01-S0071",
+        "entity_id": "ENT013",
+        "mention_text": "营长",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "mention_id": "MENT114",
+        "segment_id": "BATCH03-DOC01-S0071",
+        "entity_id": "ENT051",
+        "mention_text": "鬼子",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT115",
+        "segment_id": "BATCH03-DOC01-S0073",
+        "entity_id": "ENT052",
+        "mention_text": "伪军",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT116",
+        "segment_id": "BATCH03-DOC01-S0073",
+        "entity_id": "ENT051",
+        "mention_text": "鬼子",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT117",
+        "segment_id": "BATCH03-DOC01-S0073",
+        "entity_id": "ENT013",
+        "mention_text": "营长",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "mention_id": "MENT118",
+        "segment_id": "BATCH03-DOC01-S0075",
+        "entity_id": "ENT062",
+        "mention_text": "五里亭",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT119",
+        "segment_id": "BATCH03-DOC01-S0075",
+        "entity_id": "ENT060",
+        "mention_text": "铁门闩",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT120",
+        "segment_id": "BATCH03-DOC01-S0075",
+        "entity_id": "ENT051",
+        "mention_text": "日本鬼子",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT121",
+        "segment_id": "BATCH03-DOC01-S0077",
+        "entity_id": "ENT051",
+        "mention_text": "日本鬼子",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT122",
+        "segment_id": "BATCH03-DOC01-S0077",
+        "entity_id": "ENT037",
+        "mention_text": "机炮连",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT123",
+        "segment_id": "BATCH03-DOC01-S0079",
+        "entity_id": "ENT059",
+        "mention_text": "繁昌城",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT124",
+        "segment_id": "BATCH03-DOC01-S0079",
+        "entity_id": "ENT059",
+        "mention_text": "繁昌",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT125",
+        "segment_id": "BATCH03-DOC01-S0079",
+        "entity_id": "ENT058",
+        "mention_text": "中分村",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT126",
+        "segment_id": "BATCH03-DOC01-S0079",
+        "entity_id": "ENT063",
+        "mention_text": "老虎山",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT127",
+        "segment_id": "BATCH03-DOC01-S0079",
+        "entity_id": "ENT019",
+        "mention_text": "二营",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT128",
+        "segment_id": "BATCH03-DOC01-S0079",
+        "entity_id": "ENT064",
+        "mention_text": "皖南",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT129",
+        "segment_id": "BATCH03-DOC01-S0079",
+        "entity_id": "ENT066",
+        "mention_text": "长江",
+        "mention_function": "CIRCUMSTANCE",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT130",
+        "segment_id": "BATCH03-DOC01-S0079",
+        "entity_id": "ENT079",
+        "mention_text": "繁昌之战",
+        "mention_function": "MENTION_ONLY",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT131",
+        "segment_id": "BATCH03-DOC01-S0081",
+        "entity_id": "ENT001",
+        "mention_text": "陈海峰",
+        "mention_function": "SPEAKER",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "mention_id": "MENT132",
+        "segment_id": "BATCH03-DOC01-S0081",
+        "entity_id": "ENT013",
+        "mention_text": "营长",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "mention_id": "MENT133",
+        "segment_id": "BATCH03-DOC01-S0083",
+        "entity_id": "ENT013",
+        "mention_text": "营长",
+        "mention_function": "PARTICIPANT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "entity_aliases": [
+      {
+        "alias_id": "ALI001",
+        "entity_id": "ENT001",
+        "alias_text": "永嘉",
+        "alias_type": "ALIAS",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "confidence": "HIGH"
+      },
+      {
+        "alias_id": "ALI002",
+        "entity_id": "ENT001",
+        "alias_text": "陈老",
+        "alias_type": "ALIAS",
+        "evidence_segment_id": "BATCH03-DOC01-S0003",
+        "confidence": "MEDIUM"
+      },
+      {
+        "alias_id": "ALI003",
+        "entity_id": "ENT001",
+        "alias_text": "小书呆子",
+        "alias_type": "ALIAS",
+        "evidence_segment_id": "BATCH03-DOC01-S0069",
+        "confidence": "MEDIUM"
+      },
+      {
+        "alias_id": "ALI004",
+        "entity_id": "ENT017",
+        "alias_text": "军医处",
+        "alias_type": "ABBREVIATION",
+        "evidence_segment_id": "BATCH03-DOC01-S0006",
+        "confidence": "MEDIUM"
+      },
+      {
+        "alias_id": "ALI005",
+        "entity_id": "ENT019",
+        "alias_text": "二营",
+        "alias_type": "ABBREVIATION",
+        "evidence_segment_id": "BATCH03-DOC01-S0063",
+        "confidence": "MEDIUM"
+      },
+      {
+        "alias_id": "ALI006",
+        "entity_id": "ENT059",
+        "alias_text": "繁昌城",
+        "alias_type": "ALIAS",
+        "evidence_segment_id": "BATCH03-DOC01-S0079",
+        "confidence": "MEDIUM"
+      },
+      {
+        "alias_id": "ALI007",
+        "entity_id": "ENT051",
+        "alias_text": "鬼子",
+        "alias_type": "ALIAS",
+        "evidence_segment_id": "BATCH03-DOC01-S0067",
+        "confidence": "MEDIUM"
+      },
+      {
+        "alias_id": "ALI008",
+        "entity_id": "ENT053",
+        "alias_text": "军部",
+        "alias_type": "ABBREVIATION",
+        "evidence_segment_id": "BATCH03-DOC01-S0047",
+        "confidence": "MEDIUM"
+      },
+      {
+        "alias_id": "ALI009",
+        "entity_id": "ENT043",
+        "alias_text": "卫生部",
+        "alias_type": "ABBREVIATION",
+        "evidence_segment_id": "BATCH03-DOC01-S0059",
+        "confidence": "MEDIUM"
+      },
+      {
+        "alias_id": "ALI010",
+        "entity_id": "ENT068",
+        "alias_text": "第一次“繁昌战斗”",
+        "alias_type": "HISTORICAL_NAME",
+        "evidence_segment_id": "BATCH03-DOC01-S0003",
+        "confidence": "HIGH"
+      },
+      {
+        "alias_id": "ALI011",
+        "entity_id": "ENT069",
+        "alias_text": "第二次“繁昌战斗”",
+        "alias_type": "HISTORICAL_NAME",
+        "evidence_segment_id": "BATCH03-DOC01-S0006",
+        "confidence": "HIGH"
+      },
+      {
+        "alias_id": "ALI012",
+        "entity_id": "ENT070",
+        "alias_text": "第六次“繁昌战斗”",
+        "alias_type": "HISTORICAL_NAME",
+        "evidence_segment_id": "BATCH03-DOC01-S0063",
+        "confidence": "HIGH"
+      },
+      {
+        "alias_id": "ALI013",
+        "entity_id": "ENT071",
+        "alias_text": "八次“繁昌战斗”",
+        "alias_type": "HISTORICAL_NAME",
+        "evidence_segment_id": "BATCH03-DOC01-S0063",
+        "confidence": "HIGH"
+      }
+    ],
+    "entity_relations": [
+      {
+        "relation_id": "REL001",
+        "source_entity_id": "ENT001",
+        "relation_type": "BORN_IN",
+        "target_entity_id": "ENT054",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL002",
+        "source_entity_id": "ENT001",
+        "relation_type": "WORKED_AT",
+        "target_entity_id": "ENT030",
+        "role_label": "排字工人",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL003",
+        "source_entity_id": "ENT001",
+        "relation_type": "MEMBER_OF",
+        "target_entity_id": "ENT015",
+        "role_label": "宣传、情报站长",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL004",
+        "source_entity_id": "ENT001",
+        "relation_type": "STUDIED_AT",
+        "target_entity_id": "ENT016",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL005",
+        "source_entity_id": "ENT001",
+        "relation_type": "STUDIED_AT",
+        "target_entity_id": "ENT080",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL006",
+        "source_entity_id": "ENT001",
+        "relation_type": "HELD_POSITION_AT",
+        "target_entity_id": "ENT018",
+        "role_label": "卫生巡视员",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL007",
+        "source_entity_id": "ENT001",
+        "relation_type": "HELD_POSITION_AT",
+        "target_entity_id": "ENT019",
+        "role_label": "卫生指导员",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL008",
+        "source_entity_id": "ENT001",
+        "relation_type": "HELD_POSITION_AT",
+        "target_entity_id": "ENT020",
+        "role_label": "卫生队长",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL009",
+        "source_entity_id": "ENT001",
+        "relation_type": "HELD_POSITION_AT",
+        "target_entity_id": "ENT021",
+        "role_label": "卫生队长",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL010",
+        "source_entity_id": "ENT001",
+        "relation_type": "HELD_POSITION_AT",
+        "target_entity_id": "ENT022",
+        "role_label": "外科病室副室长",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL011",
+        "source_entity_id": "ENT001",
+        "relation_type": "HELD_POSITION_AT",
+        "target_entity_id": "ENT023",
+        "role_label": "教务主任",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL012",
+        "source_entity_id": "ENT001",
+        "relation_type": "HELD_POSITION_AT",
+        "target_entity_id": "ENT024",
+        "role_label": "卫生队长",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL013",
+        "source_entity_id": "ENT001",
+        "relation_type": "HELD_POSITION_AT",
+        "target_entity_id": "ENT025",
+        "role_label": "医政科长兼野战医院院长",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL014",
+        "source_entity_id": "ENT001",
+        "relation_type": "HELD_POSITION_AT",
+        "target_entity_id": "ENT026",
+        "role_label": "院长",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL015",
+        "source_entity_id": "ENT001",
+        "relation_type": "HELD_POSITION_AT",
+        "target_entity_id": "ENT027",
+        "role_label": "院长",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL016",
+        "source_entity_id": "ENT001",
+        "relation_type": "HELD_POSITION_AT",
+        "target_entity_id": "ENT028",
+        "role_label": "局长",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL017",
+        "source_entity_id": "ENT001",
+        "relation_type": "MEMBER_OF",
+        "target_entity_id": "ENT029",
+        "role_label": "委员",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL018",
+        "source_entity_id": "ENT017",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT014",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL019",
+        "source_entity_id": "ENT018",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT035",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL020",
+        "source_entity_id": "ENT019",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT020",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL021",
+        "source_entity_id": "ENT021",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT014",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL022",
+        "source_entity_id": "ENT024",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT014",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL023",
+        "source_entity_id": "ENT022",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT014",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL024",
+        "source_entity_id": "ENT043",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT014",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0051",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL025",
+        "source_entity_id": "ENT047",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT046",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0048",
+        "source_status": "INTERVIEWER_QUESTION",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL026",
+        "source_entity_id": "ENT049",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT031",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0051",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL027",
+        "source_entity_id": "ENT049",
+        "relation_type": "LOCATED_IN",
+        "target_entity_id": "ENT055",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0051",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL028",
+        "source_entity_id": "ENT030",
+        "relation_type": "LOCATED_IN",
+        "target_entity_id": "ENT055",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL029",
+        "source_entity_id": "ENT011",
+        "relation_type": "HELD_POSITION_AT",
+        "target_entity_id": "ENT045",
+        "role_label": "生理科主任",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0051",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL030",
+        "source_entity_id": "ENT011",
+        "relation_type": "HELD_POSITION_AT",
+        "target_entity_id": "ENT044",
+        "role_label": "总的医疗队大队长",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0051",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL031",
+        "source_entity_id": "ENT012",
+        "relation_type": "HELD_POSITION_AT",
+        "target_entity_id": "ENT043",
+        "role_label": "卫生部长",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0051",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL032",
+        "source_entity_id": "ENT012",
+        "relation_type": "RELATED_TO",
+        "target_entity_id": "ENT011",
+        "role_label": "学生/进修",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0051",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL033",
+        "source_entity_id": "ENT006",
+        "relation_type": "RELATED_TO",
+        "target_entity_id": "ENT040",
+        "role_label": "部队方面",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0047",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL034",
+        "source_entity_id": "ENT007",
+        "relation_type": "MEMBER_OF",
+        "target_entity_id": "ENT039",
+        "role_label": "带来人员",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0047",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL035",
+        "source_entity_id": "ENT005",
+        "relation_type": "RELATED_TO",
+        "target_entity_id": "ENT041",
+        "role_label": "部队",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0045",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL036",
+        "source_entity_id": "ENT013",
+        "relation_type": "MEMBER_OF",
+        "target_entity_id": "ENT019",
+        "role_label": "营长",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0065",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "HIGH"
+      },
+      {
+        "relation_id": "REL037",
+        "source_entity_id": "ENT039",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT040",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0047",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL038",
+        "source_entity_id": "ENT058",
+        "relation_type": "LOCATED_IN",
+        "target_entity_id": "ENT064",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0067",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL039",
+        "source_entity_id": "ENT060",
+        "relation_type": "LOCATED_IN",
+        "target_entity_id": "ENT059",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0065",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL040",
+        "source_entity_id": "ENT063",
+        "relation_type": "LOCATED_IN",
+        "target_entity_id": "ENT058",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0079",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL041",
+        "source_entity_id": "ENT074",
+        "relation_type": "RELATED_TO",
+        "target_entity_id": "ENT061",
+        "role_label": "分类站地点",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0012",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL042",
+        "source_entity_id": "ENT070",
+        "relation_type": "RELATED_TO",
+        "target_entity_id": "ENT060",
+        "role_label": "史书称铁门闩战斗",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0063",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL043",
+        "source_entity_id": "ENT068",
+        "relation_type": "RELATED_TO",
+        "target_entity_id": "ENT059",
+        "role_label": "战斗地点",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0003",
+        "source_status": "INTERVIEWER_QUESTION",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL044",
+        "source_entity_id": "ENT070",
+        "relation_type": "RELATED_TO",
+        "target_entity_id": "ENT059",
+        "role_label": "战斗地点",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0063",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL045",
+        "source_entity_id": "ENT071",
+        "relation_type": "RELATED_TO",
+        "target_entity_id": "ENT059",
+        "role_label": "战斗地点",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0063",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL046",
+        "source_entity_id": "ENT079",
+        "relation_type": "RELATED_TO",
+        "target_entity_id": "ENT059",
+        "role_label": "歌曲标题",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0079",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL047",
+        "source_entity_id": "ENT053",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT014",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0047",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL048",
+        "source_entity_id": "ENT035",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT014",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0006",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL049",
+        "source_entity_id": "ENT040",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT014",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0045",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL050",
+        "source_entity_id": "ENT041",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT014",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0045",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL051",
+        "source_entity_id": "ENT042",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT014",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0045",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL052",
+        "source_entity_id": "ENT016",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT053",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL053",
+        "source_entity_id": "ENT080",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT017",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0001",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL054",
+        "source_entity_id": "ENT081",
+        "relation_type": "PART_OF",
+        "target_entity_id": "ENT044",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0051",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "relation_id": "REL055",
+        "source_entity_id": "ENT039",
+        "relation_type": "LOCATED_IN",
+        "target_entity_id": "ENT065",
+        "role_label": "",
+        "start_date": "",
+        "end_date": "",
+        "evidence_segment_id": "BATCH03-DOC01-S0047",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "event_times": [
+      {
+        "event_id": "BATCH03-DOC01-DE001",
+        "raw_text": "11月7号",
+        "normalized_start": "11-07",
+        "normalized_end": "11-07",
+        "precision": "DAY",
+        "certainty": "EXACT",
+        "source_status": "MIXED",
+        "evidence_segment_id": "BATCH03-DOC01-S0003",
+        "confidence": "MEDIUM"
+      },
+      {
+        "event_id": "BATCH03-DOC01-DE002",
+        "raw_text": "车桥战役",
+        "normalized_start": "",
+        "normalized_end": "",
+        "precision": "RELATIVE",
+        "certainty": "EXACT",
+        "source_status": "ORAL_TESTIMONY",
+        "evidence_segment_id": "BATCH03-DOC01-S0025",
+        "confidence": "MEDIUM"
+      },
+      {
+        "event_id": "BATCH03-DOC01-DE003",
+        "raw_text": "",
+        "normalized_start": "",
+        "normalized_end": "",
+        "precision": "RELATIVE",
+        "certainty": "UNCERTAIN",
+        "source_status": "STRUCTURAL_INFERENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0023",
+        "confidence": "LOW"
+      },
+      {
+        "event_id": "BATCH03-DOC01-DE004",
+        "raw_text": "到淮海战役",
+        "normalized_start": "",
+        "normalized_end": "",
+        "precision": "RELATIVE",
+        "certainty": "EXACT",
+        "source_status": "ORAL_TESTIMONY",
+        "evidence_segment_id": "BATCH03-DOC01-S0041",
+        "confidence": "MEDIUM"
+      },
+      {
+        "event_id": "BATCH03-DOC01-DE005",
+        "raw_text": "",
+        "normalized_start": "",
+        "normalized_end": "",
+        "precision": "RELATIVE",
+        "certainty": "UNCERTAIN",
+        "source_status": "STRUCTURAL_INFERENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0045",
+        "confidence": "LOW"
+      },
+      {
+        "event_id": "BATCH03-DOC01-DE006",
+        "raw_text": "后来",
+        "normalized_start": "",
+        "normalized_end": "",
+        "precision": "RELATIVE",
+        "certainty": "UNCERTAIN",
+        "source_status": "ORAL_TESTIMONY",
+        "evidence_segment_id": "BATCH03-DOC01-S0047",
+        "confidence": "LOW"
+      },
+      {
+        "event_id": "BATCH03-DOC01-DE007",
+        "raw_text": "",
+        "normalized_start": "",
+        "normalized_end": "",
+        "precision": "RELATIVE",
+        "certainty": "UNCERTAIN",
+        "source_status": "STRUCTURAL_INFERENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0049",
+        "confidence": "LOW"
+      },
+      {
+        "event_id": "BATCH03-DOC01-DE008",
+        "raw_text": "",
+        "normalized_start": "",
+        "normalized_end": "",
+        "precision": "RELATIVE",
+        "certainty": "UNCERTAIN",
+        "source_status": "STRUCTURAL_INFERENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0051",
+        "confidence": "LOW"
+      },
+      {
+        "event_id": "BATCH03-DOC01-DE009",
+        "raw_text": "",
+        "normalized_start": "",
+        "normalized_end": "",
+        "precision": "RELATIVE",
+        "certainty": "UNCERTAIN",
+        "source_status": "STRUCTURAL_INFERENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0057",
+        "confidence": "LOW"
+      },
+      {
+        "event_id": "BATCH03-DOC01-DE010",
+        "raw_text": "第六次“繁昌战斗”",
+        "normalized_start": "",
+        "normalized_end": "",
+        "precision": "RELATIVE",
+        "certainty": "EXACT",
+        "source_status": "ORAL_TESTIMONY",
+        "evidence_segment_id": "BATCH03-DOC01-S0063",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "time_expressions": [
+      {
+        "segment_id": "BATCH03-DOC01-S0001",
+        "raw_text": "1912年8月4日",
+        "normalized_start": "1912-08-04",
+        "normalized_end": "1912-08-04",
+        "precision": "DAY",
+        "expression_type": "DATE",
+        "certainty": "EXACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0001",
+        "raw_text": "1935年",
+        "normalized_start": "1935",
+        "normalized_end": "1935",
+        "precision": "YEAR",
+        "expression_type": "DATE",
+        "certainty": "EXACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0001",
+        "raw_text": "1938年2月",
+        "normalized_start": "1938-02",
+        "normalized_end": "1938-02",
+        "precision": "MONTH",
+        "expression_type": "DATE",
+        "certainty": "EXACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0001",
+        "raw_text": "1938年10月",
+        "normalized_start": "1938-10",
+        "normalized_end": "1938-10",
+        "precision": "MONTH",
+        "expression_type": "DATE",
+        "certainty": "EXACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0001",
+        "raw_text": "1939年8月",
+        "normalized_start": "1939-08",
+        "normalized_end": "1939-08",
+        "precision": "MONTH",
+        "expression_type": "DATE",
+        "certainty": "EXACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0001",
+        "raw_text": "1939年至1941年12月",
+        "normalized_start": "1939",
+        "normalized_end": "1941-12",
+        "precision": "INTERVAL",
+        "expression_type": "INTERVAL",
+        "certainty": "EXACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0001",
+        "raw_text": "1940年12月6日",
+        "normalized_start": "1940-12-06",
+        "normalized_end": "1940-12-06",
+        "precision": "DAY",
+        "expression_type": "DATE",
+        "certainty": "EXACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0001",
+        "raw_text": "1942年",
+        "normalized_start": "1942",
+        "normalized_end": "1942",
+        "precision": "YEAR",
+        "expression_type": "DATE",
+        "certainty": "EXACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0001",
+        "raw_text": "1943年",
+        "normalized_start": "1943",
+        "normalized_end": "1943",
+        "precision": "YEAR",
+        "expression_type": "DATE",
+        "certainty": "EXACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0001",
+        "raw_text": "1945年",
+        "normalized_start": "1945",
+        "normalized_end": "1945",
+        "precision": "YEAR",
+        "expression_type": "DATE",
+        "certainty": "EXACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0001",
+        "raw_text": "1946年",
+        "normalized_start": "1946",
+        "normalized_end": "1946",
+        "precision": "YEAR",
+        "expression_type": "DATE",
+        "certainty": "EXACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0001",
+        "raw_text": "1948年8月",
+        "normalized_start": "1948-08",
+        "normalized_end": "1948-08",
+        "precision": "MONTH",
+        "expression_type": "DATE",
+        "certainty": "EXACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0001",
+        "raw_text": "1949年8月",
+        "normalized_start": "1949-08",
+        "normalized_end": "1949-08",
+        "precision": "MONTH",
+        "expression_type": "DATE",
+        "certainty": "EXACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0001",
+        "raw_text": "1982年",
+        "normalized_start": "1982",
+        "normalized_end": "1982",
+        "precision": "YEAR",
+        "expression_type": "DATE",
+        "certainty": "EXACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0001",
+        "raw_text": "2013年6月17日",
+        "normalized_start": "2013-06-17",
+        "normalized_end": "2013-06-17",
+        "precision": "DAY",
+        "expression_type": "DATE",
+        "certainty": "EXACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0001",
+        "raw_text": "2010-02-28",
+        "normalized_start": "2010-02-28",
+        "normalized_end": "2010-02-28",
+        "precision": "DAY",
+        "expression_type": "DATE",
+        "certainty": "EXACT",
+        "source_status": "EDITORIAL_PROFILE",
+        "confidence": "HIGH"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0003",
+        "raw_text": "11月7号",
+        "normalized_start": "11-07",
+        "normalized_end": "11-07",
+        "precision": "DAY",
+        "expression_type": "DATE",
+        "certainty": "EXACT",
+        "source_status": "INTERVIEWER_QUESTION",
+        "confidence": "MEDIUM"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0063",
+        "raw_text": "5月2号5月3号",
+        "normalized_start": "05-02",
+        "normalized_end": "05-03",
+        "precision": "INTERVAL",
+        "expression_type": "INTERVAL",
+        "certainty": "EXACT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0071",
+        "raw_text": "1938、1939、1940前面三年",
+        "normalized_start": "1938",
+        "normalized_end": "1940",
+        "precision": "INTERVAL",
+        "expression_type": "INTERVAL",
+        "certainty": "EXACT",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      },
+      {
+        "segment_id": "BATCH03-DOC01-S0073",
+        "raw_text": "1940年以后",
+        "normalized_start": "1940",
+        "normalized_end": "",
+        "precision": "INTERVAL",
+        "expression_type": "INTERVAL",
+        "certainty": "OPEN_END",
+        "source_status": "ORAL_TESTIMONY",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

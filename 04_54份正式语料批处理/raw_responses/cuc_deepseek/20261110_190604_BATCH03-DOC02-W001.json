@@ -1,0 +1,276 @@
+{
+  "run_time": "2026-11-10T19:06:04",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC02-W001",
+  "technical_document_id": "BATCH03-DOC02",
+  "document_id": "06.陈锐霆 090508（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC02-S0002",
+    "BATCH03-DOC02-S0003",
+    "BATCH03-DOC02-S0004",
+    "BATCH03-DOC02-S0005",
+    "BATCH03-DOC02-S0006",
+    "BATCH03-DOC02-S0007",
+    "BATCH03-DOC02-S0008",
+    "BATCH03-DOC02-S0009",
+    "BATCH03-DOC02-S0010",
+    "BATCH03-DOC02-S0011",
+    "BATCH03-DOC02-S0012",
+    "BATCH03-DOC02-S0013",
+    "BATCH03-DOC02-S0014",
+    "BATCH03-DOC02-S0015",
+    "BATCH03-DOC02-S0016",
+    "BATCH03-DOC02-S0017",
+    "BATCH03-DOC02-S0018",
+    "BATCH03-DOC02-S0019",
+    "BATCH03-DOC02-S0020",
+    "BATCH03-DOC02-S0021",
+    "BATCH03-DOC02-S0022",
+    "BATCH03-DOC02-S0023",
+    "BATCH03-DOC02-S0024",
+    "BATCH03-DOC02-S0025"
+  ],
+  "json_valid": true,
+  "validation_errors": [
+    "存在未处理输入片段：['BATCH03-DOC02-S0013', 'BATCH03-DOC02-S0015', 'BATCH03-DOC02-S0017', 'BATCH03-DOC02-S0019', 'BATCH03-DOC02-S0021', 'BATCH03-DOC02-S0023']"
+  ],
+  "technical_passed": false,
+  "metrics": {
+    "event_count": 4,
+    "assigned_segment_count": 7,
+    "unassigned_segment_count": 11,
+    "input_segment_count": 24,
+    "all_input_segments_accounted_for": false
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC02-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC02-W001-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC02-S0012",
+          "BATCH03-DOC02-S0014"
+        ],
+        "event": {
+          "event_name": "被提升为142师补充团团长并到团任职",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "提升为补充团团长",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "九十二军",
+              "normalized_entity": "国民革命军第九十二军",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "另外提升我为142师补充团的团长",
+          "type_basis": "“提升为……团长”是组织任命并改变职务状态的动作，按物质过程处理；不是静态身份关系。角色使用 Actor/Goal，未把职务标为 Scope。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC02-W001-E02",
+        "source_segment_ids": [
+          "BATCH03-DOC02-S0014",
+          "BATCH03-DOC02-S0016",
+          "BATCH03-DOC02-S0018"
+        ],
+        "event": {
+          "event_name": "赴青山湾欲见商震、联络王兴纲并尝试联系河南省委",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "赴青山湾联络商震、王兴纲并联系河南省委",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "商震",
+              "normalized_entity": "商震",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "王兴纲",
+              "normalized_entity": "王兴纲",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "河南省委",
+              "normalized_entity": "中共河南省委",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "青山湾",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "河南",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "南阳邮局",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "到了青山湾，商震因为蒋介石调他走了，没见到，就跟王兴纲同志谈情况，在那儿住了两三天，我又回到河南去了。",
+          "type_basis": "整体是赴青山湾的联络行动，包含移动、会面、谈情况和写信联系；谈情况是阶段，主导为物质性联络行动。",
+          "alternative_event_type": "VERBAL",
+          "ambiguity_reason": "事件同时包含赴青山湾的移动和谈情况、写信等象征交换，主导类型按物质性联络行动处理，但言语过程也较突出。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC02-W001-E03",
+        "source_segment_ids": [
+          "BATCH03-DOC02-S0020",
+          "BATCH03-DOC02-S0022"
+        ],
+        "event": {
+          "event_name": "参加万高战役并因功调任425团团长",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "参加万高战役",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我这个师",
+              "normalized_entity": "国民革命军第142师",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "这一年的12月",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "随县以南",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "小峰山",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "日本鬼子要扫荡武汉周围的这些外围部队",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我这个师就在随县以南担任（驻守），那儿有个“万高战役”嘛，万家岭、高城那一段。在敌人进攻的时候，我分工驻守的地方叫小峰山（音），敌人没突破；但两边的我们的主力团，都被敌人突破了。",
+          "type_basis": "作战、驻守和部队调动均为物质过程；不是言语或心理。“因功调任”作为战役结果并入，不另立节点。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC02-W001-E04",
+        "source_segment_ids": [
+          "BATCH03-DOC02-S0022",
+          "BATCH03-DOC02-S0025"
+        ],
+        "event": {
+          "event_name": "随92军东调途中参加枣宜会战并在毛周峡阻击日军",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "参加枣宜会战并阻击日军",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "敌人",
+              "normalized_entity": "日军",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "确山西南边不远的一个地方叫毛周峡（音）",
+              "normalized_value": "确山西南毛周峡"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "枣阳县",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "又把我调上去抗击敌人，我收到任务就在确山西南边不远的一个地方叫毛周峡（音），这个时候上边给我配一个三七战防炮连，敌人来得很凶，装甲车十几辆。我们这个战防炮连给他击毁是四辆，敌人看了打这个正路过不去，绕道走了，占领我们的枣阳县。",
+          "type_basis": "东调命令、抗击敌人、战防炮作战、侦察和兵力部署构成同一战役经历，均属物质过程；不把命令或侦察拆成独立节点。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC02-S0002",
+      "BATCH03-DOC02-S0003",
+      "BATCH03-DOC02-S0004",
+      "BATCH03-DOC02-S0005",
+      "BATCH03-DOC02-S0006",
+      "BATCH03-DOC02-S0007",
+      "BATCH03-DOC02-S0008",
+      "BATCH03-DOC02-S0009",
+      "BATCH03-DOC02-S0010",
+      "BATCH03-DOC02-S0011",
+      "BATCH03-DOC02-S0024"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH03-DOC02-W001\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC02-W001-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC02-S0012\",\n        \"BATCH03-DOC02-S0014\"\n      ],\n      \"event\": {\n        \"event_name\": \"被提升为142师补充团团长并到团任职\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"提升为补充团团长\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"九十二军\",\n            \"normalized_entity\": \"国民革命军第九十二军\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": null,\n        \"evidence_quote\": \"另外提升我为142师补充团的团长\",\n        \"type_basis\": \"“提升为……团长”是组织任命并改变职务状态的动作，按物质过程处理；不是静态身份关系。角色使用 Actor/Goal，未把职务标为 Scope。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC02-W001-E02\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC02-S0014\",\n        \"BATCH03-DOC02-S0016\",\n        \"BATCH03-DOC02-S0018\"\n      ],\n      \"event\": {\n        \"event_name\": \"赴青山湾欲见商震、联络王兴纲并尝试联系河南省委\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"赴青山湾联络商震、王兴纲并联系河南省委\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"商震\",\n            \"normalized_entity\": \"商震\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"王兴纲\",\n            \"normalized_entity\": \"王兴纲\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"河南省委\",\n            \"normalized_entity\": \"中共河南省委\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"青山湾\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"河南\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"南阳邮局\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"到了青山湾，商震因为蒋介石调他走了，没见到，就跟王兴纲同志谈情况，在那儿住了两三天，我又回到河南去了。\",\n        \"type_basis\": \"整体是赴青山湾的联络行动，包含移动、会面、谈情况和写信联系；谈情况是阶段，主导为物质性联络行动。\",\n        \"alternative_event_type\": \"VERBAL\",\n        \"ambiguity_reason\": \"事件同时包含赴青山湾的移动和谈情况、写信等象征交换，主导类型按物质性联络行动处理，但言语过程也较突出。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC02-W001-E03\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC02-S0020\",\n        \"BATCH03-DOC02-S0022\"\n      ],\n      \"event\": {\n        \"event_name\": \"参加万高战役并因功调任425团团长\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"参加万高战役\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我这个师\",\n            \"normalized_entity\": \"国民革命军第142师\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"这一年的12月\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"随县以南\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"小峰山\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"日本鬼子要扫荡武汉周围的这些外围部队\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我这个师就在随县以南担任（驻守），那儿有个“万高战役”嘛，万家岭、高城那一段。在敌人进攻的时候，我分工驻守的地方叫小峰山（音），敌人没突破；但两边的我们的主力团，都被敌人突破了。\",\n        \"type_basis\": \"作战、驻守和部队调动均为物质过程；不是言语或心理。“因功调任”作为战役结果并入，不另立节点。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC02-W001-E04\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC02-S0022\",\n        \"BATCH03-DOC02-S0025\"\n      ],\n      \"event\": {\n        \"event_name\": \"随92军东调途中参加枣宜会战并在毛周峡阻击日军\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"参加枣宜会战并阻击日军\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"敌人\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"确山西南边不远的一个地方叫毛周峡（音）\",\n            \"normalized_value\": \"确山西南毛周峡\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"枣阳县\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"又把我调上去抗击敌人，我收到任务就在确山西南边不远的一个地方叫毛周峡（音），这个时候上边给我配一个三七战防炮连，敌人来得很凶，装甲车十几辆。我们这个战防炮连给他击毁是四辆，敌人看了打这个正路过不去，绕道走了，占领我们的枣阳县。\",\n        \"type_basis\": \"东调命令、抗击敌人、战防炮作战、侦察和兵力部署构成同一战役经历，均属物质过程；不把命令或侦察拆成独立节点。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC02-S0002\",\n    \"BATCH03-DOC02-S0003\",\n    \"BATCH03-DOC02-S0004\",\n    \"BATCH03-DOC02-S0005\",\n    \"BATCH03-DOC02-S0006\",\n    \"BATCH03-DOC02-S0007\",\n    \"BATCH03-DOC02-S0008\",\n    \"BATCH03-DOC02-S0009\",\n    \"BATCH03-DOC02-S0010\",\n    \"BATCH03-DOC02-S0011\",\n    \"BATCH03-DOC02-S0024\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5759,
+    "total_tokens": 27913,
+    "completion_tokens": 22154,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 20194
+    },
+    "time_to_first_token_ms": 253047,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11076500
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "run_time": "2026-11-12T23:04:03",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC07-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC07-DE007",
+  "usage": {
+    "prompt_tokens": 2729,
+    "total_tokens": 16812,
+    "completion_tokens": 14083,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12452
+    },
+    "time_to_first_token_ms": 208750,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 14082000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC07-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"卫校队伍到海复镇会合后，对外仍称卫生部卫生学校，对内编入抗大九分校第六队（苏中卫校），驻海复镇垦牧公司整训，把课上完，形成约半年稳定整训状态。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于 S0139‘走陆地……到海复镇会合’，止于 S0187 对海复镇至吕四控制地与县城敌占的说明；中间包含改编、驻垦牧公司、留下为第六队/苏中卫校、整训完课及时间环境。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"卫校学生队走陆地经吕四到海复镇会合\",\n      \"process_text\": \"走陆地，卫校另外一个学生队跟着一块走，到吕四，再到海复镇会合。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0139\"\n      ],\n      \"evidence_quote\": \"    陈海峰：走陆地。我们卫校的另外一个学生队，那就跟着一块走，就到这个吕四呢，到海复镇会合。海复镇会合以后呢，我们这个卫校，就改变教育方法，应付战争环境的办法。对外，卫校名义上还是卫生部卫生学校。对内呢，就编到抗大九分校，到海复镇的一个垦牧公司。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"会合后改变教育方法，对外仍称卫生部卫生学校，对内编入抗大九分校并驻垦牧公司\",\n      \"process_text\": \"海复镇会合以后，卫校改变教育方法，应付战争环境；对外名义上还是卫生部卫生学校，对内编到抗大九分校，到海复镇的一个垦牧公司，即大来棉花垦牧公司。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0139\",\n        \"BATCH04-DOC07-S0141\"\n      ],\n      \"evidence_quote\": \"    陈海峰：走陆地。我们卫校的另外一个学生队，那就跟着一块走，就到这个吕四呢，到海复镇会合。海复镇会合以后呢，我们这个卫校，就改变教育方法，应付战争环境的办法。对外，卫校名义上还是卫生部卫生学校。对内呢，就编到抗大九分校，到海复镇的一个垦牧公司。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"队伍留下成为抗大九分校第六队（苏中卫校），在稳定环境中整训完课约半年\",\n      \"process_text\": \"我们这一个队就留下来了，抗大九分校第六队，就是苏中卫校；在这个地方整训，把那个课上完，从1942年七八月份一直到1943年2月，差不多半年左右，环境稳定。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0175\",\n        \"BATCH04-DOC07-S0176\",\n        \"BATCH04-DOC07-S0177\",\n        \"BATCH04-DOC07-S0178\",\n        \"BATCH04-DOC07-S0179\",\n        \"BATCH04-DOC07-S0181\",\n        \"BATCH04-DOC07-S0182\",\n        \"BATCH04-DOC07-S0183\"\n      ],\n      \"evidence_quote\": \"这个环境稳定，地方都整训，抗大九分校。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"整训期间海复镇环境稳定，师部、卫生部、供给部在此，理论家来报告，海复镇至吕四为我控制地\",\n      \"process_text\": \"师部、粟裕什么都在海复镇，卫生部、供给部什么都在这儿；彭康、姚鼐（音）等理论家来那里做报告；海复镇到吕四这个地方是控制地，县城还是鬼子（的）。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0184\",\n        \"BATCH04-DOC07-S0186\",\n        \"BATCH04-DOC07-S0187\"\n      ],\n      \"evidence_quote\": \"这个师部、粟裕什么都在海复镇，我们卫生部啊、供给部啦什么都在这儿。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE007-P01\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0139\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE007-P02\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0175\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE007-P03\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE007-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0183\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC07-DE007",
+    "event_enrichment": {
+      "result_state": "卫校队伍到海复镇会合后，对外仍称卫生部卫生学校，对内编入抗大九分校第六队（苏中卫校），驻海复镇垦牧公司整训，把课上完，形成约半年稳定整训状态。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于 S0139‘走陆地……到海复镇会合’，止于 S0187 对海复镇至吕四控制地与县城敌占的说明；中间包含改编、驻垦牧公司、留下为第六队/苏中卫校、整训完课及时间环境。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC07-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "卫校学生队走陆地经吕四到海复镇会合",
+        "process_text": "走陆地，卫校另外一个学生队跟着一块走，到吕四，再到海复镇会合。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0139"
+        ],
+        "evidence_quote": "    陈海峰：走陆地。我们卫校的另外一个学生队，那就跟着一块走，就到这个吕四呢，到海复镇会合。海复镇会合以后呢，我们这个卫校，就改变教育方法，应付战争环境的办法。对外，卫校名义上还是卫生部卫生学校。对内呢，就编到抗大九分校，到海复镇的一个垦牧公司。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "会合后改变教育方法，对外仍称卫生部卫生学校，对内编入抗大九分校并驻垦牧公司",
+        "process_text": "海复镇会合以后，卫校改变教育方法，应付战争环境；对外名义上还是卫生部卫生学校，对内编到抗大九分校，到海复镇的一个垦牧公司，即大来棉花垦牧公司。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0139",
+          "BATCH04-DOC07-S0141"
+        ],
+        "evidence_quote": "    陈海峰：走陆地。我们卫校的另外一个学生队，那就跟着一块走，就到这个吕四呢，到海复镇会合。海复镇会合以后呢，我们这个卫校，就改变教育方法，应付战争环境的办法。对外，卫校名义上还是卫生部卫生学校。对内呢，就编到抗大九分校，到海复镇的一个垦牧公司。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "队伍留下成为抗大九分校第六队（苏中卫校），在稳定环境中整训完课约半年",
+        "process_text": "我们这一个队就留下来了，抗大九分校第六队，就是苏中卫校；在这个地方整训，把那个课上完，从1942年七八月份一直到1943年2月，差不多半年左右，环境稳定。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0175",
+          "BATCH04-DOC07-S0176",
+          "BATCH04-DOC07-S0177",
+          "BATCH04-DOC07-S0178",
+          "BATCH04-DOC07-S0179",
+          "BATCH04-DOC07-S0181",
+          "BATCH04-DOC07-S0182",
+          "BATCH04-DOC07-S0183"
+        ],
+        "evidence_quote": "这个环境稳定，地方都整训，抗大九分校。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "整训期间海复镇环境稳定，师部、卫生部、供给部在此，理论家来报告，海复镇至吕四为我控制地",
+        "process_text": "师部、粟裕什么都在海复镇，卫生部、供给部什么都在这儿；彭康、姚鼐（音）等理论家来那里做报告；海复镇到吕四这个地方是控制地，县城还是鬼子（的）。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0184",
+          "BATCH04-DOC07-S0186",
+          "BATCH04-DOC07-S0187"
+        ],
+        "evidence_quote": "这个师部、粟裕什么都在海复镇，我们卫生部啊、供给部啦什么都在这儿。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC07-DE007-P01",
+        "target_stage_id": "BATCH04-DOC07-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0139",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE007-P02",
+        "target_stage_id": "BATCH04-DOC07-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0175",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE007-P03",
+        "target_stage_id": "BATCH04-DOC07-DE007-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC07-S0183",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

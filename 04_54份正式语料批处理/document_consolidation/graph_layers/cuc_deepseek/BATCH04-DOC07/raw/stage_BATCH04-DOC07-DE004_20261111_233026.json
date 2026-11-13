@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-11T23:30:26",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC07-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC07-DE004",
+  "usage": {
+    "prompt_tokens": 1147,
+    "total_tokens": 3665,
+    "completion_tokens": 2518,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1530
+    },
+    "time_to_first_token_ms": 19844,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC07-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"卫校对外仍用卫生部卫生学校名义，对内编入抗大九分校，并到海复镇的一个垦牧公司。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于卫校另一学生队走陆路到海复镇会合，止于对内编入抗大九分校并到海复镇垦牧公司；依据片段BATCH04-DOC07-S0139。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"卫校另一学生队走陆路，经吕四到海复镇会合。\",\n      \"process_text\": \"卫校的另外一个学生队走陆地，跟着一块走到吕四，再到海复镇会合。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0139\"\n      ],\n      \"evidence_quote\": \"我们卫校的另外一个学生队，那就跟着一块走，就到这个吕四呢，到海复镇会合。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"海复镇会合后，卫校改变教育方法以应付战争环境。\",\n      \"process_text\": \"海复镇会合以后，卫校改变教育方法，作为应付战争环境的办法。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0139\"\n      ],\n      \"evidence_quote\": \"海复镇会合以后呢，我们这个卫校，就改变教育方法，应付战争环境的办法。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"对外仍保留卫生部卫生学校名义。\",\n      \"process_text\": \"对外，卫校名义上还是卫生部卫生学校。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0139\"\n      ],\n      \"evidence_quote\": \"对外，卫校名义上还是卫生部卫生学校。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"对内编入抗大九分校，并到海复镇的一个垦牧公司。\",\n      \"process_text\": \"对内，卫校编到抗大九分校，到海复镇的一个垦牧公司。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0139\"\n      ],\n      \"evidence_quote\": \"对内呢，就编到抗大九分校，到海复镇的一个垦牧公司。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE004-P01\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0139\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE004-P02\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0139\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE004-P03\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE004-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0139\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC07-DE004",
+    "event_enrichment": {
+      "result_state": "卫校对外仍用卫生部卫生学校名义，对内编入抗大九分校，并到海复镇的一个垦牧公司。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于卫校另一学生队走陆路到海复镇会合，止于对内编入抗大九分校并到海复镇垦牧公司；依据片段BATCH04-DOC07-S0139。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC07-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "卫校另一学生队走陆路，经吕四到海复镇会合。",
+        "process_text": "卫校的另外一个学生队走陆地，跟着一块走到吕四，再到海复镇会合。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0139"
+        ],
+        "evidence_quote": "我们卫校的另外一个学生队，那就跟着一块走，就到这个吕四呢，到海复镇会合。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "海复镇会合后，卫校改变教育方法以应付战争环境。",
+        "process_text": "海复镇会合以后，卫校改变教育方法，作为应付战争环境的办法。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0139"
+        ],
+        "evidence_quote": "海复镇会合以后呢，我们这个卫校，就改变教育方法，应付战争环境的办法。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "对外仍保留卫生部卫生学校名义。",
+        "process_text": "对外，卫校名义上还是卫生部卫生学校。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0139"
+        ],
+        "evidence_quote": "对外，卫校名义上还是卫生部卫生学校。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "对内编入抗大九分校，并到海复镇的一个垦牧公司。",
+        "process_text": "对内，卫校编到抗大九分校，到海复镇的一个垦牧公司。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0139"
+        ],
+        "evidence_quote": "对内呢，就编到抗大九分校，到海复镇的一个垦牧公司。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC07-DE004-P01",
+        "target_stage_id": "BATCH04-DOC07-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0139",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE004-P02",
+        "target_stage_id": "BATCH04-DOC07-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0139",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE004-P03",
+        "target_stage_id": "BATCH04-DOC07-DE004-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0139",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

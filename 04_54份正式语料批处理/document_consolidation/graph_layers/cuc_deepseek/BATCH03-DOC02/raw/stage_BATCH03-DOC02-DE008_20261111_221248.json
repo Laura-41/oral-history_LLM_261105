@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T22:12:48",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC02-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC02-DE008",
+  "usage": {
+    "prompt_tokens": 1136,
+    "total_tokens": 3065,
+    "completion_tokens": 1929,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1408
+    },
+    "tokens_per_second": 1928000,
+    "time_to_first_token_ms": 14928,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC02-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"在宜昌北关外分乡场完成一个多月的防御。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“以后敌人占了宜昌”为背景起点，至“一个多月”防御结束；后续“上面有命令……”属于离开宜昌、进入山东/阜阳的另段过程，不纳入本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"敌占宜昌后，叙述者再到宜昌，并提及分乡场位置。\",\n      \"process_text\": \"以后敌人占了宜昌，我又到了宜昌，北关外头有个分乡场\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0048\"\n      ],\n      \"evidence_quote\": \"以后敌人占了宜昌，我又到了宜昌，北关外头有个分乡场\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"在分乡场进行防御，持续一个多月。\",\n      \"process_text\": \"我就是在那防御嘛，一个多月。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0048\"\n      ],\n      \"evidence_quote\": \"我就是在那防御嘛，一个多月。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE008-P01\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0048\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC02-DE008",
+    "event_enrichment": {
+      "result_state": "在宜昌北关外分乡场完成一个多月的防御。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以“以后敌人占了宜昌”为背景起点，至“一个多月”防御结束；后续“上面有命令……”属于离开宜昌、进入山东/阜阳的另段过程，不纳入本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC02-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "敌占宜昌后，叙述者再到宜昌，并提及分乡场位置。",
+        "process_text": "以后敌人占了宜昌，我又到了宜昌，北关外头有个分乡场",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0048"
+        ],
+        "evidence_quote": "以后敌人占了宜昌，我又到了宜昌，北关外头有个分乡场",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "在分乡场进行防御，持续一个多月。",
+        "process_text": "我就是在那防御嘛，一个多月。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0048"
+        ],
+        "evidence_quote": "我就是在那防御嘛，一个多月。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC02-DE008-P01",
+        "target_stage_id": "BATCH03-DOC02-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC02-S0048",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

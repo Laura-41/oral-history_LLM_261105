@@ -1,0 +1,66 @@
+图谱新增层批量执行：cuc/deepseek
+日志：04_54份正式语料批处理/run_logs/GRAPH_ALL_cuc_deepseek_20261113_142625_pid44530.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+单次 API 等待上限：1800s（DeepSeek 大请求上游固定 30 分钟回 500/504，建议 1200 提前放弃；Qwen 线用 3600）
+容错编排：每份最多尝试 2 次，仍失败先跳过跑后面的（未全量则不导出、禁止入库）
+语料口径：60 份总账 = 6 份人工 Demo + 54 份正式语料；BATCH01 三份同为正式语料，全数纳入。
+
+一级层结果 54 份｜新增层已验收 52 份｜本次待跑 2 份
+待跑清单：
+  BATCH02-DOC09
+  BATCH04-DOC09
+
+[1/54] BATCH01-DOC01 已验收，跳过
+[2/54] BATCH01-DOC02 已验收，跳过
+[3/54] BATCH01-DOC03 已验收，跳过
+[4/54] BATCH02-DOC01 已验收，跳过
+[5/54] BATCH02-DOC02 已验收，跳过
+[6/54] BATCH02-DOC03 已验收，跳过
+[7/54] BATCH02-DOC04 已验收，跳过
+[8/54] BATCH02-DOC05 已验收，跳过
+[9/54] BATCH02-DOC06 已验收，跳过
+[10/54] BATCH02-DOC07 已验收，跳过
+[11/54] BATCH02-DOC08 已验收，跳过
+[12/54] ===== BATCH02-DOC09 开始 =====
+--- BATCH02-DOC09 第 1/2 次尝试  14:26:28 ---
+单文档验证：BATCH02-DOC09 / cuc/deepseek
+日志：04_54份正式语料批处理/run_logs/GRAPH_VERIFY_BATCH02-DOC09_cuc_deepseek_20261113_142628_pid44734.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+
+===== L0 零 API 底座表 =====
+[落盘] BATCH02-DOC09 / cuc/deepseek
+  原文片段 100｜一级事件 12｜覆盖率 1.0000
+  人工视图：04_54份正式语料批处理/document_consolidation/human_adjudicated/cuc_deepseek/BATCH02-DOC09.json
+    documents                  1 行
+    source_segments          100 行
+    source_attachments       103 行
+    coverage_audit             1 行
+    document_annotations      37 行
+    event_nodes               12 行
+    event_processes           12 行
+    event_participants        19 行
+    event_circumstances       29 行
+    event_next                11 行
+  警告 4 条（详见 L0_report.json）
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH02-DOC09
+
+===== L1/L2 模型任务（真实 API 调用） =====
+[真实调用] BATCH02-DOC09 / cuc/deepseek / tasks=stage,entity_time
+  一级事件 12｜原文片段 100｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH02-DOC09/raw
+
+== stage：12 次调用 ==
+  [1/12] stage_BATCH02-DOC09-DE001 已有成功响应，跳过（断点续跑）
+  [2/12] stage_BATCH02-DOC09-DE002 已有成功响应，跳过（断点续跑）
+  [3/12] stage_BATCH02-DOC09-DE003 已有成功响应，跳过（断点续跑）
+  [4/12] stage_BATCH02-DOC09-DE004 已有成功响应，跳过（断点续跑）
+  [5/12] stage_BATCH02-DOC09-DE005 已有成功响应，跳过（断点续跑）
+  [6/12] stage_BATCH02-DOC09-DE006 已有成功响应，跳过（断点续跑）
+  [7/12] stage_BATCH02-DOC09-DE007 已有成功响应，跳过（断点续跑）
+  [8/12] stage_BATCH02-DOC09-DE008 已有成功响应，跳过（断点续跑）
+  [9/12] stage_BATCH02-DOC09-DE009 已有成功响应，跳过（断点续跑）
+  [10/12] stage_BATCH02-DOC09-DE010 已有成功响应，跳过（断点续跑）
+  [11/12] stage_BATCH02-DOC09-DE011 已有成功响应，跳过（断点续跑）
+  [12/12] stage_BATCH02-DOC09-DE012 已有成功响应，跳过（断点续跑）
+
+== entity_time：1 次调用 ==
+  [1/1] 请求 entity_time/YYS-04，输入 30,005 字符，最长等待 1800s……

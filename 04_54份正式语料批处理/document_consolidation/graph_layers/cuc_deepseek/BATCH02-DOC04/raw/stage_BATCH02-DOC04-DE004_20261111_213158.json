@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-11T21:31:58",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC04-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC04-DE004",
+  "usage": {
+    "prompt_tokens": 1321,
+    "total_tokens": 5139,
+    "completion_tokens": 3818,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2672
+    },
+    "time_to_first_token_ms": 35779,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3817000
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC04-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"中央作出东进指示，并提出一个月扩大五万人的期望；听者当时有疑虑，叙述者事后认为该扩军目标可行。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“中央有指示，要我们东进”为起点，以对一个月扩大五万人可行性的判断为终点；包含指示意图、路线、听者反应与事后评估。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"部队撤下后考虑补充兵员，中央此时指示东进。\",\n      \"process_text\": \"部队从原处撤下后需要补充兵员，中央指示要东进，背景是日本人要占领保定。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0045\"\n      ],\n      \"evidence_quote\": \"我们从那里撤下来以后，就还要考虑就是怎么补充兵员，但是中央有指示，要我们东进，就是那时候日本人要占领保定。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"中央说明东进意图、路线，并提出一个月扩大五万人的要求。\",\n      \"process_text\": \"中央的意思是趁主力攻保定，从后面插出去到河北，前方可到山东，并希望一个月扩大五万人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0047\"\n      ],\n      \"evidence_quote\": \"中央的意思呢，他的主力过去攻保定时候，我们就从他后面插出去，插到河北，前方可以到山东去。希望你们一个月就扩大五万人。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"听者当时对扩大五万人表示疑虑，叙述者事后认为按指示插出去扩军可行。\",\n      \"process_text\": \"当时大家惊讶五万人能否扩大；事后证明，如果115师从该处插出去而不往五台山方向回去，一个团扩大成一个旅没有问题。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0047\"\n      ],\n      \"evidence_quote\": \"那个时候大家一讲，哎呦，这五万人能扩大吗？以后事实证明，如果我们115师从那就不要再往回去，不要往五台山那边去，从那就插出去，没问题一个月（扩五万人），你一个师要是把344旅，你四个团出去，一个团扩大成一个旅没问题。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"叙述者判断当时群众和游击队遍布，收编即可扩军，中央估计事后证明可行。\",\n      \"process_text\": \"当时后方群众和游击队很多，真假抗日武装林立，过去一收编，一个月扩大五万人大概不成问题；中央的估计事后证明可以。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0049\"\n      ],\n      \"evidence_quote\": \"那个时候群众在后面，游击队，真抗日的假抗日的，司令多如牛毛，到处都是。你只要过去以后一收编，这一个月之内扩大五万人，大概不成问题。中央估计可能，事后证明是可以的。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE004-P01\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0047\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE004-P02\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0047\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE004-P03\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE004-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0049\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC04-DE004",
+    "event_enrichment": {
+      "result_state": "中央作出东进指示，并提出一个月扩大五万人的期望；听者当时有疑虑，叙述者事后认为该扩军目标可行。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "以“中央有指示，要我们东进”为起点，以对一个月扩大五万人可行性的判断为终点；包含指示意图、路线、听者反应与事后评估。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC04-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "部队撤下后考虑补充兵员，中央此时指示东进。",
+        "process_text": "部队从原处撤下后需要补充兵员，中央指示要东进，背景是日本人要占领保定。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0045"
+        ],
+        "evidence_quote": "我们从那里撤下来以后，就还要考虑就是怎么补充兵员，但是中央有指示，要我们东进，就是那时候日本人要占领保定。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "中央说明东进意图、路线，并提出一个月扩大五万人的要求。",
+        "process_text": "中央的意思是趁主力攻保定，从后面插出去到河北，前方可到山东，并希望一个月扩大五万人。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0047"
+        ],
+        "evidence_quote": "中央的意思呢，他的主力过去攻保定时候，我们就从他后面插出去，插到河北，前方可以到山东去。希望你们一个月就扩大五万人。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "听者当时对扩大五万人表示疑虑，叙述者事后认为按指示插出去扩军可行。",
+        "process_text": "当时大家惊讶五万人能否扩大；事后证明，如果115师从该处插出去而不往五台山方向回去，一个团扩大成一个旅没有问题。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0047"
+        ],
+        "evidence_quote": "那个时候大家一讲，哎呦，这五万人能扩大吗？以后事实证明，如果我们115师从那就不要再往回去，不要往五台山那边去，从那就插出去，没问题一个月（扩五万人），你一个师要是把344旅，你四个团出去，一个团扩大成一个旅没问题。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "叙述者判断当时群众和游击队遍布，收编即可扩军，中央估计事后证明可行。",
+        "process_text": "当时后方群众和游击队很多，真假抗日武装林立，过去一收编，一个月扩大五万人大概不成问题；中央的估计事后证明可以。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0049"
+        ],
+        "evidence_quote": "那个时候群众在后面，游击队，真抗日的假抗日的，司令多如牛毛，到处都是。你只要过去以后一收编，这一个月之内扩大五万人，大概不成问题。中央估计可能，事后证明是可以的。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC04-DE004-P01",
+        "target_stage_id": "BATCH02-DOC04-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0047",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE004-P02",
+        "target_stage_id": "BATCH02-DOC04-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0047",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE004-P03",
+        "target_stage_id": "BATCH02-DOC04-DE004-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC04-S0049",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

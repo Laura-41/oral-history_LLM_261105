@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T00:32:56",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC02-DE012",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC02-DE012",
+  "usage": {
+    "prompt_tokens": 1456,
+    "total_tokens": 4830,
+    "completion_tokens": 3374,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2454
+    },
+    "time_to_first_token_ms": 29145,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-18\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC02-DE012\",\n  \"event_enrichment\": {\n    \"result_state\": \"已用随身保健盒中的奎宁针等药品给粟司令打针，完成此次医疗处置。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件从商量去找粟司令、冒大雨赶赴吴家道开始，到进入小木棚发现粟司令打摆子并马上打针结束；S0088为补充说明，不单列为阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE012-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"商量去找粟司令，冒大雨跑二十多华里到吴家道小村子。\",\n      \"process_text\": \"就商量了，去找粟司令；下大雨跑了二十多华里，到了吴家道一个小村子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0083\"\n      ],\n      \"evidence_quote\": \"就商量了，去找粟司令。下大雨啊，就跑了二十多华里，到了吴家道，一个小村子。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE012-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"进入吴家道指挥所小木棚，发现粟司令正打摆子、发抖着看地图。\",\n      \"process_text\": \"粟司令在小木棚子里的吴家道指挥所；外面下大雨，一进小木棚子，发现粟司令还在打摆子，发抖，拿蜡烛看地图。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0085\"\n      ],\n      \"evidence_quote\": \"粟司令就在小木棚子里头，那吴家道那个指挥所。外面下大雨，哎呀，一进那个小木棚子啊，粟司令啊，还在打摆子，我们还不知道。（陈海峰模仿粟司令打摆子）发抖，要拿那个蜡烛在看地图。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE012-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"用随身保健盒中的奎宁针等药品，马上给粟司令打针。\",\n      \"process_text\": \"随身带着给干部看病的保健盒，里面有镇痛药、吗啡片、打针药品、奎宁针、消炎药，马上就给粟司令打针。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0085\"\n      ],\n      \"evidence_quote\": \"那么我们就随身都带着了，给干部看病的保健盒，里面（有）各种贵重药品，镇痛药呀，吗啡片啦，打针的啦。南方摆子都有奎宁针啊，都带着了，消炎药啊，马上就给粟司令打针。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE012-P01\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE012-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0083\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE012-P02\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE012-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0085\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-18",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC02-DE012",
+    "event_enrichment": {
+      "result_state": "已用随身保健盒中的奎宁针等药品给粟司令打针，完成此次医疗处置。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件从商量去找粟司令、冒大雨赶赴吴家道开始，到进入小木棚发现粟司令打摆子并马上打针结束；S0088为补充说明，不单列为阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC02-DE012-P01",
+        "stage_order": 1,
+        "stage_summary": "商量去找粟司令，冒大雨跑二十多华里到吴家道小村子。",
+        "process_text": "就商量了，去找粟司令；下大雨跑了二十多华里，到了吴家道一个小村子。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0083"
+        ],
+        "evidence_quote": "就商量了，去找粟司令。下大雨啊，就跑了二十多华里，到了吴家道，一个小村子。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE012-P02",
+        "stage_order": 2,
+        "stage_summary": "进入吴家道指挥所小木棚，发现粟司令正打摆子、发抖着看地图。",
+        "process_text": "粟司令在小木棚子里的吴家道指挥所；外面下大雨，一进小木棚子，发现粟司令还在打摆子，发抖，拿蜡烛看地图。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0085"
+        ],
+        "evidence_quote": "粟司令就在小木棚子里头，那吴家道那个指挥所。外面下大雨，哎呀，一进那个小木棚子啊，粟司令啊，还在打摆子，我们还不知道。（陈海峰模仿粟司令打摆子）发抖，要拿那个蜡烛在看地图。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE012-P03",
+        "stage_order": 3,
+        "stage_summary": "用随身保健盒中的奎宁针等药品，马上给粟司令打针。",
+        "process_text": "随身带着给干部看病的保健盒，里面有镇痛药、吗啡片、打针药品、奎宁针、消炎药，马上就给粟司令打针。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0085"
+        ],
+        "evidence_quote": "那么我们就随身都带着了，给干部看病的保健盒，里面（有）各种贵重药品，镇痛药呀，吗啡片啦，打针的啦。南方摆子都有奎宁针啊，都带着了，消炎药啊，马上就给粟司令打针。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC02-DE012-P01",
+        "target_stage_id": "BATCH06-DOC02-DE012-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0083",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE012-P02",
+        "target_stage_id": "BATCH06-DOC02-DE012-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH06-DOC02-S0085",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

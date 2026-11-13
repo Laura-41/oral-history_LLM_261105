@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T21:52:32",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC03-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC03-DE008",
+  "usage": {
+    "prompt_tokens": 1328,
+    "total_tokens": 9420,
+    "completion_tokens": 8092,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7115
+    },
+    "time_to_first_token_ms": 126098,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8091000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC03-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"师部在常村召开追悼大会，会场坐满，声势较大，敌人得知；李基魁带人到来并见到陈老首长，声势比较大。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 S0069：以“六支队牺牲一个团长”为触发，以“在常村又开了一个师部组织的追悼大会”为核心行动，以“敌人当然也就知道了”为直接结果；“过了几天……声势比较大”作为同一片段内后续声势信息纳入边界，但事件归属存在一定不确定。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"六支队作战牺牲团长，形成追悼大会触发背景\",\n      \"process_text\": \"我们特务营也参加了一下，结果他们六支队就牺牲一个团长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0069\"\n      ],\n      \"evidence_quote\": \"我们特务营也参加了一下，结果他们六支队就牺牲一个团长。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"师部在常村组织追悼大会，会场坐满且声势较大\",\n      \"process_text\": \"在常村开了一个师部组织的追悼大会，村子里一个比较大的场子都坐得满满的了，声势也比较大，敌人也就知道了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0069\"\n      ],\n      \"evidence_quote\": \"这样我们在常村又开了一个师部组织的追悼大会，村子里一个比较大的场子都坐得满满的了，这个声势也比较大，敌人当然也就知道了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"后续李基魁带人到来并见到陈老首长，原文称声势比较大\",\n      \"process_text\": \"过了几天，李基魁带了一部分人到那里，也见到陈老首长，所以声势比较大。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0069\"\n      ],\n      \"evidence_quote\": \"过了几天，李基魁（音）他是在组宣纵队（音）叫什么那个时候，他就到那里去，他带了一部分人也到我们那里，也见到陈老首长，所以声势比较大。\",\n      \"confidence\": \"LOW\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE008-P01\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE008-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0069\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE008-P02\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0069\",\n      \"confidence\": \"LOW\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC03-DE008",
+    "event_enrichment": {
+      "result_state": "师部在常村召开追悼大会，会场坐满，声势较大，敌人得知；李基魁带人到来并见到陈老首长，声势比较大。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 S0069：以“六支队牺牲一个团长”为触发，以“在常村又开了一个师部组织的追悼大会”为核心行动，以“敌人当然也就知道了”为直接结果；“过了几天……声势比较大”作为同一片段内后续声势信息纳入边界，但事件归属存在一定不确定。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC03-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "六支队作战牺牲团长，形成追悼大会触发背景",
+        "process_text": "我们特务营也参加了一下，结果他们六支队就牺牲一个团长。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0069"
+        ],
+        "evidence_quote": "我们特务营也参加了一下，结果他们六支队就牺牲一个团长。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "师部在常村组织追悼大会，会场坐满且声势较大",
+        "process_text": "在常村开了一个师部组织的追悼大会，村子里一个比较大的场子都坐得满满的了，声势也比较大，敌人也就知道了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0069"
+        ],
+        "evidence_quote": "这样我们在常村又开了一个师部组织的追悼大会，村子里一个比较大的场子都坐得满满的了，这个声势也比较大，敌人当然也就知道了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "后续李基魁带人到来并见到陈老首长，原文称声势比较大",
+        "process_text": "过了几天，李基魁带了一部分人到那里，也见到陈老首长，所以声势比较大。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0069"
+        ],
+        "evidence_quote": "过了几天，李基魁（音）他是在组宣纵队（音）叫什么那个时候，他就到那里去，他带了一部分人也到我们那里，也见到陈老首长，所以声势比较大。",
+        "confidence": "LOW"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC03-DE008-P01",
+        "target_stage_id": "BATCH04-DOC03-DE008-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH04-DOC03-S0069",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE008-P02",
+        "target_stage_id": "BATCH04-DOC03-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0069",
+        "confidence": "LOW"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

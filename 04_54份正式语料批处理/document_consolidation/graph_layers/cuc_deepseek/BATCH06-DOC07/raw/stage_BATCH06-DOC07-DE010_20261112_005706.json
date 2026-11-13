@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T00:57:06",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE010",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE010",
+  "usage": {
+    "prompt_tokens": 1029,
+    "total_tokens": 3039,
+    "completion_tokens": 2010,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1366
+    },
+    "time_to_first_token_ms": 15546,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2009000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"湖心寺被破坏、状况一天不如一天，陈海峰认为现已一团糟。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈海峰陈述其多次查看湖心寺、观察到状况恶化并确认被破坏为边界；原文仅此一句，无额外时间地点信息。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰多次前往湖心寺查看。\",\n      \"process_text\": \"我去看了三四次\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0170\"\n      ],\n      \"evidence_quote\": \"我去看了三四次\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈海峰观察到湖心寺状况逐次变差。\",\n      \"process_text\": \"一天不如一天\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0170\"\n      ],\n      \"evidence_quote\": \"一天不如一天\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈海峰确认湖心寺已被破坏。\",\n      \"process_text\": \"现在被破坏掉了\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0170\"\n      ],\n      \"evidence_quote\": \"现在被破坏掉了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE010-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0170\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE010-P02\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE010-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0170\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE010",
+    "event_enrichment": {
+      "result_state": "湖心寺被破坏、状况一天不如一天，陈海峰认为现已一团糟。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以陈海峰陈述其多次查看湖心寺、观察到状况恶化并确认被破坏为边界；原文仅此一句，无额外时间地点信息。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰多次前往湖心寺查看。",
+        "process_text": "我去看了三四次",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0170"
+        ],
+        "evidence_quote": "我去看了三四次",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "陈海峰观察到湖心寺状况逐次变差。",
+        "process_text": "一天不如一天",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0170"
+        ],
+        "evidence_quote": "一天不如一天",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "陈海峰确认湖心寺已被破坏。",
+        "process_text": "现在被破坏掉了",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0170"
+        ],
+        "evidence_quote": "现在被破坏掉了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE010-P01",
+        "target_stage_id": "BATCH06-DOC07-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0170",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE010-P02",
+        "target_stage_id": "BATCH06-DOC07-DE010-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC07-S0170",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

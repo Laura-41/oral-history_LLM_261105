@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T23:47:14",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC02-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC02-DE004",
+  "usage": {
+    "prompt_tokens": 1332,
+    "total_tokens": 4303,
+    "completion_tokens": 2971,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2058
+    },
+    "time_to_first_token_ms": 24043,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-13\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC02-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"双方完成对当年转移伤员经过的回忆与回应，确认周林等曾紧急通知转移并要求保证一个不丢。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为“解放（后），有一次我们在邓子恢家里开会”，终点为陈海峰对周林回忆的回应；两段均围绕同一转移伤员旧事。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"解放后在邓子恢家开会，会上重提转移伤员往事。\",\n      \"process_text\": \"解放后在邓子恢家里开会，会上谈这个事，周林想起这个事。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0090\"\n      ],\n      \"evidence_quote\": \"解放（后），有一次我们在邓子恢家里开会。邓子恢，副总理，他的爱人叫陈兰。他在家里开过一次会，我们还谈这个事，他想起这个事。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"周林回忆当时紧急通知转移，强调任务是不让一人丢失。\",\n      \"process_text\": \"周林说当时他们急死了，来通知马上转移，要保证一个不能丢，并强调粟司令交代不能丢一个。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0090\"\n      ],\n      \"evidence_quote\": \"“哎呀，”他说：“你们不走，把我们急死了，我们任务都完成不了啊，我们来通知你们马上转移，要保证你们一个不能丢啊！我们急死啊，我不把你转移，我的责任没有完成，你们自己不能丢一个，我也有任务不能丢一个，粟司令交代不能丢一个啊。”\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈海峰大笑回应，称周林不来就完蛋，并称赞两位指挥官沉着应战。\",\n      \"process_text\": \"陈海峰大笑回应，说不来我们就完蛋，并提到万幸作战处长在那里，称赞两个指挥官军事又好又懂、沉着应战。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0092\"\n      ],\n      \"evidence_quote\": \"陈海峰：（陈海峰大笑）我说你不来我们就完蛋，你来了我好……还有个万幸作战处长在那里，我说：“你们两个指挥官，军事又好又懂，沉着应战。”哎呀，真是沉着应战。敌人啊，两面过，来多少敌人，他不清楚，结果呢……\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE004-P01\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0090\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE004-P02\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0092\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-13",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC02-DE004",
+    "event_enrichment": {
+      "result_state": "双方完成对当年转移伤员经过的回忆与回应，确认周林等曾紧急通知转移并要求保证一个不丢。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起点为“解放（后），有一次我们在邓子恢家里开会”，终点为陈海峰对周林回忆的回应；两段均围绕同一转移伤员旧事。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC02-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "解放后在邓子恢家开会，会上重提转移伤员往事。",
+        "process_text": "解放后在邓子恢家里开会，会上谈这个事，周林想起这个事。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0090"
+        ],
+        "evidence_quote": "解放（后），有一次我们在邓子恢家里开会。邓子恢，副总理，他的爱人叫陈兰。他在家里开过一次会，我们还谈这个事，他想起这个事。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "周林回忆当时紧急通知转移，强调任务是不让一人丢失。",
+        "process_text": "周林说当时他们急死了，来通知马上转移，要保证一个不能丢，并强调粟司令交代不能丢一个。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0090"
+        ],
+        "evidence_quote": "“哎呀，”他说：“你们不走，把我们急死了，我们任务都完成不了啊，我们来通知你们马上转移，要保证你们一个不能丢啊！我们急死啊，我不把你转移，我的责任没有完成，你们自己不能丢一个，我也有任务不能丢一个，粟司令交代不能丢一个啊。”",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "陈海峰大笑回应，称周林不来就完蛋，并称赞两位指挥官沉着应战。",
+        "process_text": "陈海峰大笑回应，说不来我们就完蛋，并提到万幸作战处长在那里，称赞两个指挥官军事又好又懂、沉着应战。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0092"
+        ],
+        "evidence_quote": "陈海峰：（陈海峰大笑）我说你不来我们就完蛋，你来了我好……还有个万幸作战处长在那里，我说：“你们两个指挥官，军事又好又懂，沉着应战。”哎呀，真是沉着应战。敌人啊，两面过，来多少敌人，他不清楚，结果呢……",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC02-DE004-P01",
+        "target_stage_id": "BATCH05-DOC02-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC02-S0090",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE004-P02",
+        "target_stage_id": "BATCH05-DOC02-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC02-S0092",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

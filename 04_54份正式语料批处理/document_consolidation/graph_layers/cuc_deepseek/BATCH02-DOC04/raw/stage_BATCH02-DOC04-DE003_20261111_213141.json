@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T21:31:41",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC04-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC04-DE003",
+  "usage": {
+    "prompt_tokens": 1154,
+    "total_tokens": 2725,
+    "completion_tokens": 1571,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 942
+    },
+    "time_to_first_token_ms": 15964,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 1570000
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC04-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"敌人一个团被消灭\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以原文“打直罗镇的时候，我们打进去”为起点，至“我们那天消灭他一个团”为终点，涵盖我军打入、敌人突出及歼敌一个团的过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"打直罗镇时我军打入镇内\",\n      \"process_text\": \"我们打进去\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0026\"\n      ],\n      \"evidence_quote\": \"我们打进去\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"敌人从镇内突出来\",\n      \"process_text\": \"敌人突出来的时候\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0026\"\n      ],\n      \"evidence_quote\": \"敌人突出来的时候\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"当天消灭敌人一个团\",\n      \"process_text\": \"我们那天消灭他一个团\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0026\"\n      ],\n      \"evidence_quote\": \"我们那天消灭他一个团\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE003-P01\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE003-P02\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0026\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC04-DE003",
+    "event_enrichment": {
+      "result_state": "敌人一个团被消灭",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以原文“打直罗镇的时候，我们打进去”为起点，至“我们那天消灭他一个团”为终点，涵盖我军打入、敌人突出及歼敌一个团的过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC04-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "打直罗镇时我军打入镇内",
+        "process_text": "我们打进去",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0026"
+        ],
+        "evidence_quote": "我们打进去",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "敌人从镇内突出来",
+        "process_text": "敌人突出来的时候",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0026"
+        ],
+        "evidence_quote": "敌人突出来的时候",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "当天消灭敌人一个团",
+        "process_text": "我们那天消灭他一个团",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0026"
+        ],
+        "evidence_quote": "我们那天消灭他一个团",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC04-DE003-P01",
+        "target_stage_id": "BATCH02-DOC04-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE003-P02",
+        "target_stage_id": "BATCH02-DOC04-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0026",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

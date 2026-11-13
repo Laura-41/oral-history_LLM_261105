@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-13T00:31:41",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC03-DE010",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC03-DE010",
+  "usage": {
+    "prompt_tokens": 1200,
+    "total_tokens": 6501,
+    "completion_tokens": 5301,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4550
+    },
+    "time_to_first_token_ms": 83515,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5300000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC03-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"华中野战军与山东野战军合在一起，形成整编的华东野战军；原文同时提及1947年1月召开大会，陈老总是整编的华东野战军的司令员兼政委。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据片段 BATCH05-DOC03-S0058，从‘鲁南战役以后’开始，到‘陈老总是整编的华东野战军的司令员兼政委’结束；核心是鲁南战役后华中野战军与山东野战军合编为华东野战军，并附带1947年1月大会及司令员兼政委表述。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"鲁南战役后华东整编部队，华中野战军与山东野战军合在一起。\",\n      \"process_text\": \"鲁南战役以后，华东就整编部队，就是华中野战军跟山东野战军合在一起了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0058\"\n      ],\n      \"evidence_quote\": \"鲁南战役以后，华东就整编部队，就是华中野战军跟山东野战军合在一起了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"1947年1月鲁南战役后召开大会，并提及陈老总是整编的华东野战军的司令员兼政委。\",\n      \"process_text\": \"1947年1月，在鲁南战役后就开了一个大会，陈老总是整编的华东野战军的司令员兼政委。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0058\"\n      ],\n      \"evidence_quote\": \"1947年1月，在鲁南战役后就开了一个大会，陈老总是整编的华东野战军的司令员兼政委。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE010-P01\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0058\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC03-DE010",
+    "event_enrichment": {
+      "result_state": "华中野战军与山东野战军合在一起，形成整编的华东野战军；原文同时提及1947年1月召开大会，陈老总是整编的华东野战军的司令员兼政委。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据片段 BATCH05-DOC03-S0058，从‘鲁南战役以后’开始，到‘陈老总是整编的华东野战军的司令员兼政委’结束；核心是鲁南战役后华中野战军与山东野战军合编为华东野战军，并附带1947年1月大会及司令员兼政委表述。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC03-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "鲁南战役后华东整编部队，华中野战军与山东野战军合在一起。",
+        "process_text": "鲁南战役以后，华东就整编部队，就是华中野战军跟山东野战军合在一起了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0058"
+        ],
+        "evidence_quote": "鲁南战役以后，华东就整编部队，就是华中野战军跟山东野战军合在一起了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "1947年1月鲁南战役后召开大会，并提及陈老总是整编的华东野战军的司令员兼政委。",
+        "process_text": "1947年1月，在鲁南战役后就开了一个大会，陈老总是整编的华东野战军的司令员兼政委。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0058"
+        ],
+        "evidence_quote": "1947年1月，在鲁南战役后就开了一个大会，陈老总是整编的华东野战军的司令员兼政委。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC03-DE010-P01",
+        "target_stage_id": "BATCH05-DOC03-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC03-S0058",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

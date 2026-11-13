@@ -1,0 +1,41 @@
+{
+  "run_time": "2026-11-11T15:51:11",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC02-DE007",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC02-DE007",
+  "usage": {
+    "prompt_tokens": 1068,
+    "total_tokens": 1655,
+    "completion_tokens": 587,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 364
+    },
+    "time_to_first_token_ms": 5347,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC02-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"火炮被上级收缴，原连队不再保有该炮。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于“回来后上边有命令”，止于“把这个炮都收缴上去了”；仅覆盖返回后收缴火炮这一过程，不包含随后参谋长召集会议的内容。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [],\n  \"stage_next\": [],\n  \"no_stage_reason\": \"该事件仅由单一短句表达“有命令—收缴”的完成动作，原文未提供可区分的连续推进阶段，拆分会重复同一证据。\"\n}",
+  "parsed": {
+    "document_id": "CRT-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC02-DE007",
+    "event_enrichment": {
+      "result_state": "火炮被上级收缴，原连队不再保有该炮。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于“回来后上边有命令”，止于“把这个炮都收缴上去了”；仅覆盖返回后收缴火炮这一过程，不包含随后参谋长召集会议的内容。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [],
+    "stage_next": [],
+    "no_stage_reason": "该事件仅由单一短句表达“有命令—收缴”的完成动作，原文未提供可区分的连续推进阶段，拆分会重复同一证据。"
+  },
+  "request_error": null
+}

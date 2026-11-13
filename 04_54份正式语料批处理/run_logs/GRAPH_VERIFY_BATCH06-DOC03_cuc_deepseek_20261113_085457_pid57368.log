@@ -1,0 +1,108 @@
+单文档验证：BATCH06-DOC03 / cuc/deepseek
+日志：04_54份正式语料批处理/run_logs/GRAPH_VERIFY_BATCH06-DOC03_cuc_deepseek_20261113_085457_pid57368.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+
+===== L0 零 API 底座表 =====
+[落盘] BATCH06-DOC03 / cuc/deepseek
+  原文片段 64｜一级事件 6｜覆盖率 1.0000
+  人工视图：无
+    documents                  1 行
+    source_segments           64 行
+    source_attachments        66 行
+    coverage_audit             1 行
+    document_annotations      25 行
+    event_nodes                6 行
+    event_processes            6 行
+    event_participants        18 行
+    event_circumstances       17 行
+    event_next                 5 行
+  警告 4 条（详见 L0_report.json）
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH06-DOC03
+
+===== L1/L2 模型任务（真实 API 调用） =====
+[真实调用] BATCH06-DOC03 / cuc/deepseek / tasks=stage,entity_time
+  一级事件 6｜原文片段 64｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH06-DOC03/raw
+
+== stage：6 次调用 ==
+  [1/6] stage_BATCH06-DOC03-DE001 已有成功响应，跳过（断点续跑）
+  [2/6] stage_BATCH06-DOC03-DE002 已有成功响应，跳过（断点续跑）
+  [3/6] stage_BATCH06-DOC03-DE003 已有成功响应，跳过（断点续跑）
+  [4/6] stage_BATCH06-DOC03-DE004 已有成功响应，跳过（断点续跑）
+  [5/6] stage_BATCH06-DOC03-DE005 已有成功响应，跳过（断点续跑）
+  [6/6] stage_BATCH06-DOC03-DE006 已有成功响应，跳过（断点续跑）
+
+== entity_time：1 次调用 ==
+  [1/1] 请求 entity_time/YYS-09，输入 22,277 字符，最长等待 1800s……
+  完成：total_tokens=80959
+
+全部完成：7 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH06-DOC03 --model cuc/deepseek --write
+
+===== 后处理：校验、算偏移、生成 18 张 CSV =====
+  环境成分待人工复核 7 条（就近归类／规范值待补，另出清单）
+[落盘] BATCH06-DOC03 / cuc/deepseek
+  stage 响应 6｜entity_time 响应 1｜覆盖率 1.0000
+    documents                  1 行
+    source_segments           64 行
+    source_attachments        93 行
+    coverage_audit             1 行
+    document_annotations      25 行
+    event_nodes                6 行
+    event_processes            6 行
+    event_participants        18 行
+    event_circumstances       17 行
+    event_next                 5 行
+    process_stages            27 行
+    stage_next                21 行
+    event_times                6 行
+    time_expressions          25 行
+    entities                 129 行
+    entity_mentions          171 行
+    entity_aliases            12 行
+    entity_relations          44 行
+  校验问题 0 条｜偏移待核 44 条
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH06-DOC03
+
+===== 18 表完整性验收 =====
+[通过] BATCH06-DOC03 / cuc/deepseek
+  片段 64｜事件 6｜阶段 27｜实体 129｜提及 171｜时间表达 25｜覆盖率 1.0000
+  报告：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH06-DOC03/VALIDATION_report.json
+
+===== L3/L4 导出 24 张 import CSV =====
+[落盘] 模型线 cuc/deepseek｜已验收文档 46 份
+  生平叠加视图：疑似同一经历 3 组（只标 NEEDS_REVIEW，交人工）；人工 MERGE 生效 0 组，KEEP_SEPARATE 0 组
+
+== 24 张 import CSV 规模 ==
+  documents                    46 行
+  source_segments            4848 行
+  source_attachments         6634 行
+  event_nodes                 379 行
+  event_processes             379 行
+  event_participants          883 行
+  event_circumstances         805 行
+  process_stages             1477 行
+  stage_next                 1127 行
+  event_next                  333 行
+  entities                   1164 行
+  entity_mentions             657 行
+  entity_aliases               68 行
+  entity_relations            197 行
+  event_times                 379 行
+  time_expressions           1260 行
+  document_annotations       1418 行
+  coverage_audit               46 行
+  person_subjects               3 行
+  document_persons             46 行
+  life_episodes               290 行
+  life_episode_sources        290 行
+  life_episode_next           287 行
+  narrated_contexts            81 行
+
+  警告 10667 条（详见报告）
+  疑似清单：04_54份正式语料批处理/review_queue/cuc_deepseek_生平层疑似同一经历_待人工确认_20261113.md
+
+  已写入：05_合并与Neo4j/import_cuc_deepseek
+
+===== 完成 =====
+结果：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH06-DOC03/
+图谱导入：05_合并与Neo4j/import_cuc_deepseek/
+请把 VALIDATION_report.json 与 prepare_summary.json 交助手复核，再决定是否放行 BATCH03。

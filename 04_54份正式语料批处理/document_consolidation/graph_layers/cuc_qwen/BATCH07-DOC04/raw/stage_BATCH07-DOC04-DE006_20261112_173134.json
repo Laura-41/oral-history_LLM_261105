@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T17:31:34",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC04-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC04-DE006",
+  "usage": {
+    "prompt_tokens": 1785,
+    "total_tokens": 10467,
+    "completion_tokens": 8682,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7328
+    },
+    "time_to_first_token_ms": 130285,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8681000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC04-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"吴甲寅最终平反，但本人已被镇压掉；其子为这个事情奔波找证明人，陈海峰写证明信给他。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"从 S0029 介绍吴甲寅身份与家庭革命背景开始，经 S0033 土改政策不分、其子找证明人，到 S0035 前半段最后平反、吴甲寅被镇压掉、陈海峰写证明信结束；S0035 后半段情报站站长被镇压不属于本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"交代吴甲寅为开明士绅、乡长且全家参加革命的背景\",\n      \"process_text\": \"那个地方有一个白皮红心（的）两面派乡长，这个乡长叫吴甲寅。口天“吴”，“甲乙丙丁”的“甲”，“子丑寅卯”的“寅”。这个人是开明士绅，全家都参加革命。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0029\"\n      ],\n      \"evidence_quote\": \"那个地方有一个白皮红心（的）两面派乡长，这个乡长叫吴甲寅。口天“吴”，“甲乙丙丁”的“甲”，“子丑寅卯”的“寅”。这个人是开明士绅，全家都参加革命。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"土改时政策不分，有贡献者未获照顾而被镇压\",\n      \"process_text\": \"一土改的时候，政策不分。对许多（有）贡献的没有照顾，一样地镇压掉了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0033\"\n      ],\n      \"evidence_quote\": \"一土改的时候，政策不分。对许多（有）贡献的没有照顾，一样地镇压掉了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"吴甲寅之子为这个事情奔波并到处寻找证明人\",\n      \"process_text\": \"他的儿子后来（是）上海杨浦区的卫生局长，为这个事情奔波，到处找证明人，很难找啊！\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0033\"\n      ],\n      \"evidence_quote\": \"他的儿子后来（是）上海杨浦区的卫生局长，为这个事情奔波，到处找证明人，很难找啊！\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"最后平反，但吴甲寅已被镇压掉，陈海峰写证明信给他\",\n      \"process_text\": \"那很难找到证明人啊，跑来跑去，最后才平反。（虽然）平反了，（但是）这个人没有了，（被）镇压掉了。他（从）安徽合肥来的，（在）天津打电话过来，我写个证明信给他。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0035\"\n      ],\n      \"evidence_quote\": \"那很难找到证明人啊，跑来跑去，最后才平反。（虽然）平反了，（但是）这个人没有了，（被）镇压掉了。他（从）安徽合肥来的，（在）天津打电话过来，我写个证明信给他。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE006-P01\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0033\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE006-P02\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE006-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0033\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE006-P03\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE006-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0035\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC04-DE006",
+    "event_enrichment": {
+      "result_state": "吴甲寅最终平反，但本人已被镇压掉；其子为这个事情奔波找证明人，陈海峰写证明信给他。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "从 S0029 介绍吴甲寅身份与家庭革命背景开始，经 S0033 土改政策不分、其子找证明人，到 S0035 前半段最后平反、吴甲寅被镇压掉、陈海峰写证明信结束；S0035 后半段情报站站长被镇压不属于本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC04-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "交代吴甲寅为开明士绅、乡长且全家参加革命的背景",
+        "process_text": "那个地方有一个白皮红心（的）两面派乡长，这个乡长叫吴甲寅。口天“吴”，“甲乙丙丁”的“甲”，“子丑寅卯”的“寅”。这个人是开明士绅，全家都参加革命。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0029"
+        ],
+        "evidence_quote": "那个地方有一个白皮红心（的）两面派乡长，这个乡长叫吴甲寅。口天“吴”，“甲乙丙丁”的“甲”，“子丑寅卯”的“寅”。这个人是开明士绅，全家都参加革命。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "土改时政策不分，有贡献者未获照顾而被镇压",
+        "process_text": "一土改的时候，政策不分。对许多（有）贡献的没有照顾，一样地镇压掉了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0033"
+        ],
+        "evidence_quote": "一土改的时候，政策不分。对许多（有）贡献的没有照顾，一样地镇压掉了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "吴甲寅之子为这个事情奔波并到处寻找证明人",
+        "process_text": "他的儿子后来（是）上海杨浦区的卫生局长，为这个事情奔波，到处找证明人，很难找啊！",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0033"
+        ],
+        "evidence_quote": "他的儿子后来（是）上海杨浦区的卫生局长，为这个事情奔波，到处找证明人，很难找啊！",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "最后平反，但吴甲寅已被镇压掉，陈海峰写证明信给他",
+        "process_text": "那很难找到证明人啊，跑来跑去，最后才平反。（虽然）平反了，（但是）这个人没有了，（被）镇压掉了。他（从）安徽合肥来的，（在）天津打电话过来，我写个证明信给他。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0035"
+        ],
+        "evidence_quote": "那很难找到证明人啊，跑来跑去，最后才平反。（虽然）平反了，（但是）这个人没有了，（被）镇压掉了。他（从）安徽合肥来的，（在）天津打电话过来，我写个证明信给他。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC04-DE006-P01",
+        "target_stage_id": "BATCH07-DOC04-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC04-S0033",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE006-P02",
+        "target_stage_id": "BATCH07-DOC04-DE006-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH07-DOC04-S0033",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE006-P03",
+        "target_stage_id": "BATCH07-DOC04-DE006-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH07-DOC04-S0035",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

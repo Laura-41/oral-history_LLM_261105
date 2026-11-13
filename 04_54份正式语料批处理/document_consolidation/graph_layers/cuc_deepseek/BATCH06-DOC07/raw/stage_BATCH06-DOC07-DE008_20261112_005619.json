@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T00:56:19",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE008",
+  "usage": {
+    "prompt_tokens": 1340,
+    "total_tokens": 5077,
+    "completion_tokens": 3737,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2774
+    },
+    "time_to_first_token_ms": 28899,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"苏浙军区并入华中野战军并完成重新改编，原11、12、10纵队等番号撤销重编，整编后约11万人。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以S0108苏浙军区并入华野并重新改编为起点，至S0114整编后约11万人的结果；S0105为1945年11月相关背景，S0117为后续部队构成补充，均不纳入核心阶段边界。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"苏浙军区并入华野并重新改编\",\n      \"process_text\": \"苏浙军区都并到华野了，都重新改编了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0108\"\n      ],\n      \"evidence_quote\": \"    陈海峰：苏浙军区都并到华野了，都重新改编了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"改编后成为华中野战军\",\n      \"process_text\": \"变成华中野战军。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0110\"\n      ],\n      \"evidence_quote\": \"    陈海峰：变成华中野战军。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"合并并撤销原11、12、10纵队等番号，重新编组\",\n      \"process_text\": \"都合并了，那都撤销，他原来是什么11纵队、12纵队、10纵队。都重新编。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0112\"\n      ],\n      \"evidence_quote\": \"    陈海峰：都合并了，那都撤销，他原来是什么11纵队、12纵队、10纵队。都重新编。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"整编后兵力约11万人\",\n      \"process_text\": \"整编以后呢，就是有11万人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0114\"\n      ],\n      \"evidence_quote\": \"    陈海峰：整编以后呢，就是有11万人。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE008-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0110\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE008-P02\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0112\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE008-P03\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE008-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0114\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE008",
+    "event_enrichment": {
+      "result_state": "苏浙军区并入华中野战军并完成重新改编，原11、12、10纵队等番号撤销重编，整编后约11万人。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "以S0108苏浙军区并入华野并重新改编为起点，至S0114整编后约11万人的结果；S0105为1945年11月相关背景，S0117为后续部队构成补充，均不纳入核心阶段边界。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "苏浙军区并入华野并重新改编",
+        "process_text": "苏浙军区都并到华野了，都重新改编了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0108"
+        ],
+        "evidence_quote": "    陈海峰：苏浙军区都并到华野了，都重新改编了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "改编后成为华中野战军",
+        "process_text": "变成华中野战军。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0110"
+        ],
+        "evidence_quote": "    陈海峰：变成华中野战军。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "合并并撤销原11、12、10纵队等番号，重新编组",
+        "process_text": "都合并了，那都撤销，他原来是什么11纵队、12纵队、10纵队。都重新编。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0112"
+        ],
+        "evidence_quote": "    陈海峰：都合并了，那都撤销，他原来是什么11纵队、12纵队、10纵队。都重新编。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "整编后兵力约11万人",
+        "process_text": "整编以后呢，就是有11万人。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0114"
+        ],
+        "evidence_quote": "    陈海峰：整编以后呢，就是有11万人。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE008-P01",
+        "target_stage_id": "BATCH06-DOC07-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0110",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE008-P02",
+        "target_stage_id": "BATCH06-DOC07-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0112",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE008-P03",
+        "target_stage_id": "BATCH06-DOC07-DE008-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC07-S0114",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

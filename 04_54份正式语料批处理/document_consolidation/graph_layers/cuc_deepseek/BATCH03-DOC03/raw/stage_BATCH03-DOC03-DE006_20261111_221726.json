@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-11T22:17:26",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC03-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC03-DE006",
+  "usage": {
+    "prompt_tokens": 1899,
+    "total_tokens": 6310,
+    "completion_tokens": 4411,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2488
+    },
+    "time_to_first_token_ms": 33895,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC03-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"团部及卫生队夜间突围向紫杉岭（音）转移，休养所卫生队转入月亮洞，仍在中分村周围转，最终转到中分村西南方向的山洞隐蔽。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以团部放弃中分村撤上山为起点，经日军包围火攻、竹林抢救伤员，到半夜突围向紫杉岭转移并转入月亮洞/西南山洞为终点；依据S0050、S0052、S0072、S0074、S0076。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"团部放弃中分村撤到山上，伤员此前在中分村后山边，尚未钻月亮洞。\",\n      \"process_text\": \"团部本来在中分村，中分村被日军占领后放弃，撤到山上；伤员未钻月亮洞时还在中分村后面的山边上。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0050\"\n      ],\n      \"evidence_quote\": \"陈海峰：还在防区里头，不固守在一个村子。比如我们团部本来在中分村，中分村这边放弃了，日本鬼子是八百多，五百八百一千两千驻在那儿，你怎么弄呀？这个地方我还讲到了，我们伤员不是钻到月亮洞去了嘛。没有钻到月亮洞的时候，我们还在中分村后面的山边上，中分村他占领了，我们撤到山上去了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"团部撤上山，二营担任团部警卫主力，部队多为能打游击的老兵。\",\n      \"process_text\": \"团部要撤到山上，团部旁边警卫的部队主力是二营，二营比较能打，战士多为老兵，打游击没有问题。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0052\"\n      ],\n      \"evidence_quote\": \"陈海峰：这个团部要撤山上去。团部旁边警卫的部队比较主力的就是二营，二营比较能打。这个部队啊，是原来粟裕的部队，就是这个江西的，弋阳、铅山、贵溪和盐（音）山，横峰这一带的战士多，还有是附近崇安县的,这几个县的都是老兵，打游击是没有话说，是不是。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"日军在中分村东南方向发现山上新四军，包围并自山脚架火烧山一天；部队利用山路和土办法打游击牵制。\",\n      \"process_text\": \"中分村撤到山上后，日军在中分村东南方向包围发现山上的新四军，从山底下架火烧往山上，烧了一天；山上有几条小路，后面山更高，部队与日军打游击，用土办法牵制。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0072\"\n      ],\n      \"evidence_quote\": \"陈海峰：老兵情绪都没有问题。我们刚才讲了，中分村撤到山上以后，鬼子（在）中分村的东南方向，都是一片一片山，到处都是竹林子，鬼子把我们包围了，发现山上有新四军。包围以后，火攻，从山底下架火烧，往山上烧，那天烧了一天呀，“哗哗哗哗哗”。在山上（有）几条小路，后面山就更高了。他把这个山就给围住了，我们就跟他跟他打游击，都用那个土办法牵制他。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"伤员负伤后在竹林里先抢救，国民党医疗队打散队员程贤家等协助卫生队抢救；随后等待晚上突围。\",\n      \"process_text\": \"晚上伤员负伤后，先在竹林子里面抢救；国民党医疗队有几个队员打散跑到卫生队，其中程贤家帮着一块抢救伤员；抢救伤员后，在山里等到晚上突围。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0074\"\n      ],\n      \"evidence_quote\": \"陈海峰：等晚上，伤员负伤以后呢，我们先在竹林子里面抢救。那个时候国民党医疗队呀，有几个队员打散了，跑到我们卫生队，帮着我们一块抢救伤员。其中有一个医生呀，叫程贤家，“程咬金”的“程”，贤是“贤人”的“贤”，家是“家庭”的“家”，后来是上海第二医科大学的副校长，刚刚死的。这个人还不错，他帮我们一块抢救伤员。抢救伤员以后呢，这个山里面就等到晚上突围。这个人呢，后来就没有跟那个医疗队撤退。这个仗打完以后啊，他的医疗队撤走了，就回屯溪去了，回金华，他是19医疗大队派来的，有三个就坚决要求参加新四军，这个程贤家就是其中之一。他体会到新四军是真正抗战的，体会到新四军对于伤员是那样好。这样子生死关头的时候，还照顾伤员，抢救伤员，敌人已经在烧山了，那个山“噼噼啪啪”，下面那个火烧得一塌糊涂。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE006-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"半夜突围向紫杉岭（音）转移，休养所卫生队钻到月亮洞，绕中分村一圈后转到西南方向山洞隐蔽。\",\n      \"process_text\": \"半夜里部队突围，向紫杉岭（音）转移；休养所卫生队钻到月亮洞，实际仍围着中分村周围转，从东南两三里路转到西南十几里路的地方，钻到山洞里。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0076\"\n      ],\n      \"evidence_quote\": \"陈海峰：半夜里，我们突围，我们向紫杉岭（音）转移。紫杉岭（音）转移以后，就是刚才讲的，我们休养所（的）卫生队就钻到月亮洞那里去了。实际上还是围着中分村周围转，转了一大圈以后呢，就转到中分村的西南方向去了，由东南的两三里路呢，就转到西南的十几里路那个地方，钻到那个山洞里头去了（陈海峰笑）。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE006-P01\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0052\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE006-P02\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE006-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0072\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE006-P03\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE006-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0074\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE006-P04\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE006-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0076\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V2-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC03-DE006",
+    "event_enrichment": {
+      "result_state": "团部及卫生队夜间突围向紫杉岭（音）转移，休养所卫生队转入月亮洞，仍在中分村周围转，最终转到中分村西南方向的山洞隐蔽。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以团部放弃中分村撤上山为起点，经日军包围火攻、竹林抢救伤员，到半夜突围向紫杉岭转移并转入月亮洞/西南山洞为终点；依据S0050、S0052、S0072、S0074、S0076。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC03-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "团部放弃中分村撤到山上，伤员此前在中分村后山边，尚未钻月亮洞。",
+        "process_text": "团部本来在中分村，中分村被日军占领后放弃，撤到山上；伤员未钻月亮洞时还在中分村后面的山边上。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0050"
+        ],
+        "evidence_quote": "陈海峰：还在防区里头，不固守在一个村子。比如我们团部本来在中分村，中分村这边放弃了，日本鬼子是八百多，五百八百一千两千驻在那儿，你怎么弄呀？这个地方我还讲到了，我们伤员不是钻到月亮洞去了嘛。没有钻到月亮洞的时候，我们还在中分村后面的山边上，中分村他占领了，我们撤到山上去了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "团部撤上山，二营担任团部警卫主力，部队多为能打游击的老兵。",
+        "process_text": "团部要撤到山上，团部旁边警卫的部队主力是二营，二营比较能打，战士多为老兵，打游击没有问题。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0052"
+        ],
+        "evidence_quote": "陈海峰：这个团部要撤山上去。团部旁边警卫的部队比较主力的就是二营，二营比较能打。这个部队啊，是原来粟裕的部队，就是这个江西的，弋阳、铅山、贵溪和盐（音）山，横峰这一带的战士多，还有是附近崇安县的,这几个县的都是老兵，打游击是没有话说，是不是。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "日军在中分村东南方向发现山上新四军，包围并自山脚架火烧山一天；部队利用山路和土办法打游击牵制。",
+        "process_text": "中分村撤到山上后，日军在中分村东南方向包围发现山上的新四军，从山底下架火烧往山上，烧了一天；山上有几条小路，后面山更高，部队与日军打游击，用土办法牵制。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0072"
+        ],
+        "evidence_quote": "陈海峰：老兵情绪都没有问题。我们刚才讲了，中分村撤到山上以后，鬼子（在）中分村的东南方向，都是一片一片山，到处都是竹林子，鬼子把我们包围了，发现山上有新四军。包围以后，火攻，从山底下架火烧，往山上烧，那天烧了一天呀，“哗哗哗哗哗”。在山上（有）几条小路，后面山就更高了。他把这个山就给围住了，我们就跟他跟他打游击，都用那个土办法牵制他。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "伤员负伤后在竹林里先抢救，国民党医疗队打散队员程贤家等协助卫生队抢救；随后等待晚上突围。",
+        "process_text": "晚上伤员负伤后，先在竹林子里面抢救；国民党医疗队有几个队员打散跑到卫生队，其中程贤家帮着一块抢救伤员；抢救伤员后，在山里等到晚上突围。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0074"
+        ],
+        "evidence_quote": "陈海峰：等晚上，伤员负伤以后呢，我们先在竹林子里面抢救。那个时候国民党医疗队呀，有几个队员打散了，跑到我们卫生队，帮着我们一块抢救伤员。其中有一个医生呀，叫程贤家，“程咬金”的“程”，贤是“贤人”的“贤”，家是“家庭”的“家”，后来是上海第二医科大学的副校长，刚刚死的。这个人还不错，他帮我们一块抢救伤员。抢救伤员以后呢，这个山里面就等到晚上突围。这个人呢，后来就没有跟那个医疗队撤退。这个仗打完以后啊，他的医疗队撤走了，就回屯溪去了，回金华，他是19医疗大队派来的，有三个就坚决要求参加新四军，这个程贤家就是其中之一。他体会到新四军是真正抗战的，体会到新四军对于伤员是那样好。这样子生死关头的时候，还照顾伤员，抢救伤员，敌人已经在烧山了，那个山“噼噼啪啪”，下面那个火烧得一塌糊涂。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE006-P05",
+        "stage_order": 5,
+        "stage_summary": "半夜突围向紫杉岭（音）转移，休养所卫生队钻到月亮洞，绕中分村一圈后转到西南方向山洞隐蔽。",
+        "process_text": "半夜里部队突围，向紫杉岭（音）转移；休养所卫生队钻到月亮洞，实际仍围着中分村周围转，从东南两三里路转到西南十几里路的地方，钻到山洞里。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0076"
+        ],
+        "evidence_quote": "陈海峰：半夜里，我们突围，我们向紫杉岭（音）转移。紫杉岭（音）转移以后，就是刚才讲的，我们休养所（的）卫生队就钻到月亮洞那里去了。实际上还是围着中分村周围转，转了一大圈以后呢，就转到中分村的西南方向去了，由东南的两三里路呢，就转到西南的十几里路那个地方，钻到那个山洞里头去了（陈海峰笑）。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC03-DE006-P01",
+        "target_stage_id": "BATCH03-DOC03-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC03-S0052",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC03-DE006-P02",
+        "target_stage_id": "BATCH03-DOC03-DE006-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC03-S0072",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC03-DE006-P03",
+        "target_stage_id": "BATCH03-DOC03-DE006-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC03-S0074",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC03-DE006-P04",
+        "target_stage_id": "BATCH03-DOC03-DE006-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC03-S0076",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T00:00:39",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC05-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC05-DE002",
+  "usage": {
+    "prompt_tokens": 1551,
+    "total_tokens": 10701,
+    "completion_tokens": 9150,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7782
+    },
+    "time_to_first_token_ms": 70459,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9149000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-15\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC05-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"老1团战后撤至宝应、固井一带休整，其底子改编为教导旅，后成为苏浙军区第4纵队10支队；讲述者称该老底子延续为后来的第20集团军。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以老1团战后撤至宝应/固井、休整及改编为教导旅、第4纵队的叙述为界；不扩展到此前战斗经过和后续部队全部沿革。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"战后老1团撤到宝应，驻扎北安丰、柳堡一带。\",\n      \"process_text\": \"打完仗后，老1团撤到宝应；叙述并提及车桥战役后的柳堡、北安丰等地。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0048\"\n      ],\n      \"evidence_quote\": \"打完这个仗以后，我们的老1团就撤到宝应。车桥战役以后，就是《柳堡的故事》那个地方，就是柳堡，柳堡是真地方，那个故事是真的。就是北安丰，北边的安丰，南安丰、西安丰、北安丰。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"9、10月打陈泰运后，老1团到固井（音）休整。\",\n      \"process_text\": \"9、10月打陈泰运，陈泰运打完后，老1团到固井（音）休整。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0102\"\n      ],\n      \"evidence_quote\": \"9、10月不是打陈泰运嘛，陈泰运打完了，我们老1团到固井（音）休整。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"团部驻固井（音）；南下后部队改编为教导旅，老1团变成旅。\",\n      \"process_text\": \"在北安丰、柳堡、固井（音）一带，团部驻固井（音）；南下之后改成教导旅，老1团马上变成旅。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0049\"\n      ],\n      \"evidence_quote\": \"那么在北安丰、柳堡、固井（音），我们团部驻在固井（音）。我们南下之后，改成教导旅了，我们老1团马上变成旅了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"后来到苏南，部队变成第4纵队。\",\n      \"process_text\": \"叙述称后来到苏南，就变成第4纵队了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0052\"\n      ],\n      \"evidence_quote\": \"后来他到苏南，他就变成第4纵队了。4纵队就是这个\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE002-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"苏浙军区第4纵队10支队为老1团老底子，讲述者称其延续为后来的第20集团军。\",\n      \"process_text\": \"苏浙军区四纵队10支队就是老1团，老1团的老底子，即现在河南开封的第20集团军。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0055\"\n      ],\n      \"evidence_quote\": \"苏浙军区这个（四纵队）10支队就是我那个团，老1团的老底子，就是现在河南开封的第20集团军。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC05-DE002-P01\",\n      \"target_stage_id\": \"BATCH05-DOC05-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC05-DE002-P02\",\n      \"target_stage_id\": \"BATCH05-DOC05-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC05-S0049\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC05-DE002-P03\",\n      \"target_stage_id\": \"BATCH05-DOC05-DE002-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC05-S0052\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC05-DE002-P04\",\n      \"target_stage_id\": \"BATCH05-DOC05-DE002-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC05-S0055\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-15",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC05-DE002",
+    "event_enrichment": {
+      "result_state": "老1团战后撤至宝应、固井一带休整，其底子改编为教导旅，后成为苏浙军区第4纵队10支队；讲述者称该老底子延续为后来的第20集团军。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "以老1团战后撤至宝应/固井、休整及改编为教导旅、第4纵队的叙述为界；不扩展到此前战斗经过和后续部队全部沿革。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC05-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "战后老1团撤到宝应，驻扎北安丰、柳堡一带。",
+        "process_text": "打完仗后，老1团撤到宝应；叙述并提及车桥战役后的柳堡、北安丰等地。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0048"
+        ],
+        "evidence_quote": "打完这个仗以后，我们的老1团就撤到宝应。车桥战役以后，就是《柳堡的故事》那个地方，就是柳堡，柳堡是真地方，那个故事是真的。就是北安丰，北边的安丰，南安丰、西安丰、北安丰。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC05-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "9、10月打陈泰运后，老1团到固井（音）休整。",
+        "process_text": "9、10月打陈泰运，陈泰运打完后，老1团到固井（音）休整。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0102"
+        ],
+        "evidence_quote": "9、10月不是打陈泰运嘛，陈泰运打完了，我们老1团到固井（音）休整。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC05-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "团部驻固井（音）；南下后部队改编为教导旅，老1团变成旅。",
+        "process_text": "在北安丰、柳堡、固井（音）一带，团部驻固井（音）；南下之后改成教导旅，老1团马上变成旅。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0049"
+        ],
+        "evidence_quote": "那么在北安丰、柳堡、固井（音），我们团部驻在固井（音）。我们南下之后，改成教导旅了，我们老1团马上变成旅了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC05-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "后来到苏南，部队变成第4纵队。",
+        "process_text": "叙述称后来到苏南，就变成第4纵队了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0052"
+        ],
+        "evidence_quote": "后来他到苏南，他就变成第4纵队了。4纵队就是这个",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC05-DE002-P05",
+        "stage_order": 5,
+        "stage_summary": "苏浙军区第4纵队10支队为老1团老底子，讲述者称其延续为后来的第20集团军。",
+        "process_text": "苏浙军区四纵队10支队就是老1团，老1团的老底子，即现在河南开封的第20集团军。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0055"
+        ],
+        "evidence_quote": "苏浙军区这个（四纵队）10支队就是我那个团，老1团的老底子，就是现在河南开封的第20集团军。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC05-DE002-P01",
+        "target_stage_id": "BATCH05-DOC05-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC05-DE002-P02",
+        "target_stage_id": "BATCH05-DOC05-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC05-S0049",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC05-DE002-P03",
+        "target_stage_id": "BATCH05-DOC05-DE002-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC05-S0052",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC05-DE002-P04",
+        "target_stage_id": "BATCH05-DOC05-DE002-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC05-S0055",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

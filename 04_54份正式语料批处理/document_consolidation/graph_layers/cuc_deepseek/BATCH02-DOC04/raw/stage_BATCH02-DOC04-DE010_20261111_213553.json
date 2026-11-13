@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T21:35:53",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC04-DE010",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC04-DE010",
+  "usage": {
+    "prompt_tokens": 1527,
+    "total_tokens": 6538,
+    "completion_tokens": 5011,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3806
+    },
+    "time_to_first_token_ms": 49150,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5010000
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC04-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈光的讲话使连以上干部思想开阔，形成不应只逞一时之勇、应先得到补充再继续作战的认识。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以陈光在会议上就忻口作战发表讲话为起点，以其讲话对连以上干部思想产生的影响为终点；不延伸到后续作战行动或其他会议内容。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈光陈述中央任务与当前忻口作战要求\",\n      \"process_text\": \"陈光讲中央交给的任务是打运动游击战、不放弃有利条件的运动战，在敌后建立根据地、扩大人民军队；现在却要上忻口作战，而忻口有十几二十万中央军和阎锡山部队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0089\"\n      ],\n      \"evidence_quote\": \"陈光就讲，中央给我们的任务，打运动游击战，不放弃有利条件的运动战，交给我们的任务是要在敌后建立根据地，扩大我们人民自己的军队。可是现在呢，要我们上忻口去作战，忻口是十几二十万中央军！还有阎锡山的部队。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"指出部队未获补充、老骨干有限，反对硬拼消耗\",\n      \"process_text\": \"陈光指出部队没有得到补充，江西长征出来的都是老骨头硬骨头，人已经不多，再打一仗就没有多少了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0091\"\n      ],\n      \"evidence_quote\": \"他的意思是说我们没有得到补充，江西长征出来的都是老骨头硬骨头，我们把这硬骨头打了，你一上去不就……本来人就已经不多了，你再打一家伙就没有多少了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"分析敌我兵力武器悬殊，质疑忻口作战效用\",\n      \"process_text\": \"陈光分析忻口方面人多、武器多，敌人一个师团最多万把人，我们几百人、两个团合起来千把人，上去顶不了用。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0093\"\n      ],\n      \"evidence_quote\": \"意思说忻口那么多人，他那么多武器，敌人那个方向也是一个师团，从雁门关进来的。他一个师团最多嘛万把人，二三十万人打他，那么多武器，炮兵多少团在那边，我们去顶什么用？这么几百人啊，两个团合起来千把人，上战场嘛最多不到一千人。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE010-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"讲话影响连以上干部思想，形成补充后再战的认识\",\n      \"process_text\": \"讲话使连以上干部思想宽广，认识到不能只逞一时之勇，应得到补充后再继续作战，不能把老骨头打光。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0096\"\n      ],\n      \"evidence_quote\": \"他这个讲话呢，对我们连以上干部的人的思想啊就宽广起来了，就说我们不是光是逞目前一时之勇，我已经打到平型关的战斗胜利，已经在全国有比较大的影响了。我们是应该要得到补充，然后才能继续作战。不能把这老骨头都打光了，拿什么本钱去做生意啊。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE010-P01\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0091\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE010-P02\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE010-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0093\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE010-P03\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE010-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0096\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC04-DE010",
+    "event_enrichment": {
+      "result_state": "陈光的讲话使连以上干部思想开阔，形成不应只逞一时之勇、应先得到补充再继续作战的认识。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以陈光在会议上就忻口作战发表讲话为起点，以其讲话对连以上干部思想产生的影响为终点；不延伸到后续作战行动或其他会议内容。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC04-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "陈光陈述中央任务与当前忻口作战要求",
+        "process_text": "陈光讲中央交给的任务是打运动游击战、不放弃有利条件的运动战，在敌后建立根据地、扩大人民军队；现在却要上忻口作战，而忻口有十几二十万中央军和阎锡山部队。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0089"
+        ],
+        "evidence_quote": "陈光就讲，中央给我们的任务，打运动游击战，不放弃有利条件的运动战，交给我们的任务是要在敌后建立根据地，扩大我们人民自己的军队。可是现在呢，要我们上忻口去作战，忻口是十几二十万中央军！还有阎锡山的部队。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "指出部队未获补充、老骨干有限，反对硬拼消耗",
+        "process_text": "陈光指出部队没有得到补充，江西长征出来的都是老骨头硬骨头，人已经不多，再打一仗就没有多少了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0091"
+        ],
+        "evidence_quote": "他的意思是说我们没有得到补充，江西长征出来的都是老骨头硬骨头，我们把这硬骨头打了，你一上去不就……本来人就已经不多了，你再打一家伙就没有多少了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "分析敌我兵力武器悬殊，质疑忻口作战效用",
+        "process_text": "陈光分析忻口方面人多、武器多，敌人一个师团最多万把人，我们几百人、两个团合起来千把人，上去顶不了用。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0093"
+        ],
+        "evidence_quote": "意思说忻口那么多人，他那么多武器，敌人那个方向也是一个师团，从雁门关进来的。他一个师团最多嘛万把人，二三十万人打他，那么多武器，炮兵多少团在那边，我们去顶什么用？这么几百人啊，两个团合起来千把人，上战场嘛最多不到一千人。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE010-P04",
+        "stage_order": 4,
+        "stage_summary": "讲话影响连以上干部思想，形成补充后再战的认识",
+        "process_text": "讲话使连以上干部思想宽广，认识到不能只逞一时之勇，应得到补充后再继续作战，不能把老骨头打光。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0096"
+        ],
+        "evidence_quote": "他这个讲话呢，对我们连以上干部的人的思想啊就宽广起来了，就说我们不是光是逞目前一时之勇，我已经打到平型关的战斗胜利，已经在全国有比较大的影响了。我们是应该要得到补充，然后才能继续作战。不能把这老骨头都打光了，拿什么本钱去做生意啊。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC04-DE010-P01",
+        "target_stage_id": "BATCH02-DOC04-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0091",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE010-P02",
+        "target_stage_id": "BATCH02-DOC04-DE010-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC04-S0093",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE010-P03",
+        "target_stage_id": "BATCH02-DOC04-DE010-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC04-S0096",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

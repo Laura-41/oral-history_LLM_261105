@@ -1,0 +1,113 @@
+{
+  "run_time": "2026-11-11T07:02:18",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH07-DOC05-W004",
+  "technical_document_id": "BATCH07-DOC05",
+  "document_id": "04.陈海峰（三访）20110816（二校后 阅读版）.doc",
+  "input_segment_ids": [
+    "BATCH07-DOC05-S0076",
+    "BATCH07-DOC05-S0077",
+    "BATCH07-DOC05-S0078",
+    "BATCH07-DOC05-S0079",
+    "BATCH07-DOC05-S0080",
+    "BATCH07-DOC05-S0081",
+    "BATCH07-DOC05-S0082",
+    "BATCH07-DOC05-S0083",
+    "BATCH07-DOC05-S0084",
+    "BATCH07-DOC05-S0085",
+    "BATCH07-DOC05-S0086",
+    "BATCH07-DOC05-S0087",
+    "BATCH07-DOC05-S0088",
+    "BATCH07-DOC05-S0089",
+    "BATCH07-DOC05-S0090",
+    "BATCH07-DOC05-S0091",
+    "BATCH07-DOC05-S0092"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 2,
+    "unassigned_segment_count": 15,
+    "input_segment_count": 17,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH07-DOC05-W004",
+    "events": [
+      {
+        "candidate_id": "BATCH07-DOC05-W004-E01",
+        "source_segment_ids": [
+          "BATCH07-DOC05-S0079",
+          "BATCH07-DOC05-S0082"
+        ],
+        "event": {
+          "event_name": "抵达靖江毗卢寺见到自己的政权并转赴东台",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "抵达毗卢寺并转赴东台",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰及同行二十多人",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "靖江毗卢寺",
+              "normalized_value": "靖江毗卢寺"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "东台",
+              "normalized_value": "东台"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "送我们几十里地，送到靖江毗卢寺。一到毗卢寺，哎呀，我们非常高兴，看到我们自己的政权。",
+          "type_basis": "核心过程为参加寿宴后受护送抵达靖江毗卢寺并转赴东台，属空间移动和到达的物质过程；‘高兴、看到自己的政权’是到达后的心理反应，服务于同一阶段性结果，不另立心理事件。参与者Actor=我们，符合MATERIAL词表。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH07-DOC05-S0076",
+      "BATCH07-DOC05-S0077",
+      "BATCH07-DOC05-S0078",
+      "BATCH07-DOC05-S0080",
+      "BATCH07-DOC05-S0081",
+      "BATCH07-DOC05-S0083",
+      "BATCH07-DOC05-S0084",
+      "BATCH07-DOC05-S0085",
+      "BATCH07-DOC05-S0086",
+      "BATCH07-DOC05-S0087",
+      "BATCH07-DOC05-S0088",
+      "BATCH07-DOC05-S0089",
+      "BATCH07-DOC05-S0090",
+      "BATCH07-DOC05-S0091",
+      "BATCH07-DOC05-S0092"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH07-DOC05-W004\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH07-DOC05-W004-E01\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC05-S0079\",\n        \"BATCH07-DOC05-S0082\"\n      ],\n      \"event\": {\n        \"event_name\": \"抵达靖江毗卢寺见到自己的政权并转赴东台\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"抵达毗卢寺并转赴东台\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰及同行二十多人\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"靖江毗卢寺\",\n            \"normalized_value\": \"靖江毗卢寺\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"东台\",\n            \"normalized_value\": \"东台\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"送我们几十里地，送到靖江毗卢寺。一到毗卢寺，哎呀，我们非常高兴，看到我们自己的政权。\",\n        \"type_basis\": \"核心过程为参加寿宴后受护送抵达靖江毗卢寺并转赴东台，属空间移动和到达的物质过程；‘高兴、看到自己的政权’是到达后的心理反应，服务于同一阶段性结果，不另立心理事件。参与者Actor=我们，符合MATERIAL词表。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH07-DOC05-S0076\",\n    \"BATCH07-DOC05-S0077\",\n    \"BATCH07-DOC05-S0078\",\n    \"BATCH07-DOC05-S0080\",\n    \"BATCH07-DOC05-S0081\",\n    \"BATCH07-DOC05-S0083\",\n    \"BATCH07-DOC05-S0084\",\n    \"BATCH07-DOC05-S0085\",\n    \"BATCH07-DOC05-S0086\",\n    \"BATCH07-DOC05-S0087\",\n    \"BATCH07-DOC05-S0088\",\n    \"BATCH07-DOC05-S0089\",\n    \"BATCH07-DOC05-S0090\",\n    \"BATCH07-DOC05-S0091\",\n    \"BATCH07-DOC05-S0092\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5240,
+    "total_tokens": 16505,
+    "completion_tokens": 11265,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10656
+    },
+    "time_to_first_token_ms": 86919,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11264000
+  }
+}

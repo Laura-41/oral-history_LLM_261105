@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T21:51:58",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC07-DE011",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC07-DE011",
+  "usage": {
+    "prompt_tokens": 1385,
+    "total_tokens": 4645,
+    "completion_tokens": 3260,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2289
+    },
+    "time_to_first_token_ms": 25163,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC07-DE011\",\n  \"event_enrichment\": {\n    \"result_state\": \"学员小本上留有薛暮桥、陈毅等首长的签字题词；陈毅的题词被叙述者视为一生座右铭。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以开学时皖南教导队学员请首长在小本上签字留念为起点，以陈毅题词及叙述者将其作为座右铭的说明为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE011-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"学员小本请首长签字留念的习惯背景\",\n      \"process_text\": \"皖南教导队学员买小本，请来教育的领导首长签字留念。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0052\"\n      ],\n      \"evidence_quote\": \"我们皖南那个时候有个习惯，教导队的学生也这样，都买这个小本，领导首长来教育了，都请他签字留念。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE011-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"薛暮桥题写八字\",\n      \"process_text\": \"薛暮桥在小本上签字，题写“艰苦奋斗，英勇牺牲”。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0052\"\n      ],\n      \"evidence_quote\": \"薛暮桥签的字，他哪儿签都一样，“艰苦奋斗，英勇牺牲”八个字。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE011-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈毅题写劝学句\",\n      \"process_text\": \"陈毅在叙述者的本子上题写“为学路逆水行舟，不进则退”。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0052\"\n      ],\n      \"evidence_quote\": \"那个陈毅元帅给我那个本子上签的呢，“为学路逆水行舟，不进则退”。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE011-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"题词成为座右铭\",\n      \"process_text\": \"叙述者把陈毅的题词作为一生座右铭，并说明写于开学的小本子上。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0052\"\n      ],\n      \"evidence_quote\": \"所以这一句话一直作为我一生的座右铭，他在我那个开学的小本子上写的。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE011-P01\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE011-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0052\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE011-P02\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE011-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0052\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE011-P03\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE011-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0052\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC07-DE011",
+    "event_enrichment": {
+      "result_state": "学员小本上留有薛暮桥、陈毅等首长的签字题词；陈毅的题词被叙述者视为一生座右铭。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以开学时皖南教导队学员请首长在小本上签字留念为起点，以陈毅题词及叙述者将其作为座右铭的说明为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC07-DE011-P01",
+        "stage_order": 1,
+        "stage_summary": "学员小本请首长签字留念的习惯背景",
+        "process_text": "皖南教导队学员买小本，请来教育的领导首长签字留念。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0052"
+        ],
+        "evidence_quote": "我们皖南那个时候有个习惯，教导队的学生也这样，都买这个小本，领导首长来教育了，都请他签字留念。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE011-P02",
+        "stage_order": 2,
+        "stage_summary": "薛暮桥题写八字",
+        "process_text": "薛暮桥在小本上签字，题写“艰苦奋斗，英勇牺牲”。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0052"
+        ],
+        "evidence_quote": "薛暮桥签的字，他哪儿签都一样，“艰苦奋斗，英勇牺牲”八个字。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE011-P03",
+        "stage_order": 3,
+        "stage_summary": "陈毅题写劝学句",
+        "process_text": "陈毅在叙述者的本子上题写“为学路逆水行舟，不进则退”。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0052"
+        ],
+        "evidence_quote": "那个陈毅元帅给我那个本子上签的呢，“为学路逆水行舟，不进则退”。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE011-P04",
+        "stage_order": 4,
+        "stage_summary": "题词成为座右铭",
+        "process_text": "叙述者把陈毅的题词作为一生座右铭，并说明写于开学的小本子上。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0052"
+        ],
+        "evidence_quote": "所以这一句话一直作为我一生的座右铭，他在我那个开学的小本子上写的。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC07-DE011-P01",
+        "target_stage_id": "BATCH02-DOC07-DE011-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC07-S0052",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE011-P02",
+        "target_stage_id": "BATCH02-DOC07-DE011-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0052",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE011-P03",
+        "target_stage_id": "BATCH02-DOC07-DE011-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC07-S0052",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

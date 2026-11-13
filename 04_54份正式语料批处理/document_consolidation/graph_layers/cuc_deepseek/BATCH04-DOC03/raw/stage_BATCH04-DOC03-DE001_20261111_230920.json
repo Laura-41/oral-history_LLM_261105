@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T23:09:20",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC03-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC03-DE001",
+  "usage": {
+    "prompt_tokens": 1729,
+    "total_tokens": 5639,
+    "completion_tokens": 3910,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2689
+    },
+    "time_to_first_token_ms": 45962,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC03-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"平原地区作战教育向连队干部作了讲解，形成《坚持平原游击战》文章及歌曲，并通过宣传教育与唱歌鼓励士气。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以S0004师领导确定开展平原地区作战教育为起点，经S0006讲解平原作战要点、S0022编写文章和歌曲，至S0024宣传教育与唱歌鼓励士气为止；686团攻占樊坝战斗属另一军事事件，不纳入本阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"师领导确定开展平原地区作战教育，并向下面简单说明意图。\",\n      \"process_text\": \"师领导确定那几天要进行平原地区作战的教育，并把这一意图简单给下面讲一讲。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0004\"\n      ],\n      \"evidence_quote\": \"杨永松：师的领导确定就是，那几天要进行平原地区作战的教育，师的领导要把这个意图简单给下面讲一讲。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"向连队干部讲解平原作战要点，包括村落战、疏散队形、占领坡地洼地和改造地形。\",\n      \"process_text\": \"向连队干部讲解平原作战主要靠村落战掩护、进攻时队形不能太密、可占坡地洼地，并要改造地形、领导群众，借鉴129师先到济南的经验。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0006\"\n      ],\n      \"evidence_quote\": \"杨永松：平原作战，主要一个没有山坡、土包、坟墓这个情况底下，主要就是要村落战，用村落来掩护咱们自己，你完全不能在平地打仗，目标太大。将来一些战术上，有的时候要疏散一些，当然在进攻敌人的时候，队形不能够太密，这是跟连队干部简单一讲就是知道了。占领坡地，也可以占洼地。再一个就是要改造地形，这就是根据129师他们先到济南的经验，就是到了地方以后，自己参加，领导群众。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"赖可可撰写《坚持平原游击战》，并由搞艺术的人编成歌曲。\",\n      \"process_text\": \"师宣传部副部长赖可可写了《坚持平原游击战》，又由搞艺术的人把它编成歌。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0022\"\n      ],\n      \"evidence_quote\": \"杨永松：就是在平原坚持斗争的这一些事情吧，那个时候师的宣传部当时是副部长赖可可，这个人以后在山东分局当过组织部长，以后当过浙江的书记，也是长征干部，他就写了一篇坚持平原游击战，下面还有一些我记不住了，叫搞艺术的人把它编成一个歌。这个坚持平原游击战，我这个（书）里头可能还有一个山东的过去当过罗帅的公务员的，一个姓王的同志，他在济南市的文联工作，他设计的材料编了一个《罗帅在山东》，大概有些歌在上头。。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"通过宣传教育和唱歌鼓励士气。\",\n      \"process_text\": \"一方面宣传教育，一方面唱歌，鼓励士气。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0024\"\n      ],\n      \"evidence_quote\": \"一方面宣传教育，一方面唱歌，鼓励士气；\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE001-P01\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0004\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE001-P02\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0022\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE001-P03\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE001-P04\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0024\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC03-DE001",
+    "event_enrichment": {
+      "result_state": "平原地区作战教育向连队干部作了讲解，形成《坚持平原游击战》文章及歌曲，并通过宣传教育与唱歌鼓励士气。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以S0004师领导确定开展平原地区作战教育为起点，经S0006讲解平原作战要点、S0022编写文章和歌曲，至S0024宣传教育与唱歌鼓励士气为止；686团攻占樊坝战斗属另一军事事件，不纳入本阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC03-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "师领导确定开展平原地区作战教育，并向下面简单说明意图。",
+        "process_text": "师领导确定那几天要进行平原地区作战的教育，并把这一意图简单给下面讲一讲。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0004"
+        ],
+        "evidence_quote": "杨永松：师的领导确定就是，那几天要进行平原地区作战的教育，师的领导要把这个意图简单给下面讲一讲。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "向连队干部讲解平原作战要点，包括村落战、疏散队形、占领坡地洼地和改造地形。",
+        "process_text": "向连队干部讲解平原作战主要靠村落战掩护、进攻时队形不能太密、可占坡地洼地，并要改造地形、领导群众，借鉴129师先到济南的经验。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0006"
+        ],
+        "evidence_quote": "杨永松：平原作战，主要一个没有山坡、土包、坟墓这个情况底下，主要就是要村落战，用村落来掩护咱们自己，你完全不能在平地打仗，目标太大。将来一些战术上，有的时候要疏散一些，当然在进攻敌人的时候，队形不能够太密，这是跟连队干部简单一讲就是知道了。占领坡地，也可以占洼地。再一个就是要改造地形，这就是根据129师他们先到济南的经验，就是到了地方以后，自己参加，领导群众。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "赖可可撰写《坚持平原游击战》，并由搞艺术的人编成歌曲。",
+        "process_text": "师宣传部副部长赖可可写了《坚持平原游击战》，又由搞艺术的人把它编成歌。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0022"
+        ],
+        "evidence_quote": "杨永松：就是在平原坚持斗争的这一些事情吧，那个时候师的宣传部当时是副部长赖可可，这个人以后在山东分局当过组织部长，以后当过浙江的书记，也是长征干部，他就写了一篇坚持平原游击战，下面还有一些我记不住了，叫搞艺术的人把它编成一个歌。这个坚持平原游击战，我这个（书）里头可能还有一个山东的过去当过罗帅的公务员的，一个姓王的同志，他在济南市的文联工作，他设计的材料编了一个《罗帅在山东》，大概有些歌在上头。。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "通过宣传教育和唱歌鼓励士气。",
+        "process_text": "一方面宣传教育，一方面唱歌，鼓励士气。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0024"
+        ],
+        "evidence_quote": "一方面宣传教育，一方面唱歌，鼓励士气；",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC03-DE001-P01",
+        "target_stage_id": "BATCH04-DOC03-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0004",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE001-P02",
+        "target_stage_id": "BATCH04-DOC03-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0022",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE001-P03",
+        "target_stage_id": "BATCH04-DOC03-DE001-P04",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC03-S0024",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

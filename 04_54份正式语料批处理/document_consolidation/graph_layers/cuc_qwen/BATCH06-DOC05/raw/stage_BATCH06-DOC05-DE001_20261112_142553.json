@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T14:25:53",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC05-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC05-DE001",
+  "usage": {
+    "prompt_tokens": 1223,
+    "total_tokens": 7927,
+    "completion_tokens": 6704,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5664
+    },
+    "time_to_first_token_ms": 98561,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-20\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC05-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"转移到宜兴太华乡一带后，以正常治疗、正规培养人才、总结天目山战役经验教训、巩固胜利成果为主，准备迎接更大的斗争，并把胜利成果真正扎扎实实拿到手作为战略思想。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于“我们从苏浙军区一起……统统转移到宜兴的太华乡这一带以后”，止于“准备迎接更大的斗争”及“把胜利的成果真正扎扎实实拿到手，整个的战略思想是这个战略思想”；S0005末尾“那么到8月15号，日本鬼子”为后续叙述，不纳入本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC05-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"转移到宜兴太华乡一带\",\n      \"process_text\": \"我们从苏浙军区一起……统统转移到宜兴的太华乡这一带以后呢\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC05-S0003\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我们从苏浙军区一起……统统转移到宜兴的太华乡这一带以后呢，主要是进行正常治疗，正规地培养人才，总结天目山战役的经验教训，巩固胜利成果为主。这个时候呢，准备迎接更大的斗争。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC05-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"开展正常治疗、正规培养人才、总结天目山战役经验教训并巩固胜利成果，准备迎接更大斗争\",\n      \"process_text\": \"主要是进行正常治疗，正规地培养人才，总结天目山战役的经验教训，巩固胜利成果为主。这个时候呢，准备迎接更大的斗争。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC05-S0003\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我们从苏浙军区一起……统统转移到宜兴的太华乡这一带以后呢，主要是进行正常治疗，正规地培养人才，总结天目山战役的经验教训，巩固胜利成果为主。这个时候呢，准备迎接更大的斗争。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC05-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"明确把胜利成果真正扎扎实实拿到手的战略思想\",\n      \"process_text\": \"就是把胜利的成果呢，能够真正扎扎实实拿到手，整个的战略思想是这个战略思想。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC05-S0005\"\n      ],\n      \"evidence_quote\": \"    陈海峰：就是把胜利的成果呢，能够真正扎扎实实拿到手，整个的战略思想是这个战略思想。那么到8月15号，日本鬼子\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC05-DE001-P01\",\n      \"target_stage_id\": \"BATCH06-DOC05-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC05-S0003\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC05-DE001-P02\",\n      \"target_stage_id\": \"BATCH06-DOC05-DE001-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC05-S0005\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-20",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC05-DE001",
+    "event_enrichment": {
+      "result_state": "转移到宜兴太华乡一带后，以正常治疗、正规培养人才、总结天目山战役经验教训、巩固胜利成果为主，准备迎接更大的斗争，并把胜利成果真正扎扎实实拿到手作为战略思想。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于“我们从苏浙军区一起……统统转移到宜兴的太华乡这一带以后”，止于“准备迎接更大的斗争”及“把胜利的成果真正扎扎实实拿到手，整个的战略思想是这个战略思想”；S0005末尾“那么到8月15号，日本鬼子”为后续叙述，不纳入本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC05-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "转移到宜兴太华乡一带",
+        "process_text": "我们从苏浙军区一起……统统转移到宜兴的太华乡这一带以后呢",
+        "evidence_segment_ids": [
+          "BATCH06-DOC05-S0003"
+        ],
+        "evidence_quote": "    陈海峰：我们从苏浙军区一起……统统转移到宜兴的太华乡这一带以后呢，主要是进行正常治疗，正规地培养人才，总结天目山战役的经验教训，巩固胜利成果为主。这个时候呢，准备迎接更大的斗争。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC05-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "开展正常治疗、正规培养人才、总结天目山战役经验教训并巩固胜利成果，准备迎接更大斗争",
+        "process_text": "主要是进行正常治疗，正规地培养人才，总结天目山战役的经验教训，巩固胜利成果为主。这个时候呢，准备迎接更大的斗争。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC05-S0003"
+        ],
+        "evidence_quote": "    陈海峰：我们从苏浙军区一起……统统转移到宜兴的太华乡这一带以后呢，主要是进行正常治疗，正规地培养人才，总结天目山战役的经验教训，巩固胜利成果为主。这个时候呢，准备迎接更大的斗争。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC05-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "明确把胜利成果真正扎扎实实拿到手的战略思想",
+        "process_text": "就是把胜利的成果呢，能够真正扎扎实实拿到手，整个的战略思想是这个战略思想。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC05-S0005"
+        ],
+        "evidence_quote": "    陈海峰：就是把胜利的成果呢，能够真正扎扎实实拿到手，整个的战略思想是这个战略思想。那么到8月15号，日本鬼子",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC05-DE001-P01",
+        "target_stage_id": "BATCH06-DOC05-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC05-S0003",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC05-DE001-P02",
+        "target_stage_id": "BATCH06-DOC05-DE001-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC05-S0005",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

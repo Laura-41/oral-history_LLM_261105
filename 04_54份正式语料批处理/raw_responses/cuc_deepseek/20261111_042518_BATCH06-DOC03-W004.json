@@ -1,0 +1,208 @@
+{
+  "run_time": "2026-11-11T04:25:18",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH06-DOC03-W004",
+  "technical_document_id": "BATCH06-DOC03",
+  "document_id": "09.杨永松100507（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH06-DOC03-S0048",
+    "BATCH06-DOC03-S0049",
+    "BATCH06-DOC03-S0050",
+    "BATCH06-DOC03-S0051",
+    "BATCH06-DOC03-S0052",
+    "BATCH06-DOC03-S0053",
+    "BATCH06-DOC03-S0054",
+    "BATCH06-DOC03-S0055",
+    "BATCH06-DOC03-S0056",
+    "BATCH06-DOC03-S0057",
+    "BATCH06-DOC03-S0058",
+    "BATCH06-DOC03-S0059",
+    "BATCH06-DOC03-S0060"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 3,
+    "assigned_segment_count": 4,
+    "unassigned_segment_count": 9,
+    "input_segment_count": 13,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH06-DOC03-W004",
+    "events": [
+      {
+        "candidate_id": "BATCH06-DOC03-W004-E01",
+        "source_segment_ids": [
+          "BATCH06-DOC03-S0050",
+          "BATCH06-DOC03-S0052"
+        ],
+        "event": {
+          "event_name": "我军追击日军至城前/城后据点并夜攻收复，日军再占白彦",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "追击、攻打",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "杨永松所在部队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "686团",
+              "normalized_entity": "686团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "敌人",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "第二天至傍晚",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "城前或城后据点",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "往西",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "晚上快要天黑的时候，来了两辆汽车，装了炮、弹药，已经下午三四点钟，春天嘛，估计很快就黑了，狠狠地打了我们一顿。江拥辉那个营啊……我们在这边（杨永松示意在右边），他这个营在（左手）这边，那个营在（右手外侧）那边，我们在中间。结果他那个营位置比较开阔，我们这两个连在坟地里面隐蔽着了，他那个比较开阔地方，（给日本人）打了几十发炮弹，打中我们部队，他们伤亡十好几。打完以后，没动静了，就爬墙！冲，打进去，他跑了！院子里面老百姓说，他怕你们八路，那来了汽车，送了炮、子弹来，把伤兵拉走了。刚才跟你们打一阵以后，打完就跑了，老百姓告诉我们。这样（城后）这个据点不就应该收复了吧，可是我们回到白彦附近来（之后），他又占了。",
+          "type_basis": "核心过程为追击、夜攻和收复据点，参与者为我方部队与日军，属空间移动和军事行动；虽含老百姓转述，但转述仅说明敌情，不改变主导物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC03-W004-E02",
+        "source_segment_ids": [
+          "BATCH06-DOC03-S0054"
+        ],
+        "event": {
+          "event_name": "反扫荡整训期间一大队拟攻城前/城后据点未战返回",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "拟攻未战返回",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "一大队",
+              "normalized_entity": "一大队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "城前、城后那个据点",
+              "normalized_entity": "城前、城后据点",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "开辟根据地任务完成后/敌人扫荡时",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "四县边联",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "刘少奇来电并告中央",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "等我们开辟根据地任务完成了，敌人扫荡来了，我们又撤回到四县边联整训，罗政委要开政工会，叫那个一大队也参加了。他来了还没（打仗），本来我们师部要他去打城前、城后那个据点，他那个大队根本没有问题，三个营打它一个据点几百人，是没问题的。结果刘少奇又来电报了，还告了中央了。罗政委他比较气魄宽大，对上级很尊重。好吧，叫他不打，叫他回去算了，省得麻烦。这来了以后，没有打仗，就这么回去了。",
+          "type_basis": "核心过程为一大队奉命拟攻据点、因上级电报和罗政委决定未战而返回，属军事调动与作战计划取消；电报和决定是原因，不单列言语事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC03-W004-E03",
+        "source_segment_ids": [
+          "BATCH06-DOC03-S0057"
+        ],
+        "event": {
+          "event_name": "第一次打白彦消灭孙鹤龄",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "消灭",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我方部队（原文未明示）",
+              "normalized_entity": "我方部队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "孙鹤龄",
+              "normalized_entity": "孙鹤龄（部）",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "第一次打白彦时",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "孙鹤龄第一次（打白彦）就消灭了。",
+          "type_basis": "核心过程为军事消灭，属物质过程；原文未明示施事，据上下文补为我方部队，确定性中。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH06-DOC03-S0048",
+      "BATCH06-DOC03-S0049",
+      "BATCH06-DOC03-S0051",
+      "BATCH06-DOC03-S0053",
+      "BATCH06-DOC03-S0055",
+      "BATCH06-DOC03-S0056",
+      "BATCH06-DOC03-S0058",
+      "BATCH06-DOC03-S0059",
+      "BATCH06-DOC03-S0060"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH06-DOC03-W004\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH06-DOC03-W004-E01\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC03-S0050\",\n        \"BATCH06-DOC03-S0052\"\n      ],\n      \"event\": {\n        \"event_name\": \"我军追击日军至城前/城后据点并夜攻收复，日军再占白彦\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"追击、攻打\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"杨永松所在部队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"686团\",\n            \"normalized_entity\": \"686团\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"敌人\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"第二天至傍晚\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"城前或城后据点\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"往西\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"晚上快要天黑的时候，来了两辆汽车，装了炮、弹药，已经下午三四点钟，春天嘛，估计很快就黑了，狠狠地打了我们一顿。江拥辉那个营啊……我们在这边（杨永松示意在右边），他这个营在（左手）这边，那个营在（右手外侧）那边，我们在中间。结果他那个营位置比较开阔，我们这两个连在坟地里面隐蔽着了，他那个比较开阔地方，（给日本人）打了几十发炮弹，打中我们部队，他们伤亡十好几。打完以后，没动静了，就爬墙！冲，打进去，他跑了！院子里面老百姓说，他怕你们八路，那来了汽车，送了炮、子弹来，把伤兵拉走了。刚才跟你们打一阵以后，打完就跑了，老百姓告诉我们。这样（城后）这个据点不就应该收复了吧，可是我们回到白彦附近来（之后），他又占了。\",\n        \"type_basis\": \"核心过程为追击、夜攻和收复据点，参与者为我方部队与日军，属空间移动和军事行动；虽含老百姓转述，但转述仅说明敌情，不改变主导物质过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC03-W004-E02\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC03-S0054\"\n      ],\n      \"event\": {\n        \"event_name\": \"反扫荡整训期间一大队拟攻城前/城后据点未战返回\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"拟攻未战返回\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"一大队\",\n            \"normalized_entity\": \"一大队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"城前、城后那个据点\",\n            \"normalized_entity\": \"城前、城后据点\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"开辟根据地任务完成后/敌人扫荡时\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"四县边联\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"刘少奇来电并告中央\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"等我们开辟根据地任务完成了，敌人扫荡来了，我们又撤回到四县边联整训，罗政委要开政工会，叫那个一大队也参加了。他来了还没（打仗），本来我们师部要他去打城前、城后那个据点，他那个大队根本没有问题，三个营打它一个据点几百人，是没问题的。结果刘少奇又来电报了，还告了中央了。罗政委他比较气魄宽大，对上级很尊重。好吧，叫他不打，叫他回去算了，省得麻烦。这来了以后，没有打仗，就这么回去了。\",\n        \"type_basis\": \"核心过程为一大队奉命拟攻据点、因上级电报和罗政委决定未战而返回，属军事调动与作战计划取消；电报和决定是原因，不单列言语事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC03-W004-E03\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC03-S0057\"\n      ],\n      \"event\": {\n        \"event_name\": \"第一次打白彦消灭孙鹤龄\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"消灭\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我方部队（原文未明示）\",\n            \"normalized_entity\": \"我方部队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"孙鹤龄\",\n            \"normalized_entity\": \"孙鹤龄（部）\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"第一次打白彦时\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"孙鹤龄第一次（打白彦）就消灭了。\",\n        \"type_basis\": \"核心过程为军事消灭，属物质过程；原文未明示施事，据上下文补为我方部队，确定性中。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH06-DOC03-S0048\",\n    \"BATCH06-DOC03-S0049\",\n    \"BATCH06-DOC03-S0051\",\n    \"BATCH06-DOC03-S0053\",\n    \"BATCH06-DOC03-S0055\",\n    \"BATCH06-DOC03-S0056\",\n    \"BATCH06-DOC03-S0058\",\n    \"BATCH06-DOC03-S0059\",\n    \"BATCH06-DOC03-S0060\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5052,
+    "total_tokens": 24488,
+    "completion_tokens": 19436,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 17804
+    },
+    "time_to_first_token_ms": 173830,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9717500
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T23:50:14",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC03-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC03-DE001",
+  "usage": {
+    "prompt_tokens": 1463,
+    "total_tokens": 5417,
+    "completion_tokens": 3954,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2758
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3953000,
+    "time_to_first_token_ms": 30730
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC03-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"朝阳集战斗消灭敌人一个旅；泗县战斗因大雨和地形不利未打好，部队伤亡较大，约近两千人；战后主力需补充，陈毅写信派陈锐霆回山东搬兵要人要钱要东西。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈锐霆随陈毅到淮北为起点，以朝阳集、泗县战斗及战后伤亡统计、回山东搬兵安排为终点；原文未给出具体日期，边界按叙述推进确定。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"随陈毅到淮北，当地人事和地形熟悉。\",\n      \"process_text\": \"陈老总就先到了淮北，我随着陈老总到了淮北，淮北原来就是我的熟地方，人事也熟悉，地形也熟悉。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0007\"\n      ],\n      \"evidence_quote\": \"陈老总就先到了淮北，我随着陈老总到了淮北，淮北原来就是我的熟地方，人事也熟悉，地形也熟悉。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"在朝阳集消灭敌人一个旅。\",\n      \"process_text\": \"以后先在朝阳集消灭敌人一个旅\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0009\"\n      ],\n      \"evidence_quote\": \"以后先在朝阳集消灭敌人一个旅\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"接着打泗县，因下大雨未打好；泗县地势低洼、水深壕满，其他部队进不去，只有山东野战军主力第八师进入。\",\n      \"process_text\": \"以后接着又打泗县，因为下大雨，仗没有打好。本来我们（占据着）最大的优势的兵力，但是泗县是洼地，一下大雨那个水深，壕沟都满了，都平了，其他的部队进不去，结果北方地高，所以就是一个山东野战军的主力第八师（进去了）。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0009\"\n      ],\n      \"evidence_quote\": \"以后接着又打泗县，因为下大雨，仗没有打好。本来我们（占据着）最大的优势的兵力，但是泗县是洼地，一下大雨那个水深，壕沟都满了，都平了，其他的部队进不去，结果北方地高，所以就是一个山东野战军的主力第八师（进去了）。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"泗县战斗形成一对一，伤亡较大；战后主力需补充，陈毅写信派陈锐霆回山东搬兵。\",\n      \"process_text\": \"一个师对一个师，所以我们伤亡比较大，一个师伤亡将近两千人。打完了仗以后，我们这个主力要赶快补充嘛，陈老总就写了一个信，叫我回山东去搬兵，要人要钱要东西\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0011\"\n      ],\n      \"evidence_quote\": \"一个师对一个师，所以我们伤亡比较大，一个师伤亡将近两千人。打完了仗以后，我们这个主力要赶快补充嘛，陈老总就写了一个信，叫我回山东去搬兵，要人要钱要东西\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE001-P01\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0009\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE001-P02\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0009\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE001-P03\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE001-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0011\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC03-DE001",
+    "event_enrichment": {
+      "result_state": "朝阳集战斗消灭敌人一个旅；泗县战斗因大雨和地形不利未打好，部队伤亡较大，约近两千人；战后主力需补充，陈毅写信派陈锐霆回山东搬兵要人要钱要东西。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以陈锐霆随陈毅到淮北为起点，以朝阳集、泗县战斗及战后伤亡统计、回山东搬兵安排为终点；原文未给出具体日期，边界按叙述推进确定。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC03-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "随陈毅到淮北，当地人事和地形熟悉。",
+        "process_text": "陈老总就先到了淮北，我随着陈老总到了淮北，淮北原来就是我的熟地方，人事也熟悉，地形也熟悉。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0007"
+        ],
+        "evidence_quote": "陈老总就先到了淮北，我随着陈老总到了淮北，淮北原来就是我的熟地方，人事也熟悉，地形也熟悉。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "在朝阳集消灭敌人一个旅。",
+        "process_text": "以后先在朝阳集消灭敌人一个旅",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0009"
+        ],
+        "evidence_quote": "以后先在朝阳集消灭敌人一个旅",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "接着打泗县，因下大雨未打好；泗县地势低洼、水深壕满，其他部队进不去，只有山东野战军主力第八师进入。",
+        "process_text": "以后接着又打泗县，因为下大雨，仗没有打好。本来我们（占据着）最大的优势的兵力，但是泗县是洼地，一下大雨那个水深，壕沟都满了，都平了，其他的部队进不去，结果北方地高，所以就是一个山东野战军的主力第八师（进去了）。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0009"
+        ],
+        "evidence_quote": "以后接着又打泗县，因为下大雨，仗没有打好。本来我们（占据着）最大的优势的兵力，但是泗县是洼地，一下大雨那个水深，壕沟都满了，都平了，其他的部队进不去，结果北方地高，所以就是一个山东野战军的主力第八师（进去了）。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "泗县战斗形成一对一，伤亡较大；战后主力需补充，陈毅写信派陈锐霆回山东搬兵。",
+        "process_text": "一个师对一个师，所以我们伤亡比较大，一个师伤亡将近两千人。打完了仗以后，我们这个主力要赶快补充嘛，陈老总就写了一个信，叫我回山东去搬兵，要人要钱要东西",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0011"
+        ],
+        "evidence_quote": "一个师对一个师，所以我们伤亡比较大，一个师伤亡将近两千人。打完了仗以后，我们这个主力要赶快补充嘛，陈老总就写了一个信，叫我回山东去搬兵，要人要钱要东西",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC03-DE001-P01",
+        "target_stage_id": "BATCH05-DOC03-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC03-S0009",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC03-DE001-P02",
+        "target_stage_id": "BATCH05-DOC03-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC03-S0009",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC03-DE001-P03",
+        "target_stage_id": "BATCH05-DOC03-DE001-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC03-S0011",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,144 @@
+{
+  "run_time": "2026-11-12T08:10:53",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC01-DE010",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC01-DE010",
+  "usage": {
+    "prompt_tokens": 3366,
+    "total_tokens": 16792,
+    "completion_tokens": 13426,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10905
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 197688
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V1-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC01-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队在武南夜间转移后于庙桥与日军遭遇并战斗，随后突围到望山桥休整几天，转为侦察小组活动；陈海峰在遭遇战中靠手榴弹脱险并蹿出六条小河坝跟上部队。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起自 S0054 “打了仗以后，我们就转到武南，就到坂上李家桥这一带”，止于 S0080 “一家伙蹿出去六条小河坝，跟上部队”；S0058 庙桥战斗、S0065 突围望山桥休整为内部关键节点，S0061、S0063 为补充说明，不扩展事件边界。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"转入武南坂上李家桥一带并建立夜间警戒封锁\",\n      \"process_text\": \"打了仗以后转到武南坂上李家桥一带开辟地方；晚上部队不休息，四边警戒，封锁村庄只准进不准出，保证部队安全，白天休息晚上行动。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0054\"\n      ],\n      \"evidence_quote\": \"    陈海峰：三路鬼子在常州西面。打了仗以后，我们就转到武南，就到坂上李家桥这一带，开辟这个地方。这（里）到处是日本鬼子（的）据点呀，三里五里路一个据点。到晚上，我（们）部队不休息，四边警戒。一个庄子两个庄子三个庄子围起来，四边一警戒以后，封锁，只准进不准出，所有老百姓进来可以，不准出去，封锁消息。这样子保证我们部队安全，白天休息，晚上我们再打仗行动。晚上问题大了，江南的家家户户都养狗，部队一行动，狗就叫。那么我们这个部队呢，这个庄子到那个庄子，那个庄子到这个庄子，这个狗一路叫。鬼子在碉堡上听得清清楚楚，是不是，就知道我们新四军这个部队在活动。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"夜间频繁转移躲避鬼子据点盯防\",\n      \"process_text\": \"部队行军途中三里五里一个碉堡，鬼子盯着；刚准备睡觉鬼子又离不到一里，马上要走，那天一晚上没睡觉，搬家搬了18次。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0056\"\n      ],\n      \"evidence_quote\": \"    陈海峰：知道在这个范围以内，但是（在）我们这个部队（行军途中），三里五里是一个碉堡，是鬼子一个据点，鬼子盯着我们。我们刚放下这个背包，准备睡觉了，准备休息一下，鬼子又离我们一里路不到。不行，马上要走。那个时候都是把老百姓的门板拿下来，两个凳子一搁睡觉嘛，（在那个）地上睡觉了，地铺嘛，都是，江南有的是稻草。这样子就是说鬼子盯着我们，那天一晚上没睡觉，搬家搬多少次？18次！\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"天亮后走小路桑园到庙桥，与日军正面遭遇并打庙桥战斗\",\n      \"process_text\": \"天亮下雨，鬼子在庙桥；不能走大路，走小路在桑园穿来穿去；到了庙桥以后和日本鬼子正面遭遇，打了一仗，那次战斗叫庙桥战斗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0058\"\n      ],\n      \"evidence_quote\": \"    陈海峰：搬了18次家，没睡一个觉，到天亮好了。天亮还不错，天亮下雨了，南方下雨多，毛毛雨，那个时候（是）夏天嘛，夏天那个雨还多。鬼子在庙桥，坂上的旁边有一个小镇叫庙桥。那个时候江南到处都是稲地，家家户户都养蚕，就是做绸布的那个养蚕，桑树叶园子很多很多，到处都是。我们不能走大路啊，都走小路，在桑园里穿来穿去。到了庙桥以后和日本鬼子就正面遭遇了，打了一仗，那次战斗叫庙桥战斗。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE010-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"庙桥战斗后突围到望山桥休整几天，转为侦察小组活动\",\n      \"process_text\": \"庙桥打了一仗以后等于突围，就到望山桥；望山桥休整了几天，后来才叫武工队，那个时候不叫武工队，侦察部队一个小组一个小组，拿短枪、手榴弹进去活动。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0065\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那么这样子呢，这个就是在庙桥打了一仗。庙桥打了一仗以后，我们等于（是）突围，就突出了，我们就到望山桥，再往前有一片山。这个地方都是平原，对我们非常不利，我们到望山桥那边去了。（在）望山桥休整了几天，后来才叫武工队，那个时候不叫武工队，我们侦察部队一个小组一个小组，三个人一个小组，五个人一个小组，都（拿）短枪、手榴弹进去活动。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE010-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"侦察活动中遭遇鬼子，陈海峰差点被抓，身上有手榴弹\",\n      \"process_text\": \"这个时候部队人员多，装备不足，弹药少；我们在这个地方碰到遭遇战了，我差点给他抓住了，好在我身上有个手榴弹。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0072\"\n      ],\n      \"evidence_quote\": \"    陈海峰：这个时候部队的人员多，装备不足，弹药少。装备那个枪呢，也是比较差，都七九步枪、老套筒。打鬼子打多了，就缴那个三八枪，那就好多了。那个时候打鬼子不容易，我们打次胜仗可不容易，要全部消灭这个鬼子也不容易，都是消灭他一部分。我们在这个地方碰到遭遇战了，哎呀，我差点给他抓住了。好在我身上有个手榴弹，日本鬼子那个手榴弹，那个手雷，扔的那个小手榴弹就是要三四秒钟才炸，这个手雷是两秒钟到三秒钟就炸了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE010-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"靠手榴弹脱险，蹿出六条小河坝跟上部队\",\n      \"process_text\": \"那个河坝都不大，小河坝多，一家伙蹿出去六条小河坝，跟上部队；那天差一点我就牺牲了，我就靠那个手榴弹，靠平时锻炼。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0080\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那个河坝都不大，都是六米八米十几米左右，小河坝多，一家伙蹿出去六条小河坝，跟上部队。哎呀，那天差一点我就牺牲了，我就靠那个手榴弹，靠平时锻炼，平时要不锻炼，那天就完蛋了。没那个手榴弹，就救不了我自己，那时候是和鬼子最近的一次，就那一次。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE010-P01\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0056\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE010-P02\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE010-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0058\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE010-P03\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE010-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0065\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE010-P04\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE010-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0072\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE010-P05\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE010-P06\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0080\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC01-DE010",
+    "event_enrichment": {
+      "result_state": "部队在武南夜间转移后于庙桥与日军遭遇并战斗，随后突围到望山桥休整几天，转为侦察小组活动；陈海峰在遭遇战中靠手榴弹脱险并蹿出六条小河坝跟上部队。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起自 S0054 “打了仗以后，我们就转到武南，就到坂上李家桥这一带”，止于 S0080 “一家伙蹿出去六条小河坝，跟上部队”；S0058 庙桥战斗、S0065 突围望山桥休整为内部关键节点，S0061、S0063 为补充说明，不扩展事件边界。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC01-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "转入武南坂上李家桥一带并建立夜间警戒封锁",
+        "process_text": "打了仗以后转到武南坂上李家桥一带开辟地方；晚上部队不休息，四边警戒，封锁村庄只准进不准出，保证部队安全，白天休息晚上行动。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0054"
+        ],
+        "evidence_quote": "    陈海峰：三路鬼子在常州西面。打了仗以后，我们就转到武南，就到坂上李家桥这一带，开辟这个地方。这（里）到处是日本鬼子（的）据点呀，三里五里路一个据点。到晚上，我（们）部队不休息，四边警戒。一个庄子两个庄子三个庄子围起来，四边一警戒以后，封锁，只准进不准出，所有老百姓进来可以，不准出去，封锁消息。这样子保证我们部队安全，白天休息，晚上我们再打仗行动。晚上问题大了，江南的家家户户都养狗，部队一行动，狗就叫。那么我们这个部队呢，这个庄子到那个庄子，那个庄子到这个庄子，这个狗一路叫。鬼子在碉堡上听得清清楚楚，是不是，就知道我们新四军这个部队在活动。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "夜间频繁转移躲避鬼子据点盯防",
+        "process_text": "部队行军途中三里五里一个碉堡，鬼子盯着；刚准备睡觉鬼子又离不到一里，马上要走，那天一晚上没睡觉，搬家搬了18次。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0056"
+        ],
+        "evidence_quote": "    陈海峰：知道在这个范围以内，但是（在）我们这个部队（行军途中），三里五里是一个碉堡，是鬼子一个据点，鬼子盯着我们。我们刚放下这个背包，准备睡觉了，准备休息一下，鬼子又离我们一里路不到。不行，马上要走。那个时候都是把老百姓的门板拿下来，两个凳子一搁睡觉嘛，（在那个）地上睡觉了，地铺嘛，都是，江南有的是稻草。这样子就是说鬼子盯着我们，那天一晚上没睡觉，搬家搬多少次？18次！",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "天亮后走小路桑园到庙桥，与日军正面遭遇并打庙桥战斗",
+        "process_text": "天亮下雨，鬼子在庙桥；不能走大路，走小路在桑园穿来穿去；到了庙桥以后和日本鬼子正面遭遇，打了一仗，那次战斗叫庙桥战斗。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0058"
+        ],
+        "evidence_quote": "    陈海峰：搬了18次家，没睡一个觉，到天亮好了。天亮还不错，天亮下雨了，南方下雨多，毛毛雨，那个时候（是）夏天嘛，夏天那个雨还多。鬼子在庙桥，坂上的旁边有一个小镇叫庙桥。那个时候江南到处都是稲地，家家户户都养蚕，就是做绸布的那个养蚕，桑树叶园子很多很多，到处都是。我们不能走大路啊，都走小路，在桑园里穿来穿去。到了庙桥以后和日本鬼子就正面遭遇了，打了一仗，那次战斗叫庙桥战斗。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE010-P04",
+        "stage_order": 4,
+        "stage_summary": "庙桥战斗后突围到望山桥休整几天，转为侦察小组活动",
+        "process_text": "庙桥打了一仗以后等于突围，就到望山桥；望山桥休整了几天，后来才叫武工队，那个时候不叫武工队，侦察部队一个小组一个小组，拿短枪、手榴弹进去活动。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0065"
+        ],
+        "evidence_quote": "    陈海峰：那么这样子呢，这个就是在庙桥打了一仗。庙桥打了一仗以后，我们等于（是）突围，就突出了，我们就到望山桥，再往前有一片山。这个地方都是平原，对我们非常不利，我们到望山桥那边去了。（在）望山桥休整了几天，后来才叫武工队，那个时候不叫武工队，我们侦察部队一个小组一个小组，三个人一个小组，五个人一个小组，都（拿）短枪、手榴弹进去活动。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE010-P05",
+        "stage_order": 5,
+        "stage_summary": "侦察活动中遭遇鬼子，陈海峰差点被抓，身上有手榴弹",
+        "process_text": "这个时候部队人员多，装备不足，弹药少；我们在这个地方碰到遭遇战了，我差点给他抓住了，好在我身上有个手榴弹。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0072"
+        ],
+        "evidence_quote": "    陈海峰：这个时候部队的人员多，装备不足，弹药少。装备那个枪呢，也是比较差，都七九步枪、老套筒。打鬼子打多了，就缴那个三八枪，那就好多了。那个时候打鬼子不容易，我们打次胜仗可不容易，要全部消灭这个鬼子也不容易，都是消灭他一部分。我们在这个地方碰到遭遇战了，哎呀，我差点给他抓住了。好在我身上有个手榴弹，日本鬼子那个手榴弹，那个手雷，扔的那个小手榴弹就是要三四秒钟才炸，这个手雷是两秒钟到三秒钟就炸了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE010-P06",
+        "stage_order": 6,
+        "stage_summary": "靠手榴弹脱险，蹿出六条小河坝跟上部队",
+        "process_text": "那个河坝都不大，小河坝多，一家伙蹿出去六条小河坝，跟上部队；那天差一点我就牺牲了，我就靠那个手榴弹，靠平时锻炼。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0080"
+        ],
+        "evidence_quote": "    陈海峰：那个河坝都不大，都是六米八米十几米左右，小河坝多，一家伙蹿出去六条小河坝，跟上部队。哎呀，那天差一点我就牺牲了，我就靠那个手榴弹，靠平时锻炼，平时要不锻炼，那天就完蛋了。没那个手榴弹，就救不了我自己，那时候是和鬼子最近的一次，就那一次。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC01-DE010-P01",
+        "target_stage_id": "BATCH01-DOC01-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC01-S0056",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE010-P02",
+        "target_stage_id": "BATCH01-DOC01-DE010-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC01-S0058",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE010-P03",
+        "target_stage_id": "BATCH01-DOC01-DE010-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH01-DOC01-S0065",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE010-P04",
+        "target_stage_id": "BATCH01-DOC01-DE010-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC01-S0072",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE010-P05",
+        "target_stage_id": "BATCH01-DOC01-DE010-P06",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH01-DOC01-S0080",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

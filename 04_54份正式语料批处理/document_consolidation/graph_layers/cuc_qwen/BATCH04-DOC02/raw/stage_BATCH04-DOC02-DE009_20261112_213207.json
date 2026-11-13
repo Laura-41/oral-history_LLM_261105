@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T21:32:07",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC02-DE009",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC02-DE009",
+  "usage": {
+    "prompt_tokens": 1429,
+    "total_tokens": 10974,
+    "completion_tokens": 9545,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8606
+    },
+    "time_to_first_token_ms": 141311,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9544000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC02-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"该教育干事进入卫校担任教育干事，兼基础课（生理解剖）和一部分护理课，并带新的学生班讲课；干部班他没有课。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起始于 S0126 对专职教员中教育干事背景、进入卫校任职及兼课的叙述，经 S0128 补充基础课为生理解剖，结束于 S0129 说明其带新的学生班讲课且干部班没有课。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"教育干事背景、进入卫校并兼基础课和一部分护理课\",\n      \"process_text\": \"那么专职教员呢，有一个教育干事，是外边学的，是中级护校毕业的，他（在）中级护校教过课。那么进来以后，在我们卫校当教育干事，他就兼基础课，兼一部分护理课。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0126\"\n      ],\n      \"evidence_quote\": \"那么专职教员呢，有一个教育干事，是外边学的，是中级护校毕业的，他（在）中级护校教过课。那么进来以后，在我们卫校当教育干事，他就兼基础课，兼一部分护理课。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"基础课兼的是生理解剖\",\n      \"process_text\": \"基础课兼的是生理解剖。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0128\"\n      ],\n      \"evidence_quote\": \"    陈海峰：基础课兼的是生理解剖。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"带新的学生班讲课，干部班没有课\",\n      \"process_text\": \"那么带新的学生班，对他们讲。干部班他没有课，那么……\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0129\"\n      ],\n      \"evidence_quote\": \"那么带新的学生班，对他们讲。干部班他没有课，那么……\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE009-P01\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE009-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0128\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE009-P02\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE009-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0129\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC02-DE009",
+    "event_enrichment": {
+      "result_state": "该教育干事进入卫校担任教育干事，兼基础课（生理解剖）和一部分护理课，并带新的学生班讲课；干部班他没有课。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起始于 S0126 对专职教员中教育干事背景、进入卫校任职及兼课的叙述，经 S0128 补充基础课为生理解剖，结束于 S0129 说明其带新的学生班讲课且干部班没有课。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC02-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "教育干事背景、进入卫校并兼基础课和一部分护理课",
+        "process_text": "那么专职教员呢，有一个教育干事，是外边学的，是中级护校毕业的，他（在）中级护校教过课。那么进来以后，在我们卫校当教育干事，他就兼基础课，兼一部分护理课。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0126"
+        ],
+        "evidence_quote": "那么专职教员呢，有一个教育干事，是外边学的，是中级护校毕业的，他（在）中级护校教过课。那么进来以后，在我们卫校当教育干事，他就兼基础课，兼一部分护理课。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "基础课兼的是生理解剖",
+        "process_text": "基础课兼的是生理解剖。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0128"
+        ],
+        "evidence_quote": "    陈海峰：基础课兼的是生理解剖。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "带新的学生班讲课，干部班没有课",
+        "process_text": "那么带新的学生班，对他们讲。干部班他没有课，那么……",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0129"
+        ],
+        "evidence_quote": "那么带新的学生班，对他们讲。干部班他没有课，那么……",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC02-DE009-P01",
+        "target_stage_id": "BATCH04-DOC02-DE009-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC02-S0128",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE009-P02",
+        "target_stage_id": "BATCH04-DOC02-DE009-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0129",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

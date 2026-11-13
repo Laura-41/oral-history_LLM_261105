@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T14:46:06",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC06-DE004",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC06-DE004",
+  "usage": {
+    "prompt_tokens": 1286,
+    "total_tokens": 4288,
+    "completion_tokens": 3002,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2093
+    },
+    "time_to_first_token_ms": 45044,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3001000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC06-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆被总部任命为战地接收司令，并以炮兵部队为主、后勤部参与组成战地接收委员会，负责接收战地车辆、火炮并收集起来。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据 BATCH06-DOC06-S0007 中“另外战役最后快要结束的时候，总部下了命令任我为战地接收的司令……来做这个事情。”确定本事件从战役最后快要结束、总部下令任命开始，到说明接收车辆、火炮并收集起来为止；片段前段炮兵牺牲内容不属于本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"战役临近结束时总部下达任命命令\",\n      \"process_text\": \"另外战役最后快要结束的时候，总部下了命令任我为战地接收的司令\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0007\"\n      ],\n      \"evidence_quote\": \"另外战役最后快要结束的时候，总部下了命令任我为战地接收的司令\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"以炮兵部队为主并联合后勤部组建战地接收委员会\",\n      \"process_text\": \"因为我们自己的炮兵部队为主，还有后勤部合着搞一个战地接收委员会吧\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0007\"\n      ],\n      \"evidence_quote\": \"因为我们自己的炮兵部队为主，还有后勤部合着搞一个战地接收委员会吧\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"委员会负责接收战地车辆、火炮并收集起来\",\n      \"process_text\": \"来接收这个战地的一些车辆啊，火炮啊，把它收集起来，来做这个事情。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0007\"\n      ],\n      \"evidence_quote\": \"来接收这个战地的一些车辆啊，火炮啊，把它收集起来，来做这个事情。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE004-P01\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0007\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE004-P02\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0007\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC06-DE004",
+    "event_enrichment": {
+      "result_state": "陈锐霆被总部任命为战地接收司令，并以炮兵部队为主、后勤部参与组成战地接收委员会，负责接收战地车辆、火炮并收集起来。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "依据 BATCH06-DOC06-S0007 中“另外战役最后快要结束的时候，总部下了命令任我为战地接收的司令……来做这个事情。”确定本事件从战役最后快要结束、总部下令任命开始，到说明接收车辆、火炮并收集起来为止；片段前段炮兵牺牲内容不属于本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC06-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "战役临近结束时总部下达任命命令",
+        "process_text": "另外战役最后快要结束的时候，总部下了命令任我为战地接收的司令",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0007"
+        ],
+        "evidence_quote": "另外战役最后快要结束的时候，总部下了命令任我为战地接收的司令",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "以炮兵部队为主并联合后勤部组建战地接收委员会",
+        "process_text": "因为我们自己的炮兵部队为主，还有后勤部合着搞一个战地接收委员会吧",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0007"
+        ],
+        "evidence_quote": "因为我们自己的炮兵部队为主，还有后勤部合着搞一个战地接收委员会吧",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "委员会负责接收战地车辆、火炮并收集起来",
+        "process_text": "来接收这个战地的一些车辆啊，火炮啊，把它收集起来，来做这个事情。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0007"
+        ],
+        "evidence_quote": "来接收这个战地的一些车辆啊，火炮啊，把它收集起来，来做这个事情。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC06-DE004-P01",
+        "target_stage_id": "BATCH06-DOC06-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0007",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE004-P02",
+        "target_stage_id": "BATCH06-DOC06-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0007",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

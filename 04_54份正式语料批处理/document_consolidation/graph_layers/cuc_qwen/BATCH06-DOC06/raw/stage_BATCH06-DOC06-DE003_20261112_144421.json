@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T14:44:21",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC06-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC06-DE003",
+  "usage": {
+    "prompt_tokens": 1383,
+    "total_tokens": 8396,
+    "completion_tokens": 7013,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5676
+    },
+    "time_to_first_token_ms": 104885,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7012000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC06-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"爆炸造成参谋长韩联生、工兵团副团长刘金山等同志牺牲，叙述者称一共七个同志吧，并认为这是付出的代价。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于‘另外我们大炮弹不够’，止于‘这是一个我们付的代价’；其后‘另外战役最后快要结束的时候’开始新的叙述，不属于本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"因大炮弹不足，叙述者所在部队自行搞迫击炮并送炸药\",\n      \"process_text\": \"另外我们大炮弹不够，我们就自己搞那个迫击炮，送炸药。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0007\"\n      ],\n      \"evidence_quote\": \"另外我们大炮弹不够，我们就自己搞那个迫击炮，送炸药。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"有经验的参谋长卸去领导到后方参与制作\",\n      \"process_text\": \"我们那个参谋长是一个很有经验的老工兵，卸去领导到后方来搞这个东西，\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0007\"\n      ],\n      \"evidence_quote\": \"我们那个参谋长是一个很有经验的老工兵，卸去领导到后方来搞这个东西，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"制作过程中发生爆炸\",\n      \"process_text\": \"不行，搞爆炸了，\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0007\"\n      ],\n      \"evidence_quote\": \"不行，搞爆炸了，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"爆炸致参谋长韩联生、工兵团副团长刘金山等同志牺牲\",\n      \"process_text\": \"参谋长韩联生牺牲了，还有一个工兵团的副团长刘金山也牺牲了，一共七个同志吧，牺牲了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0007\"\n      ],\n      \"evidence_quote\": \"参谋长韩联生牺牲了，还有一个工兵团的副团长刘金山也牺牲了，一共七个同志吧，牺牲了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"叙述者将牺牲评价为付出的代价\",\n      \"process_text\": \"这是一个我们付的代价。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0007\"\n      ],\n      \"evidence_quote\": \"这是一个我们付的代价。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE003-P01\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0007\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE003-P02\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE003-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0007\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE003-P03\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE003-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0007\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE003-P04\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE003-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0007\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC06-DE003",
+    "event_enrichment": {
+      "result_state": "爆炸造成参谋长韩联生、工兵团副团长刘金山等同志牺牲，叙述者称一共七个同志吧，并认为这是付出的代价。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于‘另外我们大炮弹不够’，止于‘这是一个我们付的代价’；其后‘另外战役最后快要结束的时候’开始新的叙述，不属于本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC06-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "因大炮弹不足，叙述者所在部队自行搞迫击炮并送炸药",
+        "process_text": "另外我们大炮弹不够，我们就自己搞那个迫击炮，送炸药。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0007"
+        ],
+        "evidence_quote": "另外我们大炮弹不够，我们就自己搞那个迫击炮，送炸药。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "有经验的参谋长卸去领导到后方参与制作",
+        "process_text": "我们那个参谋长是一个很有经验的老工兵，卸去领导到后方来搞这个东西，",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0007"
+        ],
+        "evidence_quote": "我们那个参谋长是一个很有经验的老工兵，卸去领导到后方来搞这个东西，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "制作过程中发生爆炸",
+        "process_text": "不行，搞爆炸了，",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0007"
+        ],
+        "evidence_quote": "不行，搞爆炸了，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "爆炸致参谋长韩联生、工兵团副团长刘金山等同志牺牲",
+        "process_text": "参谋长韩联生牺牲了，还有一个工兵团的副团长刘金山也牺牲了，一共七个同志吧，牺牲了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0007"
+        ],
+        "evidence_quote": "参谋长韩联生牺牲了，还有一个工兵团的副团长刘金山也牺牲了，一共七个同志吧，牺牲了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "叙述者将牺牲评价为付出的代价",
+        "process_text": "这是一个我们付的代价。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0007"
+        ],
+        "evidence_quote": "这是一个我们付的代价。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC06-DE003-P01",
+        "target_stage_id": "BATCH06-DOC06-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0007",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE003-P02",
+        "target_stage_id": "BATCH06-DOC06-DE003-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC06-S0007",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE003-P03",
+        "target_stage_id": "BATCH06-DOC06-DE003-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC06-S0007",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE003-P04",
+        "target_stage_id": "BATCH06-DOC06-DE003-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC06-S0007",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,111 @@
+单文档验证：BATCH03-DOC09 / cuc/qwen
+日志：04_54份正式语料批处理/run_logs/GRAPH_VERIFY_BATCH03-DOC09_cuc_qwen_20261113_090603_pid60147.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+
+===== L0 零 API 底座表 =====
+[落盘] BATCH03-DOC09 / cuc/qwen
+  原文片段 98｜一级事件 9｜覆盖率 1.0000
+  人工视图：无
+    documents                  1 行
+    source_segments           98 行
+    source_attachments        98 行
+    coverage_audit             1 行
+    document_annotations      35 行
+    event_nodes                9 行
+    event_processes            9 行
+    event_participants        27 行
+    event_circumstances       29 行
+    event_next                 8 行
+  警告 3 条（详见 L0_report.json）
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC09
+
+===== L1/L2 模型任务（真实 API 调用） =====
+[真实调用] BATCH03-DOC09 / cuc/qwen / tasks=stage,entity_time
+  一级事件 9｜原文片段 98｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC09/raw
+
+== stage：9 次调用 ==
+  [1/9] stage_BATCH03-DOC09-DE001 已有成功响应，跳过（断点续跑）
+  [2/9] stage_BATCH03-DOC09-DE002 已有成功响应，跳过（断点续跑）
+  [3/9] stage_BATCH03-DOC09-DE003 已有成功响应，跳过（断点续跑）
+  [4/9] stage_BATCH03-DOC09-DE004 已有成功响应，跳过（断点续跑）
+  [5/9] stage_BATCH03-DOC09-DE005 已有成功响应，跳过（断点续跑）
+  [6/9] stage_BATCH03-DOC09-DE006 已有成功响应，跳过（断点续跑）
+  [7/9] stage_BATCH03-DOC09-DE007 已有成功响应，跳过（断点续跑）
+  [8/9] stage_BATCH03-DOC09-DE008 已有成功响应，跳过（断点续跑）
+  [9/9] stage_BATCH03-DOC09-DE009 已有成功响应，跳过（断点续跑）
+
+== entity_time：1 次调用 ==
+  [1/1] 请求 entity_time/CRT-08，输入 28,207 字符，最长等待 3600s……
+  完成：total_tokens=110159
+
+全部完成：10 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH03-DOC09 --model cuc/qwen --write
+
+===== 后处理：校验、算偏移、生成 18 张 CSV =====
+  环境成分待人工复核 12 条（就近归类／规范值待补，另出清单）
+[落盘] BATCH03-DOC09 / cuc/qwen
+  stage 响应 9｜entity_time 响应 1｜覆盖率 1.0000
+    documents                  1 行
+    source_segments           98 行
+    source_attachments       141 行
+    coverage_audit             1 行
+    document_annotations      35 行
+    event_nodes                9 行
+    event_processes            9 行
+    event_participants        27 行
+    event_circumstances       29 行
+    event_next                 8 行
+    process_stages            39 行
+    stage_next                31 行
+    event_times                9 行
+    time_expressions          17 行
+    entities                 116 行
+    entity_mentions          218 行
+    entity_aliases            27 行
+    entity_relations          86 行
+  校验问题 0 条｜偏移待核 34 条
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC09
+
+===== 18 表完整性验收 =====
+[通过] BATCH03-DOC09 / cuc/qwen
+  片段 98｜事件 9｜阶段 39｜实体 116｜提及 218｜时间表达 17｜覆盖率 1.0000
+  报告：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC09/VALIDATION_report.json
+
+===== L3/L4 导出 24 张 import CSV =====
+[落盘] 模型线 cuc/qwen｜已验收文档 21 份
+  生平叠加视图：疑似同一经历 2 组（只标 NEEDS_REVIEW，交人工）；人工 MERGE 生效 0 组，KEEP_SEPARATE 0 组
+
+== 24 张 import CSV 规模 ==
+  documents                    21 行
+  source_segments            1702 行
+  source_attachments         2588 行
+  event_nodes                 170 行
+  event_processes             170 行
+  event_participants          615 行
+  event_circumstances         969 行
+  process_stages              769 行
+  stage_next                  605 行
+  event_next                  149 行
+  entities                   1134 行
+  entity_mentions             897 行
+  entity_aliases              136 行
+  entity_relations            284 行
+  event_times                 170 行
+  time_expressions            499 行
+  document_annotations        617 行
+  coverage_audit               21 行
+  person_subjects               3 行
+  document_persons             21 行
+  life_episodes               129 行
+  life_episode_sources        129 行
+  life_episode_next           126 行
+  narrated_contexts            38 行
+
+  警告 5600 条（详见报告）
+  疑似清单：04_54份正式语料批处理/review_queue/cuc_qwen_生平层疑似同一经历_待人工确认_20261113.md
+
+  已写入：05_合并与Neo4j/import_cuc_qwen
+
+===== 完成 =====
+结果：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC09/
+图谱导入：05_合并与Neo4j/import_cuc_qwen/
+请把 VALIDATION_report.json 与 prepare_summary.json 交助手复核，再决定是否放行 BATCH03。

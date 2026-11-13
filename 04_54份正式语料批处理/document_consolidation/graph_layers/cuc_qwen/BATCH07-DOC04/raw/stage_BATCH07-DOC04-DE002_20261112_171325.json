@@ -1,0 +1,113 @@
+{
+  "run_time": "2026-11-12T17:13:25",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC04-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC04-DE002",
+  "usage": {
+    "prompt_tokens": 1664,
+    "total_tokens": 9242,
+    "completion_tokens": 7578,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6272
+    },
+    "time_to_first_token_ms": 121549,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7577000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC04-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"便衣被抓住后绑石沉入河底、湖底或井中淹死，处于被短枪队/锄奸队干掉/消灭的状态。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于 S0014-S0019 对白塔埠交通线、敌人据点及巡逻带便衣的交代，止于 S0023 中短枪队/锄奸队夜间掌握规律、抓捕并沉河湖井淹死便衣；S0023 后半段埋伏群众工作、地下党秘密开会不属于该事件核心处置。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"敌占交通线及便衣活动构成锄奸背景\",\n      \"process_text\": \"白塔埠在交通线上，敌人据点经常下来巡逻，带特工、便衣，便衣最反动。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0014\",\n        \"BATCH07-DOC04-S0015\",\n        \"BATCH07-DOC04-S0017\",\n        \"BATCH07-DOC04-S0019\",\n        \"BATCH07-DOC04-S0021\"\n      ],\n      \"evidence_quote\": \"少的时候呢，大概十几个人，带几个伪军，带几个特工、便衣。便衣最讨厌，便衣好多（是）当地的还乡团一样的，那个最反动。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"短枪队/锄奸队承担消灭便衣汉奸任务\",\n      \"process_text\": \"地方武装有锄奸队，新四军那时叫短枪队、锄奸队，消灭汉奸，专门干掉他们。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0021\",\n        \"BATCH07-DOC04-S0023\"\n      ],\n      \"evidence_quote\": \"我们的地方武装千方百计想办法，锄奸队，那时候我们有锄奸队。我们新四军不叫武工队，那个时候叫短枪队，叫锄奸队。消灭汉奸的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"夜间掌握便衣活动规律并抓捕\",\n      \"process_text\": \"晚上想办法知道他们的规律，抓住了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0023\"\n      ],\n      \"evidence_quote\": \"晚上想办法知道他们的规律，抓住了，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"将便衣绑石沉河湖井淹死\",\n      \"process_text\": \"把他们绳子一绑，石头一搁，沉到河底、湖底，下到井里去，淹死他。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0023\"\n      ],\n      \"evidence_quote\": \"把他们绳子一绑，石头一搁，沉到河底、湖底，下到井里去，淹死他。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE002-P01\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0021\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE002-P02\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0023\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE002-P03\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE002-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0023\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC04-DE002",
+    "event_enrichment": {
+      "result_state": "便衣被抓住后绑石沉入河底、湖底或井中淹死，处于被短枪队/锄奸队干掉/消灭的状态。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于 S0014-S0019 对白塔埠交通线、敌人据点及巡逻带便衣的交代，止于 S0023 中短枪队/锄奸队夜间掌握规律、抓捕并沉河湖井淹死便衣；S0023 后半段埋伏群众工作、地下党秘密开会不属于该事件核心处置。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC04-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "敌占交通线及便衣活动构成锄奸背景",
+        "process_text": "白塔埠在交通线上，敌人据点经常下来巡逻，带特工、便衣，便衣最反动。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0014",
+          "BATCH07-DOC04-S0015",
+          "BATCH07-DOC04-S0017",
+          "BATCH07-DOC04-S0019",
+          "BATCH07-DOC04-S0021"
+        ],
+        "evidence_quote": "少的时候呢，大概十几个人，带几个伪军，带几个特工、便衣。便衣最讨厌，便衣好多（是）当地的还乡团一样的，那个最反动。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "短枪队/锄奸队承担消灭便衣汉奸任务",
+        "process_text": "地方武装有锄奸队，新四军那时叫短枪队、锄奸队，消灭汉奸，专门干掉他们。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0021",
+          "BATCH07-DOC04-S0023"
+        ],
+        "evidence_quote": "我们的地方武装千方百计想办法，锄奸队，那时候我们有锄奸队。我们新四军不叫武工队，那个时候叫短枪队，叫锄奸队。消灭汉奸的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "夜间掌握便衣活动规律并抓捕",
+        "process_text": "晚上想办法知道他们的规律，抓住了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0023"
+        ],
+        "evidence_quote": "晚上想办法知道他们的规律，抓住了，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "将便衣绑石沉河湖井淹死",
+        "process_text": "把他们绳子一绑，石头一搁，沉到河底、湖底，下到井里去，淹死他。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0023"
+        ],
+        "evidence_quote": "把他们绳子一绑，石头一搁，沉到河底、湖底，下到井里去，淹死他。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC04-DE002-P01",
+        "target_stage_id": "BATCH07-DOC04-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC04-S0021",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE002-P02",
+        "target_stage_id": "BATCH07-DOC04-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC04-S0023",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE002-P03",
+        "target_stage_id": "BATCH07-DOC04-DE002-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH07-DOC04-S0023",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

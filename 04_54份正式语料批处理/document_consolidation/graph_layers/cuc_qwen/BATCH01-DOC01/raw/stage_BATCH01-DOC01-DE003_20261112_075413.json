@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-12T07:54:13",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC01-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC01-DE003",
+  "usage": {
+    "prompt_tokens": 1215,
+    "total_tokens": 10191,
+    "completion_tokens": 8976,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8238
+    },
+    "time_to_first_token_ms": 134202,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8975000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V1-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC01-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰在江南、茅山地区与日本军队面对面战斗三十多次，该经历发生在其搞医之前。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 S0024 中“没有搞医之前，我和日本鬼子面对面的战斗（有）三十多次！”确定核心战斗经历，依据 S0026 中“主要是江南、茅山地区”确定地点范围；S0026 中“后来到苏北”仅作为地点叙述的一部分，不单独扩展本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"地下党合并再发展并动员参军打仗\",\n      \"process_text\": \"一百多（人）里面有地下党，地下党有的合并再发展，在这个地区动员参军，打仗了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0024\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我们是八个，他原来有一百多（人）。一百多（人）里面有地下党，地下党有的合并再发展，在这个地区动员参军，打仗了。没有搞医之前，我和日本鬼子面对面的战斗（有）三十多次！\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈海峰在搞医之前与日本鬼子面对面战斗三十多次\",\n      \"process_text\": \"没有搞医之前，我和日本鬼子面对面的战斗（有）三十多次！\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0024\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我们是八个，他原来有一百多（人）。一百多（人）里面有地下党，地下党有的合并再发展，在这个地区动员参军，打仗了。没有搞医之前，我和日本鬼子面对面的战斗（有）三十多次！\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE003-P01\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0024\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V1-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC01-DE003",
+    "event_enrichment": {
+      "result_state": "陈海峰在江南、茅山地区与日本军队面对面战斗三十多次，该经历发生在其搞医之前。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 S0024 中“没有搞医之前，我和日本鬼子面对面的战斗（有）三十多次！”确定核心战斗经历，依据 S0026 中“主要是江南、茅山地区”确定地点范围；S0026 中“后来到苏北”仅作为地点叙述的一部分，不单独扩展本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC01-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "地下党合并再发展并动员参军打仗",
+        "process_text": "一百多（人）里面有地下党，地下党有的合并再发展，在这个地区动员参军，打仗了。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0024"
+        ],
+        "evidence_quote": "    陈海峰：我们是八个，他原来有一百多（人）。一百多（人）里面有地下党，地下党有的合并再发展，在这个地区动员参军，打仗了。没有搞医之前，我和日本鬼子面对面的战斗（有）三十多次！",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "陈海峰在搞医之前与日本鬼子面对面战斗三十多次",
+        "process_text": "没有搞医之前，我和日本鬼子面对面的战斗（有）三十多次！",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0024"
+        ],
+        "evidence_quote": "    陈海峰：我们是八个，他原来有一百多（人）。一百多（人）里面有地下党，地下党有的合并再发展，在这个地区动员参军，打仗了。没有搞医之前，我和日本鬼子面对面的战斗（有）三十多次！",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC01-DE003-P01",
+        "target_stage_id": "BATCH01-DOC01-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC01-S0024",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

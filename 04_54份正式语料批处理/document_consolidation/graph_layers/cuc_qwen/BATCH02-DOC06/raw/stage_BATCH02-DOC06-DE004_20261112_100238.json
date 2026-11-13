@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T10:02:38",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC06-DE004",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC06-DE004",
+  "usage": {
+    "prompt_tokens": 1732,
+    "total_tokens": 11255,
+    "completion_tokens": 9523,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8357
+    },
+    "time_to_first_token_ms": 176393,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9522000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC06-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆于1939年6月从江西樟树镇到湖南南岳衡山，被派赴共产党与国民党合办的南岳游击战争训练班第二期学习。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件起点为 S0032 中“不久 “南岳游干班”第二期招生，我就被派去学习了”，终点为同段“到了湖南南岳衡山，我们共产党跟国民党合办的一个南岳游击战争的训练班”；S0034、S0044 为训练班组织与学习背景补充。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆被派赴南岳游干班第二期学习\",\n      \"process_text\": \"陈锐霆被派去南岳游干班第二期学习，1939年六月从江西樟树镇到湖南南岳衡山，进入共产党与国民党合办的南岳游击战争训练班。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0032\"\n      ],\n      \"evidence_quote\": \"不久 “南岳游干班”第二期招生，我就被派去学习了。这是1939年六月了，就从江西樟树镇到了湖南南岳衡山，我们共产党跟国民党合办的一个南岳游击战争的训练班。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"说明南岳游干班的组织与教官安排\",\n      \"process_text\": \"训练班由蒋介石任班主任，汤恩伯任主任，叶剑英任副教育长；共产党方面派李涛、边章五、薛子正等担任教官。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0034\"\n      ],\n      \"evidence_quote\": \"蒋介石做这个训练班的班主任，也另外设了两个教育长，汤恩伯是三十一集团军的军长，在那当主任，我们的叶帅叶剑英当副教育长。这个时候国民党的各个部队对抗战形势，来做政治报告。（关于）游击战术，我们（共产党）除了叶剑英以外，又派了以后到作战部在张震以前当部长的李涛上将嘛，还有边章五、薛子正等一些长征过来的老同志，在这担任教官。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"补充学习游击战术的部队需求与敌后抗日背景\",\n      \"process_text\": \"部队此前正面抗击吃亏，希望多学游击战术；当时在敌后发展部队抗日，并对戴之奇骂共产党提出质疑。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0044\"\n      ],\n      \"evidence_quote\": \"游击战嘛，（之前）跟国民党正面抗击也吃了好多亏，就说打得赢就打，打不赢就走嘛，我们根据形势嘛，不硬顶嘛，优势敌人我们不能强在那个地方顶嘛。我们当时部队还都希望多学一点游击战术。有些人对这个戴之奇的骂，就说现在国共合作你骂共产党干什么？共产党也是抗日的嘛，在敌后发展部队抗日，为什么不好？那个时候我们都在敌后嘛。\",\n      \"confidence\": \"LOW\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE004-P01\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE004-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0034\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE004-P02\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0044\",\n      \"confidence\": \"LOW\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC06-DE004",
+    "event_enrichment": {
+      "result_state": "陈锐霆于1939年6月从江西樟树镇到湖南南岳衡山，被派赴共产党与国民党合办的南岳游击战争训练班第二期学习。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "事件起点为 S0032 中“不久 “南岳游干班”第二期招生，我就被派去学习了”，终点为同段“到了湖南南岳衡山，我们共产党跟国民党合办的一个南岳游击战争的训练班”；S0034、S0044 为训练班组织与学习背景补充。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC06-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆被派赴南岳游干班第二期学习",
+        "process_text": "陈锐霆被派去南岳游干班第二期学习，1939年六月从江西樟树镇到湖南南岳衡山，进入共产党与国民党合办的南岳游击战争训练班。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0032"
+        ],
+        "evidence_quote": "不久 “南岳游干班”第二期招生，我就被派去学习了。这是1939年六月了，就从江西樟树镇到了湖南南岳衡山，我们共产党跟国民党合办的一个南岳游击战争的训练班。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "说明南岳游干班的组织与教官安排",
+        "process_text": "训练班由蒋介石任班主任，汤恩伯任主任，叶剑英任副教育长；共产党方面派李涛、边章五、薛子正等担任教官。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0034"
+        ],
+        "evidence_quote": "蒋介石做这个训练班的班主任，也另外设了两个教育长，汤恩伯是三十一集团军的军长，在那当主任，我们的叶帅叶剑英当副教育长。这个时候国民党的各个部队对抗战形势，来做政治报告。（关于）游击战术，我们（共产党）除了叶剑英以外，又派了以后到作战部在张震以前当部长的李涛上将嘛，还有边章五、薛子正等一些长征过来的老同志，在这担任教官。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "补充学习游击战术的部队需求与敌后抗日背景",
+        "process_text": "部队此前正面抗击吃亏，希望多学游击战术；当时在敌后发展部队抗日，并对戴之奇骂共产党提出质疑。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0044"
+        ],
+        "evidence_quote": "游击战嘛，（之前）跟国民党正面抗击也吃了好多亏，就说打得赢就打，打不赢就走嘛，我们根据形势嘛，不硬顶嘛，优势敌人我们不能强在那个地方顶嘛。我们当时部队还都希望多学一点游击战术。有些人对这个戴之奇的骂，就说现在国共合作你骂共产党干什么？共产党也是抗日的嘛，在敌后发展部队抗日，为什么不好？那个时候我们都在敌后嘛。",
+        "confidence": "LOW"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC06-DE004-P01",
+        "target_stage_id": "BATCH02-DOC06-DE004-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC06-S0034",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC06-DE004-P02",
+        "target_stage_id": "BATCH02-DOC06-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC06-S0044",
+        "confidence": "LOW"
+      }
+    ]
+  },
+  "request_error": null
+}

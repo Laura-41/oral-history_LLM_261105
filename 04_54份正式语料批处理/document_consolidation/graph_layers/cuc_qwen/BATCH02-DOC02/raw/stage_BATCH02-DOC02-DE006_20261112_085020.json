@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T08:50:20",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC02-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC02-DE006",
+  "usage": {
+    "prompt_tokens": 1396,
+    "total_tokens": 10042,
+    "completion_tokens": 8646,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7310
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 126915
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC02-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆等获得《论持久战》和马列书籍并阅读，感到高兴；《论持久战》被认为对速胜论有解决作用。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于 S0043 中在南昌从黄道处获得《论持久战》，止于 S0045 中阅读毛泽东“持久论”、列宁主义、马列主义书籍后感到高兴。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"在南昌从黄道处获得《论持久战》并被要求向可靠的人传播\",\n      \"process_text\": \"但是在南昌的黄道同志那个地方，那个时候毛主席的《论持久战》刚出来，（黄道）给了我5本嘛，要我有一些可靠的人也可以送人看看。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0043\"\n      ],\n      \"evidence_quote\": \"但是在南昌的黄道同志那个地方，那个时候毛主席的《论持久战》刚出来，（黄道）给了我5本嘛，要我有一些可靠的人也可以送人看看。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"《论持久战》出现后被认为道理正确，对速胜论有解决作用\",\n      \"process_text\": \"那个时候国家、人民的思想里边，速战速决要“速胜论”是占统治地位；“持久战”出来以后，对抗战的思想，都认为那个（持久战）道理讲得对。这对于“速胜论”，就解决得挺好的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0043\"\n      ],\n      \"evidence_quote\": \"那个时候国家、人民的思想里边，速战速决要“速胜论”是占统治地位；“持久战”出来以后，对抗战的思想，都认为那个（持久战）道理讲得对。这对于“速胜论”，就解决得挺好的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"在浙江金华通过三联书店购买列宁主义、马列主义书籍\",\n      \"process_text\": \"另外他还介绍我们在浙江金华，三联书店还出了一些列宁主义、马列主义这一类的书，（我们）买了一些。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0045\"\n      ],\n      \"evidence_quote\": \"另外他还介绍我们在浙江金华，三联书店还出了一些列宁主义、马列主义这一类的书，（我们）买了一些。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"此前未接触马列主义，阅读《论持久战》和马列书籍后感到高兴\",\n      \"process_text\": \"我们原来就是抗日党员，就是因为共产党抗日，所以才参加了党，对于马列主义根本没有看过。这个时候有毛泽东的“持久论”，列宁主义、马列主义的书籍，我们看了一下，非常高兴的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0045\"\n      ],\n      \"evidence_quote\": \"我们原来就是抗日党员，就是因为共产党抗日，所以才参加了党，对于马列主义根本没有看过。这个时候有毛泽东的“持久论”，列宁主义、马列主义的书籍，我们看了一下，非常高兴的。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE006-P01\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE006-P02\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0043\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE006-P02\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE006-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0045\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE006-P03\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE006-P04\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0045\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC02-DE006",
+    "event_enrichment": {
+      "result_state": "陈锐霆等获得《论持久战》和马列书籍并阅读，感到高兴；《论持久战》被认为对速胜论有解决作用。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于 S0043 中在南昌从黄道处获得《论持久战》，止于 S0045 中阅读毛泽东“持久论”、列宁主义、马列主义书籍后感到高兴。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC02-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "在南昌从黄道处获得《论持久战》并被要求向可靠的人传播",
+        "process_text": "但是在南昌的黄道同志那个地方，那个时候毛主席的《论持久战》刚出来，（黄道）给了我5本嘛，要我有一些可靠的人也可以送人看看。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0043"
+        ],
+        "evidence_quote": "但是在南昌的黄道同志那个地方，那个时候毛主席的《论持久战》刚出来，（黄道）给了我5本嘛，要我有一些可靠的人也可以送人看看。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "《论持久战》出现后被认为道理正确，对速胜论有解决作用",
+        "process_text": "那个时候国家、人民的思想里边，速战速决要“速胜论”是占统治地位；“持久战”出来以后，对抗战的思想，都认为那个（持久战）道理讲得对。这对于“速胜论”，就解决得挺好的。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0043"
+        ],
+        "evidence_quote": "那个时候国家、人民的思想里边，速战速决要“速胜论”是占统治地位；“持久战”出来以后，对抗战的思想，都认为那个（持久战）道理讲得对。这对于“速胜论”，就解决得挺好的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "在浙江金华通过三联书店购买列宁主义、马列主义书籍",
+        "process_text": "另外他还介绍我们在浙江金华，三联书店还出了一些列宁主义、马列主义这一类的书，（我们）买了一些。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0045"
+        ],
+        "evidence_quote": "另外他还介绍我们在浙江金华，三联书店还出了一些列宁主义、马列主义这一类的书，（我们）买了一些。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "此前未接触马列主义，阅读《论持久战》和马列书籍后感到高兴",
+        "process_text": "我们原来就是抗日党员，就是因为共产党抗日，所以才参加了党，对于马列主义根本没有看过。这个时候有毛泽东的“持久论”，列宁主义、马列主义的书籍，我们看了一下，非常高兴的。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0045"
+        ],
+        "evidence_quote": "我们原来就是抗日党员，就是因为共产党抗日，所以才参加了党，对于马列主义根本没有看过。这个时候有毛泽东的“持久论”，列宁主义、马列主义的书籍，我们看了一下，非常高兴的。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC02-DE006-P01",
+        "target_stage_id": "BATCH02-DOC02-DE006-P02",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC02-S0043",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC02-DE006-P02",
+        "target_stage_id": "BATCH02-DOC02-DE006-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC02-S0045",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC02-DE006-P03",
+        "target_stage_id": "BATCH02-DOC02-DE006-P04",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC02-S0045",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

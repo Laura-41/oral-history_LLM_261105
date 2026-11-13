@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T18:46:38",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC05-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC05-DE006",
+  "usage": {
+    "prompt_tokens": 1422,
+    "total_tokens": 6808,
+    "completion_tokens": 5386,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3944
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 153349,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC05-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰毕业后被派到三支队任营卫生指导员，领取八块，其待遇高于司令员、团长、营长，并被说明为尊重技术的基本政策。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为 S0059 对技术待遇与尊重人才知识背景的说明，核心为 S0061 中毕业派任三支队营卫生指导员并拿八块，终点为 S0063 对八块、五块及团以上干部待遇技术津贴政策的说明；不延伸至六团调茅山、谭震林指挥等后续叙述。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"交代新四军时期技术待遇与尊重人才知识的背景\",\n      \"process_text\": \"物质待遇、政治待遇，尊重人才，尊重知识，新四军这些人最好。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0059\"\n      ],\n      \"evidence_quote\": \"陈海峰：物质待遇、政治待遇，所以他巩固这个制度，尊重人才，尊重知识，后来胡耀邦提的，实际上早。那个时候就是，新四军这些人最好。到现在，我认为，我们的知识分子还跟不上我们那个时候的待遇。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈海峰毕业后被派到三支队任营卫生指导员\",\n      \"process_text\": \"我毕业以后，派到三支队当营卫生指导员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0061\"\n      ],\n      \"evidence_quote\": \"陈海峰：我们有技术待遇。你像我吧，我毕业以后，派到三支队当营卫生指导员，拿八块。比我们的司令员高，比我们的团长还高，比营长还高。副司令员谭震林，司令员是张云逸，张云逸没到位，他到江北当总指挥去了，一直是谭震林在这边指挥的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"领取八块待遇，并高于司令员、团长、营长\",\n      \"process_text\": \"拿八块。比我们的司令员高，比我们的团长还高，比营长还高。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0061\"\n      ],\n      \"evidence_quote\": \"陈海峰：我们有技术待遇。你像我吧，我毕业以后，派到三支队当营卫生指导员，拿八块。比我们的司令员高，比我们的团长还高，比营长还高。副司令员谭震林，司令员是张云逸，张云逸没到位，他到江北当总指挥去了，一直是谭震林在这边指挥的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"说明八块属于技术津贴或团以上干部待遇的基本政策\",\n      \"process_text\": \"我们就拿八块，我们自己培养的拿八块，但是在二支队，到前方部队里面，最低他们也拿五块，拿团以上干部的待遇，叫做技术津贴。这个是基本政策，尊重技术。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0063\"\n      ],\n      \"evidence_quote\": \"陈海峰：一直是六团三营，六团后来调到茅山去了。主要是谭震林在这边，谭震林指挥我们，那么我到三支队那个地方再讲这一段。我们就拿八块，我们自己培养的拿八块，但是在二支队，到前方部队里面，最低他们也拿五块，拿团以上干部的待遇，叫做技术津贴。这个是基本政策，尊重技术，现在做不到。这是我们班里面，我附带讲讲。所以这样子团结一大批新进来的人，那个时候来去自由。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE006-P01\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0061\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE006-P02\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE006-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0061\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE006-P03\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE006-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0063\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V2-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC05-DE006",
+    "event_enrichment": {
+      "result_state": "陈海峰毕业后被派到三支队任营卫生指导员，领取八块，其待遇高于司令员、团长、营长，并被说明为尊重技术的基本政策。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起点为 S0059 对技术待遇与尊重人才知识背景的说明，核心为 S0061 中毕业派任三支队营卫生指导员并拿八块，终点为 S0063 对八块、五块及团以上干部待遇技术津贴政策的说明；不延伸至六团调茅山、谭震林指挥等后续叙述。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC05-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "交代新四军时期技术待遇与尊重人才知识的背景",
+        "process_text": "物质待遇、政治待遇，尊重人才，尊重知识，新四军这些人最好。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0059"
+        ],
+        "evidence_quote": "陈海峰：物质待遇、政治待遇，所以他巩固这个制度，尊重人才，尊重知识，后来胡耀邦提的，实际上早。那个时候就是，新四军这些人最好。到现在，我认为，我们的知识分子还跟不上我们那个时候的待遇。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "陈海峰毕业后被派到三支队任营卫生指导员",
+        "process_text": "我毕业以后，派到三支队当营卫生指导员。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0061"
+        ],
+        "evidence_quote": "陈海峰：我们有技术待遇。你像我吧，我毕业以后，派到三支队当营卫生指导员，拿八块。比我们的司令员高，比我们的团长还高，比营长还高。副司令员谭震林，司令员是张云逸，张云逸没到位，他到江北当总指挥去了，一直是谭震林在这边指挥的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "领取八块待遇，并高于司令员、团长、营长",
+        "process_text": "拿八块。比我们的司令员高，比我们的团长还高，比营长还高。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0061"
+        ],
+        "evidence_quote": "陈海峰：我们有技术待遇。你像我吧，我毕业以后，派到三支队当营卫生指导员，拿八块。比我们的司令员高，比我们的团长还高，比营长还高。副司令员谭震林，司令员是张云逸，张云逸没到位，他到江北当总指挥去了，一直是谭震林在这边指挥的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "说明八块属于技术津贴或团以上干部待遇的基本政策",
+        "process_text": "我们就拿八块，我们自己培养的拿八块，但是在二支队，到前方部队里面，最低他们也拿五块，拿团以上干部的待遇，叫做技术津贴。这个是基本政策，尊重技术。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0063"
+        ],
+        "evidence_quote": "陈海峰：一直是六团三营，六团后来调到茅山去了。主要是谭震林在这边，谭震林指挥我们，那么我到三支队那个地方再讲这一段。我们就拿八块，我们自己培养的拿八块，但是在二支队，到前方部队里面，最低他们也拿五块，拿团以上干部的待遇，叫做技术津贴。这个是基本政策，尊重技术，现在做不到。这是我们班里面，我附带讲讲。所以这样子团结一大批新进来的人，那个时候来去自由。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC05-DE006-P01",
+        "target_stage_id": "BATCH02-DOC05-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC05-S0061",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC05-DE006-P02",
+        "target_stage_id": "BATCH02-DOC05-DE006-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC05-S0061",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC05-DE006-P03",
+        "target_stage_id": "BATCH02-DOC05-DE006-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC05-S0063",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

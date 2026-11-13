@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T20:34:57",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC02-DE009",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC02-DE009",
+  "usage": {
+    "prompt_tokens": 1167,
+    "total_tokens": 2583,
+    "completion_tokens": 1416,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 601
+    },
+    "tokens_per_second": 1415000,
+    "time_to_first_token_ms": 12350,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC02-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"炮兵营在损失两个连、另一个连火炮上交后，获发四门沪造山炮，并学会操作要领，准备很快使用。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于炮兵营两个连丢掉、另一个连因无炮弹而火炮上交，止于获发四门沪造山炮并学会操作要领、准备使用。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"炮兵营先遭损失：两个连丢掉，另一个连因太原被日军占领后无炮弹，火炮被要求上交。\",\n      \"process_text\": \"炮兵营两个连丢掉，另一个连因太原被日本人占了以后没有炮弹，上边说那一个连的火炮也上交了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0047\"\n      ],\n      \"evidence_quote\": \"这个时候我的炮兵营，两个连丢掉了嘛。还有一个连也是因为太原被日本人占了以后，也没有炮弹了，所以上边说那一个连的火炮也上交了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"上级又发给四门沪造山炮，且炮弹较多。\",\n      \"process_text\": \"上边一个营又发了四门“沪造山炮”，上海造的，张之洞那个时代造的，炮弹多一点。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0047\"\n      ],\n      \"evidence_quote\": \"上边一个营又发了四门“沪造山炮”，上海造的，张之洞那个时代造的，炮弹多一点。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"紧接着学会沪造山炮的操作要领，并准备很快使用。\",\n      \"process_text\": \"紧接着学会了“沪造山炮”的操作要领，很快就要使用。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0047\"\n      ],\n      \"evidence_quote\": \"这个时候紧接着学会了“沪造山炮”的操作要领，我们很快就要使用。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE009-P01\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0047\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE009-P02\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE009-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0047\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC02-DE009",
+    "event_enrichment": {
+      "result_state": "炮兵营在损失两个连、另一个连火炮上交后，获发四门沪造山炮，并学会操作要领，准备很快使用。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于炮兵营两个连丢掉、另一个连因无炮弹而火炮上交，止于获发四门沪造山炮并学会操作要领、准备使用。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC02-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "炮兵营先遭损失：两个连丢掉，另一个连因太原被日军占领后无炮弹，火炮被要求上交。",
+        "process_text": "炮兵营两个连丢掉，另一个连因太原被日本人占了以后没有炮弹，上边说那一个连的火炮也上交了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0047"
+        ],
+        "evidence_quote": "这个时候我的炮兵营，两个连丢掉了嘛。还有一个连也是因为太原被日本人占了以后，也没有炮弹了，所以上边说那一个连的火炮也上交了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "上级又发给四门沪造山炮，且炮弹较多。",
+        "process_text": "上边一个营又发了四门“沪造山炮”，上海造的，张之洞那个时代造的，炮弹多一点。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0047"
+        ],
+        "evidence_quote": "上边一个营又发了四门“沪造山炮”，上海造的，张之洞那个时代造的，炮弹多一点。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "紧接着学会沪造山炮的操作要领，并准备很快使用。",
+        "process_text": "紧接着学会了“沪造山炮”的操作要领，很快就要使用。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0047"
+        ],
+        "evidence_quote": "这个时候紧接着学会了“沪造山炮”的操作要领，我们很快就要使用。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC02-DE009-P01",
+        "target_stage_id": "BATCH02-DOC02-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC02-S0047",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC02-DE009-P02",
+        "target_stage_id": "BATCH02-DOC02-DE009-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC02-S0047",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

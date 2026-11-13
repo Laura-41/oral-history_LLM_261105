@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T11:54:23",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC01-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC01-DE008",
+  "usage": {
+    "prompt_tokens": 1576,
+    "total_tokens": 6628,
+    "completion_tokens": 5052,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3761
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 112075,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC01-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"新四军获得上海地下党、香港、国民党及红十字会总会支援，红十字会两个医疗队曾来后撤回，新四军条件比人家好。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起始于 S0051 中叙述新四军依托上海、南京、大城市获得多方支援，结束于 S0053 中叙述两个医疗队撤回及新四军条件较好；未扩展至八路军设备差等背景比较。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"新四军依托上海、南京及大城市获得多方支援\",\n      \"process_text\": \"我们得天独厚，靠上海，靠南京，靠大城市，那么上海地下党支援，香港支援，我们还有国民党支援。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0051\"\n      ],\n      \"evidence_quote\": \"我们得天独厚，靠上海，靠南京，靠大城市，那么上海地下党支援，香港支援，我们还有国民党支援。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"孙科、宋庆龄及红十字会总会提供支援，林可胜与沈其震存在进修关系\",\n      \"process_text\": \"国民党谁支援？孙科给我们支援很大，宋庆龄给我们支援很大，还有红十字会总会。红十字会总会的那个总的医疗队的大队长是林可胜，林可胜原来是协和医院的生理科主任，中国话讲不好的。但是呢，他美国训练出来的，他的学生就是我们新四军的卫生部长沈其震，沈其震在他那里进修过，所以到那里去要点药品啊，要些人啊。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0051\"\n      ],\n      \"evidence_quote\": \"国民党谁支援？孙科给我们支援很大，宋庆龄给我们支援很大，还有红十字会总会。红十字会总会的那个总的医疗队的大队长是林可胜，林可胜原来是协和医院的生理科主任，中国话讲不好的。但是呢，他美国训练出来的，他的学生就是我们新四军的卫生部长沈其震，沈其震在他那里进修过，所以到那里去要点药品啊，要些人啊。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"红十字会总会派两个医疗队到新四军\",\n      \"process_text\": \"所以他也派了两个医疗队到我们新四军来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0051\"\n      ],\n      \"evidence_quote\": \"所以他也派了两个医疗队到我们新四军来。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"两个医疗队来后情况复杂，后来撤回，新四军条件比人家好\",\n      \"process_text\": \"两个医疗队来，那个情况很复杂，后来没有多久就撤回去了。所以我们的条件比人家好。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0053\"\n      ],\n      \"evidence_quote\": \"两个医疗队来，那个情况很复杂，后来没有多久就撤回去了。所以我们的条件比人家好。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE008-P01\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE008-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0051\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE008-P02\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE008-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0051\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE008-P03\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE008-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0053\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V2-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC01-DE008",
+    "event_enrichment": {
+      "result_state": "新四军获得上海地下党、香港、国民党及红十字会总会支援，红十字会两个医疗队曾来后撤回，新四军条件比人家好。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起始于 S0051 中叙述新四军依托上海、南京、大城市获得多方支援，结束于 S0053 中叙述两个医疗队撤回及新四军条件较好；未扩展至八路军设备差等背景比较。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC01-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "新四军依托上海、南京及大城市获得多方支援",
+        "process_text": "我们得天独厚，靠上海，靠南京，靠大城市，那么上海地下党支援，香港支援，我们还有国民党支援。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0051"
+        ],
+        "evidence_quote": "我们得天独厚，靠上海，靠南京，靠大城市，那么上海地下党支援，香港支援，我们还有国民党支援。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "孙科、宋庆龄及红十字会总会提供支援，林可胜与沈其震存在进修关系",
+        "process_text": "国民党谁支援？孙科给我们支援很大，宋庆龄给我们支援很大，还有红十字会总会。红十字会总会的那个总的医疗队的大队长是林可胜，林可胜原来是协和医院的生理科主任，中国话讲不好的。但是呢，他美国训练出来的，他的学生就是我们新四军的卫生部长沈其震，沈其震在他那里进修过，所以到那里去要点药品啊，要些人啊。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0051"
+        ],
+        "evidence_quote": "国民党谁支援？孙科给我们支援很大，宋庆龄给我们支援很大，还有红十字会总会。红十字会总会的那个总的医疗队的大队长是林可胜，林可胜原来是协和医院的生理科主任，中国话讲不好的。但是呢，他美国训练出来的，他的学生就是我们新四军的卫生部长沈其震，沈其震在他那里进修过，所以到那里去要点药品啊，要些人啊。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "红十字会总会派两个医疗队到新四军",
+        "process_text": "所以他也派了两个医疗队到我们新四军来。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0051"
+        ],
+        "evidence_quote": "所以他也派了两个医疗队到我们新四军来。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "两个医疗队来后情况复杂，后来撤回，新四军条件比人家好",
+        "process_text": "两个医疗队来，那个情况很复杂，后来没有多久就撤回去了。所以我们的条件比人家好。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0053"
+        ],
+        "evidence_quote": "两个医疗队来，那个情况很复杂，后来没有多久就撤回去了。所以我们的条件比人家好。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC01-DE008-P01",
+        "target_stage_id": "BATCH03-DOC01-DE008-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC01-S0051",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC01-DE008-P02",
+        "target_stage_id": "BATCH03-DOC01-DE008-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH03-DOC01-S0051",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC01-DE008-P03",
+        "target_stage_id": "BATCH03-DOC01-DE008-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0053",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

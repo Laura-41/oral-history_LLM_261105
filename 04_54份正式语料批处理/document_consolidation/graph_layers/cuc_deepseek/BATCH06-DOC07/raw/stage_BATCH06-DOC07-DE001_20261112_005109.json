@@ -1,0 +1,113 @@
+{
+  "run_time": "2026-11-12T00:51:09",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE001",
+  "usage": {
+    "prompt_tokens": 1552,
+    "total_tokens": 11159,
+    "completion_tokens": 9607,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8378
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 76155
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"北撤部队到达江北，江南根据地与军分区完成调整；实际直到渡江战役、隔三年后才返回江南。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以苏浙军区部队北撤的规模、组织调整、动员告别及实际返回时间为边界；起于北撤完毕后的总结，止于“隔了三年才回来。这么着到江北了。”\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"北撤涉及江南七万余人，包括原有天目山部队两万多人、后来3、4纵队四万多人及地方团队；10月撤退共七万多人，北撤后8个根据地、苏浙军区6个军分区后成5个，1、3军分区合并。\",\n      \"process_text\": \"北撤完毕后，8个根据地北撤，苏浙军区6个军分区后成5个，1、3军分区合并，共七万多人；撤退江南七万多人，原来打天目山只有两万多人，以后3纵队、4纵队加起来四万多人，全部加地方团队，10月撤退共七万多人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0003\",\n        \"BATCH06-DOC07-S0004\",\n        \"BATCH06-DOC07-S0005\",\n        \"BATCH06-DOC07-S0006\"\n      ],\n      \"evidence_quote\": \"我们那时全部，加地方团队，一共加起来，当时10月份撤退是七万多人。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"北撤需要做工作，少数人逃跑，多数人被说服，并说明总要回来，江南是新四军老家和发源地。\",\n      \"process_text\": \"北撤都要做工作，少数逃跑了，多数还是说服他们了；说我们总要回来的，这个地方是我们的，江南是我们新四军老家，我们新四军发源地。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0011\",\n        \"BATCH06-DOC07-S0012\"\n      ],\n      \"evidence_quote\": \"    陈海峰：北撤都要做工作，少数逃跑了，那多数的还是说服他们了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"走时向茅山老根据地老百姓打招呼，表示一定会打回老家，老家不能丢。\",\n      \"process_text\": \"茅山是老根据地，走的时候给老百姓打招呼，说我们总要回来的，你们等着，一定会打回老家来的，老家不能丢。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0013\"\n      ],\n      \"evidence_quote\": \"茅山是我们老根据地，走的时候给老百姓打招呼，都这样。“我们总要回来的，你们等着，一定会打回老家来的，老家不能丢……”——\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"实际返回时间不确定，直到渡江战役才回来，隔了三年才回来；北撤后部队到江北。\",\n      \"process_text\": \"等哪天回来就不知道了；实际上一直到渡江战役才回来，隔了三年才回来，这么着到江北了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0014\",\n        \"BATCH06-DOC07-S0015\"\n      ],\n      \"evidence_quote\": \"隔了三年才回来。这么着到江北了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE001-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0011\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE001-P02\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0013\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE001-P03\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0014\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE001",
+    "event_enrichment": {
+      "result_state": "北撤部队到达江北，江南根据地与军分区完成调整；实际直到渡江战役、隔三年后才返回江南。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以苏浙军区部队北撤的规模、组织调整、动员告别及实际返回时间为边界；起于北撤完毕后的总结，止于“隔了三年才回来。这么着到江北了。”",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "北撤涉及江南七万余人，包括原有天目山部队两万多人、后来3、4纵队四万多人及地方团队；10月撤退共七万多人，北撤后8个根据地、苏浙军区6个军分区后成5个，1、3军分区合并。",
+        "process_text": "北撤完毕后，8个根据地北撤，苏浙军区6个军分区后成5个，1、3军分区合并，共七万多人；撤退江南七万多人，原来打天目山只有两万多人，以后3纵队、4纵队加起来四万多人，全部加地方团队，10月撤退共七万多人。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0003",
+          "BATCH06-DOC07-S0004",
+          "BATCH06-DOC07-S0005",
+          "BATCH06-DOC07-S0006"
+        ],
+        "evidence_quote": "我们那时全部，加地方团队，一共加起来，当时10月份撤退是七万多人。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "北撤需要做工作，少数人逃跑，多数人被说服，并说明总要回来，江南是新四军老家和发源地。",
+        "process_text": "北撤都要做工作，少数逃跑了，多数还是说服他们了；说我们总要回来的，这个地方是我们的，江南是我们新四军老家，我们新四军发源地。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0011",
+          "BATCH06-DOC07-S0012"
+        ],
+        "evidence_quote": "    陈海峰：北撤都要做工作，少数逃跑了，那多数的还是说服他们了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "走时向茅山老根据地老百姓打招呼，表示一定会打回老家，老家不能丢。",
+        "process_text": "茅山是老根据地，走的时候给老百姓打招呼，说我们总要回来的，你们等着，一定会打回老家来的，老家不能丢。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0013"
+        ],
+        "evidence_quote": "茅山是我们老根据地，走的时候给老百姓打招呼，都这样。“我们总要回来的，你们等着，一定会打回老家来的，老家不能丢……”——",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "实际返回时间不确定，直到渡江战役才回来，隔了三年才回来；北撤后部队到江北。",
+        "process_text": "等哪天回来就不知道了；实际上一直到渡江战役才回来，隔了三年才回来，这么着到江北了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0014",
+          "BATCH06-DOC07-S0015"
+        ],
+        "evidence_quote": "隔了三年才回来。这么着到江北了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE001-P01",
+        "target_stage_id": "BATCH06-DOC07-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0011",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE001-P02",
+        "target_stage_id": "BATCH06-DOC07-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0013",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE001-P03",
+        "target_stage_id": "BATCH06-DOC07-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0014",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

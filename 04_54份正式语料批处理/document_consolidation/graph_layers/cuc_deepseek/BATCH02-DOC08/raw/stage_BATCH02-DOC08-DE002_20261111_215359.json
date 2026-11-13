@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T21:53:59",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC08-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC08-DE002",
+  "usage": {
+    "prompt_tokens": 1450,
+    "total_tokens": 4610,
+    "completion_tokens": 3160,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2342
+    },
+    "time_to_first_token_ms": 26453,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC08-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"二营在皖南进行多次主动出击、伏击和骚扰，并执行护送部队及叶挺、张云逸等过江任务；护送途中遇敌交战，受阻时返回再战。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以原文“实际上大大小小的……”至“碰到敌人就打，过不去再回来，再打。”为界，后文转入爱人过江及皖南抗战评价等话题。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"二营在皖南主动出击、打伏击并骚扰敌人，共54次（不算保卫战），并在敌人抢粮时出击。\",\n      \"process_text\": \"二营主动出击、打伏击、骚扰敌人，敌人抢粮时出击。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0031\"\n      ],\n      \"evidence_quote\": \"实际上大大小小的，单我们二营打的，54次，不算保卫战，我们主动出击打伏击的，我们去骚扰他的，敌人正在抢粮，我们就去打的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"二营执行护送任务，护送部队及叶挺、张云逸等过江。\",\n      \"process_text\": \"护送这个部队、叶挺将军、张云逸等过江。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0031\"\n      ],\n      \"evidence_quote\": \"比如说，我们护送这个部队过江了，护送叶挺将军过江了，护送张云逸过江了，护送哪个过江了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"护送过江途中遇敌即战，过不去则返回再打。\",\n      \"process_text\": \"碰到敌人就打，过不去再回来，再打。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0031\"\n      ],\n      \"evidence_quote\": \"碰到敌人就打，过不去再回来，再打。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE002-P01\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0031\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE002-P02\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0031\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC08-DE002",
+    "event_enrichment": {
+      "result_state": "二营在皖南进行多次主动出击、伏击和骚扰，并执行护送部队及叶挺、张云逸等过江任务；护送途中遇敌交战，受阻时返回再战。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以原文“实际上大大小小的……”至“碰到敌人就打，过不去再回来，再打。”为界，后文转入爱人过江及皖南抗战评价等话题。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC08-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "二营在皖南主动出击、打伏击并骚扰敌人，共54次（不算保卫战），并在敌人抢粮时出击。",
+        "process_text": "二营主动出击、打伏击、骚扰敌人，敌人抢粮时出击。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0031"
+        ],
+        "evidence_quote": "实际上大大小小的，单我们二营打的，54次，不算保卫战，我们主动出击打伏击的，我们去骚扰他的，敌人正在抢粮，我们就去打的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "二营执行护送任务，护送部队及叶挺、张云逸等过江。",
+        "process_text": "护送这个部队、叶挺将军、张云逸等过江。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0031"
+        ],
+        "evidence_quote": "比如说，我们护送这个部队过江了，护送叶挺将军过江了，护送张云逸过江了，护送哪个过江了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "护送过江途中遇敌即战，过不去则返回再打。",
+        "process_text": "碰到敌人就打，过不去再回来，再打。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0031"
+        ],
+        "evidence_quote": "碰到敌人就打，过不去再回来，再打。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC08-DE002-P01",
+        "target_stage_id": "BATCH02-DOC08-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0031",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE002-P02",
+        "target_stage_id": "BATCH02-DOC08-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0031",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

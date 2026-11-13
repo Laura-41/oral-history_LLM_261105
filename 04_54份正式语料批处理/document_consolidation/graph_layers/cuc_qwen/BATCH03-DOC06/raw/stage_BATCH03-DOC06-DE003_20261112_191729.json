@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T19:17:29",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE003",
+  "usage": {
+    "prompt_tokens": 1556,
+    "total_tokens": 8846,
+    "completion_tokens": 7290,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5936
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7289000,
+    "time_to_first_token_ms": 107757
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队回到汾阳、孝义，开展训练，有时收武器补充自己，并与当地党委组织了一个汾孝游击队。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点依据 S0025/S0030 中“回到汾阳、孝义附近/这边”，终点依据 S0032 中“组织了一个汾孝游击队”；不包含返回前战斗经过和后续其他行动。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"师部和旅部返回汾阳、孝义附近\",\n      \"process_text\": \"整个的师部和旅部就回到汾阳、孝义这边，物产比较丰富。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0030\"\n      ],\n      \"evidence_quote\": \"    杨永松：没有啊，有重机枪我们，所以你要去攻城比较困难。就是追啊追，追到城附近打了一下，看到进不去，就撤到山上了。整个的师部和旅部就回到汾阳、孝义这边，物产比较丰富。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"部队在汾阳、孝义组织训练\",\n      \"process_text\": \"我们到了汾阳、孝义以后，主要是一方面部队训练，因为我们不是新兵多嘛\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0032\"\n      ],\n      \"evidence_quote\": \"    杨永松：总部还有一个命令，就是要李天佑代理343旅的旅长。李天佑红军时候当过大师的师长，广西人。我们到了汾阳、孝义以后，主要是一方面部队训练，因为我们不是新兵多嘛，另一个方面就是群众有武器，有的时候收些武器来补充自己，另外跟当地党委在一起，组织了一个汾孝游击队。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"从群众处收武器补充部队\",\n      \"process_text\": \"另一个方面就是群众有武器，有的时候收些武器来补充自己\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0032\"\n      ],\n      \"evidence_quote\": \"    杨永松：总部还有一个命令，就是要李天佑代理343旅的旅长。李天佑红军时候当过大师的师长，广西人。我们到了汾阳、孝义以后，主要是一方面部队训练，因为我们不是新兵多嘛，另一个方面就是群众有武器，有的时候收些武器来补充自己，另外跟当地党委在一起，组织了一个汾孝游击队。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"与当地党委组织汾孝游击队\",\n      \"process_text\": \"另外跟当地党委在一起，组织了一个汾孝游击队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0032\"\n      ],\n      \"evidence_quote\": \"    杨永松：总部还有一个命令，就是要李天佑代理343旅的旅长。李天佑红军时候当过大师的师长，广西人。我们到了汾阳、孝义以后，主要是一方面部队训练，因为我们不是新兵多嘛，另一个方面就是群众有武器，有的时候收些武器来补充自己，另外跟当地党委在一起，组织了一个汾孝游击队。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE003-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0032\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE003-P02\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE003-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0032\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE003-P03\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE003-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0032\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE003",
+    "event_enrichment": {
+      "result_state": "部队回到汾阳、孝义，开展训练，有时收武器补充自己，并与当地党委组织了一个汾孝游击队。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起点依据 S0025/S0030 中“回到汾阳、孝义附近/这边”，终点依据 S0032 中“组织了一个汾孝游击队”；不包含返回前战斗经过和后续其他行动。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "师部和旅部返回汾阳、孝义附近",
+        "process_text": "整个的师部和旅部就回到汾阳、孝义这边，物产比较丰富。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0030"
+        ],
+        "evidence_quote": "    杨永松：没有啊，有重机枪我们，所以你要去攻城比较困难。就是追啊追，追到城附近打了一下，看到进不去，就撤到山上了。整个的师部和旅部就回到汾阳、孝义这边，物产比较丰富。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "部队在汾阳、孝义组织训练",
+        "process_text": "我们到了汾阳、孝义以后，主要是一方面部队训练，因为我们不是新兵多嘛",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0032"
+        ],
+        "evidence_quote": "    杨永松：总部还有一个命令，就是要李天佑代理343旅的旅长。李天佑红军时候当过大师的师长，广西人。我们到了汾阳、孝义以后，主要是一方面部队训练，因为我们不是新兵多嘛，另一个方面就是群众有武器，有的时候收些武器来补充自己，另外跟当地党委在一起，组织了一个汾孝游击队。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "从群众处收武器补充部队",
+        "process_text": "另一个方面就是群众有武器，有的时候收些武器来补充自己",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0032"
+        ],
+        "evidence_quote": "    杨永松：总部还有一个命令，就是要李天佑代理343旅的旅长。李天佑红军时候当过大师的师长，广西人。我们到了汾阳、孝义以后，主要是一方面部队训练，因为我们不是新兵多嘛，另一个方面就是群众有武器，有的时候收些武器来补充自己，另外跟当地党委在一起，组织了一个汾孝游击队。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "与当地党委组织汾孝游击队",
+        "process_text": "另外跟当地党委在一起，组织了一个汾孝游击队。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0032"
+        ],
+        "evidence_quote": "    杨永松：总部还有一个命令，就是要李天佑代理343旅的旅长。李天佑红军时候当过大师的师长，广西人。我们到了汾阳、孝义以后，主要是一方面部队训练，因为我们不是新兵多嘛，另一个方面就是群众有武器，有的时候收些武器来补充自己，另外跟当地党委在一起，组织了一个汾孝游击队。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE003-P01",
+        "target_stage_id": "BATCH03-DOC06-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0032",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE003-P02",
+        "target_stage_id": "BATCH03-DOC06-DE003-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC06-S0032",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE003-P03",
+        "target_stage_id": "BATCH03-DOC06-DE003-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC06-S0032",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

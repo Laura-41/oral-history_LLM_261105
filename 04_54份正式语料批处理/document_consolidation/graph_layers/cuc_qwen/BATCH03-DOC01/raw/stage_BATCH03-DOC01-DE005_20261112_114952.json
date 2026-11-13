@@ -1,0 +1,41 @@
+{
+  "run_time": "2026-11-12T11:49:52",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC01-DE005",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC01-DE005",
+  "usage": {
+    "prompt_tokens": 1219,
+    "total_tokens": 5303,
+    "completion_tokens": 4084,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3816
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 92422
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC01-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"各支队后方医院建设水平被比较为一支队、三支队较强，二支队开始较弱且组织不太健全、后来加强，四支队开始落后一点。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"边界以 S0045 中从二支队评价到四支队评价的比较句为核心；S0043 为相邻背景片段，未直接表达各支队水平比较。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [],\n  \"stage_next\": [],\n  \"no_stage_reason\": \"该一级事件在原文中由一句并列比较完成，未呈现可复核的多步骤推进；‘后来加强’只是同一评价中的时间补充，不足以拆分为独立阶段。\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC01-DE005",
+    "event_enrichment": {
+      "result_state": "各支队后方医院建设水平被比较为一支队、三支队较强，二支队开始较弱且组织不太健全、后来加强，四支队开始落后一点。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "边界以 S0045 中从二支队评价到四支队评价的比较句为核心；S0043 为相邻背景片段，未直接表达各支队水平比较。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [],
+    "stage_next": [],
+    "no_stage_reason": "该一级事件在原文中由一句并列比较完成，未呈现可复核的多步骤推进；‘后来加强’只是同一评价中的时间补充，不足以拆分为独立阶段。"
+  },
+  "request_error": null
+}

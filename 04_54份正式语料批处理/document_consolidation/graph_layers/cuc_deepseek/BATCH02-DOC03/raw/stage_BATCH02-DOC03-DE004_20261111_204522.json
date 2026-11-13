@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T20:45:22",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC03-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC03-DE004",
+  "usage": {
+    "prompt_tokens": 1543,
+    "total_tokens": 7764,
+    "completion_tokens": 6221,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5125
+    },
+    "time_to_first_token_ms": 86879,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V1-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC03-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"押送队伍抵达新四军军部，陈海峰随后进入教导队二期政工队。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以1938年10月陈海峰由江南抗日义勇军第三路出发为起点，以抵达新四军军部并进入教导队为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"1938年10月，陈海峰由江南抗日义勇军第三路出发，准备前往新四军军部。\",\n      \"process_text\": \"讲到送我到军部去了。那次是1938年的10月了，我就由江南抗日义勇军第三路……\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0017\"\n      ],\n      \"evidence_quote\": \"陈海峰：讲到送我到军部去了。那次是1938年的10月了，我就由江南抗日义勇军第三路……\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"押送两名日本俘虏，与袁国平等干部及警卫、敌工人员会合，组成押送队伍。\",\n      \"process_text\": \"那么我们就押了两个日本鬼子，一个是其他部队抓的，不是我们江抗，我们老二团。我们江抗三路和老二团密切配合，就是王必成这个团，叫老二团，就是24军的前身。我们一直跟这个团配合行动。那么我在那个团部住了几天以后，就跟袁国平一块，有十几个干部，江抗就是我一个，第一个。还有文工团的一个，叫何平（音），敌工股派了一个人，一路是负责两个鬼子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0019\"\n      ],\n      \"evidence_quote\": \"那么我们就押了两个日本鬼子，一个是其他部队抓的，不是我们江抗，我们老二团。我们江抗三路和老二团密切配合，就是王必成这个团，叫老二团，就是24军的前身。我们一直跟这个团配合行动。那么我在那个团部住了几天以后，就跟袁国平一块，有十几个干部，江抗就是我一个，第一个。还有文工团的一个，叫何平（音），敌工股派了一个人，一路是负责两个鬼子。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"在袁国平警卫排护送下，通过封锁线和国民党控制区，经溧水、东坝、宣城，绕过108师防区，到达新四军军部。\",\n      \"process_text\": \"我们就通过封锁线，通过国民党的彷徨（音）区，我们走溧水、东坝（音），沿着一个湖边，到了宣城。宣城那边就是国民党的108师了，我们通过108师防区旁边，插到我们军部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0021\"\n      ],\n      \"evidence_quote\": \"袁国平是一个警卫排了，他有四个警卫员，他骑着马。我们就通过封锁线，通过国民党的彷徨（音）区，我们走溧水、东坝（音），沿着一个湖边，到了宣城。宣城那边就是国民党的108师了，我们通过108师防区旁边，插到我们军部。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE004-P01\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0019\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE004-P02\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE004-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0021\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC03-DE004",
+    "event_enrichment": {
+      "result_state": "押送队伍抵达新四军军部，陈海峰随后进入教导队二期政工队。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以1938年10月陈海峰由江南抗日义勇军第三路出发为起点，以抵达新四军军部并进入教导队为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC03-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "1938年10月，陈海峰由江南抗日义勇军第三路出发，准备前往新四军军部。",
+        "process_text": "讲到送我到军部去了。那次是1938年的10月了，我就由江南抗日义勇军第三路……",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0017"
+        ],
+        "evidence_quote": "陈海峰：讲到送我到军部去了。那次是1938年的10月了，我就由江南抗日义勇军第三路……",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "押送两名日本俘虏，与袁国平等干部及警卫、敌工人员会合，组成押送队伍。",
+        "process_text": "那么我们就押了两个日本鬼子，一个是其他部队抓的，不是我们江抗，我们老二团。我们江抗三路和老二团密切配合，就是王必成这个团，叫老二团，就是24军的前身。我们一直跟这个团配合行动。那么我在那个团部住了几天以后，就跟袁国平一块，有十几个干部，江抗就是我一个，第一个。还有文工团的一个，叫何平（音），敌工股派了一个人，一路是负责两个鬼子。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0019"
+        ],
+        "evidence_quote": "那么我们就押了两个日本鬼子，一个是其他部队抓的，不是我们江抗，我们老二团。我们江抗三路和老二团密切配合，就是王必成这个团，叫老二团，就是24军的前身。我们一直跟这个团配合行动。那么我在那个团部住了几天以后，就跟袁国平一块，有十几个干部，江抗就是我一个，第一个。还有文工团的一个，叫何平（音），敌工股派了一个人，一路是负责两个鬼子。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "在袁国平警卫排护送下，通过封锁线和国民党控制区，经溧水、东坝、宣城，绕过108师防区，到达新四军军部。",
+        "process_text": "我们就通过封锁线，通过国民党的彷徨（音）区，我们走溧水、东坝（音），沿着一个湖边，到了宣城。宣城那边就是国民党的108师了，我们通过108师防区旁边，插到我们军部。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0021"
+        ],
+        "evidence_quote": "袁国平是一个警卫排了，他有四个警卫员，他骑着马。我们就通过封锁线，通过国民党的彷徨（音）区，我们走溧水、东坝（音），沿着一个湖边，到了宣城。宣城那边就是国民党的108师了，我们通过108师防区旁边，插到我们军部。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC03-DE004-P01",
+        "target_stage_id": "BATCH02-DOC03-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0019",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE004-P02",
+        "target_stage_id": "BATCH02-DOC03-DE004-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC03-S0021",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

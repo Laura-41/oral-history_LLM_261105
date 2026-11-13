@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T01:26:34",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC04-DE009",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC04-DE009",
+  "usage": {
+    "prompt_tokens": 1169,
+    "total_tokens": 3706,
+    "completion_tokens": 2537,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1766
+    },
+    "time_to_first_token_ms": 19592,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2536000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC04-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"林明永已带来最后一批伤员，并向陈海峰等透露情况不好、各种消息都不好；陈海峰等明确要准备打仗。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件起于林明永带最后一批伤员过来，止于陈海峰说“要准备打仗了”。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"林明永带最后一批伤员到达，伤员拄拐且行动不便。\",\n      \"process_text\": \"林明永带了十几个伤员，一拐一拐，还拄着个拐杖。这是我们皖南撤退出来的最后一批伤员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0090\"\n      ],\n      \"evidence_quote\": \"林明永带了十几个伤员，一拐一拐，还拄着个拐杖。这是我们皖南撤退出来的最后一批伤员。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"林明永判断情况不好、非打一仗不可，并向听者透露各种消息都不好。\",\n      \"process_text\": \"他带领那十几个伤员过来以后，他说看来这个情况不好，非打一仗不可。他说各种消息都不好，他透露给我们。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0090\"\n      ],\n      \"evidence_quote\": \"他带领那十几个伤员过来以后，他说看来这个情况不好，非打一仗不可。他说各种消息都不好，他透露给我们。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"听者接收告知后明确要准备打仗。\",\n      \"process_text\": \"要准备打仗了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0092\"\n      ],\n      \"evidence_quote\": \"要准备打仗了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE009-P01\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0090\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE009-P02\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE009-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0092\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC04-DE009",
+    "event_enrichment": {
+      "result_state": "林明永已带来最后一批伤员，并向陈海峰等透露情况不好、各种消息都不好；陈海峰等明确要准备打仗。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件起于林明永带最后一批伤员过来，止于陈海峰说“要准备打仗了”。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC04-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "林明永带最后一批伤员到达，伤员拄拐且行动不便。",
+        "process_text": "林明永带了十几个伤员，一拐一拐，还拄着个拐杖。这是我们皖南撤退出来的最后一批伤员。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0090"
+        ],
+        "evidence_quote": "林明永带了十几个伤员，一拐一拐，还拄着个拐杖。这是我们皖南撤退出来的最后一批伤员。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "林明永判断情况不好、非打一仗不可，并向听者透露各种消息都不好。",
+        "process_text": "他带领那十几个伤员过来以后，他说看来这个情况不好，非打一仗不可。他说各种消息都不好，他透露给我们。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0090"
+        ],
+        "evidence_quote": "他带领那十几个伤员过来以后，他说看来这个情况不好，非打一仗不可。他说各种消息都不好，他透露给我们。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "听者接收告知后明确要准备打仗。",
+        "process_text": "要准备打仗了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0092"
+        ],
+        "evidence_quote": "要准备打仗了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC04-DE009-P01",
+        "target_stage_id": "BATCH07-DOC04-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC04-S0090",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE009-P02",
+        "target_stage_id": "BATCH07-DOC04-DE009-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH07-DOC04-S0092",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

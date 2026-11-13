@@ -1,0 +1,282 @@
+{
+  "run_time": "2026-11-12T03:54:54",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH07-DOC04-W002",
+  "technical_document_id": "BATCH07-DOC04",
+  "document_id": "03.陈海峰（三访）20110816（二校后 阅读版）.doc",
+  "input_segment_ids": [
+    "BATCH07-DOC04-S0026",
+    "BATCH07-DOC04-S0027",
+    "BATCH07-DOC04-S0028",
+    "BATCH07-DOC04-S0029",
+    "BATCH07-DOC04-S0030",
+    "BATCH07-DOC04-S0031",
+    "BATCH07-DOC04-S0032",
+    "BATCH07-DOC04-S0033",
+    "BATCH07-DOC04-S0034",
+    "BATCH07-DOC04-S0035",
+    "BATCH07-DOC04-S0036",
+    "BATCH07-DOC04-S0037",
+    "BATCH07-DOC04-S0038",
+    "BATCH07-DOC04-S0039",
+    "BATCH07-DOC04-S0040",
+    "BATCH07-DOC04-S0041",
+    "BATCH07-DOC04-S0042",
+    "BATCH07-DOC04-S0043",
+    "BATCH07-DOC04-S0044",
+    "BATCH07-DOC04-S0045",
+    "BATCH07-DOC04-S0046",
+    "BATCH07-DOC04-S0047"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 3,
+    "assigned_segment_count": 9,
+    "unassigned_segment_count": 13,
+    "input_segment_count": 22,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH07-DOC04-W002-E02",
+    "BATCH07-DOC04-W002-E03"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH07-DOC04-W002",
+    "events": [
+      {
+        "candidate_id": "BATCH07-DOC04-W002-E01",
+        "source_segment_ids": [
+          "BATCH07-DOC04-S0029",
+          "BATCH07-DOC04-S0031",
+          "BATCH07-DOC04-S0033",
+          "BATCH07-DOC04-S0035"
+        ],
+        "event": {
+          "event_name": "吴甲寅家庭土改受镇压、其子找证明人平反及陈海峰写证明信",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "找证明人平反并写证明信",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "卫生局长",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Client",
+              "mention": "吴甲寅",
+              "normalized_entity": "吴甲寅",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "证明人",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "他",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "土改的时候",
+              "normalized_value": "土改时期"
+            },
+            {
+              "kind": "TIME",
+              "value": "解放以后",
+              "normalized_value": "解放后"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "大羊庄",
+              "normalized_value": "大羊庄"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "政策不分",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那很难找到证明人啊，跑来跑去，最后才平反。（虽然）平反了，（但是）这个人没有了，（被）镇压掉了。他（从）安徽合肥来的，（在）天津打电话过来，我写个证明信给他。",
+          "type_basis": "核心过程为土改后儿子奔波找证明人、陈海峰写证明信并平反，属可观察行动与结果；角色 Actor、Client、Goal、Recipient 均在 MATERIAL 允许词表；排除 RELATIONAL（不是身份识别主导）和 VERBAL（写证明信只是阶段）。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH07-DOC04-W002-E02",
+        "source_segment_ids": [
+          "BATCH07-DOC04-S0037",
+          "BATCH07-DOC04-S0039",
+          "BATCH07-DOC04-S0041",
+          "BATCH07-DOC04-S0043",
+          "BATCH07-DOC04-S0047"
+        ],
+        "event": {
+          "event_name": "陈海峰与哥哥被忠义救国军包围后在情报站站长掩护下逃脱",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "被包围后掩护逃脱",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "情报站站长",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "我们",
+              "normalized_entity": "陈海峰、陈海峰哥哥",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "（19）38年夏天",
+              "normalized_value": "1938年夏"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "金坛县",
+              "normalized_value": "金坛县"
+            },
+            {
+              "kind": "OTHER",
+              "value": "被忠义救国军包围，来（了）两百多人，从宜兴来的",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "对面一个院子",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "秘密的",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他是我们的情报站站长，掩护我们，我们住在那个地方，秘密的。怎么就被（敌人）侦察到了，挨家挨户搜索。他掩护我们，我们住在那个楼上。他（把）窗子拿下来，架在夹道的两边围墙上面，我们翻墙跳到对面一个院子。",
+          "type_basis": "核心过程为被包围搜索后翻墙躲藏并逃脱，属空间移动与危险应对；Actor、Goal 在 MATERIAL 允许词表；排除 BEHAVIORAL（有物质结果和移动）、VERBAL（无命题内容主导）、EXISTENTIAL（不是引入存在）。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH07-DOC04-W002-E03",
+        "source_segment_ids": [
+          "BATCH07-DOC04-S0035",
+          "BATCH07-DOC04-S0037",
+          "BATCH07-DOC04-S0039",
+          "BATCH07-DOC04-S0041",
+          "BATCH07-DOC04-S0047"
+        ],
+        "event": {
+          "event_name": "陈海峰到金坛县调查研究并向镇长说明情报站站长抗战功绩",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "说明抗战功绩",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "镇长",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "卫生局长",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "解放以后",
+              "normalized_value": "解放后"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "金坛县",
+              "normalized_value": "金坛县"
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "调查研究，顺便去看（他）",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "（他）家里变成这么惨",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "我们还是（19）38年，我们新四军还没到，我们的武装还（归）上海党领导。我们是在开辟武进南部的斗争工作、抗战工作，（19）38年夏天，新四军刚成立，茅山还没过来人。他帮助掩护我们，有功绩，有贡献。没有他，那天（我们）两个人（就）完蛋了，肯定跑不了。",
+          "evidence_quote": "后来我到那里去调查研究，顺便去看（他）。哎呀，（他）家里变成这么惨！我就（对）镇长讲，新来的镇长还不知道他在抗战（中）有这么多功绩。",
+          "type_basis": "核心过程为陈海峰对镇长、卫生局长说明情报站站长抗战功绩，属言语投射；Sayer、Receiver 在 VERBAL 允许词表；前往调查研究为触发背景，故 alternative MATERIAL；排除 RELATIONAL（不是身份识别）。",
+          "alternative_event_type": "MATERIAL",
+          "ambiguity_reason": "事件包含到当地调查研究、看望和发现惨状等物质行动，但核心结果是向镇长说明功绩的言语过程，两类均有依据。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH07-DOC04-S0026",
+      "BATCH07-DOC04-S0027",
+      "BATCH07-DOC04-S0028",
+      "BATCH07-DOC04-S0030",
+      "BATCH07-DOC04-S0032",
+      "BATCH07-DOC04-S0034",
+      "BATCH07-DOC04-S0036",
+      "BATCH07-DOC04-S0038",
+      "BATCH07-DOC04-S0040",
+      "BATCH07-DOC04-S0042",
+      "BATCH07-DOC04-S0044",
+      "BATCH07-DOC04-S0045",
+      "BATCH07-DOC04-S0046"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH07-DOC04-W002\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH07-DOC04-W002-E01\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC04-S0029\",\n        \"BATCH07-DOC04-S0031\",\n        \"BATCH07-DOC04-S0033\",\n        \"BATCH07-DOC04-S0035\"\n      ],\n      \"event\": {\n        \"event_name\": \"吴甲寅家庭土改受镇压、其子找证明人平反及陈海峰写证明信\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"找证明人平反并写证明信\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"卫生局长\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Client\",\n            \"mention\": \"吴甲寅\",\n            \"normalized_entity\": \"吴甲寅\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"证明人\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"他\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"土改的时候\",\n            \"normalized_value\": \"土改时期\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"解放以后\",\n            \"normalized_value\": \"解放后\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"大羊庄\",\n            \"normalized_value\": \"大羊庄\"\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"政策不分\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那很难找到证明人啊，跑来跑去，最后才平反。（虽然）平反了，（但是）这个人没有了，（被）镇压掉了。他（从）安徽合肥来的，（在）天津打电话过来，我写个证明信给他。\",\n        \"type_basis\": \"核心过程为土改后儿子奔波找证明人、陈海峰写证明信并平反，属可观察行动与结果；角色 Actor、Client、Goal、Recipient 均在 MATERIAL 允许词表；排除 RELATIONAL（不是身份识别主导）和 VERBAL（写证明信只是阶段）。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH07-DOC04-W002-E02\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC04-S0037\",\n        \"BATCH07-DOC04-S0039\",\n        \"BATCH07-DOC04-S0041\",\n        \"BATCH07-DOC04-S0043\",\n        \"BATCH07-DOC04-S0047\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰与哥哥被忠义救国军包围后在情报站站长掩护下逃脱\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"被包围后掩护逃脱\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"情报站站长\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰、陈海峰哥哥\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"（19）38年夏天\",\n            \"normalized_value\": \"1938年夏\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"金坛县\",\n            \"normalized_value\": \"金坛县\"\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"被忠义救国军包围，来（了）两百多人，从宜兴来的\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"对面一个院子\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"秘密的\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"他是我们的情报站站长，掩护我们，我们住在那个地方，秘密的。怎么就被（敌人）侦察到了，挨家挨户搜索。他掩护我们，我们住在那个楼上。他（把）窗子拿下来，架在夹道的两边围墙上面，我们翻墙跳到对面一个院子。\",\n        \"type_basis\": \"核心过程为被包围搜索后翻墙躲藏并逃脱，属空间移动与危险应对；Actor、Goal 在 MATERIAL 允许词表；排除 BEHAVIORAL（有物质结果和移动）、VERBAL（无命题内容主导）、EXISTENTIAL（不是引入存在）。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH07-DOC04-W002-E03\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC04-S0035\",\n        \"BATCH07-DOC04-S0037\",\n        \"BATCH07-DOC04-S0039\",\n        \"BATCH07-DOC04-S0041\",\n        \"BATCH07-DOC04-S0047\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰到金坛县调查研究并向镇长说明情报站站长抗战功绩\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"说明抗战功绩\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"镇长\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"卫生局长\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"解放以后\",\n            \"normalized_value\": \"解放后\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"金坛县\",\n            \"normalized_value\": \"金坛县\"\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"调查研究，顺便去看（他）\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"（他）家里变成这么惨\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"我们还是（19）38年，我们新四军还没到，我们的武装还（归）上海党领导。我们是在开辟武进南部的斗争工作、抗战工作，（19）38年夏天，新四军刚成立，茅山还没过来人。他帮助掩护我们，有功绩，有贡献。没有他，那天（我们）两个人（就）完蛋了，肯定跑不了。\",\n        \"evidence_quote\": \"后来我到那里去调查研究，顺便去看（他）。哎呀，（他）家里变成这么惨！我就（对）镇长讲，新来的镇长还不知道他在抗战（中）有这么多功绩。\",\n        \"type_basis\": \"核心过程为陈海峰对镇长、卫生局长说明情报站站长抗战功绩，属言语投射；Sayer、Receiver 在 VERBAL 允许词表；前往调查研究为触发背景，故 alternative MATERIAL；排除 RELATIONAL（不是身份识别）。\",\n        \"alternative_event_type\": \"MATERIAL\",\n        \"ambiguity_reason\": \"事件包含到当地调查研究、看望和发现惨状等物质行动，但核心结果是向镇长说明功绩的言语过程，两类均有依据。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH07-DOC04-S0026\",\n    \"BATCH07-DOC04-S0027\",\n    \"BATCH07-DOC04-S0028\",\n    \"BATCH07-DOC04-S0030\",\n    \"BATCH07-DOC04-S0032\",\n    \"BATCH07-DOC04-S0034\",\n    \"BATCH07-DOC04-S0036\",\n    \"BATCH07-DOC04-S0038\",\n    \"BATCH07-DOC04-S0040\",\n    \"BATCH07-DOC04-S0042\",\n    \"BATCH07-DOC04-S0044\",\n    \"BATCH07-DOC04-S0045\",\n    \"BATCH07-DOC04-S0046\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5861,
+    "total_tokens": 30952,
+    "completion_tokens": 25091,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 22675
+    },
+    "time_to_first_token_ms": 379483,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 25090000
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T23:21:47",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC05-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC05-DE001",
+  "usage": {
+    "prompt_tokens": 1222,
+    "total_tokens": 4234,
+    "completion_tokens": 3012,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2166
+    },
+    "time_to_first_token_ms": 24446,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3011000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC05-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"叙述者称通过阶段性教育和若干次专科重点训练，已达到大专医学水平，相当于正规医科大学毕业水平。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以分阶段轮训、专科重点训练的说明为起点，以叙述者称达到大专医学水平、相当于正规医科大学毕业水平为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"在战役间隙部队休整时，医务卫生员集中进行分阶段轮训，按专科逐个提高。\",\n      \"process_text\": \"他是分阶段轮训，经常轮训，两个大战役之间，部队休整，医务卫生员马上集中轮训。一个专科一个专科提高。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0053\"\n      ],\n      \"evidence_quote\": \"他是分阶段轮训，经常轮训，两个大战役之间，部队休整，医务卫生员马上集中轮训。一个专科一个专科提高。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"通过多次轮训积累局部知识，并逐步形成系统知识。\",\n      \"process_text\": \"那么就这样子积累一个一个局部的知识，累积起来的一些系统知识，经过了不知道多少次的轮训……\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0053\"\n      ],\n      \"evidence_quote\": \"那么就这样子积累一个一个局部的知识，累积起来的一些系统知识，经过了不知道多少次的轮训……\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"学期结束后返回部队，通过阶段性教育和专科重点训练，达到大专医学水平。\",\n      \"process_text\": \"所以一学期我就得回去。这样子，就（通过）阶段性的教育来（和）若干次专科重点训练，达到大专医学水平。就等于是正规的医科大学毕业，这个水平。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0055\"\n      ],\n      \"evidence_quote\": \"所以一学期我就得回去。这样子，就（通过）阶段性的教育来（和）若干次专科重点训练，达到大专医学水平。就等于是正规的医科大学毕业，这个水平。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE001-P01\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE001-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0053\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE001-P02\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE001-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0055\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC05-DE001",
+    "event_enrichment": {
+      "result_state": "叙述者称通过阶段性教育和若干次专科重点训练，已达到大专医学水平，相当于正规医科大学毕业水平。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以分阶段轮训、专科重点训练的说明为起点，以叙述者称达到大专医学水平、相当于正规医科大学毕业水平为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC05-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "在战役间隙部队休整时，医务卫生员集中进行分阶段轮训，按专科逐个提高。",
+        "process_text": "他是分阶段轮训，经常轮训，两个大战役之间，部队休整，医务卫生员马上集中轮训。一个专科一个专科提高。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0053"
+        ],
+        "evidence_quote": "他是分阶段轮训，经常轮训，两个大战役之间，部队休整，医务卫生员马上集中轮训。一个专科一个专科提高。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "通过多次轮训积累局部知识，并逐步形成系统知识。",
+        "process_text": "那么就这样子积累一个一个局部的知识，累积起来的一些系统知识，经过了不知道多少次的轮训……",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0053"
+        ],
+        "evidence_quote": "那么就这样子积累一个一个局部的知识，累积起来的一些系统知识，经过了不知道多少次的轮训……",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "学期结束后返回部队，通过阶段性教育和专科重点训练，达到大专医学水平。",
+        "process_text": "所以一学期我就得回去。这样子，就（通过）阶段性的教育来（和）若干次专科重点训练，达到大专医学水平。就等于是正规的医科大学毕业，这个水平。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0055"
+        ],
+        "evidence_quote": "所以一学期我就得回去。这样子，就（通过）阶段性的教育来（和）若干次专科重点训练，达到大专医学水平。就等于是正规的医科大学毕业，这个水平。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC05-DE001-P01",
+        "target_stage_id": "BATCH04-DOC05-DE001-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC05-S0053",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC05-DE001-P02",
+        "target_stage_id": "BATCH04-DOC05-DE001-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC05-S0055",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,147 @@
+{
+  "run_time": "2026-11-12T23:33:33",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC01-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC01-DE001",
+  "usage": {
+    "prompt_tokens": 2511,
+    "total_tokens": 15018,
+    "completion_tokens": 12507,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10637
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 184777,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC01-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"苏中卫生学校迁至南通石港镇附近完成课程，56名毕业学员被分配至前方医院/休养所、东台师后方医院及前方部队，卫校暂时结束。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为抗大南下后卫校留在海复中学继续讲课，随后因敌人大扫荡紧张、机关疏散而迁至南通石港镇；终点为在石港镇附近集中授完课、56名毕业学员分光、卫校暂时结束。原文时间表述存在“43年”与“42年10月11月/42年底之前”不一致，边界按给定片段范围处理。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"抗大南下后，卫校未随去，留在海复中学集中讲课。\",\n      \"process_text\": \"抗大南下以后呢，我们卫校呢，就没有跟他去，卫校就集中在这里把课讲完。很快\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0008\",\n        \"BATCH05-DOC01-S0013\"\n      ],\n      \"evidence_quote\": \"抗大南下以后呢，我们卫校呢，就没有跟他去，卫校就集中在这里把课讲完。很快\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"敌人大扫荡使情况开始紧张。\",\n      \"process_text\": \"以后的情况也开始紧张了，敌人呢，有大的扫荡要来（了）。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0014\"\n      ],\n      \"evidence_quote\": \"以后的情况也开始紧张了，敌人呢，有大的扫荡要来（了）。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"机关疏散，卫校由启东海复镇迁到南通石港镇。\",\n      \"process_text\": \"有的就到一分区去。这样子呢，卫校就由启东海复镇迁到南通的石港镇，石港战斗什么东西。石港镇（是）一个很大的镇。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0015\",\n        \"BATCH05-DOC01-S0017\"\n      ],\n      \"evidence_quote\": \"有的就到一分区去。这样子呢，卫校就由启东海复镇迁到南通的石港镇，石港战斗什么东西。石港镇（是）一个很大的镇。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"在石港镇附近集中授完课并毕业分配。\",\n      \"process_text\": \"在石港镇的附近，我们就把课集中授完，毕业分配。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0020\"\n      ],\n      \"evidence_quote\": \"在石港镇的附近，我们就把课集中授完，毕业分配。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"毕业学员按去向分配：一部分到前方医院/休养所，大部分女同学回东台师后方医院，男同学全部到前方部队。\",\n      \"process_text\": \"这样子，我就带了一部分毕业的女同学到前方医院，男同学毕业以后全部放在前方部队去了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0022\",\n        \"BATCH05-DOC01-S0024\",\n        \"BATCH05-DOC01-S0026\"\n      ],\n      \"evidence_quote\": \"这样子，我就带了一部分毕业的女同学到前方医院，男同学毕业以后全部放在前方部队去了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE001-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"56名毕业学员全部分配完毕，卫校暂时结束。\",\n      \"process_text\": \"    陈海峰：那么就把56个人都分光。这卫校呢，暂时结束了，就是（19）42年的年底之前，这一个月左右。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0028\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那么就把56个人都分光。这卫校呢，暂时结束了，就是（19）42年的年底之前，这一个月左右。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE001-P01\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0014\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE001-P02\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE001-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0015\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE001-P03\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0020\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE001-P04\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE001-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0022\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE001-P05\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE001-P06\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0028\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC01-DE001",
+    "event_enrichment": {
+      "result_state": "苏中卫生学校迁至南通石港镇附近完成课程，56名毕业学员被分配至前方医院/休养所、东台师后方医院及前方部队，卫校暂时结束。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为抗大南下后卫校留在海复中学继续讲课，随后因敌人大扫荡紧张、机关疏散而迁至南通石港镇；终点为在石港镇附近集中授完课、56名毕业学员分光、卫校暂时结束。原文时间表述存在“43年”与“42年10月11月/42年底之前”不一致，边界按给定片段范围处理。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC01-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "抗大南下后，卫校未随去，留在海复中学集中讲课。",
+        "process_text": "抗大南下以后呢，我们卫校呢，就没有跟他去，卫校就集中在这里把课讲完。很快",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0008",
+          "BATCH05-DOC01-S0013"
+        ],
+        "evidence_quote": "抗大南下以后呢，我们卫校呢，就没有跟他去，卫校就集中在这里把课讲完。很快",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "敌人大扫荡使情况开始紧张。",
+        "process_text": "以后的情况也开始紧张了，敌人呢，有大的扫荡要来（了）。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0014"
+        ],
+        "evidence_quote": "以后的情况也开始紧张了，敌人呢，有大的扫荡要来（了）。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "机关疏散，卫校由启东海复镇迁到南通石港镇。",
+        "process_text": "有的就到一分区去。这样子呢，卫校就由启东海复镇迁到南通的石港镇，石港战斗什么东西。石港镇（是）一个很大的镇。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0015",
+          "BATCH05-DOC01-S0017"
+        ],
+        "evidence_quote": "有的就到一分区去。这样子呢，卫校就由启东海复镇迁到南通的石港镇，石港战斗什么东西。石港镇（是）一个很大的镇。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "在石港镇附近集中授完课并毕业分配。",
+        "process_text": "在石港镇的附近，我们就把课集中授完，毕业分配。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0020"
+        ],
+        "evidence_quote": "在石港镇的附近，我们就把课集中授完，毕业分配。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "毕业学员按去向分配：一部分到前方医院/休养所，大部分女同学回东台师后方医院，男同学全部到前方部队。",
+        "process_text": "这样子，我就带了一部分毕业的女同学到前方医院，男同学毕业以后全部放在前方部队去了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0022",
+          "BATCH05-DOC01-S0024",
+          "BATCH05-DOC01-S0026"
+        ],
+        "evidence_quote": "这样子，我就带了一部分毕业的女同学到前方医院，男同学毕业以后全部放在前方部队去了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE001-P06",
+        "stage_order": 6,
+        "stage_summary": "56名毕业学员全部分配完毕，卫校暂时结束。",
+        "process_text": "    陈海峰：那么就把56个人都分光。这卫校呢，暂时结束了，就是（19）42年的年底之前，这一个月左右。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0028"
+        ],
+        "evidence_quote": "    陈海峰：那么就把56个人都分光。这卫校呢，暂时结束了，就是（19）42年的年底之前，这一个月左右。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC01-DE001-P01",
+        "target_stage_id": "BATCH05-DOC01-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC01-S0014",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC01-DE001-P02",
+        "target_stage_id": "BATCH05-DOC01-DE001-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH05-DOC01-S0015",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC01-DE001-P03",
+        "target_stage_id": "BATCH05-DOC01-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC01-S0020",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC01-DE001-P04",
+        "target_stage_id": "BATCH05-DOC01-DE001-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC01-S0022",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC01-DE001-P05",
+        "target_stage_id": "BATCH05-DOC01-DE001-P06",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC01-S0028",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

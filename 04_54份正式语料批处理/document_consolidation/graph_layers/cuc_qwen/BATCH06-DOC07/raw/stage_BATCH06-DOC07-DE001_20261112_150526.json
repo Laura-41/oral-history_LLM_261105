@@ -1,0 +1,158 @@
+{
+  "run_time": "2026-11-12T15:05:26",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE001",
+  "usage": {
+    "prompt_tokens": 2658,
+    "total_tokens": 14212,
+    "completion_tokens": 11554,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9498
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11553000,
+    "time_to_first_token_ms": 192078
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队已北撤到江北，伤员被送往苏北、苏中后方医院，苏浙军区后方医院到江北后撤销。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于 S0003-S0006 所述10月份撤退七万多人的规模背景，止于 S0036-S0037 所述以后撤退都在江北、到江北来了就撤销；中间包含北撤做工作、到江北、伤员与后方医院处置。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"说明北撤部队的规模与时间：10月份撤退时共七万多人。\",\n      \"process_text\": \"撤退江南七万多人，原来打天目山只有两万多人，以后来了3纵队、4纵队，这两个纵队加起来四万多人，全部加地方团队，10月份撤退是七万多人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0003\",\n        \"BATCH06-DOC07-S0004\",\n        \"BATCH06-DOC07-S0005\",\n        \"BATCH06-DOC07-S0006\"\n      ],\n      \"evidence_quote\": \"我们那时全部，加地方团队，一共加起来，当时10月份撤退是七万多人。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"北撤时对人员做工作，少数逃跑，多数被说服。\",\n      \"process_text\": \"北撤都要做工作，少数逃跑了，那多数的还是说服他们了；说（我们）总要回来的，这个地方是我们的，江南是我们新四军老家，我们新四军发源地。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0011\",\n        \"BATCH06-DOC07-S0012\"\n      ],\n      \"evidence_quote\": \"    陈海峰：北撤都要做工作，少数逃跑了，那多数的还是说服他们了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"走的时候向老百姓打招呼，表示总会回来、打回老家来。\",\n      \"process_text\": \"茅山是我们老根据地，走的时候给老百姓打招呼，都这样。“我们总要回来的，你们等着，一定会打回老家来的，老家不能丢……”\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0013\"\n      ],\n      \"evidence_quote\": \"茅山是我们老根据地，走的时候给老百姓打招呼，都这样。“我们总要回来的，你们等着，一定会打回老家来的，老家不能丢……”——\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"部队到达江北。\",\n      \"process_text\": \"这么着到江北了。到了江北以后呢。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0015\",\n        \"BATCH06-DOC07-S0017\"\n      ],\n      \"evidence_quote\": \"    陈海峰：到了江北以后呢。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"伤员先走并治疗，部分回部队，重伤者送江北苏北、苏中后方医院。\",\n      \"process_text\": \"伤员先走了，两三月治疗，差不多一半就都回部队了。一小半呢，就重伤啊，送到江北去（了）。走到苏北的、苏中的后方医院去了，因为江南没有后方医院。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0019\",\n        \"BATCH06-DOC07-S0020\",\n        \"BATCH06-DOC07-S0022\",\n        \"BATCH06-DOC07-S0023\",\n        \"BATCH06-DOC07-S0024\"\n      ],\n      \"evidence_quote\": \"    陈海峰：伤员先走了，两三月治疗\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE001-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"苏浙军区后方医院成立并接收野战医院伤员，到江北后撤销。\",\n      \"process_text\": \"后来我们成立了苏浙军区后方医院，那个规模也不太大，实际上那个力量还没有我们野战医院大呢。野战医院没有了，野战医院（的）伤员都交给后方医院了，这个变成苏浙军区的医院了。以后撤退，都在江北了，到江北来了，他就撤销了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0025\",\n        \"BATCH06-DOC07-S0026\",\n        \"BATCH06-DOC07-S0027\",\n        \"BATCH06-DOC07-S0035\",\n        \"BATCH06-DOC07-S0036\",\n        \"BATCH06-DOC07-S0037\"\n      ],\n      \"evidence_quote\": \"野战医院没有了，野战医院（的）伤员都交给后方医院了，这个变成苏浙军区的医院了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE001-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0011\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE001-P02\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0013\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE001-P03\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0017\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE001-P04\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE001-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0019\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE001-P05\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE001-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0025\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE001",
+    "event_enrichment": {
+      "result_state": "部队已北撤到江北，伤员被送往苏北、苏中后方医院，苏浙军区后方医院到江北后撤销。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于 S0003-S0006 所述10月份撤退七万多人的规模背景，止于 S0036-S0037 所述以后撤退都在江北、到江北来了就撤销；中间包含北撤做工作、到江北、伤员与后方医院处置。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "说明北撤部队的规模与时间：10月份撤退时共七万多人。",
+        "process_text": "撤退江南七万多人，原来打天目山只有两万多人，以后来了3纵队、4纵队，这两个纵队加起来四万多人，全部加地方团队，10月份撤退是七万多人。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0003",
+          "BATCH06-DOC07-S0004",
+          "BATCH06-DOC07-S0005",
+          "BATCH06-DOC07-S0006"
+        ],
+        "evidence_quote": "我们那时全部，加地方团队，一共加起来，当时10月份撤退是七万多人。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "北撤时对人员做工作，少数逃跑，多数被说服。",
+        "process_text": "北撤都要做工作，少数逃跑了，那多数的还是说服他们了；说（我们）总要回来的，这个地方是我们的，江南是我们新四军老家，我们新四军发源地。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0011",
+          "BATCH06-DOC07-S0012"
+        ],
+        "evidence_quote": "    陈海峰：北撤都要做工作，少数逃跑了，那多数的还是说服他们了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "走的时候向老百姓打招呼，表示总会回来、打回老家来。",
+        "process_text": "茅山是我们老根据地，走的时候给老百姓打招呼，都这样。“我们总要回来的，你们等着，一定会打回老家来的，老家不能丢……”",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0013"
+        ],
+        "evidence_quote": "茅山是我们老根据地，走的时候给老百姓打招呼，都这样。“我们总要回来的，你们等着，一定会打回老家来的，老家不能丢……”——",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "部队到达江北。",
+        "process_text": "这么着到江北了。到了江北以后呢。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0015",
+          "BATCH06-DOC07-S0017"
+        ],
+        "evidence_quote": "    陈海峰：到了江北以后呢。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "伤员先走并治疗，部分回部队，重伤者送江北苏北、苏中后方医院。",
+        "process_text": "伤员先走了，两三月治疗，差不多一半就都回部队了。一小半呢，就重伤啊，送到江北去（了）。走到苏北的、苏中的后方医院去了，因为江南没有后方医院。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0019",
+          "BATCH06-DOC07-S0020",
+          "BATCH06-DOC07-S0022",
+          "BATCH06-DOC07-S0023",
+          "BATCH06-DOC07-S0024"
+        ],
+        "evidence_quote": "    陈海峰：伤员先走了，两三月治疗",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE001-P06",
+        "stage_order": 6,
+        "stage_summary": "苏浙军区后方医院成立并接收野战医院伤员，到江北后撤销。",
+        "process_text": "后来我们成立了苏浙军区后方医院，那个规模也不太大，实际上那个力量还没有我们野战医院大呢。野战医院没有了，野战医院（的）伤员都交给后方医院了，这个变成苏浙军区的医院了。以后撤退，都在江北了，到江北来了，他就撤销了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0025",
+          "BATCH06-DOC07-S0026",
+          "BATCH06-DOC07-S0027",
+          "BATCH06-DOC07-S0035",
+          "BATCH06-DOC07-S0036",
+          "BATCH06-DOC07-S0037"
+        ],
+        "evidence_quote": "野战医院没有了，野战医院（的）伤员都交给后方医院了，这个变成苏浙军区的医院了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE001-P01",
+        "target_stage_id": "BATCH06-DOC07-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0011",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE001-P02",
+        "target_stage_id": "BATCH06-DOC07-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0013",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE001-P03",
+        "target_stage_id": "BATCH06-DOC07-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0017",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE001-P04",
+        "target_stage_id": "BATCH06-DOC07-DE001-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0019",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE001-P05",
+        "target_stage_id": "BATCH06-DOC07-DE001-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0025",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

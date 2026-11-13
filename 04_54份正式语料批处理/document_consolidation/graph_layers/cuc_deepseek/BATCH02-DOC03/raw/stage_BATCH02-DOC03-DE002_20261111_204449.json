@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T20:44:49",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC03-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC03-DE002",
+  "usage": {
+    "prompt_tokens": 1095,
+    "total_tokens": 3646,
+    "completion_tokens": 2551,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1828
+    },
+    "time_to_first_token_ms": 27205,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V1-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC03-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"后藤勇被本部队俘虏，后被送至新四军军部，半个月后跳日本舞。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据同一片段：以“我们这个部队抓的是后藤勇”为事件核心起点，以“到了新四军军部”及“半个月以后，他跳日本舞”为后续状态；不纳入片段中关于梅多尼亚夫及其他日本人的内容。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"澄清本部队俘虏的是后藤勇，而非梅多尼亚夫。\",\n      \"process_text\": \"那个不是我们这个部队抓的，我们这个部队抓的是后藤勇。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0007\"\n      ],\n      \"evidence_quote\": \"那个不是我们这个部队抓的，我们这个部队抓的是后藤勇。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"后藤勇被送到新四军军部。\",\n      \"process_text\": \"后来后藤勇到了新四军军部\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0007\"\n      ],\n      \"evidence_quote\": \"后来后藤勇到了新四军军部\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"半个月后后藤勇跳日本舞。\",\n      \"process_text\": \"半个月以后，他跳日本舞。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0007\"\n      ],\n      \"evidence_quote\": \"半个月以后，他跳日本舞。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE002-P01\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0007\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE002-P02\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0007\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC03-DE002",
+    "event_enrichment": {
+      "result_state": "后藤勇被本部队俘虏，后被送至新四军军部，半个月后跳日本舞。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据同一片段：以“我们这个部队抓的是后藤勇”为事件核心起点，以“到了新四军军部”及“半个月以后，他跳日本舞”为后续状态；不纳入片段中关于梅多尼亚夫及其他日本人的内容。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC03-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "澄清本部队俘虏的是后藤勇，而非梅多尼亚夫。",
+        "process_text": "那个不是我们这个部队抓的，我们这个部队抓的是后藤勇。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0007"
+        ],
+        "evidence_quote": "那个不是我们这个部队抓的，我们这个部队抓的是后藤勇。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "后藤勇被送到新四军军部。",
+        "process_text": "后来后藤勇到了新四军军部",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0007"
+        ],
+        "evidence_quote": "后来后藤勇到了新四军军部",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "半个月后后藤勇跳日本舞。",
+        "process_text": "半个月以后，他跳日本舞。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0007"
+        ],
+        "evidence_quote": "半个月以后，他跳日本舞。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC03-DE002-P01",
+        "target_stage_id": "BATCH02-DOC03-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0007",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE002-P02",
+        "target_stage_id": "BATCH02-DOC03-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0007",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

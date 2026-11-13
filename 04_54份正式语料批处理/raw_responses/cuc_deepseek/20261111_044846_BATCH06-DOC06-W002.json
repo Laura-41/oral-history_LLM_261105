@@ -1,0 +1,312 @@
+{
+  "run_time": "2026-11-11T04:48:46",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH06-DOC06-W002",
+  "technical_document_id": "BATCH06-DOC06",
+  "document_id": "14.陈锐霆 090510（二校完 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH06-DOC06-S0016",
+    "BATCH06-DOC06-S0017",
+    "BATCH06-DOC06-S0018",
+    "BATCH06-DOC06-S0019",
+    "BATCH06-DOC06-S0020",
+    "BATCH06-DOC06-S0021",
+    "BATCH06-DOC06-S0022",
+    "BATCH06-DOC06-S0023",
+    "BATCH06-DOC06-S0024",
+    "BATCH06-DOC06-S0025",
+    "BATCH06-DOC06-S0026",
+    "BATCH06-DOC06-S0027",
+    "BATCH06-DOC06-S0028",
+    "BATCH06-DOC06-S0029",
+    "BATCH06-DOC06-S0030",
+    "BATCH06-DOC06-S0031",
+    "BATCH06-DOC06-S0032",
+    "BATCH06-DOC06-S0033",
+    "BATCH06-DOC06-S0034",
+    "BATCH06-DOC06-S0035",
+    "BATCH06-DOC06-S0036",
+    "BATCH06-DOC06-S0037",
+    "BATCH06-DOC06-S0038",
+    "BATCH06-DOC06-S0039",
+    "BATCH06-DOC06-S0040",
+    "BATCH06-DOC06-S0041",
+    "BATCH06-DOC06-S0042"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 4,
+    "assigned_segment_count": 11,
+    "unassigned_segment_count": 16,
+    "input_segment_count": 27,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH06-DOC06-W002-E04"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH06-DOC06-W002",
+    "events": [
+      {
+        "candidate_id": "BATCH06-DOC06-W002-E01",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0017",
+          "BATCH06-DOC06-S0020",
+          "BATCH06-DOC06-S0029"
+        ],
+        "event": {
+          "event_name": "渡江战役并解放南京",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "渡江作战，解放南京",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈锐霆所在部队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "骑兵团",
+              "normalized_entity": "骑兵团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "南京",
+              "normalized_entity": "南京",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "MANNER",
+              "value": "敌人基本上都撤了，没有进行大的战斗",
+              "normalized_value": "敌军基本撤退，未发生大规模战斗"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "渡江的时候敌人基本上都撤了，没有进行大的战斗，就把南京解放了",
+          "type_basis": "核心过程为渡江作战和解放南京，属可观察的军事行动；参与者为行动者‘我们/骑兵团’和对象‘南京’，符合MATERIAL的Actor＋Goal配置；不是单纯关系、心理或言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W002-E02",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0020",
+          "BATCH06-DOC06-S0022",
+          "BATCH06-DOC06-S0024",
+          "BATCH06-DOC06-S0026",
+          "BATCH06-DOC06-S0028",
+          "BATCH06-DOC06-S0029"
+        ],
+        "event": {
+          "event_name": "炮击英国军舰紫石英号等",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "警告并炮击英国军舰",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈锐霆所在炮兵部队（炮三团等）",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "紫石英号",
+              "normalized_entity": "英国军舰紫石英号（HMS Amethyst）",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "伴侣号",
+              "normalized_entity": "英国军舰伴侣号",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "伦敦号",
+              "normalized_entity": "英国军舰伦敦号",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "“黑天鹅”（号）兵舰",
+              "normalized_entity": "英国军舰黑天鹅号",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "这个时候20号吧",
+              "normalized_value": "约1949年4月20日"
+            },
+            {
+              "kind": "TIME",
+              "value": "第二天",
+              "normalized_value": "次日"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "离镇江不太远，有个三岔口的江面",
+              "normalized_value": "镇江附近三岔口江面"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "离江岸大概四五公里",
+              "normalized_value": "距江岸约四五公里"
+            },
+            {
+              "kind": "MANNER",
+              "value": "居高临下，另外炮又比较多",
+              "normalized_value": "占据居高临下且炮火较多"
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "警告他，不要继续前进了",
+              "normalized_value": "警告英舰不要继续前进"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "但是英国帝国主义那个劲头，马上就对我们还击了，然后就打起来了。",
+          "type_basis": "核心过程为警告并炮击英国军舰，属武装物质行动；参与者为行动者‘我们’和对象‘紫石英号’等，符合MATERIAL的Actor＋Goal配置；英舰还击、搁浅、救援和交涉是同一交战过程的阶段，不另立言语或存在事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W002-E03",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0032",
+          "BATCH06-DOC06-S0034",
+          "BATCH06-DOC06-S0040"
+        ],
+        "event": {
+          "event_name": "过江接收江阴要塞",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "过江接收江阴要塞",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "江阴要塞",
+              "normalized_entity": "江阴要塞",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "23号",
+              "normalized_value": "1949年4月23日"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我是23号过的江吧，我记不太清楚了。过江就接收江阴要塞",
+          "type_basis": "核心过程为过江接收江阴要塞，属军事组织行动；参与者为行动者‘我’和对象‘江阴要塞’，符合MATERIAL的Actor＋Goal配置；地下党动员、司令被迫起义和政委接管军官是接收过程的触发或后续阶段，不另立事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W002-E04",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0042"
+        ],
+        "event": {
+          "event_name": "参加三野会议并调整上海接收机构",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "到常州参加三野会议，调整上海接收机构",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "三野",
+              "normalized_entity": "第三野战军",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "接收上海的委员会",
+              "normalized_entity": "上海接收委员会",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "4月30号",
+              "normalized_value": "1949年4月30日"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "常州，武进",
+              "normalized_value": "常州武进"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我就到了常州，到了武进嘛，在那个地方三野开两次会，这是4月30号了。",
+          "type_basis": "核心过程为到常州参加三野会议并调整上海接收机构，属组织行动；参与者为行动者‘我/三野’和对象‘接收上海的委员会’，符合MATERIAL的Actor＋Goal配置；会上发言和建议是组织调整的阶段，不另立言语事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH06-DOC06-S0016",
+      "BATCH06-DOC06-S0018",
+      "BATCH06-DOC06-S0019",
+      "BATCH06-DOC06-S0021",
+      "BATCH06-DOC06-S0023",
+      "BATCH06-DOC06-S0025",
+      "BATCH06-DOC06-S0027",
+      "BATCH06-DOC06-S0030",
+      "BATCH06-DOC06-S0031",
+      "BATCH06-DOC06-S0033",
+      "BATCH06-DOC06-S0035",
+      "BATCH06-DOC06-S0036",
+      "BATCH06-DOC06-S0037",
+      "BATCH06-DOC06-S0038",
+      "BATCH06-DOC06-S0039",
+      "BATCH06-DOC06-S0041"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH06-DOC06-W002\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W002-E01\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0017\",\n        \"BATCH06-DOC06-S0020\",\n        \"BATCH06-DOC06-S0029\"\n      ],\n      \"event\": {\n        \"event_name\": \"渡江战役并解放南京\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"渡江作战，解放南京\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈锐霆所在部队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"骑兵团\",\n            \"normalized_entity\": \"骑兵团\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"南京\",\n            \"normalized_entity\": \"南京\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"敌人基本上都撤了，没有进行大的战斗\",\n            \"normalized_value\": \"敌军基本撤退，未发生大规模战斗\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"渡江的时候敌人基本上都撤了，没有进行大的战斗，就把南京解放了\",\n        \"type_basis\": \"核心过程为渡江作战和解放南京，属可观察的军事行动；参与者为行动者‘我们/骑兵团’和对象‘南京’，符合MATERIAL的Actor＋Goal配置；不是单纯关系、心理或言语过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W002-E02\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0020\",\n        \"BATCH06-DOC06-S0022\",\n        \"BATCH06-DOC06-S0024\",\n        \"BATCH06-DOC06-S0026\",\n        \"BATCH06-DOC06-S0028\",\n        \"BATCH06-DOC06-S0029\"\n      ],\n      \"event\": {\n        \"event_name\": \"炮击英国军舰紫石英号等\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"警告并炮击英国军舰\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈锐霆所在炮兵部队（炮三团等）\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"紫石英号\",\n            \"normalized_entity\": \"英国军舰紫石英号（HMS Amethyst）\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"伴侣号\",\n            \"normalized_entity\": \"英国军舰伴侣号\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"伦敦号\",\n            \"normalized_entity\": \"英国军舰伦敦号\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"“黑天鹅”（号）兵舰\",\n            \"normalized_entity\": \"英国军舰黑天鹅号\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"这个时候20号吧\",\n            \"normalized_value\": \"约1949年4月20日\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"第二天\",\n            \"normalized_value\": \"次日\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"离镇江不太远，有个三岔口的江面\",\n            \"normalized_value\": \"镇江附近三岔口江面\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"离江岸大概四五公里\",\n            \"normalized_value\": \"距江岸约四五公里\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"居高临下，另外炮又比较多\",\n            \"normalized_value\": \"占据居高临下且炮火较多\"\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"警告他，不要继续前进了\",\n            \"normalized_value\": \"警告英舰不要继续前进\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"但是英国帝国主义那个劲头，马上就对我们还击了，然后就打起来了。\",\n        \"type_basis\": \"核心过程为警告并炮击英国军舰，属武装物质行动；参与者为行动者‘我们’和对象‘紫石英号’等，符合MATERIAL的Actor＋Goal配置；英舰还击、搁浅、救援和交涉是同一交战过程的阶段，不另立言语或存在事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W002-E03\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0032\",\n        \"BATCH06-DOC06-S0034\",\n        \"BATCH06-DOC06-S0040\"\n      ],\n      \"event\": {\n        \"event_name\": \"过江接收江阴要塞\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"过江接收江阴要塞\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"江阴要塞\",\n            \"normalized_entity\": \"江阴要塞\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"23号\",\n            \"normalized_value\": \"1949年4月23日\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我是23号过的江吧，我记不太清楚了。过江就接收江阴要塞\",\n        \"type_basis\": \"核心过程为过江接收江阴要塞，属军事组织行动；参与者为行动者‘我’和对象‘江阴要塞’，符合MATERIAL的Actor＋Goal配置；地下党动员、司令被迫起义和政委接管军官是接收过程的触发或后续阶段，不另立事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W002-E04\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0042\"\n      ],\n      \"event\": {\n        \"event_name\": \"参加三野会议并调整上海接收机构\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"到常州参加三野会议，调整上海接收机构\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"三野\",\n            \"normalized_entity\": \"第三野战军\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"接收上海的委员会\",\n            \"normalized_entity\": \"上海接收委员会\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"4月30号\",\n            \"normalized_value\": \"1949年4月30日\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"常州，武进\",\n            \"normalized_value\": \"常州武进\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我就到了常州，到了武进嘛，在那个地方三野开两次会，这是4月30号了。\",\n        \"type_basis\": \"核心过程为到常州参加三野会议并调整上海接收机构，属组织行动；参与者为行动者‘我/三野’和对象‘接收上海的委员会’，符合MATERIAL的Actor＋Goal配置；会上发言和建议是组织调整的阶段，不另立言语事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH06-DOC06-S0016\",\n    \"BATCH06-DOC06-S0018\",\n    \"BATCH06-DOC06-S0019\",\n    \"BATCH06-DOC06-S0021\",\n    \"BATCH06-DOC06-S0023\",\n    \"BATCH06-DOC06-S0025\",\n    \"BATCH06-DOC06-S0027\",\n    \"BATCH06-DOC06-S0030\",\n    \"BATCH06-DOC06-S0031\",\n    \"BATCH06-DOC06-S0033\",\n    \"BATCH06-DOC06-S0035\",\n    \"BATCH06-DOC06-S0036\",\n    \"BATCH06-DOC06-S0037\",\n    \"BATCH06-DOC06-S0038\",\n    \"BATCH06-DOC06-S0039\",\n    \"BATCH06-DOC06-S0041\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5813,
+    "total_tokens": 23791,
+    "completion_tokens": 17978,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 15740
+    },
+    "time_to_first_token_ms": 171331,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 17977000
+  }
+}

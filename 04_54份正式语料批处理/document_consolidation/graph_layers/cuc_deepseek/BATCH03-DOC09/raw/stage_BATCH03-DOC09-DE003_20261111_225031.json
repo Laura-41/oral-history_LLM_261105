@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-11T22:50:31",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC09-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC09-DE003",
+  "usage": {
+    "prompt_tokens": 1485,
+    "total_tokens": 6781,
+    "completion_tokens": 5296,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4063
+    },
+    "time_to_first_token_ms": 42980,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5295000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC09-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"所述结果是主要领导干部先被暗杀，队伍随后被拉回；陈锐霆将其视为哗变的主要原因。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以陈锐霆对哗变原因的分析为边界：起于国民党正统观念与待遇背景，经皖南事变后生活恶化、干部家眷顾虑，止于“把队伍拉回去”的原因性陈述；不扩展未提及的具体时间、地点和人员。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"哗变前国民党正统观念较强、待遇相对较好，构成部队思想与生活背景。\",\n      \"process_text\": \"当时国民党正统观念比较强，饮食也比较好，虽然薪饷不高但每月能发到钱。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0037\"\n      ],\n      \"evidence_quote\": \"那个时候国民党正统观念还是比较强吧，另外那个时候他饮食也比较好，虽然薪饷不高吧，但是每月都可以发到钱\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"皖南事变后军费停发、生活恶化，吃饭与老百姓相同，构成推动因素。\",\n      \"process_text\": \"皖南事变以后军费停了，什么也没有，吃饭跟老百姓吃的一样，吃地瓜干、高粱面饼子等。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0037\"\n      ],\n      \"evidence_quote\": \"到我们这皖南事变以后，把军费都停了，什么也没有，吃饭就是跟老百姓吃的一样，吃地瓜干，吃“猪肝”，就是高粱面的饼子，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"一些干部因家眷在湖南，担忧起义后家属生计，成为干部层面的重大问题。\",\n      \"process_text\": \"一些干部有家眷在湖南，起义以后孩子、老婆怎么养活，这是干部的大问题。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0039\"\n      ],\n      \"evidence_quote\": \"另外一些干部有家眷在湖南，起义以后，后边的孩子、老婆怎么养活，这是干部的问题，这是个大的问题。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"作为应对，采取暗杀办法，先暗杀主要领导干部。\",\n      \"process_text\": \"采取暗杀的办法，先把主要领导干部暗杀掉。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0039\"\n      ],\n      \"evidence_quote\": \"所以采取一种暗杀的办法，先把主要领导干部暗杀掉了以后\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"暗杀后把队伍拉回去，完成所述哗变行动的关键步骤。\",\n      \"process_text\": \"随后把队伍拉回去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0039\"\n      ],\n      \"evidence_quote\": \"把队伍拉回去\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE003-P01\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0037\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE003-P02\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0039\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE003-P03\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE003-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0039\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE003-P04\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE003-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0039\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC09-DE003",
+    "event_enrichment": {
+      "result_state": "所述结果是主要领导干部先被暗杀，队伍随后被拉回；陈锐霆将其视为哗变的主要原因。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "以陈锐霆对哗变原因的分析为边界：起于国民党正统观念与待遇背景，经皖南事变后生活恶化、干部家眷顾虑，止于“把队伍拉回去”的原因性陈述；不扩展未提及的具体时间、地点和人员。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC09-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "哗变前国民党正统观念较强、待遇相对较好，构成部队思想与生活背景。",
+        "process_text": "当时国民党正统观念比较强，饮食也比较好，虽然薪饷不高但每月能发到钱。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0037"
+        ],
+        "evidence_quote": "那个时候国民党正统观念还是比较强吧，另外那个时候他饮食也比较好，虽然薪饷不高吧，但是每月都可以发到钱",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "皖南事变后军费停发、生活恶化，吃饭与老百姓相同，构成推动因素。",
+        "process_text": "皖南事变以后军费停了，什么也没有，吃饭跟老百姓吃的一样，吃地瓜干、高粱面饼子等。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0037"
+        ],
+        "evidence_quote": "到我们这皖南事变以后，把军费都停了，什么也没有，吃饭就是跟老百姓吃的一样，吃地瓜干，吃“猪肝”，就是高粱面的饼子，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "一些干部因家眷在湖南，担忧起义后家属生计，成为干部层面的重大问题。",
+        "process_text": "一些干部有家眷在湖南，起义以后孩子、老婆怎么养活，这是干部的大问题。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0039"
+        ],
+        "evidence_quote": "另外一些干部有家眷在湖南，起义以后，后边的孩子、老婆怎么养活，这是干部的问题，这是个大的问题。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "作为应对，采取暗杀办法，先暗杀主要领导干部。",
+        "process_text": "采取暗杀的办法，先把主要领导干部暗杀掉。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0039"
+        ],
+        "evidence_quote": "所以采取一种暗杀的办法，先把主要领导干部暗杀掉了以后",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "暗杀后把队伍拉回去，完成所述哗变行动的关键步骤。",
+        "process_text": "随后把队伍拉回去。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0039"
+        ],
+        "evidence_quote": "把队伍拉回去",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC09-DE003-P01",
+        "target_stage_id": "BATCH03-DOC09-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC09-S0037",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE003-P02",
+        "target_stage_id": "BATCH03-DOC09-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC09-S0039",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE003-P03",
+        "target_stage_id": "BATCH03-DOC09-DE003-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH03-DOC09-S0039",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE003-P04",
+        "target_stage_id": "BATCH03-DOC09-DE003-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC09-S0039",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

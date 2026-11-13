@@ -1,0 +1,144 @@
+{
+  "run_time": "2026-11-07T20:23:24",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC01-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC01-DE004",
+  "usage": {
+    "prompt_tokens": 1294,
+    "total_tokens": 5617,
+    "completion_tokens": 4323,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2869
+    },
+    "time_to_first_token_ms": 33390,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V1-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC01-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"情报按城内—白虎桥/戚家村—陆贞—青龙镇—郑陆桥—司令部—情报总站的接力方式逐站传送，最终由司令部转送到情报总站。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于城内情报送出的总述，止于司令部转送情报总站并再次强调一站一站送；仅描述传送路线与方式，不涉及具体某次情报内容或时间。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"城内情报按站送出，先送到东门白虎桥一带的短距离站点。\",\n      \"process_text\": \"城里面情报要送到东门、白虎桥一带，路程只有两三华里。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0042\"\n      ],\n      \"evidence_quote\": \"那如果有情报要送出来，那是一站一站送的，他这个城里面情报比如要送到东门，送到白虎桥（音），一点点路，两三华里一公里半。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"白虎桥旁戚家村情报站接收情报，并负责转送到下一站陆贞情报站。\",\n      \"process_text\": \"白虎桥附近戚家村设有情报站，情报交到该站后，由该站负责送到陆贞情报站。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0042\"\n      ],\n      \"evidence_quote\": \"那白虎桥（音）我们有一个情报站，白虎桥（音）旁边，离开一华里有个小村庄，叫戚家村，“戚继光”的“戚”，有一个情报站。他就交到这个地方就行了，这个地方负责送到下一个情报站，到陆贞（音）情报站，陆贞（音）情报站离开有七八里路，十里路左右。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陆贞情报站将情报转送青龙镇情报站。\",\n      \"process_text\": \"陆贞情报站送到青龙镇情报站。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0044\"\n      ],\n      \"evidence_quote\": \"陆贞（音）情报站送到青龙镇情报站\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"青龙镇情报站将情报转送郑陆桥情报站。\",\n      \"process_text\": \"青龙镇情报站送到郑陆桥情报站。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0044\"\n      ],\n      \"evidence_quote\": \"青龙镇情报站，送到郑陆桥情报站\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE004-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"郑陆桥情报站将情报转送司令部。\",\n      \"process_text\": \"郑陆桥情报站送到司令部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0044\"\n      ],\n      \"evidence_quote\": \"郑陆桥情报站送到我们司令部了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE004-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"司令部将情报转送情报总站，完成逐站接力传送。\",\n      \"process_text\": \"司令部送到情报总站，仍是一站一站送。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0044\"\n      ],\n      \"evidence_quote\": \"那么司令部送到我们情报总站去，他是一站一站送。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC01-DE004-P01\",\n      \"target_stage_id\": \"BATCH02-DOC01-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC01-S0042\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC01-DE004-P02\",\n      \"target_stage_id\": \"BATCH02-DOC01-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC01-S0042\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC01-DE004-P03\",\n      \"target_stage_id\": \"BATCH02-DOC01-DE004-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC01-S0044\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC01-DE004-P04\",\n      \"target_stage_id\": \"BATCH02-DOC01-DE004-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC01-S0044\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC01-DE004-P05\",\n      \"target_stage_id\": \"BATCH02-DOC01-DE004-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC01-S0044\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC01-DE004",
+    "event_enrichment": {
+      "result_state": "情报按城内—白虎桥/戚家村—陆贞—青龙镇—郑陆桥—司令部—情报总站的接力方式逐站传送，最终由司令部转送到情报总站。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于城内情报送出的总述，止于司令部转送情报总站并再次强调一站一站送；仅描述传送路线与方式，不涉及具体某次情报内容或时间。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC01-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "城内情报按站送出，先送到东门白虎桥一带的短距离站点。",
+        "process_text": "城里面情报要送到东门、白虎桥一带，路程只有两三华里。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0042"
+        ],
+        "evidence_quote": "那如果有情报要送出来，那是一站一站送的，他这个城里面情报比如要送到东门，送到白虎桥（音），一点点路，两三华里一公里半。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC01-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "白虎桥旁戚家村情报站接收情报，并负责转送到下一站陆贞情报站。",
+        "process_text": "白虎桥附近戚家村设有情报站，情报交到该站后，由该站负责送到陆贞情报站。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0042"
+        ],
+        "evidence_quote": "那白虎桥（音）我们有一个情报站，白虎桥（音）旁边，离开一华里有个小村庄，叫戚家村，“戚继光”的“戚”，有一个情报站。他就交到这个地方就行了，这个地方负责送到下一个情报站，到陆贞（音）情报站，陆贞（音）情报站离开有七八里路，十里路左右。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC01-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "陆贞情报站将情报转送青龙镇情报站。",
+        "process_text": "陆贞情报站送到青龙镇情报站。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0044"
+        ],
+        "evidence_quote": "陆贞（音）情报站送到青龙镇情报站",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC01-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "青龙镇情报站将情报转送郑陆桥情报站。",
+        "process_text": "青龙镇情报站送到郑陆桥情报站。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0044"
+        ],
+        "evidence_quote": "青龙镇情报站，送到郑陆桥情报站",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC01-DE004-P05",
+        "stage_order": 5,
+        "stage_summary": "郑陆桥情报站将情报转送司令部。",
+        "process_text": "郑陆桥情报站送到司令部。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0044"
+        ],
+        "evidence_quote": "郑陆桥情报站送到我们司令部了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC01-DE004-P06",
+        "stage_order": 6,
+        "stage_summary": "司令部将情报转送情报总站，完成逐站接力传送。",
+        "process_text": "司令部送到情报总站，仍是一站一站送。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0044"
+        ],
+        "evidence_quote": "那么司令部送到我们情报总站去，他是一站一站送。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC01-DE004-P01",
+        "target_stage_id": "BATCH02-DOC01-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC01-S0042",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC01-DE004-P02",
+        "target_stage_id": "BATCH02-DOC01-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC01-S0042",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC01-DE004-P03",
+        "target_stage_id": "BATCH02-DOC01-DE004-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC01-S0044",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC01-DE004-P04",
+        "target_stage_id": "BATCH02-DOC01-DE004-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC01-S0044",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC01-DE004-P05",
+        "target_stage_id": "BATCH02-DOC01-DE004-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC01-S0044",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

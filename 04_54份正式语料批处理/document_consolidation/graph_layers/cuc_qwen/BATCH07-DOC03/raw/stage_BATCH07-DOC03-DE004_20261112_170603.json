@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T17:06:03",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC03-DE004",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC03-DE004",
+  "usage": {
+    "prompt_tokens": 1383,
+    "total_tokens": 9298,
+    "completion_tokens": 7915,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6659
+    },
+    "time_to_first_token_ms": 228503,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC03-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰与何志远、赖少其的共事关系被叙述；其中陈海峰与赖少其明确因两次共事成为老朋友。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"边界依据 S0045 中何志远到5团任政治处主任并交接、赖少其任5团宣传股长与陈海峰同团、苏北后陈海峰任五团卫生队长与赖少其两次共事并形成老朋友的叙述；‘老朋友’直接明确于赖少其，何志远部分为共事/交接背景。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC03-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"何志远到5团任政治处主任并与陈海峰交接\",\n      \"process_text\": \"皖南事变之前，何志远从老1团政治处到5团当政治处主任，陈海峰尚未离开，两人有交接过程。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC03-S0045\"\n      ],\n      \"evidence_quote\": \"何志远是老1团政治处的一个主任，皖南事变之前，他到5团来当政治处主任。那我还没走，他刚来，我们还有一个交接过程。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC03-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"赖少其任5团宣传股长并与陈海峰同团\",\n      \"process_text\": \"赖少其是木刻专家，是5团的宣传股长，与陈海峰一个团。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC03-S0045\"\n      ],\n      \"evidence_quote\": \"那个赖少其，（他是）木刻专家，很有名的。《鲁迅传》里面七次提到赖少其，（他）是5团的宣传股长，我们一个团的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC03-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"到苏北后陈海峰与赖少其再次同处五团共事\",\n      \"process_text\": \"以后到了苏北，陈海峰当五团卫生队长，赖少其也到五团来当宣传股长，两人两次在一块。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC03-S0045\"\n      ],\n      \"evidence_quote\": \"以后到了苏北，我当五团卫生队长，他也到五团来，也当宣传股长，我们两次在一块（陈海峰微笑）\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC03-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"陈海峰与赖少其因两次共事成为老朋友\",\n      \"process_text\": \"陈海峰与赖少其因两次在一块而成为老朋友。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC03-S0045\"\n      ],\n      \"evidence_quote\": \"我们两次在一块（陈海峰微笑），所以我们是老朋友。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC03-DE004-P01\",\n      \"target_stage_id\": \"BATCH07-DOC03-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC03-S0045\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC03-DE004-P02\",\n      \"target_stage_id\": \"BATCH07-DOC03-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC03-S0045\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC03-DE004-P03\",\n      \"target_stage_id\": \"BATCH07-DOC03-DE004-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH07-DOC03-S0045\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC03-DE004",
+    "event_enrichment": {
+      "result_state": "陈海峰与何志远、赖少其的共事关系被叙述；其中陈海峰与赖少其明确因两次共事成为老朋友。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "边界依据 S0045 中何志远到5团任政治处主任并交接、赖少其任5团宣传股长与陈海峰同团、苏北后陈海峰任五团卫生队长与赖少其两次共事并形成老朋友的叙述；‘老朋友’直接明确于赖少其，何志远部分为共事/交接背景。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC03-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "何志远到5团任政治处主任并与陈海峰交接",
+        "process_text": "皖南事变之前，何志远从老1团政治处到5团当政治处主任，陈海峰尚未离开，两人有交接过程。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC03-S0045"
+        ],
+        "evidence_quote": "何志远是老1团政治处的一个主任，皖南事变之前，他到5团来当政治处主任。那我还没走，他刚来，我们还有一个交接过程。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC03-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "赖少其任5团宣传股长并与陈海峰同团",
+        "process_text": "赖少其是木刻专家，是5团的宣传股长，与陈海峰一个团。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC03-S0045"
+        ],
+        "evidence_quote": "那个赖少其，（他是）木刻专家，很有名的。《鲁迅传》里面七次提到赖少其，（他）是5团的宣传股长，我们一个团的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC03-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "到苏北后陈海峰与赖少其再次同处五团共事",
+        "process_text": "以后到了苏北，陈海峰当五团卫生队长，赖少其也到五团来当宣传股长，两人两次在一块。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC03-S0045"
+        ],
+        "evidence_quote": "以后到了苏北，我当五团卫生队长，他也到五团来，也当宣传股长，我们两次在一块（陈海峰微笑）",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC03-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "陈海峰与赖少其因两次共事成为老朋友",
+        "process_text": "陈海峰与赖少其因两次在一块而成为老朋友。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC03-S0045"
+        ],
+        "evidence_quote": "我们两次在一块（陈海峰微笑），所以我们是老朋友。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC03-DE004-P01",
+        "target_stage_id": "BATCH07-DOC03-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC03-S0045",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC03-DE004-P02",
+        "target_stage_id": "BATCH07-DOC03-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC03-S0045",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC03-DE004-P03",
+        "target_stage_id": "BATCH07-DOC03-DE004-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH07-DOC03-S0045",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T13:22:23",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC05-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC05-DE007",
+  "usage": {
+    "prompt_tokens": 1367,
+    "total_tokens": 6225,
+    "completion_tokens": 4858,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3856
+    },
+    "time_to_first_token_ms": 72316,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-07\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC05-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"张爱萍在会议上向“我们”提出要注意、警惕坏人破坏起义。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为干部因待遇、经费、通信等问题急躁愁眉苦脸，终点为张爱萍第二天召开会议并讲要注意警惕坏人破坏起义；不包含后续是否发生破坏或会议其他内容。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"干部因待遇、经费、通信等问题急躁愁眉苦脸。\",\n      \"process_text\": \"但是这个时候国民党还有中央政府的威望，认为我们是叛变嘛。另外特别是吃得太差了，（虽然）对起义的部队还特别地优待，弄了少量的大米，配合（着吃）。另外没有经费，不发钱了，连个抽烟的钱都没有；自己家属在湖南全县（音），也都没有通信，没有经费了，没有钱了嘛，怎么样往回寄？哎呀，有些干部就非常地急躁。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0040\"\n      ],\n      \"evidence_quote\": \"但是这个时候国民党还有中央政府的威望，认为我们是叛变嘛。另外特别是吃得太差了，（虽然）对起义的部队还特别地优待，弄了少量的大米，配合（着吃）。另外没有经费，不发钱了，连个抽烟的钱都没有；自己家属在湖南全县（音），也都没有通信，没有经费了，没有钱了嘛，怎么样往回寄？哎呀，有些干部就非常地急躁。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"张爱萍第二天召开会议并观察干部情绪。\",\n      \"process_text\": \"这个时候张爱萍第二天来召开了一个会议，他有经验，他一看这干部好像不是很高兴，（不是）非常快乐的样子，还愁眉苦脸的\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0040\"\n      ],\n      \"evidence_quote\": \"这个时候张爱萍第二天来召开了一个会议，他有经验，他一看这干部好像不是很高兴，（不是）非常快乐的样子，还愁眉苦脸的\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"张爱萍强调要注意警惕坏人破坏起义。\",\n      \"process_text\": \"他就跟我们讲，说要注意，警惕（坏人破坏起义）。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0040\"\n      ],\n      \"evidence_quote\": \"他就跟我们讲，说要注意，警惕（坏人破坏起义）。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE007-P01\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0040\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE007-P02\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0040\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-07",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC05-DE007",
+    "event_enrichment": {
+      "result_state": "张爱萍在会议上向“我们”提出要注意、警惕坏人破坏起义。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起点为干部因待遇、经费、通信等问题急躁愁眉苦脸，终点为张爱萍第二天召开会议并讲要注意警惕坏人破坏起义；不包含后续是否发生破坏或会议其他内容。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC05-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "干部因待遇、经费、通信等问题急躁愁眉苦脸。",
+        "process_text": "但是这个时候国民党还有中央政府的威望，认为我们是叛变嘛。另外特别是吃得太差了，（虽然）对起义的部队还特别地优待，弄了少量的大米，配合（着吃）。另外没有经费，不发钱了，连个抽烟的钱都没有；自己家属在湖南全县（音），也都没有通信，没有经费了，没有钱了嘛，怎么样往回寄？哎呀，有些干部就非常地急躁。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0040"
+        ],
+        "evidence_quote": "但是这个时候国民党还有中央政府的威望，认为我们是叛变嘛。另外特别是吃得太差了，（虽然）对起义的部队还特别地优待，弄了少量的大米，配合（着吃）。另外没有经费，不发钱了，连个抽烟的钱都没有；自己家属在湖南全县（音），也都没有通信，没有经费了，没有钱了嘛，怎么样往回寄？哎呀，有些干部就非常地急躁。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "张爱萍第二天召开会议并观察干部情绪。",
+        "process_text": "这个时候张爱萍第二天来召开了一个会议，他有经验，他一看这干部好像不是很高兴，（不是）非常快乐的样子，还愁眉苦脸的",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0040"
+        ],
+        "evidence_quote": "这个时候张爱萍第二天来召开了一个会议，他有经验，他一看这干部好像不是很高兴，（不是）非常快乐的样子，还愁眉苦脸的",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "张爱萍强调要注意警惕坏人破坏起义。",
+        "process_text": "他就跟我们讲，说要注意，警惕（坏人破坏起义）。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0040"
+        ],
+        "evidence_quote": "他就跟我们讲，说要注意，警惕（坏人破坏起义）。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC05-DE007-P01",
+        "target_stage_id": "BATCH03-DOC05-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC05-S0040",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC05-DE007-P02",
+        "target_stage_id": "BATCH03-DOC05-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC05-S0040",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

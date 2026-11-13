@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T23:20:54",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC04-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC04-DE008",
+  "usage": {
+    "prompt_tokens": 1424,
+    "total_tokens": 3599,
+    "completion_tokens": 2175,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1241
+    },
+    "time_to_first_token_ms": 19030,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2174000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC04-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"中央电报下达任命名单，陈锐霆任新四军第四师副参谋长。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈锐霆自述“第二年的十月”调动及邓子恢电话召其到师部为起点，至中央电报明确任命其为副参谋长止；不扩展到此前新四军主力西征和抗大四分校调动。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"邓子恢电话通知陈锐霆到师部，陈锐霆前往。\",\n      \"process_text\": \"邓子恢政委亲自打电话，让陈锐霆到师部来，自己在村西头等他。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0053\"\n      ],\n      \"evidence_quote\": \"那么在这个时候我到了西边不远的地方，有一天邓子恢政委亲自给我打电话，他说锐霆同志你到师部来一下子，我就在村西头等着你。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"邓子恢告知彭雪枫牺牲，并因师部无人要求陈锐霆立即到师部工作。\",\n      \"process_text\": \"邓子恢难过地告知师长彭雪枫牺牲，说师部没有人，要求陈锐霆马上到师部工作、当天不要回去并搬行李过来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0055\"\n      ],\n      \"evidence_quote\": \"我知道有紧急的事情就马上去了，老远望见他低着脑袋在马路上来回走着等我。一见我，他就很难过地就说，告诉你一个不幸消息，我们的师长牺牲了！他就讲是一发流弹正打在他的心脏上，彭雪枫那是有名的将军嘛。他说师部没有人，现在你马上（过来吧），今天不要回去了，把你的行李都搬过来，到师部来工作吧。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"中央电报下达任命，陈锐霆被任命为第四师副参谋长。\",\n      \"process_text\": \"中央电报任命四人：张爱萍接替四师师长，韦国清任副师长，张震任参谋长，陈锐霆任副参谋长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0055\"\n      ],\n      \"evidence_quote\": \"不久中央电报来了，上头（任命了）四个人，第一个是彭雪枫死了以后由张爱萍接替四师师长，还有韦国清当副师长，张震是参谋长，我是副参谋长。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE008-P01\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0053\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE008-P02\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0055\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC04-DE008",
+    "event_enrichment": {
+      "result_state": "中央电报下达任命名单，陈锐霆任新四军第四师副参谋长。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以陈锐霆自述“第二年的十月”调动及邓子恢电话召其到师部为起点，至中央电报明确任命其为副参谋长止；不扩展到此前新四军主力西征和抗大四分校调动。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC04-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "邓子恢电话通知陈锐霆到师部，陈锐霆前往。",
+        "process_text": "邓子恢政委亲自打电话，让陈锐霆到师部来，自己在村西头等他。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0053"
+        ],
+        "evidence_quote": "那么在这个时候我到了西边不远的地方，有一天邓子恢政委亲自给我打电话，他说锐霆同志你到师部来一下子，我就在村西头等着你。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "邓子恢告知彭雪枫牺牲，并因师部无人要求陈锐霆立即到师部工作。",
+        "process_text": "邓子恢难过地告知师长彭雪枫牺牲，说师部没有人，要求陈锐霆马上到师部工作、当天不要回去并搬行李过来。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0055"
+        ],
+        "evidence_quote": "我知道有紧急的事情就马上去了，老远望见他低着脑袋在马路上来回走着等我。一见我，他就很难过地就说，告诉你一个不幸消息，我们的师长牺牲了！他就讲是一发流弹正打在他的心脏上，彭雪枫那是有名的将军嘛。他说师部没有人，现在你马上（过来吧），今天不要回去了，把你的行李都搬过来，到师部来工作吧。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "中央电报下达任命，陈锐霆被任命为第四师副参谋长。",
+        "process_text": "中央电报任命四人：张爱萍接替四师师长，韦国清任副师长，张震任参谋长，陈锐霆任副参谋长。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0055"
+        ],
+        "evidence_quote": "不久中央电报来了，上头（任命了）四个人，第一个是彭雪枫死了以后由张爱萍接替四师师长，还有韦国清当副师长，张震是参谋长，我是副参谋长。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC04-DE008-P01",
+        "target_stage_id": "BATCH04-DOC04-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC04-S0053",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC04-DE008-P02",
+        "target_stage_id": "BATCH04-DOC04-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC04-S0055",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

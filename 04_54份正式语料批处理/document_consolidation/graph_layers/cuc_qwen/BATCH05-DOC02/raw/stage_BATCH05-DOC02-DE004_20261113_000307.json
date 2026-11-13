@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-13T00:03:07",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC02-DE004",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC02-DE004",
+  "usage": {
+    "prompt_tokens": 1391,
+    "total_tokens": 6795,
+    "completion_tokens": 5404,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4252
+    },
+    "tokens_per_second": 5403000,
+    "time_to_first_token_ms": 79810,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-13\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC02-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"短枪队在清乡封锁线内以分散小组方式隐蔽活动\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于S0154所述电网、据点、碉堡封锁线内搜查造成短枪队活动困难，止于S0158所述靠当地隐蔽，未出现新的独立行动或结果\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"封锁线内搜查造成短枪队活动困难\",\n      \"process_text\": \"电网以后发展成据点、建碉堡，二百多里路封锁线有几个口子，口子有碉堡严格检查进出人员，进去容易出来难，里面挨家挨户搜查，短枪队在里面活动很困难。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0154\"\n      ],\n      \"evidence_quote\": \"那电网以后呢，再（发展成）据点，建碉堡。这二百多里路的封锁线呢，就是有几个口子。这口子都有碉堡，严格检查进出人员，所以进去容易，出来就难。在里面的，挨家挨户搜查，短枪队在里面活动也很困难的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"短枪队以三人小组在封锁线内活动\",\n      \"process_text\": \"都是三人小组在里面活动，周林讲他带的几十个人分了十几个二十个小组活动。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0155\"\n      ],\n      \"evidence_quote\": \"他不可能……都是三人小组在里面活动，后来周林还讲这个事，他带的几十个人分了十几个二十个小组啊，活动啊。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"小组分散活动并依靠地下党隐蔽\",\n      \"process_text\": \"分散活动，我不知道你，你不知道我，靠地下党隐蔽。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0156\"\n      ],\n      \"evidence_quote\": \"他都分散活动啊，我不知道你，你不知道我，都靠地下党啊，隐蔽啊。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"隐蔽活动还依靠当地\",\n      \"process_text\": \"靠当地。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0158\"\n      ],\n      \"evidence_quote\": \"    陈海峰：靠当地。\",\n      \"confidence\": \"LOW\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE004-P01\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE004-P02\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE004-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0156\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE004-P03\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE004-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0158\",\n      \"confidence\": \"LOW\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-13",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC02-DE004",
+    "event_enrichment": {
+      "result_state": "短枪队在清乡封锁线内以分散小组方式隐蔽活动",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于S0154所述电网、据点、碉堡封锁线内搜查造成短枪队活动困难，止于S0158所述靠当地隐蔽，未出现新的独立行动或结果",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC02-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "封锁线内搜查造成短枪队活动困难",
+        "process_text": "电网以后发展成据点、建碉堡，二百多里路封锁线有几个口子，口子有碉堡严格检查进出人员，进去容易出来难，里面挨家挨户搜查，短枪队在里面活动很困难。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0154"
+        ],
+        "evidence_quote": "那电网以后呢，再（发展成）据点，建碉堡。这二百多里路的封锁线呢，就是有几个口子。这口子都有碉堡，严格检查进出人员，所以进去容易，出来就难。在里面的，挨家挨户搜查，短枪队在里面活动也很困难的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "短枪队以三人小组在封锁线内活动",
+        "process_text": "都是三人小组在里面活动，周林讲他带的几十个人分了十几个二十个小组活动。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0155"
+        ],
+        "evidence_quote": "他不可能……都是三人小组在里面活动，后来周林还讲这个事，他带的几十个人分了十几个二十个小组啊，活动啊。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "小组分散活动并依靠地下党隐蔽",
+        "process_text": "分散活动，我不知道你，你不知道我，靠地下党隐蔽。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0156"
+        ],
+        "evidence_quote": "他都分散活动啊，我不知道你，你不知道我，都靠地下党啊，隐蔽啊。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "隐蔽活动还依靠当地",
+        "process_text": "靠当地。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0158"
+        ],
+        "evidence_quote": "    陈海峰：靠当地。",
+        "confidence": "LOW"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC02-DE004-P01",
+        "target_stage_id": "BATCH05-DOC02-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE004-P02",
+        "target_stage_id": "BATCH05-DOC02-DE004-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC02-S0156",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE004-P03",
+        "target_stage_id": "BATCH05-DOC02-DE004-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC02-S0158",
+        "confidence": "LOW"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

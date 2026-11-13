@@ -1,0 +1,127 @@
+{
+  "run_time": "2026-11-13T01:52:19",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC08-DE004",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC08-DE004",
+  "usage": {
+    "prompt_tokens": 2862,
+    "total_tokens": 13073,
+    "completion_tokens": 10211,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8701
+    },
+    "time_to_first_token_ms": 150860,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-16\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC08-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"在东峰岕训练并制作急救器材后，南下至孝丰县下梅村边，进入准备接收伤员状态。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于在东峰岕训练并接到准备作战、准备南进命令，止于南下指定孝丰县梅村边、马上准备接收伤员并主要住在下梅村边。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"东峰岕训练期间接到作战南进和收伤员准备命令\",\n      \"process_text\": \"在东峰岕抓紧时间训练，训练未半时接到准备作战、准备南进的命令。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0122\"\n      ],\n      \"evidence_quote\": \"    陈海峰：这个干部（对）他（是）非常敬仰和崇拜的。这样子呢，我们在东峰岕就开始抓紧时间训练。还没有训练到一半，只有半个多月，命令来了，准备作战，准备南进。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"临时领取白布启动战斗与收伤员准备\",\n      \"process_text\": \"在两手空空的情况下，临时到供给部领取白布（龙头细布），用于战斗和收伤员准备。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0123\"\n      ],\n      \"evidence_quote\": \"哎呦，要我们做战斗准备，收伤员的准备。（陈海峰大笑）两手空空啥也没有，临时啊，就是找到供给部去领那个白布，叫龙头细布啊。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"动员学生和老百姓手工制作伤员急救器材\",\n      \"process_text\": \"动员一部分学生、庄子里的老百姓，以手工方式制作伤员急救器材。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0138\"\n      ],\n      \"evidence_quote\": \"动员一部分学生来帮忙。卷啊弄啊什么的，都手工啊，走群众路线。（把）这个庄子（的）老百姓都动员起来，来帮我们做这个伤员的急救器材。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"按标准制作棉花球等器材并完成半个月多后准备南下\",\n      \"process_text\": \"按标准制作棉花球等器材，做了半个月多一点后开始准备马上南下。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0143\"\n      ],\n      \"evidence_quote\": \"一磅棉花呢，要求标准是8000个棉花球，做的好的可以（做）8800个棉花球。做了以后半个月多一点呢，就开始准备，马上南下。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE004-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"南下孝丰县梅村边并准备接收伤员\",\n      \"process_text\": \"南下指定到孝丰县梅村边，因苏浙天目山战斗打响而马上准备接收伤员，主要住在下梅村边。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0145\",\n        \"BATCH05-DOC08-S0146\",\n        \"BATCH05-DOC08-S0150\"\n      ],\n      \"evidence_quote\": \"    陈海峰：南下指定我们到梅村边，就是孝丰县这个梅村边。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE004-P01\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE004-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0123\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE004-P02\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0138\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE004-P03\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE004-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0143\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE004-P04\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE004-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0145\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-16",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC08-DE004",
+    "event_enrichment": {
+      "result_state": "在东峰岕训练并制作急救器材后，南下至孝丰县下梅村边，进入准备接收伤员状态。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于在东峰岕训练并接到准备作战、准备南进命令，止于南下指定孝丰县梅村边、马上准备接收伤员并主要住在下梅村边。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC08-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "东峰岕训练期间接到作战南进和收伤员准备命令",
+        "process_text": "在东峰岕抓紧时间训练，训练未半时接到准备作战、准备南进的命令。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0122"
+        ],
+        "evidence_quote": "    陈海峰：这个干部（对）他（是）非常敬仰和崇拜的。这样子呢，我们在东峰岕就开始抓紧时间训练。还没有训练到一半，只有半个多月，命令来了，准备作战，准备南进。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "临时领取白布启动战斗与收伤员准备",
+        "process_text": "在两手空空的情况下，临时到供给部领取白布（龙头细布），用于战斗和收伤员准备。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0123"
+        ],
+        "evidence_quote": "哎呦，要我们做战斗准备，收伤员的准备。（陈海峰大笑）两手空空啥也没有，临时啊，就是找到供给部去领那个白布，叫龙头细布啊。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "动员学生和老百姓手工制作伤员急救器材",
+        "process_text": "动员一部分学生、庄子里的老百姓，以手工方式制作伤员急救器材。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0138"
+        ],
+        "evidence_quote": "动员一部分学生来帮忙。卷啊弄啊什么的，都手工啊，走群众路线。（把）这个庄子（的）老百姓都动员起来，来帮我们做这个伤员的急救器材。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "按标准制作棉花球等器材并完成半个月多后准备南下",
+        "process_text": "按标准制作棉花球等器材，做了半个月多一点后开始准备马上南下。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0143"
+        ],
+        "evidence_quote": "一磅棉花呢，要求标准是8000个棉花球，做的好的可以（做）8800个棉花球。做了以后半个月多一点呢，就开始准备，马上南下。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE004-P05",
+        "stage_order": 5,
+        "stage_summary": "南下孝丰县梅村边并准备接收伤员",
+        "process_text": "南下指定到孝丰县梅村边，因苏浙天目山战斗打响而马上准备接收伤员，主要住在下梅村边。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0145",
+          "BATCH05-DOC08-S0146",
+          "BATCH05-DOC08-S0150"
+        ],
+        "evidence_quote": "    陈海峰：南下指定我们到梅村边，就是孝丰县这个梅村边。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC08-DE004-P01",
+        "target_stage_id": "BATCH05-DOC08-DE004-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH05-DOC08-S0123",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC08-DE004-P02",
+        "target_stage_id": "BATCH05-DOC08-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC08-S0138",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC08-DE004-P03",
+        "target_stage_id": "BATCH05-DOC08-DE004-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC08-S0143",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC08-DE004-P04",
+        "target_stage_id": "BATCH05-DOC08-DE004-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC08-S0145",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

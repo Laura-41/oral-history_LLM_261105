@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T01:30:36",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC05-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC05-DE002",
+  "usage": {
+    "prompt_tokens": 1513,
+    "total_tokens": 5953,
+    "completion_tokens": 4440,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3564
+    },
+    "time_to_first_token_ms": 35191,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4439000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC05-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"医疗用品和笔记本等已交给朱潮；陈海峰认为由同班同学朱潮保管最保险。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈海峰因埋伏、要穿便衣而决定把随身物品交给同学为起点，以在句容茅山一带树林中找到朱潮并交付血管、镊子、剪子、手术刀和笔记本等为终点；同班同学最保险为交付理由。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC05-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"因埋伏需穿便衣，陈海峰决定把随身物品交给同学朱潮。\",\n      \"process_text\": \"陈海峰说，部队埋伏、要穿便衣，他把所有东西交给同学朱潮。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC05-S0020\"\n      ],\n      \"evidence_quote\": \"我们埋伏了，要穿便衣了，我把所有的（东西）都交给我的同学\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC05-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"皖南事变后，陈海峰在句容茅山树林中找到朱潮，将医疗用品和笔记本等全部交给他。\",\n      \"process_text\": \"皖南事变后，陈海峰在句容茅山一带山里头、上面有鬼子的树林中找到朱潮，把血管、镊子、剪子、手术刀和笔记本等全部交给他。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC05-S0020\"\n      ],\n      \"evidence_quote\": \"在皖南事变以后，我找到他，他在句容那一带（的）山里头，茅山。上面有鬼子，（我）就在下面树林子里头找到他，把所有都交给他，血管、镊子、剪子、（手术）刀什么东西，我的笔记本什么，都交给他。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC05-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"因两人是同班同学，陈海峰认为交给朱潮保管最保险。\",\n      \"process_text\": \"因为两人是同班同学，陈海峰认为交给朱潮最保险。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC05-S0020\"\n      ],\n      \"evidence_quote\": \"因为我们（是）同班同学，交给他最保险了嘛。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC05-DE002-P01\",\n      \"target_stage_id\": \"BATCH07-DOC05-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC05-S0020\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC05-DE002-P02\",\n      \"target_stage_id\": \"BATCH07-DOC05-DE002-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH07-DOC05-S0020\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC05-DE002",
+    "event_enrichment": {
+      "result_state": "医疗用品和笔记本等已交给朱潮；陈海峰认为由同班同学朱潮保管最保险。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以陈海峰因埋伏、要穿便衣而决定把随身物品交给同学为起点，以在句容茅山一带树林中找到朱潮并交付血管、镊子、剪子、手术刀和笔记本等为终点；同班同学最保险为交付理由。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC05-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "因埋伏需穿便衣，陈海峰决定把随身物品交给同学朱潮。",
+        "process_text": "陈海峰说，部队埋伏、要穿便衣，他把所有东西交给同学朱潮。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC05-S0020"
+        ],
+        "evidence_quote": "我们埋伏了，要穿便衣了，我把所有的（东西）都交给我的同学",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC05-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "皖南事变后，陈海峰在句容茅山树林中找到朱潮，将医疗用品和笔记本等全部交给他。",
+        "process_text": "皖南事变后，陈海峰在句容茅山一带山里头、上面有鬼子的树林中找到朱潮，把血管、镊子、剪子、手术刀和笔记本等全部交给他。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC05-S0020"
+        ],
+        "evidence_quote": "在皖南事变以后，我找到他，他在句容那一带（的）山里头，茅山。上面有鬼子，（我）就在下面树林子里头找到他，把所有都交给他，血管、镊子、剪子、（手术）刀什么东西，我的笔记本什么，都交给他。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC05-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "因两人是同班同学，陈海峰认为交给朱潮保管最保险。",
+        "process_text": "因为两人是同班同学，陈海峰认为交给朱潮最保险。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC05-S0020"
+        ],
+        "evidence_quote": "因为我们（是）同班同学，交给他最保险了嘛。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC05-DE002-P01",
+        "target_stage_id": "BATCH07-DOC05-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC05-S0020",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC05-DE002-P02",
+        "target_stage_id": "BATCH07-DOC05-DE002-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH07-DOC05-S0020",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

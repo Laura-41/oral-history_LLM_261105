@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-12T09:12:42",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC03-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC03-DE008",
+  "usage": {
+    "prompt_tokens": 1269,
+    "total_tokens": 5299,
+    "completion_tokens": 4030,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3372
+    },
+    "time_to_first_token_ms": 63183,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V1-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC03-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰在三支队先任营卫生指导员、卫生巡视员，四个月以后任团卫生队长，即少校卫生队长。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"边界依据片段中‘1939年的9月我就派到三支队当营卫生指导员，当卫生巡视员。四个月以后，我就当团卫生队队长了，就是少校卫生队长。’；不含训练报名、毕业及待遇说明。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰于1939年9月被派到三支队担任营卫生指导员和卫生巡视员。\",\n      \"process_text\": \"1939年的9月我就派到三支队当营卫生指导员，当卫生巡视员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0037\"\n      ],\n      \"evidence_quote\": \"1939年的9月我就派到三支队当营卫生指导员，当卫生巡视员。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈海峰在四个月以后担任团卫生队长，即少校卫生队长。\",\n      \"process_text\": \"四个月以后，我就当团卫生队队长了，就是少校卫生队长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0037\"\n      ],\n      \"evidence_quote\": \"四个月以后，我就当团卫生队队长了，就是少校卫生队长。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE008-P01\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0037\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC03-DE008",
+    "event_enrichment": {
+      "result_state": "陈海峰在三支队先任营卫生指导员、卫生巡视员，四个月以后任团卫生队长，即少校卫生队长。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "边界依据片段中‘1939年的9月我就派到三支队当营卫生指导员，当卫生巡视员。四个月以后，我就当团卫生队队长了，就是少校卫生队长。’；不含训练报名、毕业及待遇说明。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC03-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰于1939年9月被派到三支队担任营卫生指导员和卫生巡视员。",
+        "process_text": "1939年的9月我就派到三支队当营卫生指导员，当卫生巡视员。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0037"
+        ],
+        "evidence_quote": "1939年的9月我就派到三支队当营卫生指导员，当卫生巡视员。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "陈海峰在四个月以后担任团卫生队长，即少校卫生队长。",
+        "process_text": "四个月以后，我就当团卫生队队长了，就是少校卫生队长。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0037"
+        ],
+        "evidence_quote": "四个月以后，我就当团卫生队队长了，就是少校卫生队长。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC03-DE008-P01",
+        "target_stage_id": "BATCH02-DOC03-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0037",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

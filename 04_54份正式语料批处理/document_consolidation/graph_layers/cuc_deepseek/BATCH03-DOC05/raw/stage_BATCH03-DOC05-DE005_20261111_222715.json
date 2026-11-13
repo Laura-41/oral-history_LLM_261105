@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T22:27:15",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC05-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC05-DE005",
+  "usage": {
+    "prompt_tokens": 1404,
+    "total_tokens": 4253,
+    "completion_tokens": 2849,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2052
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2848000,
+    "time_to_first_token_ms": 25825
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-07\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC05-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆部转移至津浦路东，继续行进两天后到达洪泽湖附近、泗县南边，与二十七团会合并受到接待；会合后部队面临国民党扣发新四军款项军费造成的粮食和物资困难。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为起义后向津浦路东转移，终点为在洪泽湖附近泗县南边与二十七团会面并受接待；同段后续物资困难作为会合后的处境记录，不扩展为新的转移阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"起义后当夜转移至津浦路东\",\n      \"process_text\": \"当时一夜，就到了津浦路东了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0036\"\n      ],\n      \"evidence_quote\": \"当时一夜，就到了津浦路东了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"继续行进两天，到达洪泽湖附近、泗县南边\",\n      \"process_text\": \"我走了两天，就到了洪泽湖边上不远的地方，就在泗县南边啊\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0036\"\n      ],\n      \"evidence_quote\": \"我走了两天，就到了洪泽湖边上不远的地方，就在泗县南边啊\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"与二十七团会面并受到接待\",\n      \"process_text\": \"我们有个二十七团，就是赵桂川（音），也是我们一个老同志，他当团长，就一块见了面，受到他的接待。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0036\"\n      ],\n      \"evidence_quote\": \"我们有个二十七团，就是赵桂川（音），也是我们一个老同志，他当团长，就一块见了面，受到他的接待。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE005-P01\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0036\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE005-P02\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0036\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-07",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC05-DE005",
+    "event_enrichment": {
+      "result_state": "陈锐霆部转移至津浦路东，继续行进两天后到达洪泽湖附近、泗县南边，与二十七团会合并受到接待；会合后部队面临国民党扣发新四军款项军费造成的粮食和物资困难。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起点为起义后向津浦路东转移，终点为在洪泽湖附近泗县南边与二十七团会面并受接待；同段后续物资困难作为会合后的处境记录，不扩展为新的转移阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC05-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "起义后当夜转移至津浦路东",
+        "process_text": "当时一夜，就到了津浦路东了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0036"
+        ],
+        "evidence_quote": "当时一夜，就到了津浦路东了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "继续行进两天，到达洪泽湖附近、泗县南边",
+        "process_text": "我走了两天，就到了洪泽湖边上不远的地方，就在泗县南边啊",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0036"
+        ],
+        "evidence_quote": "我走了两天，就到了洪泽湖边上不远的地方，就在泗县南边啊",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "与二十七团会面并受到接待",
+        "process_text": "我们有个二十七团，就是赵桂川（音），也是我们一个老同志，他当团长，就一块见了面，受到他的接待。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0036"
+        ],
+        "evidence_quote": "我们有个二十七团，就是赵桂川（音），也是我们一个老同志，他当团长，就一块见了面，受到他的接待。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC05-DE005-P01",
+        "target_stage_id": "BATCH03-DOC05-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC05-S0036",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC05-DE005-P02",
+        "target_stage_id": "BATCH03-DOC05-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC05-S0036",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

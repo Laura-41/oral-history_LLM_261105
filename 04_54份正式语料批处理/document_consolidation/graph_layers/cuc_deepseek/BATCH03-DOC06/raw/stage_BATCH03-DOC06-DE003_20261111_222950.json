@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T22:29:50",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE003",
+  "usage": {
+    "prompt_tokens": 1518,
+    "total_tokens": 6006,
+    "completion_tokens": 4488,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3354
+    },
+    "time_to_first_token_ms": 36574,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"日军大队东逃，我方追击至城附近未能攻入，撤到山上；随后师部、旅部回到汾阳、孝义一带。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以部队返回午城镇附近、日军从临汾西进并遭我侧击为起点，以追击至城附近未克、撤至山上及师旅部转移为终点；依据本事件四个原文片段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"部队返回午城镇附近，日军从临汾西进欲占大宁，我方与686团在午城镇和井沟之间侧击日军。\",\n      \"process_text\": \"返回来就在午城镇附近，敌人从临汾派兵西进，我们就侧击他，686团也侧击他，就在午城镇和井沟的中间。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0011\"\n      ],\n      \"evidence_quote\": \"返回来就在午城镇附近，结果敌人从临汾又派兵过来，往西要占领大宁，我们就侧击他，686团也侧击他，就在那午城镇和井沟的中间。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"686团与敌一个大队激战，我方伤亡和弹药消耗较大，停止攻击。\",\n      \"process_text\": \"686团与敌一个大队激战，伤亡较大；我方伤亡和弹药消耗较多，就停下来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0013\"\n      ],\n      \"evidence_quote\": \"686团大概弄住敌人一个大队，相当于我们一个营，它就打得比较激烈，伤亡也比较大。这个战斗怎么解决的？我们伤亡比较大，我们弹药消耗也比较多，就停下来。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"停止主动攻击后，日军大队趁隙往东逃跑，我方仍在西边山上。\",\n      \"process_text\": \"停下来以后没有主动攻击，敌人趁机会往东跑；我们还在靠西边那个山上，日军也觉得受威胁，也往东跑了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0013\"\n      ],\n      \"evidence_quote\": \"停下来以后没有主动去攻击他了，他趁这个机会往东跑了。他这个大队往东跑了，我们还在靠西边那个山上，结果日本鬼子他也觉得我们威胁他，他也往东跑了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"我方追击至城附近，打了一下见无法攻入，撤到山上。\",\n      \"process_text\": \"就是追，追到城附近打了一下，看到进不去，就撤到山上了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0030\"\n      ],\n      \"evidence_quote\": \"就是追啊追，追到城附近打了一下，看到进不去，就撤到山上了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE003-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0013\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE003-P02\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE003-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0013\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE003-P03\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE003-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0030\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE003",
+    "event_enrichment": {
+      "result_state": "日军大队东逃，我方追击至城附近未能攻入，撤到山上；随后师部、旅部回到汾阳、孝义一带。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以部队返回午城镇附近、日军从临汾西进并遭我侧击为起点，以追击至城附近未克、撤至山上及师旅部转移为终点；依据本事件四个原文片段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "部队返回午城镇附近，日军从临汾西进欲占大宁，我方与686团在午城镇和井沟之间侧击日军。",
+        "process_text": "返回来就在午城镇附近，敌人从临汾派兵西进，我们就侧击他，686团也侧击他，就在午城镇和井沟的中间。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0011"
+        ],
+        "evidence_quote": "返回来就在午城镇附近，结果敌人从临汾又派兵过来，往西要占领大宁，我们就侧击他，686团也侧击他，就在那午城镇和井沟的中间。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "686团与敌一个大队激战，我方伤亡和弹药消耗较大，停止攻击。",
+        "process_text": "686团与敌一个大队激战，伤亡较大；我方伤亡和弹药消耗较多，就停下来。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0013"
+        ],
+        "evidence_quote": "686团大概弄住敌人一个大队，相当于我们一个营，它就打得比较激烈，伤亡也比较大。这个战斗怎么解决的？我们伤亡比较大，我们弹药消耗也比较多，就停下来。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "停止主动攻击后，日军大队趁隙往东逃跑，我方仍在西边山上。",
+        "process_text": "停下来以后没有主动攻击，敌人趁机会往东跑；我们还在靠西边那个山上，日军也觉得受威胁，也往东跑了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0013"
+        ],
+        "evidence_quote": "停下来以后没有主动去攻击他了，他趁这个机会往东跑了。他这个大队往东跑了，我们还在靠西边那个山上，结果日本鬼子他也觉得我们威胁他，他也往东跑了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "我方追击至城附近，打了一下见无法攻入，撤到山上。",
+        "process_text": "就是追，追到城附近打了一下，看到进不去，就撤到山上了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0030"
+        ],
+        "evidence_quote": "就是追啊追，追到城附近打了一下，看到进不去，就撤到山上了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE003-P01",
+        "target_stage_id": "BATCH03-DOC06-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0013",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE003-P02",
+        "target_stage_id": "BATCH03-DOC06-DE003-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH03-DOC06-S0013",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE003-P03",
+        "target_stage_id": "BATCH03-DOC06-DE003-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0030",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,113 @@
+{
+  "run_time": "2026-11-10T18:58:11",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC01-W005",
+  "technical_document_id": "BATCH03-DOC01",
+  "document_id": "05.陈海峰（二访）（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC01-S0074",
+    "BATCH03-DOC01-S0075",
+    "BATCH03-DOC01-S0076",
+    "BATCH03-DOC01-S0077",
+    "BATCH03-DOC01-S0078",
+    "BATCH03-DOC01-S0079",
+    "BATCH03-DOC01-S0080",
+    "BATCH03-DOC01-S0081"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 4,
+    "unassigned_segment_count": 4,
+    "input_segment_count": 8,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH03-DOC01-W005-E01"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC01-W005",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC01-W005-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC01-S0075",
+          "BATCH03-DOC01-S0077",
+          "BATCH03-DOC01-S0079",
+          "BATCH03-DOC01-S0081"
+        ],
+        "event": {
+          "event_name": "五里亭山地伏击与翻山突围",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "伏击日军并翻山突围",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰所在营及机炮连",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "鬼子",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "那天",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "山上",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "繁昌城附近",
+              "normalized_value": "繁昌城附近"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "往山上",
+              "normalized_value": "向山上"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "爬到离我们只有二三十米（的）地方，机枪开始打了，轻重机枪一起，“嘎嘎嘎嘎嘎嘎嘎嘎嘎”扫，鬼子“哇哇哇哇”叫。",
+          "type_basis": "核心过程为部队在五里亭附近山地伏击日军、遭炮火与增援后翻山突围，属作战、组织行动和空间移动；参与者为Actor与Goal，符合MATERIAL允许角色词表。非VERBAL、MENTAL、RELATIONAL、BEHAVIORAL或EXISTENTIAL。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC01-S0074",
+      "BATCH03-DOC01-S0076",
+      "BATCH03-DOC01-S0078",
+      "BATCH03-DOC01-S0080"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH03-DOC01-W005\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC01-W005-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC01-S0075\",\n        \"BATCH03-DOC01-S0077\",\n        \"BATCH03-DOC01-S0079\",\n        \"BATCH03-DOC01-S0081\"\n      ],\n      \"event\": {\n        \"event_name\": \"五里亭山地伏击与翻山突围\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"伏击日军并翻山突围\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰所在营及机炮连\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"鬼子\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"那天\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"山上\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"繁昌城附近\",\n            \"normalized_value\": \"繁昌城附近\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"往山上\",\n            \"normalized_value\": \"向山上\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"爬到离我们只有二三十米（的）地方，机枪开始打了，轻重机枪一起，“嘎嘎嘎嘎嘎嘎嘎嘎嘎”扫，鬼子“哇哇哇哇”叫。\",\n        \"type_basis\": \"核心过程为部队在五里亭附近山地伏击日军、遭炮火与增援后翻山突围，属作战、组织行动和空间移动；参与者为Actor与Goal，符合MATERIAL允许角色词表。非VERBAL、MENTAL、RELATIONAL、BEHAVIORAL或EXISTENTIAL。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC01-S0074\",\n    \"BATCH03-DOC01-S0076\",\n    \"BATCH03-DOC01-S0078\",\n    \"BATCH03-DOC01-S0080\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5458,
+    "total_tokens": 15192,
+    "completion_tokens": 9734,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9133
+    },
+    "time_to_first_token_ms": 129757,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

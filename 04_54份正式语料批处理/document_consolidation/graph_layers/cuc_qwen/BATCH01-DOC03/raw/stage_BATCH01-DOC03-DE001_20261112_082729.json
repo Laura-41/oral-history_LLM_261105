@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T08:27:29",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC03-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC03-DE001",
+  "usage": {
+    "prompt_tokens": 1920,
+    "total_tokens": 11508,
+    "completion_tokens": 9588,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7683
+    },
+    "time_to_first_token_ms": 141161,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9587000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC03-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队完成战前动员与任务分配，于当晚12点出发，到山上等待进攻开始。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为 S0012 所述可能是22号师里决心23号发起战斗并往作战方向前进；终点为 S0023 所述当晚12点出发、到山上等待进攻开始；S0023 后段“发起进攻”属于后续战斗推进，不作为本事件结果核心。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"战前判断与向作战方向前进\",\n      \"process_text\": \"所以当时看起来，平型关那么多人，那么多兵，那么多武器在那里，所以我们从后面打下去，很有把握了。我们在可能是22号吧，师里面就决心要在23号发起战斗，就在22号往这个作战方向去，往前走。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0012\"\n      ],\n      \"evidence_quote\": \"    杨永松：所以当时看起来，平型关那么多人，那么多兵，那么多武器在那里，所以我们从后面打下去，很有把握了。我们在可能是22号吧，师里面就决心要在23号发起战斗，就在22号往这个作战方向去，往前走。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"冉庄干部会议与战前动员背景\",\n      \"process_text\": \"有，就在冉庄啊开了干部会议，营以上干部会议。下面要打日本这个问题这已经动员了半年了，冉庄那个会议，是交待任务啊，战术等等，因为我那时候不是营级干部，我是个……现在是叫秘书，那个时候叫技术书记，我没参加那个会。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0015\"\n      ],\n      \"evidence_quote\": \"    杨永松：有，就在冉庄啊开了干部会议，营以上干部会议。下面要打日本这个问题这已经动员了半年了，冉庄那个会议，是交待任务啊，战术等等，因为我那时候不是营级干部，我是个……现在是叫秘书，那个时候叫技术书记，我没参加那个会。我们的士气呀，没有问题那时候，因为从长征就是北上准备打日本的嘛。“西安事变”以后和平解决了，又进行了差不多半年的教育和训练，无论是思想上、体力上，伙食不是改善了嘛，有大米有白面吃啊，伙食也比过去好了，所以士气和身体都是很好的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"宿营地政治组动员\",\n      \"process_text\": \"等那一天开进的时候呢，大概到了天黑的时候，就到了宿营地了。我这上面写了，我们那天晚上政治组开会，唐亮主持会议，就说今天晚上就要进入阵地，明天就要进入战斗了，我们必须发扬我们红军的老传统，要打出军威国威来，要给全国人民一个高兴，也是个鼓励。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0017\"\n      ],\n      \"evidence_quote\": \"    杨永松：等那一天开进的时候呢，大概到了天黑的时候，就到了宿营地了。我这上面写了，我们那天晚上政治组开会，唐亮主持会议，就说今天晚上就要进入阵地，明天就要进入战斗了，我们必须发扬我们红军的老传统，要打出军威国威来，要给全国人民一个高兴，也是个鼓励。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"唐亮分配战斗政治工作与民运股任务，杨永松协助民运股\",\n      \"process_text\": \"那天晚上唐亮主任是分配组织股、宣传股跟着营里面参加战斗政治鼓励工作，民运股，曾思玉（音）的股长，留在后边，准备接收俘虏，准备动员担架。把我呢，说你协助民运股工作。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0021\"\n      ],\n      \"evidence_quote\": \"    杨永松：（说）好厉害啊，这个炮、飞机呀。问他厉害到什么程度啊，你们伤了多少人？不知道。所以这样的时候，就更使得我们这个部队（士气高涨），你没有打你就往后跑，还说厉害，我们这个部队士气就更……就是非打个好仗不行啊。那天晚上唐亮主任是分配组织股、宣传股跟着营里面参加战斗政治鼓励工作，民运股，曾思玉（音）的股长，留在后边，准备接收俘虏，准备动员担架。把我呢，说你协助民运股工作。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"部队出发、到山上等待进攻开始\",\n      \"process_text\": \"那天晚上12点我们部队就出发了，部队出发以后就下雨，到山上，在那里等着进攻开始。部队也淋湿了，也比较冷，但是大家都不会因为这个冷情绪不高，就是第一仗一定要打好。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0023\"\n      ],\n      \"evidence_quote\": \"    杨永松：那天晚上12点我们部队就出发了，部队出发以后就下雨，到山上，在那里等着进攻开始。部队也淋湿了，也比较冷，但是大家都不会因为这个冷情绪不高，就是第一仗一定要打好。在天亮以后啊，敌人他很警觉，也好像发现了情况，我们看着他好像也发现我们了，我们就发起进攻。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE001-P01\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE001-P02\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE001-P03\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE001-P04\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE001-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC03-DE001",
+    "event_enrichment": {
+      "result_state": "部队完成战前动员与任务分配，于当晚12点出发，到山上等待进攻开始。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为 S0012 所述可能是22号师里决心23号发起战斗并往作战方向前进；终点为 S0023 所述当晚12点出发、到山上等待进攻开始；S0023 后段“发起进攻”属于后续战斗推进，不作为本事件结果核心。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC03-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "战前判断与向作战方向前进",
+        "process_text": "所以当时看起来，平型关那么多人，那么多兵，那么多武器在那里，所以我们从后面打下去，很有把握了。我们在可能是22号吧，师里面就决心要在23号发起战斗，就在22号往这个作战方向去，往前走。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0012"
+        ],
+        "evidence_quote": "    杨永松：所以当时看起来，平型关那么多人，那么多兵，那么多武器在那里，所以我们从后面打下去，很有把握了。我们在可能是22号吧，师里面就决心要在23号发起战斗，就在22号往这个作战方向去，往前走。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "冉庄干部会议与战前动员背景",
+        "process_text": "有，就在冉庄啊开了干部会议，营以上干部会议。下面要打日本这个问题这已经动员了半年了，冉庄那个会议，是交待任务啊，战术等等，因为我那时候不是营级干部，我是个……现在是叫秘书，那个时候叫技术书记，我没参加那个会。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0015"
+        ],
+        "evidence_quote": "    杨永松：有，就在冉庄啊开了干部会议，营以上干部会议。下面要打日本这个问题这已经动员了半年了，冉庄那个会议，是交待任务啊，战术等等，因为我那时候不是营级干部，我是个……现在是叫秘书，那个时候叫技术书记，我没参加那个会。我们的士气呀，没有问题那时候，因为从长征就是北上准备打日本的嘛。“西安事变”以后和平解决了，又进行了差不多半年的教育和训练，无论是思想上、体力上，伙食不是改善了嘛，有大米有白面吃啊，伙食也比过去好了，所以士气和身体都是很好的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "宿营地政治组动员",
+        "process_text": "等那一天开进的时候呢，大概到了天黑的时候，就到了宿营地了。我这上面写了，我们那天晚上政治组开会，唐亮主持会议，就说今天晚上就要进入阵地，明天就要进入战斗了，我们必须发扬我们红军的老传统，要打出军威国威来，要给全国人民一个高兴，也是个鼓励。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0017"
+        ],
+        "evidence_quote": "    杨永松：等那一天开进的时候呢，大概到了天黑的时候，就到了宿营地了。我这上面写了，我们那天晚上政治组开会，唐亮主持会议，就说今天晚上就要进入阵地，明天就要进入战斗了，我们必须发扬我们红军的老传统，要打出军威国威来，要给全国人民一个高兴，也是个鼓励。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "唐亮分配战斗政治工作与民运股任务，杨永松协助民运股",
+        "process_text": "那天晚上唐亮主任是分配组织股、宣传股跟着营里面参加战斗政治鼓励工作，民运股，曾思玉（音）的股长，留在后边，准备接收俘虏，准备动员担架。把我呢，说你协助民运股工作。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0021"
+        ],
+        "evidence_quote": "    杨永松：（说）好厉害啊，这个炮、飞机呀。问他厉害到什么程度啊，你们伤了多少人？不知道。所以这样的时候，就更使得我们这个部队（士气高涨），你没有打你就往后跑，还说厉害，我们这个部队士气就更……就是非打个好仗不行啊。那天晚上唐亮主任是分配组织股、宣传股跟着营里面参加战斗政治鼓励工作，民运股，曾思玉（音）的股长，留在后边，准备接收俘虏，准备动员担架。把我呢，说你协助民运股工作。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "部队出发、到山上等待进攻开始",
+        "process_text": "那天晚上12点我们部队就出发了，部队出发以后就下雨，到山上，在那里等着进攻开始。部队也淋湿了，也比较冷，但是大家都不会因为这个冷情绪不高，就是第一仗一定要打好。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0023"
+        ],
+        "evidence_quote": "    杨永松：那天晚上12点我们部队就出发了，部队出发以后就下雨，到山上，在那里等着进攻开始。部队也淋湿了，也比较冷，但是大家都不会因为这个冷情绪不高，就是第一仗一定要打好。在天亮以后啊，敌人他很警觉，也好像发现了情况，我们看着他好像也发现我们了，我们就发起进攻。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC03-DE001-P01",
+        "target_stage_id": "BATCH01-DOC03-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE001-P02",
+        "target_stage_id": "BATCH01-DOC03-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE001-P03",
+        "target_stage_id": "BATCH01-DOC03-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE001-P04",
+        "target_stage_id": "BATCH01-DOC03-DE001-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

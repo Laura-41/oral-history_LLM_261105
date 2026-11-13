@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T23:44:26",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC01-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC01-DE008",
+  "usage": {
+    "prompt_tokens": 1312,
+    "total_tokens": 4894,
+    "completion_tokens": 3582,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2728
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 27664,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC01-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"前方休养所的一百多名伤员被转移到如皋县塘家园（塘园乡）这一较安全的抗日根据地乡，该地群众基础好、地下党员多。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以春节前后为迎接扫荡、前方休养所无法一次撤走且尚有一百多伤员为起点，以转移至如皋县塘家园并说明该地群众基础与地下党员情况为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"春节前后为迎接扫荡，前方休养所无法一次全部撤走，尚有一百多名伤员待转移。\",\n      \"process_text\": \"过春节时，为迎接扫荡，前方休养所撤到后方一下子撤不走，还有一百多伤员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0168\"\n      ],\n      \"evidence_quote\": \"当时我们离师部啊，很近。到了我们过春节，为了迎接这个扫荡，我们前方休养所撤到后方一下子撤不走，还有一百多伤员呢。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"将人员转移到抗日根据地四分区陶勇地区如皋县塘家园这一较安全地点。\",\n      \"process_text\": \"我们就转移到一个比较安全的地方，就是在抗日根据地四分区陶勇这个地区，最好的一个乡，就是如皋县的塘家园。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0170\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我们就转移到一个比较安全的地方，就是在抗日根据地四分区啊，陶勇这个地区，最好的一个乡，就是如皋县的塘家园。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"塘家园简称塘园乡，群众基础最好，地下党员很多。\",\n      \"process_text\": \"简称叫塘园乡，这个地方群众基础最好，地下党员很多。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0172\"\n      ],\n      \"evidence_quote\": \"简称叫塘园乡，这个地方群众基础最好，的确不错这地方，地下党员很多。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE008-P01\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE008-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0168\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE008-P02\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE008-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0172\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC01-DE008",
+    "event_enrichment": {
+      "result_state": "前方休养所的一百多名伤员被转移到如皋县塘家园（塘园乡）这一较安全的抗日根据地乡，该地群众基础好、地下党员多。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以春节前后为迎接扫荡、前方休养所无法一次撤走且尚有一百多伤员为起点，以转移至如皋县塘家园并说明该地群众基础与地下党员情况为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC01-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "春节前后为迎接扫荡，前方休养所无法一次全部撤走，尚有一百多名伤员待转移。",
+        "process_text": "过春节时，为迎接扫荡，前方休养所撤到后方一下子撤不走，还有一百多伤员。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0168"
+        ],
+        "evidence_quote": "当时我们离师部啊，很近。到了我们过春节，为了迎接这个扫荡，我们前方休养所撤到后方一下子撤不走，还有一百多伤员呢。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "将人员转移到抗日根据地四分区陶勇地区如皋县塘家园这一较安全地点。",
+        "process_text": "我们就转移到一个比较安全的地方，就是在抗日根据地四分区陶勇这个地区，最好的一个乡，就是如皋县的塘家园。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0170"
+        ],
+        "evidence_quote": "    陈海峰：我们就转移到一个比较安全的地方，就是在抗日根据地四分区啊，陶勇这个地区，最好的一个乡，就是如皋县的塘家园。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "塘家园简称塘园乡，群众基础最好，地下党员很多。",
+        "process_text": "简称叫塘园乡，这个地方群众基础最好，地下党员很多。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0172"
+        ],
+        "evidence_quote": "简称叫塘园乡，这个地方群众基础最好，的确不错这地方，地下党员很多。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC01-DE008-P01",
+        "target_stage_id": "BATCH05-DOC01-DE008-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH05-DOC01-S0168",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC01-DE008-P02",
+        "target_stage_id": "BATCH05-DOC01-DE008-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC01-S0172",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

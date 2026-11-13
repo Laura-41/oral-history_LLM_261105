@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T23:15:04",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC08-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC08-DE006",
+  "usage": {
+    "prompt_tokens": 1420,
+    "total_tokens": 10035,
+    "completion_tokens": 8615,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7331
+    },
+    "time_to_first_token_ms": 127577,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8614000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC08-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"新四军军部与山东军区在临沂合并，编成山东野战军，陈老总任司令员兼政治委员；华中上来的第一纵队、第二纵队，山东八师、四师及以后又编一个九师等部队由陈司令在前边指挥，并在鲁南津浦铁路抗击国民党向我们地区侵占。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 S0012 从中央命令新四军军部编两个纵队到山东、陈老总从延安开七大回来，到 S0014 说明临沂军部与军区司令部合到一起、部队构成及陈司令在前边指挥；未扩展后续具体作战经过。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"中央命令新四军军部编两个纵队到山东，陈老总从延安开七大回来，山东主力到东北，形成合并背景。\",\n      \"process_text\": \"接着中央又有了命令，叫新四军军部编两个纵队到山东去；陈老总从延安开七大回来，原来要回到新四军，山东罗荣桓同志带着山东的主力到了东北。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0012\"\n      ],\n      \"evidence_quote\": \"但是接着中央又有了命令，叫新四军军部编两个纵队到山东去。陈老总在那个时候从延安开七大（回来），原来要回到新四军，以后山东罗荣桓同志，带着山东的主力不是都到了东北么？\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"新四军与山东军区合并，把新四军主力带到山东，编成山东野战军，陈老总任司令员兼政治委员。\",\n      \"process_text\": \"新四军跟山东军区合并，把新四军的主力都带到山东去，编一个山东野战军，陈老总当司令员兼政治委员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0012\"\n      ],\n      \"evidence_quote\": \"也就是说新四军跟山东军区合并，把新四军的主力，都带到山东去，编一个山东野战军，陈老总（当）的司令员兼政治委员嘛\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"合并后临沂的军部与军区司令部合到一起，部队由华中上来纵队、山东八师、四师及以后编九师组成，主力由陈司令在前边指挥并投入打仗。\",\n      \"process_text\": \"他一来就到那里打仗去了；临沂在新四军手上，新四军军部、山东省军区司令部都在临沂，两个合到一起；山东军区原来剩下的人不多了，跟新四军合在一起；主力是华中上来的第一纵队、第二纵队，山东还有一个八师是主力，在鲁南那个地方，还有个四师，以后又编一个九师，这些主力部队由陈司令在前边指挥。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0014\"\n      ],\n      \"evidence_quote\": \"他一来就到那里打仗去了，那个时候临沂就在新四军手上，新四军的军部，山东省军区的司令部，都在临沂，两个合到一起了。山东纵队啊，山东军区原来剩下的人不多了，跟新四军合在一起了。主力吧是华中上来的，第一纵队是叶飞的，第二纵队是韦国清的，两个纵队。山东还有一个八师是主力，在鲁南那个地方。还有个四师，以后又编一个九师，就这么些部队。这些主力部队，由陈司令在前边指挥。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE006-P01\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE006-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0012\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE006-P02\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE006-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0014\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC08-DE006",
+    "event_enrichment": {
+      "result_state": "新四军军部与山东军区在临沂合并，编成山东野战军，陈老总任司令员兼政治委员；华中上来的第一纵队、第二纵队，山东八师、四师及以后又编一个九师等部队由陈司令在前边指挥，并在鲁南津浦铁路抗击国民党向我们地区侵占。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 S0012 从中央命令新四军军部编两个纵队到山东、陈老总从延安开七大回来，到 S0014 说明临沂军部与军区司令部合到一起、部队构成及陈司令在前边指挥；未扩展后续具体作战经过。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC08-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "中央命令新四军军部编两个纵队到山东，陈老总从延安开七大回来，山东主力到东北，形成合并背景。",
+        "process_text": "接着中央又有了命令，叫新四军军部编两个纵队到山东去；陈老总从延安开七大回来，原来要回到新四军，山东罗荣桓同志带着山东的主力到了东北。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0012"
+        ],
+        "evidence_quote": "但是接着中央又有了命令，叫新四军军部编两个纵队到山东去。陈老总在那个时候从延安开七大（回来），原来要回到新四军，以后山东罗荣桓同志，带着山东的主力不是都到了东北么？",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "新四军与山东军区合并，把新四军主力带到山东，编成山东野战军，陈老总任司令员兼政治委员。",
+        "process_text": "新四军跟山东军区合并，把新四军的主力都带到山东去，编一个山东野战军，陈老总当司令员兼政治委员。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0012"
+        ],
+        "evidence_quote": "也就是说新四军跟山东军区合并，把新四军的主力，都带到山东去，编一个山东野战军，陈老总（当）的司令员兼政治委员嘛",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "合并后临沂的军部与军区司令部合到一起，部队由华中上来纵队、山东八师、四师及以后编九师组成，主力由陈司令在前边指挥并投入打仗。",
+        "process_text": "他一来就到那里打仗去了；临沂在新四军手上，新四军军部、山东省军区司令部都在临沂，两个合到一起；山东军区原来剩下的人不多了，跟新四军合在一起；主力是华中上来的第一纵队、第二纵队，山东还有一个八师是主力，在鲁南那个地方，还有个四师，以后又编一个九师，这些主力部队由陈司令在前边指挥。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0014"
+        ],
+        "evidence_quote": "他一来就到那里打仗去了，那个时候临沂就在新四军手上，新四军的军部，山东省军区的司令部，都在临沂，两个合到一起了。山东纵队啊，山东军区原来剩下的人不多了，跟新四军合在一起了。主力吧是华中上来的，第一纵队是叶飞的，第二纵队是韦国清的，两个纵队。山东还有一个八师是主力，在鲁南那个地方。还有个四师，以后又编一个九师，就这么些部队。这些主力部队，由陈司令在前边指挥。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC08-DE006-P01",
+        "target_stage_id": "BATCH04-DOC08-DE006-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH04-DOC08-S0012",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC08-DE006-P02",
+        "target_stage_id": "BATCH04-DOC08-DE006-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC08-S0014",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

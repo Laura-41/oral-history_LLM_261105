@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T21:38:27",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC03-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC03-DE003",
+  "usage": {
+    "prompt_tokens": 1515,
+    "total_tokens": 10179,
+    "completion_tokens": 8664,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7656
+    },
+    "tokens_per_second": 8663000,
+    "time_to_first_token_ms": 135185,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC03-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"赖可可所写坚持平原游击战被叫搞艺术的人编成歌，并可能另有《罗帅在山东》材料含歌，形成宣传教育、唱歌、鼓励士气的状态。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 S0022 中平原坚持斗争、赖可可写文章并编歌、姓王同志编《罗帅在山东》的内容，以及 S0024 开头宣传教育、唱歌、鼓励士气的内容；S0024 后半段攻占樊坝战斗、俘虏刘玉胜等内容不纳入本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"师宣传部副部长赖可可撰写坚持平原游击战文章\",\n      \"process_text\": \"在平原坚持斗争的事情中，师宣传部副部长赖可可写了一篇坚持平原游击战，下面还有一些我记不住了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0022\"\n      ],\n      \"evidence_quote\": \"杨永松：就是在平原坚持斗争的这一些事情吧，那个时候师的宣传部当时是副部长赖可可，这个人以后在山东分局当过组织部长，以后当过浙江的书记，也是长征干部，他就写了一篇坚持平原游击战，下面还有一些我记不住了，\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"将文章编成歌曲并提及《罗帅在山东》材料\",\n      \"process_text\": \"叫搞艺术的人把它编成一个歌；这个坚持平原游击战，我这个（书）里头可能还有一个姓王的同志设计材料编了一个《罗帅在山东》，大概有些歌在上头。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0022\"\n      ],\n      \"evidence_quote\": \"叫搞艺术的人把它编成一个歌。这个坚持平原游击战，我这个（书）里头可能还有一个山东的过去当过罗帅的公务员的，一个姓王的同志，他在济南市的文联工作，他设计的材料编了一个《罗帅在山东》，大概有些歌在上头。。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"以宣传教育与唱歌鼓励士气\",\n      \"process_text\": \"一方面宣传教育，一方面唱歌，鼓励士气。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0024\"\n      ],\n      \"evidence_quote\": \"一方面宣传教育，一方面唱歌，鼓励士气；\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE003-P01\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE003-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0022\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE003-P02\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE003-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0024\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": null\n}",
+  "parsed": {
+    "document_id": "YYS-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC03-DE003",
+    "event_enrichment": {
+      "result_state": "赖可可所写坚持平原游击战被叫搞艺术的人编成歌，并可能另有《罗帅在山东》材料含歌，形成宣传教育、唱歌、鼓励士气的状态。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 S0022 中平原坚持斗争、赖可可写文章并编歌、姓王同志编《罗帅在山东》的内容，以及 S0024 开头宣传教育、唱歌、鼓励士气的内容；S0024 后半段攻占樊坝战斗、俘虏刘玉胜等内容不纳入本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC03-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "师宣传部副部长赖可可撰写坚持平原游击战文章",
+        "process_text": "在平原坚持斗争的事情中，师宣传部副部长赖可可写了一篇坚持平原游击战，下面还有一些我记不住了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0022"
+        ],
+        "evidence_quote": "杨永松：就是在平原坚持斗争的这一些事情吧，那个时候师的宣传部当时是副部长赖可可，这个人以后在山东分局当过组织部长，以后当过浙江的书记，也是长征干部，他就写了一篇坚持平原游击战，下面还有一些我记不住了，",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "将文章编成歌曲并提及《罗帅在山东》材料",
+        "process_text": "叫搞艺术的人把它编成一个歌；这个坚持平原游击战，我这个（书）里头可能还有一个姓王的同志设计材料编了一个《罗帅在山东》，大概有些歌在上头。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0022"
+        ],
+        "evidence_quote": "叫搞艺术的人把它编成一个歌。这个坚持平原游击战，我这个（书）里头可能还有一个山东的过去当过罗帅的公务员的，一个姓王的同志，他在济南市的文联工作，他设计的材料编了一个《罗帅在山东》，大概有些歌在上头。。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "以宣传教育与唱歌鼓励士气",
+        "process_text": "一方面宣传教育，一方面唱歌，鼓励士气。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0024"
+        ],
+        "evidence_quote": "一方面宣传教育，一方面唱歌，鼓励士气；",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC03-DE003-P01",
+        "target_stage_id": "BATCH04-DOC03-DE003-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC03-S0022",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE003-P02",
+        "target_stage_id": "BATCH04-DOC03-DE003-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC03-S0024",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": null
+  },
+  "request_error": null
+}

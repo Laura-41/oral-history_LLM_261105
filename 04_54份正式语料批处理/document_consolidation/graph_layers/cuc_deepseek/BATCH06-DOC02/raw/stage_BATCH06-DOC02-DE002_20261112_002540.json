@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T00:25:40",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC02-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC02-DE002",
+  "usage": {
+    "prompt_tokens": 1295,
+    "total_tokens": 10263,
+    "completion_tokens": 8968,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7860
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8967000,
+    "time_to_first_token_ms": 72777
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-18\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC02-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"缴获的大米和罐头被规定不得由部队食用，须运往后方、医院、医疗队、前方休养所供伤员食用；后方医务人员也不食用伤员食品，优先保证伤员营养。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于对缴获大米、罐头处置规定的陈述，止于后方医务人员不动伤员食品、优先保证伤员的说明。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"规定缴获的大米和罐头部队一律不准吃，必须送后方、医院、医疗队、前方休养所给伤员吃。\",\n      \"process_text\": \"缴获的大米、罐头，部队一律不准吃，必须送后方、医院、医疗队、前方休养所，送给伤员吃。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0017\"\n      ],\n      \"evidence_quote\": \"缴到的大米，缴到的罐头，部队一律不准吃，必须送后方，送到医院去，送到医疗队，送到前方的休养所，送给伤员吃。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"将禁食范围扩大到所有缴获罐头，要求全部送伤员、运到后方，部队不准吃缴获品，其他可以吃。\",\n      \"process_text\": \"所有缴获罐头，不论肉罐头、粮食罐头、牛奶罐头，都要送给伤员吃，运到后方；部队不准吃缴获品，其他可以吃。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0017\"\n      ],\n      \"evidence_quote\": \"所有缴到的罐头，不管你什么罐头，肉罐头啊，什么粮食罐头啊，牛奶罐头啊，所有的罐头都要送给伤员吃，运到后方，不准部队缴获的不准吃，其他的你可以吃。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"后方医务人员也不吃伤员食品，自己一天吃两顿稀饭。\",\n      \"process_text\": \"到后方以后，医务人员也不能吃伤员食品，医务人员一天吃两顿稀饭。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0017\"\n      ],\n      \"evidence_quote\": \"那么到了后方以后呢，我们医务人员也不能吃，我们医务人员也是一天吃两顿稀饭。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"强调后方稀饭很稀、米少，伤员食品不准动，优先保证伤员营养。\",\n      \"process_text\": \"后方稀饭很稀、里面没几颗米；伤员的东西根本不准动，先保证伤员营养。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0019\"\n      ],\n      \"evidence_quote\": \"那个稀稀的，里面没几颗米啊。那个（是）伤员（的），你根本不准动，保证伤员的营养不够呢，（先）来保证伤员。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE002-P01\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0017\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE002-P02\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0017\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE002-P03\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE002-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0019\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-18",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC02-DE002",
+    "event_enrichment": {
+      "result_state": "缴获的大米和罐头被规定不得由部队食用，须运往后方、医院、医疗队、前方休养所供伤员食用；后方医务人员也不食用伤员食品，优先保证伤员营养。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于对缴获大米、罐头处置规定的陈述，止于后方医务人员不动伤员食品、优先保证伤员的说明。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC02-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "规定缴获的大米和罐头部队一律不准吃，必须送后方、医院、医疗队、前方休养所给伤员吃。",
+        "process_text": "缴获的大米、罐头，部队一律不准吃，必须送后方、医院、医疗队、前方休养所，送给伤员吃。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0017"
+        ],
+        "evidence_quote": "缴到的大米，缴到的罐头，部队一律不准吃，必须送后方，送到医院去，送到医疗队，送到前方的休养所，送给伤员吃。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "将禁食范围扩大到所有缴获罐头，要求全部送伤员、运到后方，部队不准吃缴获品，其他可以吃。",
+        "process_text": "所有缴获罐头，不论肉罐头、粮食罐头、牛奶罐头，都要送给伤员吃，运到后方；部队不准吃缴获品，其他可以吃。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0017"
+        ],
+        "evidence_quote": "所有缴到的罐头，不管你什么罐头，肉罐头啊，什么粮食罐头啊，牛奶罐头啊，所有的罐头都要送给伤员吃，运到后方，不准部队缴获的不准吃，其他的你可以吃。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "后方医务人员也不吃伤员食品，自己一天吃两顿稀饭。",
+        "process_text": "到后方以后，医务人员也不能吃伤员食品，医务人员一天吃两顿稀饭。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0017"
+        ],
+        "evidence_quote": "那么到了后方以后呢，我们医务人员也不能吃，我们医务人员也是一天吃两顿稀饭。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "强调后方稀饭很稀、米少，伤员食品不准动，优先保证伤员营养。",
+        "process_text": "后方稀饭很稀、里面没几颗米；伤员的东西根本不准动，先保证伤员营养。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0019"
+        ],
+        "evidence_quote": "那个稀稀的，里面没几颗米啊。那个（是）伤员（的），你根本不准动，保证伤员的营养不够呢，（先）来保证伤员。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC02-DE002-P01",
+        "target_stage_id": "BATCH06-DOC02-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0017",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE002-P02",
+        "target_stage_id": "BATCH06-DOC02-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0017",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE002-P03",
+        "target_stage_id": "BATCH06-DOC02-DE002-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC02-S0019",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

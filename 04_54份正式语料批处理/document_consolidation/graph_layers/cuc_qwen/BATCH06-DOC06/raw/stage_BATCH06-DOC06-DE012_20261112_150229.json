@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T15:02:29",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC06-DE012",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC06-DE012",
+  "usage": {
+    "prompt_tokens": 1349,
+    "total_tokens": 5622,
+    "completion_tokens": 4273,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3299
+    },
+    "time_to_first_token_ms": 67176,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4272000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC06-DE012\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆到常州武进参加三野会议；接收上海委员会由唐亮任接收主任，下设军事部、政治部、海军部、空军部，并形成将军事部改为陆军部、陆军部与空军部直接归军管会管的调整表述。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以“我就到了常州”为起点，以“军事部改成陆军部”为终点；前句“我就没更多管这个事情”为过渡，不纳入本事件核心。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE012-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆到常州武进参加三野会议\",\n      \"process_text\": \"我就到了常州，到了武进嘛，在那个地方三野开两次会，这是4月30号了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0042\"\n      ],\n      \"evidence_quote\": \"我就到了常州，到了武进嘛，在那个地方三野开两次会，这是4月30号了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE012-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"说明接收上海委员会由唐亮任主任并设军事部、政治部、海军部、空军部\",\n      \"process_text\": \"这个时候接收上海的委员会，由政治部主任唐亮做接收的主任嘛。另外就是底下搞几个部，军事部、政治部，还有海军部、空军部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0042\"\n      ],\n      \"evidence_quote\": \"这个时候接收上海的委员会，由政治部主任唐亮做接收的主任嘛。另外就是底下搞几个部，军事部、政治部，还有海军部、空军部。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE012-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆提出调整接收上海委员会部门设置\",\n      \"process_text\": \"以后我说，海空军也没那么多的人联系，他也刚刚才成立，陆军部跟空军部还是直接归军管会管，军事部改成陆军部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0042\"\n      ],\n      \"evidence_quote\": \"以后我说，海空军也没那么多的人联系，他也刚刚才成立，陆军部跟空军部还是直接归军管会管，军事部改成陆军部。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE012-P01\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE012-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0042\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE012-P02\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE012-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0042\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC06-DE012",
+    "event_enrichment": {
+      "result_state": "陈锐霆到常州武进参加三野会议；接收上海委员会由唐亮任接收主任，下设军事部、政治部、海军部、空军部，并形成将军事部改为陆军部、陆军部与空军部直接归军管会管的调整表述。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "以“我就到了常州”为起点，以“军事部改成陆军部”为终点；前句“我就没更多管这个事情”为过渡，不纳入本事件核心。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC06-DE012-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆到常州武进参加三野会议",
+        "process_text": "我就到了常州，到了武进嘛，在那个地方三野开两次会，这是4月30号了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0042"
+        ],
+        "evidence_quote": "我就到了常州，到了武进嘛，在那个地方三野开两次会，这是4月30号了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE012-P02",
+        "stage_order": 2,
+        "stage_summary": "说明接收上海委员会由唐亮任主任并设军事部、政治部、海军部、空军部",
+        "process_text": "这个时候接收上海的委员会，由政治部主任唐亮做接收的主任嘛。另外就是底下搞几个部，军事部、政治部，还有海军部、空军部。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0042"
+        ],
+        "evidence_quote": "这个时候接收上海的委员会，由政治部主任唐亮做接收的主任嘛。另外就是底下搞几个部，军事部、政治部，还有海军部、空军部。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE012-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆提出调整接收上海委员会部门设置",
+        "process_text": "以后我说，海空军也没那么多的人联系，他也刚刚才成立，陆军部跟空军部还是直接归军管会管，军事部改成陆军部。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0042"
+        ],
+        "evidence_quote": "以后我说，海空军也没那么多的人联系，他也刚刚才成立，陆军部跟空军部还是直接归军管会管，军事部改成陆军部。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC06-DE012-P01",
+        "target_stage_id": "BATCH06-DOC06-DE012-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0042",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE012-P02",
+        "target_stage_id": "BATCH06-DOC06-DE012-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0042",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

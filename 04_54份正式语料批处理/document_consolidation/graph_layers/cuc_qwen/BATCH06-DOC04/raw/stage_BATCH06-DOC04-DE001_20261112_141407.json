@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-12T14:14:07",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC04-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC04-DE001",
+  "usage": {
+    "prompt_tokens": 1508,
+    "total_tokens": 12384,
+    "completion_tokens": 10876,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9234
+    },
+    "time_to_first_token_ms": 162081,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 10875000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-19\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC04-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"粟司令打摆子经注射奎宁针后不抖，抢救处理完成。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起自 S0003 所述给粟司令臀部注射奎宁针，止于 S0009 所述治后粟司令询问来意及当时用兵背景；S0004 为注射后效果，S0005/S0007 为针剂来源与交付补充。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"给粟司令臀部注射奎宁针\",\n      \"process_text\": \"    陈海峰：那么粟司令呢，马上我就拿了这个奎宁针啊，给他臀部注射，一针就打下去了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0003\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那么粟司令呢，马上我就拿了这个奎宁针啊，给他臀部注射，一针就打下去了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"注射后二十分钟左右见效，粟司令不抖\",\n      \"process_text\": \"打下去没有几分钟，20分钟啊，马上见效果了嘛，他就不抖了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0004\"\n      ],\n      \"evidence_quote\": \"打下去没有几分钟，20分钟啊，马上见效果了嘛，他就不抖了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"说明奎宁针稀缺并把自己带的几支交给医生\",\n      \"process_text\": \"反正我们医院里还有了。奎宁针都很少，那时候没有啊，那个时候都是高干才用了，都不敢用。日本鬼子都控制啊，国民党也控制的。那么我把我带的那几支呢，都交给医生了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0005\"\n      ],\n      \"evidence_quote\": \"反正我们医院里还有了。奎宁针都很少，那时候没有啊，那个时候都是高干才用了，都不敢用。日本鬼子都控制啊，国民党也控制的。那么我把我带的那几支呢，都交给医生了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"交给医生后给粟司令打\",\n      \"process_text\": \"    陈海峰：交给他以后给粟司令打。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0007\"\n      ],\n      \"evidence_quote\": \"    陈海峰：交给他以后给粟司令打。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"交代请示、抢救经过及治后粟司令询问来意与用兵背景\",\n      \"process_text\": \"    陈海峰：请示。那么就遇到粟司令打摆子了，就先抢救粟司令这个打摆子。治了以后，他讲你们来干什么？我们把这个情况一讲。他说：“哎呀，这是个问题，这个我考虑得不周，你们来得好。”可是呢，当时正是布置口袋，我们需要用兵。当时这个情报呢，敌人来的主力部队呢，我们知道的大概是九个团。粟司令手里也只有九个团。九个团对付九个团，敌人装备那么好，已经很险了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0009\"\n      ],\n      \"evidence_quote\": \"    陈海峰：请示。那么就遇到粟司令打摆子了，就先抢救粟司令这个打摆子。治了以后，他讲你们来干什么？我们把这个情况一讲。他说：“哎呀，这是个问题，这个我考虑得不周，你们来得好。”可是呢，当时正是布置口袋，我们需要用兵。当时这个情报呢，敌人来的主力部队呢，我们知道的大概是九个团。粟司令手里也只有九个团。九个团对付九个团，敌人装备那么好，已经很险了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC04-DE001-P01\",\n      \"target_stage_id\": \"BATCH06-DOC04-DE001-P02\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC04-S0004\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC04-DE001-P02\",\n      \"target_stage_id\": \"BATCH06-DOC04-DE001-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC04-S0005\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC04-DE001-P03\",\n      \"target_stage_id\": \"BATCH06-DOC04-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC04-S0007\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC04-DE001-P04\",\n      \"target_stage_id\": \"BATCH06-DOC04-DE001-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC04-S0009\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-19",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC04-DE001",
+    "event_enrichment": {
+      "result_state": "粟司令打摆子经注射奎宁针后不抖，抢救处理完成。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起自 S0003 所述给粟司令臀部注射奎宁针，止于 S0009 所述治后粟司令询问来意及当时用兵背景；S0004 为注射后效果，S0005/S0007 为针剂来源与交付补充。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC04-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "给粟司令臀部注射奎宁针",
+        "process_text": "    陈海峰：那么粟司令呢，马上我就拿了这个奎宁针啊，给他臀部注射，一针就打下去了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0003"
+        ],
+        "evidence_quote": "    陈海峰：那么粟司令呢，马上我就拿了这个奎宁针啊，给他臀部注射，一针就打下去了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC04-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "注射后二十分钟左右见效，粟司令不抖",
+        "process_text": "打下去没有几分钟，20分钟啊，马上见效果了嘛，他就不抖了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0004"
+        ],
+        "evidence_quote": "打下去没有几分钟，20分钟啊，马上见效果了嘛，他就不抖了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC04-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "说明奎宁针稀缺并把自己带的几支交给医生",
+        "process_text": "反正我们医院里还有了。奎宁针都很少，那时候没有啊，那个时候都是高干才用了，都不敢用。日本鬼子都控制啊，国民党也控制的。那么我把我带的那几支呢，都交给医生了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0005"
+        ],
+        "evidence_quote": "反正我们医院里还有了。奎宁针都很少，那时候没有啊，那个时候都是高干才用了，都不敢用。日本鬼子都控制啊，国民党也控制的。那么我把我带的那几支呢，都交给医生了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC04-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "交给医生后给粟司令打",
+        "process_text": "    陈海峰：交给他以后给粟司令打。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0007"
+        ],
+        "evidence_quote": "    陈海峰：交给他以后给粟司令打。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC04-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "交代请示、抢救经过及治后粟司令询问来意与用兵背景",
+        "process_text": "    陈海峰：请示。那么就遇到粟司令打摆子了，就先抢救粟司令这个打摆子。治了以后，他讲你们来干什么？我们把这个情况一讲。他说：“哎呀，这是个问题，这个我考虑得不周，你们来得好。”可是呢，当时正是布置口袋，我们需要用兵。当时这个情报呢，敌人来的主力部队呢，我们知道的大概是九个团。粟司令手里也只有九个团。九个团对付九个团，敌人装备那么好，已经很险了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0009"
+        ],
+        "evidence_quote": "    陈海峰：请示。那么就遇到粟司令打摆子了，就先抢救粟司令这个打摆子。治了以后，他讲你们来干什么？我们把这个情况一讲。他说：“哎呀，这是个问题，这个我考虑得不周，你们来得好。”可是呢，当时正是布置口袋，我们需要用兵。当时这个情报呢，敌人来的主力部队呢，我们知道的大概是九个团。粟司令手里也只有九个团。九个团对付九个团，敌人装备那么好，已经很险了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC04-DE001-P01",
+        "target_stage_id": "BATCH06-DOC04-DE001-P02",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC04-S0004",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC04-DE001-P02",
+        "target_stage_id": "BATCH06-DOC04-DE001-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC04-S0005",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC04-DE001-P03",
+        "target_stage_id": "BATCH06-DOC04-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC04-S0007",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC04-DE001-P04",
+        "target_stage_id": "BATCH06-DOC04-DE001-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC04-S0009",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

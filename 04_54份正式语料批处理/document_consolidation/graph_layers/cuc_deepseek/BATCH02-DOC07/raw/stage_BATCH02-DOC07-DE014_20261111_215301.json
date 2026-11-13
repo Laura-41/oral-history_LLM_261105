@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T21:53:01",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC07-DE014",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC07-DE014",
+  "usage": {
+    "prompt_tokens": 1431,
+    "total_tokens": 3752,
+    "completion_tokens": 2321,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1488
+    },
+    "time_to_first_token_ms": 18180,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2320000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC07-DE014\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰与何秋澄被留在三支队军医处任卫生巡视员，承担部队卫生巡视检查及战时前线救护支援工作。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以两人到达三支队军医处并被留下任职为起点，以其卫生巡视员日常与战时职责说明为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE014-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"两人到达三支队军医处，发现军医处人员很少。\",\n      \"process_text\": \"陈海峰与何秋澄到达三支队军医处，军医处没有几个人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0065\"\n      ],\n      \"evidence_quote\": \"我们两个一到三支队军医处呢，军医处没有几个人。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE014-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"军医处将两人留下，任命为卫生巡视员。\",\n      \"process_text\": \"军医处医务主任李康侯（音）等将两人留在军医处，叫卫生巡视员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0065\"\n      ],\n      \"evidence_quote\": \"军医处医务主任李康侯（音），没几个人，把我们两个留在军医处，叫卫生巡视员。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE014-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"两人承担部队卫生工作，代表军医处检查工作，并在战时赴前方参与抢救和包扎所支援。\",\n      \"process_text\": \"何秋澄和陈海峰管部队卫生工作，代表军医处检查工作；遇到打仗就到前方帮助抢救，搞前线包扎所，支援前方。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0065\"\n      ],\n      \"evidence_quote\": \"平时帮助军医处……那个时候也没什么机关不机关，支队部的医院和军医处在一块，军医处有几个人专门管部队卫生工作。何秋澄和我就是管部队卫生工作，代表军医处去检查工作。遇到打仗呢，就到前方去帮助抢救，搞前线包扎所，支援前方。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE014-P01\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE014-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0065\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE014-P02\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE014-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0065\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V2-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC07-DE014",
+    "event_enrichment": {
+      "result_state": "陈海峰与何秋澄被留在三支队军医处任卫生巡视员，承担部队卫生巡视检查及战时前线救护支援工作。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以两人到达三支队军医处并被留下任职为起点，以其卫生巡视员日常与战时职责说明为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC07-DE014-P01",
+        "stage_order": 1,
+        "stage_summary": "两人到达三支队军医处，发现军医处人员很少。",
+        "process_text": "陈海峰与何秋澄到达三支队军医处，军医处没有几个人。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0065"
+        ],
+        "evidence_quote": "我们两个一到三支队军医处呢，军医处没有几个人。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE014-P02",
+        "stage_order": 2,
+        "stage_summary": "军医处将两人留下，任命为卫生巡视员。",
+        "process_text": "军医处医务主任李康侯（音）等将两人留在军医处，叫卫生巡视员。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0065"
+        ],
+        "evidence_quote": "军医处医务主任李康侯（音），没几个人，把我们两个留在军医处，叫卫生巡视员。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE014-P03",
+        "stage_order": 3,
+        "stage_summary": "两人承担部队卫生工作，代表军医处检查工作，并在战时赴前方参与抢救和包扎所支援。",
+        "process_text": "何秋澄和陈海峰管部队卫生工作，代表军医处检查工作；遇到打仗就到前方帮助抢救，搞前线包扎所，支援前方。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0065"
+        ],
+        "evidence_quote": "平时帮助军医处……那个时候也没什么机关不机关，支队部的医院和军医处在一块，军医处有几个人专门管部队卫生工作。何秋澄和我就是管部队卫生工作，代表军医处去检查工作。遇到打仗呢，就到前方去帮助抢救，搞前线包扎所，支援前方。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC07-DE014-P01",
+        "target_stage_id": "BATCH02-DOC07-DE014-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0065",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE014-P02",
+        "target_stage_id": "BATCH02-DOC07-DE014-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC07-S0065",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

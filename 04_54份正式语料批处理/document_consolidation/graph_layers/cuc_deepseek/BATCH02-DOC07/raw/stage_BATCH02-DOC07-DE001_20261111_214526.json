@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-11T21:45:26",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC07-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC07-DE001",
+  "usage": {
+    "prompt_tokens": 1577,
+    "total_tokens": 6892,
+    "completion_tokens": 5315,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3979
+    },
+    "time_to_first_token_ms": 44795,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5314000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC07-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"伤员得到就地包扎；史沫特莱的急救表现和多次往返成为大家讨论学习的榜样。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于到云岭抢救并分组出发，止于史沫特莱多次往返、被大家视为榜样；依据S0003、S0005、S0007。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"到云岭抢救时分小组，史沫特莱坚持随本小组前往。\",\n      \"process_text\": \"到云岭抢救时分小组，三人一组；史沫特莱跟本小组，大家劝阻她不要去，她非要去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0003\"\n      ],\n      \"evidence_quote\": \"到云岭去抢救的时候呢，就分小组，三个人一个小组。我这个小组刚好是史沫特莱跟着，哎呀！大家都不让她去，她非要去。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"就地用绑腿布包扎，急救包不足时临时处置。\",\n      \"process_text\": \"把绑腿布拿下来用于包扎；当时急救包不多，后方机关临时弄。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0005\"\n      ],\n      \"evidence_quote\": \"那个绑腿布拿下来以后，就是包扎。当时急救包也没有那么多，前方部队都有小急救包，做好的。这个突然间呢，炸了老百姓，我们这个后方机关也不是每个人身上都带了急救包，都是临时弄。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"史沫特莱包扎技术熟练，大家讨论向她学习。\",\n      \"process_text\": \"史沫特莱急救常识和包扎技术比大家熟练，大家回来讨论学习，提出向史沫特莱学习。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0005\"\n      ],\n      \"evidence_quote\": \"史沫特莱知识比我们多，她那个包扎技术啊，比我们还熟练。所以这个外国人呀，新闻记者史沫特莱属于急救常识比我们丰富，我们回来还讨论学习，讲向史沫特莱学习。我们还不如她，我们还学了医，大家还讲这个东西。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"史沫特莱坚持抬伤员，大家因她是女同志而劝阻。\",\n      \"process_text\": \"史沫特莱要抬伤员，大家不让她抬，她还要抬。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0005\"\n      ],\n      \"evidence_quote\": \"她要抬伤员，我们不让她抬，女同志嘛，她还要抬伤员。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"史沫特莱多次往返，成为大家眼中的榜样。\",\n      \"process_text\": \"史沫特莱不止跑一趟，在约两三华里间来回跑了好几趟，大家认为她感动人、是榜样。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0007\"\n      ],\n      \"evidence_quote\": \"她还不止跑一趟，一趟来一趟去，两三华里呢，跑了好几趟。哎呀！史沫特莱很感动人（的），当时给我们还真是一个榜样，我们从她身上感受到抗日，一个外国人到中国来表现很好。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE001-P01\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0003\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE001-P02\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0005\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE001-P03\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0005\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE001-P04\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE001-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0007\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC07-DE001",
+    "event_enrichment": {
+      "result_state": "伤员得到就地包扎；史沫特莱的急救表现和多次往返成为大家讨论学习的榜样。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于到云岭抢救并分组出发，止于史沫特莱多次往返、被大家视为榜样；依据S0003、S0005、S0007。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC07-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "到云岭抢救时分小组，史沫特莱坚持随本小组前往。",
+        "process_text": "到云岭抢救时分小组，三人一组；史沫特莱跟本小组，大家劝阻她不要去，她非要去。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0003"
+        ],
+        "evidence_quote": "到云岭去抢救的时候呢，就分小组，三个人一个小组。我这个小组刚好是史沫特莱跟着，哎呀！大家都不让她去，她非要去。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "就地用绑腿布包扎，急救包不足时临时处置。",
+        "process_text": "把绑腿布拿下来用于包扎；当时急救包不多，后方机关临时弄。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0005"
+        ],
+        "evidence_quote": "那个绑腿布拿下来以后，就是包扎。当时急救包也没有那么多，前方部队都有小急救包，做好的。这个突然间呢，炸了老百姓，我们这个后方机关也不是每个人身上都带了急救包，都是临时弄。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "史沫特莱包扎技术熟练，大家讨论向她学习。",
+        "process_text": "史沫特莱急救常识和包扎技术比大家熟练，大家回来讨论学习，提出向史沫特莱学习。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0005"
+        ],
+        "evidence_quote": "史沫特莱知识比我们多，她那个包扎技术啊，比我们还熟练。所以这个外国人呀，新闻记者史沫特莱属于急救常识比我们丰富，我们回来还讨论学习，讲向史沫特莱学习。我们还不如她，我们还学了医，大家还讲这个东西。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "史沫特莱坚持抬伤员，大家因她是女同志而劝阻。",
+        "process_text": "史沫特莱要抬伤员，大家不让她抬，她还要抬。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0005"
+        ],
+        "evidence_quote": "她要抬伤员，我们不让她抬，女同志嘛，她还要抬伤员。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "史沫特莱多次往返，成为大家眼中的榜样。",
+        "process_text": "史沫特莱不止跑一趟，在约两三华里间来回跑了好几趟，大家认为她感动人、是榜样。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0007"
+        ],
+        "evidence_quote": "她还不止跑一趟，一趟来一趟去，两三华里呢，跑了好几趟。哎呀！史沫特莱很感动人（的），当时给我们还真是一个榜样，我们从她身上感受到抗日，一个外国人到中国来表现很好。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC07-DE001-P01",
+        "target_stage_id": "BATCH02-DOC07-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0003",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE001-P02",
+        "target_stage_id": "BATCH02-DOC07-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0005",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE001-P03",
+        "target_stage_id": "BATCH02-DOC07-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0005",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE001-P04",
+        "target_stage_id": "BATCH02-DOC07-DE001-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0007",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

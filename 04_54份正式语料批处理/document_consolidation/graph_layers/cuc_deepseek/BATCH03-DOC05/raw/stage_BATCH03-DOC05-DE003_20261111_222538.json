@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T22:25:38",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC05-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC05-DE003",
+  "usage": {
+    "prompt_tokens": 1258,
+    "total_tokens": 5704,
+    "completion_tokens": 4446,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3515
+    },
+    "time_to_first_token_ms": 41010,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-07\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC05-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆成为第五纵队指挥官并指挥进攻新四军四师；叙述称主力部队未前去，对方骑兵因认为共产党部队好打而主动。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件以原文中奉命过河去共产党根据地消灭共产党为前导，以陈锐霆受命统一指挥并成为第五纵队指挥官、进而进攻新四军四师及主力未前去的说明为结束；换装描述仅作背景，不另立事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"部队退后对峙不久，奉命过河进入共产党根据地执行消灭共产党的任务。\",\n      \"process_text\": \"部队退后对峙不久，奉命又过河去共产党根据地消灭共产党。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0025\"\n      ],\n      \"evidence_quote\": \"所以我的部队退了以后，对峙了不久，我们就奉命又过河去消灭共产党，到共产党根据地去消灭共产党。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈锐霆受命统一指挥游击14支队、一个大连和二百五十匹马的连等，成为第五纵队指挥官。\",\n      \"process_text\": \"受命统一指挥游击14支队、一个大连及二百五十匹马的连，成为第五纵队指挥官。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0027\"\n      ],\n      \"evidence_quote\": \"这个时候让我指挥游击14支队一千把人，一个支队相当一个小团。另外七八十人的一个大连，二百五十匹马的一个连，也归我指挥。一个团只有四个连嘛，一个团里面四个连，一个大连就是二百五十匹马嘛，归我统一指挥。我变成为第五纵队的指挥官嘛\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆指挥第五纵队进攻新四军四师；主力部队未前去，对方骑兵因认为共产党部队好打而主动。\",\n      \"process_text\": \"进攻新四军四师，主力部队未前去；对方骑兵认为共产党部队战斗力差、缺子弹，好打而主动。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0027\"\n      ],\n      \"evidence_quote\": \"进攻新四军四师。我们主力部队都没前去，但是（马家）骑兵（打）西路军吃到甜头了，跟我们（共产党）的部队打仗，到了最后我们这个战斗力比较差，也没子弹，所以他认为共产党好打，自己主动，另外有些好处吧，可以抢东西嘛。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE003-P01\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0027\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE003-P02\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE003-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0027\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-07",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC05-DE003",
+    "event_enrichment": {
+      "result_state": "陈锐霆成为第五纵队指挥官并指挥进攻新四军四师；叙述称主力部队未前去，对方骑兵因认为共产党部队好打而主动。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件以原文中奉命过河去共产党根据地消灭共产党为前导，以陈锐霆受命统一指挥并成为第五纵队指挥官、进而进攻新四军四师及主力未前去的说明为结束；换装描述仅作背景，不另立事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC05-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "部队退后对峙不久，奉命过河进入共产党根据地执行消灭共产党的任务。",
+        "process_text": "部队退后对峙不久，奉命又过河去共产党根据地消灭共产党。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0025"
+        ],
+        "evidence_quote": "所以我的部队退了以后，对峙了不久，我们就奉命又过河去消灭共产党，到共产党根据地去消灭共产党。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "陈锐霆受命统一指挥游击14支队、一个大连和二百五十匹马的连等，成为第五纵队指挥官。",
+        "process_text": "受命统一指挥游击14支队、一个大连及二百五十匹马的连，成为第五纵队指挥官。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0027"
+        ],
+        "evidence_quote": "这个时候让我指挥游击14支队一千把人，一个支队相当一个小团。另外七八十人的一个大连，二百五十匹马的一个连，也归我指挥。一个团只有四个连嘛，一个团里面四个连，一个大连就是二百五十匹马嘛，归我统一指挥。我变成为第五纵队的指挥官嘛",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆指挥第五纵队进攻新四军四师；主力部队未前去，对方骑兵因认为共产党部队好打而主动。",
+        "process_text": "进攻新四军四师，主力部队未前去；对方骑兵认为共产党部队战斗力差、缺子弹，好打而主动。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0027"
+        ],
+        "evidence_quote": "进攻新四军四师。我们主力部队都没前去，但是（马家）骑兵（打）西路军吃到甜头了，跟我们（共产党）的部队打仗，到了最后我们这个战斗力比较差，也没子弹，所以他认为共产党好打，自己主动，另外有些好处吧，可以抢东西嘛。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC05-DE003-P01",
+        "target_stage_id": "BATCH03-DOC05-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC05-S0027",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC05-DE003-P02",
+        "target_stage_id": "BATCH03-DOC05-DE003-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH03-DOC05-S0027",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

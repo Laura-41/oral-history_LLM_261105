@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T16:23:35",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC01-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC01-DE003",
+  "usage": {
+    "prompt_tokens": 1348,
+    "total_tokens": 7706,
+    "completion_tokens": 6358,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5486
+    },
+    "time_to_first_token_ms": 109671,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 6357000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-15\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC01-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"特校名称最终仍为南京炮校，陈锐霆与政治委员担任首任名誉不驻校校长和政治委员。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"自“到了南京以后”起，至“校长跟政治委员”止；同段后续招生与毕业人员内容不纳入本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"特校到南京后改称南京炮校\",\n      \"process_text\": \"到了南京以后，我们这个特校就变成南京炮校\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0025\"\n      ],\n      \"evidence_quote\": \"到了南京以后，我们这个特校就变成南京炮校\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"南京炮校后来改称第三炮校，之后又改回南京炮校\",\n      \"process_text\": \"以后（因为是）第三野战军嘛，又改成第三炮校，以后又改回来，还是南京炮校。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0025\"\n      ],\n      \"evidence_quote\": \"以后（因为是）第三野战军嘛，又改成第三炮校，以后又改回来，还是南京炮校。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆与政治委员担任首任名誉不驻校校长和政治委员\",\n      \"process_text\": \"我跟政治委员都是首任的，名誉的，不驻校的校长跟政治委员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0025\"\n      ],\n      \"evidence_quote\": \"我跟政治委员都是首任的，名誉的，不驻校的校长跟政治委员。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE003-P01\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0025\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE003-P02\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0025\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-15",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC01-DE003",
+    "event_enrichment": {
+      "result_state": "特校名称最终仍为南京炮校，陈锐霆与政治委员担任首任名誉不驻校校长和政治委员。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "自“到了南京以后”起，至“校长跟政治委员”止；同段后续招生与毕业人员内容不纳入本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC01-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "特校到南京后改称南京炮校",
+        "process_text": "到了南京以后，我们这个特校就变成南京炮校",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0025"
+        ],
+        "evidence_quote": "到了南京以后，我们这个特校就变成南京炮校",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "南京炮校后来改称第三炮校，之后又改回南京炮校",
+        "process_text": "以后（因为是）第三野战军嘛，又改成第三炮校，以后又改回来，还是南京炮校。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0025"
+        ],
+        "evidence_quote": "以后（因为是）第三野战军嘛，又改成第三炮校，以后又改回来，还是南京炮校。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆与政治委员担任首任名誉不驻校校长和政治委员",
+        "process_text": "我跟政治委员都是首任的，名誉的，不驻校的校长跟政治委员。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0025"
+        ],
+        "evidence_quote": "我跟政治委员都是首任的，名誉的，不驻校的校长跟政治委员。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC01-DE003-P01",
+        "target_stage_id": "BATCH07-DOC01-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC01-S0025",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC01-DE003-P02",
+        "target_stage_id": "BATCH07-DOC01-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC01-S0025",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

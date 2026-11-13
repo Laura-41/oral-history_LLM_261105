@@ -1,0 +1,91 @@
+{
+  "run_time": "2026-11-12T16:12:35",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC09-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC09-DE006",
+  "usage": {
+    "prompt_tokens": 1813,
+    "total_tokens": 10413,
+    "completion_tokens": 8600,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7517
+    },
+    "time_to_first_token_ms": 189116,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-22\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC09-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"苏北国际和平医院挂牌，对外名称、对内名称及名义院长、副院长、驻院总医师明确，陈海峰统管医疗。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点依据 S0090 中‘8月13号正式在我们这个庙的门口放鞭炮，弄了个牌子，苏北国际和平医院，举行一个挂牌仪式’；终点依据 S0092—S0097 对名称、驻院总医师及统管医疗的说明。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"举行苏北国际和平医院挂牌仪式\",\n      \"process_text\": \"我们是8月13号正式在我们这个庙的门口放鞭炮，弄了个牌子，苏北国际和平医院，举行一个挂牌仪式。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0090\"\n      ],\n      \"evidence_quote\": \"我们是8月13号正式在我们这个庙的门口放鞭炮，弄了个牌子，苏北国际和平医院，举行一个挂牌仪式。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"确定对外对内医院名称及名义院长、副院长和驻院总医师\",\n      \"process_text\": \"对外，我们叫苏北国际和平医院，对内，我们是华中军区第一后方医院。第一后方医院实际上除了一个医疗队，第一医疗队全部变成苏北国际和平医院。名义上这个院长就是华中军区卫生部长齐仲桓兼，副院长（由）副部长李振湘兼。我呢，作为驻院总医师。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0092\"\n      ],\n      \"evidence_quote\": \"对外，我们叫苏北国际和平医院，对内，我们是华中军区第一后方医院。第一后方医院实际上除了一个医疗队，第一医疗队全部变成苏北国际和平医院。名义上这个院长就是华中军区卫生部长齐仲桓兼，副院长（由）副部长李振湘兼。我呢，作为驻院总医师。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈海峰以驻院总医师身份统管医疗\",\n      \"process_text\": \"我统管一切，所有的医疗都我管了，这个开不开刀啊，那个手术室的准备啊，手术后怎么样啊。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0094\",\n        \"BATCH06-DOC09-S0095\",\n        \"BATCH06-DOC09-S0097\"\n      ],\n      \"evidence_quote\": \"“总经理”的“总”。我统管一切，所有的医疗都我管了，这个开不开刀啊，那个手术室的准备啊，手术后怎么样啊。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE006-P01\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0092\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE006-P02\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE006-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0095\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-22",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC09-DE006",
+    "event_enrichment": {
+      "result_state": "苏北国际和平医院挂牌，对外名称、对内名称及名义院长、副院长、驻院总医师明确，陈海峰统管医疗。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点依据 S0090 中‘8月13号正式在我们这个庙的门口放鞭炮，弄了个牌子，苏北国际和平医院，举行一个挂牌仪式’；终点依据 S0092—S0097 对名称、驻院总医师及统管医疗的说明。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC09-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "举行苏北国际和平医院挂牌仪式",
+        "process_text": "我们是8月13号正式在我们这个庙的门口放鞭炮，弄了个牌子，苏北国际和平医院，举行一个挂牌仪式。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0090"
+        ],
+        "evidence_quote": "我们是8月13号正式在我们这个庙的门口放鞭炮，弄了个牌子，苏北国际和平医院，举行一个挂牌仪式。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "确定对外对内医院名称及名义院长、副院长和驻院总医师",
+        "process_text": "对外，我们叫苏北国际和平医院，对内，我们是华中军区第一后方医院。第一后方医院实际上除了一个医疗队，第一医疗队全部变成苏北国际和平医院。名义上这个院长就是华中军区卫生部长齐仲桓兼，副院长（由）副部长李振湘兼。我呢，作为驻院总医师。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0092"
+        ],
+        "evidence_quote": "对外，我们叫苏北国际和平医院，对内，我们是华中军区第一后方医院。第一后方医院实际上除了一个医疗队，第一医疗队全部变成苏北国际和平医院。名义上这个院长就是华中军区卫生部长齐仲桓兼，副院长（由）副部长李振湘兼。我呢，作为驻院总医师。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "陈海峰以驻院总医师身份统管医疗",
+        "process_text": "我统管一切，所有的医疗都我管了，这个开不开刀啊，那个手术室的准备啊，手术后怎么样啊。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0094",
+          "BATCH06-DOC09-S0095",
+          "BATCH06-DOC09-S0097"
+        ],
+        "evidence_quote": "“总经理”的“总”。我统管一切，所有的医疗都我管了，这个开不开刀啊，那个手术室的准备啊，手术后怎么样啊。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC09-DE006-P01",
+        "target_stage_id": "BATCH06-DOC09-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0092",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE006-P02",
+        "target_stage_id": "BATCH06-DOC09-DE006-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC09-S0095",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

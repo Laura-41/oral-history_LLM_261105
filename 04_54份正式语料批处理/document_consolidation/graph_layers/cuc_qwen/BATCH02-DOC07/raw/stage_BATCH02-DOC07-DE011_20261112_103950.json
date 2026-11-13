@@ -1,0 +1,110 @@
+{
+  "run_time": "2026-11-12T10:39:50",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC07-DE011",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC07-DE011",
+  "usage": {
+    "prompt_tokens": 1598,
+    "total_tokens": 9391,
+    "completion_tokens": 7793,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6162
+    },
+    "time_to_first_token_ms": 140579,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC07-DE011\",\n  \"event_enrichment\": {\n    \"result_state\": \"领导在小本上签字题词完成，小本后来因过铁路、皖南事变后不能携带而丢失；陈毅题词被陈海峰作为座右铭，并在厚本子序言中写到。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于 S0052 所述毕业、开学时领导参加及皖南请领导在小本签字留念，经 S0054/S0056 所述小本没有了及丢失原因，止于 S0058/S0060 所述签字内容差异及厚本子序言写到这一段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE011-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"开学时领导参加，皖南有买小本请领导签字留念的习惯\",\n      \"process_text\": \"那么我们是8月8号毕业的。开学的时候呢，叶挺呀，项英呀，李一氓，组织部长李子芳，敌工部长林植夫啊，都来参加的，陈毅元帅也来了。我们皖南那个时候有个习惯，教导队的学生也这样，都买这个小本，领导首长来教育了，都请他签字留念。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0052\"\n      ],\n      \"evidence_quote\": \"陈海峰：那么我们是8月8号毕业的。开学的时候呢，叶挺呀，项英呀，李一氓，组织部长李子芳，敌工部长林植夫啊，都来参加的，陈毅元帅也来了。我们皖南那个时候有个习惯，教导队的学生也这样，都买这个小本，领导首长来教育了，都请他签字留念。薛暮桥签的字，他哪儿签都一样，“艰苦奋斗，英勇牺牲”八个字。那个陈毅元帅给我那个本子上签的呢，“为学路逆水行舟，不进则退”。所以这一句话一直作为我一生的座右铭，他在我那个开学的小本子上写的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE011-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"薛暮桥和陈毅在小本上签字题词，陈毅题词成为陈海峰座右铭\",\n      \"process_text\": \"薛暮桥签的字，他哪儿签都一样，“艰苦奋斗，英勇牺牲”八个字。那个陈毅元帅给我那个本子上签的呢，“为学路逆水行舟，不进则退”。所以这一句话一直作为我一生的座右铭，他在我那个开学的小本子上写的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0052\"\n      ],\n      \"evidence_quote\": \"陈海峰：那么我们是8月8号毕业的。开学的时候呢，叶挺呀，项英呀，李一氓，组织部长李子芳，敌工部长林植夫啊，都来参加的，陈毅元帅也来了。我们皖南那个时候有个习惯，教导队的学生也这样，都买这个小本，领导首长来教育了，都请他签字留念。薛暮桥签的字，他哪儿签都一样，“艰苦奋斗，英勇牺牲”八个字。那个陈毅元帅给我那个本子上签的呢，“为学路逆水行舟，不进则退”。所以这一句话一直作为我一生的座右铭，他在我那个开学的小本子上写的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE011-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"小本后来没有了，因过铁路、皖南事变后不能携带而丢失\",\n      \"process_text\": \"没有了。因为过铁路，到皖南事变以后，我们什么东西都不能带，一张纸都不能带，所以都丢掉了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0054\",\n        \"BATCH02-DOC07-S0056\"\n      ],\n      \"evidence_quote\": \"陈海峰：因为过铁路，到皖南事变以后，我们什么东西都不能带，一张纸都不能带，所以都丢掉了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE011-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"签字内容因人而异，陈海峰在厚本子序言中写到这一段\",\n      \"process_text\": \"不一样。每个人都有点区别。他（是）诗人。他写的是各种各样，他在我那个本子上是这样写的，我那个厚本子前面序言里面写到这一段。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0058\",\n        \"BATCH02-DOC07-S0060\"\n      ],\n      \"evidence_quote\": \"陈海峰：他（是）诗人。他写的是各种各样，他在我那个本子上是这样写的，我那个厚本子前面序言里面写到这一段。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE011-P01\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE011-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0052\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE011-P02\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE011-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0054\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE011-P03\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE011-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0058\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC07-DE011",
+    "event_enrichment": {
+      "result_state": "领导在小本上签字题词完成，小本后来因过铁路、皖南事变后不能携带而丢失；陈毅题词被陈海峰作为座右铭，并在厚本子序言中写到。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于 S0052 所述毕业、开学时领导参加及皖南请领导在小本签字留念，经 S0054/S0056 所述小本没有了及丢失原因，止于 S0058/S0060 所述签字内容差异及厚本子序言写到这一段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC07-DE011-P01",
+        "stage_order": 1,
+        "stage_summary": "开学时领导参加，皖南有买小本请领导签字留念的习惯",
+        "process_text": "那么我们是8月8号毕业的。开学的时候呢，叶挺呀，项英呀，李一氓，组织部长李子芳，敌工部长林植夫啊，都来参加的，陈毅元帅也来了。我们皖南那个时候有个习惯，教导队的学生也这样，都买这个小本，领导首长来教育了，都请他签字留念。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0052"
+        ],
+        "evidence_quote": "陈海峰：那么我们是8月8号毕业的。开学的时候呢，叶挺呀，项英呀，李一氓，组织部长李子芳，敌工部长林植夫啊，都来参加的，陈毅元帅也来了。我们皖南那个时候有个习惯，教导队的学生也这样，都买这个小本，领导首长来教育了，都请他签字留念。薛暮桥签的字，他哪儿签都一样，“艰苦奋斗，英勇牺牲”八个字。那个陈毅元帅给我那个本子上签的呢，“为学路逆水行舟，不进则退”。所以这一句话一直作为我一生的座右铭，他在我那个开学的小本子上写的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE011-P02",
+        "stage_order": 2,
+        "stage_summary": "薛暮桥和陈毅在小本上签字题词，陈毅题词成为陈海峰座右铭",
+        "process_text": "薛暮桥签的字，他哪儿签都一样，“艰苦奋斗，英勇牺牲”八个字。那个陈毅元帅给我那个本子上签的呢，“为学路逆水行舟，不进则退”。所以这一句话一直作为我一生的座右铭，他在我那个开学的小本子上写的。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0052"
+        ],
+        "evidence_quote": "陈海峰：那么我们是8月8号毕业的。开学的时候呢，叶挺呀，项英呀，李一氓，组织部长李子芳，敌工部长林植夫啊，都来参加的，陈毅元帅也来了。我们皖南那个时候有个习惯，教导队的学生也这样，都买这个小本，领导首长来教育了，都请他签字留念。薛暮桥签的字，他哪儿签都一样，“艰苦奋斗，英勇牺牲”八个字。那个陈毅元帅给我那个本子上签的呢，“为学路逆水行舟，不进则退”。所以这一句话一直作为我一生的座右铭，他在我那个开学的小本子上写的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE011-P03",
+        "stage_order": 3,
+        "stage_summary": "小本后来没有了，因过铁路、皖南事变后不能携带而丢失",
+        "process_text": "没有了。因为过铁路，到皖南事变以后，我们什么东西都不能带，一张纸都不能带，所以都丢掉了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0054",
+          "BATCH02-DOC07-S0056"
+        ],
+        "evidence_quote": "陈海峰：因为过铁路，到皖南事变以后，我们什么东西都不能带，一张纸都不能带，所以都丢掉了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE011-P04",
+        "stage_order": 4,
+        "stage_summary": "签字内容因人而异，陈海峰在厚本子序言中写到这一段",
+        "process_text": "不一样。每个人都有点区别。他（是）诗人。他写的是各种各样，他在我那个本子上是这样写的，我那个厚本子前面序言里面写到这一段。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0058",
+          "BATCH02-DOC07-S0060"
+        ],
+        "evidence_quote": "陈海峰：他（是）诗人。他写的是各种各样，他在我那个本子上是这样写的，我那个厚本子前面序言里面写到这一段。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC07-DE011-P01",
+        "target_stage_id": "BATCH02-DOC07-DE011-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC07-S0052",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE011-P02",
+        "target_stage_id": "BATCH02-DOC07-DE011-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0054",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE011-P03",
+        "target_stage_id": "BATCH02-DOC07-DE011-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC07-S0058",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

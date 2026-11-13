@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-11T21:58:20",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC09-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC09-DE005",
+  "usage": {
+    "prompt_tokens": 1156,
+    "total_tokens": 3970,
+    "completion_tokens": 2814,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2301
+    },
+    "time_to_first_token_ms": 23182,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC09-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"杨永松及扩军人员用两天时间从沁源县冒雪步行到达临汾。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以原文“我们从沁源县出发”为起点，以“我们用两天的时间走到了临汾”为终点；此前师部决定扩军人员先走作为背景不纳入事件边界。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"从沁源县出发，冒雪翻山，遭遇寒冷和路滑。\",\n      \"process_text\": \"从沁源县出发，爬雪山，又冷，路不好走，特别滑。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0044\"\n      ],\n      \"evidence_quote\": \"我们从沁源县出发，就爬着雪山，又冷，路又不好走，特别滑\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"经过两天步行到达临汾。\",\n      \"process_text\": \"用两天时间走到了临汾。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0044\"\n      ],\n      \"evidence_quote\": \"我们用两天的时间走到了临汾。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE005-P01\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE005-P02\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0044\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC09-DE005",
+    "event_enrichment": {
+      "result_state": "杨永松及扩军人员用两天时间从沁源县冒雪步行到达临汾。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以原文“我们从沁源县出发”为起点，以“我们用两天的时间走到了临汾”为终点；此前师部决定扩军人员先走作为背景不纳入事件边界。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC09-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "从沁源县出发，冒雪翻山，遭遇寒冷和路滑。",
+        "process_text": "从沁源县出发，爬雪山，又冷，路不好走，特别滑。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0044"
+        ],
+        "evidence_quote": "我们从沁源县出发，就爬着雪山，又冷，路又不好走，特别滑",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "经过两天步行到达临汾。",
+        "process_text": "用两天时间走到了临汾。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0044"
+        ],
+        "evidence_quote": "我们用两天的时间走到了临汾。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC09-DE005-P01",
+        "target_stage_id": "BATCH02-DOC09-DE005-P02",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC09-S0044",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-11T22:26:19",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC05-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC05-DE004",
+  "usage": {
+    "prompt_tokens": 1758,
+    "total_tokens": 8116,
+    "completion_tokens": 6358,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4643
+    },
+    "time_to_first_token_ms": 55589,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 6357000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-07\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC05-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"起义部队约一千多人（含一个团部、二营全营及骑兵团二百五十匹马）于4月19日起义，次日到达指定地点与彭雪枫会合；三营被一营派人找回，起义未完全按计划实现，但彭雪枫肯定其带出部队。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件起于陈锐霆因目睹部队打自己人而决定起义（S0030），止于起义部队到达指定地点见到彭雪枫并得到其肯定（S0034—S0036首句）；S0036后文关于向津浦路东转移、到洪泽湖附近与二十七团会面及给养困难，属于会合后的后续过程，不纳入本事件边界。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆因目睹共产党部队打击自己人而产生犯罪感，决心带部队起义，并判断起义成功希望不大。\",\n      \"process_text\": \"看到骑兵献俘、报告俘虏和打死敌人人数后，感到自己带着共产党部队打自己的人，是犯罪，于是决定带部队起义；同时判断部队刚来几个月、没有党组织、连长以上家眷在湖南，起义成功希望不大。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0030\"\n      ],\n      \"evidence_quote\": \"哎呀，这个时候我感觉你共产党带着部队打自己的人，那我这个是犯罪嘛！所以我就带部队起义。但是我刚到这个部队几个月，不到一年，底下也没有党的组织，一个党员没有嘛，另外连长以上的家眷都在湖南，所以这部队很难巩固。另外那个时候国民党中央还有力量嘛，所以明知道我这个起义成功希望不大。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈锐霆通过罗会廉向中央报告起义并获同意，随后召集营长开会，以爱国主义和返乡情绪进行动员。\",\n      \"process_text\": \"让彭雪枫派来的罗会廉回去给中央直接发报，报告要起义；中央同意后，把营长弄到一起开会，讲大部分是河北人、少部分是山东人，家乡在沦陷区，盼望早一点杀回老家，用爱国主义精神激动他们。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0032\"\n      ],\n      \"evidence_quote\": \"这个时候彭雪枫派来的罗会廉同志回去，我说让他那个地方给中央直接发报，我就报告中央说要起义。他回来说中央同意了，我就采取什么办法呢，我就把营长弄到一起开会，我就讲我们大部分是河北人，还有少部分是山东人嘛，我们的家乡现在都在沦陷区了，都盼望我们早一点杀回我们自己的家乡，用这个爱国主义精神嘛，激动他们。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"4月19日陈锐霆带部队起义，三营途中被一营派人找回，最终带出约一千多人。\",\n      \"process_text\": \"对营长表示若认为动作不对可以告发；几天后到4月19日，带着部队起义，带了一个团部、一个二营营长；三营走在半路被一营派人找回，一营离得较远，营长与三营营长关系较好，把已来的三营又要回去；结果带出有一千多人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0034\"\n      ],\n      \"evidence_quote\": \"我说如果你们认为自己杀自己，反对这个东西，认为我这个动作不对，你们可以告发我。呆了几天，到了4月19号，我就带着部队起义了。那么带了一个团部，带了一个二营营长，三营走在半路叫一营派人把他们又找回去了。那个一营离我比较远一些，这个营长先跑在前边，他跟三营营长比较好一点，三营本来已经来了，他又把他要回去了。结果我们带着有一千多人\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"起义部队第二天到达指定地点见到彭雪枫，陈锐霆汇报起义未搞好及实际带出兵力。\",\n      \"process_text\": \"第二天到达指定地点，见了彭雪枫，讲起义没有搞好，只来了一个团部、一个二营全营，还有骑兵团二百五十匹马，一共一千多人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0034\"\n      ],\n      \"evidence_quote\": \"第二天就到了我们指定的地点，见了彭雪枫同志，我就讲起义没有搞好，我说就来了一个团部，一个二营全营，还有骑兵团二百五十匹马，一共一千多人吧。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE004-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"彭雪枫肯定陈锐霆作为党员能带出这么多部队已很不简单。\",\n      \"process_text\": \"彭雪枫对陈锐霆说，你一个党员能够带着那么多的部队出来，已经很不简单了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0036\"\n      ],\n      \"evidence_quote\": \"他说你一个党员，能够带着那么多的部队出来，已经很不简单了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE004-P01\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE004-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0032\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE004-P02\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE004-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0034\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE004-P03\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE004-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0034\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE004-P04\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE004-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0036\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-07",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC05-DE004",
+    "event_enrichment": {
+      "result_state": "起义部队约一千多人（含一个团部、二营全营及骑兵团二百五十匹马）于4月19日起义，次日到达指定地点与彭雪枫会合；三营被一营派人找回，起义未完全按计划实现，但彭雪枫肯定其带出部队。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件起于陈锐霆因目睹部队打自己人而决定起义（S0030），止于起义部队到达指定地点见到彭雪枫并得到其肯定（S0034—S0036首句）；S0036后文关于向津浦路东转移、到洪泽湖附近与二十七团会面及给养困难，属于会合后的后续过程，不纳入本事件边界。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC05-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆因目睹共产党部队打击自己人而产生犯罪感，决心带部队起义，并判断起义成功希望不大。",
+        "process_text": "看到骑兵献俘、报告俘虏和打死敌人人数后，感到自己带着共产党部队打自己的人，是犯罪，于是决定带部队起义；同时判断部队刚来几个月、没有党组织、连长以上家眷在湖南，起义成功希望不大。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0030"
+        ],
+        "evidence_quote": "哎呀，这个时候我感觉你共产党带着部队打自己的人，那我这个是犯罪嘛！所以我就带部队起义。但是我刚到这个部队几个月，不到一年，底下也没有党的组织，一个党员没有嘛，另外连长以上的家眷都在湖南，所以这部队很难巩固。另外那个时候国民党中央还有力量嘛，所以明知道我这个起义成功希望不大。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "陈锐霆通过罗会廉向中央报告起义并获同意，随后召集营长开会，以爱国主义和返乡情绪进行动员。",
+        "process_text": "让彭雪枫派来的罗会廉回去给中央直接发报，报告要起义；中央同意后，把营长弄到一起开会，讲大部分是河北人、少部分是山东人，家乡在沦陷区，盼望早一点杀回老家，用爱国主义精神激动他们。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0032"
+        ],
+        "evidence_quote": "这个时候彭雪枫派来的罗会廉同志回去，我说让他那个地方给中央直接发报，我就报告中央说要起义。他回来说中央同意了，我就采取什么办法呢，我就把营长弄到一起开会，我就讲我们大部分是河北人，还有少部分是山东人嘛，我们的家乡现在都在沦陷区了，都盼望我们早一点杀回我们自己的家乡，用这个爱国主义精神嘛，激动他们。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "4月19日陈锐霆带部队起义，三营途中被一营派人找回，最终带出约一千多人。",
+        "process_text": "对营长表示若认为动作不对可以告发；几天后到4月19日，带着部队起义，带了一个团部、一个二营营长；三营走在半路被一营派人找回，一营离得较远，营长与三营营长关系较好，把已来的三营又要回去；结果带出有一千多人。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0034"
+        ],
+        "evidence_quote": "我说如果你们认为自己杀自己，反对这个东西，认为我这个动作不对，你们可以告发我。呆了几天，到了4月19号，我就带着部队起义了。那么带了一个团部，带了一个二营营长，三营走在半路叫一营派人把他们又找回去了。那个一营离我比较远一些，这个营长先跑在前边，他跟三营营长比较好一点，三营本来已经来了，他又把他要回去了。结果我们带着有一千多人",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "起义部队第二天到达指定地点见到彭雪枫，陈锐霆汇报起义未搞好及实际带出兵力。",
+        "process_text": "第二天到达指定地点，见了彭雪枫，讲起义没有搞好，只来了一个团部、一个二营全营，还有骑兵团二百五十匹马，一共一千多人。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0034"
+        ],
+        "evidence_quote": "第二天就到了我们指定的地点，见了彭雪枫同志，我就讲起义没有搞好，我说就来了一个团部，一个二营全营，还有骑兵团二百五十匹马，一共一千多人吧。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE004-P05",
+        "stage_order": 5,
+        "stage_summary": "彭雪枫肯定陈锐霆作为党员能带出这么多部队已很不简单。",
+        "process_text": "彭雪枫对陈锐霆说，你一个党员能够带着那么多的部队出来，已经很不简单了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0036"
+        ],
+        "evidence_quote": "他说你一个党员，能够带着那么多的部队出来，已经很不简单了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC05-DE004-P01",
+        "target_stage_id": "BATCH03-DOC05-DE004-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH03-DOC05-S0032",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC05-DE004-P02",
+        "target_stage_id": "BATCH03-DOC05-DE004-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH03-DOC05-S0034",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC05-DE004-P03",
+        "target_stage_id": "BATCH03-DOC05-DE004-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC05-S0034",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC05-DE004-P04",
+        "target_stage_id": "BATCH03-DOC05-DE004-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC05-S0036",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

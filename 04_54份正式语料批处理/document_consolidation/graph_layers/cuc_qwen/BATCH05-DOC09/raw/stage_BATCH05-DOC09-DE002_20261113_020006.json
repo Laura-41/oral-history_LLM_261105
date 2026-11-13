@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-13T02:00:06",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC09-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC09-DE002",
+  "usage": {
+    "prompt_tokens": 1437,
+    "total_tokens": 7899,
+    "completion_tokens": 6462,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5534
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 95158,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-17\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC09-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰晚下了课后自行到那里解剖尸体，自己琢磨并带着书看，自己学。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件边界以 S0056 中“本来一个人一具尸体”为触发背景，以“自己学”及同场景“好学生啊，晚上都去啊。胆子小的不敢去，看到死人啊，都解剖开来的。”为结束；S0053、S0054 为教学尸体背景，S0056 后半抗美援朝尸体来源不属于本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"尸体教学条件背景：本来一人一具尸体\",\n      \"process_text\": \"本来一个人一具尸体\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0056\"\n      ],\n      \"evidence_quote\": \"那么本来一个人一具尸体\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"晚下了课后自行到那里解剖尸体，并带着书琢磨\",\n      \"process_text\": \"我自己晚下了课，我自己到那里去解剖了，自己琢磨了，带着那个书看了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0056\"\n      ],\n      \"evidence_quote\": \"我自己晚下了课，我自己到那里去解剖了，自己琢磨了，带着那个书看了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"通过自行解剖和看书学习尸体内容，并提及好学生晚上都去、胆子小的不敢去\",\n      \"process_text\": \"这个下面（是）什么东西，自己学。好学生啊，晚上都去啊。胆子小的不敢去，看到死人啊，都解剖开来的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0056\"\n      ],\n      \"evidence_quote\": \"这个下面（是）什么东西，自己学。好学生啊，晚上都去啊。胆子小的不敢去，看到死人啊，都解剖开来的。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE002-P01\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC09-S0056\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE002-P02\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE002-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC09-S0056\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-17",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC09-DE002",
+    "event_enrichment": {
+      "result_state": "陈海峰晚下了课后自行到那里解剖尸体，自己琢磨并带着书看，自己学。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "事件边界以 S0056 中“本来一个人一具尸体”为触发背景，以“自己学”及同场景“好学生啊，晚上都去啊。胆子小的不敢去，看到死人啊，都解剖开来的。”为结束；S0053、S0054 为教学尸体背景，S0056 后半抗美援朝尸体来源不属于本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC09-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "尸体教学条件背景：本来一人一具尸体",
+        "process_text": "本来一个人一具尸体",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0056"
+        ],
+        "evidence_quote": "那么本来一个人一具尸体",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "晚下了课后自行到那里解剖尸体，并带着书琢磨",
+        "process_text": "我自己晚下了课，我自己到那里去解剖了，自己琢磨了，带着那个书看了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0056"
+        ],
+        "evidence_quote": "我自己晚下了课，我自己到那里去解剖了，自己琢磨了，带着那个书看了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "通过自行解剖和看书学习尸体内容，并提及好学生晚上都去、胆子小的不敢去",
+        "process_text": "这个下面（是）什么东西，自己学。好学生啊，晚上都去啊。胆子小的不敢去，看到死人啊，都解剖开来的。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0056"
+        ],
+        "evidence_quote": "这个下面（是）什么东西，自己学。好学生啊，晚上都去啊。胆子小的不敢去，看到死人啊，都解剖开来的。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC09-DE002-P01",
+        "target_stage_id": "BATCH05-DOC09-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC09-S0056",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC09-DE002-P02",
+        "target_stage_id": "BATCH05-DOC09-DE002-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC09-S0056",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

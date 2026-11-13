@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-13T00:26:43",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC03-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC03-DE007",
+  "usage": {
+    "prompt_tokens": 1401,
+    "total_tokens": 8434,
+    "completion_tokens": 7033,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5954
+    },
+    "tokens_per_second": 7032000,
+    "time_to_first_token_ms": 105451,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC03-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"我方撤出临沂并向北转移，王耀武部队两个军七个师被消灭，称为莱芜战役。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点依据 S0048 所述此前打完三个整编师和一个快速纵队后打临沂；终点依据 S0050 所述撤出临沂、夜晚北撤并消灭王耀武部队，称为莱芜战役。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"前序作战后转入临沂\",\n      \"process_text\": \"打完了三个整编师还有一个快速纵队以后，就打临沂。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0048\"\n      ],\n      \"evidence_quote\": \"陈锐霆：当兵的，特别当军官的，都说“推完磨子杀驴吃”。一下子一个军里边裁了五个团，剩下四个。所以部队打仗的劲头很差，都不愿意打仗。所以那个时候我们的装备虽然弱一点，但是一个是我们的领导英明的指挥，二是部队勇敢，所以把国民党的日式装备跟美式装备都转到我们手上了。打完了三个整编师还有一个快速纵队以后，就打临沂。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"留少数部队伪装仍在，夜晚向北撤出临沂\",\n      \"process_text\": \"我们采取很巧妙的办法：我们撤出临沂，留少数的部队在那个地方表示我们的部队还都在那个地方，（其实）我们夜晚都向北撤了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0050\"\n      ],\n      \"evidence_quote\": \"陈锐霆：我们采取很巧妙的办法：我们撤出临沂，留少数的部队在那个地方表示我们的部队还都在那个地方，（其实）我们夜晚都向北撤了。这个时候蒋介石想着从北边夹击我们，（我们就）把王耀武的那个部队，两个军七个师又消灭了，叫“莱芜战役”。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"针对蒋介石北边夹击意图消灭王耀武部队并称莱芜战役\",\n      \"process_text\": \"这个时候蒋介石想着从北边夹击我们，（我们就）把王耀武的那个部队，两个军七个师又消灭了，叫“莱芜战役”。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0050\"\n      ],\n      \"evidence_quote\": \"陈锐霆：我们采取很巧妙的办法：我们撤出临沂，留少数的部队在那个地方表示我们的部队还都在那个地方，（其实）我们夜晚都向北撤了。这个时候蒋介石想着从北边夹击我们，（我们就）把王耀武的那个部队，两个军七个师又消灭了，叫“莱芜战役”。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE007-P01\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0050\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE007-P02\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0050\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC03-DE007",
+    "event_enrichment": {
+      "result_state": "我方撤出临沂并向北转移，王耀武部队两个军七个师被消灭，称为莱芜战役。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点依据 S0048 所述此前打完三个整编师和一个快速纵队后打临沂；终点依据 S0050 所述撤出临沂、夜晚北撤并消灭王耀武部队，称为莱芜战役。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC03-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "前序作战后转入临沂",
+        "process_text": "打完了三个整编师还有一个快速纵队以后，就打临沂。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0048"
+        ],
+        "evidence_quote": "陈锐霆：当兵的，特别当军官的，都说“推完磨子杀驴吃”。一下子一个军里边裁了五个团，剩下四个。所以部队打仗的劲头很差，都不愿意打仗。所以那个时候我们的装备虽然弱一点，但是一个是我们的领导英明的指挥，二是部队勇敢，所以把国民党的日式装备跟美式装备都转到我们手上了。打完了三个整编师还有一个快速纵队以后，就打临沂。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "留少数部队伪装仍在，夜晚向北撤出临沂",
+        "process_text": "我们采取很巧妙的办法：我们撤出临沂，留少数的部队在那个地方表示我们的部队还都在那个地方，（其实）我们夜晚都向北撤了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0050"
+        ],
+        "evidence_quote": "陈锐霆：我们采取很巧妙的办法：我们撤出临沂，留少数的部队在那个地方表示我们的部队还都在那个地方，（其实）我们夜晚都向北撤了。这个时候蒋介石想着从北边夹击我们，（我们就）把王耀武的那个部队，两个军七个师又消灭了，叫“莱芜战役”。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "针对蒋介石北边夹击意图消灭王耀武部队并称莱芜战役",
+        "process_text": "这个时候蒋介石想着从北边夹击我们，（我们就）把王耀武的那个部队，两个军七个师又消灭了，叫“莱芜战役”。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0050"
+        ],
+        "evidence_quote": "陈锐霆：我们采取很巧妙的办法：我们撤出临沂，留少数的部队在那个地方表示我们的部队还都在那个地方，（其实）我们夜晚都向北撤了。这个时候蒋介石想着从北边夹击我们，（我们就）把王耀武的那个部队，两个军七个师又消灭了，叫“莱芜战役”。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC03-DE007-P01",
+        "target_stage_id": "BATCH05-DOC03-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC03-S0050",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC03-DE007-P02",
+        "target_stage_id": "BATCH05-DOC03-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC03-S0050",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

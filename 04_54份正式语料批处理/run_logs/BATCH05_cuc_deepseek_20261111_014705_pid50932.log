@@ -1,0 +1,13 @@
+BATCH05 / cuc/deepseek：9份文档、39个窗口、19个步骤。
+
+=== 窗口抽取 BATCH05-DOC01 ===
++ /opt/homebrew/opt/python@3.14/bin/python3.14 scripts/run_formal_batch.py --model cuc/deepseek --batch BATCH05 --document BATCH05-DOC01 --timeout 600
+窗口清单：batch05_manifest.csv（共39行）
+[1/5] 跳过已通过窗口：BATCH05-DOC01-W001
+[2/5] 跳过已通过窗口：BATCH05-DOC01-W002
+[3/5] 请求 cuc/deepseek / BATCH05-DOC01-W003，最长等待600秒……
+技术校验失败并停止：
+  - events[1].event.evidence_quote不在该事件所列原文片段中
+步骤失败（退出码 3）：窗口抽取 BATCH05-DOC01；按熔断规则停止本批。
+
+本批在「窗口抽取 BATCH05-DOC01」中断。已完成结果全部保留，不要进入下一批；排查后可用同一命令断点续跑。

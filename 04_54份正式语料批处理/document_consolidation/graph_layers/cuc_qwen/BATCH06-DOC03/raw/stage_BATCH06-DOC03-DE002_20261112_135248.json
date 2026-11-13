@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T13:52:48",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC03-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC03-DE002",
+  "usage": {
+    "prompt_tokens": 1263,
+    "total_tokens": 4652,
+    "completion_tokens": 3389,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2545
+    },
+    "time_to_first_token_ms": 49892,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC03-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"686团两个营躲入黄豆地后仍遭扫荡，两门炮被弄回去。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以 S0005 中“686团带了两个营”至“两门炮也被弄回去了”为边界；前文“师部……缴了两门大炮”不属于本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"686团两个营遭扫荡陷入困境\",\n      \"process_text\": \"686团带了两个营，被扫荡得最后他们都没办法了\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0005\"\n      ],\n      \"evidence_quote\": \"686团带了两个营，被扫荡得最后他们都没办法了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"因无高粱地可躲，部队钻入黄豆地\",\n      \"process_text\": \"这个部队，没有高粱地方，就躲在那个黄豆地里头，钻进去\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0005\"\n      ],\n      \"evidence_quote\": \"这个部队，没有高粱地方，就躲在那个黄豆地里头，钻进去\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"黄豆地中扫荡严重，两门炮被弄回去\",\n      \"process_text\": \"扫荡扫得不得了，两门炮也被弄回去了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0005\"\n      ],\n      \"evidence_quote\": \"扫荡扫得不得了，两门炮也被弄回去了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE002-P01\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0005\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE002-P02\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0005\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC03-DE002",
+    "event_enrichment": {
+      "result_state": "686团两个营躲入黄豆地后仍遭扫荡，两门炮被弄回去。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "以 S0005 中“686团带了两个营”至“两门炮也被弄回去了”为边界；前文“师部……缴了两门大炮”不属于本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC03-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "686团两个营遭扫荡陷入困境",
+        "process_text": "686团带了两个营，被扫荡得最后他们都没办法了",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0005"
+        ],
+        "evidence_quote": "686团带了两个营，被扫荡得最后他们都没办法了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "因无高粱地可躲，部队钻入黄豆地",
+        "process_text": "这个部队，没有高粱地方，就躲在那个黄豆地里头，钻进去",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0005"
+        ],
+        "evidence_quote": "这个部队，没有高粱地方，就躲在那个黄豆地里头，钻进去",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "黄豆地中扫荡严重，两门炮被弄回去",
+        "process_text": "扫荡扫得不得了，两门炮也被弄回去了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0005"
+        ],
+        "evidence_quote": "扫荡扫得不得了，两门炮也被弄回去了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC03-DE002-P01",
+        "target_stage_id": "BATCH06-DOC03-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC03-S0005",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE002-P02",
+        "target_stage_id": "BATCH06-DOC03-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC03-S0005",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

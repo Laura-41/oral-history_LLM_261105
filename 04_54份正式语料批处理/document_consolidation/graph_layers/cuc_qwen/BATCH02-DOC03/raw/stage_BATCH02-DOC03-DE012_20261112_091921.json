@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T09:19:21",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC03-DE012",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC03-DE012",
+  "usage": {
+    "prompt_tokens": 1436,
+    "total_tokens": 14306,
+    "completion_tokens": 12870,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 11441
+    },
+    "time_to_first_token_ms": 206116,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V1-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC03-DE012\",\n  \"event_enrichment\": {\n    \"result_state\": \"新四军（原文‘我们’）募得八路军没有的药品，并被总结为药品、医务质量、装备、设备、技术和药物条件优于八路军，形成医疗优势。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于S0061提及叶挺与国民党上层关系密切，止于S0063总结药品、医务质量、装备设备技术药物优于八路军。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE012-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"叶挺与国民党上层关系密切，并存在沈其震与叶挺的关系，为募捐提供关系基础。\",\n      \"process_text\": \"那么再加上沈其震和叶挺的关系，好朋友，是叶挺动员来的。叶挺又和国民党的上层有很好的关系，和孙科，和廖承志的母亲，画画的很好那叫什么，他们关系很密切\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0061\"\n      ],\n      \"evidence_quote\": \"那么再加上沈其震和叶挺的关系，好朋友，是叶挺动员来的。叶挺又和国民党的上层有很好的关系，和孙科，和廖承志的母亲，画画的很好那叫什么，他们关系很密切\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE012-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"到香港募捐，并募得八路军没有的药品。\",\n      \"process_text\": \"到香港去募捐，（募）来的药品，八路军没有的，我们有。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0061\"\n      ],\n      \"evidence_quote\": \"到香港去募捐，（募）来的药品，八路军没有的，我们有。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE012-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"募捐华侨，包括香港、马来西亚、新加坡、印尼等地，并动员人来参军或学医。\",\n      \"process_text\": \"一个是募捐华侨，华侨捐、香港捐，马来西亚的、新加坡的都捐，印尼的。还动员人来参军，有的来学医的，是不是。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0063\"\n      ],\n      \"evidence_quote\": \"一个是募捐华侨，华侨捐、香港捐，马来西亚的、新加坡的都捐，印尼的。还动员人来参军，有的来学医的，是不是。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE012-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"药品、医务质量、装备、设备、技术和药物条件被总结为优于八路军，医疗优势形成。\",\n      \"process_text\": \"这个药品就比八路军好得多，医务质量比八路军好得多，得天独厚。所以关系不一样，所处的地理条件环境不一样，华北地区比较苦一点，他是靠北京、天津为主。我们是靠上海南京和京沪路这些，苏州、无锡、常州、镇江，这些都是当时的现代化城市，买药也方便。通过地下党关系，买也方便。所以我们的装备比他们好，设备比他们好，技术所以比他们高，药物比他们好，都是正规训练。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0063\"\n      ],\n      \"evidence_quote\": \"这个药品就比八路军好得多，医务质量比八路军好得多，得天独厚。所以关系不一样，所处的地理条件环境不一样，华北地区比较苦一点，他是靠北京、天津为主。我们是靠上海南京和京沪路这些，苏州、无锡、常州、镇江，这些都是当时的现代化城市，买药也方便。通过地下党关系，买也方便。所以我们的装备比他们好，设备比他们好，技术所以比他们高，药物比他们好，都是正规训练。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE012-P01\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE012-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0061\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE012-P02\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE012-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0063\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE012-P03\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE012-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0063\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC03-DE012",
+    "event_enrichment": {
+      "result_state": "新四军（原文‘我们’）募得八路军没有的药品，并被总结为药品、医务质量、装备、设备、技术和药物条件优于八路军，形成医疗优势。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于S0061提及叶挺与国民党上层关系密切，止于S0063总结药品、医务质量、装备设备技术药物优于八路军。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC03-DE012-P01",
+        "stage_order": 1,
+        "stage_summary": "叶挺与国民党上层关系密切，并存在沈其震与叶挺的关系，为募捐提供关系基础。",
+        "process_text": "那么再加上沈其震和叶挺的关系，好朋友，是叶挺动员来的。叶挺又和国民党的上层有很好的关系，和孙科，和廖承志的母亲，画画的很好那叫什么，他们关系很密切",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0061"
+        ],
+        "evidence_quote": "那么再加上沈其震和叶挺的关系，好朋友，是叶挺动员来的。叶挺又和国民党的上层有很好的关系，和孙科，和廖承志的母亲，画画的很好那叫什么，他们关系很密切",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE012-P02",
+        "stage_order": 2,
+        "stage_summary": "到香港募捐，并募得八路军没有的药品。",
+        "process_text": "到香港去募捐，（募）来的药品，八路军没有的，我们有。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0061"
+        ],
+        "evidence_quote": "到香港去募捐，（募）来的药品，八路军没有的，我们有。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE012-P03",
+        "stage_order": 3,
+        "stage_summary": "募捐华侨，包括香港、马来西亚、新加坡、印尼等地，并动员人来参军或学医。",
+        "process_text": "一个是募捐华侨，华侨捐、香港捐，马来西亚的、新加坡的都捐，印尼的。还动员人来参军，有的来学医的，是不是。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0063"
+        ],
+        "evidence_quote": "一个是募捐华侨，华侨捐、香港捐，马来西亚的、新加坡的都捐，印尼的。还动员人来参军，有的来学医的，是不是。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE012-P04",
+        "stage_order": 4,
+        "stage_summary": "药品、医务质量、装备、设备、技术和药物条件被总结为优于八路军，医疗优势形成。",
+        "process_text": "这个药品就比八路军好得多，医务质量比八路军好得多，得天独厚。所以关系不一样，所处的地理条件环境不一样，华北地区比较苦一点，他是靠北京、天津为主。我们是靠上海南京和京沪路这些，苏州、无锡、常州、镇江，这些都是当时的现代化城市，买药也方便。通过地下党关系，买也方便。所以我们的装备比他们好，设备比他们好，技术所以比他们高，药物比他们好，都是正规训练。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0063"
+        ],
+        "evidence_quote": "这个药品就比八路军好得多，医务质量比八路军好得多，得天独厚。所以关系不一样，所处的地理条件环境不一样，华北地区比较苦一点，他是靠北京、天津为主。我们是靠上海南京和京沪路这些，苏州、无锡、常州、镇江，这些都是当时的现代化城市，买药也方便。通过地下党关系，买也方便。所以我们的装备比他们好，设备比他们好，技术所以比他们高，药物比他们好，都是正规训练。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC03-DE012-P01",
+        "target_stage_id": "BATCH02-DOC03-DE012-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC03-S0061",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE012-P02",
+        "target_stage_id": "BATCH02-DOC03-DE012-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC03-S0063",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE012-P03",
+        "target_stage_id": "BATCH02-DOC03-DE012-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC03-S0063",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

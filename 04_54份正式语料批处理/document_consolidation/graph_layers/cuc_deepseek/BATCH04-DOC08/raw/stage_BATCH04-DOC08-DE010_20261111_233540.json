@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T23:35:40",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC08-DE010",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC08-DE010",
+  "usage": {
+    "prompt_tokens": 1137,
+    "total_tokens": 3155,
+    "completion_tokens": 2018,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1268
+    },
+    "time_to_first_token_ms": 16038,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC08-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"胶东大部分部队完成整编，缴获的车辆和大炮经规整修理后转移至渤海，部队也转移过去，特种兵纵队实现全纵队大联合。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以片段S0043中“这个时候我们大部分的部队在胶东都整编了”为起点，至“全纵队的大联合了”结束，涵盖整编、转移和合编过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"胶东大部分部队完成整编。\",\n      \"process_text\": \"这个时候我们大部分的部队在胶东都整编了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0043\"\n      ],\n      \"evidence_quote\": \"这个时候我们大部分的部队在胶东都整编了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"缴获车辆和大炮经规整修理后转移至渤海，部队也随同转移。\",\n      \"process_text\": \"一方面把缴获的车辆、大炮规整修理，从那个地方转移到渤海，部队也都转移过去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0043\"\n      ],\n      \"evidence_quote\": \"一方面把缴获的车辆、大炮规整修理，从那个地方转移到渤海，部队也都转移过去。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"特种兵纵队实现全纵队大联合。\",\n      \"process_text\": \"这个时候（就是特种兵纵队）全纵队的大联合了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0043\"\n      ],\n      \"evidence_quote\": \"这个时候（就是特种兵纵队）全纵队的大联合了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE010-P01\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0043\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE010-P02\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE010-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0043\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC08-DE010",
+    "event_enrichment": {
+      "result_state": "胶东大部分部队完成整编，缴获的车辆和大炮经规整修理后转移至渤海，部队也转移过去，特种兵纵队实现全纵队大联合。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以片段S0043中“这个时候我们大部分的部队在胶东都整编了”为起点，至“全纵队的大联合了”结束，涵盖整编、转移和合编过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC08-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "胶东大部分部队完成整编。",
+        "process_text": "这个时候我们大部分的部队在胶东都整编了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0043"
+        ],
+        "evidence_quote": "这个时候我们大部分的部队在胶东都整编了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "缴获车辆和大炮经规整修理后转移至渤海，部队也随同转移。",
+        "process_text": "一方面把缴获的车辆、大炮规整修理，从那个地方转移到渤海，部队也都转移过去。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0043"
+        ],
+        "evidence_quote": "一方面把缴获的车辆、大炮规整修理，从那个地方转移到渤海，部队也都转移过去。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "特种兵纵队实现全纵队大联合。",
+        "process_text": "这个时候（就是特种兵纵队）全纵队的大联合了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0043"
+        ],
+        "evidence_quote": "这个时候（就是特种兵纵队）全纵队的大联合了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC08-DE010-P01",
+        "target_stage_id": "BATCH04-DOC08-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC08-S0043",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC08-DE010-P02",
+        "target_stage_id": "BATCH04-DOC08-DE010-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC08-S0043",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

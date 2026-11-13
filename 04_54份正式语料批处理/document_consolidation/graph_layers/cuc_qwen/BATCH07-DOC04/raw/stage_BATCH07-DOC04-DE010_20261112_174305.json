@@ -1,0 +1,180 @@
+{
+  "run_time": "2026-11-12T17:43:05",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC04-DE010",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC04-DE010",
+  "usage": {
+    "prompt_tokens": 1637,
+    "total_tokens": 11634,
+    "completion_tokens": 9997,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7708
+    },
+    "time_to_first_token_ms": 285953,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9996000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC04-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"军部人员分批撤出与突围，部分撤不走，军部撤走后交通线中断；突围中被俘一千多、出来不到两千人，并出现九千多人、六千多人等模糊人数，医务人员太少、伤员无人救治影响士气，叙述转向东进和离开建昌圩。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为 S0098 说明三批人及第一批、第二批人数；终点为 S0118 说明医务人员太少影响士气并转向东进、离开建昌圩（皖南事变14号以后）。中间片段围绕撤出、突围、断线与人数损失。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"说明首批撤出人数及三批规模\",\n      \"process_text\": \"    陈海峰：三批人多一些。第一批人少一点，大概一百多人吧，第二批可能二百人不到，也就是五百人左右。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0098\"\n      ],\n      \"evidence_quote\": \"    陈海峰：三批人多一些。第一批人少一点，大概一百多人吧，第二批可能二百人不到，也就是五百人左右。\",\n      \"confidence\": \"LOW\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"补充后续零星撤出与人数上限\",\n      \"process_text\": \"    陈海峰：大概五六百人的样子。五六百、六七百人最多了。后来还有一些零零碎碎的，三个五个走的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0103\"\n      ],\n      \"evidence_quote\": \"    陈海峰：大概五六百人的样子。五六百、六七百人最多了。后来还有一些零零碎碎的，三个五个走的。\",\n      \"confidence\": \"LOW\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"指出后来突围出来\",\n      \"process_text\": \"    陈海峰：那是后来突围出来的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0107\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那是后来突围出来的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE010-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"说明有人撤不走\",\n      \"process_text\": \"    陈海峰：撤不走。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0109\"\n      ],\n      \"evidence_quote\": \"    陈海峰：撤不走。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE010-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"说明军部撤走后交通线中断\",\n      \"process_text\": \"    陈海峰：那就是一些联络人员，地下交通站的一些人，那是少数的，围着那个交通线的人。后来军部一撤走，这个地方就断了线了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0111\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那就是一些联络人员，地下交通站的一些人，那是少数的，围着那个交通线的人。后来军部一撤走，这个地方就断了线了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE010-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"补充撤出批次为四五批\",\n      \"process_text\": \"    陈海峰：四五批人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0114\"\n      ],\n      \"evidence_quote\": \"    陈海峰：四五批人。\",\n      \"confidence\": \"LOW\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE010-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"说明突围总体结果与被俘、出来人数\",\n      \"process_text\": \"    陈海峰：都出不来。后来突围，被俘了一千多。出来的大概两千人不到。九千多人，将近一万人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0116\"\n      ],\n      \"evidence_quote\": \"    陈海峰：都出不来。后来突围，被俘了一千多。出来的大概两千人不到。九千多人，将近一万人。\",\n      \"confidence\": \"LOW\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE010-P08\",\n      \"stage_order\": 8,\n      \"stage_summary\": \"补充人数并说明医务人员太少影响士气，转向东进和离开建昌圩\",\n      \"process_text\": \"    陈海峰：六千多人。除了种种原因以外，就是医务人员太少，伤员遍地，没人救，影响士气。所以这也是一个问题，那么我们接着讲东进了。后来我们离开建昌圩，就是皖南事变14号以后。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0118\"\n      ],\n      \"evidence_quote\": \"    陈海峰：六千多人。除了种种原因以外，就是医务人员太少，伤员遍地，没人救，影响士气。所以这也是一个问题，那么我们接着讲东进了。后来我们离开建昌圩，就是皖南事变14号以后。\",\n      \"confidence\": \"LOW\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE010-P01\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0103\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE010-P02\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE010-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0107\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE010-P03\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE010-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0109\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE010-P04\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE010-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0111\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE010-P05\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE010-P06\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0114\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE010-P06\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE010-P07\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0116\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE010-P07\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE010-P08\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0118\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC04-DE010",
+    "event_enrichment": {
+      "result_state": "军部人员分批撤出与突围，部分撤不走，军部撤走后交通线中断；突围中被俘一千多、出来不到两千人，并出现九千多人、六千多人等模糊人数，医务人员太少、伤员无人救治影响士气，叙述转向东进和离开建昌圩。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为 S0098 说明三批人及第一批、第二批人数；终点为 S0118 说明医务人员太少影响士气并转向东进、离开建昌圩（皖南事变14号以后）。中间片段围绕撤出、突围、断线与人数损失。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC04-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "说明首批撤出人数及三批规模",
+        "process_text": "    陈海峰：三批人多一些。第一批人少一点，大概一百多人吧，第二批可能二百人不到，也就是五百人左右。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0098"
+        ],
+        "evidence_quote": "    陈海峰：三批人多一些。第一批人少一点，大概一百多人吧，第二批可能二百人不到，也就是五百人左右。",
+        "confidence": "LOW"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "补充后续零星撤出与人数上限",
+        "process_text": "    陈海峰：大概五六百人的样子。五六百、六七百人最多了。后来还有一些零零碎碎的，三个五个走的。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0103"
+        ],
+        "evidence_quote": "    陈海峰：大概五六百人的样子。五六百、六七百人最多了。后来还有一些零零碎碎的，三个五个走的。",
+        "confidence": "LOW"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "指出后来突围出来",
+        "process_text": "    陈海峰：那是后来突围出来的。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0107"
+        ],
+        "evidence_quote": "    陈海峰：那是后来突围出来的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE010-P04",
+        "stage_order": 4,
+        "stage_summary": "说明有人撤不走",
+        "process_text": "    陈海峰：撤不走。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0109"
+        ],
+        "evidence_quote": "    陈海峰：撤不走。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE010-P05",
+        "stage_order": 5,
+        "stage_summary": "说明军部撤走后交通线中断",
+        "process_text": "    陈海峰：那就是一些联络人员，地下交通站的一些人，那是少数的，围着那个交通线的人。后来军部一撤走，这个地方就断了线了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0111"
+        ],
+        "evidence_quote": "    陈海峰：那就是一些联络人员，地下交通站的一些人，那是少数的，围着那个交通线的人。后来军部一撤走，这个地方就断了线了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE010-P06",
+        "stage_order": 6,
+        "stage_summary": "补充撤出批次为四五批",
+        "process_text": "    陈海峰：四五批人。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0114"
+        ],
+        "evidence_quote": "    陈海峰：四五批人。",
+        "confidence": "LOW"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE010-P07",
+        "stage_order": 7,
+        "stage_summary": "说明突围总体结果与被俘、出来人数",
+        "process_text": "    陈海峰：都出不来。后来突围，被俘了一千多。出来的大概两千人不到。九千多人，将近一万人。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0116"
+        ],
+        "evidence_quote": "    陈海峰：都出不来。后来突围，被俘了一千多。出来的大概两千人不到。九千多人，将近一万人。",
+        "confidence": "LOW"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE010-P08",
+        "stage_order": 8,
+        "stage_summary": "补充人数并说明医务人员太少影响士气，转向东进和离开建昌圩",
+        "process_text": "    陈海峰：六千多人。除了种种原因以外，就是医务人员太少，伤员遍地，没人救，影响士气。所以这也是一个问题，那么我们接着讲东进了。后来我们离开建昌圩，就是皖南事变14号以后。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0118"
+        ],
+        "evidence_quote": "    陈海峰：六千多人。除了种种原因以外，就是医务人员太少，伤员遍地，没人救，影响士气。所以这也是一个问题，那么我们接着讲东进了。后来我们离开建昌圩，就是皖南事变14号以后。",
+        "confidence": "LOW"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC04-DE010-P01",
+        "target_stage_id": "BATCH07-DOC04-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC04-S0103",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE010-P02",
+        "target_stage_id": "BATCH07-DOC04-DE010-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC04-S0107",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE010-P03",
+        "target_stage_id": "BATCH07-DOC04-DE010-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH07-DOC04-S0109",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE010-P04",
+        "target_stage_id": "BATCH07-DOC04-DE010-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH07-DOC04-S0111",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE010-P05",
+        "target_stage_id": "BATCH07-DOC04-DE010-P06",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH07-DOC04-S0114",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE010-P06",
+        "target_stage_id": "BATCH07-DOC04-DE010-P07",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH07-DOC04-S0116",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE010-P07",
+        "target_stage_id": "BATCH07-DOC04-DE010-P08",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH07-DOC04-S0118",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

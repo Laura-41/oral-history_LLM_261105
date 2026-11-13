@@ -1,0 +1,109 @@
+{
+  "run_time": "2026-11-11T22:18:00",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC03-DE007",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC03-DE007",
+  "usage": {
+    "prompt_tokens": 1434,
+    "total_tokens": 5871,
+    "completion_tokens": 4437,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3392
+    },
+    "time_to_first_token_ms": 39932,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4436000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC03-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"国民党医疗队撤走；陈海峰代表新四军欢送，并争取到三名医生参加新四军工作，程贤家为其中之一。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以原文所述医疗队撤走、陈海峰代表新四军欢送为事件起点，以争取三名医生参加新四军为终点；此前战斗抢救与医疗队内部调动作为背景，不扩展为独立事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"国民党医疗队部分队员在战斗中打散后到新四军卫生队协助抢救伤员。\",\n      \"process_text\": \"国民党医疗队有几个队员打散后跑到卫生队，帮助一块抢救伤员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0074\"\n      ],\n      \"evidence_quote\": \"那个时候国民党医疗队呀，有几个队员打散了，跑到我们卫生队，帮着我们一块抢救伤员。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"三支队作战残酷，医疗队受惊后请求调回去并撤走。\",\n      \"process_text\": \"三支队打两仗后，医疗队因战斗残酷请求调回去，随后撤走。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0086\"\n      ],\n      \"evidence_quote\": \"三支队是打两仗（陈海峰比划数目二），太残酷了！一万多鬼子一弄，把他吓坏了，他请求调回去，就撤走了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"撤走时陈海峰以卫生队长身份代表新四军欢送，并在席间喝醉。\",\n      \"process_text\": \"撤走那次欢送他，陈海峰还是卫生队长，代表新四军，那天喝醉了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0086\"\n      ],\n      \"evidence_quote\": \"撤走那次欢送他，我还是卫生队长，还代表新四军。那天把我喝醉了，我原来是喝白干我可以喝一斤呢，现在一口不能喝了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"三名医生坚决要求参加新四军，程贤家为其中之一；陈海峰称争取了三个医生参加新四军搞工作。\",\n      \"process_text\": \"争取三名医生参加新四军搞工作，程贤家是坚决要求参加者之一。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0074\",\n        \"BATCH03-DOC03-S0086\"\n      ],\n      \"evidence_quote\": \"有三个就坚决要求参加新四军，这个程贤家就是其中之一。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE007-P01\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE007-P02\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE007-P03\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE007-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC03-DE007",
+    "event_enrichment": {
+      "result_state": "国民党医疗队撤走；陈海峰代表新四军欢送，并争取到三名医生参加新四军工作，程贤家为其中之一。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以原文所述医疗队撤走、陈海峰代表新四军欢送为事件起点，以争取三名医生参加新四军为终点；此前战斗抢救与医疗队内部调动作为背景，不扩展为独立事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC03-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "国民党医疗队部分队员在战斗中打散后到新四军卫生队协助抢救伤员。",
+        "process_text": "国民党医疗队有几个队员打散后跑到卫生队，帮助一块抢救伤员。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0074"
+        ],
+        "evidence_quote": "那个时候国民党医疗队呀，有几个队员打散了，跑到我们卫生队，帮着我们一块抢救伤员。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "三支队作战残酷，医疗队受惊后请求调回去并撤走。",
+        "process_text": "三支队打两仗后，医疗队因战斗残酷请求调回去，随后撤走。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0086"
+        ],
+        "evidence_quote": "三支队是打两仗（陈海峰比划数目二），太残酷了！一万多鬼子一弄，把他吓坏了，他请求调回去，就撤走了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "撤走时陈海峰以卫生队长身份代表新四军欢送，并在席间喝醉。",
+        "process_text": "撤走那次欢送他，陈海峰还是卫生队长，代表新四军，那天喝醉了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0086"
+        ],
+        "evidence_quote": "撤走那次欢送他，我还是卫生队长，还代表新四军。那天把我喝醉了，我原来是喝白干我可以喝一斤呢，现在一口不能喝了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "三名医生坚决要求参加新四军，程贤家为其中之一；陈海峰称争取了三个医生参加新四军搞工作。",
+        "process_text": "争取三名医生参加新四军搞工作，程贤家是坚决要求参加者之一。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0074",
+          "BATCH03-DOC03-S0086"
+        ],
+        "evidence_quote": "有三个就坚决要求参加新四军，这个程贤家就是其中之一。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC03-DE007-P01",
+        "target_stage_id": "BATCH03-DOC03-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC03-DE007-P02",
+        "target_stage_id": "BATCH03-DOC03-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC03-DE007-P03",
+        "target_stage_id": "BATCH03-DOC03-DE007-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

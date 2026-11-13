@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T12:19:14",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC02-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC02-DE007",
+  "usage": {
+    "prompt_tokens": 1198,
+    "total_tokens": 5289,
+    "completion_tokens": 4091,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3211
+    },
+    "time_to_first_token_ms": 102011,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4090000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC02-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆到桃源见到王兴纲，并听取王兴纲提出到那个地方先与党取得联系、配合行动的建议。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据 BATCH03-DOC02-S0045，事件从“我到桃源我见了王兴纲”开始，到王兴纲说“配合一块（行动）”结束；前文“我要到敌后……起义”作为背景触发纳入阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆说明到敌后及起义背景\",\n      \"process_text\": \"那个时候我要到敌后嘛。九十二军要到山东去要消灭共产党，当时我就带着部队，那个时候我就起义嘛。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0045\"\n      ],\n      \"evidence_quote\": \"那个时候我要到敌后嘛。九十二军要到山东去要消灭共产党，当时我就带着部队，那个时候我就起义嘛。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈锐霆到桃源见王兴纲\",\n      \"process_text\": \"我到桃源我见了王兴纲\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0045\"\n      ],\n      \"evidence_quote\": \"我到桃源我见了王兴纲\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"王兴纲建议到敌后先与党取得联系并配合行动\",\n      \"process_text\": \"他就说那就方便多了，他说到那个地方跟党先取得联系嘛，配合一块（行动）。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0045\"\n      ],\n      \"evidence_quote\": \"他就说那就方便多了，他说到那个地方跟党先取得联系嘛，配合一块（行动）。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE007-P01\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0045\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE007-P02\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0045\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC02-DE007",
+    "event_enrichment": {
+      "result_state": "陈锐霆到桃源见到王兴纲，并听取王兴纲提出到那个地方先与党取得联系、配合行动的建议。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "依据 BATCH03-DOC02-S0045，事件从“我到桃源我见了王兴纲”开始，到王兴纲说“配合一块（行动）”结束；前文“我要到敌后……起义”作为背景触发纳入阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC02-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆说明到敌后及起义背景",
+        "process_text": "那个时候我要到敌后嘛。九十二军要到山东去要消灭共产党，当时我就带着部队，那个时候我就起义嘛。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0045"
+        ],
+        "evidence_quote": "那个时候我要到敌后嘛。九十二军要到山东去要消灭共产党，当时我就带着部队，那个时候我就起义嘛。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "陈锐霆到桃源见王兴纲",
+        "process_text": "我到桃源我见了王兴纲",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0045"
+        ],
+        "evidence_quote": "我到桃源我见了王兴纲",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "王兴纲建议到敌后先与党取得联系并配合行动",
+        "process_text": "他就说那就方便多了，他说到那个地方跟党先取得联系嘛，配合一块（行动）。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0045"
+        ],
+        "evidence_quote": "他就说那就方便多了，他说到那个地方跟党先取得联系嘛，配合一块（行动）。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC02-DE007-P01",
+        "target_stage_id": "BATCH03-DOC02-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC02-S0045",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC02-DE007-P02",
+        "target_stage_id": "BATCH03-DOC02-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC02-S0045",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

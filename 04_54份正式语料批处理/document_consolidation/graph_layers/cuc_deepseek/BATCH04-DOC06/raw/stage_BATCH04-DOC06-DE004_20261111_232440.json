@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T23:24:40",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC06-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC06-DE004",
+  "usage": {
+    "prompt_tokens": 1091,
+    "total_tokens": 3219,
+    "completion_tokens": 2128,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1558
+    },
+    "time_to_first_token_ms": 17097,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC06-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"轮训队提前结束，学员在七八月份各自回到部队。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以S0088所述轮训队在夏秋之间第一批迁移并提前结束为起点，以七八月份学员各回部队为终点；不涉及后续冬季迁移。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"轮训队在夏秋之间作为第一批迁移，提前结束；原定学一年，实际学习约半年多八个月。\",\n      \"process_text\": \"这个轮训队呢，就在冬天迁移之前，在夏秋之间第一批迁移，这个轮训队就提早结束了。本来是学一年的，学了大概是半年多，八个月左右。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0088\"\n      ],\n      \"evidence_quote\": \"这个轮训队呢，就在冬天迁移之前，在夏秋之间第一批迁移，这个轮训队就提早结束了。本来是学一年的，学了大概是半年多，八个月左右。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"到七八月份，学员各自返回部队。\",\n      \"process_text\": \"到了七八月份的时候，就各回部队去了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0088\"\n      ],\n      \"evidence_quote\": \"到了七八月份的时候，就各回部队去了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE004-P01\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE004-P02\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0088\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC06-DE004",
+    "event_enrichment": {
+      "result_state": "轮训队提前结束，学员在七八月份各自回到部队。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以S0088所述轮训队在夏秋之间第一批迁移并提前结束为起点，以七八月份学员各回部队为终点；不涉及后续冬季迁移。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC06-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "轮训队在夏秋之间作为第一批迁移，提前结束；原定学一年，实际学习约半年多八个月。",
+        "process_text": "这个轮训队呢，就在冬天迁移之前，在夏秋之间第一批迁移，这个轮训队就提早结束了。本来是学一年的，学了大概是半年多，八个月左右。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0088"
+        ],
+        "evidence_quote": "这个轮训队呢，就在冬天迁移之前，在夏秋之间第一批迁移，这个轮训队就提早结束了。本来是学一年的，学了大概是半年多，八个月左右。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "到七八月份，学员各自返回部队。",
+        "process_text": "到了七八月份的时候，就各回部队去了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0088"
+        ],
+        "evidence_quote": "到了七八月份的时候，就各回部队去了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC06-DE004-P01",
+        "target_stage_id": "BATCH04-DOC06-DE004-P02",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC06-S0088",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T13:29:46",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC02-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC02-DE002",
+  "usage": {
+    "prompt_tokens": 1467,
+    "total_tokens": 7659,
+    "completion_tokens": 6192,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4897
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 6191000,
+    "time_to_first_token_ms": 93187
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-18\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC02-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队在军区自给命令下开荒种粮、上山采野菜，采银杏煮吃后发生很多中毒病人，有的整个连中毒。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"从 S0020 军区命令自给开始，经 S0021 开荒种粮、S0023 采野菜与银杏中毒，到 S0024 银杏煮吃及中毒成分说明结束。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"军区命令部队自给解决三个月粮食\",\n      \"process_text\": \"军区下了命令，不管苏浙军区任何部队的任何人，平均自己设法解决三个月的粮食。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0020\"\n      ],\n      \"evidence_quote\": \"那怎么可能动呢？谁动，枪毙你，是不是。当时军区下了命令，不管你是苏浙军区任何部队的任何人，平均你自己要设法解决三个月的粮食。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"部队到处开荒种速生粮食并购买、发放种子\",\n      \"process_text\": \"到处开荒，种速生粮食，种玉米，发种子，为老百姓买菠菜种子、苋菜种子等发芽快的种子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0021\"\n      ],\n      \"evidence_quote\": \"那到处开荒，种速生粮食，种玉米，发种子，为老百姓买种子，那个菠菜种子、苋菜种子，这种发芽快的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"部队上山采野菜并因采银杏发生中毒\",\n      \"process_text\": \"部队去山上去采野菜，只要能吃（的）东西；采银杏导致部队发生中毒病人很多，有的整个连中毒。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0023\"\n      ],\n      \"evidence_quote\": \"    陈海峰：自己都去山上去采野菜，只要能吃（的）东西。所以部队发生中毒的病人很多，部队有的整个连中毒的，就是采那个银杏啊。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"说明银杏煮吃及其中毒成分\",\n      \"process_text\": \"银杏采下来，煮煮就吃；银杏里面一个心，像莲子那个莲心里面，苦的，里面有氰化钾、氰化钠的成分。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0024\"\n      ],\n      \"evidence_quote\": \"那白果啊，银杏，银杏采下来，煮煮就吃。银杏要中毒的，银杏一直是很好的活血化瘀的药啊，银杏叶是不是。现在全国是8个银杏叶的工厂生产银杏叶的药片子。那银杏也是很好的营养品，那个银杏不是中毒的，银杏是里面一个心，像莲子那个莲心里面，苦的。那个里面有氰化钾、氰化钠的成分。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE002-P01\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE002-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0021\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE002-P02\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0023\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE002-P03\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE002-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0024\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": null\n}",
+  "parsed": {
+    "document_id": "CHF-V3-18",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC02-DE002",
+    "event_enrichment": {
+      "result_state": "部队在军区自给命令下开荒种粮、上山采野菜，采银杏煮吃后发生很多中毒病人，有的整个连中毒。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "从 S0020 军区命令自给开始，经 S0021 开荒种粮、S0023 采野菜与银杏中毒，到 S0024 银杏煮吃及中毒成分说明结束。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC02-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "军区命令部队自给解决三个月粮食",
+        "process_text": "军区下了命令，不管苏浙军区任何部队的任何人，平均自己设法解决三个月的粮食。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0020"
+        ],
+        "evidence_quote": "那怎么可能动呢？谁动，枪毙你，是不是。当时军区下了命令，不管你是苏浙军区任何部队的任何人，平均你自己要设法解决三个月的粮食。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "部队到处开荒种速生粮食并购买、发放种子",
+        "process_text": "到处开荒，种速生粮食，种玉米，发种子，为老百姓买菠菜种子、苋菜种子等发芽快的种子。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0021"
+        ],
+        "evidence_quote": "那到处开荒，种速生粮食，种玉米，发种子，为老百姓买种子，那个菠菜种子、苋菜种子，这种发芽快的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "部队上山采野菜并因采银杏发生中毒",
+        "process_text": "部队去山上去采野菜，只要能吃（的）东西；采银杏导致部队发生中毒病人很多，有的整个连中毒。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0023"
+        ],
+        "evidence_quote": "    陈海峰：自己都去山上去采野菜，只要能吃（的）东西。所以部队发生中毒的病人很多，部队有的整个连中毒的，就是采那个银杏啊。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "说明银杏煮吃及其中毒成分",
+        "process_text": "银杏采下来，煮煮就吃；银杏里面一个心，像莲子那个莲心里面，苦的，里面有氰化钾、氰化钠的成分。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0024"
+        ],
+        "evidence_quote": "那白果啊，银杏，银杏采下来，煮煮就吃。银杏要中毒的，银杏一直是很好的活血化瘀的药啊，银杏叶是不是。现在全国是8个银杏叶的工厂生产银杏叶的药片子。那银杏也是很好的营养品，那个银杏不是中毒的，银杏是里面一个心，像莲子那个莲心里面，苦的。那个里面有氰化钾、氰化钠的成分。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC02-DE002-P01",
+        "target_stage_id": "BATCH06-DOC02-DE002-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC02-S0021",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE002-P02",
+        "target_stage_id": "BATCH06-DOC02-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0023",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE002-P03",
+        "target_stage_id": "BATCH06-DOC02-DE002-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC02-S0024",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": null
+  },
+  "request_error": null
+}

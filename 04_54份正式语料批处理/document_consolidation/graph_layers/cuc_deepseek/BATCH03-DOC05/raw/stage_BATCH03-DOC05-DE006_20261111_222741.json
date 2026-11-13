@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T22:27:41",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC05-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC05-DE006",
+  "usage": {
+    "prompt_tokens": 1152,
+    "total_tokens": 4021,
+    "completion_tokens": 2869,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2076
+    },
+    "time_to_first_token_ms": 22811,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2868000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-07\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC05-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆向彭雪枫提出请党派人掌握部队的请求，并得到回应：党派方中铎来当军代表，另带几十人准备适时派入其部队。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈锐霆向彭雪枫说明自己未收到党的指示并提出请党派人掌握部队为起点，以党派方中铎等来作为回应终点；后续到路东、张爱萍派人联系及军民联欢会不属于本请求事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆向彭雪枫说明自己没有收到党的指示。\",\n      \"process_text\": \"陈锐霆找彭雪枫，说明自己一点党的指示没有收到。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0038\"\n      ],\n      \"evidence_quote\": \"这个时候我找彭雪枫同志就说了，我说我一点党的指示没有（收到）\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈锐霆提出请党派人来掌握这支部队。\",\n      \"process_text\": \"陈锐霆向彭雪枫提出请求，请党派人来掌握这个部队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0038\"\n      ],\n      \"evidence_quote\": \"请党派人来掌握这个部队\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"请求得到回应，党派方中铎等来。\",\n      \"process_text\": \"后来党派方中铎来当军代表，另外还带了几十个人，准备适当的时候放到陈锐霆的部队里面去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0038\"\n      ],\n      \"evidence_quote\": \"以后派了方中铎来当军代表，另外还带了几十个人，准备适当的时候放到我那个部队里面去。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE006-P01\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0038\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE006-P02\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE006-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0038\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-07",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC05-DE006",
+    "event_enrichment": {
+      "result_state": "陈锐霆向彭雪枫提出请党派人掌握部队的请求，并得到回应：党派方中铎来当军代表，另带几十人准备适时派入其部队。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以陈锐霆向彭雪枫说明自己未收到党的指示并提出请党派人掌握部队为起点，以党派方中铎等来作为回应终点；后续到路东、张爱萍派人联系及军民联欢会不属于本请求事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC05-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆向彭雪枫说明自己没有收到党的指示。",
+        "process_text": "陈锐霆找彭雪枫，说明自己一点党的指示没有收到。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0038"
+        ],
+        "evidence_quote": "这个时候我找彭雪枫同志就说了，我说我一点党的指示没有（收到）",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "陈锐霆提出请党派人来掌握这支部队。",
+        "process_text": "陈锐霆向彭雪枫提出请求，请党派人来掌握这个部队。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0038"
+        ],
+        "evidence_quote": "请党派人来掌握这个部队",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "请求得到回应，党派方中铎等来。",
+        "process_text": "后来党派方中铎来当军代表，另外还带了几十个人，准备适当的时候放到陈锐霆的部队里面去。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0038"
+        ],
+        "evidence_quote": "以后派了方中铎来当军代表，另外还带了几十个人，准备适当的时候放到我那个部队里面去。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC05-DE006-P01",
+        "target_stage_id": "BATCH03-DOC05-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC05-S0038",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC05-DE006-P02",
+        "target_stage_id": "BATCH03-DOC05-DE006-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC05-S0038",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

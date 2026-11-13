@@ -1,0 +1,41 @@
+{
+  "run_time": "2026-11-11T15:51:16",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC02-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC02-DE008",
+  "usage": {
+    "prompt_tokens": 1097,
+    "total_tokens": 1924,
+    "completion_tokens": 827,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 590
+    },
+    "tokens_per_second": 826000,
+    "time_to_first_token_ms": 6454,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC02-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"参谋长当晚召集了一两百人的会议，准备袭击敌人的一个司令部。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据原文单句，从“接着当天晚上参谋长召集了这么一两百人的（会议）”起，到“（准备）袭击敌人的一个司令部吧”止；未述及会议过程、决策细节或袭击实施。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [],\n  \"stage_next\": [],\n  \"no_stage_reason\": \"原文仅一句话叙述参谋长当晚召集会议并说明准备袭击敌人司令部，未展开会议过程、决策步骤或后续行动，拆分阶段会引入原文未表达的内容。\"\n}",
+  "parsed": {
+    "document_id": "CRT-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC02-DE008",
+    "event_enrichment": {
+      "result_state": "参谋长当晚召集了一两百人的会议，准备袭击敌人的一个司令部。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据原文单句，从“接着当天晚上参谋长召集了这么一两百人的（会议）”起，到“（准备）袭击敌人的一个司令部吧”止；未述及会议过程、决策细节或袭击实施。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [],
+    "stage_next": [],
+    "no_stage_reason": "原文仅一句话叙述参谋长当晚召集会议并说明准备袭击敌人司令部，未展开会议过程、决策步骤或后续行动，拆分阶段会引入原文未表达的内容。"
+  },
+  "request_error": null
+}

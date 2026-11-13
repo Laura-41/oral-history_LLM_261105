@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T20:29:59",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC09-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC09-DE003",
+  "usage": {
+    "prompt_tokens": 1382,
+    "total_tokens": 8146,
+    "completion_tokens": 6764,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5127
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 100287,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC09-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆完成对部队哗变原因的分析，指出国民党正统观念较强、皖南事变后军费停发与饮食差、干部家眷养活问题、暗杀主要领导干部并拉回队伍，以及党的基础薄弱等主要原因。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据 S0037 起“我分析的（原因）主要还就是那个时候国民党正统观念还是比较强吧”，经 S0039 至“恐怕这是一个主要的原因”，到 S0042 止“恐怕这是主要的（原因）”，均为陈锐霆对部队哗变原因的分析。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"分析国民党正统观念较强及皖南事变前待遇相对较好。\",\n      \"process_text\": \"我分析的（原因）主要还就是那个时候国民党正统观念还是比较强吧，另外那个时候他饮食也比较好，虽然薪饷不高吧，但是每月都可以发到钱，\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0037\"\n      ],\n      \"evidence_quote\": \"我分析的（原因）主要还就是那个时候国民党正统观念还是比较强吧，另外那个时候他饮食也比较好，虽然薪饷不高吧，但是每月都可以发到钱，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"分析皖南事变后军费停发、饮食与老百姓一样差。\",\n      \"process_text\": \"到我们这皖南事变以后，把军费都停了，什么也没有，吃饭就是跟老百姓吃的一样，吃地瓜干，吃“猪肝”，就是高粱面的饼子，\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0037\"\n      ],\n      \"evidence_quote\": \"到我们这皖南事变以后，把军费都停了，什么也没有，吃饭就是跟老百姓吃的一样，吃地瓜干，吃“猪肝”，就是高粱面的饼子，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"补充说明饮食差劲、连抽烟钱也没有。\",\n      \"process_text\": \"（看起来）跟猪肝一样。吃的也差劲，连个抽烟的钱没有。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0039\"\n      ],\n      \"evidence_quote\": \"（看起来）跟猪肝一样。吃的也差劲，连个抽烟的钱没有。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"分析干部家眷在湖南、起义后养活问题，并推断暗杀主要领导干部、拉回队伍是主要原因。\",\n      \"process_text\": \"另外一些干部有家眷在湖南，起义以后，后边的孩子、老婆怎么养活，这是干部的问题，这是个大的问题。所以采取一种暗杀的办法，先把主要领导干部暗杀掉了以后，把队伍拉回去，恐怕这是一个主要的原因。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0039\"\n      ],\n      \"evidence_quote\": \"另外一些干部有家眷在湖南，起义以后，后边的孩子、老婆怎么养活，这是干部的问题，这是个大的问题。所以采取一种暗杀的办法，先把主要领导干部暗杀掉了以后，把队伍拉回去，恐怕这是一个主要的原因。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"分析部队党的基础薄弱，称自己到团半年多且425团主力团唯一党员。\",\n      \"process_text\": \"主要（因为）我们底下，国民党那个部队在那时候，我才到这个团半年多，一个党员都没有，在425团主力团就我是唯一的一个党员，，就没有党的基础，恐怕这是主要的（原因）。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0042\"\n      ],\n      \"evidence_quote\": \"主要（因为）我们底下，国民党那个部队在那时候，我才到这个团半年多，一个党员都没有，在425团主力团就我是唯一的一个党员，，就没有党的基础，恐怕这是主要的（原因）。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE003-P01\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0037\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE003-P02\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0039\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE003-P03\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE003-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0039\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE003-P04\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE003-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0042\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC09-DE003",
+    "event_enrichment": {
+      "result_state": "陈锐霆完成对部队哗变原因的分析，指出国民党正统观念较强、皖南事变后军费停发与饮食差、干部家眷养活问题、暗杀主要领导干部并拉回队伍，以及党的基础薄弱等主要原因。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "依据 S0037 起“我分析的（原因）主要还就是那个时候国民党正统观念还是比较强吧”，经 S0039 至“恐怕这是一个主要的原因”，到 S0042 止“恐怕这是主要的（原因）”，均为陈锐霆对部队哗变原因的分析。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC09-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "分析国民党正统观念较强及皖南事变前待遇相对较好。",
+        "process_text": "我分析的（原因）主要还就是那个时候国民党正统观念还是比较强吧，另外那个时候他饮食也比较好，虽然薪饷不高吧，但是每月都可以发到钱，",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0037"
+        ],
+        "evidence_quote": "我分析的（原因）主要还就是那个时候国民党正统观念还是比较强吧，另外那个时候他饮食也比较好，虽然薪饷不高吧，但是每月都可以发到钱，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "分析皖南事变后军费停发、饮食与老百姓一样差。",
+        "process_text": "到我们这皖南事变以后，把军费都停了，什么也没有，吃饭就是跟老百姓吃的一样，吃地瓜干，吃“猪肝”，就是高粱面的饼子，",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0037"
+        ],
+        "evidence_quote": "到我们这皖南事变以后，把军费都停了，什么也没有，吃饭就是跟老百姓吃的一样，吃地瓜干，吃“猪肝”，就是高粱面的饼子，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "补充说明饮食差劲、连抽烟钱也没有。",
+        "process_text": "（看起来）跟猪肝一样。吃的也差劲，连个抽烟的钱没有。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0039"
+        ],
+        "evidence_quote": "（看起来）跟猪肝一样。吃的也差劲，连个抽烟的钱没有。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "分析干部家眷在湖南、起义后养活问题，并推断暗杀主要领导干部、拉回队伍是主要原因。",
+        "process_text": "另外一些干部有家眷在湖南，起义以后，后边的孩子、老婆怎么养活，这是干部的问题，这是个大的问题。所以采取一种暗杀的办法，先把主要领导干部暗杀掉了以后，把队伍拉回去，恐怕这是一个主要的原因。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0039"
+        ],
+        "evidence_quote": "另外一些干部有家眷在湖南，起义以后，后边的孩子、老婆怎么养活，这是干部的问题，这是个大的问题。所以采取一种暗杀的办法，先把主要领导干部暗杀掉了以后，把队伍拉回去，恐怕这是一个主要的原因。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "分析部队党的基础薄弱，称自己到团半年多且425团主力团唯一党员。",
+        "process_text": "主要（因为）我们底下，国民党那个部队在那时候，我才到这个团半年多，一个党员都没有，在425团主力团就我是唯一的一个党员，，就没有党的基础，恐怕这是主要的（原因）。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0042"
+        ],
+        "evidence_quote": "主要（因为）我们底下，国民党那个部队在那时候，我才到这个团半年多，一个党员都没有，在425团主力团就我是唯一的一个党员，，就没有党的基础，恐怕这是主要的（原因）。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC09-DE003-P01",
+        "target_stage_id": "BATCH03-DOC09-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC09-S0037",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE003-P02",
+        "target_stage_id": "BATCH03-DOC09-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC09-S0039",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE003-P03",
+        "target_stage_id": "BATCH03-DOC09-DE003-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC09-S0039",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE003-P04",
+        "target_stage_id": "BATCH03-DOC09-DE003-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC09-S0042",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

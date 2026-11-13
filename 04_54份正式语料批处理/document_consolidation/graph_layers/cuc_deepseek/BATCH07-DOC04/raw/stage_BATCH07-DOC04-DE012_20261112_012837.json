@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-12T01:28:37",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC04-DE012",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC04-DE012",
+  "usage": {
+    "prompt_tokens": 1148,
+    "total_tokens": 4154,
+    "completion_tokens": 3006,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2392
+    },
+    "time_to_first_token_ms": 24996,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3005000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC04-DE012\",\n  \"event_enrichment\": {\n    \"result_state\": \"地下组织成员控制新丰车站等口子，大部队从新丰车站通过\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据核心过程“控制据点”，边界从青洪帮内发展地下组织及成员任职的背景，延伸到许多人控制这些口子、首先是新丰车站，并以大部队从那里通过为结果；不扩展到其他据点或后续行动。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE012-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"在青洪帮中发展地下组织，部分可靠成员担任排长、连长、副连长、营级干部\",\n      \"process_text\": \"在青洪帮里面发展地下组织，成员有的当排长、连长、副连长、营级干部\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0139\"\n      ],\n      \"evidence_quote\": \"那么像这种（在）青洪帮里面发展我们地下的组织，（是）少数的，领导抗日的，这种比较可靠。这种人有的当排长，有的当连长的，有当副连长的，有的当营级干部的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE012-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"许多人控制这些口子，首先控制新丰车站，大部队从该处通过\",\n      \"process_text\": \"许多人控制这些口子，首先是新丰车站，大部队都从那里过\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0139\"\n      ],\n      \"evidence_quote\": \"许多（人）控制（这些口子），首先是新丰车站，我们（的）大部队（就）都从那里过。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE012-P01\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE012-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0139\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC04-DE012",
+    "event_enrichment": {
+      "result_state": "地下组织成员控制新丰车站等口子，大部队从新丰车站通过",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据核心过程“控制据点”，边界从青洪帮内发展地下组织及成员任职的背景，延伸到许多人控制这些口子、首先是新丰车站，并以大部队从那里通过为结果；不扩展到其他据点或后续行动。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC04-DE012-P01",
+        "stage_order": 1,
+        "stage_summary": "在青洪帮中发展地下组织，部分可靠成员担任排长、连长、副连长、营级干部",
+        "process_text": "在青洪帮里面发展地下组织，成员有的当排长、连长、副连长、营级干部",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0139"
+        ],
+        "evidence_quote": "那么像这种（在）青洪帮里面发展我们地下的组织，（是）少数的，领导抗日的，这种比较可靠。这种人有的当排长，有的当连长的，有当副连长的，有的当营级干部的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE012-P02",
+        "stage_order": 2,
+        "stage_summary": "许多人控制这些口子，首先控制新丰车站，大部队从该处通过",
+        "process_text": "许多人控制这些口子，首先是新丰车站，大部队都从那里过",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0139"
+        ],
+        "evidence_quote": "许多（人）控制（这些口子），首先是新丰车站，我们（的）大部队（就）都从那里过。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC04-DE012-P01",
+        "target_stage_id": "BATCH07-DOC04-DE012-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH07-DOC04-S0139",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

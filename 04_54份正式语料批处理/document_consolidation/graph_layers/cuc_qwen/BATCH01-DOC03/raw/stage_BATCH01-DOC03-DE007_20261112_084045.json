@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T08:40:45",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC03-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC03-DE007",
+  "usage": {
+    "prompt_tokens": 1540,
+    "total_tokens": 8118,
+    "completion_tokens": 6578,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5202
+    },
+    "time_to_first_token_ms": 95704,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC03-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"三营11连缴获的机枪、钢帽、旗帜等物品在运城被展览，伴随动员新兵，并出现八路军打胜仗、武器较新、射击准的说法。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件边界从 S0062 的作战缴获背景开始，经 S0064 带三营11连动员新兵、S0066 该连缴获机枪，到 S0068 在运城展览缴获物及影响结束；不扩展具体缴获数量或后续动员结果。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"作战缴获背景\",\n      \"process_text\": \"七七事变后部队作战，叙述者称有些缴获，但具体单位缴获数量不明。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0062\"\n      ],\n      \"evidence_quote\": \"    杨永松：所以日本刚开始“七七事变”以后，东北的不算啊，他那个武士道精神，大日本皇军这个劲儿，平型关打败他还不服气！所以我们这么打下去以后啊，都有些缴获，686团缴到啥我不知道，我也不知道我们团到底缴多少东西。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"带三营11连去动员新兵\",\n      \"process_text\": \"叙述者带一个连去动员新兵，该连为三营11连，连长刘杨初（音），湖南人，长征过来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0064\"\n      ],\n      \"evidence_quote\": \"    杨永松：至于哪个单位缴多少我不知道，我们带的一个连去动员新兵的时候啊，这个连是三营11连，这上头写了，连长是刘杨初（音），湖南人，长征过来的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"该连缴获机枪数量不确定\",\n      \"process_text\": \"叙述者称该连又缴了机枪，数量记为两挺或三挺，不确定。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0066\"\n      ],\n      \"evidence_quote\": \"    杨永松：他这个连又缴了……我在上面写的三挺好像是，两挺还是三挺。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"在运城展览缴获物并产生说法\",\n      \"process_text\": \"在运城动员新兵时，把钢帽、日本信、旗帜等缴获物拿到街上展览，有人说这是八路军打胜仗的部队，武器较新，射击准，很多人头上中弹。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0068\"\n      ],\n      \"evidence_quote\": \"    杨永松：这个歪把子机枪，日本人的钢帽，他这个连就几十个人，这已经打掉一半多了，战士全部背的是三八式，除了机枪以外。所以这个连呢，我们去动员新兵，在运城，他有钢帽，日本什么信啊什么旗帜之类的东西，拿到街上一展览，呦，说这八路军打胜仗的部队，歪把子机枪都是。它这比较新啊，进攻中国的都是新武器，步枪也是新的，所以他的射击比较准，很多人啊都头上（中弹）。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE007-P01\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0064\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE007-P02\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE007-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0066\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE007-P03\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE007-P04\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0068\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC03-DE007",
+    "event_enrichment": {
+      "result_state": "三营11连缴获的机枪、钢帽、旗帜等物品在运城被展览，伴随动员新兵，并出现八路军打胜仗、武器较新、射击准的说法。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件边界从 S0062 的作战缴获背景开始，经 S0064 带三营11连动员新兵、S0066 该连缴获机枪，到 S0068 在运城展览缴获物及影响结束；不扩展具体缴获数量或后续动员结果。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC03-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "作战缴获背景",
+        "process_text": "七七事变后部队作战，叙述者称有些缴获，但具体单位缴获数量不明。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0062"
+        ],
+        "evidence_quote": "    杨永松：所以日本刚开始“七七事变”以后，东北的不算啊，他那个武士道精神，大日本皇军这个劲儿，平型关打败他还不服气！所以我们这么打下去以后啊，都有些缴获，686团缴到啥我不知道，我也不知道我们团到底缴多少东西。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "带三营11连去动员新兵",
+        "process_text": "叙述者带一个连去动员新兵，该连为三营11连，连长刘杨初（音），湖南人，长征过来。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0064"
+        ],
+        "evidence_quote": "    杨永松：至于哪个单位缴多少我不知道，我们带的一个连去动员新兵的时候啊，这个连是三营11连，这上头写了，连长是刘杨初（音），湖南人，长征过来的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "该连缴获机枪数量不确定",
+        "process_text": "叙述者称该连又缴了机枪，数量记为两挺或三挺，不确定。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0066"
+        ],
+        "evidence_quote": "    杨永松：他这个连又缴了……我在上面写的三挺好像是，两挺还是三挺。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "在运城展览缴获物并产生说法",
+        "process_text": "在运城动员新兵时，把钢帽、日本信、旗帜等缴获物拿到街上展览，有人说这是八路军打胜仗的部队，武器较新，射击准，很多人头上中弹。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0068"
+        ],
+        "evidence_quote": "    杨永松：这个歪把子机枪，日本人的钢帽，他这个连就几十个人，这已经打掉一半多了，战士全部背的是三八式，除了机枪以外。所以这个连呢，我们去动员新兵，在运城，他有钢帽，日本什么信啊什么旗帜之类的东西，拿到街上一展览，呦，说这八路军打胜仗的部队，歪把子机枪都是。它这比较新啊，进攻中国的都是新武器，步枪也是新的，所以他的射击比较准，很多人啊都头上（中弹）。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC03-DE007-P01",
+        "target_stage_id": "BATCH01-DOC03-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC03-S0064",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE007-P02",
+        "target_stage_id": "BATCH01-DOC03-DE007-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH01-DOC03-S0066",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE007-P03",
+        "target_stage_id": "BATCH01-DOC03-DE007-P04",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH01-DOC03-S0068",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

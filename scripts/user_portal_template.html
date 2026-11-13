@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>归途 · 口述史记忆馆</title>
+<style>
+:root{
+  --bg:#F7F2E8; --bg2:#FCF9F3; --card:rgba(255,253,248,.86); --solid:#FFFDF8;
+  --ink:#2B251E; --ink2:#6C6155; --ink3:#9C907F; --line:#E5DAC5;
+  --red:#A8402F; --red2:#C25C46; --redbg:#FAEDE8;
+  --gold:#B08A4B; --teal:#3E706C; --blue:#5A7591; --green:#6C8258;
+  --shadow:0 12px 36px rgba(88,66,40,.09); --shadow2:0 4px 16px rgba(88,66,40,.07);
+}
+body.night{
+  --bg:#171C1B; --bg2:#1D2422; --card:rgba(35,43,40,.88); --solid:#232B28;
+  --ink:#EFE7D8; --ink2:#B9B1A1; --ink3:#8B877C; --line:#3A4641;
+  --red:#E28C74; --red2:#EEA48E; --redbg:#3A2A25;
+  --gold:#D2AC70; --teal:#79B3AC; --blue:#8FB0CE; --green:#9DB787;
+  --shadow:0 12px 36px rgba(0,0,0,.28); --shadow2:0 4px 16px rgba(0,0,0,.22);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:14px;line-height:1.7;-webkit-font-smoothing:antialiased;transition:background .4s,color .4s}
+#dust{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.55}
+.wrap{position:relative;z-index:1}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+input{font-family:inherit}
+.serif{font-family:"Songti SC","Noto Serif SC","STSong","SimSun",serif}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:24px;
+  padding:12px 34px;background:var(--card);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:11px;min-width:190px}
+.seal{width:36px;height:36px;border-radius:9px;background:var(--red);color:#fff;
+  display:grid;place-items:center;font-family:"Songti SC",serif;font-size:20px;letter-spacing:0;
+  box-shadow:0 3px 10px rgba(168,64,47,.25)}
+.brand b{display:block;font-family:"Songti SC",serif;font-size:19px;letter-spacing:3px;line-height:1.15}
+.brand small{display:block;font-size:10.5px;color:var(--ink3);letter-spacing:2.4px}
+nav{display:flex;gap:4px;flex:1}
+nav button{padding:8px 17px;border-radius:9px;font-size:13.5px;color:var(--ink2);transition:.2s}
+nav button:hover{background:var(--bg2);color:var(--ink)}
+nav button.on{background:var(--redbg);color:var(--red);font-weight:600}
+.top-right{display:flex;align-items:center;gap:10px}
+.pill{font-size:11.5px;color:var(--ink3);border:1px solid var(--line);border-radius:20px;padding:4px 11px}
+.tbtn{font-size:12.5px;border:1px solid var(--line);border-radius:9px;padding:7px 13px;color:var(--ink2)}
+.tbtn:hover{border-color:var(--red);color:var(--red)}
+main{max-width:1440px;margin:0 auto;padding:0 34px 70px}
+.view{display:none;animation:fadein .45s ease}
+.view.on{display:block}
+@keyframes fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.hero{padding:50px 0 26px;max-width:760px}
+.eyebrow{font-size:11.5px;letter-spacing:3px;color:var(--red);margin-bottom:14px}
+.hero h1{font-family:"Songti SC",serif;font-size:44px;line-height:1.35;margin:0 0 14px;font-weight:600;letter-spacing:1px}
+.hero h1 em{font-style:normal;color:var(--red)}
+.lede{color:var(--ink2);font-size:15px;margin:0;max-width:640px}
+.askgrid{display:grid;grid-template-columns:minmax(0,1.28fr) minmax(370px,.92fr);gap:22px;align-items:start}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
+.chat{padding:22px 24px;min-height:520px}
+.composer{display:flex;gap:10px;padding:6px;background:var(--bg2);border:1px solid var(--line);border-radius:15px}
+.composer input{flex:1;border:0;outline:0;background:transparent;padding:11px 14px;font-size:15px;color:var(--ink)}
+.composer input::placeholder{color:var(--ink3)}
+.composer button{background:var(--red);color:#fff;border-radius:11px;padding:0 22px;font-size:14px;font-weight:600;transition:.2s;white-space:nowrap}
+.composer button:hover{background:var(--red2);transform:translateY(-1px)}
+.composer button span{margin-left:5px}
+.presets{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 8px}
+.chip{border:1px solid var(--line);background:var(--solid);border-radius:20px;padding:6px 13px;
+  font-size:12.5px;color:var(--ink2);transition:.2s}
+.chip:hover{border-color:var(--red);color:var(--red);transform:translateY(-1px)}
+.mode-note{font-size:11.5px;color:var(--ink3);border-left:2px solid var(--gold);padding-left:10px;margin:12px 0 12px;line-height:1.6}
+.modelbar{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--ink3);margin:0 0 16px}
+.modelbar[hidden]{display:none}
+.modelbar select{border:1px solid var(--line);background:var(--solid);color:var(--ink2);
+  border-radius:8px;padding:4px 8px;font-size:11.5px;font-family:inherit}
+.modelbar .budget{margin-left:auto;color:var(--ink3)}
+#thread{display:flex;flex-direction:column;gap:16px}
+.msg{max-width:94%;border-radius:16px;padding:15px 18px;animation:rise .4s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+.msg.me{align-self:flex-end;background:var(--redbg);border-bottom-right-radius:5px;color:var(--ink)}
+.msg.ai{align-self:flex-start;background:var(--solid);border:1px solid var(--line);border-bottom-left-radius:5px;box-shadow:var(--shadow2);width:94%}
+.msg .who{font-size:11px;color:var(--red);letter-spacing:1.5px;margin-bottom:8px;font-weight:600}
+.msg .who.me{color:var(--ink3)}
+.answer p{margin:0 0 11px;line-height:1.85}
+.answer .lead{color:var(--ink2);font-size:13.5px}
+.answer .item{position:relative;padding-left:2px}
+.answer .item b{font-weight:600;color:var(--ink)}
+.answer .item .meta{display:block;font-size:12px;color:var(--ink3);margin-top:2px}
+.cite{display:inline-grid;place-items:center;width:17px;height:17px;border-radius:50%;background:var(--red);
+  color:#fff;font-size:10.5px;vertical-align:1px;margin-right:5px;cursor:pointer;border:0}
+.cite:hover{background:var(--red2)}
+.steps{display:flex;flex-direction:column;gap:6px;font-size:12.5px;color:var(--ink3);padding:4px 0}
+.steps div{opacity:.35;transition:.3s}
+.steps div.done{opacity:1;color:var(--teal)}
+.srcbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;
+  padding-top:13px;border-top:1px dashed var(--line);font-size:12px;color:var(--ink3)}
+.srcbar button{color:var(--red);font-size:12.5px;font-weight:600}
+.sources{margin-top:12px;display:none;flex-direction:column;gap:9px}
+.sources.show{display:flex}
+.source{background:var(--bg2);border:1px solid var(--line);border-radius:11px;padding:11px 13px;font-size:12.5px}
+.source .sh{font-size:11px;color:var(--red);margin-bottom:5px;letter-spacing:.5px}
+.source .qt{color:var(--ink2);line-height:1.75;max-height:76px;overflow:hidden;transition:.3s}
+.source .qt.full{max-height:none}
+.source .more{color:var(--teal);font-size:11.5px;margin-top:5px}
+.answer .prose{font-size:13.5px;line-height:1.95;color:var(--ink);margin:0 0 12px}
+.answer .prose b{color:var(--red);font-weight:600}
+.answer .tm{color:var(--teal);font-size:12.5px}
+.chain-title{font-size:11.5px;color:var(--ink3);letter-spacing:1px;margin:16px 0 8px}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:14px}
+.chain .cn{border:1px solid var(--line);background:var(--bg2);border-radius:10px;padding:7px 10px;
+  text-align:left;font-size:12px;color:var(--ink2);line-height:1.5;transition:.2s}
+.chain .cn:hover{border-color:var(--red);color:var(--red);transform:translateY(-2px)}
+.chain .cn span{display:block;font-size:10.5px;color:var(--red);letter-spacing:.6px;margin-bottom:2px}
+.chain .ar{color:var(--gold);font-size:14px}
+.source .ct{font-size:11.5px;color:var(--teal);margin-bottom:6px}
+.source .qts{max-height:78px;overflow:hidden;transition:.3s}
+.source .qts.full{max-height:none}
+.source .qts .qt{max-height:none;overflow:visible;margin:0 0 6px;line-height:1.75;color:var(--ink2)}
+.notice{background:var(--redbg);color:var(--red);font-size:12px;border-radius:9px;padding:8px 11px;margin-bottom:11px}
+.thinking{font-size:12.5px;color:var(--ink3);padding:6px 0}
+.follow{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}
+.follow .chip{font-size:12px;padding:5px 11px}
+.jump{display:inline-flex;align-items:center;gap:6px;margin-top:13px;padding:8px 14px;
+  background:var(--redbg);color:var(--red);border-radius:10px;font-size:12.5px;font-weight:600}
+.empty{color:var(--ink3);font-size:13px;text-align:center;padding:40px 10px;line-height:1.9}
+.start{padding:10px 2px 4px}
+.start-title{font-size:11.5px;color:var(--ink3);letter-spacing:1.8px;margin-bottom:12px}
+.pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pcard{text-align:left;border:1px solid var(--line);background:var(--solid);border-radius:14px;padding:13px 12px;transition:.22s}
+.pcard:hover{border-color:var(--red);transform:translateY(-3px);box-shadow:var(--shadow2)}
+.pcard .av{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;color:#fff;
+  font-family:"Songti SC",serif;font-size:17px;margin-bottom:9px}
+.pcard .nm{font-size:14px;font-weight:600}
+.pcard .mt{font-size:11px;color:var(--ink3);margin:2px 0 7px}
+.pcard .ds{font-size:11.5px;color:var(--ink2);line-height:1.65}
+.start-hint{margin-top:14px;font-size:11.5px;color:var(--ink3);text-align:center;font-family:"Songti SC",serif}
+.graphpanel{padding:18px 18px 20px;position:sticky;top:88px}
+.gp-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px}
+.gp-head b{font-family:"Songti SC",serif;font-size:17px;letter-spacing:1px}
+.gp-head small{display:block;color:var(--ink3);font-size:11.5px;margin-top:2px}
+.live{font-size:11px;color:var(--teal);border:1px solid var(--line);border-radius:20px;padding:3px 9px}
+.gp-canvas{position:relative;background:radial-gradient(circle at 50% 46%,var(--bg2) 0%,transparent 72%);
+  border-radius:14px;overflow:hidden}
+#graph{display:block;width:100%;height:auto;max-height:400px}
+.gnode{cursor:pointer;animation:bob var(--dur,5s) ease-in-out infinite;animation-delay:var(--del,0s);
+  transform-box:fill-box;transform-origin:center}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.gnode:hover .gdot,.gnode.sel .gdot{stroke-width:2.5}
+.gnode:hover .glabel,.gnode.sel .glabel{font-weight:700;fill:var(--red)}
+.glink{stroke:var(--line);stroke-width:.8;fill:none;transition:.25s}
+.glink.hot{stroke:var(--red);stroke-width:1.6}
+.hub{fill:var(--redbg);stroke:var(--red);stroke-width:1.2}
+.tip{position:absolute;display:none;pointer-events:none;background:var(--ink);color:var(--bg);
+  font-size:11.5px;padding:6px 10px;border-radius:8px;white-space:nowrap;z-index:5;box-shadow:var(--shadow2)}
+.legend,.guide-btns{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 4px}
+.legend button{font-size:11.5px;border:1px solid var(--line);border-radius:20px;padding:4px 10px;color:var(--ink2)}
+.legend button.on{border-color:var(--ink);color:var(--ink);font-weight:600}
+.legend .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px}
+.guide{margin-top:12px;border-top:1px solid var(--line);padding-top:13px}
+.guide-title{font-size:11.5px;color:var(--ink3);letter-spacing:1.5px;margin-bottom:2px}
+.guide-btns button{border:1px solid var(--line);background:var(--solid);border-radius:9px;padding:6px 12px;font-size:12.5px;color:var(--ink2)}
+.guide-btns button.on{background:var(--red);border-color:var(--red);color:#fff}
+.guide-q{margin-top:11px;background:var(--bg2);border-radius:11px;padding:11px 13px}
+.guide-q>span{font-size:11.5px;color:var(--ink3)}
+.guide-q .chip{margin:7px 6px 0 0;font-size:12px;padding:4px 10px;background:var(--solid)}
+.sec-head{padding:46px 0 22px;max-width:820px}
+.sec-head .eyebrow{margin-bottom:12px}
+.sec-head h2{font-family:"Songti SC",serif;font-size:32px;margin:0 0 11px;font-weight:600;letter-spacing:1px}
+.sec-head h2 em{font-style:normal;color:var(--red)}
+.sec-head p{color:var(--ink2);font-size:14px;margin:0}
+.life-tabs{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:18px}
+.life-tabs button{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:9px 17px;font-size:13.5px;color:var(--ink2);transition:.2s}
+.life-tabs button.on{color:#fff;font-weight:600}
+.life-tabs .cnt{font-size:11px;opacity:.75;margin-left:6px}
+.life-stage{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.life-scroll{overflow-x:auto;overflow-y:hidden;background:
+  linear-gradient(180deg,transparent 0%,transparent 62%,var(--bg2) 100%);scrollbar-width:thin}
+.life-scroll::-webkit-scrollbar{height:7px}
+.life-scroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:10px}
+#lifeSvg{display:block}
+.station{cursor:pointer}
+.station .disc{transition:.28s}
+.station:hover .disc{transform:translateY(-3px)}
+.station.cur .ring{animation:pulse 1.9s ease-out infinite}
+@keyframes pulse{0%{r:34;opacity:.65}100%{r:48;opacity:0}}
+.station .cap{font-size:11.5px;fill:var(--ink3)}
+.station.cur .cap{fill:var(--red);font-weight:700}
+.station .yr{font-size:12px;fill:var(--ink2);font-family:"Songti SC",serif}
+.station.cur .yr{fill:var(--red)}
+.life-ctrl{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 20px;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.life-ctrl button{border:1px solid var(--line);background:var(--solid);border-radius:9px;padding:7px 14px;font-size:12.5px;color:var(--ink2)}
+.life-ctrl button.primary{background:var(--red);border-color:var(--red);color:#fff}
+.life-ctrl .pos{font-size:12.5px;color:var(--ink3)}
+.life-ctrl .pos b{color:var(--red);font-size:16px;font-family:"Songti SC",serif}
+.life-detail{display:grid;grid-template-columns:66px 1fr;gap:18px;padding:22px 24px 26px}
+.life-detail .big{width:66px;height:66px;border-radius:18px;background:var(--redbg);color:var(--red);
+  display:grid;place-items:center}
+.life-detail .big svg{width:44px;height:44px}
+.life-detail h3{font-family:"Songti SC",serif;font-size:21px;margin:0 0 8px;font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0}
+.tag{font-size:11.5px;border:1px solid var(--line);border-radius:20px;padding:3px 10px;color:var(--ink2)}
+.tag.red{border-color:var(--red);color:var(--red);background:var(--redbg)}
+.quote-box{background:var(--bg2);border-left:3px solid var(--red);border-radius:0 10px 10px 0;
+  padding:11px 14px;margin-top:11px;font-size:12.5px;color:var(--ink2);line-height:1.8}
+.quote-box .qh{font-size:11px;color:var(--red);margin-bottom:4px}
+.detail-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}
+.detail-actions button{border:1px solid var(--line);background:var(--solid);border-radius:9px;padding:7px 13px;font-size:12.5px;color:var(--ink2)}
+.detail-actions button:hover{border-color:var(--red);color:var(--red)}
+.cross-wrap{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,.85fr);gap:20px;align-items:start}
+.cross-canvas{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:12px;overflow-x:auto}
+#crossSvg{display:block;width:100%;min-width:720px;height:auto}
+.cnode{cursor:pointer}
+.cnode:hover .ccircle{stroke-width:3}
+.cnode.cur .ccircle{fill:var(--red)}
+.cnode.cur .cnum{fill:#fff}
+.cross-side{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);
+  padding:22px;min-height:400px}
+.cross-side .knd{font-size:11px;letter-spacing:2px;color:var(--red)}
+.cross-side h3{font-family:"Songti SC",serif;font-size:25px;margin:6px 0 12px;font-weight:600}
+.cross-side .note{color:var(--ink2);font-size:13.5px;line-height:1.9}
+.cross-side .evt{border-top:1px dashed var(--line);padding-top:12px;margin-top:14px}
+.cross-side .evt .row{display:flex;gap:8px;align-items:flex-start;margin-bottom:9px;font-size:12.5px}
+.cross-side .evt .nm{width:52px;flex:none;font-weight:600}
+.cross-side .evt .ev{color:var(--ink2);cursor:pointer}
+.cross-side .evt .ev:hover{color:var(--red)}
+.cross-legend{display:flex;gap:16px;flex-wrap:wrap;margin:6px 0 16px;font-size:12.5px;color:var(--ink2)}
+.cross-legend i{display:inline-block;width:18px;height:3px;border-radius:3px;vertical-align:middle;margin-right:6px}
+.cross-note{font-size:11.5px;color:var(--ink3);border-left:2px solid var(--gold);padding-left:11px;margin-top:16px;line-height:1.8}
+.res-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:14px}
+.res-card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:9px 11px;box-shadow:var(--shadow2)}
+.res-card .n{font-family:"Songti SC",serif;font-size:21px;color:var(--red);line-height:1.15}
+.res-card .l{font-size:10.5px;color:var(--ink3);margin-top:2px;white-space:nowrap}
+.res-about{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 28px;box-shadow:var(--shadow2);margin-top:18px}
+.res-about h3{font-family:"Songti SC",serif;font-size:21px;margin:0 0 10px}
+.res-about .intro-lead{margin:0 0 20px;font-size:13.5px;line-height:1.95;color:var(--ink2)}
+.res-about .intro-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 30px}
+.res-about .intro-block{border-left:2px solid var(--gold);padding-left:14px}
+.res-about h4{font-size:13.5px;margin:0 0 6px;color:var(--ink);letter-spacing:.3px}
+.res-about p{margin:0;font-size:12.8px;line-height:1.95;color:var(--ink2)}
+.res-about p b{color:var(--ink)}
+.res-about .intro-foot{margin-top:20px;padding-top:14px;border-top:1px solid var(--line);font-size:11.5px;color:var(--ink3);line-height:1.85}
+.res-frame{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.res-frame-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:13px 18px;border-bottom:1px solid var(--line);font-size:13px;font-weight:600}
+.res-tabs{display:flex;gap:8px;flex-wrap:wrap}
+.res-tab{background:transparent;color:var(--ink3);border:1px solid var(--line);border-radius:9px;padding:7px 14px;font-size:12.5px;font-weight:600}
+.res-tab.on{background:var(--red);border-color:var(--red);color:#fff}
+.res-frame-head #openRes{background:var(--red);color:#fff;border-radius:9px;padding:7px 14px;font-size:12.5px}
+.res-frame-head #openRes[hidden]{display:none}
+.res-scope{background:var(--bg2);border-bottom:1px solid var(--line);padding:11px 18px;font-size:12px;line-height:1.85;color:var(--ink2)}
+.res-scope b{color:var(--ink)}
+#resFrame{display:block;width:100%;height:660px;border:0;background:var(--bg2)}
+#resFrame.tall{height:820px}
+#resFrame[hidden]{display:none}
+/* 完整展示内嵌宿主：独立样式的 Shadow DOM，不用 iframe */
+#benchHost{display:block;width:100%;background:var(--bg2)}
+#benchHost[hidden]{display:none}
+.res-fallback{font-size:11.5px;color:var(--ink3);padding:9px 18px;border-top:1px solid var(--line)}
+footer{border-top:1px solid var(--line);padding:22px 34px 34px;max-width:1440px;margin:0 auto;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11.5px;color:var(--ink3)}
+@media(max-width:1080px){
+  .askgrid{grid-template-columns:1fr}.graphpanel{position:static}
+  .cross-wrap{grid-template-columns:1fr}.res-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:640px){
+  .top{padding:10px 14px;gap:10px;flex-wrap:wrap}.brand{min-width:0}nav{order:3;width:100%;overflow-x:auto}
+  main{padding:0 14px 50px}.hero h1{font-size:31px}.sec-head h2{font-size:25px}
+  .res-grid{grid-template-columns:repeat(2,1fr)}.life-detail{grid-template-columns:1fr}
+  .res-about{padding:20px 18px}.res-about .intro-grid{grid-template-columns:1fr}
+  .pcards{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;
+  animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<canvas id="dust"></canvas>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="ic-press" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="20" width="30" height="17" rx="3"/><path d="M9 27h30M14 20v-6h20v6"/><circle cx="17" cy="31.5" r="2.6"/><circle cx="31" cy="31.5" r="2.6"/><path d="M17 11h14M20 8h8"/></g><circle cx="24" cy="24" r="1.8" fill="#A8402F" stroke="none"/></symbol>
+<symbol id="ic-medic" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="17" width="32" height="23" rx="4"/><path d="M19 17v-4a2 2 0 012-2h6a2 2 0 012 2v4M8 26h32"/></g><path d="M22 30h4M24 28v4" stroke="#A8402F" stroke-width="2.4" stroke-linecap="round"/></symbol>
+<symbol id="ic-cap" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 27c0-9 5.8-15 13-15s13 6 13 15"/><path d="M8 27h32c0 3.5-2 5-5 5H13c-3 0-5-1.5-5-5z"/><path d="M24 12v15"/></g><circle cx="24" cy="21" r="2.3" fill="#A8402F" stroke="none"/></symbol>
+<symbol id="ic-book" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M24 12c-5-3-11-3-16-1v25c5-2 11-2 16 1 5-3 11-3 16-1V11c-5-2-11-2-16 1z"/><path d="M24 12v25M12 17h7M12 22h7M29 17h7M29 22h7"/></g><path d="M35 11v11l-3-2.4-3 2.4V11z" fill="#A8402F" stroke="none" opacity=".8"/></symbol>
+<symbol id="ic-flag" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 39V9M13 11h23l-5 7 5 7H13"/></g><circle cx="9" cy="9" r="2" fill="#A8402F" stroke="none"/></symbol>
+<symbol id="ic-train" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="16" width="30" height="18" rx="4"/><path d="M14 16V9h5M38 25h3v6h-3M12 24h8v7h-8zM24 24h8v7h-8z"/><circle cx="15" cy="37" r="2.6"/><circle cx="31" cy="37" r="2.6"/></g><circle cx="21" cy="8" r="1.8" fill="#A8402F" stroke="none"/><circle cx="27" cy="5" r="1.3" fill="#A8402F" stroke="none"/></symbol>
+<symbol id="ic-plow" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 37h34M9 32c3-6 9-8 15-7 5 .8 8 4 10 7"/><path d="M34 32V22M27 22h14l-3 5H30z"/><path d="M12 32v-5M18 32v-4"/></g><circle cx="37" cy="10" r="4" fill="#A8402F" stroke="none"/></symbol>
+<symbol id="ic-house" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 23L24 9l16 14M12 21v18h24V21"/><path d="M21 39V28h6v11M29 17c0-3 2-4 2-6M34 19c0-2 1-3 1-4"/></g><rect x="16" y="25" width="4" height="4" rx="1" fill="#A8402F" stroke="none"/></symbol>
+<symbol id="ic-mountain" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 37l12-20 8 12 6-8 12 16zM6 40h36"/><path d="M17 17l4 4 4-3"/></g><circle cx="36" cy="12" r="3.6" fill="#A8402F" stroke="none"/></symbol>
+<symbol id="ic-star" viewBox="0 0 48 48"><g fill="none" stroke="#A8402F" stroke-width="1.9" stroke-linejoin="round"><path d="M24 7l5.1 11.1 12.1 1.4-9 8.3 2.5 12-10.7-6.1-10.7 6.1 2.5-12-9-8.3 12.1-1.4z"/></g><circle cx="40" cy="9" r="1.8" fill="currentColor"/></symbol>
+</defs></svg>
+
+<div class="wrap">
+<header class="top">
+  <div class="brand"><span class="seal">记</span><div><b>归途</b><small>ORAL HISTORY ATLAS</small></div></div>
+  <nav id="nav">
+    <button data-view="ask" class="on">问一问</button>
+    <button data-view="life">人生链路</button>
+    <button data-view="cross">轨迹交叉</button>
+    <button data-view="research">口述史图谱</button>
+  </nav>
+  <div class="top-right"><span class="pill" id="scopePill">6 份人工访谈</span><button class="tbtn" id="themeBtn">熄灯夜读</button></div>
+</header>
+
+<main>
+<section class="view on" id="v-ask">
+  <div class="hero">
+    <div class="eyebrow">AI 问答 · 句句有据</div>
+    <h1>想听谁的故事，<em>直接问就好。</em></h1>
+    <p class="lede">不用翻访谈稿。问一句，我从口述史图谱里找出相关经历，讲给你听；想核实，随时点开当时的原话。</p>
+  </div>
+  <div class="askgrid">
+    <div class="panel chat">
+      <div class="composer"><input id="q" placeholder="例如：陈海峰年轻时都做过什么？" autocomplete="off"><button id="send">问一问<span>→</span></button></div>
+      <div class="presets" id="presets"></div>
+      <div class="mode-note" id="modeNote">当前为<b>离线演示</b>：回答由「检索 → 筛出真正能回答的事件 → 逐字证据编排」本地生成，未调用任何大模型 API。启动本地代理后自动切换，引用回链与来源卡片格式不变。</div>
+      <div class="modelbar" id="modelBar" hidden><span>回答模型</span>
+        <select id="modelSel" aria-label="选择回答模型"></select>
+        <span class="budget" id="budgetNote"></span></div>
+      <div id="thread"></div>
+    </div>
+    <aside class="panel graphpanel">
+      <div class="gp-head"><div><b>此刻的图谱</b><small id="gpSub">点一个实体，就能顺着它继续问</small></div><span class="live">● 可点</span></div>
+      <div class="gp-canvas"><svg id="graph" viewBox="0 0 480 400"></svg><div class="tip" id="tip"></div></div>
+      <div class="legend" id="legend"></div>
+      <div class="guide">
+        <div class="guide-title">换个角度看这些线索</div>
+        <div class="guide-btns" id="guideBtns"></div>
+        <div class="guide-q"><span>或者，让我来问你 ——</span><div id="guideQs"></div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="view" id="v-life">
+  <div class="sec-head"><div class="eyebrow">B · 人生链路</div>
+    <h2>一条路，<em>一站一站走过去。</em></h2>
+    <p>按事件发生的历史顺序串成旅途。点一站，或按「下一站」往前走；每一站都能回到当时的口述原话。</p></div>
+  <div class="life-tabs" id="lifeTabs"></div>
+  <div class="life-stage">
+    <div class="life-scroll" id="lifeScroll"><svg id="lifeSvg" xmlns="http://www.w3.org/2000/svg"></svg></div>
+    <div class="life-ctrl">
+      <button id="prevStation">← 上一站</button>
+      <span class="pos" id="stationPos"></span>
+      <span><button id="autoWalk">自动漫游</button> <button class="primary" id="nextStation">下一站 →</button></span>
+    </div>
+    <div class="life-detail" id="lifeDetail"></div>
+  </div>
+</section>
+
+<section class="view" id="v-cross">
+  <div class="sec-head"><div class="eyebrow">C · 轨迹交叉</div>
+    <h2>他们曾在<em>同一处相遇</em>，又各自走开。</h2>
+    <p>同一年代、同一支军队、同一个对手——把不同人的轨迹叠在一起，交点会自己浮出来。</p></div>
+  <div class="cross-legend" id="crossLegend"></div>
+  <div class="cross-wrap">
+    <div class="cross-canvas"><svg id="crossSvg" viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg"></svg></div>
+    <div class="cross-side" id="crossSide"></div>
+  </div>
+  <div class="cross-note" id="crossNote"></div>
+</section>
+
+<section class="view" id="v-research">
+  <div class="sec-head"><div class="eyebrow">D · 口述史图谱</div>
+    <h2>这一切背后的<em>科研成果</em>。</h2>
+    <p>下面汇总这套图谱的数据规模、标注口径，以及可逐层展开的完整展示。</p></div>
+  <div class="res-grid" id="resGrid"></div>
+  <div class="res-frame">
+    <div class="res-frame-head">
+      <div class="res-tabs">
+        <button class="res-tab on" data-res="workbench">完整展示</button>
+        <button class="res-tab" data-res="mentor">标注结果总看板</button>
+      </div>
+      <button id="openRes" hidden>在新窗口打开总看板 ↗</button>
+    </div>
+    <div class="res-scope" id="resScope"><b>口径提示</b>：上方六项指标与内嵌工作台只统计 6 份人工标注 Demo（词表 v1.0）。「标注结果总看板」是<b>独立档案</b>，并列两条<b>互不相干、分开浏览的数据线</b>——① 人工 6 份 <b>CONFIRMED</b>，含二级过程阶段与逐字原文，但属 <b>WORKFLOW_DEMO</b> 工作流样本、不是正式测试金标准；② 大模型正式结果全部为 <b>MODEL_CANDIDATE</b>，尚未入库放行、本轮没有二级阶段。<b>两层逐字挂接数量不可相加，请勿混读</b>；只有 <b>EVIDENCE</b> 是可作史实依据的逐字证据。</div>
+    <div id="benchHost"></div>
+    <iframe id="resFrame" title="标注结果总看板（独立档案）" hidden></iframe>
+    <div class="res-fallback" id="resFallback">「标注结果总看板」汇总人工 6 份与大模型正式结果的独立视图，离线时展示页面内嵌快照。研究侧的叙事跳跃度指标见同目录 CSV，不进入公众三板块。</div>
+  </div>
+  <div class="res-about" id="resAbout">
+    <h3>关于这套图谱</h3>
+    <p class="intro-lead">「归途」把口述史访谈逐字稿整理成一套可以检索、可以核对的知识图谱。访谈里的回忆往往不是按时间顺序讲出来的：一件事会被反复提起，中间插进另一段往事，时间也常常只说个大概。这套标注体系要做的，是把讲述本身的结构如实记下来，再让每一条结论都能回到原话。</p>
+    <div class="intro-grid">
+      <div class="intro-block">
+        <h4>材料与规模</h4>
+        <p>公众端展示基于 <b>3 位受访者的 6 份人工标注访谈</b>：事件、过程阶段、逐字片段与人物、地点、组织等实体分别建表，共 24 张相互关联的表。上方的六个数字就是这套人工标注的规模。另有 <b>54 份正式语料</b>由两条模型标注线分别处理，结果按模型与批次独立登记，目前仍在逐份复核，暂不作为结论呈现。</p>
+      </div>
+      <div class="intro-block">
+        <h4>一件事怎么被记下来</h4>
+        <p>事件不是一个孤立的点，而是由若干 <b>过程阶段</b>依次相接，保留「先做了什么、后来怎样」的经过。同一份访谈同时记录<b>讲述顺序</b>与<b>发生顺序</b>两条时间线——双时序在 6 份人工标注中真实存在，切换后能看见回忆的回补与插叙；正式批次目前只按来源片段顺序登记，不作独立历史序使用。</p>
+      </div>
+      <div class="intro-block">
+        <h4>每一句话都能回到原处</h4>
+        <p>每条断言都带着<b>片段编号与偏移量</b>，点开即可回到逐字稿中的原话高亮；引用按用途区分，只有明确作为证据的逐字片段才被当作史实依据。时间写不确切时（例如「回乡半个多月以后」）就照原样保留为相对时间，不硬折算成某个年份；确定性、置信度、事实性与复核状态也一并分层记录，不把推测写成定论。</p>
+      </div>
+      <div class="intro-block">
+        <h4>从数据到可以逛的展</h4>
+        <p>在这套标注之上，前面的三个板块分别提供：用自然语言提问并查看回答依据的「问一问」、按历史顺序一站一站走完的「人生链路」、把不同人的生命线叠在一起看交汇的「轨迹交叉」。本板块的「完整展示」与「标注结果总看板」则保留逐层查阅的原始形态，方便核对细节。</p>
+      </div>
+    </div>
+    <p class="intro-foot">口径说明：公众三板块与上方六项数字只使用 6 份人工标注样本（数据词表 v1.0）；正式批次另用后续修订的词表 v1.1，两条模型线的数据彼此隔离、不合并统计。叙事跳跃度等研究指标只留在科研工作台与配套 CSV 中，不进入公众界面。轨迹交叉中标注的四处交集为自动检出并人工核实，并非受访者原话。</p>
+  </div>
+</section>
+</main>
+<footer><span id="footLeft"></span><span>公众三板块：6 份人工标注 Demo · 词表 v1.0；科研成果板块另含大模型候选明细</span></footer>
+</div>
+
+<script>/*__DATA__*/</script>
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return (r||document).querySelector(s);};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));};
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
+function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;}
+var EV={},NODE={};
+DB.events.forEach(function(e){EV[e.id]=e;});
+DB.nodes.forEach(function(n){NODE[n.id]=n;});
+var TYPE={PLACE:{c:'#A8402F',n:'地点'},ORGANIZATION:{c:'#3E706C',n:'组织'},MILITARY_UNIT:{c:'#B08A4B',n:'部队'},
+  PERSON:{c:'#5A7591',n:'人物'},HISTORICAL_EVENT:{c:'#6C8258',n:'大事'}};
+var PREC={YEAR:'年份',MONTH:'月份',DAY:'确切日期',RELATIVE:'相对时间',OPEN_END:'开放区间',DECADE:'年代',RANGE:'区间'};
+var S={view:'ask',graphMode:'all',graphFilter:null,selNode:null,lifePerson:DB.people[0].name,lifeIdx:0,
+  auto:null,crossIdx:0,srcOpen:false,busy:false,resTab:'workbench'};
+var rendered={ask:1,life:0,cross:0,research:0};
+
+/* ---------- 通用 ---------- */
+function switchView(v){
+  if(!$('#v-'+v))return;
+  S.view=v;$$('.view').forEach(function(x){x.classList.remove('on');});$('#v-'+v).classList.add('on');
+  $$('#nav button').forEach(function(b){b.classList.toggle('on',b.dataset.view===v);});
+  if(!rendered[v]){rendered[v]=1;if(v==='life')renderLife();if(v==='cross')renderCross();if(v==='research')renderResearch();}
+  try{history.replaceState(null,'','#'+v);}catch(e){}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+$$('#nav button').forEach(function(b){b.onclick=function(){switchView(b.dataset.view);};});
+$('#themeBtn').onclick=function(){
+  var n=document.body.classList.toggle('night');this.textContent=n?'点灯展卷':'熄灯夜读';
+  // 内嵌工作台在 Shadow DOM 内，夜读态由门户统一下发，避免内外两套主题打架
+  try{
+    var h=document.getElementById('benchHost');
+    if(h){
+      h.classList.toggle('night',n);
+      if(h.shadowRoot){var b=h.shadowRoot.querySelector('#themeBtn');if(b)b.textContent=n?'点灯展卷':'熄灯夜读';}
+      if(window.OHG)window.OHG.S.theme=n?'night':'light';
+    }
+  }catch(e){}
+};
+$('#scopePill').textContent=DB.stats.people+' 位受访者 · '+DB.stats.docs+' 份访谈';
+$('#footLeft').textContent='归途 · 口述史记忆馆 ｜ 交互原型 ｜ 生成于 '+DB.meta.generated_at;
+
+/* ---------- 尘埃背景 ---------- */
+(function(){
+  var cv=$('#dust'),cx=cv.getContext('2d'),pts=[],W,H,raf;
+  function resize(){W=cv.width=window.innerWidth;H=cv.height=window.innerHeight;
+    pts=[];for(var i=0;i<52;i++)pts.push({x:Math.random()*W,y:Math.random()*H,
+      vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*1.3+.5});}
+  function draw(){cx.clearRect(0,0,W,H);
+    var night=document.body.classList.contains('night');
+    cx.fillStyle=night?'rgba(226,140,116,.30)':'rgba(168,64,47,.24)';
+    cx.strokeStyle=night?'rgba(226,140,116,.07)':'rgba(168,64,47,.07)';cx.lineWidth=.7;
+    for(var i=0;i<pts.length;i++){var p=pts[i];
+      p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+      cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.283);cx.fill();
+      for(var j=i+1;j<pts.length;j++){var q=pts[j],d=(p.x-q.x)*(p.x-q.x)+(p.y-q.y)*(p.y-q.y);
+        if(d<11000){cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(q.x,q.y);cx.stroke();}}}
+    if(!window.matchMedia||!window.matchMedia('(prefers-reduced-motion: reduce)').matches)raf=requestAnimationFrame(draw);}
+  resize();window.addEventListener('resize',function(){cancelAnimationFrame(raf);resize();draw();});draw();
+})();
+
+/* ---------- 检索层：问句 -> 事件（本地演示 RAG） ---------- */
+var STOP=['的','了','和','与','在','有','什么','都','吗','呢','讲讲','聊聊','我想','知道','一下','请','帮我','看看','关于','时候','哪些','怎么','为什么','后来','经历','事情','那位','这位','他们','我们'];
+function personHints(q){
+  var full=DB.people.filter(function(p){return q.indexOf(p.name)>=0||q.indexOf(p.name.slice(1))>=0;});
+  if(full.length)return full.map(function(p){return p.name;});
+  return DB.people.filter(function(p){return q.indexOf(p.name[0])>=0;}).map(function(p){return p.name;});
+}
+function keywordHits(q){
+  var out=[];
+  DB.nodes.forEach(function(n){if(q.indexOf(n.name)>=0&&n.name.length>=2)out.push(n.name);});
+  DB.aliases.forEach(function(a){if(a.t&&a.t.length>=2&&q.indexOf(a.t)>=0&&out.indexOf(a.t)<0)out.push(a.t);});
+  ['上海','江阴','济南','南京','皖南','平型关','新四军','八路军','红军','炮兵','印书馆','学徒','罢工','逃难','参军','教书','抗战','抗日','地下党','淞沪','五三惨案','西安事变','九一八','伤员','卫训','学兵','游行','中国共产党','第三支队','一一五师','教导队','王兴纲','荣华印书馆','救亡会'].forEach(function(w){
+    if(q.indexOf(w)>=0&&out.indexOf(w)<0)out.push(w);
+  });
+  return out.slice(0,8);
+}
+function eventText(e){
+  return [e.name,e.timeRaw,e.result,(e.places||[]).join(' '),(e.orgs||[]).join(' '),
+    (e.stages||[]).join(' '),(e.causes||[]).join(' '),(e.purposes||[]).join(' '),
+    (e.manners||[]).join(' '),(e.quotes||[]).map(function(q){return q.text;}).join(' ')].join(' ');
+}
+function retrieve(q){
+  var ps=personHints(q),kws=keywordHits(q),years=(q.match(/19\d{2}/g)||[]);
+  var early=/年轻|早年|小时候|少年|起初|最早/.test(q),late=/后来|晚年|最后|之后/.test(q);
+  var scored=[];
+  DB.events.forEach(function(e){
+    var t=eventText(e),sc=0;
+    if(ps.length){if(ps.indexOf(e.person)>=0)sc+=9;else sc-=3;}
+    years.forEach(function(y){if((e.timeStart||'').indexOf(y)===0)sc+=6;});
+    if(early){var all=DB.events.filter(function(x){return x.person===e.person;}).length;if(e.h<=Math.max(3,Math.ceil(all*.42)))sc+=3;}
+    if(late){var all2=DB.events.filter(function(x){return x.person===e.person;}).length;if(e.h>all2*.6)sc+=2;}
+    kws.forEach(function(k){if(e.name.indexOf(k)>=0)sc+=5;else if(t.indexOf(k)>=0)sc+=2;});
+    var plain=q.replace(/[^\u4e00-\u9fa5]/g,'');
+    if(plain.length>=3&&e.name.indexOf(plain.slice(0,3))>=0)sc+=2;
+    if(sc>0)scored.push({e:e,sc:sc});
+  });
+  scored.sort(function(a,b){return b.sc-a.sc||a.e.h-b.e.h;});
+  var out=scored.slice(0,6).map(function(x){return x.e;});
+  return {events:out,all:scored,persons:ps,keywords:kws,years:years};
+}
+/* ---------- 答案合成：先筛事件，再排因果链，最后写成人话 ---------- */
+var WHY_RE=/为什么|为何|为啥|何以|原因|起因|动机|怎么会|咋会|出于什么|凭什么/;
+var FOCUS_STOP=/什么|怎么|为何|原因|动机|时候|一个|自己|我们|他们|没有|因为|所以|就是|这个|那个|前后|当时|可以|这些|那些|经历|事情|问题|请问|告诉我|讲讲|一下/;
+var FOCUS_POOL=(function(){
+  var seen={},out=[];
+  DB.events.forEach(function(e){
+    var s=[e.name,e.result].concat(e.causes||[],e.purposes||[],e.manners||[]).join(' ');
+    s=String(s||'').replace(/[^\u4e00-\u9fa5]/g,'');
+    for(var L=Math.min(7,s.length);L>=2;L--)
+      for(var i=0;i+L<=s.length;i++){
+        var w=s.substr(i,L);
+        if(FOCUS_STOP.test(w)||seen[w])continue;
+        seen[w]=1;out.push(w);
+      }
+  });
+  return out.sort(function(a,b){return b.length-a.length;});
+})();
+function focusOf(q,r){
+  var qq=q;DB.people.forEach(function(p){qq=qq.split(p.name).join('');});
+  for(var i=0;i<FOCUS_POOL.length;i++){
+    var w=FOCUS_POOL[i];
+    if(w.length>=2&&qq.indexOf(w)>=0)return w;
+  }
+  return (r&&r.keywords&&r.keywords[0])||'';
+}
+function bigrams(s){
+  var t=String(s||'').replace(/[^\u4e00-\u9fa5]/g,''),o={};
+  for(var i=0;i<t.length-1;i++)o[t.substr(i,2)]=1;
+  return Object.keys(o);
+}
+function overlapScore(a,b){
+  var t=String(b||'').replace(/[^\u4e00-\u9fa5]/g,''),n=0;
+  bigrams(a).forEach(function(w){if(t.indexOf(w)>=0)n++;});
+  return n;
+}
+function findCurated(q,r,why){
+  if(!why)return null;
+  return (DB.answerBook||[]).filter(function(c){
+    if(c.person&&q.indexOf(c.person)<0&&(r.persons||[]).indexOf(c.person)<0)return false;
+    return (c.words||[]).some(function(w){return q.indexOf(w)>=0;});
+  })[0]||null;
+}
+function buildChain(q,r){
+  var why=WHY_RE.test(q),focus=focusOf(q,r),curated=findCurated(q,r,why);
+  var ctx={r:r,why:why,focus:focus,curated:curated,
+    intentCross:/交集|相同|共同|一样|一起|同时|相遇|重合/.test(q),
+    intentLife:/人生|轨迹|一生|经历|链路/.test(q)&&!r.keywords.length,
+    evs:[],extra:[],chain:[],core:null};
+  if(curated){
+    ctx.evs=curated.chain.map(function(x){return EV[x.id];}).filter(Boolean);
+    ctx.core=ctx.evs[2]||ctx.evs[0]||null;
+    ctx.chain=curated.chain;
+    ctx.extra=(r.events||[]).filter(function(e){return ctx.evs.indexOf(e)<0;});
+    return ctx;
+  }
+  if(!why){ctx.evs=(r.events||[]).slice(0,5);return ctx;}
+  var pool={};
+  (r.all||[]).forEach(function(x){pool[x.e.id]=x.sc;});
+  var person=r.persons[0]||(r.events[0]&&r.events[0].person)||'';
+  DB.events.forEach(function(e){
+    if(person&&e.person!==person)return;
+    var t=eventText(e),hit=focus&&t.indexOf(focus)>=0;
+    var causal=((e.causes||[]).length+(e.purposes||[]).length)>0;
+    if(!hit&&!causal)return;
+    var sc=(hit?9:0)+(causal?5:0)+(/决定|放弃|影响|改变|转向|思想|倾向|选择|加入/.test(e.name)?4:0)
+      +((e.causes||[]).join(' ').indexOf(focus)>=0?4:0)
+      +(e.name.indexOf(focus)>=0?3:0);
+    pool[e.id]=Math.max(pool[e.id]||0,sc);
+  });
+  var ranked=Object.keys(pool).map(function(id){return {e:EV[id],sc:pool[id]};})
+    .filter(function(x){return x.e;}).sort(function(a,b){return b.sc-a.sc||a.e.h-b.e.h;});
+  if(!ranked.length)return ctx;
+  var core=ranked[0].e,seen={};seen[core.id]=1;
+  ctx.core=core;
+  var baseTxt=[core.name,core.result].concat(core.causes||[],core.purposes||[]).join(' ');
+  var ups=[],cur=core;
+  for(var k=0;k<5;k++){
+    var p=cur.prev&&EV[cur.prev];if(!p||p.person!==core.person||seen[p.id])break;
+    seen[p.id]=1;ups.push({e:p,sc:overlapScore(baseTxt,eventText(p))
+      +(/情绪|仇恨|影响|种子|惨案|炮击|事变|遭遇/.test(eventText(p))?6:0)});cur=p;
+  }
+  ups.sort(function(a,b){return b.sc-a.sc;});
+  var antes=ups.slice(0,2).map(function(x){return x.e;}).sort(function(a,b){return a.h-b.h;});
+  antes.forEach(function(e){seen[e.id]=1;});
+  var fols=[],nx=core;
+  for(var j=0;j<2;j++){
+    var f=nx.next&&EV[nx.next];if(!f||f.person!==core.person||seen[f.id])break;
+    seen[f.id]=1;fols.push(f);nx=f;
+  }
+  ctx.evs=antes.concat([core],fols);
+  ctx.chain=antes.map(function(e){return {id:e.id,role:'更早的前因',label:e.name};})
+    .concat([{id:core.id,role:'关键决定',label:core.name}])
+    .concat(fols.map(function(e){return {id:e.id,role:'随后行动',label:e.name};}));
+  ctx.extra=(r.events||[]).filter(function(e){return ctx.evs.indexOf(e)<0;});
+  return ctx;
+}
+function srcQuotes(e){
+  var out=[],seen={};
+  (e.causeQuotes||[]).concat(e.quotes||[]).forEach(function(q){
+    if(!q||!q.text||seen[q.sid])return;seen[q.sid]=1;out.push(q);
+  });
+  return out.slice(0,3);
+}
+function pickLine(e,n){
+  var seen={},lines=[];
+  srcQuotes(e).forEach(function(q){
+    var s=q.text.replace(/^\s*[^：:]{1,14}[：:]/,'').replace(/\s+/g,' ');
+    (s.match(/[^。！？；]+[。！？；]?/g)||[]).forEach(function(x){
+      x=x.trim();if(x.length>=8)lines.push(x);
+    });
+  });
+  var cue=/因为|所以|于是|思想|变了|决定|自己|仇恨|参军|当兵|打日本|为了|影响|教书|扛枪|炮弹|种子|不如|就去/;
+  lines.sort(function(a,b){return (cue.test(b)?1:0)-(cue.test(a)?1:0);});
+  return lines.slice(0,n||2).map(function(x){return x.length>88?x.slice(0,88)+'…':x;});
+}
+/* 引用角标：离线精编用 {n}，大模型输出用 [n]，都落到同一套来源卡片 */
+function inlineText(s,evs){
+  return String(s||'').split(/(\{\d+\}|\[\d+\])/g).map(function(x){
+    var m=/^[\{\[](\d+)[\}\]]$/.exec(x);
+    if(!m)return esc(x);
+    var i=+m[1]-1;
+    return evs&&evs[i]?'<button class="cite" data-src="'+i+'">'+(i+1)+'</button>':'';
+  }).join('');
+}
+function proseCurated(ctx){
+  return (ctx.curated.paragraphs||[]).map(function(p){
+    return '<p class="prose">'+inlineText(p,ctx.evs)+'</p>';
+  }).join('');
+}
+function proseWhy(ctx,q){
+  var evs=ctx.evs,core=ctx.core,focus=ctx.focus;
+  if(!evs.length||!core)return '<p class="prose">这批访谈里没有能支撑这个「为什么」的记录，我不替受访者猜动机。换个事件、人名或年份再问一次吧。</p>';
+  var direct=(core.causes&&core.causes[0])||(core.purposes&&core.purposes[0])||core.result||core.name;
+  var h='<p class="prose"><b>先说答案：</b>'+esc(core.person)+'之所以'+esc(focus||'这么做')
+    +'，图谱里记下的直接原因是「'+esc(direct)+'」'+inlineText('{'+(evs.indexOf(core)+1)+'}',evs)+'。';
+  var lines=pickLine(core,2);
+  if(lines.length)h+=lines.map(function(x){return '他在原话里说「'+esc(x)+'」';}).join('；')+'。';
+  h+='</p>';
+  var antes=evs.filter(function(e){return e!==core&&e.h<core.h;}).sort(function(a,b){return a.h-b.h;});
+  if(antes.length){
+    h+='<p class="prose">再往前看，'+antes.map(function(e,i){
+      return (i?'；':'')+(e.timeRaw?esc(e.timeRaw)+'，':'')+'「'+esc(e.name)+'」，标注记作「'
+        +esc(e.result||e.name)+'」'+inlineText('{'+(evs.indexOf(e)+1)+'}',evs);
+    }).join('')+'。';
+    var al=pickLine(antes[0],1);
+    if(al.length)h+='他自己回忆说「'+esc(al[0])+'」。';
+    h+='</p>';
+  }
+  var fols=evs.filter(function(e){return e!==core&&e.h>=core.h;}).sort(function(a,b){return a.h-b.h;});
+  if(fols.length){
+    h+='<p class="prose">决定之后，'+fols.map(function(e){
+      return '「'+esc(e.name)+'」，'+esc(e.result||'')+inlineText('{'+(evs.indexOf(e)+1)+'}',evs);
+    }).join('；')+'。</p>';
+  }
+  h+='<p class="prose">所以能回答「为什么」的是这 '+evs.length+' 段串成的前因 → 决定 → 行动，不是一堆并列的经历'
+    +(ctx.extra.length?'；另外检到的 '+ctx.extra.length+' 段只是同期背景，我没有拿来凑数':'')+'。</p>';
+  return h;
+}
+function proseOverview(ctx,q,r){
+  var evs=ctx.evs;
+  if(!evs.length)return '<p class="prose">我在现有的 '+DB.stats.docs+' 份人工标注访谈里，没有找到能支撑这个问题的记录。'
+    +'这不是「没有发生过」，只是这批语料里没写到；换个人名、年份或地点再问一次。</p>';
+  var who=r.persons.length?r.persons.join('、'):evs[0].person+'等';
+  var bits=evs.slice(0,4).map(function(e,i){
+    var pre=i===0?'':['，随后 ','，再后来 ','，到后来 '][Math.min(i-1,2)];
+    return pre+(e.timeRaw?'<span class="tm">'+esc(e.timeRaw)+'</span> ':'')+esc(e.name)
+      +inlineText('{'+(i+1)+'}',evs);
+  });
+  var h='<p class="prose"><b>先说大概：</b>'+esc(who)+'留下的记录里，'+bits.join('')+'。'
+    +(evs.length>4?'后面还有 '+(evs.length-4)+' 段，':'')+'这几段按发生先后串起来，就是这段经历的主线。</p>';
+  var rs=evs.filter(function(e){return e.result;});
+  if(rs.length){
+    var pick=rs[Math.min(1,rs.length-1)]||rs[0];
+    h+='<p class="prose">其中变化最明显的是「'+esc(pick.name)+'」：'+esc(pick.result)
+      +inlineText('{'+(evs.indexOf(pick)+1)+'}',evs)+'。</p>';
+  }
+  h+=keyNodesHTML(evs);
+  return h;
+}
+/* 事件节点清单：离线回答与大模型回答共用；编号角标可点开逐字原话 */
+function keyNodesHTML(evs){
+  if(!evs||!evs.length)return '';
+  var h='<p class="lead" style="margin-top:14px">下面是能点开原话的关键节点：</p>';
+  evs.forEach(function(e,i){
+    var when=e.timeRaw?esc(e.timeRaw):'时间待补';
+    var where=e.places&&e.places.length?' · '+esc(e.places[0].slice(0,18)):'';
+    h+='<p class="item" style="animation:rise .4s ease both;animation-delay:'+(i*.07)+'s">'
+      +inlineText('{'+(i+1)+'}',evs)+'<b>'+esc(e.name)+'</b><span class="meta">'+when+where+'</span></p>';
+  });
+  return h;
+}
+function proseCross(){
+  var cs=DB.crosses.slice(0,4);
+  var h='<p class="prose"><b>把 '+DB.stats.people+' 个人的轨迹叠在一起</b>，这批语料里能核实到 '
+    +DB.crosses.length+' 处交集：'+cs.map(function(c){return esc(c.label);}).join('、')
+    +'。它们来自标注里的共同年代与共同实体，不是推测出来的。</p>';
+  cs.forEach(function(c,i){
+    h+='<p class="item" style="animation:rise .4s ease both;animation-delay:'+(i*.08)+'s"><b>'
+      +(i+1)+'. '+esc(c.label)+'</b><span class="meta">'+esc(c.kind)+' · '+esc(c.people.join(' × '))
+      +' · '+esc((c.note||'').split(/[。；]/)[0].slice(0,64))+'</span></p>';
+  });
+  h+='<p class="lead" style="margin-top:12px">画成轨迹图更好看 ——</p>';
+  return h;
+}
+function makeFollowups(ctx){
+  if(ctx.curated&&ctx.curated.followups)return ctx.curated.followups.slice(0,4);
+  var out=[],evs=ctx.evs||[],who=evs[0]?evs[0].person:(ctx.r.persons[0]||''),core=ctx.core;
+  if(core){
+    var antes=evs.filter(function(e){return e.h<core.h;});
+    var fols=evs.filter(function(e){return e!==core&&e.h>=core.h;});
+    if(antes.length)out.push('讲讲'+antes[0].name+'？');
+    if(fols.length)out.push('讲讲'+fols[0].name+'？');
+  }
+  DB.events.forEach(function(e){
+    if(out.length>=3||!who||e.person!==who||!(e.causes||[]).length||evs.indexOf(e)>=0)return;
+    var t=e.name.replace(who,'').slice(0,12);
+    if(t)out.push(who+'为什么会'+t+'？');
+  });
+  if(!evs.length&&ctx.focus)out.push('讲讲'+ctx.focus+'？');
+  out.push('三个人有什么交集？');
+  return out.slice(0,4);
+}
+function composeOffline(q,ctx){
+  var r=ctx.r;
+  if(ctx.intentCross&&!r.persons.length&&!r.keywords.length&&!r.years.length)
+    return {html:proseCross(),evs:[],followups:['陈海峰年轻时都做过什么？','1937 年他们在哪儿？'],
+      chain:[],extra:[],ctx:ctx,jumps:['cross']};
+  var html=ctx.curated?proseCurated(ctx):(ctx.why?proseWhy(ctx,q):proseOverview(ctx,q,r));
+  return {html:html,evs:ctx.evs,followups:makeFollowups(ctx),chain:ctx.chain,extra:ctx.extra,ctx:ctx,
+    jumps:(ctx.intentCross?['cross']:[]).concat(ctx.intentLife?['life']:[])};
+}
+/* ---------- 可插拔答案引擎：默认离线，接本地代理后自动换 LLM ---------- */
+var AnswerEngine={
+  mode:'offline',model:'',
+  compose:function(q,ctx){return composeOffline(q,ctx);},
+  useLLM:function(fn){if(typeof fn!=='function')throw new Error('useLLM 需要 compose(q,ctx) 函数');
+    this.mode='llm';this.compose=fn;updateModeNote();return this;},
+  useOffline:function(){this.mode='offline';this.compose=composeOffline;updateModeNote();return this;}
+};
+function updateModeNote(){
+  var n=$('#modeNote');if(!n)return;
+  var bar=$('#modelBar');if(bar)bar.hidden=AnswerEngine.mode!=='llm';
+  n.innerHTML=AnswerEngine.mode==='llm'
+    ?'<b>已接入大模型</b>：检索到的因果链、逐字原话与图谱实体交给 '+esc(AnswerEngine.model||'cuc/qwen')
+      +' 组织语言（可在下方切换模型）；引用角标与来源卡片仍由本地生成，断网时自动回退离线回答。'
+    :'当前为<b>离线演示</b>：回答由「检索 → 筛出真正能回答的事件 → 逐字证据编排」本地生成，未调用任何大模型 API。'
+      +'启动本地代理后自动切换，引用回链与来源卡片格式不变。';
+}
+function fillModels(list,current){
+  var sel=$('#modelSel');if(!sel)return;
+  sel.innerHTML='';
+  list.forEach(function(m){var o=document.createElement('option');o.value=m;o.textContent=m;sel.appendChild(o);});
+  if(current&&list.indexOf(current)>=0)sel.value=current;
+  sel.onchange=function(){AnswerEngine.model=sel.value;updateModeNote();};
+}
+function setBudget(b){
+  var n=$('#budgetNote');if(!n)return;
+  n.textContent='今日已用 ¥'+Number(b.used||0).toFixed(2)+' / ¥'+Number(b.limit||80).toFixed(0);
+}
+function llmCompose(q,ctx){
+  var evidence=(ctx.evs||[]).map(function(e,i){
+    return {n:i+1,person:e.person,event:e.name,time:e.timeRaw,places:e.places,result:e.result,
+      causes:e.causes,purposes:e.purposes,stages:e.stages,
+      quotes:srcQuotes(e).map(function(x){return x.text.slice(0,420);})};
+  });
+  return fetch(apiURL('/api/ask'),{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({question:q,intent:ctx.why?'why':(ctx.intentCross?'cross':'overview'),
+      focus:ctx.focus,model:($('#modelSel')||{}).value||AnswerEngine.model||undefined,evidence:evidence,
+      extras:(ctx.extra||[]).map(function(e){return e.name+'：'+e.result;})})})
+    .then(function(r){return r.json();}).then(function(d){
+      if(!d.ok||!d.text)throw new Error(d.error||'模型未返回回答');
+      return {text:d.text,evs:ctx.evs,followups:makeFollowups(ctx),chain:ctx.chain,
+        extra:ctx.extra,ctx:ctx,jumps:[],model:d.model};
+    });
+}
+/* 代理探测：先试同源（从 http://127.0.0.1:8765/ 打开时最快），
+   再回落本机 8765。因此双击 file:// 的同一个 HTML、或在别的静态预览里打开，
+   只要本机代理在跑，页面就自动变成真大模型回答；没跑则保持离线。 */
+var API_PORT=8765,API_BASE='';
+function apiURL(p){return API_BASE+p;}
+function detectLLM(){
+  var bases=[],seen={};
+  try{var ua=new URLSearchParams(location.search).get('api');
+    if(ua)bases.push(String(ua).replace(/\/+$/,''));}catch(e){}
+  if(location.protocol==='http:'||location.protocol==='https:')bases.push('');
+  bases.push('http://127.0.0.1:'+API_PORT,'http://localhost:'+API_PORT);
+  function next(i){
+    if(i>=bases.length)return;
+    var b=bases[i];
+    if(seen[b])return next(i+1);
+    seen[b]=1;
+    fetch(b+'/api/status',{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
+      if(d&&d.ok){
+        API_BASE=b;AnswerEngine.model=d.model||'cuc/qwen';
+        fillModels(d.models||['cuc/qwen','cuc/deepseek'],d.model);
+        if(d.budget)setBudget(d.budget);
+        AnswerEngine.useLLM(llmCompose);
+      }
+      else next(i+1);
+    }).catch(function(){next(i+1);});
+  }
+  next(0);
+}
+updateModeNote();
+try{detectLLM();}catch(e){}
+function renderAnswer(res,q,box){
+  var ans=$('#ans',box),evs=res.evs||[],h='';
+  if(res.notice)h+='<div class="notice">'+esc(res.notice)+'</div>';
+  if(res.html)h+=res.html;
+  else if(res.text){
+    h+=String(res.text).split(/\n+/).filter(Boolean).map(function(p){
+      return '<p class="prose">'+inlineText(p,evs)+'</p>';}).join('');
+    h+=keyNodesHTML(evs);   // 大模型回答也补上可点开的依据事件清单
+  }
+  if(res.chain&&res.chain.length){
+    h+='<div class="chain-title">这条回答的依据链 · 点开看原话</div><div class="chain">';
+    res.chain.forEach(function(c,i){
+      h+='<button class="cn" data-src="'+i+'"><span>'+esc(c.role)+'</span>'+esc(c.label)+'</button>'
+        +(i<res.chain.length-1?'<span class="ar">→</span>':'');
+    });
+    h+='</div>';
+  }
+  if(evs.length){
+    h+='<div class="srcbar"><span>依据 '+evs.length+' 段事件记录 · '
+      +evs.filter(function(e){return srcQuotes(e).length;}).length+' 段采访原话'
+      +(res.extra&&res.extra.length?' · 已筛掉 '+res.extra.length+' 段只沾边的背景':'')+'</span>'
+      +'<button id="srcToggle">查看采访原文 ↓</button></div><div class="sources" id="srcs"></div>';
+  }
+  h+='<div class="follow"></div>';
+  (res.jumps||[]).forEach(function(v){
+    h+='<button class="jump" data-go="'+v+'">'
+      +(v==='cross'?'这几个人的交集，画成图更好看 →':'把这条人生链路走一遍 →')+'</button>';
+  });
+  ans.innerHTML=h;
+  if(evs.length){
+    var srcs=$('#srcs',box);
+    evs.forEach(function(e,i){
+      var qs=srcQuotes(e),cause=(e.causes||[]).concat(e.purposes||[])[0];
+      var d=el('div','source','<div class="sh">['+(i+1)+'] '+esc(e.docTitle)+' · '+esc(e.name)+'</div>'
+        +(cause?'<div class="ct">因果标注：'+esc(cause)+'</div>':'')
+        +'<div class="qts">'+(qs.length?qs.map(function(q){return '<div class="qt">'+esc(q.text)+'</div>';}).join('')
+          :'<div class="qt">该事件暂未挂接逐字片段。</div>')+'</div>'
+        +(qs.length?'<div class="more">点此展开 / 收起整段原话</div>':''));
+      if(qs.length)d.onclick=function(){$('.qts',d).classList.toggle('full');};
+      srcs.appendChild(d);
+    });
+    $('#srcToggle',box).onclick=function(){var open=srcs.classList.toggle('show');
+      this.textContent=open?'收起采访原文 ↑':'查看采访原文 ↓';
+      if(open)srcs.scrollIntoView({behavior:'smooth',block:'nearest'});};
+    $$('.cite,.cn',box).forEach(function(b){b.onclick=function(){
+      if(!srcs.classList.contains('show'))$('#srcToggle',box).click();
+      var t=srcs.children[+b.dataset.src];if(t)t.scrollIntoView({behavior:'smooth',block:'center'});
+    };});
+  }
+  var fol=$('.follow',box);
+  (res.followups||[]).slice(0,4).forEach(function(f){
+    var b=el('button','chip',esc(f));b.onclick=function(){ask(f);};fol.appendChild(b);
+  });
+  $$('[data-go]',box).forEach(function(b){b.onclick=function(){switchView(b.dataset.go);};});
+  highlightGraph(evs);
+  if(evs.length)$('#gpSub').textContent='已按这条依据链点亮相关实体 · 点实体继续问';
+  box.scrollIntoView({behavior:'smooth',block:'nearest'});
+  S.busy=false;
+}
+var PRESETS=['陈海峰年轻时都做过什么？','陈锐霆为什么去参军？','1937 年他们在哪儿？',
+  '讲讲上海荣华印书馆','三个人有什么交集？','杨永松所在部队去了哪里？'];
+function renderPresets(){
+  $('#presets').innerHTML='';
+  PRESETS.forEach(function(p){var b=el('button','chip',esc(p));b.onclick=function(){ask(p);};$('#presets').appendChild(b);});
+}
+var INTRO={
+  '陈海峰':'从上海印书馆的排字学徒，到新四军的战地救护。',
+  '陈锐霆':'从放牛少年、小学教员，一步步走进炮兵部队。',
+  '杨永松':'西安事变后随一一五师誓师，开赴平型关前线。'
+};
+function renderStart(){
+  var th=$('#thread');if($('.msg',th))return;
+  th.innerHTML='<div class="start"><div class="start-title">或者，从这三位受访者开始</div><div class="pcards">'
+    +DB.people.map(function(p){
+      return '<button class="pcard" data-p="'+esc(p.name)+'"><span class="av" style="background:'+p.color+'">'+esc(p.name[0])+'</span>'
+        +'<div class="nm">'+esc(p.name)+'</div><div class="mt">'+p.docs.length+' 份访谈 · '+p.eventIds.length+' 段经历</div>'
+        +'<div class="ds">'+esc(INTRO[p.name]||'点开，听听他的故事。')+'</div></button>';
+    }).join('')+'</div><div class="start-hint">「你这一生，到底是怎么活的？」—— 从上面挑一个问题，或直接问出来。</div></div>';
+  $$('.pcard',th).forEach(function(b){b.onclick=function(){ask(b.dataset.p+'年轻时都做过什么？');};});
+}
+function ask(q){
+  q=(q||'').trim();if(!q||S.busy)return;
+  if(S.view!=='ask')switchView('ask');
+  $('#q').value=q;
+  var th=$('#thread');if($('.start',th))th.innerHTML='';
+  var me=el('div','msg me','<div class="who me">你问</div>'+esc(q));th.appendChild(me);
+  var box=el('div','msg ai','<div class="who">归途 · 有据可查</div><div class="steps" id="steps"></div><div class="answer" id="ans"></div>');
+  th.appendChild(box);
+  var steps=['正在查阅 '+DB.stats.docs+' 份访谈与 '+DB.stats.events+' 个事件…',
+    '筛出真正能回答这个问题的事件…','回到逐字原话，核对因果与图谱…','把线索写成一段能读的回答…'];
+  var sd=$('#steps',box);steps.forEach(function(s){sd.appendChild(el('div','',esc(s)));});
+  S.busy=true;
+  var i=0;var timer=setInterval(function(){
+    if(sd.children[i])sd.children[i].classList.add('done');
+    i++;
+    if(i>=steps.length){clearInterval(timer);setTimeout(function(){finishAnswer(q,box);},200);}
+  },220);
+  th.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function finishAnswer(q,box){
+  var r=retrieve(q),ctx=buildChain(q,r),ans=$('#ans',box);
+  var useLLM=AnswerEngine.mode==='llm'&&ctx.evs.length>0;
+  if(useLLM)ans.innerHTML='<div class="thinking">正在让大模型依据这几段原话组织回答…</div>';
+  var out;
+  try{out=(useLLM?AnswerEngine.compose:composeOffline)(q,ctx);}
+  catch(e){out=composeOffline(q,ctx);}
+  Promise.resolve(out).then(function(res){renderAnswer(res,q,box);}).catch(function(err){
+    var res=composeOffline(q,ctx);
+    res.notice='大模型调用未成功，已自动回退离线回答（'+String((err&&err.message)||err).slice(0,60)+'）';
+    renderAnswer(res,q,box);
+  });
+}
+$('#send').onclick=function(){ask($('#q').value);};
+$('#q').addEventListener('keydown',function(e){if(e.key==='Enter')ask(this.value);});
+
+/* ---------- 动态悬浮图谱 ---------- */
+function nodeColor(n){return (TYPE[n.type]||{c:'#9C907F'}).c;}
+function showTip(ev,n){
+  var t=$('#tip');
+  t.innerHTML='<b>'+esc(n.name)+'</b> · '+((TYPE[n.type]||{}).n||'实体')
+    +'<br>出现在 '+n.weight+' 个事件'+(n.people.length?' · '+esc(n.people.join('、')):'')
+    +'<br><span style="opacity:.7">点一下，顺着它继续问</span>';
+  t.style.display='block';moveTip(ev);
+}
+function moveTip(ev){
+  var t=$('#tip'),b=$('.gp-canvas').getBoundingClientRect();
+  var x=ev.clientX-b.left+14,y=ev.clientY-b.top-12;
+  if(x+215>b.width)x=b.width-215;if(y+70>b.height)y=b.height-70;
+  t.style.left=Math.max(4,x)+'px';t.style.top=Math.max(4,y)+'px';
+}
+function hideTip(){$('#tip').style.display='none';}
+function positions(list,mode){
+  var cx=240,cy=196,out=[];
+  if(mode==='time'){
+    var cols=[{x:96,l:'1930 年前后'},{x:240,l:'1930 年代'},{x:386,l:'1937 年之后'}];
+    var groups=[[],[],[]];
+    list.forEach(function(n){
+      var ys=n.eventIds.map(function(id){return (EV[id]||{}).timeStart||'';}).filter(function(s){return /^\d{4}/.test(s);});
+      var y=ys.length?parseInt(ys.sort()[0].slice(0,4),10):1933;
+      groups[y<=1930?0:(y<=1936?1:2)].push(n);
+    });
+    groups.forEach(function(g,gi){g.forEach(function(n,i){
+      out.push({n:n,x:cols[gi].x+(i%2)*38-18,y:82+i*54+((gi%2)*12),r:11+(n.weight>6?3:0),col:cols[gi].l});});});
+    return out;
+  }
+  var inner=mode==='place'?'PLACE':(mode==='person'?'PERSON':null);
+  list.forEach(function(n,i){
+    var isIn=inner&&n.type===inner;
+    var a=-Math.PI/2+i*2*Math.PI/Math.max(1,list.length);
+    var r=(isIn?92:(inner===null?(i%2?168:126):158))+Math.min(14,n.weight);
+    out.push({n:n,x:cx+Math.cos(a)*r,y:cy+Math.sin(a)*r*.82,r:isIn?15:10.5+(n.weight>8?2.5:0)});
+  });
+  return out;
+}
+function drawGraph(){
+  var svg=$('#graph'),list=DB.nodes.filter(function(n){return !S.graphFilter||n.type===S.graphFilter;});
+  if(S.graphMode==='place')list=DB.nodes.filter(function(n){return n.type==='PLACE'||n.weight>=6;}).slice(0,26);
+  if(S.graphMode==='person')list=DB.nodes.filter(function(n){return n.type==='PERSON'||n.weight>=7;}).slice(0,26);
+  var pos=positions(list,S.graphMode),h='';
+  var topIds={};list.slice().sort(function(a,b){return b.weight-a.weight;}).slice(0,10)
+    .forEach(function(n){topIds[n.id]=1;});
+  var cols=[];
+  pos.forEach(function(p){
+    if(p.col&&cols.indexOf(p.col)<0)cols.push(p.col);
+    h+='<line class="glink" data-n="'+esc(p.n.id)+'" x1="240" y1="196" x2="'+p.x.toFixed(1)+'" y2="'+p.y.toFixed(1)+'"/>';
+  });
+  if(S.graphMode==='time'){
+    var xs=[96,240,386];xs.forEach(function(x,i){h+='<text x="'+x+'" y="34" text-anchor="middle" font-size="12" fill="var(--ink3)">'+['1930 年前后','1930 年代','1937 年之后'][i]+'</text>'
+      +'<line x1="'+x+'" y1="44" x2="'+x+'" y2="370" stroke="var(--line)" stroke-width="1" stroke-dasharray="3 6"/>';});
+  }
+  h+='<circle class="hub" cx="240" cy="196" r="43"/>'
+    +'<text x="240" y="190" text-anchor="middle" font-size="14" fill="var(--red)" font-family="Songti SC,serif">口述史</text>'
+    +'<text x="240" y="209" text-anchor="middle" font-size="10.5" fill="var(--ink3)">'+DB.stats.events+' 事件 · '+DB.stats.nodes+' 实体</text>';
+  pos.forEach(function(p,i){
+    var c=nodeColor(p.n),sel=S.selNode===p.n.id;
+    h+='<g class="gnode'+(sel?' sel':'')+'" data-id="'+esc(p.n.id)+'" style="--dur:'+(4+(i%5)*.7).toFixed(1)+'s;--del:'+((i%7)*.31).toFixed(2)+'s">'
+      +'<circle class="gdot" cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" r="'+p.r+'" fill="'+c+'" fill-opacity="'+(sel?.95:.16)+'" stroke="'+c+'" stroke-width="1.3"/>'
+      +(topIds[p.n.id]?'<text class="glabel" x="'+p.x.toFixed(1)+'" y="'+(p.y+p.r+13).toFixed(1)+'" text-anchor="middle" font-size="10.5" fill="var(--ink2)">'+esc(p.n.name.slice(0,7))+'</text>':'')
+      +'</g>';
+  });
+  svg.innerHTML=h;
+  $$('.gnode',svg).forEach(function(g){
+    var n=NODE[g.dataset.id];
+    g.onclick=function(){S.selNode=g.dataset.id;hideTip();ask('关于「'+n.name+'」，有哪些经历？');};
+    g.addEventListener('mouseenter',function(ev){showTip(ev,n);});
+    g.addEventListener('mousemove',moveTip);
+    g.addEventListener('mouseleave',hideTip);
+  });
+  $('#gpSub').textContent=S.graphMode==='all'?'点实体顺着问 · 悬停看它出现在哪些经历里'
+    :({time:'按年代重新排过',place:'地点被放到最里面',person:'人物被放到最里面'}[S.graphMode]||'');
+}
+function highlightGraph(evs){
+  var ids={};evs.forEach(function(e){ids[e.id]=1;});
+  $$('#graph .gnode').forEach(function(g){
+    var n=NODE[g.dataset.id];g.classList.toggle('sel',!!(n&&n.eventIds.some(function(x){return ids[x];})));
+  });
+  $$('#graph .glink').forEach(function(l){
+    var n=NODE[l.dataset.n];l.classList.toggle('hot',!!(n&&n.eventIds.some(function(x){return ids[x];})));
+  });
+}
+function renderLegend(){
+  var box=$('#legend');box.innerHTML='';
+  Object.keys(TYPE).forEach(function(k){
+    var b=el('button',S.graphFilter===k?'on':'','<span class="dot" style="background:'+TYPE[k].c+'"></span>'+TYPE[k].n);
+    b.onclick=function(){S.graphFilter=S.graphFilter===k?null:k;renderLegend();drawGraph();};box.appendChild(b);
+  });
+  var all=el('button',!S.graphFilter?'on':'','全部');all.onclick=function(){S.graphFilter=null;S.graphMode='all';renderLegend();renderGuide();drawGraph();};box.appendChild(all);
+}
+function renderGuide(){
+  var modes=[['all','全部线索'],['time','按时间'],['place','按地点'],['person','按人物']];
+  var box=$('#guideBtns');box.innerHTML='';
+  modes.forEach(function(m){var b=el('button',S.graphMode===m[0]?'on':'',m[1]);
+    b.onclick=function(){S.graphMode=m[0];S.selNode=null;renderGuide();drawGraph();};box.appendChild(b);});
+  var qs=['1931 年的上海是什么样？','1937 年他们各自在哪儿？','三个人有什么交集？','谁提到过中国共产党？'];
+  var qb=$('#guideQs');qb.innerHTML='';
+  qs.forEach(function(q){var b=el('button','chip',esc(q));b.onclick=function(){ask(q);};qb.appendChild(b);});
+}
+
+/* ---------- 人生链路 ---------- */
+function personEvents(p){return DB.events.filter(function(e){return e.person===p;});}
+function yrOf(e){var m=/^(\d{4})/.exec(e.timeStart||'');return m?m[1]:(e.timeRaw||'').slice(0,6)||'时间待补';}
+function wrap2(s,n){s=String(s||'');return [s.slice(0,n),s.length>n?s.slice(n,n*2)+(s.length>n*2?'…':''):''];}
+function smooth(pts){
+  if(pts.length<2)return '';
+  var d='M'+pts[0][0]+' '+pts[0][1];
+  for(var i=1;i<pts.length;i++){
+    var a=pts[i-1],b=pts[i],mx=(a[0]+b[0])/2;
+    d+=' C'+mx+' '+a[1]+' '+mx+' '+b[1]+' '+b[0]+' '+b[1];
+  }
+  return d;
+}
+function renderLifeTabs(){
+  var box=$('#lifeTabs');box.innerHTML='';
+  DB.people.forEach(function(p){
+    var b=el('button',S.lifePerson===p.name?'on':'',esc(p.name)+'<span class="cnt">'+p.eventIds.length+' 站</span>');
+    if(S.lifePerson===p.name)b.style.background=p.color,b.style.borderColor=p.color;
+    b.onclick=function(){S.lifePerson=p.name;S.lifeIdx=0;stopAuto();renderLifeTabs();renderLife();};box.appendChild(b);
+  });
+}
+function renderLife(){
+  var evs=personEvents(S.lifePerson),p=DB.people.filter(function(x){return x.name===S.lifePerson;})[0];
+  var col=p?p.color:'#A8402F',N=evs.length,W=180+N*172,H=330;
+  var svg=$('#lifeSvg');svg.setAttribute('width',W);svg.setAttribute('height',H);svg.setAttribute('viewBox','0 0 '+W+' '+H);
+  var pts=evs.map(function(e,i){return [110+i*172,158+Math.sin(i*.82)*44];});
+  var h='';
+  h+='<path d="M0 268 Q '+W*.25+' 238 '+W*.5+' 266 T '+W+' 258 L '+W+' '+H+' L 0 '+H+' Z" fill="var(--bg2)" opacity=".8"/>';
+  [[120,52],[W*.42,40],[W*.73,62]].forEach(function(c){
+    h+='<path d="M'+(c[0]-26)+' '+c[1]+' q 10 -12 22 -3 q 9 -9 20 2" fill="none" stroke="var(--line)" stroke-width="1.6" stroke-linecap="round"/>';
+  });
+  h+='<path d="'+smooth(pts)+'" fill="none" stroke="var(--line)" stroke-width="2.4" stroke-dasharray="5 8" stroke-linecap="round"/>';
+  for(var i=0;i<pts.length-1;i++){
+    var seg=smooth([pts[i],pts[i+1]]);
+    h+='<path d="'+seg+'" fill="none" stroke="'+(i<S.lifeIdx?col:'transparent')+'" stroke-width="3" stroke-linecap="round" opacity=".85"/>';
+  }
+  evs.forEach(function(e,i){
+    var x=pts[i][0],y=pts[i][1],cur=i===S.lifeIdx;
+    var l1=wrap2(e.name,9),l2=l1[1];
+    h+='<g class="station'+(cur?' cur':'')+'" data-i="'+i+'">'
+      +(cur?'<circle class="ring" cx="'+x+'" cy="'+y+'" r="34" fill="none" stroke="'+col+'" stroke-width="1.4" opacity=".6"/>':'')
+      +'<circle class="disc" cx="'+x+'" cy="'+y+'" r="'+(cur?31:26)+'" fill="var(--solid)" stroke="'+(cur?col:'var(--line)')+'" stroke-width="'+(cur?2:1.3)+'"/>'
+      +'<use href="#ic-'+e.icon+'" x="'+(x-19)+'" y="'+(y-20)+'" width="38" height="38" style="color:'+(cur?col:'var(--ink2)')+'"/>'
+      +'<text class="yr" x="'+x+'" y="'+(y-45)+'" text-anchor="middle">'+esc(yrOf(e))+'</text>'
+      +'<text class="cap" x="'+x+'" y="'+(y+52)+'" text-anchor="middle">'+esc(l1[0])+'</text>'
+      +(l2?'<text class="cap" x="'+x+'" y="'+(y+68)+'" text-anchor="middle">'+esc(l2)+'</text>':'')
+      +'</g>';
+  });
+  svg.innerHTML=h;
+  $$('.station',svg).forEach(function(g){g.onclick=function(){setStation(+g.dataset.i);};});
+  $('#stationPos').innerHTML='第 <b>'+(S.lifeIdx+1)+'</b> / '+N+' 站 · '+esc(S.lifePerson);
+  renderLifeDetail(evs[S.lifeIdx]);
+  var sc=$('#lifeScroll'),cx=pts[S.lifeIdx][0]-sc.clientWidth/2;
+  sc.scrollTo({left:Math.max(0,cx),behavior:'smooth'});
+}
+function setStation(i){var n=personEvents(S.lifePerson).length;S.lifeIdx=Math.max(0,Math.min(n-1,i));renderLife();}
+function renderLifeDetail(e){
+  if(!e){$('#lifeDetail').innerHTML='';return;}
+  var col=(DB.people.filter(function(x){return x.name===S.lifePerson;})[0]||{}).color||'#A8402F';
+  var tags='<div class="tags"><span class="tag red">'+esc(yrOf(e))+(e.precision?' · '+(PREC[e.precision]||esc(e.precision)):'')+'</span>'
+    +e.places.map(function(x){return '<span class="tag">'+esc(x.slice(0,20))+'</span>';}).join('')
+    +e.orgs.slice(0,2).map(function(x){return '<span class="tag">'+esc(x.slice(0,16))+'</span>';}).join('')+'</div>';
+  var stages=e.stages.length?'<div style="font-size:12.5px;color:var(--ink2);margin-top:8px"><b style="color:var(--ink)">这一站的过程：</b>'
+    +e.stages.map(function(s,i){return (i?' → ':'')+esc(s.slice(0,26));}).join('')+'</div>':'<div style="font-size:12px;color:var(--ink3);margin-top:8px">该事件未切分过程阶段。</div>';
+  var q=e.quotes[0];
+  var quote=q?'<div class="quote-box"><div class="qh">当时的原话 · '+esc(q.docTitle)+'</div>'+esc(q.text.slice(0,150))+(q.text.length>150?'…':'')+'</div>':'';
+  $('#lifeDetail').innerHTML='<div class="big"><svg><use href="#ic-'+e.icon+'"></use></svg></div><div>'
+    +'<h3>'+esc(e.name)+'</h3><div style="font-size:12px;color:var(--ink3)">'+esc(e.docTitle)+' · 按发生顺序第 '+e.h+' 站</div>'
+    +tags+stages+quote
+    +'<div class="detail-actions"><button data-act="ask">在「问一问」里追问 →</button>'
+    +(q?'<button data-act="quote">展开这段采访原文</button>':'')
+    +'<button data-act="cross">看这一站和别人的交集 →</button></div></div>';
+  $$('#lifeDetail [data-act]').forEach(function(b){b.onclick=function(){
+    var a=b.dataset.act;
+    if(a==='ask')ask(e.person+'：'+e.name+'是怎么回事？');
+    if(a==='quote'&&q){var box=$('.quote-box');box.innerHTML='<div class="qh">当时的原话 · '+esc(q.docTitle)+'</div>'+esc(q.text);}
+    if(a==='cross')switchView('cross');
+  };});
+}
+function stopAuto(){if(S.auto){clearInterval(S.auto);S.auto=null;$('#autoWalk').textContent='自动漫游';}}
+$('#prevStation').onclick=function(){stopAuto();setStation(S.lifeIdx-1);};
+$('#nextStation').onclick=function(){stopAuto();setStation(S.lifeIdx+1);};
+$('#autoWalk').onclick=function(){
+  if(S.auto){stopAuto();return;}
+  this.textContent='暂停漫游';var n=personEvents(S.lifePerson).length;
+  S.auto=setInterval(function(){if(S.lifeIdx>=n-1){stopAuto();return;}setStation(S.lifeIdx+1);},2300);
+};
+document.addEventListener('keydown',function(e){
+  if(S.view!=='life'||/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;
+  if(e.key==='ArrowRight'){stopAuto();setStation(S.lifeIdx+1);}
+  if(e.key==='ArrowLeft'){stopAuto();setStation(S.lifeIdx-1);}
+});
+
+/* ---------- 轨迹交叉 ---------- */
+function renderCross(){
+  var P=DB.people,C=DB.crosses,base={};
+  P.forEach(function(p,i){base[p.name]=[96,210,324][i]||(96+i*100);});
+  var X0=54,X1=946,XS=C.map(function(c,i){return 165+i*(640/Math.max(1,C.length-1));});
+  if(C.length===1)XS=[500];
+  var svg=$('#crossSvg'),h='';
+  h+='<text x="54" y="30" font-size="11.5" fill="var(--ink3)">各自出发</text>'
+    +'<text x="946" y="30" text-anchor="end" font-size="11.5" fill="var(--ink3)">又各自走开</text>';
+  [96,210,324].forEach(function(y){h+='<line x1="40" y1="'+y+'" x2="960" y2="'+y+'" stroke="var(--line)" stroke-width="1" stroke-dasharray="2 8" opacity=".7"/>';});
+  P.forEach(function(p){
+    var pts=[[X0,base[p.name]]];
+    C.forEach(function(c,i){
+      var join=c.people.indexOf(p.name)>=0;
+      var y=join?(c.people.reduce(function(s,n){return s+base[n];},0)/c.people.length)
+                :base[p.name]+(i%2?9:-9);
+      pts.push([XS[i]-46,y+(join?0:0)],[XS[i],y],[XS[i]+46,y+(join?0:(i%2?9:-9))]);
+    });
+    pts.push([X1,base[p.name]]);
+    var d=smooth(pts);
+    h+='<path d="'+d+'" fill="none" stroke="'+p.color+'" stroke-width="12" opacity=".07" stroke-linecap="round"/>'
+      +'<path d="'+d+'" fill="none" stroke="'+p.color+'" stroke-width="3.2" opacity=".88" stroke-linecap="round"/>';
+    h+='<circle cx="'+X0+'" cy="'+base[p.name]+'" r="5" fill="'+p.color+'"/>'
+      +'<text x="'+(X0+8)+'" y="'+(base[p.name]-11)+'" font-size="12" fill="'+p.color+'" font-family="Songti SC,serif">'+esc(p.name)+'</text>';
+  });
+  C.forEach(function(c,i){
+    var y=c.people.reduce(function(s,n){return s+base[n];},0)/c.people.length,cur=i===S.crossIdx;
+    h+='<g class="cnode'+(cur?' cur':'')+'" data-i="'+i+'">'
+      +'<circle cx="'+XS[i]+'" cy="'+y+'" r="30" fill="var(--redbg)" opacity=".7"/>'
+      +'<circle class="ccircle" cx="'+XS[i]+'" cy="'+y+'" r="20" fill="'+(cur?'var(--red)':'var(--solid)')+'" stroke="var(--red)" stroke-width="1.8"/>'
+      +'<text class="cnum" x="'+XS[i]+'" y="'+(y+4)+'" text-anchor="middle" font-size="12" fill="'+(cur?'#fff':'var(--red)')+'">'+(i+1)+'</text>'
+      +'<text x="'+XS[i]+'" y="'+(y-38)+'" text-anchor="middle" font-size="13" font-weight="600" fill="var(--ink)" font-family="Songti SC,serif">'+esc(c.label)+'</text>'
+      +'<text x="'+XS[i]+'" y="'+(y+46)+'" text-anchor="middle" font-size="11" fill="var(--ink3)">'+esc(c.kind)+'</text>'
+      +'</g>';
+  });
+  svg.innerHTML=h;
+  $$('.cnode',svg).forEach(function(g){g.onclick=function(){S.crossIdx=+g.dataset.i;renderCross();};});
+  var lg=$('#crossLegend');lg.innerHTML='';
+  P.forEach(function(p){lg.appendChild(el('span','','<i style="background:'+p.color+'"></i>'+esc(p.name)));});
+  lg.appendChild(el('span','','<i style="background:var(--red)"></i>交汇处（点圆章看详情）'));
+  $('#crossNote').innerHTML='交集由 6 份人工标注的<b>共同年代、共同实体</b>自动检出，共 '+C.length+' 处；说明文字依事件名编排，非受访者原话。'
+    +'这里刻意<b>不按精确年份对齐</b>——相对时间（如「五三惨案以后」）不硬折算。等 60 份语料齐了，交集会密得多。';
+  renderCrossSide();
+}
+function renderCrossSide(){
+  var c=DB.crosses[S.crossIdx];if(!c){$('#crossSide').innerHTML='<div class="empty">暂无可核实的交集。</div>';return;}
+  var evs=c.eventIds.map(function(id){return EV[id];}).filter(Boolean);
+  var rows='';
+  c.people.forEach(function(p){
+    var mine=evs.filter(function(e){return e.person===p;});
+    rows+='<div class="row"><span class="nm" style="color:'+(DB.people.filter(function(x){return x.name===p;})[0]||{}).color+'">'+esc(p)+'</span><span>'
+      +(mine.length?mine.map(function(e){return '<span class="ev" data-eid="'+esc(e.id)+'">· '+esc(e.name)+'</span>';}).join('<br>'):'<span style="color:var(--ink3)">该交集下暂无独立事件</span>')
+      +'</span></div>';
+  });
+  var q=evs.filter(function(e){return e.quotes.length;})[0];
+  $('#crossSide').innerHTML='<div class="knd">'+esc(c.kind)+' · 第 '+(S.crossIdx+1)+' / '+DB.crosses.length+' 处</div>'
+    +'<h3>'+esc(c.label)+'</h3><div class="note">'+esc(c.note)+'</div>'
+    +'<div class="evt"><div style="font-size:11px;color:var(--ink3);letter-spacing:1.5px;margin-bottom:9px">两边各自的经历（点事件可去人生链路）</div>'+rows+'</div>'
+    +(q?'<div class="quote-box"><div class="qh">来自 '+esc(q.docTitle)+'</div>'+esc(q.quotes[0].text.slice(0,110))+'…</div>':'')
+    +'<div class="detail-actions"><button id="goLife">去看 '+esc(c.people[0])+' 的人生链路 →</button></div>';
+  $$('#crossSide [data-eid]').forEach(function(s){s.onclick=function(){
+    var e=EV[s.dataset.eid];S.lifePerson=e.person;S.lifeIdx=Math.max(0,personEvents(e.person).indexOf(e));
+    rendered.life=0;switchView('life');renderLifeTabs();};});
+  $('#goLife').onclick=function(){S.lifePerson=c.people[0];S.lifeIdx=0;rendered.life=0;switchView('life');renderLifeTabs();};
+}
+
+/* ---------- 科研成果板块：工作台 / 导师看板共用同一档案抽屉 ---------- */
+function setResTab(k){
+  S.resTab=k;
+  $$('.res-tab').forEach(function(b){b.classList.toggle('on',b.dataset.res===k);});
+  var mentor=(k==='mentor'),f=$('#resFrame'),host=$('#benchHost'),btn=$('#openRes');
+  host.hidden=mentor;                 // 工作台始终在本页内，只是切到看板时暂隐
+  f.hidden=!mentor;
+  btn.hidden=!mentor;
+  if(mentor){
+    if(f.getAttribute('src')!==DB.meta.mentorFile)f.setAttribute('src',DB.meta.mentorFile);
+    f.classList.add('tall');
+    f.title='事件标注结果总看板（独立档案）';
+  }
+  $('#resFallback').textContent=mentor
+    ? '总看板是独立生成的档案，离线时自动展示页面内嵌快照；若浏览器限制本地文件嵌入，请点「在新窗口打开总看板」。'
+    : '研究侧的叙事跳跃度指标见同目录 CSV，不进入公众三板块。';
+}
+function renderResearch(){
+  var s=DB.stats;
+  var items=[['docs','份人工标注访谈'],['people','位受访者'],['events','个事件节点'],
+    ['stages','个过程阶段'],['segments','条逐字片段'],['entities','个实体']];
+  $('#resGrid').innerHTML=items.map(function(x){
+    return '<div class="res-card"><div class="n">'+s[x[0]]+'</div><div class="l">'+x[1]+'</div></div>';}).join('');
+  $$('.res-tab').forEach(function(b){b.onclick=function(){setResTab(b.dataset.res);};});
+  setResTab(S.resTab||'workbench');
+}
+$('#openRes').onclick=function(){window.open(DB.meta.mentorFile,'_blank');};
+
+/* ---------- 启动 ---------- */
+renderPresets();renderStart();renderLegend();renderGuide();drawGraph();renderLifeTabs();
+var hash=(location.hash||'').replace('#','');
+if(['life','cross','research'].indexOf(hash)>=0)switchView(hash);
+window.PORTAL={S:S,switchView:switchView,ask:ask,retrieve:retrieve,buildChain:buildChain,
+  composeOffline:composeOffline,renderAnswer:renderAnswer,AnswerEngine:AnswerEngine,
+  drawGraph:drawGraph,renderLife:renderLife,renderCross:renderCross,
+  setStation:setStation,setResTab:setResTab,DB:DB,
+  apiURL:apiURL,apiBase:function(){return API_BASE;}};
+})();
+</script>
+
+<!-- 科研工作台（原独立 HTML）已整体内嵌：结构与样式先放在 template 里，
+     运行时克隆进 Shadow DOM。门户与工作台都定义了 DB / $ / switchView / .view /
+     #themeBtn，靠 Shadow DOM + 作用域 document 垫片彻底隔离，互不污染。 -->
+<template id="benchTpl"><style>/*__BENCH_CSS__*/</style>/*__BENCH_HTML__*/</template>
+<script>
+(function(){
+'use strict';
+var REAL=window.document;
+var HOST=REAL.getElementById('benchHost');
+var TPL=REAL.getElementById('benchTpl');
+if(!HOST||!TPL||!HOST.attachShadow){return;}
+var SH=HOST.attachShadow({mode:'open'});
+SH.appendChild(TPL.content.cloneNode(true));
+var document={
+  getElementById:function(id){return SH.querySelector('#'+id);},
+  querySelector:function(s){return SH.querySelector(s);},
+  querySelectorAll:function(s){return SH.querySelectorAll(s);},
+  createElement:function(t){return REAL.createElement(t);},
+  createElementNS:function(ns,t){return REAL.createElementNS(ns,t);},
+  body:HOST,
+  addEventListener:function(t,f,o){SH.addEventListener(t,f,o);},
+  removeEventListener:function(t,f,o){SH.removeEventListener(t,f,o);}
+};
+const DB = /*__BENCH_DATA__*/;
+/*__BENCH_APP__*/
+})();
+</script>
+</body>
+</html>

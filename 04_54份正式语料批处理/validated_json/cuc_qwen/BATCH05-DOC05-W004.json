@@ -1,0 +1,153 @@
+{
+  "validated_at": "2026-11-11T10:58:36",
+  "source_raw_response": "04_54份正式语料批处理/raw_responses/cuc_qwen/20261111_105451_BATCH05-DOC05-W004.json",
+  "model_id": "cuc/qwen",
+  "window_id": "BATCH05-DOC05-W004",
+  "technical_document_id": "BATCH05-DOC05",
+  "document_id": "15.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 11,
+    "unassigned_segment_count": 10,
+    "input_segment_count": 21,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "postprocessed_output": {
+    "window_id": "BATCH05-DOC05-W004",
+    "events": [
+      {
+        "candidate_id": "BATCH05-DOC05-W004-E01",
+        "source_segment_ids": [
+          "BATCH05-DOC05-S0167",
+          "BATCH05-DOC05-S0168",
+          "BATCH05-DOC05-S0169",
+          "BATCH05-DOC05-S0172",
+          "BATCH05-DOC05-S0174",
+          "BATCH05-DOC05-S0176",
+          "BATCH05-DOC05-S0177",
+          "BATCH05-DOC05-S0178",
+          "BATCH05-DOC05-S0180",
+          "BATCH05-DOC05-S0182"
+        ],
+        "event": {
+          "event_name": "部队夜间过江并连续行军到达茅山地区",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "过江行军到达茅山",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "晚上",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "茅山",
+              "normalized_value": "茅山地区"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "长江边上",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "连续行军",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "有江，有公路，有铁路，有运河",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们那都摆渡啊，（从）三江营摆渡到大港。大港一上以后呢，马上撤到辛丰，辛丰我们关系比较好，（和）那个伪军啊。我们晚上通过辛丰镇，向漕河，马上插到茅山。",
+          "type_basis": "核心过程为摆渡、撤、通过、插到茅山等夜间移动和连续行军，参与者为部队，可用 What did X do? 测试；看到山、铁路、火车等只是行军中的阶段感知，不改变整体物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH05-DOC05-W004-E02",
+        "source_segment_ids": [
+          "BATCH05-DOC05-S0182",
+          "BATCH05-DOC05-S0184"
+        ],
+        "event": {
+          "event_name": "趁大部队南走了解苏南部队卫生工作",
+          "event_type": "MENTAL",
+          "event_type_zh": "心理",
+          "core_process": "了解卫生工作",
+          "participants": [
+            {
+              "role": "Senser",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Phenomenon",
+              "mention": "苏南部队的卫生工作",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "茅山地区",
+              "normalized_value": "茅山地区"
+            },
+            {
+              "kind": "MANNER",
+              "value": "趁机会",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "大部队就接着向南走，我们就趁机会了解苏南部队的卫生工作。",
+          "type_basis": "核心过程了解表达认知，现象为苏南部队的卫生工作，参与者配置为 Senser 和 Phenomenon；不是直接言说或关系识别。",
+          "alternative_event_type": "MATERIAL",
+          "ambiguity_reason": "了解卫生工作也可被理解为执行卫生调查或职业劳动任务，但核心动词了解主要表达认知过程，因此候选 MENTAL 并需复核。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH05-DOC05-S0166",
+      "BATCH05-DOC05-S0170",
+      "BATCH05-DOC05-S0171",
+      "BATCH05-DOC05-S0173",
+      "BATCH05-DOC05-S0175",
+      "BATCH05-DOC05-S0179",
+      "BATCH05-DOC05-S0181",
+      "BATCH05-DOC05-S0183",
+      "BATCH05-DOC05-S0185",
+      "BATCH05-DOC05-S0186"
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 5238,
+    "total_tokens": 20170,
+    "completion_tokens": 14932,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 13591
+    },
+    "tokens_per_second": 7465500,
+    "time_to_first_token_ms": 224444,
+    "time_per_output_token_ms": 0
+  }
+}

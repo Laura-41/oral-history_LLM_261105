@@ -1,0 +1,98 @@
+{
+  "run_time": "2026-11-11T11:09:23",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH05-DOC06-W003",
+  "technical_document_id": "BATCH05-DOC06",
+  "document_id": "08.杨永松100507（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH05-DOC06-S0035",
+    "BATCH05-DOC06-S0036",
+    "BATCH05-DOC06-S0037",
+    "BATCH05-DOC06-S0038",
+    "BATCH05-DOC06-S0039",
+    "BATCH05-DOC06-S0040",
+    "BATCH05-DOC06-S0041",
+    "BATCH05-DOC06-S0042",
+    "BATCH05-DOC06-S0043",
+    "BATCH05-DOC06-S0044",
+    "BATCH05-DOC06-S0045",
+    "BATCH05-DOC06-S0046",
+    "BATCH05-DOC06-S0047",
+    "BATCH05-DOC06-S0048"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 7,
+    "unassigned_segment_count": 7,
+    "input_segment_count": 14,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH05-DOC06-W003-E01"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH05-DOC06-W003",
+    "events": [
+      {
+        "candidate_id": "BATCH05-DOC06-W003-E01",
+        "source_segment_ids": [
+          "BATCH05-DOC06-S0036",
+          "BATCH05-DOC06-S0038",
+          "BATCH05-DOC06-S0040",
+          "BATCH05-DOC06-S0042",
+          "BATCH05-DOC06-S0044",
+          "BATCH05-DOC06-S0046",
+          "BATCH05-DOC06-S0048"
+        ],
+        "event": {
+          "event_name": "杨永松说明鲁南地区敌我力量与据点分布",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "说明鲁南敌情",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "杨永松",
+              "normalized_entity": "杨永松",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": "鲁南地区沿铁路和临沂公路多为敌人控制，各县有日军大队和伪军据点，东北军中有党组织，国民党部队和顽固武装分布周边，路南边有一小块活动基地。",
+          "evidence_quote": "敌情呢，沿铁路当然是敌人的了，沿公路到临沂也是敌人的，而且为了保护津浦铁路，日本人还不少，每个县都至少一个大队以上，还加上好多的伪军。",
+          "type_basis": "核心过程是杨永松通过口述说明鲁南敌情与敌我力量分布，属于明确象征交换；Sayer为杨永松，投射内容为敌我力量、据点、部队分布和活动区域；不是物质行动、心理感知、身份关系、存在引入或行为外显，故标VERBAL。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH05-DOC06-S0035",
+      "BATCH05-DOC06-S0037",
+      "BATCH05-DOC06-S0039",
+      "BATCH05-DOC06-S0041",
+      "BATCH05-DOC06-S0043",
+      "BATCH05-DOC06-S0045",
+      "BATCH05-DOC06-S0047"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH05-DOC06-W003\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH05-DOC06-W003-E01\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC06-S0036\",\n        \"BATCH05-DOC06-S0038\",\n        \"BATCH05-DOC06-S0040\",\n        \"BATCH05-DOC06-S0042\",\n        \"BATCH05-DOC06-S0044\",\n        \"BATCH05-DOC06-S0046\",\n        \"BATCH05-DOC06-S0048\"\n      ],\n      \"event\": {\n        \"event_name\": \"杨永松说明鲁南地区敌我力量与据点分布\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"说明鲁南敌情\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"杨永松\",\n            \"normalized_entity\": \"杨永松\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": \"鲁南地区沿铁路和临沂公路多为敌人控制，各县有日军大队和伪军据点，东北军中有党组织，国民党部队和顽固武装分布周边，路南边有一小块活动基地。\",\n        \"evidence_quote\": \"敌情呢，沿铁路当然是敌人的了，沿公路到临沂也是敌人的，而且为了保护津浦铁路，日本人还不少，每个县都至少一个大队以上，还加上好多的伪军。\",\n        \"type_basis\": \"核心过程是杨永松通过口述说明鲁南敌情与敌我力量分布，属于明确象征交换；Sayer为杨永松，投射内容为敌我力量、据点、部队分布和活动区域；不是物质行动、心理感知、身份关系、存在引入或行为外显，故标VERBAL。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH05-DOC06-S0035\",\n    \"BATCH05-DOC06-S0037\",\n    \"BATCH05-DOC06-S0039\",\n    \"BATCH05-DOC06-S0041\",\n    \"BATCH05-DOC06-S0043\",\n    \"BATCH05-DOC06-S0045\",\n    \"BATCH05-DOC06-S0047\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5802,
+    "total_tokens": 22257,
+    "completion_tokens": 16455,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 15793
+    },
+    "time_to_first_token_ms": 265337,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 16454000
+  }
+}

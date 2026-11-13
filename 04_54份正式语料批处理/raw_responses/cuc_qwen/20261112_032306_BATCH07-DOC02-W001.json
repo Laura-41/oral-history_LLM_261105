@@ -1,0 +1,310 @@
+{
+  "run_time": "2026-11-12T03:23:06",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH07-DOC02-W001",
+  "technical_document_id": "BATCH07-DOC02",
+  "document_id": "23.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH07-DOC02-S0002",
+    "BATCH07-DOC02-S0003",
+    "BATCH07-DOC02-S0004",
+    "BATCH07-DOC02-S0005",
+    "BATCH07-DOC02-S0006",
+    "BATCH07-DOC02-S0007",
+    "BATCH07-DOC02-S0008",
+    "BATCH07-DOC02-S0009",
+    "BATCH07-DOC02-S0010",
+    "BATCH07-DOC02-S0011",
+    "BATCH07-DOC02-S0012",
+    "BATCH07-DOC02-S0013",
+    "BATCH07-DOC02-S0014",
+    "BATCH07-DOC02-S0015",
+    "BATCH07-DOC02-S0016",
+    "BATCH07-DOC02-S0017",
+    "BATCH07-DOC02-S0018",
+    "BATCH07-DOC02-S0019",
+    "BATCH07-DOC02-S0020",
+    "BATCH07-DOC02-S0021",
+    "BATCH07-DOC02-S0022",
+    "BATCH07-DOC02-S0023",
+    "BATCH07-DOC02-S0024",
+    "BATCH07-DOC02-S0025",
+    "BATCH07-DOC02-S0026",
+    "BATCH07-DOC02-S0027",
+    "BATCH07-DOC02-S0028",
+    "BATCH07-DOC02-S0029",
+    "BATCH07-DOC02-S0030",
+    "BATCH07-DOC02-S0031",
+    "BATCH07-DOC02-S0032",
+    "BATCH07-DOC02-S0033"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 3,
+    "assigned_segment_count": 21,
+    "unassigned_segment_count": 11,
+    "input_segment_count": 32,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH07-DOC02-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH07-DOC02-W001-E01",
+        "source_segment_ids": [
+          "BATCH07-DOC02-S0003",
+          "BATCH07-DOC02-S0004",
+          "BATCH07-DOC02-S0006",
+          "BATCH07-DOC02-S0007",
+          "BATCH07-DOC02-S0008",
+          "BATCH07-DOC02-S0010",
+          "BATCH07-DOC02-S0011",
+          "BATCH07-DOC02-S0012",
+          "BATCH07-DOC02-S0014",
+          "BATCH07-DOC02-S0015"
+        ],
+        "event": {
+          "event_name": "苏北国际和平医院收治七战七捷伤员并建立华中野战军转运站",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "收治伤员并建立转运站",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "第三医疗队",
+              "normalized_entity": "第三医疗队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "伤员",
+              "normalized_entity": "七战七捷伤员",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "转运站",
+              "normalized_entity": "华中军区野战军转运站",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "当时",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "湖心寺",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "从前线转到后方",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "用水路运输",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "当时我们收留了各个分区转来的七八百个病人",
+          "type_basis": "核心是医院和医疗队收留、转运、治疗伤员并建立转运站，属于组织行动和物质变化；用Actor+Goal配置，排除仅命名或存在引入。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH07-DOC02-W001-E02",
+        "source_segment_ids": [
+          "BATCH07-DOC02-S0015",
+          "BATCH07-DOC02-S0017",
+          "BATCH07-DOC02-S0019",
+          "BATCH07-DOC02-S0020",
+          "BATCH07-DOC02-S0021"
+        ],
+        "event": {
+          "event_name": "转运站成为常设机构",
+          "event_type": "RELATIONAL",
+          "event_type_zh": "关系",
+          "core_process": "变成常设机构",
+          "participants": [
+            {
+              "role": "Carrier",
+              "mention": "转运站",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Attribute",
+              "mention": "常设机构",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "每次打大仗都要转运站",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "原来我们在江南是临时设",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "每次打大仗都要转运站，所以变成常设机构了。",
+          "type_basis": "核心是转运站获得“常设机构”属性，使用Carrier+Attribute；不是具体移动或治疗行动，故标关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH07-DOC02-W001-E03",
+        "source_segment_ids": [
+          "BATCH07-DOC02-S0023",
+          "BATCH07-DOC02-S0024",
+          "BATCH07-DOC02-S0025",
+          "BATCH07-DOC02-S0026",
+          "BATCH07-DOC02-S0027",
+          "BATCH07-DOC02-S0028",
+          "BATCH07-DOC02-S0029"
+        ],
+        "event": {
+          "event_name": "天目山战役设立转运站实行阶梯治疗",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "设立分站并分级转运治疗",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "苏浙军区",
+              "normalized_entity": "苏浙军区",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "李甲光（音）",
+              "normalized_entity": "李甲光",
+              "certainty": "LOW"
+            },
+            {
+              "role": "Goal",
+              "mention": "伤员",
+              "normalized_entity": "沿途伤员",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "分站",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "打天目山战役",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "灵峰寺",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "景坞",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "白水湾",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "减少死亡",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "减少残废",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "保证这个战斗力",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "阶梯治疗",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "分级治疗",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "分阶转运",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "在景坞里设立一个分站，在这个白水湾设了一个分站，三个站。",
+          "type_basis": "核心是在战役中设立分站、转运并照顾伤员，属于组织行动和物质变化；用Actor+Goal配置，排除单纯存在或关系命名。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH07-DOC02-S0002",
+      "BATCH07-DOC02-S0005",
+      "BATCH07-DOC02-S0009",
+      "BATCH07-DOC02-S0013",
+      "BATCH07-DOC02-S0016",
+      "BATCH07-DOC02-S0018",
+      "BATCH07-DOC02-S0022",
+      "BATCH07-DOC02-S0030",
+      "BATCH07-DOC02-S0031",
+      "BATCH07-DOC02-S0032",
+      "BATCH07-DOC02-S0033"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH07-DOC02-W001\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH07-DOC02-W001-E01\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC02-S0003\",\n        \"BATCH07-DOC02-S0004\",\n        \"BATCH07-DOC02-S0006\",\n        \"BATCH07-DOC02-S0007\",\n        \"BATCH07-DOC02-S0008\",\n        \"BATCH07-DOC02-S0010\",\n        \"BATCH07-DOC02-S0011\",\n        \"BATCH07-DOC02-S0012\",\n        \"BATCH07-DOC02-S0014\",\n        \"BATCH07-DOC02-S0015\"\n      ],\n      \"event\": {\n        \"event_name\": \"苏北国际和平医院收治七战七捷伤员并建立华中野战军转运站\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"收治伤员并建立转运站\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"第三医疗队\",\n            \"normalized_entity\": \"第三医疗队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"伤员\",\n            \"normalized_entity\": \"七战七捷伤员\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"转运站\",\n            \"normalized_entity\": \"华中军区野战军转运站\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"当时\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"湖心寺\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"从前线转到后方\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"用水路运输\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"当时我们收留了各个分区转来的七八百个病人\",\n        \"type_basis\": \"核心是医院和医疗队收留、转运、治疗伤员并建立转运站，属于组织行动和物质变化；用Actor+Goal配置，排除仅命名或存在引入。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH07-DOC02-W001-E02\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC02-S0015\",\n        \"BATCH07-DOC02-S0017\",\n        \"BATCH07-DOC02-S0019\",\n        \"BATCH07-DOC02-S0020\",\n        \"BATCH07-DOC02-S0021\"\n      ],\n      \"event\": {\n        \"event_name\": \"转运站成为常设机构\",\n        \"event_type\": \"RELATIONAL\",\n        \"event_type_zh\": \"关系\",\n        \"core_process\": \"变成常设机构\",\n        \"participants\": [\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"转运站\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"常设机构\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"每次打大仗都要转运站\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"原来我们在江南是临时设\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"每次打大仗都要转运站，所以变成常设机构了。\",\n        \"type_basis\": \"核心是转运站获得“常设机构”属性，使用Carrier+Attribute；不是具体移动或治疗行动，故标关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH07-DOC02-W001-E03\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC02-S0023\",\n        \"BATCH07-DOC02-S0024\",\n        \"BATCH07-DOC02-S0025\",\n        \"BATCH07-DOC02-S0026\",\n        \"BATCH07-DOC02-S0027\",\n        \"BATCH07-DOC02-S0028\",\n        \"BATCH07-DOC02-S0029\"\n      ],\n      \"event\": {\n        \"event_name\": \"天目山战役设立转运站实行阶梯治疗\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"设立分站并分级转运治疗\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"苏浙军区\",\n            \"normalized_entity\": \"苏浙军区\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"李甲光（音）\",\n            \"normalized_entity\": \"李甲光\",\n            \"certainty\": \"LOW\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"伤员\",\n            \"normalized_entity\": \"沿途伤员\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"分站\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"打天目山战役\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"灵峰寺\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"景坞\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"白水湾\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"减少死亡\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"减少残废\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"保证这个战斗力\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"阶梯治疗\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"分级治疗\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"分阶转运\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"在景坞里设立一个分站，在这个白水湾设了一个分站，三个站。\",\n        \"type_basis\": \"核心是在战役中设立分站、转运并照顾伤员，属于组织行动和物质变化；用Actor+Goal配置，排除单纯存在或关系命名。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH07-DOC02-S0002\",\n    \"BATCH07-DOC02-S0005\",\n    \"BATCH07-DOC02-S0009\",\n    \"BATCH07-DOC02-S0013\",\n    \"BATCH07-DOC02-S0016\",\n    \"BATCH07-DOC02-S0018\",\n    \"BATCH07-DOC02-S0022\",\n    \"BATCH07-DOC02-S0030\",\n    \"BATCH07-DOC02-S0031\",\n    \"BATCH07-DOC02-S0032\",\n    \"BATCH07-DOC02-S0033\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5802,
+    "total_tokens": 18985,
+    "completion_tokens": 13183,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10955
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13182000,
+    "time_to_first_token_ms": 196712
+  }
+}

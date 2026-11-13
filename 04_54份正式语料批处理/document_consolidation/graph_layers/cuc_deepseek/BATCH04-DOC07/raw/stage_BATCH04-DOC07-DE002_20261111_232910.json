@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-11T23:29:10",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC07-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC07-DE002",
+  "usage": {
+    "prompt_tokens": 1801,
+    "total_tokens": 5250,
+    "completion_tokens": 3449,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2231
+    },
+    "tokens_per_second": 3448000,
+    "time_to_first_token_ms": 29881,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC07-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰被从陷坑中救出，身体从泥里慢慢拔出；事件以他事后称差点死掉并视之为经验教训收束。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以海滩捡物并提及隐蔽陷坑为起点，经掉坑、呼救、船老大组织救援、众人抬拉拔出，到事后称差点死掉并总结教训为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"海滩捡物时存在隐蔽陷坑风险\",\n      \"process_text\": \"去海滩捡东西时，海滩边上有好多看不到的陷坑。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0027\"\n      ],\n      \"evidence_quote\": \"去捡的时候，海滩边上有好多看不到的陷坑。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"掉入深陷坑并呼救\",\n      \"process_text\": \"陈海峰掉进很深的陷坑，身体下陷到大腿根；因没有经验，开始叫唤呼救，随后有人来了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0036\"\n      ],\n      \"evidence_quote\": \"我那次掉下去很深哪，掉下去到了这儿了（陈海峰大概指的是大腿根）。我还没经验，开始叫唤，叫唤有人来了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"有经验的船老大组织扔竹竿救援\",\n      \"process_text\": \"有经验的船老大让快点把船上竹竿扔下来，他们跳下来救。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0036\"\n      ],\n      \"evidence_quote\": \"后来有经验的那个（船）老大，快点（把）船上边竹竿扔下来，他们跳下来救了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"众人用竹竿和抬拉方式将人拔出\",\n      \"process_text\": \"两人跪在两边，让陈海峰双手扒住竹竿用劲，三四人喊着往上抬，把他从泥里慢慢拔上来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0038\"\n      ],\n      \"evidence_quote\": \"两个人跪在地上，两边，叫我两个手扒住竹竿用劲，他们三个四个人啊，往上抬。“哎——”叫着抬一下，“哎——”叫着抬一下。我就从这个地方慢慢拔上来。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE002-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"事后总结险死经历与教训\",\n      \"process_text\": \"陈海峰事后说那次差点死掉，这是以前没有的经验、教训。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0039\"\n      ],\n      \"evidence_quote\": \"我那次差点死掉了，这个是（以前）没有的经验、教训。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE002-P01\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0036\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE002-P02\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE002-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0036\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE002-P03\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE002-P04\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0038\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE002-P04\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE002-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0039\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC07-DE002",
+    "event_enrichment": {
+      "result_state": "陈海峰被从陷坑中救出，身体从泥里慢慢拔出；事件以他事后称差点死掉并视之为经验教训收束。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以海滩捡物并提及隐蔽陷坑为起点，经掉坑、呼救、船老大组织救援、众人抬拉拔出，到事后称差点死掉并总结教训为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC07-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "海滩捡物时存在隐蔽陷坑风险",
+        "process_text": "去海滩捡东西时，海滩边上有好多看不到的陷坑。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0027"
+        ],
+        "evidence_quote": "去捡的时候，海滩边上有好多看不到的陷坑。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "掉入深陷坑并呼救",
+        "process_text": "陈海峰掉进很深的陷坑，身体下陷到大腿根；因没有经验，开始叫唤呼救，随后有人来了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0036"
+        ],
+        "evidence_quote": "我那次掉下去很深哪，掉下去到了这儿了（陈海峰大概指的是大腿根）。我还没经验，开始叫唤，叫唤有人来了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "有经验的船老大组织扔竹竿救援",
+        "process_text": "有经验的船老大让快点把船上竹竿扔下来，他们跳下来救。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0036"
+        ],
+        "evidence_quote": "后来有经验的那个（船）老大，快点（把）船上边竹竿扔下来，他们跳下来救了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "众人用竹竿和抬拉方式将人拔出",
+        "process_text": "两人跪在两边，让陈海峰双手扒住竹竿用劲，三四人喊着往上抬，把他从泥里慢慢拔上来。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0038"
+        ],
+        "evidence_quote": "两个人跪在地上，两边，叫我两个手扒住竹竿用劲，他们三个四个人啊，往上抬。“哎——”叫着抬一下，“哎——”叫着抬一下。我就从这个地方慢慢拔上来。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE002-P05",
+        "stage_order": 5,
+        "stage_summary": "事后总结险死经历与教训",
+        "process_text": "陈海峰事后说那次差点死掉，这是以前没有的经验、教训。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0039"
+        ],
+        "evidence_quote": "我那次差点死掉了，这个是（以前）没有的经验、教训。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC07-DE002-P01",
+        "target_stage_id": "BATCH04-DOC07-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0036",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE002-P02",
+        "target_stage_id": "BATCH04-DOC07-DE002-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH04-DOC07-S0036",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE002-P03",
+        "target_stage_id": "BATCH04-DOC07-DE002-P04",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC07-S0038",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE002-P04",
+        "target_stage_id": "BATCH04-DOC07-DE002-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC07-S0039",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

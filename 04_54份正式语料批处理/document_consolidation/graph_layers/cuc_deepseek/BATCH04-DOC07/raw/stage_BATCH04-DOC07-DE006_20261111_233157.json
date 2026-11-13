@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T23:31:57",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC07-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC07-DE006",
+  "usage": {
+    "prompt_tokens": 1111,
+    "total_tokens": 2676,
+    "completion_tokens": 1565,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 952
+    },
+    "time_to_first_token_ms": 12492,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC07-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"卫校暂时停办后，陈海峰被另行分配工作，到前方休养所当所长（相当于前方医院院长），不再担任卫校教务主任。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于1943年春天敌人准备清乡扫荡、卫校暂时停办，止于“我”调任前方休养所所长并卸任卫校教务主任。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"1943年春，因敌人准备清乡扫荡，卫校暂时停办。\",\n      \"process_text\": \"到了1943年的春天，敌人准备来清乡扫荡，卫校暂时停办。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0166\"\n      ],\n      \"evidence_quote\": \"到了（19）43年的春天，敌人准备来清乡扫荡，那么卫校暂时停办。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"卫校停办后另行分配工作，“我”到前方休养所当所长，不再担任卫校教务主任。\",\n      \"process_text\": \"停办后另外分配工作，“我”到前方休养所去当所长，等于前方医院的院长，不再当卫校的教务主任。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0166\"\n      ],\n      \"evidence_quote\": \"停办了，我们呢，另外分配工作了，我就到前方休养所去当所长，就等于前方医院的院长。就不当这个卫校的教务主任了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE006-P01\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE006-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0166\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC07-DE006",
+    "event_enrichment": {
+      "result_state": "卫校暂时停办后，陈海峰被另行分配工作，到前方休养所当所长（相当于前方医院院长），不再担任卫校教务主任。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于1943年春天敌人准备清乡扫荡、卫校暂时停办，止于“我”调任前方休养所所长并卸任卫校教务主任。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC07-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "1943年春，因敌人准备清乡扫荡，卫校暂时停办。",
+        "process_text": "到了1943年的春天，敌人准备来清乡扫荡，卫校暂时停办。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0166"
+        ],
+        "evidence_quote": "到了（19）43年的春天，敌人准备来清乡扫荡，那么卫校暂时停办。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "卫校停办后另行分配工作，“我”到前方休养所当所长，不再担任卫校教务主任。",
+        "process_text": "停办后另外分配工作，“我”到前方休养所去当所长，等于前方医院的院长，不再当卫校的教务主任。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0166"
+        ],
+        "evidence_quote": "停办了，我们呢，另外分配工作了，我就到前方休养所去当所长，就等于前方医院的院长。就不当这个卫校的教务主任了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC07-DE006-P01",
+        "target_stage_id": "BATCH04-DOC07-DE006-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC07-S0166",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

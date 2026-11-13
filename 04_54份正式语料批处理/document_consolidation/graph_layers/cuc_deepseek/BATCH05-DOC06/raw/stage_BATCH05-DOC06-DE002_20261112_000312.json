@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T00:03:12",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC06-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC06-DE002",
+  "usage": {
+    "prompt_tokens": 1381,
+    "total_tokens": 6068,
+    "completion_tokens": 4687,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3269
+    },
+    "time_to_first_token_ms": 36185,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC06-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队在无盐村完成数日休整整顿，直属队和首长部门开展思想工作并总结陆房突围，对个别未打过仗的干部进行批评教育，部分被装得到补充。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为S0006“从那里呢，在这无盐村休息几天”；终点为S0008对个别干事开支部会批评教育并称“这样的也有那么几个人”。S0005仅交代此前安全背景，不纳入本事件阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"部队从先前地点到无盐村，休息整顿数日。\",\n      \"process_text\": \"从那里到无盐村休息几天，整顿几天。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0006\"\n      ],\n      \"evidence_quote\": \"从那里呢，在这无盐村休息几天，整顿几天\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"直属队开展思想工作。\",\n      \"process_text\": \"直属队做点思想工作。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0006\"\n      ],\n      \"evidence_quote\": \"直属队做点思想工作。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"个人行李、衣物和牲口丢失后，梁必业给日本大衣，供给部筹划布并发放夹被。\",\n      \"process_text\": \"行李、衣服、被子、牲口都丢了，梁必业把一件日本大衣给晚上盖；供给部筹划到一些布，发给一个夹被。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0006\"\n      ],\n      \"evidence_quote\": \"你像我的行李也丢了，我的衣服、被子啊，牲口都丢了，所以梁必业就把一件他的日本大衣给我晚上盖。在那里供给部筹划了……不知怎么弄到的一些布，就给我发了一个夹被。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"首长和各部门首长开会动员，总结陆房突围，并针对未参加过战斗者的情绪做思想工作。\",\n      \"process_text\": \"首长们开了会，各个部门的首长也开了会，然后动员大家；对陆房突围进行总结，有些人没参加过战斗就有点吓坏了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0006\"\n      ],\n      \"evidence_quote\": \"在那里他们首长们开了会，各个部门的首长也开了会，然后动员大家。对陆房突围（总结），有一些人，没参加过战斗的人就有点吓坏了（杨永松笑）。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE002-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"对个别临阵离队、未打过仗的干事做思想工作，开支部会批评教育。\",\n      \"process_text\": \"对这样的要做思想工作，考虑到他没打过仗、头一次上战场，原谅嘛，开个支部会，批评教育他战场上应该怎么样。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0008\"\n      ],\n      \"evidence_quote\": \"我那个股的一个干事，大高个，山东人，刚从抗大来。他在那里打了以后，跑过这个西边，离陆房还有二三里路的地方，他就不知跑哪去，（部队）不见了，他就从老百姓家里弄了件便衣出来了（杨永松笑）。到我们集合以后，他又来了。像这样的情况没有几个吧，但是我们处理的时候，就说对这样的要做思想工作，虽然我们给他是一个干事（的职务），是个干部，（但是）他没打过仗，头一次上战场，原谅嘛，开个支部会，批评教育他，战场上应该怎么样。所以这样的也有那么几个人。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC06-DE002-P01\",\n      \"target_stage_id\": \"BATCH05-DOC06-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC06-S0006\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC06-DE002-P02\",\n      \"target_stage_id\": \"BATCH05-DOC06-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC06-S0006\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC06-DE002-P03\",\n      \"target_stage_id\": \"BATCH05-DOC06-DE002-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC06-S0006\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC06-DE002-P04\",\n      \"target_stage_id\": \"BATCH05-DOC06-DE002-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC06-S0008\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC06-DE002",
+    "event_enrichment": {
+      "result_state": "部队在无盐村完成数日休整整顿，直属队和首长部门开展思想工作并总结陆房突围，对个别未打过仗的干部进行批评教育，部分被装得到补充。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起点为S0006“从那里呢，在这无盐村休息几天”；终点为S0008对个别干事开支部会批评教育并称“这样的也有那么几个人”。S0005仅交代此前安全背景，不纳入本事件阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC06-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "部队从先前地点到无盐村，休息整顿数日。",
+        "process_text": "从那里到无盐村休息几天，整顿几天。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0006"
+        ],
+        "evidence_quote": "从那里呢，在这无盐村休息几天，整顿几天",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC06-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "直属队开展思想工作。",
+        "process_text": "直属队做点思想工作。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0006"
+        ],
+        "evidence_quote": "直属队做点思想工作。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC06-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "个人行李、衣物和牲口丢失后，梁必业给日本大衣，供给部筹划布并发放夹被。",
+        "process_text": "行李、衣服、被子、牲口都丢了，梁必业把一件日本大衣给晚上盖；供给部筹划到一些布，发给一个夹被。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0006"
+        ],
+        "evidence_quote": "你像我的行李也丢了，我的衣服、被子啊，牲口都丢了，所以梁必业就把一件他的日本大衣给我晚上盖。在那里供给部筹划了……不知怎么弄到的一些布，就给我发了一个夹被。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC06-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "首长和各部门首长开会动员，总结陆房突围，并针对未参加过战斗者的情绪做思想工作。",
+        "process_text": "首长们开了会，各个部门的首长也开了会，然后动员大家；对陆房突围进行总结，有些人没参加过战斗就有点吓坏了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0006"
+        ],
+        "evidence_quote": "在那里他们首长们开了会，各个部门的首长也开了会，然后动员大家。对陆房突围（总结），有一些人，没参加过战斗的人就有点吓坏了（杨永松笑）。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC06-DE002-P05",
+        "stage_order": 5,
+        "stage_summary": "对个别临阵离队、未打过仗的干事做思想工作，开支部会批评教育。",
+        "process_text": "对这样的要做思想工作，考虑到他没打过仗、头一次上战场，原谅嘛，开个支部会，批评教育他战场上应该怎么样。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0008"
+        ],
+        "evidence_quote": "我那个股的一个干事，大高个，山东人，刚从抗大来。他在那里打了以后，跑过这个西边，离陆房还有二三里路的地方，他就不知跑哪去，（部队）不见了，他就从老百姓家里弄了件便衣出来了（杨永松笑）。到我们集合以后，他又来了。像这样的情况没有几个吧，但是我们处理的时候，就说对这样的要做思想工作，虽然我们给他是一个干事（的职务），是个干部，（但是）他没打过仗，头一次上战场，原谅嘛，开个支部会，批评教育他，战场上应该怎么样。所以这样的也有那么几个人。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC06-DE002-P01",
+        "target_stage_id": "BATCH05-DOC06-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC06-S0006",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC06-DE002-P02",
+        "target_stage_id": "BATCH05-DOC06-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC06-S0006",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC06-DE002-P03",
+        "target_stage_id": "BATCH05-DOC06-DE002-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC06-S0006",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC06-DE002-P04",
+        "target_stage_id": "BATCH05-DOC06-DE002-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC06-S0008",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

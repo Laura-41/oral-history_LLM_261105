@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T20:20:25",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC08-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC08-DE003",
+  "usage": {
+    "prompt_tokens": 1274,
+    "total_tokens": 6494,
+    "completion_tokens": 5220,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4237
+    },
+    "time_to_first_token_ms": 77570,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC08-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈毅给陈海峰10元，让其购买笔记本等物品并换鞋；陈海峰表示不需要那么多。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据 S0094，从‘我学习之前，他找我谈话是第三次’起，至‘一支钢笔三块钱’止，围绕陈毅因鞋破要求买鞋、给10元及陈海峰反应。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC08-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈毅看到陈海峰鞋破，批评其到军部丢脸并要求买新鞋\",\n      \"process_text\": \"他看到我们江抗来的第一个干部，那个鞋子上面都是老虎鞋，都破了。他说：“你这（样）到军部去，把我们1支队的脸都丢光了，去买一双新的鞋子，换一换，”\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC08-S0094\"\n      ],\n      \"evidence_quote\": \"他看到我们江抗来的第一个干部，那个鞋子上面都是老虎鞋，都破了。他说：“你这（样）到军部去，把我们1支队的脸都丢光了，去买一双新的鞋子，换一换，”\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC08-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈毅给陈海峰10元，让其购买笔记本等物品\",\n      \"process_text\": \"以后他给我10块钱，叫我买笔记本什么东西\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC08-S0094\"\n      ],\n      \"evidence_quote\": \"以后他给我10块钱，叫我买笔记本什么东西\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC08-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈海峰对10元金额感到惊讶，表示不需要那么多并说明当时物价\",\n      \"process_text\": \"哎呦，我一听惊了下，我说不需要那么多不需要那么多，那个时候一双力士鞋8毛钱嘛，一套衣服也才一块二嘛是不是，一支钢笔三块钱。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC08-S0094\"\n      ],\n      \"evidence_quote\": \"哎呦，我一听惊了下，我说不需要那么多不需要那么多，那个时候一双力士鞋8毛钱嘛，一套衣服也才一块二嘛是不是，一支钢笔三块钱。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC08-DE003-P01\",\n      \"target_stage_id\": \"BATCH03-DOC08-DE003-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH03-DOC08-S0094\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC08-DE003-P02\",\n      \"target_stage_id\": \"BATCH03-DOC08-DE003-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC08-S0094\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC08-DE003",
+    "event_enrichment": {
+      "result_state": "陈毅给陈海峰10元，让其购买笔记本等物品并换鞋；陈海峰表示不需要那么多。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "依据 S0094，从‘我学习之前，他找我谈话是第三次’起，至‘一支钢笔三块钱’止，围绕陈毅因鞋破要求买鞋、给10元及陈海峰反应。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC08-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "陈毅看到陈海峰鞋破，批评其到军部丢脸并要求买新鞋",
+        "process_text": "他看到我们江抗来的第一个干部，那个鞋子上面都是老虎鞋，都破了。他说：“你这（样）到军部去，把我们1支队的脸都丢光了，去买一双新的鞋子，换一换，”",
+        "evidence_segment_ids": [
+          "BATCH03-DOC08-S0094"
+        ],
+        "evidence_quote": "他看到我们江抗来的第一个干部，那个鞋子上面都是老虎鞋，都破了。他说：“你这（样）到军部去，把我们1支队的脸都丢光了，去买一双新的鞋子，换一换，”",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC08-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "陈毅给陈海峰10元，让其购买笔记本等物品",
+        "process_text": "以后他给我10块钱，叫我买笔记本什么东西",
+        "evidence_segment_ids": [
+          "BATCH03-DOC08-S0094"
+        ],
+        "evidence_quote": "以后他给我10块钱，叫我买笔记本什么东西",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC08-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "陈海峰对10元金额感到惊讶，表示不需要那么多并说明当时物价",
+        "process_text": "哎呦，我一听惊了下，我说不需要那么多不需要那么多，那个时候一双力士鞋8毛钱嘛，一套衣服也才一块二嘛是不是，一支钢笔三块钱。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC08-S0094"
+        ],
+        "evidence_quote": "哎呦，我一听惊了下，我说不需要那么多不需要那么多，那个时候一双力士鞋8毛钱嘛，一套衣服也才一块二嘛是不是，一支钢笔三块钱。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC08-DE003-P01",
+        "target_stage_id": "BATCH03-DOC08-DE003-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH03-DOC08-S0094",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC08-DE003-P02",
+        "target_stage_id": "BATCH03-DOC08-DE003-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC08-S0094",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

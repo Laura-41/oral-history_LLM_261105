@@ -1,0 +1,181 @@
+{
+  "run_time": "2026-11-12T20:12:40",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC08-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC08-DE001",
+  "usage": {
+    "prompt_tokens": 2032,
+    "total_tokens": 16427,
+    "completion_tokens": 14395,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 11939
+    },
+    "tokens_per_second": 14394000,
+    "time_to_first_token_ms": 213740,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC08-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰已到5团团部报到并接任卫生队长，先接上卫生队工作并给卫生员训练班讲课，团长已批条令其到供给处领军衣，随后去换军衣；时间已是2月初。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为5团卫生队长牺牲、被要求马上去（S0003/S0004），终点为讲完课去换军衣并说明已是2月初（S0024/S0028）。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC08-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"5团卫生队长牺牲后无人指挥，陈海峰被要求马上去。\",\n      \"process_text\": \"5团卫生队长被炸死，卫生队没有队长和指挥人员，对方说马上去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC08-S0003\",\n        \"BATCH03-DOC08-S0004\"\n      ],\n      \"evidence_quote\": \"里面有伤员、病员。敌人飞机一炸，当场就炸死了。没有队长了，没有指挥人员了，他说你马上去。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC08-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈海峰因没有军衣、仍穿便衣，被要求到5团找团长。\",\n      \"process_text\": \"陈海峰说没有军衣，还穿便衣、戴西瓜皮帽、穿长衫，被让到5团问团长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC08-S0006\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我说我的军衣都没有啊，我现在还穿的便衣呢，还戴着西瓜皮帽，穿着长衫呢。你这么去吧，你到5团去，问5团长要去（陈海峰笑）。5团那个时候团长还是段焕竞，段焕竞后来是南京军区副司令员。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC08-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈海峰到5团团部报到，因穿便衣被笑，团长批条令其到供给处领军衣。\",\n      \"process_text\": \"到5团团部报到后，大家笑他像老百姓来当领导，来不及换军装，团长批条让他到供给处领一套军衣。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC08-S0020\"\n      ],\n      \"evidence_quote\": \"那么就到5团团部报到，报到以后，他们看到都笑，还有个老百姓来当领导。来不及换（军装），团长批了个条，他说你到供给处去领一套军衣。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC08-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"陈海峰先接上卫生队工作，并给全团卫生员训练班讲第一堂课，介绍皖南卫生工作基本情况。\",\n      \"process_text\": \"团长让他先到卫生队把工作接上，恰逢全团卫生员训练班，他讲第一堂课介绍皖南卫生工作基本情况，大家用惊异眼光看穿便衣的新领导。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC08-S0022\"\n      ],\n      \"evidence_quote\": \"    陈海峰：他说你先到卫生队把工作接上。刚好，这时候派了一个训练班，整个团的卫生员在这儿学习。我就趁这学习班呢，讲第一堂课，讲皖南卫生工作的基本情况。皖南一路（过来）我们所知道的一些情况，他们很关心哪。讲了以后，下面用很惊奇的眼光看着新来的领导，穿了个便衣，还是一条一条的，还是讲得津津有味的啊。大家（用）很惊异的眼光看着。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC08-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"讲课后陈海峰与卫生员交流问题、了解卫生队工作，随后去换军衣。\",\n      \"process_text\": \"讲完以后，和卫生员一起看还有什么问题要问，问完以后把工作了解一下，后来去换军衣。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC08-S0024\"\n      ],\n      \"evidence_quote\": \"    陈海峰：讲完以后，和他们一块看看还有什么问题要问，问完了以后，把工作了解一下，后来我就去换军衣了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC08-DE001-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"补充说明当时没有换军衣，而是先讲课。\",\n      \"process_text\": \"没有换，先讲课了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC08-S0026\"\n      ],\n      \"evidence_quote\": \"    陈海峰：没有换，先讲课了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC08-DE001-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"补充说明见面时顺便讲了一个多小时，介绍皖南卫生工作基本状况。\",\n      \"process_text\": \"先见面，见面的时候顺便讲，讲了一个多小时，把皖南卫生工作的基本状况介绍了一下，说以后再慢慢解你们（的）情况。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC08-S0027\"\n      ],\n      \"evidence_quote\": \"先见面，见面的时候顺便讲，讲了一个多小时，把皖南卫生工作的基本状况介绍了一下，说以后再慢慢解你们（的）情况。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC08-DE001-P08\",\n      \"stage_order\": 8,\n      \"stage_summary\": \"补充说明事件时间已是2月初。\",\n      \"process_text\": \"这已经是2月初了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC08-S0028\"\n      ],\n      \"evidence_quote\": \"这已经是2月初了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC08-DE001-P01\",\n      \"target_stage_id\": \"BATCH03-DOC08-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC08-S0004\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC08-DE001-P02\",\n      \"target_stage_id\": \"BATCH03-DOC08-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC08-S0020\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC08-DE001-P03\",\n      \"target_stage_id\": \"BATCH03-DOC08-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC08-S0022\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC08-DE001-P04\",\n      \"target_stage_id\": \"BATCH03-DOC08-DE001-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC08-S0024\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC08-DE001-P05\",\n      \"target_stage_id\": \"BATCH03-DOC08-DE001-P06\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC08-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC08-DE001-P06\",\n      \"target_stage_id\": \"BATCH03-DOC08-DE001-P07\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC08-S0027\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC08-DE001-P07\",\n      \"target_stage_id\": \"BATCH03-DOC08-DE001-P08\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC08-S0028\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC08-DE001",
+    "event_enrichment": {
+      "result_state": "陈海峰已到5团团部报到并接任卫生队长，先接上卫生队工作并给卫生员训练班讲课，团长已批条令其到供给处领军衣，随后去换军衣；时间已是2月初。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起点为5团卫生队长牺牲、被要求马上去（S0003/S0004），终点为讲完课去换军衣并说明已是2月初（S0024/S0028）。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC08-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "5团卫生队长牺牲后无人指挥，陈海峰被要求马上去。",
+        "process_text": "5团卫生队长被炸死，卫生队没有队长和指挥人员，对方说马上去。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC08-S0003",
+          "BATCH03-DOC08-S0004"
+        ],
+        "evidence_quote": "里面有伤员、病员。敌人飞机一炸，当场就炸死了。没有队长了，没有指挥人员了，他说你马上去。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC08-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "陈海峰因没有军衣、仍穿便衣，被要求到5团找团长。",
+        "process_text": "陈海峰说没有军衣，还穿便衣、戴西瓜皮帽、穿长衫，被让到5团问团长。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC08-S0006"
+        ],
+        "evidence_quote": "    陈海峰：我说我的军衣都没有啊，我现在还穿的便衣呢，还戴着西瓜皮帽，穿着长衫呢。你这么去吧，你到5团去，问5团长要去（陈海峰笑）。5团那个时候团长还是段焕竞，段焕竞后来是南京军区副司令员。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC08-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "陈海峰到5团团部报到，因穿便衣被笑，团长批条令其到供给处领军衣。",
+        "process_text": "到5团团部报到后，大家笑他像老百姓来当领导，来不及换军装，团长批条让他到供给处领一套军衣。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC08-S0020"
+        ],
+        "evidence_quote": "那么就到5团团部报到，报到以后，他们看到都笑，还有个老百姓来当领导。来不及换（军装），团长批了个条，他说你到供给处去领一套军衣。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC08-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "陈海峰先接上卫生队工作，并给全团卫生员训练班讲第一堂课，介绍皖南卫生工作基本情况。",
+        "process_text": "团长让他先到卫生队把工作接上，恰逢全团卫生员训练班，他讲第一堂课介绍皖南卫生工作基本情况，大家用惊异眼光看穿便衣的新领导。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC08-S0022"
+        ],
+        "evidence_quote": "    陈海峰：他说你先到卫生队把工作接上。刚好，这时候派了一个训练班，整个团的卫生员在这儿学习。我就趁这学习班呢，讲第一堂课，讲皖南卫生工作的基本情况。皖南一路（过来）我们所知道的一些情况，他们很关心哪。讲了以后，下面用很惊奇的眼光看着新来的领导，穿了个便衣，还是一条一条的，还是讲得津津有味的啊。大家（用）很惊异的眼光看着。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC08-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "讲课后陈海峰与卫生员交流问题、了解卫生队工作，随后去换军衣。",
+        "process_text": "讲完以后，和卫生员一起看还有什么问题要问，问完以后把工作了解一下，后来去换军衣。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC08-S0024"
+        ],
+        "evidence_quote": "    陈海峰：讲完以后，和他们一块看看还有什么问题要问，问完了以后，把工作了解一下，后来我就去换军衣了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC08-DE001-P06",
+        "stage_order": 6,
+        "stage_summary": "补充说明当时没有换军衣，而是先讲课。",
+        "process_text": "没有换，先讲课了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC08-S0026"
+        ],
+        "evidence_quote": "    陈海峰：没有换，先讲课了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC08-DE001-P07",
+        "stage_order": 7,
+        "stage_summary": "补充说明见面时顺便讲了一个多小时，介绍皖南卫生工作基本状况。",
+        "process_text": "先见面，见面的时候顺便讲，讲了一个多小时，把皖南卫生工作的基本状况介绍了一下，说以后再慢慢解你们（的）情况。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC08-S0027"
+        ],
+        "evidence_quote": "先见面，见面的时候顺便讲，讲了一个多小时，把皖南卫生工作的基本状况介绍了一下，说以后再慢慢解你们（的）情况。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC08-DE001-P08",
+        "stage_order": 8,
+        "stage_summary": "补充说明事件时间已是2月初。",
+        "process_text": "这已经是2月初了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC08-S0028"
+        ],
+        "evidence_quote": "这已经是2月初了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC08-DE001-P01",
+        "target_stage_id": "BATCH03-DOC08-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC08-S0004",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC08-DE001-P02",
+        "target_stage_id": "BATCH03-DOC08-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC08-S0020",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC08-DE001-P03",
+        "target_stage_id": "BATCH03-DOC08-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC08-S0022",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC08-DE001-P04",
+        "target_stage_id": "BATCH03-DOC08-DE001-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC08-S0024",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC08-DE001-P05",
+        "target_stage_id": "BATCH03-DOC08-DE001-P06",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC08-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC08-DE001-P06",
+        "target_stage_id": "BATCH03-DOC08-DE001-P07",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC08-S0027",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC08-DE001-P07",
+        "target_stage_id": "BATCH03-DOC08-DE001-P08",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC08-S0028",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T18:54:11",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC05-DE009",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC05-DE009",
+  "usage": {
+    "prompt_tokens": 1507,
+    "total_tokens": 12747,
+    "completion_tokens": 11240,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9689
+    },
+    "time_to_first_token_ms": 237918,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11239000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC05-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"周总理参观军医处淋浴室后大加赞扬并非常感谢史沫特莱，口述者表示周总理这一段基本上讲到这了。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为S0068所述周总理去看军医处及史沫特莱捐5000元，S0070补充军医处造淋浴室与公共卫生灭虱背景；核心为S0072周总理参观淋浴室并赞扬感谢史沫特莱；终点为S0074口述者说周总理这一段基本上讲到这了。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"周总理去看军医处，军医处与史沫特莱捐资5000元相关。\",\n      \"process_text\": \"周总理呀，去看那个卫训班以后，就去看军医处。军医处就是说史沫特莱用她的稿费捐了5000块钱。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0068\"\n      ],\n      \"evidence_quote\": \"这是第二件事情。第三件事情呢，就是周总理呀，去看那个卫训班以后，就去看军医处。军医处就是说史沫特莱用她的稿费捐了5000块钱。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"军医处用史沫特莱捐的5000元建造淋浴室，用于公共卫生和灭虱。\",\n      \"process_text\": \"给我们军医处造了一个淋浴室。这个淋浴室是5000块钱，那时候是史沫特莱捐的钱，做一个四方（音）的叫淋浴室，公共卫生。因为当时虱子很多。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0070\"\n      ],\n      \"evidence_quote\": \"陈海峰：给我们军医处造了一个淋浴室。当时这个淋浴室条件比较好，都是木结构的了，都是竹子什么，没有铁管子，竹子引的水。水呢，从上面加的，可以挑着水带上去，倒在加温的地方。以后每个下面都有水龙头，可以淋浴。这个淋浴室是5000块钱，那时候是史沫特莱捐的钱，做一个四方（音）的叫淋浴室，公共卫生。为什么呢？因为当时虱子很多，虱子就叫“革命虫”，生的疥疮叫“革命疮”。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"史沫特莱号召军医处捐薪水灭虱，并在那里等待。\",\n      \"process_text\": \"史沫特莱就号召军医处，要求大家捐薪水，希望你们都灭虱。史沫特莱在那里等了好长一段时间。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0072\"\n      ],\n      \"evidence_quote\": \"陈海峰：虱子很多，生虱子多了要生斑疹伤寒，那个时候要产生传染病的。当时好多人灭虱，不然的话，老是把衣服解开了，老是弄那个虱子，差不多都生过虱子，灭虱。所以从那个地方开始，史沫特莱就号召军医处，要求大家捐薪水，希望你们都灭虱。史沫特莱在那里等了好长一段时间。那么周总理在的时候，就去参观了这个淋浴室，大加赞扬，非常感谢史沫特莱。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE009-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"周总理参观淋浴室，大加赞扬并感谢史沫特莱。\",\n      \"process_text\": \"周总理在的时候，就去参观了这个淋浴室，大加赞扬，非常感谢史沫特莱。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0072\"\n      ],\n      \"evidence_quote\": \"陈海峰：虱子很多，生虱子多了要生斑疹伤寒，那个时候要产生传染病的。当时好多人灭虱，不然的话，老是把衣服解开了，老是弄那个虱子，差不多都生过虱子，灭虱。所以从那个地方开始，史沫特莱就号召军医处，要求大家捐薪水，希望你们都灭虱。史沫特莱在那里等了好长一段时间。那么周总理在的时候，就去参观了这个淋浴室，大加赞扬，非常感谢史沫特莱。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE009-P01\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE009-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0070\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE009-P02\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE009-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0072\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE009-P03\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE009-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0072\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V2-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC05-DE009",
+    "event_enrichment": {
+      "result_state": "周总理参观军医处淋浴室后大加赞扬并非常感谢史沫特莱，口述者表示周总理这一段基本上讲到这了。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起点为S0068所述周总理去看军医处及史沫特莱捐5000元，S0070补充军医处造淋浴室与公共卫生灭虱背景；核心为S0072周总理参观淋浴室并赞扬感谢史沫特莱；终点为S0074口述者说周总理这一段基本上讲到这了。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC05-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "周总理去看军医处，军医处与史沫特莱捐资5000元相关。",
+        "process_text": "周总理呀，去看那个卫训班以后，就去看军医处。军医处就是说史沫特莱用她的稿费捐了5000块钱。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0068"
+        ],
+        "evidence_quote": "这是第二件事情。第三件事情呢，就是周总理呀，去看那个卫训班以后，就去看军医处。军医处就是说史沫特莱用她的稿费捐了5000块钱。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "军医处用史沫特莱捐的5000元建造淋浴室，用于公共卫生和灭虱。",
+        "process_text": "给我们军医处造了一个淋浴室。这个淋浴室是5000块钱，那时候是史沫特莱捐的钱，做一个四方（音）的叫淋浴室，公共卫生。因为当时虱子很多。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0070"
+        ],
+        "evidence_quote": "陈海峰：给我们军医处造了一个淋浴室。当时这个淋浴室条件比较好，都是木结构的了，都是竹子什么，没有铁管子，竹子引的水。水呢，从上面加的，可以挑着水带上去，倒在加温的地方。以后每个下面都有水龙头，可以淋浴。这个淋浴室是5000块钱，那时候是史沫特莱捐的钱，做一个四方（音）的叫淋浴室，公共卫生。为什么呢？因为当时虱子很多，虱子就叫“革命虫”，生的疥疮叫“革命疮”。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "史沫特莱号召军医处捐薪水灭虱，并在那里等待。",
+        "process_text": "史沫特莱就号召军医处，要求大家捐薪水，希望你们都灭虱。史沫特莱在那里等了好长一段时间。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0072"
+        ],
+        "evidence_quote": "陈海峰：虱子很多，生虱子多了要生斑疹伤寒，那个时候要产生传染病的。当时好多人灭虱，不然的话，老是把衣服解开了，老是弄那个虱子，差不多都生过虱子，灭虱。所以从那个地方开始，史沫特莱就号召军医处，要求大家捐薪水，希望你们都灭虱。史沫特莱在那里等了好长一段时间。那么周总理在的时候，就去参观了这个淋浴室，大加赞扬，非常感谢史沫特莱。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE009-P04",
+        "stage_order": 4,
+        "stage_summary": "周总理参观淋浴室，大加赞扬并感谢史沫特莱。",
+        "process_text": "周总理在的时候，就去参观了这个淋浴室，大加赞扬，非常感谢史沫特莱。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0072"
+        ],
+        "evidence_quote": "陈海峰：虱子很多，生虱子多了要生斑疹伤寒，那个时候要产生传染病的。当时好多人灭虱，不然的话，老是把衣服解开了，老是弄那个虱子，差不多都生过虱子，灭虱。所以从那个地方开始，史沫特莱就号召军医处，要求大家捐薪水，希望你们都灭虱。史沫特莱在那里等了好长一段时间。那么周总理在的时候，就去参观了这个淋浴室，大加赞扬，非常感谢史沫特莱。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC05-DE009-P01",
+        "target_stage_id": "BATCH02-DOC05-DE009-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC05-S0070",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC05-DE009-P02",
+        "target_stage_id": "BATCH02-DOC05-DE009-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH02-DOC05-S0072",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC05-DE009-P03",
+        "target_stage_id": "BATCH02-DOC05-DE009-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC05-S0072",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T23:49:20",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC02-DE007",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC02-DE007",
+  "usage": {
+    "prompt_tokens": 1654,
+    "total_tokens": 7020,
+    "completion_tokens": 5366,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4133
+    },
+    "time_to_first_token_ms": 41425,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-13\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC02-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"日伪二百多里竹篱笆被一夜烧光，敌人受到震惊，反清乡斗争取得第一个阶段胜利。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以1943年4月11日清乡开始后的动员为起点，以一夜烧毁二百多里竹篱笆并称第一阶段斗争胜利为终点；烧毁行动的具体日期原文未明示。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"清乡开始后，地下党、地方武装和部分部队动员八十多万根据地群众，准备烧毁竹篱笆。\",\n      \"process_text\": \"（19）43年的4月11号开始清乡，到（19）44年的7月1号，我们地下党、地方武装和我们这一部分部队，动员八十多万根据地的老百姓\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0162\"\n      ],\n      \"evidence_quote\": \"（19）43年的4月11号开始清乡，到（19）44年的7月1号，我们地下党、地方武装和我们这一部分部队，动员八十多万根据地的老百姓\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"在无碉堡的口子，依靠人民和地方武装对付敌人、掩护群众，事先预约并准备煤油。\",\n      \"process_text\": \"他有几个口子，那么没有碉堡（的）地方，有的依靠人民，有些地方武装来对付他，掩护老百姓烧，都预约好。那个时候没有汽油，用煤油啊。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0164\"\n      ],\n      \"evidence_quote\": \"他有几个口子，那么没有碉堡（的）地方，有的依靠人民，有些地方武装来对付他，掩护老百姓烧，都预约好。那个时候没有汽油，用煤油啊。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"群众用煤油浇竹篱笆，以柴禾引火，干燥竹篱笆迅速燃烧。\",\n      \"process_text\": \"家家户户都有煤油灯嘛，都买那个煤油，都一箱一箱煤油浇。浇以后，用柴禾放到旁边一弄，烧。那个竹子啊，经过一年左右的风吹雨打，干得很啊，一烧都“哗哗哗哗哗哗”，满天通红。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0165\"\n      ],\n      \"evidence_quote\": \"家家户户都有煤油灯嘛，都买那个煤油，都一箱一箱煤油浇。浇以后，用柴禾放到旁边一弄，烧。那个竹子啊，经过一年左右的风吹雨打，干得很啊，一烧都“哗哗哗哗哗哗”，满天通红。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"一夜之间烧毁二百多里（约230至238华里）竹篱笆，被称为第一个阶段斗争的胜利。\",\n      \"process_text\": \"一个晚上就是200多里路，230多华里啊，238华里多少……这是第一个阶段斗争的胜利。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0166\"\n      ],\n      \"evidence_quote\": \"一个晚上就是200多里路，230多华里啊，238华里多少……这是第一个阶段斗争的胜利。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE007-P01\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0164\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE007-P02\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE007-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0165\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE007-P03\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE007-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0166\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-13",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC02-DE007",
+    "event_enrichment": {
+      "result_state": "日伪二百多里竹篱笆被一夜烧光，敌人受到震惊，反清乡斗争取得第一个阶段胜利。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以1943年4月11日清乡开始后的动员为起点，以一夜烧毁二百多里竹篱笆并称第一阶段斗争胜利为终点；烧毁行动的具体日期原文未明示。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC02-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "清乡开始后，地下党、地方武装和部分部队动员八十多万根据地群众，准备烧毁竹篱笆。",
+        "process_text": "（19）43年的4月11号开始清乡，到（19）44年的7月1号，我们地下党、地方武装和我们这一部分部队，动员八十多万根据地的老百姓",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0162"
+        ],
+        "evidence_quote": "（19）43年的4月11号开始清乡，到（19）44年的7月1号，我们地下党、地方武装和我们这一部分部队，动员八十多万根据地的老百姓",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "在无碉堡的口子，依靠人民和地方武装对付敌人、掩护群众，事先预约并准备煤油。",
+        "process_text": "他有几个口子，那么没有碉堡（的）地方，有的依靠人民，有些地方武装来对付他，掩护老百姓烧，都预约好。那个时候没有汽油，用煤油啊。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0164"
+        ],
+        "evidence_quote": "他有几个口子，那么没有碉堡（的）地方，有的依靠人民，有些地方武装来对付他，掩护老百姓烧，都预约好。那个时候没有汽油，用煤油啊。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "群众用煤油浇竹篱笆，以柴禾引火，干燥竹篱笆迅速燃烧。",
+        "process_text": "家家户户都有煤油灯嘛，都买那个煤油，都一箱一箱煤油浇。浇以后，用柴禾放到旁边一弄，烧。那个竹子啊，经过一年左右的风吹雨打，干得很啊，一烧都“哗哗哗哗哗哗”，满天通红。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0165"
+        ],
+        "evidence_quote": "家家户户都有煤油灯嘛，都买那个煤油，都一箱一箱煤油浇。浇以后，用柴禾放到旁边一弄，烧。那个竹子啊，经过一年左右的风吹雨打，干得很啊，一烧都“哗哗哗哗哗哗”，满天通红。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "一夜之间烧毁二百多里（约230至238华里）竹篱笆，被称为第一个阶段斗争的胜利。",
+        "process_text": "一个晚上就是200多里路，230多华里啊，238华里多少……这是第一个阶段斗争的胜利。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0166"
+        ],
+        "evidence_quote": "一个晚上就是200多里路，230多华里啊，238华里多少……这是第一个阶段斗争的胜利。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC02-DE007-P01",
+        "target_stage_id": "BATCH05-DOC02-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC02-S0164",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE007-P02",
+        "target_stage_id": "BATCH05-DOC02-DE007-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH05-DOC02-S0165",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE007-P03",
+        "target_stage_id": "BATCH05-DOC02-DE007-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC02-S0166",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

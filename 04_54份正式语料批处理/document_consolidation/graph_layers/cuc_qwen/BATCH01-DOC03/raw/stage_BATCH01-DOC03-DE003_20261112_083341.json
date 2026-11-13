@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T08:33:41",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC03-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC03-DE003",
+  "usage": {
+    "prompt_tokens": 1569,
+    "total_tokens": 8006,
+    "completion_tokens": 6437,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5136
+    },
+    "time_to_first_token_ms": 94283,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 6436000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC03-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"杨永松未继续前往观察，被岗哨阻止后往回走；687团从右翼参加战斗。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于战斗第二天下午杨永松往前去并背着手枪往前走，止于岗哨询问阻止后杨永松往回走，并提及687团从右翼参加战斗。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"战斗第二天下午敌人增援，杨永松正好往前去。\",\n      \"process_text\": \"第二天的大概是下午，敌人的增援就来了。那天呢我正好往前去，687团在离战场几里路的地方休息，准备随时加入战斗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0091\"\n      ],\n      \"evidence_quote\": \"第二天的大概是下午，敌人的增援就来了。那天呢我正好往前去， 687团他就在离战场几里路的地方，在那里休息，就准备随时加入战斗吧。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"杨永松背着手枪、没带行李往前走，经过有岗哨的山洼处。\",\n      \"process_text\": \"到那天下午，杨永松第二天往前去看，山这个地方有个小洼洼，翻过山就过去了，这边站着岗；他背着个手枪，没带行李，往前走。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0093\"\n      ],\n      \"evidence_quote\": \"到那天下午，我不是在第二天往前去看嘛，师的教导队呀出去抬战利品，山这个地方有个小洼洼（杨永松比划山势），翻过山就过去了，这边呢就站着岗。我背着个手枪，没带行李，我就往前走。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"岗哨询问杨永松去向，杨永松说去看看，岗哨以情况紧张、敌人增援为由阻止。\",\n      \"process_text\": \"岗哨问“哎，同志，你干嘛去呀？”，杨永松说部队打了两天了，我去看看去；岗哨说没有特殊情况不让去，现在情况紧张，敌人增援了，那个方向已经发现了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0095\"\n      ],\n      \"evidence_quote\": \"“哎，同志，你干嘛去呀？”我说部队打了两天了，我去看看去。“哎！没有特殊情况不让去，现在这个情况紧张，敌人增援了。”他说那个方向已经发现了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"杨永松往回走，687团从右翼参加战斗。\",\n      \"process_text\": \"大概杨永松往回走的时候，687团从右翼参加战斗了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0095\"\n      ],\n      \"evidence_quote\": \"大概我就往回走的时候，687团他就从右翼参加战斗了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE003-P01\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0093\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE003-P02\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0095\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE003-P03\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE003-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0095\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC03-DE003",
+    "event_enrichment": {
+      "result_state": "杨永松未继续前往观察，被岗哨阻止后往回走；687团从右翼参加战斗。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于战斗第二天下午杨永松往前去并背着手枪往前走，止于岗哨询问阻止后杨永松往回走，并提及687团从右翼参加战斗。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC03-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "战斗第二天下午敌人增援，杨永松正好往前去。",
+        "process_text": "第二天的大概是下午，敌人的增援就来了。那天呢我正好往前去，687团在离战场几里路的地方休息，准备随时加入战斗。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0091"
+        ],
+        "evidence_quote": "第二天的大概是下午，敌人的增援就来了。那天呢我正好往前去， 687团他就在离战场几里路的地方，在那里休息，就准备随时加入战斗吧。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "杨永松背着手枪、没带行李往前走，经过有岗哨的山洼处。",
+        "process_text": "到那天下午，杨永松第二天往前去看，山这个地方有个小洼洼，翻过山就过去了，这边站着岗；他背着个手枪，没带行李，往前走。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0093"
+        ],
+        "evidence_quote": "到那天下午，我不是在第二天往前去看嘛，师的教导队呀出去抬战利品，山这个地方有个小洼洼（杨永松比划山势），翻过山就过去了，这边呢就站着岗。我背着个手枪，没带行李，我就往前走。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "岗哨询问杨永松去向，杨永松说去看看，岗哨以情况紧张、敌人增援为由阻止。",
+        "process_text": "岗哨问“哎，同志，你干嘛去呀？”，杨永松说部队打了两天了，我去看看去；岗哨说没有特殊情况不让去，现在情况紧张，敌人增援了，那个方向已经发现了。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0095"
+        ],
+        "evidence_quote": "“哎，同志，你干嘛去呀？”我说部队打了两天了，我去看看去。“哎！没有特殊情况不让去，现在这个情况紧张，敌人增援了。”他说那个方向已经发现了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "杨永松往回走，687团从右翼参加战斗。",
+        "process_text": "大概杨永松往回走的时候，687团从右翼参加战斗了。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0095"
+        ],
+        "evidence_quote": "大概我就往回走的时候，687团他就从右翼参加战斗了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC03-DE003-P01",
+        "target_stage_id": "BATCH01-DOC03-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC03-S0093",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE003-P02",
+        "target_stage_id": "BATCH01-DOC03-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC03-S0095",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE003-P03",
+        "target_stage_id": "BATCH01-DOC03-DE003-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH01-DOC03-S0095",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

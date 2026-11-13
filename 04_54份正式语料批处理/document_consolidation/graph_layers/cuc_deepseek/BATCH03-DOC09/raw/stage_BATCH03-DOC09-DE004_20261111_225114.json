@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T22:51:14",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC09-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC09-DE004",
+  "usage": {
+    "prompt_tokens": 1381,
+    "total_tokens": 6149,
+    "completion_tokens": 4768,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3591
+    },
+    "time_to_first_token_ms": 43616,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4767000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC09-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"各营长表示同意，其中有人表示得更肯定；陈锐霆说明这是个人意见并给出考虑时间，表示可向上级告发自己。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于陈锐霆向营长说明起义理由（S0045），止于其表示可告发并给时间考虑（S0053）；中间包含各营长表示同意及对营长可靠性的判断（S0048、S0051）。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆向各营长说明大敌当前不应自相攻打、家乡沦陷盼打回去等理由，并指出缺乏共产党教育会使人把行动视为叛变。\",\n      \"process_text\": \"当时我就说，鬼子当面，敌人不打吗？大敌当前不打敌人，自己打自己的人啊？另外一个，都是北方人，家乡都沦陷了嘛，父亲母亲早日盼望我们能够打回去，这也是个原因。最大的一个（问题）就是因为平日我们没有共产党的教育，他认为这是个叛变的行动，所以最后又反回去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0045\"\n      ],\n      \"evidence_quote\": \"陈锐霆：当时我就说，鬼子当面，敌人不打吗？大敌当前不打敌人，自己打自己的人啊？另外一个，都是北方人，家乡都沦陷了嘛，父亲母亲早日盼望我们能够打回去，这也是个原因。最大的一个（问题）就是因为平日我们没有共产党的教育，他认为这是个叛变的行动，所以最后又反回去。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"各营长当时表示同意；陈锐霆判断二营、三营营长较可靠，对一营营长不信任。\",\n      \"process_text\": \"当时都表示同意。那个时候（在）政治态度（方面），知道二营营长是比较可靠的；三营营长也是我的同学，跟我的关系也比较好，也认为可以。一营营长我就不大相信，因为他是属于营团一个部队编过来的，跟32军没有历史关系。另外这个人非常狡猾的，说话跟行动不一致，品德不怎么样，他另外住的（地方）离我那个团比较远一些。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0048\"\n      ],\n      \"evidence_quote\": \"陈锐霆：当时都表示同意。那个时候（在）政治态度（方面），知道二营营长是比较可靠的；三营营长也是我的同学，跟我的关系也比较好，也认为可以。一营营长我就不大相信，因为他是属于营团一个部队编过来的，跟32军没有历史关系。另外这个人非常狡猾的，说话跟行动不一致，品德不怎么样，他另外住的（地方）离我那个团比较远一些。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"对方表示更肯定同意后，陈锐霆说明这是个人意见，给出考虑时间，并表示可向上级告发自己。\",\n      \"process_text\": \"也表示同意了，说得更肯定嘛。我就给他讲，我说这是我个人的意见，你们想一想，给你们一个时间，我也好跟上边联系。我说你们如果（觉得）我这个思想不对头，你可以告诉我，另外如果不愿意告诉我，你们愿意向上边告发我也可以。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0053\"\n      ],\n      \"evidence_quote\": \"陈锐霆：也表示同意了，说得更肯定嘛。我就给他讲，我说这是我个人的意见，你们想一想，给你们一个时间，我也好跟上边联系。我说你们如果（觉得）我这个思想不对头，你可以告诉我，另外如果不愿意告诉我，你们愿意向上边告发我也可以。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE004-P01\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0048\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE004-P02\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0053\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC09-DE004",
+    "event_enrichment": {
+      "result_state": "各营长表示同意，其中有人表示得更肯定；陈锐霆说明这是个人意见并给出考虑时间，表示可向上级告发自己。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于陈锐霆向营长说明起义理由（S0045），止于其表示可告发并给时间考虑（S0053）；中间包含各营长表示同意及对营长可靠性的判断（S0048、S0051）。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC09-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆向各营长说明大敌当前不应自相攻打、家乡沦陷盼打回去等理由，并指出缺乏共产党教育会使人把行动视为叛变。",
+        "process_text": "当时我就说，鬼子当面，敌人不打吗？大敌当前不打敌人，自己打自己的人啊？另外一个，都是北方人，家乡都沦陷了嘛，父亲母亲早日盼望我们能够打回去，这也是个原因。最大的一个（问题）就是因为平日我们没有共产党的教育，他认为这是个叛变的行动，所以最后又反回去。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0045"
+        ],
+        "evidence_quote": "陈锐霆：当时我就说，鬼子当面，敌人不打吗？大敌当前不打敌人，自己打自己的人啊？另外一个，都是北方人，家乡都沦陷了嘛，父亲母亲早日盼望我们能够打回去，这也是个原因。最大的一个（问题）就是因为平日我们没有共产党的教育，他认为这是个叛变的行动，所以最后又反回去。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "各营长当时表示同意；陈锐霆判断二营、三营营长较可靠，对一营营长不信任。",
+        "process_text": "当时都表示同意。那个时候（在）政治态度（方面），知道二营营长是比较可靠的；三营营长也是我的同学，跟我的关系也比较好，也认为可以。一营营长我就不大相信，因为他是属于营团一个部队编过来的，跟32军没有历史关系。另外这个人非常狡猾的，说话跟行动不一致，品德不怎么样，他另外住的（地方）离我那个团比较远一些。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0048"
+        ],
+        "evidence_quote": "陈锐霆：当时都表示同意。那个时候（在）政治态度（方面），知道二营营长是比较可靠的；三营营长也是我的同学，跟我的关系也比较好，也认为可以。一营营长我就不大相信，因为他是属于营团一个部队编过来的，跟32军没有历史关系。另外这个人非常狡猾的，说话跟行动不一致，品德不怎么样，他另外住的（地方）离我那个团比较远一些。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "对方表示更肯定同意后，陈锐霆说明这是个人意见，给出考虑时间，并表示可向上级告发自己。",
+        "process_text": "也表示同意了，说得更肯定嘛。我就给他讲，我说这是我个人的意见，你们想一想，给你们一个时间，我也好跟上边联系。我说你们如果（觉得）我这个思想不对头，你可以告诉我，另外如果不愿意告诉我，你们愿意向上边告发我也可以。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0053"
+        ],
+        "evidence_quote": "陈锐霆：也表示同意了，说得更肯定嘛。我就给他讲，我说这是我个人的意见，你们想一想，给你们一个时间，我也好跟上边联系。我说你们如果（觉得）我这个思想不对头，你可以告诉我，另外如果不愿意告诉我，你们愿意向上边告发我也可以。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC09-DE004-P01",
+        "target_stage_id": "BATCH03-DOC09-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC09-S0048",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE004-P02",
+        "target_stage_id": "BATCH03-DOC09-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC09-S0053",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

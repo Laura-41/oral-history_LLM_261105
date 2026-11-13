@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T20:46:49",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC03-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC03-DE005",
+  "usage": {
+    "prompt_tokens": 1643,
+    "total_tokens": 6230,
+    "completion_tokens": 4587,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3190
+    },
+    "time_to_first_token_ms": 56748,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V1-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC03-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"进入教导队并接受军政训练，训练持续三个月；期间上政治课、每周进行军事训练，并听取史沫特莱到教导队所作报告。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为‘我就进了教导队，教导队的二期政工队’，终点为教导队军政训练及史沫特莱到教导队作报告；不纳入此前通过封锁线、到军部的行程。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"到达军部后进入教导队二期政工队。\",\n      \"process_text\": \"到军部后，进入教导队，编入教导队二期政工队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0021\"\n      ],\n      \"evidence_quote\": \"我们到军部，我就进了教导队，教导队的二期政工队。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"因政工干部身份被编入二大队政工队，并说明政工队与军事队的编制差异。\",\n      \"process_text\": \"二大队是政工队，因自己是政工干部而到政工队；政工队为四、五、六队，四队是老红军，五队六队是政工队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0023\"\n      ],\n      \"evidence_quote\": \"二大队呢，是政工队，我到政工队，因为我是政工干部。政工队是四、五、六队，四队是老红军，都是短枪。那么五队六队是政工队，都是步枪。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"说明教导队培训路径与内容：新参军者先经入伍生队初步训练再进四、五、六队；进入教导队后进行军事训练、政治训练，课程包括政治经济学、统一战线，游击战术由周子昆教。\",\n      \"process_text\": \"新参军的先经过入伍生队初步训练，再进四、五、六队；进入教导队后进行军事训练、政治训练，先教政治经济学、统一战线，军事的游击战术由周子昆教。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0025\"\n      ],\n      \"evidence_quote\": \"那先要经过入伍生队，入伍生队等于是新生，新参军的经过初步训练以后，再进四、五、六队。四队一般进不去的，他们新来的一般都（去）五队六队。两个女生队，八队，老八队新八队都是女的，我的爱人也是八队的，北京有好多老八队的，每年她们聚一次。（进了）教导队以后呢，就是说在那里军事训练、政治训练。当时教导队总队（队）长是周子昆，是参谋长兼的。那个时候先教的是政治经济学，有政治经济学，有统一战线。张玉华、李一氓，教统一战线，军事的游击战术就是周子昆教。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"政治课还包括历史常识、大众哲学等；每周进行基本与战术军事训练，持续三个月；10月至12月史沫特莱到教导队作动员报告。\",\n      \"process_text\": \"政治课有历史常识、大众哲学等；每个礼拜都有军事训练，包括基本训练、战术训练，持续三个月；10月到12月，史沫特莱到教导队动员并作报告。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0027\"\n      ],\n      \"evidence_quote\": \"政治上学那个叫王什么明，等于是历史常识、大众哲学什么的，讲这些东西，那么教导队政治课大概是这么一些。每一个礼拜都有军事训练，基本训练，战术训练，战术就打，攻了打了，过壕了，上山什么东西，这些都是军事训练，三个月。10月到12月呢，就是国际友人史沫特莱来了。（她）到了新四军以后，就到教导队动员，她把（在）国民党部队里看到医院的乱七八糟，伤员的痛苦情况，做了一个报告。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE005-P01\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0023\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE005-P02\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0025\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE005-P03\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE005-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0027\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC03-DE005",
+    "event_enrichment": {
+      "result_state": "进入教导队并接受军政训练，训练持续三个月；期间上政治课、每周进行军事训练，并听取史沫特莱到教导队所作报告。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起点为‘我就进了教导队，教导队的二期政工队’，终点为教导队军政训练及史沫特莱到教导队作报告；不纳入此前通过封锁线、到军部的行程。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC03-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "到达军部后进入教导队二期政工队。",
+        "process_text": "到军部后，进入教导队，编入教导队二期政工队。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0021"
+        ],
+        "evidence_quote": "我们到军部，我就进了教导队，教导队的二期政工队。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "因政工干部身份被编入二大队政工队，并说明政工队与军事队的编制差异。",
+        "process_text": "二大队是政工队，因自己是政工干部而到政工队；政工队为四、五、六队，四队是老红军，五队六队是政工队。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0023"
+        ],
+        "evidence_quote": "二大队呢，是政工队，我到政工队，因为我是政工干部。政工队是四、五、六队，四队是老红军，都是短枪。那么五队六队是政工队，都是步枪。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "说明教导队培训路径与内容：新参军者先经入伍生队初步训练再进四、五、六队；进入教导队后进行军事训练、政治训练，课程包括政治经济学、统一战线，游击战术由周子昆教。",
+        "process_text": "新参军的先经过入伍生队初步训练，再进四、五、六队；进入教导队后进行军事训练、政治训练，先教政治经济学、统一战线，军事的游击战术由周子昆教。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0025"
+        ],
+        "evidence_quote": "那先要经过入伍生队，入伍生队等于是新生，新参军的经过初步训练以后，再进四、五、六队。四队一般进不去的，他们新来的一般都（去）五队六队。两个女生队，八队，老八队新八队都是女的，我的爱人也是八队的，北京有好多老八队的，每年她们聚一次。（进了）教导队以后呢，就是说在那里军事训练、政治训练。当时教导队总队（队）长是周子昆，是参谋长兼的。那个时候先教的是政治经济学，有政治经济学，有统一战线。张玉华、李一氓，教统一战线，军事的游击战术就是周子昆教。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "政治课还包括历史常识、大众哲学等；每周进行基本与战术军事训练，持续三个月；10月至12月史沫特莱到教导队作动员报告。",
+        "process_text": "政治课有历史常识、大众哲学等；每个礼拜都有军事训练，包括基本训练、战术训练，持续三个月；10月到12月，史沫特莱到教导队动员并作报告。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0027"
+        ],
+        "evidence_quote": "政治上学那个叫王什么明，等于是历史常识、大众哲学什么的，讲这些东西，那么教导队政治课大概是这么一些。每一个礼拜都有军事训练，基本训练，战术训练，战术就打，攻了打了，过壕了，上山什么东西，这些都是军事训练，三个月。10月到12月呢，就是国际友人史沫特莱来了。（她）到了新四军以后，就到教导队动员，她把（在）国民党部队里看到医院的乱七八糟，伤员的痛苦情况，做了一个报告。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC03-DE005-P01",
+        "target_stage_id": "BATCH02-DOC03-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0023",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE005-P02",
+        "target_stage_id": "BATCH02-DOC03-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0025",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE005-P03",
+        "target_stage_id": "BATCH02-DOC03-DE005-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC03-S0027",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

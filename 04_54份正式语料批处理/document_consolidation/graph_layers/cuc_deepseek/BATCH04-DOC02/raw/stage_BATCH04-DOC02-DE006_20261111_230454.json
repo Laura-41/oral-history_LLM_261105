@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T23:04:54",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC02-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC02-DE006",
+  "usage": {
+    "prompt_tokens": 1710,
+    "total_tokens": 7501,
+    "completion_tokens": 5791,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4687
+    },
+    "time_to_first_token_ms": 44532,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC02-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰在苏中卫校兼任公共卫生教员，既承担新来学生的基础训练课程，又承担干部轮训队教学，讲授部队卫生管理与卫生行政；此次为其第二次正式任教。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以原文中“我又兼公共卫生学的教员”及随后对新学生课程、干部轮训队训练对象和授课内容的说明为边界；不扩展到行政后勤、学员生活管理等其他职责。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"兼任公共卫生学教员，承担两门课，其中一门给新来的学生上课，属于基础训练。\",\n      \"process_text\": \"陈海峰因兼任公共卫生教育课教员，要上两门课，其中一门面向新来的学生。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0061\"\n      ],\n      \"evidence_quote\": \"我自己因为还兼公共卫生教育（课）教员，我要上两门课，一个要给新来的学生（上课）。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"兼任干部轮训队教学，明确轮训对象为前方营连以上卫生干部，师卫校培养干部轮训队。\",\n      \"process_text\": \"陈海峰又兼公共卫生学教员，并负责干部轮训队；轮训对象包括前方医政股长、保健股长、材料股长、卫生队副队长、卫生队长、卫生所所长等营连以上干部，师卫校培养干部轮训队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0063\"\n      ],\n      \"evidence_quote\": \"那么我又兼公共卫生学的教员，有一个干部队，叫干部轮训队。把前方的医政股长啊、保健股长啊、材料股长啊，卫生队副队长，卫生队长啊，卫生所所长啊，这一级营连以上，卫生队长是营（级），副队长是副营，那么股长都是连的干部，营的医务员都是连的干部。卫生员都算班排干部。那么这样子呢，我们训练的重点呢，一个新培养的。前方部队营以下的由各个旅去培养，由旅的卫校去培养。我们师的卫校呢，培养两班，一个呢，就是这个干部轮训队，就是营以上的干部和营连干部。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"对干部轮训队讲授部队卫生管理与卫生行政，并自述此前办训练班、此次为第二次正式任教。\",\n      \"process_text\": \"陈海峰对干部轮训队讲部队卫生管理、部队卫生行政，并说明自己此前在皖南3支队5团办过训练班，此次在苏中卫校是第二次正式任教。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0077\"\n      ],\n      \"evidence_quote\": \"老师（是）这样子的，兼职的多，专职的少。譬如我是专职，我就是讲两门课，一门课是公共卫生。对干部轮训的，我讲部队卫生管理，讲部队卫生行政。我在皖南3支队5团就办训练班了。所以实际上（19）39年毕业，（19）40年我就开始教书了。现在（讲的）就是（19）41年的1月了，我（在）这个地方（是）第二次正式任教。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE006-P01\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0063\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE006-P02\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE006-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0077\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC02-DE006",
+    "event_enrichment": {
+      "result_state": "陈海峰在苏中卫校兼任公共卫生教员，既承担新来学生的基础训练课程，又承担干部轮训队教学，讲授部队卫生管理与卫生行政；此次为其第二次正式任教。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以原文中“我又兼公共卫生学的教员”及随后对新学生课程、干部轮训队训练对象和授课内容的说明为边界；不扩展到行政后勤、学员生活管理等其他职责。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC02-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "兼任公共卫生学教员，承担两门课，其中一门给新来的学生上课，属于基础训练。",
+        "process_text": "陈海峰因兼任公共卫生教育课教员，要上两门课，其中一门面向新来的学生。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0061"
+        ],
+        "evidence_quote": "我自己因为还兼公共卫生教育（课）教员，我要上两门课，一个要给新来的学生（上课）。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "兼任干部轮训队教学，明确轮训对象为前方营连以上卫生干部，师卫校培养干部轮训队。",
+        "process_text": "陈海峰又兼公共卫生学教员，并负责干部轮训队；轮训对象包括前方医政股长、保健股长、材料股长、卫生队副队长、卫生队长、卫生所所长等营连以上干部，师卫校培养干部轮训队。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0063"
+        ],
+        "evidence_quote": "那么我又兼公共卫生学的教员，有一个干部队，叫干部轮训队。把前方的医政股长啊、保健股长啊、材料股长啊，卫生队副队长，卫生队长啊，卫生所所长啊，这一级营连以上，卫生队长是营（级），副队长是副营，那么股长都是连的干部，营的医务员都是连的干部。卫生员都算班排干部。那么这样子呢，我们训练的重点呢，一个新培养的。前方部队营以下的由各个旅去培养，由旅的卫校去培养。我们师的卫校呢，培养两班，一个呢，就是这个干部轮训队，就是营以上的干部和营连干部。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "对干部轮训队讲授部队卫生管理与卫生行政，并自述此前办训练班、此次为第二次正式任教。",
+        "process_text": "陈海峰对干部轮训队讲部队卫生管理、部队卫生行政，并说明自己此前在皖南3支队5团办过训练班，此次在苏中卫校是第二次正式任教。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0077"
+        ],
+        "evidence_quote": "老师（是）这样子的，兼职的多，专职的少。譬如我是专职，我就是讲两门课，一门课是公共卫生。对干部轮训的，我讲部队卫生管理，讲部队卫生行政。我在皖南3支队5团就办训练班了。所以实际上（19）39年毕业，（19）40年我就开始教书了。现在（讲的）就是（19）41年的1月了，我（在）这个地方（是）第二次正式任教。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC02-DE006-P01",
+        "target_stage_id": "BATCH04-DOC02-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0063",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE006-P02",
+        "target_stage_id": "BATCH04-DOC02-DE006-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0077",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

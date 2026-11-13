@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-12T17:09:52",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC04-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC04-DE001",
+  "usage": {
+    "prompt_tokens": 1546,
+    "total_tokens": 12469,
+    "completion_tokens": 10923,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9995
+    },
+    "tokens_per_second": 10922000,
+    "time_to_first_token_ms": 213116,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC04-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"三人小组形成并分别驻点，唐志炯在小羊庄（音）帮助小学教书、教抗战知识、训练小学生，陈海峰在吕坵镇做群众工作和抗日宣传工作。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起自 S0010 中 18 人编成 6 个小组、我带 3 人小组及成员说明，止于 S0012 中三人住三个地方及唐志炯、陈海峰驻点分工说明。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"确定三人小组编制与成员\",\n      \"process_text\": \"18个人编成6个小组，我带了一个小组3个人，成员包括唐志炯和滕松根。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0010\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我们的编制方案就是18个人编成6个小组。我带了一个小组3个人，一个叫唐志炯，唐就是“唐朝”的“唐”，志就是“同志”的“志”，炯就是“眼部炯炯有光”（的“炯”）。后来（他）是上海二医大的训练部长，现在过世了。（他是）宁波人，（挺）不错的（一位同志），（他是）皖南第五期的。还有一个是第三期的，（他）和我老伴是同学，也是男的，丹阳当地人，叫滕松根。“滕代远”的“滕”。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"三人分别驻点，唐志炯与陈海峰开展抗日宣传、群众工作与小学抗日教育\",\n      \"process_text\": \"三人住三个地方；唐志炯住小羊庄（音），帮助当地教书、教抗战知识、训练小学生；陈海峰住吕坵镇，做群众工作、搞抗日宣传工作。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0012\"\n      ],\n      \"evidence_quote\": \"    陈海峰：松是“松树”的“松”，根就是“树根”的“根”。（19）38年参加革命的。解放以后，（他）在广西结核病医院当院长，也过世了。我们这个三人小组，三个人住三个地方。唐志炯住在住在小羊庄（音），那里有个小学，他帮助当地教书，教他（们）一些抗战的知识，训练小学生。我做群众工作，搞抗日宣传工作，在一个镇上住，叫吕坵镇。吕是双口“吕”，坵是提土旁加土丘的“丘”，这个镇现在还在那，属于金坛县。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE001-P01\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0012\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC04-DE001",
+    "event_enrichment": {
+      "result_state": "三人小组形成并分别驻点，唐志炯在小羊庄（音）帮助小学教书、教抗战知识、训练小学生，陈海峰在吕坵镇做群众工作和抗日宣传工作。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起自 S0010 中 18 人编成 6 个小组、我带 3 人小组及成员说明，止于 S0012 中三人住三个地方及唐志炯、陈海峰驻点分工说明。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC04-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "确定三人小组编制与成员",
+        "process_text": "18个人编成6个小组，我带了一个小组3个人，成员包括唐志炯和滕松根。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0010"
+        ],
+        "evidence_quote": "    陈海峰：我们的编制方案就是18个人编成6个小组。我带了一个小组3个人，一个叫唐志炯，唐就是“唐朝”的“唐”，志就是“同志”的“志”，炯就是“眼部炯炯有光”（的“炯”）。后来（他）是上海二医大的训练部长，现在过世了。（他是）宁波人，（挺）不错的（一位同志），（他是）皖南第五期的。还有一个是第三期的，（他）和我老伴是同学，也是男的，丹阳当地人，叫滕松根。“滕代远”的“滕”。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "三人分别驻点，唐志炯与陈海峰开展抗日宣传、群众工作与小学抗日教育",
+        "process_text": "三人住三个地方；唐志炯住小羊庄（音），帮助当地教书、教抗战知识、训练小学生；陈海峰住吕坵镇，做群众工作、搞抗日宣传工作。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0012"
+        ],
+        "evidence_quote": "    陈海峰：松是“松树”的“松”，根就是“树根”的“根”。（19）38年参加革命的。解放以后，（他）在广西结核病医院当院长，也过世了。我们这个三人小组，三个人住三个地方。唐志炯住在住在小羊庄（音），那里有个小学，他帮助当地教书，教他（们）一些抗战的知识，训练小学生。我做群众工作，搞抗日宣传工作，在一个镇上住，叫吕坵镇。吕是双口“吕”，坵是提土旁加土丘的“丘”，这个镇现在还在那，属于金坛县。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC04-DE001-P01",
+        "target_stage_id": "BATCH07-DOC04-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC04-S0012",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T23:32:56",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC08-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC08-DE004",
+  "usage": {
+    "prompt_tokens": 1335,
+    "total_tokens": 4192,
+    "completion_tokens": 2857,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1998
+    },
+    "time_to_first_token_ms": 25446,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC08-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆被指定接任淮阴警备司令，但未上任，随后作为先遣代表赴山东。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以三师调东北、洪学智离开后警备司令一职转由陈锐霆担任为起点，以其自述未上任并作为先遣代表赴山东为终点。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"背景：三师攻下淮阴，洪学智任警备司令，军部迁至淮阴。\",\n      \"process_text\": \"三师打下淮阴后，洪学智任警备司令；鬼子投降后军部转到淮阴。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0010\"\n      ],\n      \"evidence_quote\": \"接着三师打下了淮阴，洪学智那个时候是独立旅的旅长，打下淮阴后他（当）的警备司令。鬼子投降以后，打下淮阴来，军部一下子就转到淮阴了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"中央命令三师调东北，洪学智离开，其警备司令一职由陈锐霆担任。\",\n      \"process_text\": \"中央命令三师调东北，洪学智走后，他的警备司令一职由陈锐霆担任。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0010\"\n      ],\n      \"evidence_quote\": \"到那里以后，中央来了命令，就要三师调东北去，洪学智同志走了，他的警备司令（一职）由我来担任。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"结果：陈锐霆未上任淮阴警备司令，转作为先遣代表赴山东。\",\n      \"process_text\": \"陈锐霆自述淮阴警备司令未上任，并被派为先遣代表先到山东。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0016\"\n      ],\n      \"evidence_quote\": \"我这淮阴的警备司令也没上任，两个司令都没上任（陈锐霆笑），是命（我）作为一个先遣的代表吧，先到了山东去。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE004-P01\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0010\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE004-P02\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE004-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0016\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC08-DE004",
+    "event_enrichment": {
+      "result_state": "陈锐霆被指定接任淮阴警备司令，但未上任，随后作为先遣代表赴山东。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以三师调东北、洪学智离开后警备司令一职转由陈锐霆担任为起点，以其自述未上任并作为先遣代表赴山东为终点。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC08-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "背景：三师攻下淮阴，洪学智任警备司令，军部迁至淮阴。",
+        "process_text": "三师打下淮阴后，洪学智任警备司令；鬼子投降后军部转到淮阴。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "evidence_quote": "接着三师打下了淮阴，洪学智那个时候是独立旅的旅长，打下淮阴后他（当）的警备司令。鬼子投降以后，打下淮阴来，军部一下子就转到淮阴了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "中央命令三师调东北，洪学智离开，其警备司令一职由陈锐霆担任。",
+        "process_text": "中央命令三师调东北，洪学智走后，他的警备司令一职由陈锐霆担任。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "evidence_quote": "到那里以后，中央来了命令，就要三师调东北去，洪学智同志走了，他的警备司令（一职）由我来担任。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "结果：陈锐霆未上任淮阴警备司令，转作为先遣代表赴山东。",
+        "process_text": "陈锐霆自述淮阴警备司令未上任，并被派为先遣代表先到山东。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0016"
+        ],
+        "evidence_quote": "我这淮阴的警备司令也没上任，两个司令都没上任（陈锐霆笑），是命（我）作为一个先遣的代表吧，先到了山东去。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC08-DE004-P01",
+        "target_stage_id": "BATCH04-DOC08-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC08-S0010",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC08-DE004-P02",
+        "target_stage_id": "BATCH04-DOC08-DE004-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC08-S0016",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

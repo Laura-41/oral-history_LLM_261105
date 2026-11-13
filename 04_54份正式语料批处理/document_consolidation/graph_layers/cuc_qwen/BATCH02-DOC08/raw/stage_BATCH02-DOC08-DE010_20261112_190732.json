@@ -1,0 +1,144 @@
+{
+  "run_time": "2026-11-12T19:07:32",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC08-DE010",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC08-DE010",
+  "usage": {
+    "prompt_tokens": 1641,
+    "total_tokens": 13321,
+    "completion_tokens": 11680,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9932
+    },
+    "time_to_first_token_ms": 354114,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC08-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"新四军在江北建立自己政权，靖江县成为第一个县政府，政权由保密、不公开转为公开。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点依据“皖南事变”以后；核心依据挺进江北、黄桥战役后建立自己政权；结果依据新四军才有自己政权、靖江县第一个县政府；公开依据撕破脸了就公开了、此前保密不公开。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"此前不能独立自主，控制区名义上是他的、实际上是我们的。\",\n      \"process_text\": \"不能独立自主。联保主任以上，乡镇长以上，基本都是他的。但是两面的，我们的控制区呢，名义上是他的，实际上是我们的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0056\"\n      ],\n      \"evidence_quote\": \"陈海峰：不能独立自主。联保主任以上，乡镇长以上，基本都是他的。但是两面的，我们的控制区呢，名义上是他的，实际上是我们的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"皖南事变以后成为事件时间起点。\",\n      \"process_text\": \"“皖南事变”以后。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0050\"\n      ],\n      \"evidence_quote\": \"陈海峰：“皖南事变”以后。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"新四军挺进江北，黄桥战役后建立自己政权。\",\n      \"process_text\": \"我们挺进到江北，打了“黄桥战役”以后，我们就建立自己政权，\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0052\"\n      ],\n      \"evidence_quote\": \"陈海峰：我们挺进到江北，打了“黄桥战役”以后，我们就建立自己政权，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE010-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"新四军由此拥有自己政权。\",\n      \"process_text\": \"新四军才有自己政权。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0053\"\n      ],\n      \"evidence_quote\": \"新四军才有自己政权。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE010-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"靖江县成为第一个县政府，具体体现政权建立。\",\n      \"process_text\": \"我们东进部队，就第一个看到靖江县，是我们第一个县政府。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0048\"\n      ],\n      \"evidence_quote\": \"陈海峰：那边有了，江南没有，江南晚。所以我到后面要讲到，我们东进部队，就第一个看到靖江县，是我们第一个县政府。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE010-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"撕破脸后公开，此前保密、不公开。\",\n      \"process_text\": \"撕破脸了，就公开了。“皖南事变”之前都保密的，都是秘密的，都按照他的编制。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0058\"\n      ],\n      \"evidence_quote\": \"陈海峰：撕破脸了，就公开了。“皖南事变”之前都保密的，都是秘密的，都按照他的编制。政委都叫副的，谭震林是副司令，实际上是政委。我们五团的团长是叫徐锦树，政委是叫林开凤，那林开凤是叫副团长。我在二营当卫生队长，营长是陈仁洪，后来在济南军区当过政委，在北京军区当过政委是不是，后来到了卫生部还当卫生部军管会主任，副营长是马长炎，以后当安徽省的副省长，这副营长实际是政委。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE010-P01\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0050\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE010-P02\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE010-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0052\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE010-P03\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE010-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0053\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE010-P04\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE010-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0048\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE010-P05\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE010-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0058\",\n      \"confidence\": \"LOW\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC08-DE010",
+    "event_enrichment": {
+      "result_state": "新四军在江北建立自己政权，靖江县成为第一个县政府，政权由保密、不公开转为公开。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点依据“皖南事变”以后；核心依据挺进江北、黄桥战役后建立自己政权；结果依据新四军才有自己政权、靖江县第一个县政府；公开依据撕破脸了就公开了、此前保密不公开。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC08-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "此前不能独立自主，控制区名义上是他的、实际上是我们的。",
+        "process_text": "不能独立自主。联保主任以上，乡镇长以上，基本都是他的。但是两面的，我们的控制区呢，名义上是他的，实际上是我们的。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0056"
+        ],
+        "evidence_quote": "陈海峰：不能独立自主。联保主任以上，乡镇长以上，基本都是他的。但是两面的，我们的控制区呢，名义上是他的，实际上是我们的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "皖南事变以后成为事件时间起点。",
+        "process_text": "“皖南事变”以后。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0050"
+        ],
+        "evidence_quote": "陈海峰：“皖南事变”以后。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "新四军挺进江北，黄桥战役后建立自己政权。",
+        "process_text": "我们挺进到江北，打了“黄桥战役”以后，我们就建立自己政权，",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0052"
+        ],
+        "evidence_quote": "陈海峰：我们挺进到江北，打了“黄桥战役”以后，我们就建立自己政权，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE010-P04",
+        "stage_order": 4,
+        "stage_summary": "新四军由此拥有自己政权。",
+        "process_text": "新四军才有自己政权。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0053"
+        ],
+        "evidence_quote": "新四军才有自己政权。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE010-P05",
+        "stage_order": 5,
+        "stage_summary": "靖江县成为第一个县政府，具体体现政权建立。",
+        "process_text": "我们东进部队，就第一个看到靖江县，是我们第一个县政府。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0048"
+        ],
+        "evidence_quote": "陈海峰：那边有了，江南没有，江南晚。所以我到后面要讲到，我们东进部队，就第一个看到靖江县，是我们第一个县政府。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE010-P06",
+        "stage_order": 6,
+        "stage_summary": "撕破脸后公开，此前保密、不公开。",
+        "process_text": "撕破脸了，就公开了。“皖南事变”之前都保密的，都是秘密的，都按照他的编制。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0058"
+        ],
+        "evidence_quote": "陈海峰：撕破脸了，就公开了。“皖南事变”之前都保密的，都是秘密的，都按照他的编制。政委都叫副的，谭震林是副司令，实际上是政委。我们五团的团长是叫徐锦树，政委是叫林开凤，那林开凤是叫副团长。我在二营当卫生队长，营长是陈仁洪，后来在济南军区当过政委，在北京军区当过政委是不是，后来到了卫生部还当卫生部军管会主任，副营长是马长炎，以后当安徽省的副省长，这副营长实际是政委。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC08-DE010-P01",
+        "target_stage_id": "BATCH02-DOC08-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0050",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE010-P02",
+        "target_stage_id": "BATCH02-DOC08-DE010-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0052",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE010-P03",
+        "target_stage_id": "BATCH02-DOC08-DE010-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC08-S0053",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE010-P04",
+        "target_stage_id": "BATCH02-DOC08-DE010-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC08-S0048",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE010-P05",
+        "target_stage_id": "BATCH02-DOC08-DE010-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0058",
+        "confidence": "LOW"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

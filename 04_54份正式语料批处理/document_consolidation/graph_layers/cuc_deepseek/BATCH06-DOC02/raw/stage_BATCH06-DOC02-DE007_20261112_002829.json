@@ -1,0 +1,186 @@
+{
+  "run_time": "2026-11-12T00:28:29",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC02-DE007",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC02-DE007",
+  "usage": {
+    "prompt_tokens": 2656,
+    "total_tokens": 15895,
+    "completion_tokens": 13239,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10352
+    },
+    "time_to_first_token_ms": 109255,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13238000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-18\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC02-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"医院通过就地取材、缴获药品和医务人员献血输血，保证了伤员救护工作可以进行。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于药品和物资供应困难下的就地取材，止于前方缴获送后方及医务人员献血输血解决救护用血问题；S0055的总结性表述作为结果状态，不单列阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"药品供应困难，医务人员就地取材，收购并请百姓采集中草药替代部分药品。\",\n      \"process_text\": \"药品困难、供应不上，医务人员就地取材，能用的中草药都用到镇上和老百姓家里收购，请老百姓挖。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0034\"\n      ],\n      \"evidence_quote\": \"    陈海峰：每天还备战，还要采野菜，药品还困难，供应不上。我们都是就地取材了，能用的中草药都用。（到）镇上去收购，（到）老百姓家里收购，请老百姓挖，许多中草药我们能用的，弄来。那许多战争里用的物资呢，供应不上啊，布匹也没有了，龙头细布哪儿来？没有了。南方那个地区呀，就没有龙头细布了。有什么？他只有绸布，到处都是绸布啊。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"棉布供应不上，绸布虽多但不宜做绷带，只能起固定作用且湿后变硬。\",\n      \"process_text\": \"绸缎很多，但做绷带没有弹性，不能吸湿，湿后变硬会压迫血管，不能像棉布那样做绷带。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0037\",\n        \"BATCH06-DOC02-S0039\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那没有办法也做绷带了。它为什么（不能做绷带）？绸缎做绷带没有弹性，棉布（是）有弹性的，它能吸湿，吸那个脓啊，血啊，渗出液啊，它能够吸水。那么（做成）这个绷带、纱布都可运用。那个绸布不行！绸布可以（起）固定作用，但是等到一湿，变成硬的了，反而压迫血管（影响血液）流动，它有那个坏处。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"发挥竹子作用，制作不同竹床，满足轻伤、重伤及胸部枪伤伤员半卧等体位需要。\",\n      \"process_text\": \"用竹子做各种竹床，有轻伤用的，有重伤用的；重伤员可做半睡半卧，胸部枪伤伤员需要半睡半卧。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0041\",\n        \"BATCH06-DOC02-S0042\",\n        \"BATCH06-DOC02-S0043\"\n      ],\n      \"evidence_quote\": \"用竹子来做这个竹床。做各种各样的竹床，有轻伤用的，有重伤的。重伤的有这个半睡半卧的，我们现在不是（手柄）摇床（控制俯仰升降）嘛，那个时候不能做摇床，但是可以做半睡半卧的。这个胸部枪伤（的伤员），他要半睡半卧。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"用竹子制作尿盆、尿罐、水罐等，解决伤员排尿、饮水等生活困难。\",\n      \"process_text\": \"重伤员大便不便时在竹床下挖洞插竹制容器；又做尿盆、尿罐、饮水竹罐，战士用竹筒做水壶。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0045\",\n        \"BATCH06-DOC02-S0046\",\n        \"BATCH06-DOC02-S0047\",\n        \"BATCH06-DOC02-S0048\"\n      ],\n      \"evidence_quote\": \"    陈海峰：拿出来可以冲洗。做那个尿盆，做那尿罐，用那个毛竹大，那个最大的毛竹这么粗啊（陈海峰示意直径二三十厘米左右），江竹子。饮水的水罐，两节之间弄一个洞，弄一个小的竹管放进去，里面灌上水，就可以吸水，弄一个绳子一吊（就可以斜挎着）。那个战士啊，都是没有水壶，那就用这个，自己做水壶。医院里呢，就用那个长的竹子，上面挖空了以后，男同志可以尿尿。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE007-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"用竹子制作尿桶、药纸盆、碗筷、换药镊子等，甚至盐水瓶也以竹制为主，发挥能工巧匠作用。\",\n      \"process_text\": \"尿桶、换药药纸盆、吃饭碗筷、换药镊子、打针盐水瓶等，除细管子是舶来品外，其他全是竹子做的；保健科长还用毛竹做钢笔。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0051\"\n      ],\n      \"evidence_quote\": \"那个是尿桶，尿桶是整个的。换药的那个药纸盆（音），吃饭的碗，筷子，那换药的镊子，都是（竹制）的，甚至于打针的盐水的瓶子。就这么一根细的（音）管子，管子那个是舶来品，是外面来的，其他全是竹子做的。能工巧匠（很多），我们那个保健科长很聪明的，自己用毛竹能够做成钢笔写字。就是那一段吸水的用橡皮（套），整个的都是毛竹做的。后来大家还学了他，做写字那个钢笔，可以流水，粗一点就是，都用毛竹做。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE007-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"利用当地造纸传统，以消毒纸代替纱布，并用绸布包裹，克服敷料困难。\",\n      \"process_text\": \"当地老百姓有做纸习惯，医务人员充分利用纸，消毒后代替纱布，吸湿性和弹性好，再用绸布包上，解决敷料问题。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0053\"\n      ],\n      \"evidence_quote\": \"    陈海峰：这个毛竹啊是个好东西，所以当地的老百姓啊，从三国以后，东晋时代开始，就有做纸的习惯。大概几百个纸坊，做纸的，人工做纸啊，宣纸啊，都很好的，画画写字的那种纸。我们充分利用这个纸，那个纸就代替纱布消毒。消毒好了，它吸湿性很好，弹性也很好。那么这样子，用这个绸布包上呢，没多大问题了，这样子来克服这个困难。就地取材，代替部分药品，那么譬如伤兵的敷料、用具尽量用当地的东西。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE007-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"部队供应靠缴获，战后要求将麻醉药、止痛药、奶粉、葡萄糖、血浆粉等从前方送到后方。\",\n      \"process_text\": \"医务人员没有药品就靠缴获；打了以后要求战士和卫生机构把东西送到卫生队、旅部卫生部、纵队部后方，特别是麻醉药、止痛药和血浆粉等。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0056\",\n        \"BATCH06-DOC02-S0057\"\n      ],\n      \"evidence_quote\": \"    陈海峰：打了以后，要求战士注意，他们这个卫生机构的，马上要把东西送到我们的卫生队，要送到我们的旅部、卫生部，要送到我们纵队部来，送到我们这个后方来。特别（是）麻醉药、止痛药。看到……敌人装备好啊，他都是美械装备，美国供应的，所以他有奶粉啊，有牛奶啊，罐头啊，有葡萄糖啊，粉哪，有配盐水的那个原料啊。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE007-P08\",\n      \"stage_order\": 8,\n      \"stage_summary\": \"用缴获血浆粉和医务人员献血给重伤干部输血，解决无血库条件下的用血问题。\",\n      \"process_text\": \"有血浆粉就马上送后方；重伤干部需要输血浆的给他输血浆。没有血库，主要抽医务人员中身体好的手术室、病房护士的血，一次200CC、400CC，两个礼拜以后才能再抽；前方缴获马上送后方解决用血问题。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0059\"\n      ],\n      \"evidence_quote\": \"    陈海峰：有这个血浆粉啊，要他马上送到后方来。这样子我们对干部有负重伤的，应该输血浆的，给他输血浆。哪来那么多血呀？我们没有血库，主要提取的我们医务人员（的血）。手术室的、病房里的护士，身体好的，来了给输血，一抽200CC、400CC。两个礼拜以后才能抽，你不能老抽啊，受不了啊。那个时候吃还吃不上，是不是。那个时候不能老抽工作人员的血。老百姓哪来血啊？那个时候没有血好抽。所以前方缴获的马上送后方，来解决这些问题。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE007-P01\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0037\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE007-P02\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0043\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE007-P03\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE007-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0045\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE007-P04\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE007-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0051\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE007-P05\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE007-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0053\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE007-P06\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE007-P07\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0056\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE007-P07\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE007-P08\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0059\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-18",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC02-DE007",
+    "event_enrichment": {
+      "result_state": "医院通过就地取材、缴获药品和医务人员献血输血，保证了伤员救护工作可以进行。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于药品和物资供应困难下的就地取材，止于前方缴获送后方及医务人员献血输血解决救护用血问题；S0055的总结性表述作为结果状态，不单列阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC02-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "药品供应困难，医务人员就地取材，收购并请百姓采集中草药替代部分药品。",
+        "process_text": "药品困难、供应不上，医务人员就地取材，能用的中草药都用到镇上和老百姓家里收购，请老百姓挖。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0034"
+        ],
+        "evidence_quote": "    陈海峰：每天还备战，还要采野菜，药品还困难，供应不上。我们都是就地取材了，能用的中草药都用。（到）镇上去收购，（到）老百姓家里收购，请老百姓挖，许多中草药我们能用的，弄来。那许多战争里用的物资呢，供应不上啊，布匹也没有了，龙头细布哪儿来？没有了。南方那个地区呀，就没有龙头细布了。有什么？他只有绸布，到处都是绸布啊。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "棉布供应不上，绸布虽多但不宜做绷带，只能起固定作用且湿后变硬。",
+        "process_text": "绸缎很多，但做绷带没有弹性，不能吸湿，湿后变硬会压迫血管，不能像棉布那样做绷带。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0037",
+          "BATCH06-DOC02-S0039"
+        ],
+        "evidence_quote": "    陈海峰：那没有办法也做绷带了。它为什么（不能做绷带）？绸缎做绷带没有弹性，棉布（是）有弹性的，它能吸湿，吸那个脓啊，血啊，渗出液啊，它能够吸水。那么（做成）这个绷带、纱布都可运用。那个绸布不行！绸布可以（起）固定作用，但是等到一湿，变成硬的了，反而压迫血管（影响血液）流动，它有那个坏处。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "发挥竹子作用，制作不同竹床，满足轻伤、重伤及胸部枪伤伤员半卧等体位需要。",
+        "process_text": "用竹子做各种竹床，有轻伤用的，有重伤用的；重伤员可做半睡半卧，胸部枪伤伤员需要半睡半卧。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0041",
+          "BATCH06-DOC02-S0042",
+          "BATCH06-DOC02-S0043"
+        ],
+        "evidence_quote": "用竹子来做这个竹床。做各种各样的竹床，有轻伤用的，有重伤的。重伤的有这个半睡半卧的，我们现在不是（手柄）摇床（控制俯仰升降）嘛，那个时候不能做摇床，但是可以做半睡半卧的。这个胸部枪伤（的伤员），他要半睡半卧。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "用竹子制作尿盆、尿罐、水罐等，解决伤员排尿、饮水等生活困难。",
+        "process_text": "重伤员大便不便时在竹床下挖洞插竹制容器；又做尿盆、尿罐、饮水竹罐，战士用竹筒做水壶。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0045",
+          "BATCH06-DOC02-S0046",
+          "BATCH06-DOC02-S0047",
+          "BATCH06-DOC02-S0048"
+        ],
+        "evidence_quote": "    陈海峰：拿出来可以冲洗。做那个尿盆，做那尿罐，用那个毛竹大，那个最大的毛竹这么粗啊（陈海峰示意直径二三十厘米左右），江竹子。饮水的水罐，两节之间弄一个洞，弄一个小的竹管放进去，里面灌上水，就可以吸水，弄一个绳子一吊（就可以斜挎着）。那个战士啊，都是没有水壶，那就用这个，自己做水壶。医院里呢，就用那个长的竹子，上面挖空了以后，男同志可以尿尿。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE007-P05",
+        "stage_order": 5,
+        "stage_summary": "用竹子制作尿桶、药纸盆、碗筷、换药镊子等，甚至盐水瓶也以竹制为主，发挥能工巧匠作用。",
+        "process_text": "尿桶、换药药纸盆、吃饭碗筷、换药镊子、打针盐水瓶等，除细管子是舶来品外，其他全是竹子做的；保健科长还用毛竹做钢笔。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0051"
+        ],
+        "evidence_quote": "那个是尿桶，尿桶是整个的。换药的那个药纸盆（音），吃饭的碗，筷子，那换药的镊子，都是（竹制）的，甚至于打针的盐水的瓶子。就这么一根细的（音）管子，管子那个是舶来品，是外面来的，其他全是竹子做的。能工巧匠（很多），我们那个保健科长很聪明的，自己用毛竹能够做成钢笔写字。就是那一段吸水的用橡皮（套），整个的都是毛竹做的。后来大家还学了他，做写字那个钢笔，可以流水，粗一点就是，都用毛竹做。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE007-P06",
+        "stage_order": 6,
+        "stage_summary": "利用当地造纸传统，以消毒纸代替纱布，并用绸布包裹，克服敷料困难。",
+        "process_text": "当地老百姓有做纸习惯，医务人员充分利用纸，消毒后代替纱布，吸湿性和弹性好，再用绸布包上，解决敷料问题。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0053"
+        ],
+        "evidence_quote": "    陈海峰：这个毛竹啊是个好东西，所以当地的老百姓啊，从三国以后，东晋时代开始，就有做纸的习惯。大概几百个纸坊，做纸的，人工做纸啊，宣纸啊，都很好的，画画写字的那种纸。我们充分利用这个纸，那个纸就代替纱布消毒。消毒好了，它吸湿性很好，弹性也很好。那么这样子，用这个绸布包上呢，没多大问题了，这样子来克服这个困难。就地取材，代替部分药品，那么譬如伤兵的敷料、用具尽量用当地的东西。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE007-P07",
+        "stage_order": 7,
+        "stage_summary": "部队供应靠缴获，战后要求将麻醉药、止痛药、奶粉、葡萄糖、血浆粉等从前方送到后方。",
+        "process_text": "医务人员没有药品就靠缴获；打了以后要求战士和卫生机构把东西送到卫生队、旅部卫生部、纵队部后方，特别是麻醉药、止痛药和血浆粉等。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0056",
+          "BATCH06-DOC02-S0057"
+        ],
+        "evidence_quote": "    陈海峰：打了以后，要求战士注意，他们这个卫生机构的，马上要把东西送到我们的卫生队，要送到我们的旅部、卫生部，要送到我们纵队部来，送到我们这个后方来。特别（是）麻醉药、止痛药。看到……敌人装备好啊，他都是美械装备，美国供应的，所以他有奶粉啊，有牛奶啊，罐头啊，有葡萄糖啊，粉哪，有配盐水的那个原料啊。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE007-P08",
+        "stage_order": 8,
+        "stage_summary": "用缴获血浆粉和医务人员献血给重伤干部输血，解决无血库条件下的用血问题。",
+        "process_text": "有血浆粉就马上送后方；重伤干部需要输血浆的给他输血浆。没有血库，主要抽医务人员中身体好的手术室、病房护士的血，一次200CC、400CC，两个礼拜以后才能再抽；前方缴获马上送后方解决用血问题。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0059"
+        ],
+        "evidence_quote": "    陈海峰：有这个血浆粉啊，要他马上送到后方来。这样子我们对干部有负重伤的，应该输血浆的，给他输血浆。哪来那么多血呀？我们没有血库，主要提取的我们医务人员（的血）。手术室的、病房里的护士，身体好的，来了给输血，一抽200CC、400CC。两个礼拜以后才能抽，你不能老抽啊，受不了啊。那个时候吃还吃不上，是不是。那个时候不能老抽工作人员的血。老百姓哪来血啊？那个时候没有血好抽。所以前方缴获的马上送后方，来解决这些问题。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC02-DE007-P01",
+        "target_stage_id": "BATCH06-DOC02-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0037",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE007-P02",
+        "target_stage_id": "BATCH06-DOC02-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0043",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE007-P03",
+        "target_stage_id": "BATCH06-DOC02-DE007-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0045",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE007-P04",
+        "target_stage_id": "BATCH06-DOC02-DE007-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0051",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE007-P05",
+        "target_stage_id": "BATCH06-DOC02-DE007-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0053",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE007-P06",
+        "target_stage_id": "BATCH06-DOC02-DE007-P07",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0056",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE007-P07",
+        "target_stage_id": "BATCH06-DOC02-DE007-P08",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0059",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

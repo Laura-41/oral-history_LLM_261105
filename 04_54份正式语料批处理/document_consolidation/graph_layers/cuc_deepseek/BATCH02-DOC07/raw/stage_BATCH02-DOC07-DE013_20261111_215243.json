@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-11T21:52:43",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC07-DE013",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC07-DE013",
+  "usage": {
+    "prompt_tokens": 1337,
+    "total_tokens": 3736,
+    "completion_tokens": 2399,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1406
+    },
+    "time_to_first_token_ms": 18536,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC07-DE013\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈毅确认陈海峰就是当年自己给过10块钱的人，双方结束这段重逢交谈，并表示此事以后再说。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“那天开学就碰到陈毅元帅”为起点，至陈毅确认“那个10块钱是你呀”及“以后再说了”为终点；仅覆盖开学时重逢寒暄与10块钱旧事确认，不延伸到后续黄农挑选同学等事。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE013-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"开学当天陈海峰遇到陈毅，陈毅对他尚有印象。\",\n      \"process_text\": \"那天开学就碰到陈毅元帅，他还有点印象。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0063\"\n      ],\n      \"evidence_quote\": \"那天开学就碰到陈毅元帅，他还有点印象。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE013-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈毅主动发问，表示似乎在哪里见过陈海峰。\",\n      \"process_text\": \"陈老总还（说）：“哎？我（在）哪里见过你啊！”\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0063\"\n      ],\n      \"evidence_quote\": \"陈老总还（说）：“哎？我（在）哪里见过你啊！”\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE013-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈海峰说明自己已第五次见陈毅，并提及离开时陈毅给过10块钱。\",\n      \"process_text\": \"我说：“陈司令，你没见过我，我今天是第五次见你了，一支队我都见过你四次了。我走的时候，你还给我10块钱呢。”\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0063\"\n      ],\n      \"evidence_quote\": \"我说：“陈司令，你没见过我，我今天是第五次见你了，一支队我都见过你四次了。我走的时候，你还给我10块钱呢。”\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE013-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"陈毅确认当年给10块钱的对象就是陈海峰。\",\n      \"process_text\": \"“啊，是吗？那个10块钱是你呀！”\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0063\"\n      ],\n      \"evidence_quote\": \"“啊，是吗？那个10块钱是你呀！”\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE013-P01\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE013-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0063\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE013-P02\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE013-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0063\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE013-P03\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE013-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0063\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V2-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC07-DE013",
+    "event_enrichment": {
+      "result_state": "陈毅确认陈海峰就是当年自己给过10块钱的人，双方结束这段重逢交谈，并表示此事以后再说。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以“那天开学就碰到陈毅元帅”为起点，至陈毅确认“那个10块钱是你呀”及“以后再说了”为终点；仅覆盖开学时重逢寒暄与10块钱旧事确认，不延伸到后续黄农挑选同学等事。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC07-DE013-P01",
+        "stage_order": 1,
+        "stage_summary": "开学当天陈海峰遇到陈毅，陈毅对他尚有印象。",
+        "process_text": "那天开学就碰到陈毅元帅，他还有点印象。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0063"
+        ],
+        "evidence_quote": "那天开学就碰到陈毅元帅，他还有点印象。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE013-P02",
+        "stage_order": 2,
+        "stage_summary": "陈毅主动发问，表示似乎在哪里见过陈海峰。",
+        "process_text": "陈老总还（说）：“哎？我（在）哪里见过你啊！”",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0063"
+        ],
+        "evidence_quote": "陈老总还（说）：“哎？我（在）哪里见过你啊！”",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE013-P03",
+        "stage_order": 3,
+        "stage_summary": "陈海峰说明自己已第五次见陈毅，并提及离开时陈毅给过10块钱。",
+        "process_text": "我说：“陈司令，你没见过我，我今天是第五次见你了，一支队我都见过你四次了。我走的时候，你还给我10块钱呢。”",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0063"
+        ],
+        "evidence_quote": "我说：“陈司令，你没见过我，我今天是第五次见你了，一支队我都见过你四次了。我走的时候，你还给我10块钱呢。”",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE013-P04",
+        "stage_order": 4,
+        "stage_summary": "陈毅确认当年给10块钱的对象就是陈海峰。",
+        "process_text": "“啊，是吗？那个10块钱是你呀！”",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0063"
+        ],
+        "evidence_quote": "“啊，是吗？那个10块钱是你呀！”",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC07-DE013-P01",
+        "target_stage_id": "BATCH02-DOC07-DE013-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0063",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE013-P02",
+        "target_stage_id": "BATCH02-DOC07-DE013-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0063",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE013-P03",
+        "target_stage_id": "BATCH02-DOC07-DE013-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC07-S0063",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

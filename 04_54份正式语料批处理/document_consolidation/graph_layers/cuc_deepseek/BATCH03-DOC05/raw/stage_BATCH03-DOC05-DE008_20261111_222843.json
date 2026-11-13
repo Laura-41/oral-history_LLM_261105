@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T22:28:43",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC05-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC05-DE008",
+  "usage": {
+    "prompt_tokens": 1395,
+    "total_tokens": 5076,
+    "completion_tokens": 3681,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2726
+    },
+    "time_to_first_token_ms": 29175,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-07\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC05-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"敌人已把陈锐霆等数人列入暗杀计划；当夜陈锐霆晚归后听到外面有声音，原文未交代暗杀是否实施及最终结果。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件从陈锐霆部警卫部署薄弱、敌人形成暗杀计划写起，到当夜陈锐霆晚归刚躺下听到外面有声音为止；后续是否发生暗杀行动不在所给片段内。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆部未重视加强警卫，仅编成规模有限的警卫部队，且驻地河沟多、警卫部队分住河沟另一边。\",\n      \"process_text\": \"未重视加强警卫，只编了警卫小连/大排；驻地河沟多，我方与警卫部队分住河沟两边。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0042\"\n      ],\n      \"evidence_quote\": \"我们都没有重视张爱萍的意见，（没有）加强自己的警卫。但是也做了一些活动，就编了一个警卫小连吧，也是个大排，编了这么一个警卫部队。但是我们住的那个地方河沟子很多，我们住到河沟的这一边，警卫部队就住到河沟的那一边。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"敌人采取暗杀手段，将陈锐霆、国民党中校政治指导员、二营营长、团副和王兴纲列入暗杀计划。\",\n      \"process_text\": \"敌人采取暗杀办法，陈锐霆等数人都在暗杀计划之内。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0042\"\n      ],\n      \"evidence_quote\": \"所以当敌人采取暗杀的办法，我一个，一个国民党的中校，政治指导员，还有二营营长、团副，还有王兴纲同志，这几个人都在他暗杀的计划之内。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"当夜陈锐霆因妇救会、县委机关询问国民党部队情况而晚归，12点多刚躺下便听到外面有声音。\",\n      \"process_text\": \"当夜因妇救会、县委机关询问情况，陈锐霆回来已12点多，刚躺下听到外面有声音。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0044\"\n      ],\n      \"evidence_quote\": \"当夜的时候，因为这个地方的妇救会、县委的一些机关有些问题要问我，叫我报告国民党部队的情况。我们回来的时候已经都12点多了，我刚躺下，就听到外面有声音。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE008-P01\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0042\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE008-P02\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0044\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-07",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC05-DE008",
+    "event_enrichment": {
+      "result_state": "敌人已把陈锐霆等数人列入暗杀计划；当夜陈锐霆晚归后听到外面有声音，原文未交代暗杀是否实施及最终结果。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件从陈锐霆部警卫部署薄弱、敌人形成暗杀计划写起，到当夜陈锐霆晚归刚躺下听到外面有声音为止；后续是否发生暗杀行动不在所给片段内。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC05-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆部未重视加强警卫，仅编成规模有限的警卫部队，且驻地河沟多、警卫部队分住河沟另一边。",
+        "process_text": "未重视加强警卫，只编了警卫小连/大排；驻地河沟多，我方与警卫部队分住河沟两边。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0042"
+        ],
+        "evidence_quote": "我们都没有重视张爱萍的意见，（没有）加强自己的警卫。但是也做了一些活动，就编了一个警卫小连吧，也是个大排，编了这么一个警卫部队。但是我们住的那个地方河沟子很多，我们住到河沟的这一边，警卫部队就住到河沟的那一边。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "敌人采取暗杀手段，将陈锐霆、国民党中校政治指导员、二营营长、团副和王兴纲列入暗杀计划。",
+        "process_text": "敌人采取暗杀办法，陈锐霆等数人都在暗杀计划之内。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0042"
+        ],
+        "evidence_quote": "所以当敌人采取暗杀的办法，我一个，一个国民党的中校，政治指导员，还有二营营长、团副，还有王兴纲同志，这几个人都在他暗杀的计划之内。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "当夜陈锐霆因妇救会、县委机关询问国民党部队情况而晚归，12点多刚躺下便听到外面有声音。",
+        "process_text": "当夜因妇救会、县委机关询问情况，陈锐霆回来已12点多，刚躺下听到外面有声音。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0044"
+        ],
+        "evidence_quote": "当夜的时候，因为这个地方的妇救会、县委的一些机关有些问题要问我，叫我报告国民党部队的情况。我们回来的时候已经都12点多了，我刚躺下，就听到外面有声音。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC05-DE008-P01",
+        "target_stage_id": "BATCH03-DOC05-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC05-S0042",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC05-DE008-P02",
+        "target_stage_id": "BATCH03-DOC05-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC05-S0044",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

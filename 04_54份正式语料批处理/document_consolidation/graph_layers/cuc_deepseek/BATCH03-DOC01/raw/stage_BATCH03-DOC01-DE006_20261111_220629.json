@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T22:06:29",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC01-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC01-DE006",
+  "usage": {
+    "prompt_tokens": 1113,
+    "total_tokens": 3415,
+    "completion_tokens": 2302,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1750
+    },
+    "time_to_first_token_ms": 18001,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC01-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"史沫特莱对新四军医院的称赞性评价被转述完成：称其为所见最好的医院，并称条件虽差但管理好、技术水平最好。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于陈海峰转述“就是史沫特莱讲的”，止于史沫特莱对条件、管理和技术水平的评价；不延伸到医院实际条件或技术水平的独立核实。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"以国民党医院作比较，给出总体最高评价\",\n      \"process_text\": \"史沫特莱说，看了那么多国民党医院，你们这里是最好的，在中国战场没有看到过这样的医院。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0049\"\n      ],\n      \"evidence_quote\": \"我在看了那么多国民党的医院，你们这里是最好的，我在中国的战场上面，没有看到过你们这样的医院。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"补充评价条件、管理与技术水平\",\n      \"process_text\": \"史沫特莱进一步评价：条件很差，但管理得很好，技术水平是最好的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0049\"\n      ],\n      \"evidence_quote\": \"条件很差，但是你们管理得很好，而且那个技术水平是最好的。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE006-P01\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0049\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC01-DE006",
+    "event_enrichment": {
+      "result_state": "史沫特莱对新四军医院的称赞性评价被转述完成：称其为所见最好的医院，并称条件虽差但管理好、技术水平最好。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于陈海峰转述“就是史沫特莱讲的”，止于史沫特莱对条件、管理和技术水平的评价；不延伸到医院实际条件或技术水平的独立核实。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC01-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "以国民党医院作比较，给出总体最高评价",
+        "process_text": "史沫特莱说，看了那么多国民党医院，你们这里是最好的，在中国战场没有看到过这样的医院。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0049"
+        ],
+        "evidence_quote": "我在看了那么多国民党的医院，你们这里是最好的，我在中国的战场上面，没有看到过你们这样的医院。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "补充评价条件、管理与技术水平",
+        "process_text": "史沫特莱进一步评价：条件很差，但管理得很好，技术水平是最好的。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0049"
+        ],
+        "evidence_quote": "条件很差，但是你们管理得很好，而且那个技术水平是最好的。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC01-DE006-P01",
+        "target_stage_id": "BATCH03-DOC01-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0049",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

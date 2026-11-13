@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T00:01:50",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC05-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC05-DE003",
+  "usage": {
+    "prompt_tokens": 2409,
+    "total_tokens": 8234,
+    "completion_tokens": 5825,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4384
+    },
+    "time_to_first_token_ms": 44929,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5824000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-15\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC05-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"练兵司令部人员夜间渡江后连续行军，到达茅山地区溧阳和溧水交界地方并停下。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以分批渡江、练兵司令部随第一批之后过江为起点，以到达茅山地区溧阳和溧水交界处停下为终点；不含此前组建卫生部及此后行动。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"分批渡江，练兵司令部随第一批之后过江。\",\n      \"process_text\": \"部队分批渡江；练兵司令部配合第一批，实际跟着第一批后面，基本同一天过江。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0156\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我们是配合第一批，实际上是跟着第一批的后面，基本上是同一天过江的。我们编的叫什么呢？叫练兵司令部。“\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"分两个晚上过江，大部分在第一个晚上，走镇江南边郊区。\",\n      \"process_text\": \"分两个晚上过去，第二个晚上比较危险，大部分是第一个晚上过去的；路线走镇江的南边、镇江的郊区。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0165\"\n      ],\n      \"evidence_quote\": \"分两个晚上过去的，第二个晚上还比较危险呢。大部分是第一个晚上过去的。我们走哪里呢？我们走镇江的南边，镇江的郊区。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"从三江营摆渡到大港，经辛丰镇向漕河方向插向茅山。\",\n      \"process_text\": \"从三江营摆渡到大港，大港上岸后马上撤到辛丰，晚上通过辛丰镇，向漕河，马上插到茅山。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0169\"\n      ],\n      \"evidence_quote\": \"我们那都摆渡啊，（从）三江营摆渡到大港。大港一上以后呢，马上撤到辛丰，辛丰我们关系比较好，（和）那个伪军啊。我们晚上通过辛丰镇，向漕河，马上插到茅山。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"过江后连续夜间行军，通过江、公路、铁路、运河等封锁线。\",\n      \"process_text\": \"天一黑就过江，过江后马上连续行军，通过好多封锁线，有江、公路、铁路、运河，危险很大。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0178\"\n      ],\n      \"evidence_quote\": \"天一黑，一过江。一过江，马上就连续行军，通过好多的封锁线，有江，有公路，有铁路，有运河。哎呀，那个危险很大！苏北的部队啊，都没见过山。哎呀，一过江以后，捡这个石头，爬山（看到石头），哎呀好极了，干粮袋（里）都（放了）捡（的）石头，越背越重，越背越重，山越爬越大，越爬越大。哎呦，他说江南怎么那么多山哪！有的人把大石头扔掉了，捡小石头，小石头扔了，最后留下好玩的小石头。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"到达茅山地区溧阳和溧水交界地方停下。\",\n      \"process_text\": \"到茅山地区，到了溧阳和溧水的交界地方，部队就停下来了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0182\"\n      ],\n      \"evidence_quote\": \"    陈海峰：到茅山地区，到了溧阳和溧水的交界地方。我们就停下来了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC05-DE003-P01\",\n      \"target_stage_id\": \"BATCH05-DOC05-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC05-S0165\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC05-DE003-P02\",\n      \"target_stage_id\": \"BATCH05-DOC05-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC05-S0167\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC05-DE003-P03\",\n      \"target_stage_id\": \"BATCH05-DOC05-DE003-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC05-S0178\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC05-DE003-P04\",\n      \"target_stage_id\": \"BATCH05-DOC05-DE003-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC05-S0182\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-15",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC05-DE003",
+    "event_enrichment": {
+      "result_state": "练兵司令部人员夜间渡江后连续行军，到达茅山地区溧阳和溧水交界地方并停下。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以分批渡江、练兵司令部随第一批之后过江为起点，以到达茅山地区溧阳和溧水交界处停下为终点；不含此前组建卫生部及此后行动。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC05-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "分批渡江，练兵司令部随第一批之后过江。",
+        "process_text": "部队分批渡江；练兵司令部配合第一批，实际跟着第一批后面，基本同一天过江。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0156"
+        ],
+        "evidence_quote": "    陈海峰：我们是配合第一批，实际上是跟着第一批的后面，基本上是同一天过江的。我们编的叫什么呢？叫练兵司令部。“",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC05-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "分两个晚上过江，大部分在第一个晚上，走镇江南边郊区。",
+        "process_text": "分两个晚上过去，第二个晚上比较危险，大部分是第一个晚上过去的；路线走镇江的南边、镇江的郊区。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0165"
+        ],
+        "evidence_quote": "分两个晚上过去的，第二个晚上还比较危险呢。大部分是第一个晚上过去的。我们走哪里呢？我们走镇江的南边，镇江的郊区。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC05-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "从三江营摆渡到大港，经辛丰镇向漕河方向插向茅山。",
+        "process_text": "从三江营摆渡到大港，大港上岸后马上撤到辛丰，晚上通过辛丰镇，向漕河，马上插到茅山。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0169"
+        ],
+        "evidence_quote": "我们那都摆渡啊，（从）三江营摆渡到大港。大港一上以后呢，马上撤到辛丰，辛丰我们关系比较好，（和）那个伪军啊。我们晚上通过辛丰镇，向漕河，马上插到茅山。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC05-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "过江后连续夜间行军，通过江、公路、铁路、运河等封锁线。",
+        "process_text": "天一黑就过江，过江后马上连续行军，通过好多封锁线，有江、公路、铁路、运河，危险很大。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0178"
+        ],
+        "evidence_quote": "天一黑，一过江。一过江，马上就连续行军，通过好多的封锁线，有江，有公路，有铁路，有运河。哎呀，那个危险很大！苏北的部队啊，都没见过山。哎呀，一过江以后，捡这个石头，爬山（看到石头），哎呀好极了，干粮袋（里）都（放了）捡（的）石头，越背越重，越背越重，山越爬越大，越爬越大。哎呦，他说江南怎么那么多山哪！有的人把大石头扔掉了，捡小石头，小石头扔了，最后留下好玩的小石头。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC05-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "到达茅山地区溧阳和溧水交界地方停下。",
+        "process_text": "到茅山地区，到了溧阳和溧水的交界地方，部队就停下来了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0182"
+        ],
+        "evidence_quote": "    陈海峰：到茅山地区，到了溧阳和溧水的交界地方。我们就停下来了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC05-DE003-P01",
+        "target_stage_id": "BATCH05-DOC05-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC05-S0165",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC05-DE003-P02",
+        "target_stage_id": "BATCH05-DOC05-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC05-S0167",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC05-DE003-P03",
+        "target_stage_id": "BATCH05-DOC05-DE003-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC05-S0178",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC05-DE003-P04",
+        "target_stage_id": "BATCH05-DOC05-DE003-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC05-S0182",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

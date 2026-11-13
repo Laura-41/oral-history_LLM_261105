@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-11T20:50:53",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC03-DE009",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC03-DE009",
+  "usage": {
+    "prompt_tokens": 1568,
+    "total_tokens": 7025,
+    "completion_tokens": 5457,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4035
+    },
+    "time_to_first_token_ms": 45570,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V1-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC03-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"新四军通过华侨及香港、马来西亚、新加坡、印尼等地募捐、动员人员参军（含学医者）以及通过地下党关系购药，获得较八路军更好的药品、医务质量和装备设备技术条件。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以S0061中沈其震、叶挺关系及叶挺赴香港募捐为起点，延续至S0063所述华侨与多地募捐、动员参军、通过地下党关系买药及与八路军比较的结果。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"依托沈其震与叶挺的关系及叶挺与国民党上层的关系，叶挺赴香港募捐药品。\",\n      \"process_text\": \"沈其震和叶挺是好朋友，叶挺动员来；叶挺又与国民党上层关系密切，一年半年到香港募捐，募来药品。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0061\"\n      ],\n      \"evidence_quote\": \"那么再加上沈其震和叶挺的关系，好朋友，是叶挺动员来的。叶挺又和国民党的上层有很好的关系，和孙科，和廖承志的母亲，画画的很好那叫什么，他们关系很密切，他一年半年才过，到香港去募捐，（募）来的药品，八路军没有的，我们有。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"向华侨以及香港、马来西亚、新加坡、印尼等地募捐。\",\n      \"process_text\": \"募捐华侨，华侨捐、香港捐，马来西亚、新加坡、印尼都捐。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0063\"\n      ],\n      \"evidence_quote\": \"一个是募捐华侨，华侨捐、香港捐，马来西亚的、新加坡的都捐，印尼的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"动员人员参军，其中包括来学医的人员。\",\n      \"process_text\": \"还动员人来参军，有的来学医。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0063\"\n      ],\n      \"evidence_quote\": \"还动员人来参军，有的来学医的，是不是。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE009-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"利用靠近上海、南京及京沪路沿线现代化城市的地理条件，并通过地下党关系买药。\",\n      \"process_text\": \"靠上海南京和京沪路一带的苏州、无锡、常州、镇江等现代化城市，买药方便；通过地下党关系买也方便。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0063\"\n      ],\n      \"evidence_quote\": \"我们是靠上海南京和京沪路这些，苏州、无锡、常州、镇江，这些都是当时的现代化城市，买药也方便。通过地下党关系，买也方便。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE009-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"形成药品、医务质量以及装备、设备、技术、药物和正规训练方面的优势。\",\n      \"process_text\": \"药品和医务质量比八路军好得多，装备、设备、技术、药物也更好，且都是正规训练。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0063\"\n      ],\n      \"evidence_quote\": \"这个药品就比八路军好得多，医务质量比八路军好得多，得天独厚。所以关系不一样，所处的地理条件环境不一样，华北地区比较苦一点，他是靠北京、天津为主。我们是靠上海南京和京沪路这些，苏州、无锡、常州、镇江，这些都是当时的现代化城市，买药也方便。通过地下党关系，买也方便。所以我们的装备比他们好，设备比他们好，技术所以比他们高，药物比他们好，都是正规训练。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE009-P01\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE009-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0063\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE009-P02\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE009-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0063\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE009-P03\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE009-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0063\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE009-P04\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE009-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0063\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC03-DE009",
+    "event_enrichment": {
+      "result_state": "新四军通过华侨及香港、马来西亚、新加坡、印尼等地募捐、动员人员参军（含学医者）以及通过地下党关系购药，获得较八路军更好的药品、医务质量和装备设备技术条件。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以S0061中沈其震、叶挺关系及叶挺赴香港募捐为起点，延续至S0063所述华侨与多地募捐、动员参军、通过地下党关系买药及与八路军比较的结果。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC03-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "依托沈其震与叶挺的关系及叶挺与国民党上层的关系，叶挺赴香港募捐药品。",
+        "process_text": "沈其震和叶挺是好朋友，叶挺动员来；叶挺又与国民党上层关系密切，一年半年到香港募捐，募来药品。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0061"
+        ],
+        "evidence_quote": "那么再加上沈其震和叶挺的关系，好朋友，是叶挺动员来的。叶挺又和国民党的上层有很好的关系，和孙科，和廖承志的母亲，画画的很好那叫什么，他们关系很密切，他一年半年才过，到香港去募捐，（募）来的药品，八路军没有的，我们有。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "向华侨以及香港、马来西亚、新加坡、印尼等地募捐。",
+        "process_text": "募捐华侨，华侨捐、香港捐，马来西亚、新加坡、印尼都捐。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0063"
+        ],
+        "evidence_quote": "一个是募捐华侨，华侨捐、香港捐，马来西亚的、新加坡的都捐，印尼的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "动员人员参军，其中包括来学医的人员。",
+        "process_text": "还动员人来参军，有的来学医。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0063"
+        ],
+        "evidence_quote": "还动员人来参军，有的来学医的，是不是。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE009-P04",
+        "stage_order": 4,
+        "stage_summary": "利用靠近上海、南京及京沪路沿线现代化城市的地理条件，并通过地下党关系买药。",
+        "process_text": "靠上海南京和京沪路一带的苏州、无锡、常州、镇江等现代化城市，买药方便；通过地下党关系买也方便。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0063"
+        ],
+        "evidence_quote": "我们是靠上海南京和京沪路这些，苏州、无锡、常州、镇江，这些都是当时的现代化城市，买药也方便。通过地下党关系，买也方便。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE009-P05",
+        "stage_order": 5,
+        "stage_summary": "形成药品、医务质量以及装备、设备、技术、药物和正规训练方面的优势。",
+        "process_text": "药品和医务质量比八路军好得多，装备、设备、技术、药物也更好，且都是正规训练。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0063"
+        ],
+        "evidence_quote": "这个药品就比八路军好得多，医务质量比八路军好得多，得天独厚。所以关系不一样，所处的地理条件环境不一样，华北地区比较苦一点，他是靠北京、天津为主。我们是靠上海南京和京沪路这些，苏州、无锡、常州、镇江，这些都是当时的现代化城市，买药也方便。通过地下党关系，买也方便。所以我们的装备比他们好，设备比他们好，技术所以比他们高，药物比他们好，都是正规训练。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC03-DE009-P01",
+        "target_stage_id": "BATCH02-DOC03-DE009-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC03-S0063",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE009-P02",
+        "target_stage_id": "BATCH02-DOC03-DE009-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0063",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE009-P03",
+        "target_stage_id": "BATCH02-DOC03-DE009-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0063",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE009-P04",
+        "target_stage_id": "BATCH02-DOC03-DE009-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC03-S0063",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

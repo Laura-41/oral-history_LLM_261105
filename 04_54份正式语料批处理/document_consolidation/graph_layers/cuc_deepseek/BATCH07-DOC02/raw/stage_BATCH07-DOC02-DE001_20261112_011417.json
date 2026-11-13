@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T01:14:17",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC02-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC02-DE001",
+  "usage": {
+    "prompt_tokens": 1234,
+    "total_tokens": 4570,
+    "completion_tokens": 3336,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2467
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3335000,
+    "time_to_first_token_ms": 30033
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-23\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC02-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"各分区转来的七八百病人中，轻者部分撤走，约一二百名县团以上干部留院治疗；“七战七捷”重伤员前后共收治约一千二百多名。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以S0003中“当时我们收留了各个分区转来的七八百个病人”为起点，至S0004“我们大概收了一千二百多”为终点，涵盖分区病人收治与“七战七捷”重伤员收治两段连续叙述。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"收留各分区转来的七八百名病人，轻者部分撤走，约一二百名县团以上干部留院治疗。\",\n      \"process_text\": \"当时收留各个分区转来的七八百个病人，轻的一部分撤去，还有一二百县团以上干部在这里治疗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0003\"\n      ],\n      \"evidence_quote\": \"实际上呢，当时我们收留了各个分区转来的七八百个病人，轻的一部分撤去，还有一二百，基本上都是县团以上的干部啊，在这里治疗。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"空出床位收治“七战七捷”伤员；因战役持续一个多月，重伤员陆续不断送来。\",\n      \"process_text\": \"当时空出床位来收“七战七捷”伤员；因打了一个多月，不断有重伤员来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0004\"\n      ],\n      \"evidence_quote\": \"主要的呢，当时就空出床位来收“七战七捷”（的伤员）。因为“七战七捷”打了一个多月了，呖呖拉拉不断地有重伤员来。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"前后累计收治“七战七捷”重伤员约一千二百多名。\",\n      \"process_text\": \"前前后后大概收治重伤员一千二百多。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0004\"\n      ],\n      \"evidence_quote\": \"重伤员，前前后后呢，我们大概收了一千二百多。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC02-DE001-P01\",\n      \"target_stage_id\": \"BATCH07-DOC02-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC02-S0004\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC02-DE001-P02\",\n      \"target_stage_id\": \"BATCH07-DOC02-DE001-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH07-DOC02-S0004\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-23",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC02-DE001",
+    "event_enrichment": {
+      "result_state": "各分区转来的七八百病人中，轻者部分撤走，约一二百名县团以上干部留院治疗；“七战七捷”重伤员前后共收治约一千二百多名。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以S0003中“当时我们收留了各个分区转来的七八百个病人”为起点，至S0004“我们大概收了一千二百多”为终点，涵盖分区病人收治与“七战七捷”重伤员收治两段连续叙述。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC02-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "收留各分区转来的七八百名病人，轻者部分撤走，约一二百名县团以上干部留院治疗。",
+        "process_text": "当时收留各个分区转来的七八百个病人，轻的一部分撤去，还有一二百县团以上干部在这里治疗。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0003"
+        ],
+        "evidence_quote": "实际上呢，当时我们收留了各个分区转来的七八百个病人，轻的一部分撤去，还有一二百，基本上都是县团以上的干部啊，在这里治疗。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC02-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "空出床位收治“七战七捷”伤员；因战役持续一个多月，重伤员陆续不断送来。",
+        "process_text": "当时空出床位来收“七战七捷”伤员；因打了一个多月，不断有重伤员来。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0004"
+        ],
+        "evidence_quote": "主要的呢，当时就空出床位来收“七战七捷”（的伤员）。因为“七战七捷”打了一个多月了，呖呖拉拉不断地有重伤员来。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC02-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "前后累计收治“七战七捷”重伤员约一千二百多名。",
+        "process_text": "前前后后大概收治重伤员一千二百多。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0004"
+        ],
+        "evidence_quote": "重伤员，前前后后呢，我们大概收了一千二百多。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC02-DE001-P01",
+        "target_stage_id": "BATCH07-DOC02-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC02-S0004",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC02-DE001-P02",
+        "target_stage_id": "BATCH07-DOC02-DE001-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH07-DOC02-S0004",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

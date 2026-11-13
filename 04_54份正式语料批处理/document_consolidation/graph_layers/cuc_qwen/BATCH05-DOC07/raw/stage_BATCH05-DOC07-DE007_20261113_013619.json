@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-13T01:36:19",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC07-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC07-DE007",
+  "usage": {
+    "prompt_tokens": 1221,
+    "total_tokens": 6416,
+    "completion_tokens": 5195,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4567
+    },
+    "time_to_first_token_ms": 77733,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC07-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"内线部队春天打了潍县，夏天7、8月打开兖州府。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"本事件边界取原文中内线部队春天打潍县、夏天7、8月打开兖州府并说明其为胶济路、津浦线两个重点的部分；同段后续毛主席和中央军委预先号令、下一步打济南属于后续准备，不纳入本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"内线部队春天打潍县\",\n      \"process_text\": \"接着这个时候我们内线的部队，春天打了潍县，\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0037\"\n      ],\n      \"evidence_quote\": \"接着这个时候我们内线的部队，春天打了潍县，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"内线部队夏天7、8月打开兖州府\",\n      \"process_text\": \"到了夏天7、8月的时候，又打开津浦路的兖州府，这是胶济路，津浦线的两个重点嘛。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0037\"\n      ],\n      \"evidence_quote\": \"到了夏天7、8月的时候，又打开津浦路的兖州府，这是胶济路，津浦线的两个重点嘛。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE007-P01\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0037\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC07-DE007",
+    "event_enrichment": {
+      "result_state": "内线部队春天打了潍县，夏天7、8月打开兖州府。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "本事件边界取原文中内线部队春天打潍县、夏天7、8月打开兖州府并说明其为胶济路、津浦线两个重点的部分；同段后续毛主席和中央军委预先号令、下一步打济南属于后续准备，不纳入本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC07-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "内线部队春天打潍县",
+        "process_text": "接着这个时候我们内线的部队，春天打了潍县，",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0037"
+        ],
+        "evidence_quote": "接着这个时候我们内线的部队，春天打了潍县，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "内线部队夏天7、8月打开兖州府",
+        "process_text": "到了夏天7、8月的时候，又打开津浦路的兖州府，这是胶济路，津浦线的两个重点嘛。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0037"
+        ],
+        "evidence_quote": "到了夏天7、8月的时候，又打开津浦路的兖州府，这是胶济路，津浦线的两个重点嘛。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC07-DE007-P01",
+        "target_stage_id": "BATCH05-DOC07-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0037",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

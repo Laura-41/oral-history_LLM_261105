@@ -1,0 +1,167 @@
+{
+  "run_time": "2026-11-12T22:32:58",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC06-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC06-DE002",
+  "usage": {
+    "prompt_tokens": 2388,
+    "total_tokens": 16922,
+    "completion_tokens": 14534,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12168
+    },
+    "time_to_first_token_ms": 218200,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 14533000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC06-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"后方医院被说明为全师重病员休养治疗场所，平时兼作卫生学校实习医院和教学医院；组织上设院长、副院长、医疗队、大组、小组和医疗点，并被评价为全世界最大的医院；地理上东到海边弶港/东弶，西到三仓河/吴家桥附近，范围约八十华里。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件从 S0016 区分前方休养所与后方医院开始，经 S0018-S0023 说明教学、组织与规模，至 S0025-S0031 说明东到弶港/东弶、西到三仓河/吴家桥附近及范围八十华里结束。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"区分前方休养所与后方医院的功能\",\n      \"process_text\": \"师有个后方医院，有个前方休养所。前方休养所跟着这个师部走，实际叫前方医院，小型机动的，那么打起打仗来的时候，都跟着师领导为主。后方医院呢，都是休养、治疗，大手术什么东西，全师的重病（员）都送到这儿来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0016\"\n      ],\n      \"evidence_quote\": \"师有个后方医院，有个前方休养所。前方休养所跟着这个师部走，实际叫前方医院，小型机动的，那么打起打仗来的时候，都跟着师领导为主。后方医院呢，都是休养、治疗，大手术什么东西，全师的重病（员）都送到这儿来。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"说明后方医院平时作为卫生学校实习医院和教学医院\",\n      \"process_text\": \"那么这后方医院，平时（是）我们卫生学校的实习医院，就是我们的教学医院，他里面的医疗队长以上的、受过正规训练的，都是兼我们的教育辅导员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0018\"\n      ],\n      \"evidence_quote\": \"那么这后方医院，平时（是）我们卫生学校的实习医院，就是我们的教学医院，他里面的医疗队长以上的、受过正规训练的，都是兼我们的教育辅导员。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"说明后方医院院长、副院长、医疗队、大组等组织层级\",\n      \"process_text\": \"那么后方医院的院长是部长兼。有三个副院长，一个行政副院长，一个业务副院长，后来又加了一个业务副院长。后来，卫生部长不见了，那么有个副院长提升为正院长。下面医院有六个医疗队，一个医疗队有队部，队部下面分医疗大组。一个大组呢，等于我们现在医院的一个科室一样，泌尿科啊、外科啊、内科啊，等于那样子的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0019\"\n      ],\n      \"evidence_quote\": \"那么后方医院的院长是部长兼。有三个副院长，一个行政副院长，一个业务副院长，后来又加了一个业务副院长。后来，卫生部长不见了，那么有个副院长提升为正院长。下面医院有六个医疗队，一个医疗队有队部，队部下面分医疗大组。一个大组呢，等于我们现在医院的一个科室一样，泌尿科啊、外科啊、内科啊，等于那样子的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"说明医疗队大组、小组、医疗点的分散设置\",\n      \"process_text\": \"那么一个大组里面再分三个到四个小组，小组里面再分医疗点。有的重病人一个人住一个地方。这个分散，这个医院有多少？\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0021\",\n        \"BATCH04-DOC06-S0022\"\n      ],\n      \"evidence_quote\": \"那么一个大组里面再分三个到四个小组，小组里面再分医疗点。有的重病人一个人住一个地方。这个分散，这个医院有多少？\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE002-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"评价后方医院规模\",\n      \"process_text\": \"师后方医院是全世界最大的医院。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0023\"\n      ],\n      \"evidence_quote\": \"师后方医院是全世界最大的医院。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE002-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"说明医院东边到海边弶港/东弶\",\n      \"process_text\": \"它这个医院东边到了海边上的一个镇，叫弶港镇，地图上有的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0025\",\n        \"BATCH04-DOC06-S0026\",\n        \"BATCH04-DOC06-S0028\",\n        \"BATCH04-DOC06-S0029\"\n      ],\n      \"evidence_quote\": \"它这个医院东边到了海边上的一个镇，叫弶港镇，地图上有的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE002-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"说明医院西边到三仓河/吴家桥附近，范围约八十华里\",\n      \"process_text\": \"我们呢，医院的最西边，这离开吴家桥大概只有十里路不到。从三仓河到弶港呢，差不多有七八十里，将近一百华里。至少有八十华里，这个医院所在的范围八十华里。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0029\",\n        \"BATCH04-DOC06-S0031\"\n      ],\n      \"evidence_quote\": \"我们呢，医院的最西边，这离开吴家桥大概只有十里路不到。从三仓河到弶港呢，差不多有七八十里，将近一百华里。至少有八十华里，这个医院所在的范围八十华里。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE002-P01\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0018\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE002-P02\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE002-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0019\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE002-P03\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE002-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0022\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE002-P04\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE002-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0023\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE002-P05\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE002-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0025\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE002-P06\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE002-P07\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0031\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC06-DE002",
+    "event_enrichment": {
+      "result_state": "后方医院被说明为全师重病员休养治疗场所，平时兼作卫生学校实习医院和教学医院；组织上设院长、副院长、医疗队、大组、小组和医疗点，并被评价为全世界最大的医院；地理上东到海边弶港/东弶，西到三仓河/吴家桥附近，范围约八十华里。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件从 S0016 区分前方休养所与后方医院开始，经 S0018-S0023 说明教学、组织与规模，至 S0025-S0031 说明东到弶港/东弶、西到三仓河/吴家桥附近及范围八十华里结束。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC06-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "区分前方休养所与后方医院的功能",
+        "process_text": "师有个后方医院，有个前方休养所。前方休养所跟着这个师部走，实际叫前方医院，小型机动的，那么打起打仗来的时候，都跟着师领导为主。后方医院呢，都是休养、治疗，大手术什么东西，全师的重病（员）都送到这儿来。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0016"
+        ],
+        "evidence_quote": "师有个后方医院，有个前方休养所。前方休养所跟着这个师部走，实际叫前方医院，小型机动的，那么打起打仗来的时候，都跟着师领导为主。后方医院呢，都是休养、治疗，大手术什么东西，全师的重病（员）都送到这儿来。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "说明后方医院平时作为卫生学校实习医院和教学医院",
+        "process_text": "那么这后方医院，平时（是）我们卫生学校的实习医院，就是我们的教学医院，他里面的医疗队长以上的、受过正规训练的，都是兼我们的教育辅导员。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0018"
+        ],
+        "evidence_quote": "那么这后方医院，平时（是）我们卫生学校的实习医院，就是我们的教学医院，他里面的医疗队长以上的、受过正规训练的，都是兼我们的教育辅导员。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "说明后方医院院长、副院长、医疗队、大组等组织层级",
+        "process_text": "那么后方医院的院长是部长兼。有三个副院长，一个行政副院长，一个业务副院长，后来又加了一个业务副院长。后来，卫生部长不见了，那么有个副院长提升为正院长。下面医院有六个医疗队，一个医疗队有队部，队部下面分医疗大组。一个大组呢，等于我们现在医院的一个科室一样，泌尿科啊、外科啊、内科啊，等于那样子的。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0019"
+        ],
+        "evidence_quote": "那么后方医院的院长是部长兼。有三个副院长，一个行政副院长，一个业务副院长，后来又加了一个业务副院长。后来，卫生部长不见了，那么有个副院长提升为正院长。下面医院有六个医疗队，一个医疗队有队部，队部下面分医疗大组。一个大组呢，等于我们现在医院的一个科室一样，泌尿科啊、外科啊、内科啊，等于那样子的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "说明医疗队大组、小组、医疗点的分散设置",
+        "process_text": "那么一个大组里面再分三个到四个小组，小组里面再分医疗点。有的重病人一个人住一个地方。这个分散，这个医院有多少？",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0021",
+          "BATCH04-DOC06-S0022"
+        ],
+        "evidence_quote": "那么一个大组里面再分三个到四个小组，小组里面再分医疗点。有的重病人一个人住一个地方。这个分散，这个医院有多少？",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE002-P05",
+        "stage_order": 5,
+        "stage_summary": "评价后方医院规模",
+        "process_text": "师后方医院是全世界最大的医院。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0023"
+        ],
+        "evidence_quote": "师后方医院是全世界最大的医院。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE002-P06",
+        "stage_order": 6,
+        "stage_summary": "说明医院东边到海边弶港/东弶",
+        "process_text": "它这个医院东边到了海边上的一个镇，叫弶港镇，地图上有的。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0025",
+          "BATCH04-DOC06-S0026",
+          "BATCH04-DOC06-S0028",
+          "BATCH04-DOC06-S0029"
+        ],
+        "evidence_quote": "它这个医院东边到了海边上的一个镇，叫弶港镇，地图上有的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE002-P07",
+        "stage_order": 7,
+        "stage_summary": "说明医院西边到三仓河/吴家桥附近，范围约八十华里",
+        "process_text": "我们呢，医院的最西边，这离开吴家桥大概只有十里路不到。从三仓河到弶港呢，差不多有七八十里，将近一百华里。至少有八十华里，这个医院所在的范围八十华里。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0029",
+          "BATCH04-DOC06-S0031"
+        ],
+        "evidence_quote": "我们呢，医院的最西边，这离开吴家桥大概只有十里路不到。从三仓河到弶港呢，差不多有七八十里，将近一百华里。至少有八十华里，这个医院所在的范围八十华里。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC06-DE002-P01",
+        "target_stage_id": "BATCH04-DOC06-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC06-S0018",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE002-P02",
+        "target_stage_id": "BATCH04-DOC06-DE002-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC06-S0019",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE002-P03",
+        "target_stage_id": "BATCH04-DOC06-DE002-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC06-S0022",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE002-P04",
+        "target_stage_id": "BATCH04-DOC06-DE002-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC06-S0023",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE002-P05",
+        "target_stage_id": "BATCH04-DOC06-DE002-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC06-S0025",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE002-P06",
+        "target_stage_id": "BATCH04-DOC06-DE002-P07",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC06-S0031",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

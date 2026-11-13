@@ -1,0 +1,211 @@
+{
+  "run_time": "2026-11-10T20:26:49",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC07-W003",
+  "technical_document_id": "BATCH03-DOC07",
+  "document_id": "08.陈海峰（二访）（三校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC07-S0017",
+    "BATCH03-DOC07-S0018",
+    "BATCH03-DOC07-S0019",
+    "BATCH03-DOC07-S0020",
+    "BATCH03-DOC07-S0021",
+    "BATCH03-DOC07-S0022",
+    "BATCH03-DOC07-S0023",
+    "BATCH03-DOC07-S0024",
+    "BATCH03-DOC07-S0025",
+    "BATCH03-DOC07-S0026",
+    "BATCH03-DOC07-S0027",
+    "BATCH03-DOC07-S0028",
+    "BATCH03-DOC07-S0029",
+    "BATCH03-DOC07-S0030"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 3,
+    "assigned_segment_count": 7,
+    "unassigned_segment_count": 7,
+    "input_segment_count": 14,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH03-DOC07-W003-E03"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC07-W003",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC07-W003-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC07-S0018",
+          "BATCH03-DOC07-S0020",
+          "BATCH03-DOC07-S0022"
+        ],
+        "event": {
+          "event_name": "参加韩庄战斗火攻并俘获日军",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "火攻瓦房并俘获日军",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "新四军参战人员",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "鬼子",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "瓦房子",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "48个鬼子",
+              "normalized_entity": "48名日军俘虏",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "下半夜",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "韩庄",
+              "normalized_value": "韩庄"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那是下半夜（了），（我们去）老百姓家里收集煤油桶，一桶一桶的煤油，把那个柴禾啊，把那个玉米杆啊，老百姓那个什么草啊，都拿来。拿来以后，就那个瓦房子都包围（柴草）堆起来，就用火攻。",
+          "type_basis": "核心过程为收集柴草、包围瓦房并火攻，属可观察物质行动；参与者为施事“我们”和受事“鬼子/瓦房”，符合MATERIAL的Actor/Goal配置；非言语、心理或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC07-W003-E02",
+        "source_segment_ids": [
+          "BATCH03-DOC07-S0022",
+          "BATCH03-DOC07-S0024",
+          "BATCH03-DOC07-S0026",
+          "BATCH03-DOC07-S0028"
+        ],
+        "event": {
+          "event_name": "收容并优先救治战斗伤员",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "收容并抢救伤员",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰所在医疗队/医务人员",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "我们自己的（战士）",
+              "normalized_entity": "我方伤员（约120名）",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "日本鬼子重伤",
+              "normalized_entity": "日军重伤员",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "MANNER",
+              "value": "先抢救我方重伤员，后抢救日军重伤员",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们当时收容了一百二左右，给我们（的）收容任务是200到300，我们当时收容有一半，鬼子那48个不算。",
+          "type_basis": "核心过程为收容、开刀、止血、换夹板等可观察医疗行动，属物质过程；参与者为施事“我们”和受事“我方伤员/日军重伤员”，符合MATERIAL的Actor/Goal配置；非心理或言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC07-W003-E03",
+        "source_segment_ids": [
+          "BATCH03-DOC07-S0028",
+          "BATCH03-DOC07-S0030"
+        ],
+        "event": {
+          "event_name": "开展普包运动并推广卫生战士制度",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "开展普包运动、推广卫生战士制度",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "新四军医疗卫生部门/陈海峰所在部队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "每一个战士",
+              "normalized_entity": "新四军战士",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "MANNER",
+              "value": "自包互包、就地取材",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "就起了个名字叫“卫生战士”，以后推广他的经验，我们全新四军都叫“卫生战士”，每一个班都有卫生战士，一个班一个卫生战士，加到两个卫生战士，加到三个卫生战士。一个就是开展“普包运动”，从这个基础上再发展。",
+          "type_basis": "核心过程为在部队中教授包扎、配备急救包、设立卫生战士并推广经验，属组织性物质行动；参与者为施事“我们”和接受者“战士”，符合MATERIAL的Actor/Recipient配置；虽有言语教学成分，但整体目标是建立急救制度，不标为VERBAL。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC07-S0017",
+      "BATCH03-DOC07-S0019",
+      "BATCH03-DOC07-S0021",
+      "BATCH03-DOC07-S0023",
+      "BATCH03-DOC07-S0025",
+      "BATCH03-DOC07-S0027",
+      "BATCH03-DOC07-S0029"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH03-DOC07-W003\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC07-W003-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC07-S0018\",\n        \"BATCH03-DOC07-S0020\",\n        \"BATCH03-DOC07-S0022\"\n      ],\n      \"event\": {\n        \"event_name\": \"参加韩庄战斗火攻并俘获日军\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"火攻瓦房并俘获日军\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"新四军参战人员\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"鬼子\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"瓦房子\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"48个鬼子\",\n            \"normalized_entity\": \"48名日军俘虏\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"下半夜\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"韩庄\",\n            \"normalized_value\": \"韩庄\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那是下半夜（了），（我们去）老百姓家里收集煤油桶，一桶一桶的煤油，把那个柴禾啊，把那个玉米杆啊，老百姓那个什么草啊，都拿来。拿来以后，就那个瓦房子都包围（柴草）堆起来，就用火攻。\",\n        \"type_basis\": \"核心过程为收集柴草、包围瓦房并火攻，属可观察物质行动；参与者为施事“我们”和受事“鬼子/瓦房”，符合MATERIAL的Actor/Goal配置；非言语、心理或关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC07-W003-E02\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC07-S0022\",\n        \"BATCH03-DOC07-S0024\",\n        \"BATCH03-DOC07-S0026\",\n        \"BATCH03-DOC07-S0028\"\n      ],\n      \"event\": {\n        \"event_name\": \"收容并优先救治战斗伤员\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"收容并抢救伤员\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰所在医疗队/医务人员\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"我们自己的（战士）\",\n            \"normalized_entity\": \"我方伤员（约120名）\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"日本鬼子重伤\",\n            \"normalized_entity\": \"日军重伤员\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"先抢救我方重伤员，后抢救日军重伤员\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们当时收容了一百二左右，给我们（的）收容任务是200到300，我们当时收容有一半，鬼子那48个不算。\",\n        \"type_basis\": \"核心过程为收容、开刀、止血、换夹板等可观察医疗行动，属物质过程；参与者为施事“我们”和受事“我方伤员/日军重伤员”，符合MATERIAL的Actor/Goal配置；非心理或言语过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC07-W003-E03\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC07-S0028\",\n        \"BATCH03-DOC07-S0030\"\n      ],\n      \"event\": {\n        \"event_name\": \"开展普包运动并推广卫生战士制度\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"开展普包运动、推广卫生战士制度\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"新四军医疗卫生部门/陈海峰所在部队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"每一个战士\",\n            \"normalized_entity\": \"新四军战士\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"自包互包、就地取材\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"就起了个名字叫“卫生战士”，以后推广他的经验，我们全新四军都叫“卫生战士”，每一个班都有卫生战士，一个班一个卫生战士，加到两个卫生战士，加到三个卫生战士。一个就是开展“普包运动”，从这个基础上再发展。\",\n        \"type_basis\": \"核心过程为在部队中教授包扎、配备急救包、设立卫生战士并推广经验，属组织性物质行动；参与者为施事“我们”和接受者“战士”，符合MATERIAL的Actor/Recipient配置；虽有言语教学成分，但整体目标是建立急救制度，不标为VERBAL。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC07-S0017\",\n    \"BATCH03-DOC07-S0019\",\n    \"BATCH03-DOC07-S0021\",\n    \"BATCH03-DOC07-S0023\",\n    \"BATCH03-DOC07-S0025\",\n    \"BATCH03-DOC07-S0027\",\n    \"BATCH03-DOC07-S0029\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5489,
+    "total_tokens": 26245,
+    "completion_tokens": 20756,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 19221
+    },
+    "time_to_first_token_ms": 166353,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 20755000
+  }
+}

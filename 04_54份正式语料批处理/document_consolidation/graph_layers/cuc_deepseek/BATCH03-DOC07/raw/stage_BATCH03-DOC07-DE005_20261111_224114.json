@@ -1,0 +1,190 @@
+{
+  "run_time": "2026-11-11T22:41:14",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC07-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC07-DE005",
+  "usage": {
+    "prompt_tokens": 3076,
+    "total_tokens": 12434,
+    "completion_tokens": 9358,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6698
+    },
+    "tokens_per_second": 4678500,
+    "time_to_first_token_ms": 72228,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC07-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"临时野战医院完成收容与分级救治，收容约一百二十名我方伤员（另有日军伤员48名未计入，部分途中死亡），重伤员经包扎所、临时野战医院逐级后送，并总结战救经验。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于车桥战役结束中间在东侧成立临时野战医院并由陈海峰负责，止于伤员逐级后送及战后战救经验总结；缴获、战斗经过等外围叙述不纳入。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"车桥战役结束中间，在东侧成立临时野战医院，由陈海峰负责并兼院长；医院分包扎所与西岗前方医院两部分。\",\n      \"process_text\": \"东侧成立临时野战医院，由我负责；下设前方包扎所和西岗前方医院，包扎所负责急救、分类、抢救并后送。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0032\",\n        \"BATCH03-DOC07-S0050\"\n      ],\n      \"evidence_quote\": \"陈海峰：在“车桥战役”结束中间呢，我们东侧成立（了）临时野战医院，由我负责。临时野战医院分两个部分，一个部分是前面的包扎所，包扎所就是负责急救、分类、抢救，送到西岗的前方医院。前方医院我们力量比较强了，五个所长啊，还有四五个医生啊，医务员，还有一个班的卫生员呐。我们担架也多，那个时候经常保持几十副担架了。因为我们名义上是一个主力团，实际上变成一个旅的装备了，所以这一仗打下来，我们就进行总结。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"通过“普包运动”教战士自包互包，先做初步包扎，再送包扎所。\",\n      \"process_text\": \"前方包扎开展“普包运动”，战士先自个包、互包，然后马上到包扎所。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0036\",\n        \"BATCH03-DOC07-S0057\",\n        \"BATCH03-DOC07-S0058\",\n        \"BATCH03-DOC07-S0059\"\n      ],\n      \"evidence_quote\": \"陈海峰：前方包扎，“普包运动”。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"医疗队承担200至300名收容任务，实际收容约一百二十名；日军伤员48名未计入，其中部分在途中死亡。\",\n      \"process_text\": \"收容约一百二十名伤员，未达200至300的任务数；日军48名另计，部分抬到时已死亡。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0026\"\n      ],\n      \"evidence_quote\": \"陈海峰：我们当时收容了一百二左右，给我们（的）收容任务是200到300，我们当时收容有一半，鬼子那48个不算。48个为什么不算？他有一部分呢，是在路上就死了，抬到我们那里就（是）尸首了，抬的人不知道。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"包扎所对伤员实施急救、分类和抢救，轻伤不下火线，较重者包扎后送医院。\",\n      \"process_text\": \"轻伤不下火线，较重者先包扎，包扎所将其后送，医院再往后送。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0032\",\n        \"BATCH03-DOC07-S0061\",\n        \"BATCH03-DOC07-S0062\"\n      ],\n      \"evidence_quote\": \"陈海峰：包扎所把他往后送，包扎完了马上送到医院，医院再往后送。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE005-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"在同时有我方和日军重伤员时，先抢救我方重伤员，日军重伤员稍晚处理。\",\n      \"process_text\": \"先抢救自己的重伤员，日军重伤员相比之下稍晚。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0024\"\n      ],\n      \"evidence_quote\": \"陈海峰：我们实话实说地讲，首先还是抢救我们自己的（战士）。我们自己的战士重伤，你不去先抢救自己的？日本鬼子重伤，两个相比之下，我是先抢救自己的嘛，是不是？他得稍微晚一点嘛，是不是？\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE005-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"对收容伤员按需开刀、止血、换夹板，并依靠普包运动、自包互包和卫生战士开展救治。\",\n      \"process_text\": \"该开刀的开刀，该止血的止血，换夹板的换夹板；同时开展普包运动，组织自包互包。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0028\"\n      ],\n      \"evidence_quote\": \"陈海峰：我们该开刀的开刀，该止血的止血，换夹板的换夹板了，前面都是比较简单。那个时候比较好了，那个时候好在哪了呢？就是和抗战早期不一样了，早期抗战都靠医务人员，抢救不了，连队一个卫生员，以后两个卫生员，以后是一个班有3个卫生战士。那以后呢我们就教有“普包运动”，每一个战士都有急救包。那么可以自包，你腿上受伤，自己可以马上去包。告诉他们怎么包扎，怎么止血，怎么就地取材，什么木棍啊、竹片啊，棍子的话，自己给绑起来。自包互包，自己包扎，互相包扎，就开展“普包运动”。那么卫生战士就多了，每一个班就有3个卫生战士，再加上“普包运动”。卫生战士这个发明权呢，就是现在河南新乡医学院的一个图书馆主任，是原来我的老部下，那叫周淑敏（音）。周淑敏（音）这个人很能干的，而且脑子不错，他以后在南通警卫团，他创造的这个卫生战士。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE005-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"伤员经临时野战医院继续后送，重伤员送往一师后方医院，最远至东台一带。\",\n      \"process_text\": \"送到临时野战医院，再重的往后方送一师后方医院，离得一百多里，在东台。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0064\",\n        \"BATCH03-DOC07-S0067\",\n        \"BATCH03-DOC07-S0069\"\n      ],\n      \"evidence_quote\": \"陈海峰：送到我们一师后方医院去了。再重的就往后方送，那离得远了。一师后方医院在海边上呢。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE005-P08\",\n      \"stage_order\": 8,\n      \"stage_summary\": \"战役后总结急救深入前线、医院和包扎所靠近前线、普包运动等战救经验。\",\n      \"process_text\": \"这一仗打下来进行总结，认为急救要深入前线、靠近战场，医院靠近前线、包扎所更接近前线，并总结普包运动。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0032\",\n        \"BATCH03-DOC07-S0034\",\n        \"BATCH03-DOC07-S0038\"\n      ],\n      \"evidence_quote\": \"陈海峰：一个呢，就是刚才（讲的）刺刀变成钢钎，以后就配备那个钢钎，这个是第二个了。第三个呢，急救要深入前线，必须靠近战场，我们自己体会到了。因为这个流血呀，你少流血多流血，自己处理以后，互相包扎处理，你医务人员没有那么多，靠他自己或互相自己包扎，所以平时多流汗，那么战时就少流血，这个教育比较深入。那么医务人员都靠近前线，医院靠近前线，包扎所更接近前线，不单这个，我们还参加战斗。我们（要是）没有参加战斗，我们这个包扎所就完了！我们这个医院也完了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE005-P01\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0032\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE005-P02\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE005-P03\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE005-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0062\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE005-P04\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE005-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0024\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE005-P05\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE005-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0028\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE005-P06\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE005-P07\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0067\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE005-P07\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE005-P08\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0038\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC07-DE005",
+    "event_enrichment": {
+      "result_state": "临时野战医院完成收容与分级救治，收容约一百二十名我方伤员（另有日军伤员48名未计入，部分途中死亡），重伤员经包扎所、临时野战医院逐级后送，并总结战救经验。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于车桥战役结束中间在东侧成立临时野战医院并由陈海峰负责，止于伤员逐级后送及战后战救经验总结；缴获、战斗经过等外围叙述不纳入。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC07-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "车桥战役结束中间，在东侧成立临时野战医院，由陈海峰负责并兼院长；医院分包扎所与西岗前方医院两部分。",
+        "process_text": "东侧成立临时野战医院，由我负责；下设前方包扎所和西岗前方医院，包扎所负责急救、分类、抢救并后送。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0032",
+          "BATCH03-DOC07-S0050"
+        ],
+        "evidence_quote": "陈海峰：在“车桥战役”结束中间呢，我们东侧成立（了）临时野战医院，由我负责。临时野战医院分两个部分，一个部分是前面的包扎所，包扎所就是负责急救、分类、抢救，送到西岗的前方医院。前方医院我们力量比较强了，五个所长啊，还有四五个医生啊，医务员，还有一个班的卫生员呐。我们担架也多，那个时候经常保持几十副担架了。因为我们名义上是一个主力团，实际上变成一个旅的装备了，所以这一仗打下来，我们就进行总结。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "通过“普包运动”教战士自包互包，先做初步包扎，再送包扎所。",
+        "process_text": "前方包扎开展“普包运动”，战士先自个包、互包，然后马上到包扎所。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0036",
+          "BATCH03-DOC07-S0057",
+          "BATCH03-DOC07-S0058",
+          "BATCH03-DOC07-S0059"
+        ],
+        "evidence_quote": "陈海峰：前方包扎，“普包运动”。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "医疗队承担200至300名收容任务，实际收容约一百二十名；日军伤员48名未计入，其中部分在途中死亡。",
+        "process_text": "收容约一百二十名伤员，未达200至300的任务数；日军48名另计，部分抬到时已死亡。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0026"
+        ],
+        "evidence_quote": "陈海峰：我们当时收容了一百二左右，给我们（的）收容任务是200到300，我们当时收容有一半，鬼子那48个不算。48个为什么不算？他有一部分呢，是在路上就死了，抬到我们那里就（是）尸首了，抬的人不知道。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "包扎所对伤员实施急救、分类和抢救，轻伤不下火线，较重者包扎后送医院。",
+        "process_text": "轻伤不下火线，较重者先包扎，包扎所将其后送，医院再往后送。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0032",
+          "BATCH03-DOC07-S0061",
+          "BATCH03-DOC07-S0062"
+        ],
+        "evidence_quote": "陈海峰：包扎所把他往后送，包扎完了马上送到医院，医院再往后送。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE005-P05",
+        "stage_order": 5,
+        "stage_summary": "在同时有我方和日军重伤员时，先抢救我方重伤员，日军重伤员稍晚处理。",
+        "process_text": "先抢救自己的重伤员，日军重伤员相比之下稍晚。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0024"
+        ],
+        "evidence_quote": "陈海峰：我们实话实说地讲，首先还是抢救我们自己的（战士）。我们自己的战士重伤，你不去先抢救自己的？日本鬼子重伤，两个相比之下，我是先抢救自己的嘛，是不是？他得稍微晚一点嘛，是不是？",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE005-P06",
+        "stage_order": 6,
+        "stage_summary": "对收容伤员按需开刀、止血、换夹板，并依靠普包运动、自包互包和卫生战士开展救治。",
+        "process_text": "该开刀的开刀，该止血的止血，换夹板的换夹板；同时开展普包运动，组织自包互包。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0028"
+        ],
+        "evidence_quote": "陈海峰：我们该开刀的开刀，该止血的止血，换夹板的换夹板了，前面都是比较简单。那个时候比较好了，那个时候好在哪了呢？就是和抗战早期不一样了，早期抗战都靠医务人员，抢救不了，连队一个卫生员，以后两个卫生员，以后是一个班有3个卫生战士。那以后呢我们就教有“普包运动”，每一个战士都有急救包。那么可以自包，你腿上受伤，自己可以马上去包。告诉他们怎么包扎，怎么止血，怎么就地取材，什么木棍啊、竹片啊，棍子的话，自己给绑起来。自包互包，自己包扎，互相包扎，就开展“普包运动”。那么卫生战士就多了，每一个班就有3个卫生战士，再加上“普包运动”。卫生战士这个发明权呢，就是现在河南新乡医学院的一个图书馆主任，是原来我的老部下，那叫周淑敏（音）。周淑敏（音）这个人很能干的，而且脑子不错，他以后在南通警卫团，他创造的这个卫生战士。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE005-P07",
+        "stage_order": 7,
+        "stage_summary": "伤员经临时野战医院继续后送，重伤员送往一师后方医院，最远至东台一带。",
+        "process_text": "送到临时野战医院，再重的往后方送一师后方医院，离得一百多里，在东台。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0064",
+          "BATCH03-DOC07-S0067",
+          "BATCH03-DOC07-S0069"
+        ],
+        "evidence_quote": "陈海峰：送到我们一师后方医院去了。再重的就往后方送，那离得远了。一师后方医院在海边上呢。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE005-P08",
+        "stage_order": 8,
+        "stage_summary": "战役后总结急救深入前线、医院和包扎所靠近前线、普包运动等战救经验。",
+        "process_text": "这一仗打下来进行总结，认为急救要深入前线、靠近战场，医院靠近前线、包扎所更接近前线，并总结普包运动。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0032",
+          "BATCH03-DOC07-S0034",
+          "BATCH03-DOC07-S0038"
+        ],
+        "evidence_quote": "陈海峰：一个呢，就是刚才（讲的）刺刀变成钢钎，以后就配备那个钢钎，这个是第二个了。第三个呢，急救要深入前线，必须靠近战场，我们自己体会到了。因为这个流血呀，你少流血多流血，自己处理以后，互相包扎处理，你医务人员没有那么多，靠他自己或互相自己包扎，所以平时多流汗，那么战时就少流血，这个教育比较深入。那么医务人员都靠近前线，医院靠近前线，包扎所更接近前线，不单这个，我们还参加战斗。我们（要是）没有参加战斗，我们这个包扎所就完了！我们这个医院也完了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC07-DE005-P01",
+        "target_stage_id": "BATCH03-DOC07-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC07-S0032",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC07-DE005-P02",
+        "target_stage_id": "BATCH03-DOC07-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC07-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC07-DE005-P03",
+        "target_stage_id": "BATCH03-DOC07-DE005-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC07-S0062",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC07-DE005-P04",
+        "target_stage_id": "BATCH03-DOC07-DE005-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC07-S0024",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC07-DE005-P05",
+        "target_stage_id": "BATCH03-DOC07-DE005-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC07-S0028",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC07-DE005-P06",
+        "target_stage_id": "BATCH03-DOC07-DE005-P07",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC07-S0067",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC07-DE005-P07",
+        "target_stage_id": "BATCH03-DOC07-DE005-P08",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC07-S0038",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T00:44:02",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC05-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC05-DE004",
+  "usage": {
+    "prompt_tokens": 1317,
+    "total_tokens": 9109,
+    "completion_tokens": 7792,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6824
+    },
+    "time_to_first_token_ms": 60249,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7791000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-20\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC05-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"留守江南部队被打垮并撤到江北，留下短枪队和武工队坚持，损失很大；地方骨干大批牺牲。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于国民党占领大城市后对江南的扫荡，止于留守部队撤到江北、地方骨干大批牺牲；不含此前占领大城市及此后江北行动。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC05-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"国民党占领大城市后对江南发动扫荡\",\n      \"process_text\": \"他大城市占领以后啊，国民党来扫荡了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC05-S0127\"\n      ],\n      \"evidence_quote\": \"他大城市占领以后啊，国民党来扫荡了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC05-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"国民党挨家挨户搜查并镇压与新四军有联系者\",\n      \"process_text\": \"国民党挨家挨户搜查，凡是和新四军有联系的都镇压。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC05-S0129\"\n      ],\n      \"evidence_quote\": \"    陈海峰：国民党挨家挨户搜查，凡是和新四军有联系的都镇压。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC05-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"留守部队不到3个月被打垮，撤到江北，留短枪队和武工队坚持，损失很大\",\n      \"process_text\": \"不到3个月，都打垮了，后来撤到江北来了。留了几个短枪队在那里坚持，留了那个武工队什么，部队撤过来，损失很大。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC05-S0126\"\n      ],\n      \"evidence_quote\": \"    陈海峰：后来完了。不到3个月，都打垮了，后来撤到江北来了。留了几个短枪队在那里坚持，留了那个武工队什么，部队撤过来，损失很大。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC05-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"地方骨干大批牺牲\",\n      \"process_text\": \"牺牲一大批我们的地方骨干。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC05-S0130\"\n      ],\n      \"evidence_quote\": \"牺牲一大批我们的地方骨干。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC05-DE004-P01\",\n      \"target_stage_id\": \"BATCH06-DOC05-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC05-S0127\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC05-DE004-P02\",\n      \"target_stage_id\": \"BATCH06-DOC05-DE004-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC05-S0129\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC05-DE004-P03\",\n      \"target_stage_id\": \"BATCH06-DOC05-DE004-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC05-S0130\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-20",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC05-DE004",
+    "event_enrichment": {
+      "result_state": "留守江南部队被打垮并撤到江北，留下短枪队和武工队坚持，损失很大；地方骨干大批牺牲。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于国民党占领大城市后对江南的扫荡，止于留守部队撤到江北、地方骨干大批牺牲；不含此前占领大城市及此后江北行动。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC05-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "国民党占领大城市后对江南发动扫荡",
+        "process_text": "他大城市占领以后啊，国民党来扫荡了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC05-S0127"
+        ],
+        "evidence_quote": "他大城市占领以后啊，国民党来扫荡了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC05-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "国民党挨家挨户搜查并镇压与新四军有联系者",
+        "process_text": "国民党挨家挨户搜查，凡是和新四军有联系的都镇压。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC05-S0129"
+        ],
+        "evidence_quote": "    陈海峰：国民党挨家挨户搜查，凡是和新四军有联系的都镇压。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC05-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "留守部队不到3个月被打垮，撤到江北，留短枪队和武工队坚持，损失很大",
+        "process_text": "不到3个月，都打垮了，后来撤到江北来了。留了几个短枪队在那里坚持，留了那个武工队什么，部队撤过来，损失很大。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC05-S0126"
+        ],
+        "evidence_quote": "    陈海峰：后来完了。不到3个月，都打垮了，后来撤到江北来了。留了几个短枪队在那里坚持，留了那个武工队什么，部队撤过来，损失很大。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC05-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "地方骨干大批牺牲",
+        "process_text": "牺牲一大批我们的地方骨干。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC05-S0130"
+        ],
+        "evidence_quote": "牺牲一大批我们的地方骨干。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC05-DE004-P01",
+        "target_stage_id": "BATCH06-DOC05-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC05-S0127",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC05-DE004-P02",
+        "target_stage_id": "BATCH06-DOC05-DE004-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC05-S0129",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC05-DE004-P03",
+        "target_stage_id": "BATCH06-DOC05-DE004-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC05-S0130",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

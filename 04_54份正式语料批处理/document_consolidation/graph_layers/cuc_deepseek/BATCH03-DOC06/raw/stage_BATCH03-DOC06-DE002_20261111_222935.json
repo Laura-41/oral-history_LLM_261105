@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T22:29:35",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE002",
+  "usage": {
+    "prompt_tokens": 1169,
+    "total_tokens": 3052,
+    "completion_tokens": 1883,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1148
+    },
+    "time_to_first_token_ms": 14751,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 1882000
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"收容临汾撤退学生未果；学生已经过河，部队返回午城镇附近。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“我们这个团又到了吉县附近”为起点，以“我们又返回来”及返回午城镇附近为终点；不纳入随后侧击敌人的作战过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"团到达吉县附近，明确收容临汾撤退学生的任务。\",\n      \"process_text\": \"团到达吉县附近，任务为收容临汾撤退的学生，并提及山西大学等学校名称但未确定。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0011\"\n      ],\n      \"evidence_quote\": \"我们这个团又到了吉县附近，任务呢，去收容那些临汾撤退的学生，有什么山西大学，不是，那时叫什么大学……\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"到达时已晚，学生已经过河，收容未能实现。\",\n      \"process_text\": \"部队到达时已经晚了，目标学生都已经过了河，收容任务未果。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0011\"\n      ],\n      \"evidence_quote\": \"结果我们去了也晚了，他们都已经过了河了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"部队返回午城镇附近。\",\n      \"process_text\": \"收容未果后，部队返回，回到午城镇附近。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0011\"\n      ],\n      \"evidence_quote\": \"我们又返回来。返回来就在午城镇附近\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE002-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0011\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE002-P02\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE002-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0011\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE002",
+    "event_enrichment": {
+      "result_state": "收容临汾撤退学生未果；学生已经过河，部队返回午城镇附近。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以“我们这个团又到了吉县附近”为起点，以“我们又返回来”及返回午城镇附近为终点；不纳入随后侧击敌人的作战过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "团到达吉县附近，明确收容临汾撤退学生的任务。",
+        "process_text": "团到达吉县附近，任务为收容临汾撤退的学生，并提及山西大学等学校名称但未确定。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0011"
+        ],
+        "evidence_quote": "我们这个团又到了吉县附近，任务呢，去收容那些临汾撤退的学生，有什么山西大学，不是，那时叫什么大学……",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "到达时已晚，学生已经过河，收容未能实现。",
+        "process_text": "部队到达时已经晚了，目标学生都已经过了河，收容任务未果。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0011"
+        ],
+        "evidence_quote": "结果我们去了也晚了，他们都已经过了河了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "部队返回午城镇附近。",
+        "process_text": "收容未果后，部队返回，回到午城镇附近。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0011"
+        ],
+        "evidence_quote": "我们又返回来。返回来就在午城镇附近",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE002-P01",
+        "target_stage_id": "BATCH03-DOC06-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0011",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE002-P02",
+        "target_stage_id": "BATCH03-DOC06-DE002-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC06-S0011",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

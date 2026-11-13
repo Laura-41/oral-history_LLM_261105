@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T23:22:15",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC08-DE010",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC08-DE010",
+  "usage": {
+    "prompt_tokens": 1238,
+    "total_tokens": 6895,
+    "completion_tokens": 5657,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4677
+    },
+    "time_to_first_token_ms": 82993,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5656000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC08-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈老总明确反对陈锐霆赴济南，陈锐霆事后认可该判断，此事被叙述为插曲。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于 S0026 中“另外到济南去的时候，有些人提议，我对国民党那个部队熟悉，叫我也跟着去。”，止于 S0028 中“如果我到济南去，马上就把我捉起来，完全有可能的。这是一个插曲。”\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"有人提议陈锐霆因熟悉国民党部队随军赴济南。\",\n      \"process_text\": \"另外到济南去的时候，有些人提议，我对国民党那个部队熟悉，叫我也跟着去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0026\"\n      ],\n      \"evidence_quote\": \"另外到济南去的时候，有些人提议，我对国民党那个部队熟悉，叫我也跟着去。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈老总以国民党可能将其当作叛徒逮捕为由明确反对。\",\n      \"process_text\": \"陈老总一听，“他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。”\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0026\"\n      ],\n      \"evidence_quote\": \"陈老总一听，“他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。”\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆事后认可陈老总判断，认为若赴济南被捉完全有可能，此事成为插曲。\",\n      \"process_text\": \"如果我到济南去，马上就把我捉起来，完全有可能的。这是一个插曲。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0028\"\n      ],\n      \"evidence_quote\": \"陈锐霆：以后他们对我讲，我说陈老总讲得非常对。我的军长就是李仙洲，92军的军长，师长那个时候是王耀武，他做的第二把手，另外一个山东的保安司令叫傅立平，就是原来142师的我那个师的师长。如果我到济南去，马上就把我捉起来，完全有可能的。这是一个插曲。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE010-P01\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE010-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE010-P02\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE010-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0028\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": null\n}",
+  "parsed": {
+    "document_id": "CRT-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC08-DE010",
+    "event_enrichment": {
+      "result_state": "陈老总明确反对陈锐霆赴济南，陈锐霆事后认可该判断，此事被叙述为插曲。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于 S0026 中“另外到济南去的时候，有些人提议，我对国民党那个部队熟悉，叫我也跟着去。”，止于 S0028 中“如果我到济南去，马上就把我捉起来，完全有可能的。这是一个插曲。”",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC08-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "有人提议陈锐霆因熟悉国民党部队随军赴济南。",
+        "process_text": "另外到济南去的时候，有些人提议，我对国民党那个部队熟悉，叫我也跟着去。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0026"
+        ],
+        "evidence_quote": "另外到济南去的时候，有些人提议，我对国民党那个部队熟悉，叫我也跟着去。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "陈老总以国民党可能将其当作叛徒逮捕为由明确反对。",
+        "process_text": "陈老总一听，“他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。”",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0026"
+        ],
+        "evidence_quote": "陈老总一听，“他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。”",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆事后认可陈老总判断，认为若赴济南被捉完全有可能，此事成为插曲。",
+        "process_text": "如果我到济南去，马上就把我捉起来，完全有可能的。这是一个插曲。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0028"
+        ],
+        "evidence_quote": "陈锐霆：以后他们对我讲，我说陈老总讲得非常对。我的军长就是李仙洲，92军的军长，师长那个时候是王耀武，他做的第二把手，另外一个山东的保安司令叫傅立平，就是原来142师的我那个师的师长。如果我到济南去，马上就把我捉起来，完全有可能的。这是一个插曲。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC08-DE010-P01",
+        "target_stage_id": "BATCH04-DOC08-DE010-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH04-DOC08-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC08-DE010-P02",
+        "target_stage_id": "BATCH04-DOC08-DE010-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC08-S0028",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": null
+  },
+  "request_error": null
+}

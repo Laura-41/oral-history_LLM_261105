@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T01:23:20",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC04-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC04-DE005",
+  "usage": {
+    "prompt_tokens": 1361,
+    "total_tokens": 4891,
+    "completion_tokens": 3530,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2535
+    },
+    "time_to_first_token_ms": 30117,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC04-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"便衣听出常州话后停止盘查并离开，掩护对象脱险。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“（有一次）我们在他家里吃晚饭……来了几个便衣，来搜索”为起点，以“他一听）常州话，就不查了，走了”为终点；中间盘查与回答均属同一脱险过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"众人在他家中吃晚饭时，便衣突然来搜索。\",\n      \"process_text\": \"（有一次）我们在他家里吃晚饭，煤油灯暗暗的，来了几个便衣，来搜索。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0041\"\n      ],\n      \"evidence_quote\": \"（有一次）我们在他家里吃晚饭，煤油灯暗暗的，来了几个便衣，来搜索。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"便衣发现陌生人并追问其身份，盘查持续一段时间。\",\n      \"process_text\": \"一看（陌生人就问），这是什么人？盘查了半天\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0041\"\n      ],\n      \"evidence_quote\": \"一看（陌生人就问），这是什么人？盘查了半天\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"众人讲常州话，他以亲戚身份回答，称对方在此居住已久。\",\n      \"process_text\": \"因为我们都（是在）家乡（工作），我们一块都讲常州话。（他说）我们（是他）亲戚在这里住的，也不是一天两天（了）。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0041\"\n      ],\n      \"evidence_quote\": \"因为我们都（是在）家乡（工作），我们一块都讲常州话。（他说）我们（是他）亲戚在这里住的，也不是一天两天（了）。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"便衣一听常州话便停止盘查并离开。\",\n      \"process_text\": \"陈海峰：他一听）常州话，就不查了，走了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0043\"\n      ],\n      \"evidence_quote\": \"陈海峰：他一听）常州话，就不查了，走了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE005-P01\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0041\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE005-P02\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0041\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE005-P03\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE005-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0043\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC04-DE005",
+    "event_enrichment": {
+      "result_state": "便衣听出常州话后停止盘查并离开，掩护对象脱险。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以“（有一次）我们在他家里吃晚饭……来了几个便衣，来搜索”为起点，以“他一听）常州话，就不查了，走了”为终点；中间盘查与回答均属同一脱险过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC04-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "众人在他家中吃晚饭时，便衣突然来搜索。",
+        "process_text": "（有一次）我们在他家里吃晚饭，煤油灯暗暗的，来了几个便衣，来搜索。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0041"
+        ],
+        "evidence_quote": "（有一次）我们在他家里吃晚饭，煤油灯暗暗的，来了几个便衣，来搜索。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "便衣发现陌生人并追问其身份，盘查持续一段时间。",
+        "process_text": "一看（陌生人就问），这是什么人？盘查了半天",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0041"
+        ],
+        "evidence_quote": "一看（陌生人就问），这是什么人？盘查了半天",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "众人讲常州话，他以亲戚身份回答，称对方在此居住已久。",
+        "process_text": "因为我们都（是在）家乡（工作），我们一块都讲常州话。（他说）我们（是他）亲戚在这里住的，也不是一天两天（了）。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0041"
+        ],
+        "evidence_quote": "因为我们都（是在）家乡（工作），我们一块都讲常州话。（他说）我们（是他）亲戚在这里住的，也不是一天两天（了）。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "便衣一听常州话便停止盘查并离开。",
+        "process_text": "陈海峰：他一听）常州话，就不查了，走了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0043"
+        ],
+        "evidence_quote": "陈海峰：他一听）常州话，就不查了，走了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC04-DE005-P01",
+        "target_stage_id": "BATCH07-DOC04-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC04-S0041",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE005-P02",
+        "target_stage_id": "BATCH07-DOC04-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC04-S0041",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE005-P03",
+        "target_stage_id": "BATCH07-DOC04-DE005-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH07-DOC04-S0043",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

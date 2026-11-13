@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T22:14:08",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC03-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC03-DE002",
+  "usage": {
+    "prompt_tokens": 1272,
+    "total_tokens": 2604,
+    "completion_tokens": 1332,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 520
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 10415,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC03-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰到团部担任卫生队长并接防，其原岗位由刘翔光接替。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件起于战斗后陈海峰调任团部卫生队长的决定，止于其到团部接防及原岗位交接；后续第七次繁昌战斗不属于本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"团部卫生队长病重休养未归，职位空缺，构成调任背景。\",\n      \"process_text\": \"团部没有卫生队长，原卫生队长病重后到后方休养，一直没有回来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0013\"\n      ],\n      \"evidence_quote\": \"团部没有卫生队长，原来卫生队长呀，病重以后，到后方休养，一直没有回来。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"战斗后陈海峰调任团部卫生队长，并于5月2日到达团部。\",\n      \"process_text\": \"这个战斗以后，陈海峰调到团部当卫生队长；没有多久，5月2号战役还没结束，他就到了团部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0013\"\n      ],\n      \"evidence_quote\": \"去了没有多久呢，就是5月2号，这个战役还没结束，我就到了团部。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"刘翔光接替陈海峰原岗位任卫生指导员，陈海峰到团部接防。\",\n      \"process_text\": \"刘翔光来接替陈海峰，担任卫生指导员，陈海峰则到团部去接防。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0013\"\n      ],\n      \"evidence_quote\": \"刘翔光（音）来接替我了，他当卫生指导员，我就到团部去了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE002-P01\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE002-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0013\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE002-P02\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0013\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC03-DE002",
+    "event_enrichment": {
+      "result_state": "陈海峰到团部担任卫生队长并接防，其原岗位由刘翔光接替。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件起于战斗后陈海峰调任团部卫生队长的决定，止于其到团部接防及原岗位交接；后续第七次繁昌战斗不属于本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC03-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "团部卫生队长病重休养未归，职位空缺，构成调任背景。",
+        "process_text": "团部没有卫生队长，原卫生队长病重后到后方休养，一直没有回来。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0013"
+        ],
+        "evidence_quote": "团部没有卫生队长，原来卫生队长呀，病重以后，到后方休养，一直没有回来。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "战斗后陈海峰调任团部卫生队长，并于5月2日到达团部。",
+        "process_text": "这个战斗以后，陈海峰调到团部当卫生队长；没有多久，5月2号战役还没结束，他就到了团部。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0013"
+        ],
+        "evidence_quote": "去了没有多久呢，就是5月2号，这个战役还没结束，我就到了团部。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "刘翔光接替陈海峰原岗位任卫生指导员，陈海峰到团部接防。",
+        "process_text": "刘翔光来接替陈海峰，担任卫生指导员，陈海峰则到团部去接防。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0013"
+        ],
+        "evidence_quote": "刘翔光（音）来接替我了，他当卫生指导员，我就到团部去了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC03-DE002-P01",
+        "target_stage_id": "BATCH03-DOC03-DE002-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH03-DOC03-S0013",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC03-DE002-P02",
+        "target_stage_id": "BATCH03-DOC03-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC03-S0013",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

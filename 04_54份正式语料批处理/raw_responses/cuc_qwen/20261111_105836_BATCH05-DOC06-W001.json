@@ -1,0 +1,288 @@
+{
+  "run_time": "2026-11-11T10:58:36",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH05-DOC06-W001",
+  "technical_document_id": "BATCH05-DOC06",
+  "document_id": "08.杨永松100507（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH05-DOC06-S0002",
+    "BATCH05-DOC06-S0003",
+    "BATCH05-DOC06-S0004",
+    "BATCH05-DOC06-S0005",
+    "BATCH05-DOC06-S0006",
+    "BATCH05-DOC06-S0007",
+    "BATCH05-DOC06-S0008",
+    "BATCH05-DOC06-S0009",
+    "BATCH05-DOC06-S0010",
+    "BATCH05-DOC06-S0011",
+    "BATCH05-DOC06-S0012",
+    "BATCH05-DOC06-S0013",
+    "BATCH05-DOC06-S0014",
+    "BATCH05-DOC06-S0015",
+    "BATCH05-DOC06-S0016",
+    "BATCH05-DOC06-S0017",
+    "BATCH05-DOC06-S0018",
+    "BATCH05-DOC06-S0019",
+    "BATCH05-DOC06-S0020",
+    "BATCH05-DOC06-S0021",
+    "BATCH05-DOC06-S0022"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 4,
+    "assigned_segment_count": 8,
+    "unassigned_segment_count": 13,
+    "input_segment_count": 21,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH05-DOC06-W001-E04"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH05-DOC06-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH05-DOC06-W001-E01",
+        "source_segment_ids": [
+          "BATCH05-DOC06-S0003",
+          "BATCH05-DOC06-S0005",
+          "BATCH05-DOC06-S0006",
+          "BATCH05-DOC06-S0008",
+          "BATCH05-DOC06-S0010"
+        ],
+        "event": {
+          "event_name": "陆房突围后休整并过路东",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "休整并过路东",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "三四天",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "无盐村",
+              "normalized_value": "无盐村"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "路东",
+              "normalized_value": "津浦路东"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "敌人都撤出去了",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "在那里准备了三四天以后，我们就过路东去了。",
+          "type_basis": "核心过程是部队在陆房突围后休整、整顿并转移过路东，属于组织行动和空间移动；可用 What did X do? 测试，主导类型不是心理、言语、关系或存在。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH05-DOC06-W001-E02",
+        "source_segment_ids": [
+          "BATCH05-DOC06-S0016"
+        ],
+        "event": {
+          "event_name": "过路东后到达山东纵队活动地区并研究敌情",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "到达山东纵队活动地区并研究情况",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "他们领导",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "山东纵队活动地区",
+              "normalized_value": "山东纵队活动地区"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "楼德镇的南边几十里的地方",
+              "normalized_value": "楼德镇南边几十里"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "我们就一个特务营，我们不可能主动去打敌人去",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们过了路东以后啊，就到了山东纵队活动地区。当然原先鲁西和鲁西北、鲁西南都是山东省委统一领导的，以后才以津浦路为界，把鲁西划给了晋冀鲁豫了。我们过路以后，走到一个楼德镇，是个煤矿，再往东是新泰，新泰再往东是莱芜，莱芜、新泰、楼德镇，都是敌人占领了。每个地方都有日本人，都有汉奸队，都做了碉堡、防御工事，因为我们就一个特务营，我们不可能主动去打敌人去，所以我们就在楼德镇的南边几十里的地方，他们领导在那里研究情况。",
+          "type_basis": "核心过程是部队过路东后到达山东纵队活动地区，并在楼德镇南边几十里研究敌情，属于空间移动和组织行动；不是单纯心理认知或关系说明。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH05-DOC06-W001-E03",
+        "source_segment_ids": [
+          "BATCH05-DOC06-S0018"
+        ],
+        "event": {
+          "event_name": "在马家峪与三纵队一支队及徐向前朱瑞部队会合",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "会合",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "三纵队一支队",
+              "normalized_entity": "三纵队一支队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "徐向前、朱瑞带着他的人",
+              "normalized_entity": "徐向前、朱瑞部队",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "马家峪，费县最后的一个村子",
+              "normalized_value": "马家峪"
+            },
+            {
+              "kind": "TIME",
+              "value": "几天",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "两三天",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "蒙阴",
+              "normalized_value": "蒙阴"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们就在马家峪，费县最后的一个村子。我们在那里住了几天，三纵队一支队那个支队长姓马，政委在福州当……周赤萍，他那个支队，就跟我们会合了，见面了，很高兴大家。他是不是主要来见朱瑞和徐向前的，可能是，我不知道他的任务。结果我们在那待了两三天以后啊，徐向前、朱瑞带着他的人，人不太多，就从我们过路那个地方（过来），因为这走也有咱们自己工作的交通线嘛。我们会合以后，他们没管我们的事，就他自己走他的，他就往东走到蒙阴，蒙阴也有敌人。",
+          "type_basis": "核心过程是不同部队在马家峪会合，属于组织行动和空间移动；会合双方均为经验参与者，不是言语或心理过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH05-DOC06-W001-E04",
+        "source_segment_ids": [
+          "BATCH05-DOC06-S0022"
+        ],
+        "event": {
+          "event_name": "冀鲁边七团到费县西北宣传抗日并训练部队",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "过来做宣传抗日、训练部队",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "冀鲁边的哪个支队的七团",
+              "normalized_entity": "冀鲁边某支队七团",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Scope",
+              "mention": "宣传抗日、训练部队",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "过了几天",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "费（县）西北这个地区",
+              "normalized_value": "费县西北地区"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "垛庄西北角",
+              "normalized_value": "垛庄西北角"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们过了几天，就是冀鲁边的哪个支队的七团，这个团有千把人，也过来了。过来以后，他就在费（县）西北这个地区做宣传抗日、训练部队这样的，我们也在那里。",
+          "type_basis": "核心过程是七团到来并在费县西北开展宣传抗日、训练部队，属于组织行动；宣传抗日在此作为活动名称而非具体言语命题，故不标为言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH05-DOC06-S0002",
+      "BATCH05-DOC06-S0004",
+      "BATCH05-DOC06-S0007",
+      "BATCH05-DOC06-S0009",
+      "BATCH05-DOC06-S0011",
+      "BATCH05-DOC06-S0012",
+      "BATCH05-DOC06-S0013",
+      "BATCH05-DOC06-S0014",
+      "BATCH05-DOC06-S0015",
+      "BATCH05-DOC06-S0017",
+      "BATCH05-DOC06-S0019",
+      "BATCH05-DOC06-S0020",
+      "BATCH05-DOC06-S0021"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH05-DOC06-W001\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH05-DOC06-W001-E01\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC06-S0003\",\n        \"BATCH05-DOC06-S0005\",\n        \"BATCH05-DOC06-S0006\",\n        \"BATCH05-DOC06-S0008\",\n        \"BATCH05-DOC06-S0010\"\n      ],\n      \"event\": {\n        \"event_name\": \"陆房突围后休整并过路东\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"休整并过路东\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"三四天\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"无盐村\",\n            \"normalized_value\": \"无盐村\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"路东\",\n            \"normalized_value\": \"津浦路东\"\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"敌人都撤出去了\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"在那里准备了三四天以后，我们就过路东去了。\",\n        \"type_basis\": \"核心过程是部队在陆房突围后休整、整顿并转移过路东，属于组织行动和空间移动；可用 What did X do? 测试，主导类型不是心理、言语、关系或存在。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH05-DOC06-W001-E02\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC06-S0016\"\n      ],\n      \"event\": {\n        \"event_name\": \"过路东后到达山东纵队活动地区并研究敌情\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"到达山东纵队活动地区并研究情况\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"他们领导\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"山东纵队活动地区\",\n            \"normalized_value\": \"山东纵队活动地区\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"楼德镇的南边几十里的地方\",\n            \"normalized_value\": \"楼德镇南边几十里\"\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"我们就一个特务营，我们不可能主动去打敌人去\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们过了路东以后啊，就到了山东纵队活动地区。当然原先鲁西和鲁西北、鲁西南都是山东省委统一领导的，以后才以津浦路为界，把鲁西划给了晋冀鲁豫了。我们过路以后，走到一个楼德镇，是个煤矿，再往东是新泰，新泰再往东是莱芜，莱芜、新泰、楼德镇，都是敌人占领了。每个地方都有日本人，都有汉奸队，都做了碉堡、防御工事，因为我们就一个特务营，我们不可能主动去打敌人去，所以我们就在楼德镇的南边几十里的地方，他们领导在那里研究情况。\",\n        \"type_basis\": \"核心过程是部队过路东后到达山东纵队活动地区，并在楼德镇南边几十里研究敌情，属于空间移动和组织行动；不是单纯心理认知或关系说明。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH05-DOC06-W001-E03\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC06-S0018\"\n      ],\n      \"event\": {\n        \"event_name\": \"在马家峪与三纵队一支队及徐向前朱瑞部队会合\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"会合\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"三纵队一支队\",\n            \"normalized_entity\": \"三纵队一支队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"徐向前、朱瑞带着他的人\",\n            \"normalized_entity\": \"徐向前、朱瑞部队\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"马家峪，费县最后的一个村子\",\n            \"normalized_value\": \"马家峪\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"几天\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"两三天\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"蒙阴\",\n            \"normalized_value\": \"蒙阴\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们就在马家峪，费县最后的一个村子。我们在那里住了几天，三纵队一支队那个支队长姓马，政委在福州当……周赤萍，他那个支队，就跟我们会合了，见面了，很高兴大家。他是不是主要来见朱瑞和徐向前的，可能是，我不知道他的任务。结果我们在那待了两三天以后啊，徐向前、朱瑞带着他的人，人不太多，就从我们过路那个地方（过来），因为这走也有咱们自己工作的交通线嘛。我们会合以后，他们没管我们的事，就他自己走他的，他就往东走到蒙阴，蒙阴也有敌人。\",\n        \"type_basis\": \"核心过程是不同部队在马家峪会合，属于组织行动和空间移动；会合双方均为经验参与者，不是言语或心理过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH05-DOC06-W001-E04\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC06-S0022\"\n      ],\n      \"event\": {\n        \"event_name\": \"冀鲁边七团到费县西北宣传抗日并训练部队\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"过来做宣传抗日、训练部队\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"冀鲁边的哪个支队的七团\",\n            \"normalized_entity\": \"冀鲁边某支队七团\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"宣传抗日、训练部队\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"过了几天\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"费（县）西北这个地区\",\n            \"normalized_value\": \"费县西北地区\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"垛庄西北角\",\n            \"normalized_value\": \"垛庄西北角\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们过了几天，就是冀鲁边的哪个支队的七团，这个团有千把人，也过来了。过来以后，他就在费（县）西北这个地区做宣传抗日、训练部队这样的，我们也在那里。\",\n        \"type_basis\": \"核心过程是七团到来并在费县西北开展宣传抗日、训练部队，属于组织行动；宣传抗日在此作为活动名称而非具体言语命题，故不标为言语过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH05-DOC06-S0002\",\n    \"BATCH05-DOC06-S0004\",\n    \"BATCH05-DOC06-S0007\",\n    \"BATCH05-DOC06-S0009\",\n    \"BATCH05-DOC06-S0011\",\n    \"BATCH05-DOC06-S0012\",\n    \"BATCH05-DOC06-S0013\",\n    \"BATCH05-DOC06-S0014\",\n    \"BATCH05-DOC06-S0015\",\n    \"BATCH05-DOC06-S0017\",\n    \"BATCH05-DOC06-S0019\",\n    \"BATCH05-DOC06-S0020\",\n    \"BATCH05-DOC06-S0021\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5923,
+    "total_tokens": 28817,
+    "completion_tokens": 22894,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 20418
+    },
+    "time_to_first_token_ms": 429592,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11446500
+  }
+}

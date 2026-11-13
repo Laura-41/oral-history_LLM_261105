@@ -1,0 +1,156 @@
+{
+  "run_time": "2026-11-10T18:56:49",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC01-W005",
+  "technical_document_id": "BATCH03-DOC01",
+  "document_id": "05.陈海峰（二访）（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC01-S0074",
+    "BATCH03-DOC01-S0075",
+    "BATCH03-DOC01-S0076",
+    "BATCH03-DOC01-S0077",
+    "BATCH03-DOC01-S0078",
+    "BATCH03-DOC01-S0079",
+    "BATCH03-DOC01-S0080",
+    "BATCH03-DOC01-S0081"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 4,
+    "unassigned_segment_count": 4,
+    "input_segment_count": 8,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH03-DOC01-W005-E01"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC01-W005",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC01-W005-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC01-S0075",
+          "BATCH03-DOC01-S0077",
+          "BATCH03-DOC01-S0079",
+          "BATCH03-DOC01-S0081"
+        ],
+        "event": {
+          "event_name": "陈海峰所在部队繁昌伏击日军并翻山撤退遭遇炮击",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "伏击日军并翻山撤退遭遇炮击",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰所在部队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "营长",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "战士",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "日本鬼子",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "那天",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "繁昌",
+              "normalized_value": "繁昌"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "山冈",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "山顶",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "往山上",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "翻过那个高山",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "到老虎山这一带",
+              "normalized_value": "老虎山"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "发现我们山上有动静",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "靠近再打，不靠近不准打",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "爬到离我们只有二三十米（的）地方，机枪开始打了，轻重机枪一起，“嘎嘎嘎嘎嘎嘎嘎嘎嘎”扫，鬼子“哇哇哇哇”叫。",
+          "type_basis": "核心过程是部队埋伏、射击、投弹、撤退、翻山和遭遇炮击，属于可观察的行动与位置变化；参与者配置为Actor（陈海峰所在部队、营长、战士、陈海峰）和Goal（日军）。营长命令和卧倒呼喊是战斗中的从属言语阶段，不改变主导物质过程；不是身份、属性或属有关系，不是单纯心理感知，不是引入存在，也不是无物质结果的行为外显。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC01-S0074",
+      "BATCH03-DOC01-S0076",
+      "BATCH03-DOC01-S0078",
+      "BATCH03-DOC01-S0080"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH03-DOC01-W005\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC01-W005-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC01-S0075\",\n        \"BATCH03-DOC01-S0077\",\n        \"BATCH03-DOC01-S0079\",\n        \"BATCH03-DOC01-S0081\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰所在部队繁昌伏击日军并翻山撤退遭遇炮击\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"伏击日军并翻山撤退遭遇炮击\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰所在部队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"营长\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"战士\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"日本鬼子\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"那天\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"繁昌\",\n            \"normalized_value\": \"繁昌\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"山冈\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"山顶\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"往山上\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"翻过那个高山\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"到老虎山这一带\",\n            \"normalized_value\": \"老虎山\"\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"发现我们山上有动静\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"靠近再打，不靠近不准打\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"爬到离我们只有二三十米（的）地方，机枪开始打了，轻重机枪一起，“嘎嘎嘎嘎嘎嘎嘎嘎嘎”扫，鬼子“哇哇哇哇”叫。\",\n        \"type_basis\": \"核心过程是部队埋伏、射击、投弹、撤退、翻山和遭遇炮击，属于可观察的行动与位置变化；参与者配置为Actor（陈海峰所在部队、营长、战士、陈海峰）和Goal（日军）。营长命令和卧倒呼喊是战斗中的从属言语阶段，不改变主导物质过程；不是身份、属性或属有关系，不是单纯心理感知，不是引入存在，也不是无物质结果的行为外显。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC01-S0074\",\n    \"BATCH03-DOC01-S0076\",\n    \"BATCH03-DOC01-S0078\",\n    \"BATCH03-DOC01-S0080\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5631,
+    "total_tokens": 16775,
+    "completion_tokens": 11144,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10130
+    },
+    "time_to_first_token_ms": 260010,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

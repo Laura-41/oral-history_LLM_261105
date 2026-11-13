@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T00:47:22",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC06-DE007",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC06-DE007",
+  "usage": {
+    "prompt_tokens": 1343,
+    "total_tokens": 4996,
+    "completion_tokens": 3653,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2662
+    },
+    "time_to_first_token_ms": 30036,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC06-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队完成大整编，番号改变，成立四个兵团十六个军、两广纵队和特纵；炮兵编成六个团，四个日式骡马牵引团每兵团一个，炮一团和炮六团由野战军掌握。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“按照中央统一的命令，部队大整编”为起点，以炮兵六个团编成及野战军掌握炮一、炮六团的说明为终点；不纳入前文渡江准备、工兵修路和后文进入长江沿线阵地等内容。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"按中央统一命令实施部队大整编，改变番号并组建新的兵团、军、纵队和特纵。\",\n      \"process_text\": \"按照中央统一的命令，部队大整编，番号改变，成立四个兵团十六个军、两广纵队和特纵，特纵直属司令部、政治部领导。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0013\"\n      ],\n      \"evidence_quote\": \"这个时候按照中央统一的命令，部队大整编，番号改变了，另外成立了四个兵团十六个军，还有两广纵队，另外一个特纵，直属司令部、政治部的领导。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"炮兵整编为六个团，先编四个日式骡马牵引团，每兵团配属一个团。\",\n      \"process_text\": \"炮兵编了六个团，其中四个团为日式、骡马牵引，装备105榴弹炮和75野战炮，一个兵团给一个团。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0015\"\n      ],\n      \"evidence_quote\": \"整编没说完，炮兵我们就编了六个团，四个团是个日式的，骡马牵引的，105榴弹炮跟75野战炮，编了四个团，一个兵团给一个团。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"野战军另掌握炮一团和新编炮六团，形成直属火力；粟裕强调建立强大火力拳头。\",\n      \"process_text\": \"野战军自己掌握原炮一团（美式105榴弹炮，淮海战役缴获）和新编六团，一、六两团归野战军掌握；粟裕提出要建立强大的火力拳头。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0015\"\n      ],\n      \"evidence_quote\": \"另外野战军自己掌握的，原来是炮一团，有美式的105榴弹炮，是淮海战役的大缴获，我们又新编了一个六团，一、六这两个团都是归野战军自己掌握。粟裕同志讲，要建立强大的火力拳头，的确两个团火力拳头还是很硬的。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE007-P01\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0015\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE007-P02\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0015\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC06-DE007",
+    "event_enrichment": {
+      "result_state": "部队完成大整编，番号改变，成立四个兵团十六个军、两广纵队和特纵；炮兵编成六个团，四个日式骡马牵引团每兵团一个，炮一团和炮六团由野战军掌握。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以“按照中央统一的命令，部队大整编”为起点，以炮兵六个团编成及野战军掌握炮一、炮六团的说明为终点；不纳入前文渡江准备、工兵修路和后文进入长江沿线阵地等内容。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC06-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "按中央统一命令实施部队大整编，改变番号并组建新的兵团、军、纵队和特纵。",
+        "process_text": "按照中央统一的命令，部队大整编，番号改变，成立四个兵团十六个军、两广纵队和特纵，特纵直属司令部、政治部领导。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0013"
+        ],
+        "evidence_quote": "这个时候按照中央统一的命令，部队大整编，番号改变了，另外成立了四个兵团十六个军，还有两广纵队，另外一个特纵，直属司令部、政治部的领导。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "炮兵整编为六个团，先编四个日式骡马牵引团，每兵团配属一个团。",
+        "process_text": "炮兵编了六个团，其中四个团为日式、骡马牵引，装备105榴弹炮和75野战炮，一个兵团给一个团。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0015"
+        ],
+        "evidence_quote": "整编没说完，炮兵我们就编了六个团，四个团是个日式的，骡马牵引的，105榴弹炮跟75野战炮，编了四个团，一个兵团给一个团。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "野战军另掌握炮一团和新编炮六团，形成直属火力；粟裕强调建立强大火力拳头。",
+        "process_text": "野战军自己掌握原炮一团（美式105榴弹炮，淮海战役缴获）和新编六团，一、六两团归野战军掌握；粟裕提出要建立强大的火力拳头。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0015"
+        ],
+        "evidence_quote": "另外野战军自己掌握的，原来是炮一团，有美式的105榴弹炮，是淮海战役的大缴获，我们又新编了一个六团，一、六这两个团都是归野战军自己掌握。粟裕同志讲，要建立强大的火力拳头，的确两个团火力拳头还是很硬的。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC06-DE007-P01",
+        "target_stage_id": "BATCH06-DOC06-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0015",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE007-P02",
+        "target_stage_id": "BATCH06-DOC06-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0015",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

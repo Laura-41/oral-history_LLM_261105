@@ -1,0 +1,165 @@
+{
+  "run_time": "2026-11-13T00:54:31",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC05-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC05-DE001",
+  "usage": {
+    "prompt_tokens": 3318,
+    "total_tokens": 16706,
+    "completion_tokens": 13388,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 11046
+    },
+    "time_to_first_token_ms": 199876,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13387000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-15\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC05-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"北寺等据点被攻克，战斗持续一个半月且主力部队伤亡很大，敌人未被全部消灭，日军介入后老一团撤到宝应。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"从配合部队制作草包和土坦克开始，到打完仗后老1团撤到宝应结束；中间包含填河架桥、北寺战斗、据点攻克、日军介入与撤退。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"配合部队准备草包和土坦克\",\n      \"process_text\": \"要配合部队，每人交草包，用稻草编草垫、铺泥巴卷成稻草卷，喷水后挖战壕排队到河边。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0003\",\n        \"BATCH05-DOC05-S0004\",\n        \"BATCH05-DOC05-S0005\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那么我们要配合部队，一个人啊，交20个，至少要交10个。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"傍晚用土坦克填河架桥\",\n      \"process_text\": \"傍晚天快黑开始进攻，把土坦克喷水后由大力士推滚入河，从河底往上垫到水面，再用草包往前填，机枪封锁枪眼洞，突击队从草包上过去，等于架桥；小河浜围着庙和碉堡周围，水不流动，填满叫土坦克。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0007\",\n        \"BATCH05-DOC05-S0009\",\n        \"BATCH05-DOC05-S0010\",\n        \"BATCH05-DOC05-S0012\",\n        \"BATCH05-DOC05-S0014\",\n        \"BATCH05-DOC05-S0016\",\n        \"BATCH05-DOC05-S0017\",\n        \"BATCH05-DOC05-S0018\"\n      ],\n      \"evidence_quote\": \"    陈海峰：到傍晚呢，天快黑了，（进攻）开始了，把这个土坦克一卷一卷喷上水，把力气大的，机枪手啊、迫击炮手啊……迫击炮手都是一扛50斤啊，迫击炮那个炮筒是50斤重啊，重机枪手啊，轻机枪手啊，（那都是）到那彪形大汉，吃饭一顿都要吃一斤啊，都是长袍（音）罗汉，他那个力气大。两个人三个人四个人，把它一推，（稻草卷）它就从岸上边滚到河里面去。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"强攻北寺碉堡遭遇重火力并伤亡很大\",\n      \"process_text\": \"老一团用土坦克解决北寺碉堡，但开始伤亡很大，上去一个连或一个排就被全部消灭，敌人轻重机枪扫射，还没接近碉堡就完了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0021\",\n        \"BATCH05-DOC05-S0022\",\n        \"BATCH05-DOC05-S0023\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我们老一团用的，所以把北寺这个碉堡都解决了。开始伤亡很大，上去一个连，一家伙就没有了，上去一个排，一家伙就（被）全部消灭光了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"包围并攻克北寺附近据点\",\n      \"process_text\": \"南寺、北寺都有，打北寺附近几个据点，负责四五个据点，还有几个独立团共27个据点，一个一个包围，把北寺打下来，称为北寺战斗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0026\",\n        \"BATCH05-DOC05-S0027\",\n        \"BATCH05-DOC05-S0028\",\n        \"BATCH05-DOC05-S0029\",\n        \"BATCH05-DOC05-S0031\",\n        \"BATCH05-DOC05-S0033\"\n      ],\n      \"evidence_quote\": \"    陈海峰：南寺、北寺（都）有。我们是打北寺附近的那几个据点，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"战斗代价、战果及作战对象原因\",\n      \"process_text\": \"口述提到消灭税警团两千多、俘虏一千多、伤亡一千多；战斗艰苦，伤亡和代价很大，打完以后梁王寺、青墩和主要据点都打下来了，但主力部队伤亡很大；打了一个半月并没有把敌人全部消灭；作战对象因投降日本鬼子、受日本鬼子委任令编成伪军集团军。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0035\",\n        \"BATCH05-DOC05-S0040\",\n        \"BATCH05-DOC05-S0041\",\n        \"BATCH05-DOC05-S0042\"\n      ],\n      \"evidence_quote\": \"    陈海峰：有的人提到一两句，打死了税警团怎么怎么的，就完了。消灭税警团两千多，俘虏他一千多，我们伤亡一千多，就完了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE001-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"日军介入后老一团撤到宝应\",\n      \"process_text\": \"后来日本人也来了，日本人来了，我们伤亡很大，就撤回来了；这是（19）44年的9、10月；打完这个仗以后，老1团撤到宝应。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0045\",\n        \"BATCH05-DOC05-S0046\",\n        \"BATCH05-DOC05-S0047\",\n        \"BATCH05-DOC05-S0048\"\n      ],\n      \"evidence_quote\": \"日本人来了。我们伤亡很大，就撤回来了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC05-DE001-P01\",\n      \"target_stage_id\": \"BATCH05-DOC05-DE001-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH05-DOC05-S0007\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC05-DE001-P02\",\n      \"target_stage_id\": \"BATCH05-DOC05-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC05-S0021\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC05-DE001-P03\",\n      \"target_stage_id\": \"BATCH05-DOC05-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC05-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC05-DE001-P04\",\n      \"target_stage_id\": \"BATCH05-DOC05-DE001-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC05-S0040\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC05-DE001-P05\",\n      \"target_stage_id\": \"BATCH05-DOC05-DE001-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC05-S0045\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-15",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC05-DE001",
+    "event_enrichment": {
+      "result_state": "北寺等据点被攻克，战斗持续一个半月且主力部队伤亡很大，敌人未被全部消灭，日军介入后老一团撤到宝应。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "从配合部队制作草包和土坦克开始，到打完仗后老1团撤到宝应结束；中间包含填河架桥、北寺战斗、据点攻克、日军介入与撤退。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC05-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "配合部队准备草包和土坦克",
+        "process_text": "要配合部队，每人交草包，用稻草编草垫、铺泥巴卷成稻草卷，喷水后挖战壕排队到河边。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0003",
+          "BATCH05-DOC05-S0004",
+          "BATCH05-DOC05-S0005"
+        ],
+        "evidence_quote": "    陈海峰：那么我们要配合部队，一个人啊，交20个，至少要交10个。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC05-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "傍晚用土坦克填河架桥",
+        "process_text": "傍晚天快黑开始进攻，把土坦克喷水后由大力士推滚入河，从河底往上垫到水面，再用草包往前填，机枪封锁枪眼洞，突击队从草包上过去，等于架桥；小河浜围着庙和碉堡周围，水不流动，填满叫土坦克。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0007",
+          "BATCH05-DOC05-S0009",
+          "BATCH05-DOC05-S0010",
+          "BATCH05-DOC05-S0012",
+          "BATCH05-DOC05-S0014",
+          "BATCH05-DOC05-S0016",
+          "BATCH05-DOC05-S0017",
+          "BATCH05-DOC05-S0018"
+        ],
+        "evidence_quote": "    陈海峰：到傍晚呢，天快黑了，（进攻）开始了，把这个土坦克一卷一卷喷上水，把力气大的，机枪手啊、迫击炮手啊……迫击炮手都是一扛50斤啊，迫击炮那个炮筒是50斤重啊，重机枪手啊，轻机枪手啊，（那都是）到那彪形大汉，吃饭一顿都要吃一斤啊，都是长袍（音）罗汉，他那个力气大。两个人三个人四个人，把它一推，（稻草卷）它就从岸上边滚到河里面去。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC05-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "强攻北寺碉堡遭遇重火力并伤亡很大",
+        "process_text": "老一团用土坦克解决北寺碉堡，但开始伤亡很大，上去一个连或一个排就被全部消灭，敌人轻重机枪扫射，还没接近碉堡就完了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0021",
+          "BATCH05-DOC05-S0022",
+          "BATCH05-DOC05-S0023"
+        ],
+        "evidence_quote": "    陈海峰：我们老一团用的，所以把北寺这个碉堡都解决了。开始伤亡很大，上去一个连，一家伙就没有了，上去一个排，一家伙就（被）全部消灭光了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC05-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "包围并攻克北寺附近据点",
+        "process_text": "南寺、北寺都有，打北寺附近几个据点，负责四五个据点，还有几个独立团共27个据点，一个一个包围，把北寺打下来，称为北寺战斗。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0026",
+          "BATCH05-DOC05-S0027",
+          "BATCH05-DOC05-S0028",
+          "BATCH05-DOC05-S0029",
+          "BATCH05-DOC05-S0031",
+          "BATCH05-DOC05-S0033"
+        ],
+        "evidence_quote": "    陈海峰：南寺、北寺（都）有。我们是打北寺附近的那几个据点，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC05-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "战斗代价、战果及作战对象原因",
+        "process_text": "口述提到消灭税警团两千多、俘虏一千多、伤亡一千多；战斗艰苦，伤亡和代价很大，打完以后梁王寺、青墩和主要据点都打下来了，但主力部队伤亡很大；打了一个半月并没有把敌人全部消灭；作战对象因投降日本鬼子、受日本鬼子委任令编成伪军集团军。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0035",
+          "BATCH05-DOC05-S0040",
+          "BATCH05-DOC05-S0041",
+          "BATCH05-DOC05-S0042"
+        ],
+        "evidence_quote": "    陈海峰：有的人提到一两句，打死了税警团怎么怎么的，就完了。消灭税警团两千多，俘虏他一千多，我们伤亡一千多，就完了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC05-DE001-P06",
+        "stage_order": 6,
+        "stage_summary": "日军介入后老一团撤到宝应",
+        "process_text": "后来日本人也来了，日本人来了，我们伤亡很大，就撤回来了；这是（19）44年的9、10月；打完这个仗以后，老1团撤到宝应。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0045",
+          "BATCH05-DOC05-S0046",
+          "BATCH05-DOC05-S0047",
+          "BATCH05-DOC05-S0048"
+        ],
+        "evidence_quote": "日本人来了。我们伤亡很大，就撤回来了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC05-DE001-P01",
+        "target_stage_id": "BATCH05-DOC05-DE001-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH05-DOC05-S0007",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC05-DE001-P02",
+        "target_stage_id": "BATCH05-DOC05-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC05-S0021",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC05-DE001-P03",
+        "target_stage_id": "BATCH05-DOC05-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC05-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC05-DE001-P04",
+        "target_stage_id": "BATCH05-DOC05-DE001-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC05-S0040",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC05-DE001-P05",
+        "target_stage_id": "BATCH05-DOC05-DE001-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC05-S0045",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

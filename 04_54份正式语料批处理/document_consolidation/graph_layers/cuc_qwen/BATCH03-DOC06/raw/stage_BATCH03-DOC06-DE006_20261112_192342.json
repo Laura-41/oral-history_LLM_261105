@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T19:23:42",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE006",
+  "usage": {
+    "prompt_tokens": 1644,
+    "total_tokens": 10731,
+    "completion_tokens": 9087,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7953
+    },
+    "time_to_first_token_ms": 198286,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9086000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"新兵营获得武器：营里弄来两挺重机枪，每个连弄到两三挺轻机枪，每个战士弄到三八式并装备子弹，人有武器了。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件从 S0034 所述新兵营未过河、S0036 所述返回汾阳孝义后往东靠并在山洞中得知阎锡山武器仓库开始，到 S0037 所述战士获得三八式、装备子弹、人有武器结束；不包括三战三捷战斗细节和后续部队改编。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"新兵营返回汾阳孝义后往东靠，在山洞中得知无枪并获知阎锡山武器仓库位置。\",\n      \"process_text\": \"他听到我们返回到汾阳、孝义来以后，他就往东靠。有一天在一个山洞里边，老百姓告诉他，你们怎么没有枪啊？他说那个地方有，阎锡山存的武器。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0036\"\n      ],\n      \"evidence_quote\": \"他听到我们返回到汾阳、孝义来以后，他就往东靠。有一天在一个山洞里边，老百姓告诉他，你们怎么没有枪啊？他说那个地方有，阎锡山存的武器。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"营长和教导员趁仓库无人看守打开仓库，按人员分配取用枪、机枪和重机枪。\",\n      \"process_text\": \"所以这个营长和教导员管他妈的，你日本人来你不是丢掉了就丢掉了，他那个（仓库）没（人）看，仓库的人也跑了。他就把他弄开，每一个人该拿枪的拿一支枪，该拿机枪的拿机枪，该拿重机枪的拿重机枪。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0036\"\n      ],\n      \"evidence_quote\": \"所以这个营长和教导员管他妈的，你日本人来你不是丢掉了就丢掉了，他那个（仓库）没（人）看，仓库的人也跑了。他就把他弄开，每一个人该拿枪的拿一支枪，该拿机枪的拿机枪，该拿重机枪的拿重机枪。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"新兵营完成武器配备，获得重机枪、轻机枪、三八式和子弹，战士有武器。\",\n      \"process_text\": \"所以他这个营里跟别的营一样，弄来两挺重机枪，每个连弄到两三挺轻机枪，每个战士弄到三八式，他也装备了子弹，所以这个人就有武器了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0036\",\n        \"BATCH03-DOC06-S0037\"\n      ],\n      \"evidence_quote\": \"轻机枪，每个战士弄到三八式，他也装备了子弹，所以这个人就有武器了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE006-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE006-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0036\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE006-P02\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE006-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0036\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE006",
+    "event_enrichment": {
+      "result_state": "新兵营获得武器：营里弄来两挺重机枪，每个连弄到两三挺轻机枪，每个战士弄到三八式并装备子弹，人有武器了。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件从 S0034 所述新兵营未过河、S0036 所述返回汾阳孝义后往东靠并在山洞中得知阎锡山武器仓库开始，到 S0037 所述战士获得三八式、装备子弹、人有武器结束；不包括三战三捷战斗细节和后续部队改编。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "新兵营返回汾阳孝义后往东靠，在山洞中得知无枪并获知阎锡山武器仓库位置。",
+        "process_text": "他听到我们返回到汾阳、孝义来以后，他就往东靠。有一天在一个山洞里边，老百姓告诉他，你们怎么没有枪啊？他说那个地方有，阎锡山存的武器。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0036"
+        ],
+        "evidence_quote": "他听到我们返回到汾阳、孝义来以后，他就往东靠。有一天在一个山洞里边，老百姓告诉他，你们怎么没有枪啊？他说那个地方有，阎锡山存的武器。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "营长和教导员趁仓库无人看守打开仓库，按人员分配取用枪、机枪和重机枪。",
+        "process_text": "所以这个营长和教导员管他妈的，你日本人来你不是丢掉了就丢掉了，他那个（仓库）没（人）看，仓库的人也跑了。他就把他弄开，每一个人该拿枪的拿一支枪，该拿机枪的拿机枪，该拿重机枪的拿重机枪。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0036"
+        ],
+        "evidence_quote": "所以这个营长和教导员管他妈的，你日本人来你不是丢掉了就丢掉了，他那个（仓库）没（人）看，仓库的人也跑了。他就把他弄开，每一个人该拿枪的拿一支枪，该拿机枪的拿机枪，该拿重机枪的拿重机枪。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "新兵营完成武器配备，获得重机枪、轻机枪、三八式和子弹，战士有武器。",
+        "process_text": "所以他这个营里跟别的营一样，弄来两挺重机枪，每个连弄到两三挺轻机枪，每个战士弄到三八式，他也装备了子弹，所以这个人就有武器了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0036",
+          "BATCH03-DOC06-S0037"
+        ],
+        "evidence_quote": "轻机枪，每个战士弄到三八式，他也装备了子弹，所以这个人就有武器了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE006-P01",
+        "target_stage_id": "BATCH03-DOC06-DE006-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH03-DOC06-S0036",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE006-P02",
+        "target_stage_id": "BATCH03-DOC06-DE006-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC06-S0036",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

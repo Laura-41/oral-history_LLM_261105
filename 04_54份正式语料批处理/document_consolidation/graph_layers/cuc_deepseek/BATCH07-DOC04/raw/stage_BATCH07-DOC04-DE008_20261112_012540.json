@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T01:25:40",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC04-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC04-DE008",
+  "usage": {
+    "prompt_tokens": 1495,
+    "total_tokens": 8383,
+    "completion_tokens": 6888,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5901
+    },
+    "time_to_first_token_ms": 53320,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 6887000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC04-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"12月25号以后到达建昌圩，完成从皖南经水西的撤退转移。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以12月8号离开皖南为起点，以12月25号以后到达建昌圩为终点；水西停留及此前在茅山一带作为途中阶段。原文对水西停留时长有18天与一个礼拜左右两种说法，后续批次撤退受阻不作为本事件内部阶段。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"12月8号离开皖南，开始撤退转移。\",\n      \"process_text\": \"12月8号离开皖南。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0086\"\n      ],\n      \"evidence_quote\": \"    陈海峰：在12月25号以后，才到建昌圩。12月25号之前，还在茅山那个地方。12月8号离开皖南。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"经过两天半到达水西。\",\n      \"process_text\": \"两天半到了水西。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0076\"\n      ],\n      \"evidence_quote\": \"    陈海峰：两天半到了水西。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"在水西停留约18天。\",\n      \"process_text\": \"在水西那里待了18天。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0080\"\n      ],\n      \"evidence_quote\": \"    陈海峰：到这个地方去了。在水西那里待了18天。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"12月25号以后到达建昌圩，此前在茅山一带。\",\n      \"process_text\": \"12月25号之前还在茅山那个地方，12月25号以后才到建昌圩。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0086\"\n      ],\n      \"evidence_quote\": \"    陈海峰：在12月25号以后，才到建昌圩。12月25号之前，还在茅山那个地方。12月8号离开皖南。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE008-P01\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0076\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE008-P02\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0080\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE008-P03\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE008-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0086\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC04-DE008",
+    "event_enrichment": {
+      "result_state": "12月25号以后到达建昌圩，完成从皖南经水西的撤退转移。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以12月8号离开皖南为起点，以12月25号以后到达建昌圩为终点；水西停留及此前在茅山一带作为途中阶段。原文对水西停留时长有18天与一个礼拜左右两种说法，后续批次撤退受阻不作为本事件内部阶段。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC04-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "12月8号离开皖南，开始撤退转移。",
+        "process_text": "12月8号离开皖南。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0086"
+        ],
+        "evidence_quote": "    陈海峰：在12月25号以后，才到建昌圩。12月25号之前，还在茅山那个地方。12月8号离开皖南。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "经过两天半到达水西。",
+        "process_text": "两天半到了水西。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0076"
+        ],
+        "evidence_quote": "    陈海峰：两天半到了水西。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "在水西停留约18天。",
+        "process_text": "在水西那里待了18天。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0080"
+        ],
+        "evidence_quote": "    陈海峰：到这个地方去了。在水西那里待了18天。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "12月25号以后到达建昌圩，此前在茅山一带。",
+        "process_text": "12月25号之前还在茅山那个地方，12月25号以后才到建昌圩。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0086"
+        ],
+        "evidence_quote": "    陈海峰：在12月25号以后，才到建昌圩。12月25号之前，还在茅山那个地方。12月8号离开皖南。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC04-DE008-P01",
+        "target_stage_id": "BATCH07-DOC04-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC04-S0076",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE008-P02",
+        "target_stage_id": "BATCH07-DOC04-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC04-S0080",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE008-P03",
+        "target_stage_id": "BATCH07-DOC04-DE008-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC04-S0086",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

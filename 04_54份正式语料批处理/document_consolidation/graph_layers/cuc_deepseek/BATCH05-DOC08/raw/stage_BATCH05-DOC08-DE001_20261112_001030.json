@@ -1,0 +1,110 @@
+{
+  "run_time": "2026-11-12T00:10:30",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC08-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC08-DE001",
+  "usage": {
+    "prompt_tokens": 1532,
+    "total_tokens": 6285,
+    "completion_tokens": 4753,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3654
+    },
+    "tokens_per_second": 4752000,
+    "time_to_first_token_ms": 37441,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-16\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC08-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"到达47团指挥机关并会合；随后粟裕部继续向长兴前进，卫生部部分人员转入筹建苏浙军区卫生部。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以渡江后进入茅山地区为起点，以到达47团指挥机关会合为核心终点；S0017后半段作为会合后的直接结果纳入。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"渡江后到达茅山，进入溧阳县和溧水县交界的丘陵地带。\",\n      \"process_text\": \"渡江后到达茅山，进入溧阳县和溧水县交界的丘陵地带。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0009\",\n        \"BATCH05-DOC08-S0010\"\n      ],\n      \"evidence_quote\": \"到了茅山，（到了）溧阳县和溧水县交界地方，一个丘陵地带。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"该地驻有16旅留下的47团，团部及部队在江边和指挥机关迎接渡江。\",\n      \"process_text\": \"该地是苏南第一次清乡后16旅留下的47团所在处，47团部及部队在江边和指挥机关迎接渡江。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0015\",\n        \"BATCH05-DOC08-S0017\"\n      ],\n      \"evidence_quote\": \"这个地方呢，就是苏南第一次清乡啊，16旅留下来的部队，47团。47团部、部队都在那里，迎接渡江。一部分部队在江边上迎接，他的指挥机关就在这个地方。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"到达47团指挥机关，双方会合。\",\n      \"process_text\": \"到达47团指挥机关，双方会合。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0017\"\n      ],\n      \"evidence_quote\": \"我们到达这个指挥机关，我们就会合了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"会合后粟裕部继续向长兴前进，卫生部部分人员转入筹建苏浙军区卫生部。\",\n      \"process_text\": \"会合后粟裕部不停留，继续向长兴前进，准备成立苏浙军区司令部；卫生部部分人员转入筹建苏浙军区卫生部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0017\"\n      ],\n      \"evidence_quote\": \"粟裕他们就不停留，他们的部队继续前进，就到长兴去了。到长兴准备筹备成立苏浙军区司令部这事。我们卫生部练兵司令部的一部分人呢——练兵司令部过了江就解散了，就是各归各了。那么我们苏浙军区要筹建卫生部。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE001-P01\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0015\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE001-P02\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE001-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0017\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE001-P03\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE001-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0017\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-16",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC08-DE001",
+    "event_enrichment": {
+      "result_state": "到达47团指挥机关并会合；随后粟裕部继续向长兴前进，卫生部部分人员转入筹建苏浙军区卫生部。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以渡江后进入茅山地区为起点，以到达47团指挥机关会合为核心终点；S0017后半段作为会合后的直接结果纳入。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC08-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "渡江后到达茅山，进入溧阳县和溧水县交界的丘陵地带。",
+        "process_text": "渡江后到达茅山，进入溧阳县和溧水县交界的丘陵地带。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0009",
+          "BATCH05-DOC08-S0010"
+        ],
+        "evidence_quote": "到了茅山，（到了）溧阳县和溧水县交界地方，一个丘陵地带。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "该地驻有16旅留下的47团，团部及部队在江边和指挥机关迎接渡江。",
+        "process_text": "该地是苏南第一次清乡后16旅留下的47团所在处，47团部及部队在江边和指挥机关迎接渡江。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0015",
+          "BATCH05-DOC08-S0017"
+        ],
+        "evidence_quote": "这个地方呢，就是苏南第一次清乡啊，16旅留下来的部队，47团。47团部、部队都在那里，迎接渡江。一部分部队在江边上迎接，他的指挥机关就在这个地方。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "到达47团指挥机关，双方会合。",
+        "process_text": "到达47团指挥机关，双方会合。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0017"
+        ],
+        "evidence_quote": "我们到达这个指挥机关，我们就会合了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "会合后粟裕部继续向长兴前进，卫生部部分人员转入筹建苏浙军区卫生部。",
+        "process_text": "会合后粟裕部不停留，继续向长兴前进，准备成立苏浙军区司令部；卫生部部分人员转入筹建苏浙军区卫生部。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0017"
+        ],
+        "evidence_quote": "粟裕他们就不停留，他们的部队继续前进，就到长兴去了。到长兴准备筹备成立苏浙军区司令部这事。我们卫生部练兵司令部的一部分人呢——练兵司令部过了江就解散了，就是各归各了。那么我们苏浙军区要筹建卫生部。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC08-DE001-P01",
+        "target_stage_id": "BATCH05-DOC08-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC08-S0015",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC08-DE001-P02",
+        "target_stage_id": "BATCH05-DOC08-DE001-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH05-DOC08-S0017",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC08-DE001-P03",
+        "target_stage_id": "BATCH05-DOC08-DE001-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC08-S0017",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

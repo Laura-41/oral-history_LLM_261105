@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T21:38:56",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC05-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC05-DE004",
+  "usage": {
+    "prompt_tokens": 1159,
+    "total_tokens": 2281,
+    "completion_tokens": 1122,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 561
+    },
+    "time_to_first_token_ms": 8726,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC05-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"周恩来当面提出把“救亡室”改名为“军人俱乐部”的建议，在场人员听取该建议；原文未述是否采纳或改名。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于周恩来看到陈海峰所在单位的“救亡室”名称并提出质疑，止于他建议改称“军人俱乐部”；不包含后续改名行动或结果，原文未述。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"周恩来质疑“救亡室”这一名称，认为中国尚未亡，不应称“救亡”。\",\n      \"process_text\": \"周恩来看到“救亡室”名称后发问，并说明中国还没有亡，不能叫“救亡”。\",\n      \"evidence_segment_ids\": [\"BATCH02-DOC05-S0038\"],\n      \"evidence_quote\": \"你们怎么叫救亡室？救亡救亡嘛，我们中国还没有亡嘛。没有亡，你们不能叫救亡啊\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"周恩来建议把“救亡室”改名为“军人俱乐部”。\",\n      \"process_text\": \"周恩来在质疑名称之后，提出改称“军人俱乐部”的建议。\",\n      \"evidence_segment_ids\": [\"BATCH02-DOC05-S0038\"],\n      \"evidence_quote\": \"我建议你们改成叫‘军人俱乐部’\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE004-P01\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0038\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC05-DE004",
+    "event_enrichment": {
+      "result_state": "周恩来当面提出把“救亡室”改名为“军人俱乐部”的建议，在场人员听取该建议；原文未述是否采纳或改名。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于周恩来看到陈海峰所在单位的“救亡室”名称并提出质疑，止于他建议改称“军人俱乐部”；不包含后续改名行动或结果，原文未述。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC05-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "周恩来质疑“救亡室”这一名称，认为中国尚未亡，不应称“救亡”。",
+        "process_text": "周恩来看到“救亡室”名称后发问，并说明中国还没有亡，不能叫“救亡”。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0038"
+        ],
+        "evidence_quote": "你们怎么叫救亡室？救亡救亡嘛，我们中国还没有亡嘛。没有亡，你们不能叫救亡啊",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "周恩来建议把“救亡室”改名为“军人俱乐部”。",
+        "process_text": "周恩来在质疑名称之后，提出改称“军人俱乐部”的建议。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0038"
+        ],
+        "evidence_quote": "我建议你们改成叫‘军人俱乐部’",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC05-DE004-P01",
+        "target_stage_id": "BATCH02-DOC05-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC05-S0038",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

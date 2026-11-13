@@ -1,0 +1,123 @@
+{
+  "validated_at": "2026-11-10T19:08:39",
+  "source_raw_response": "04_54份正式语料批处理/raw_responses/cuc_qwen/20261110_190109_BATCH03-DOC01-W006.json",
+  "model_id": "cuc/qwen",
+  "window_id": "BATCH03-DOC01-W006",
+  "technical_document_id": "BATCH03-DOC01",
+  "document_id": "05.陈海峰（二访）（二校后 阅读版）.docx",
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 3,
+    "unassigned_segment_count": 4,
+    "input_segment_count": 7,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH03-DOC01-W006-E01"
+  ],
+  "postprocessed_output": {
+    "window_id": "BATCH03-DOC01-W006",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC01-W006-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC01-S0079",
+          "BATCH03-DOC01-S0081",
+          "BATCH03-DOC01-S0083"
+        ],
+        "event": {
+          "event_name": "陈海峰在繁昌之战中抢救负伤营长并随部队向山上撤退、滚下山",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "抢救并撤退",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "营长",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "开杜鹃花的时候",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "深山密林",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "山顶",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "往山上，翻过那个高山",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "向山下滚",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "到我们那个老根据地",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "那个炮兵跟着我们，那个飞机都跟着我们扫",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "四发炮弹爆炸了",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "不准休息，快走",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "打到最后我们下命令撤，往哪儿撤呢？往山上，翻过那个高山。",
+          "type_basis": "核心过程是陈海峰在繁昌之战中抢救负伤营长并随部队向山上撤退、滚下山，属于移动、作战和物理变化；Actor=我（陈海峰），Goal=营长，均在MATERIAL允许角色内。命令、炮火、爆炸和滚下山共同服务于同一次撤退或突围经历，不单独建事件；非言语主导，故不选VERBAL；非关系、心理、行为或存在主导。",
+          "alternative_event_type": null,
+          "ambiguity_reason": "候选触及文档最后一个受访者片段，需人工确认叙述是否已完整。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC01-S0078",
+      "BATCH03-DOC01-S0080",
+      "BATCH03-DOC01-S0082",
+      "BATCH03-DOC01-S0084"
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 5218,
+    "total_tokens": 22210,
+    "completion_tokens": 16992,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 16136
+    },
+    "time_to_first_token_ms": 449078,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 16991000
+  }
+}

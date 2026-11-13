@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T01:10:31",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC01-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC01-DE004",
+  "usage": {
+    "prompt_tokens": 1164,
+    "total_tokens": 3820,
+    "completion_tokens": 2656,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1880
+    },
+    "time_to_first_token_ms": 23741,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-15\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC01-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"培训班聘请陈锐霆等当教员并教炮兵战术，服务于军队正规化练兵。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件边界从到南京后办团以上干部培训班、找教员起，到教炮兵战术止；“第二年抗美援朝”及炮兵编成炮三师、炮七师为后续外部结果，不纳入本事件阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"建设“三化”军队背景下，陈老总回南京办团以上干部培训班。\",\n      \"process_text\": \"到南京后，上面提出建设正规化、现代化、革命化的“三化”军队；陈老总回南京办团以上干部培训班。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0027\"\n      ],\n      \"evidence_quote\": \"到了南京，上面就提出来要建设正规化、现代化、革命化的“三化”军队嘛。这个时候陈老总不是在上海当副市长嘛，也回来到南京办了一个团以上的干部（培训班）\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"培训班找陈锐霆等去当教员。\",\n      \"process_text\": \"培训班找我们去当教员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0027\"\n      ],\n      \"evidence_quote\": \"就找我们去当教员\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆等教员在培训班教炮兵战术，配合练兵和军队正规化。\",\n      \"process_text\": \"我们当教员后教炮兵战术，当时主要是练兵、军队正规化。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0027\"\n      ],\n      \"evidence_quote\": \"就教炮兵战术。这个时候主要是练兵，军队正规化嘛\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE004-P01\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE004-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0027\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE004-P02\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE004-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0027\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-15",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC01-DE004",
+    "event_enrichment": {
+      "result_state": "培训班聘请陈锐霆等当教员并教炮兵战术，服务于军队正规化练兵。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件边界从到南京后办团以上干部培训班、找教员起，到教炮兵战术止；“第二年抗美援朝”及炮兵编成炮三师、炮七师为后续外部结果，不纳入本事件阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC01-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "建设“三化”军队背景下，陈老总回南京办团以上干部培训班。",
+        "process_text": "到南京后，上面提出建设正规化、现代化、革命化的“三化”军队；陈老总回南京办团以上干部培训班。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0027"
+        ],
+        "evidence_quote": "到了南京，上面就提出来要建设正规化、现代化、革命化的“三化”军队嘛。这个时候陈老总不是在上海当副市长嘛，也回来到南京办了一个团以上的干部（培训班）",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "培训班找陈锐霆等去当教员。",
+        "process_text": "培训班找我们去当教员。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0027"
+        ],
+        "evidence_quote": "就找我们去当教员",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆等教员在培训班教炮兵战术，配合练兵和军队正规化。",
+        "process_text": "我们当教员后教炮兵战术，当时主要是练兵、军队正规化。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0027"
+        ],
+        "evidence_quote": "就教炮兵战术。这个时候主要是练兵，军队正规化嘛",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC01-DE004-P01",
+        "target_stage_id": "BATCH07-DOC01-DE004-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH07-DOC01-S0027",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC01-DE004-P02",
+        "target_stage_id": "BATCH07-DOC01-DE004-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH07-DOC01-S0027",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

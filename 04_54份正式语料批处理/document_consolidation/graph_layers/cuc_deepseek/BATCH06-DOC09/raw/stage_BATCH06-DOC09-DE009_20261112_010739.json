@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T01:07:39",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC09-DE009",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC09-DE009",
+  "usage": {
+    "prompt_tokens": 1517,
+    "total_tokens": 6247,
+    "completion_tokens": 4730,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3422
+    },
+    "time_to_first_token_ms": 40687,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-22\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC09-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"外国医生通过日记和家信表达了对医院管理、环境与生活照顾的称赞，并对陈海峰从工人成长为技术熟练的外科医生表示惊奇；这些内容经翻译汇报给陈海峰。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈海峰讲述医生得知其出身并感到惊奇为起点，以医生对医院管理作出评价为终点；涵盖日记、家信及翻译转述内容，不扩展到其他医疗队管理或医生离开后的情节。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"医生得知陈海峰工人出身并惊奇于其成长为外科医生\",\n      \"process_text\": \"医生开完刀后离开，病房管理由陈海峰负责；陈海峰陪医生并讨教经验，医生得知陈海峰是排字工人出身，惊奇于新四军八路军能把工人培养成正规训练、技术熟练、能处理外科战伤的外科医生。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0097\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那个医生开完刀，他就走了，整个的病房管理都由我来管了，实际上我是院长。内部呢，我是院长，我要管7个医疗队，是不是。我要绝大部分时间陪着这个医生，个别的讨教，取他的经验，取他的思路，也接受了不少影响。所以他对我们的影响啊，非常好，他后来得知我是一个（排字工人出身），我这个书上面写了，没有明确讲我自己了。说新四军八路军能够把一个工人培养成这么个正规训练的，技术熟练的，处理外科战伤这么好的一个外科医生，他非常惊奇。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"医生在日记中记载并每月寄信给美国女儿，信件交翻译看\",\n      \"process_text\": \"医生说把工人训练成这样，在他的日记里有记载；他大致每个月寄好几封信给美国的女儿，写好信也给他们翻译看。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0099\"\n      ],\n      \"evidence_quote\": \"    陈海峰：他说把一个工人能训练成这样子，在他的日记里面（有）记载。大致每个月寄好几封信寄给他美国的女儿。他写好信也给我们翻译看，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"医生向爱人女儿称赞环境优美、招待和生活照顾好\",\n      \"process_text\": \"医生在给爱人和女儿的信或讲述中说，这里环境非常优美，鸟语花香，流水悠悠，桃红柳绿，一片竹林；他经常散步，招待和生活照顾很好，生活上没有问题。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0100\"\n      ],\n      \"evidence_quote\": \"我们翻译汇报给我，他有什么思想。给他的爱人讲，给他女儿讲，他说我这里环境非常优美，鸟语花香，流水悠悠，桃红柳绿，是不是，一片竹林。他说我经常散步，他说他们招待我也很好，生活照顾很好，他说生活上没有问题。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE009-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"医生评价医院管理井井有条、条件少见、要求能满足\",\n      \"process_text\": \"医生评价医院管理井井有条，在其他国家医院中这样条件的医院并不多见；管理得这么好令人惊奇，他的想法能落实、要求能满足。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0102\"\n      ],\n      \"evidence_quote\": \"    陈海峰：医院的管理井井有条，我所看到的其他地方的国家医院中间，这样子一个条件的医院还是并不多见（的），他说。能够管理得这么好，他说我们都觉得很惊奇。他说我所有的想法，在这里都能落实，我的要求什么都能满足，对这个医院做出评价。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE009-P01\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0099\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE009-P02\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE009-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0100\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE009-P03\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE009-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0102\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-22",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC09-DE009",
+    "event_enrichment": {
+      "result_state": "外国医生通过日记和家信表达了对医院管理、环境与生活照顾的称赞，并对陈海峰从工人成长为技术熟练的外科医生表示惊奇；这些内容经翻译汇报给陈海峰。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以陈海峰讲述医生得知其出身并感到惊奇为起点，以医生对医院管理作出评价为终点；涵盖日记、家信及翻译转述内容，不扩展到其他医疗队管理或医生离开后的情节。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC09-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "医生得知陈海峰工人出身并惊奇于其成长为外科医生",
+        "process_text": "医生开完刀后离开，病房管理由陈海峰负责；陈海峰陪医生并讨教经验，医生得知陈海峰是排字工人出身，惊奇于新四军八路军能把工人培养成正规训练、技术熟练、能处理外科战伤的外科医生。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0097"
+        ],
+        "evidence_quote": "    陈海峰：那个医生开完刀，他就走了，整个的病房管理都由我来管了，实际上我是院长。内部呢，我是院长，我要管7个医疗队，是不是。我要绝大部分时间陪着这个医生，个别的讨教，取他的经验，取他的思路，也接受了不少影响。所以他对我们的影响啊，非常好，他后来得知我是一个（排字工人出身），我这个书上面写了，没有明确讲我自己了。说新四军八路军能够把一个工人培养成这么个正规训练的，技术熟练的，处理外科战伤这么好的一个外科医生，他非常惊奇。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "医生在日记中记载并每月寄信给美国女儿，信件交翻译看",
+        "process_text": "医生说把工人训练成这样，在他的日记里有记载；他大致每个月寄好几封信给美国的女儿，写好信也给他们翻译看。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0099"
+        ],
+        "evidence_quote": "    陈海峰：他说把一个工人能训练成这样子，在他的日记里面（有）记载。大致每个月寄好几封信寄给他美国的女儿。他写好信也给我们翻译看，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "医生向爱人女儿称赞环境优美、招待和生活照顾好",
+        "process_text": "医生在给爱人和女儿的信或讲述中说，这里环境非常优美，鸟语花香，流水悠悠，桃红柳绿，一片竹林；他经常散步，招待和生活照顾很好，生活上没有问题。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0100"
+        ],
+        "evidence_quote": "我们翻译汇报给我，他有什么思想。给他的爱人讲，给他女儿讲，他说我这里环境非常优美，鸟语花香，流水悠悠，桃红柳绿，是不是，一片竹林。他说我经常散步，他说他们招待我也很好，生活照顾很好，他说生活上没有问题。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE009-P04",
+        "stage_order": 4,
+        "stage_summary": "医生评价医院管理井井有条、条件少见、要求能满足",
+        "process_text": "医生评价医院管理井井有条，在其他国家医院中这样条件的医院并不多见；管理得这么好令人惊奇，他的想法能落实、要求能满足。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0102"
+        ],
+        "evidence_quote": "    陈海峰：医院的管理井井有条，我所看到的其他地方的国家医院中间，这样子一个条件的医院还是并不多见（的），他说。能够管理得这么好，他说我们都觉得很惊奇。他说我所有的想法，在这里都能落实，我的要求什么都能满足，对这个医院做出评价。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC09-DE009-P01",
+        "target_stage_id": "BATCH06-DOC09-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0099",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE009-P02",
+        "target_stage_id": "BATCH06-DOC09-DE009-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC09-S0100",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE009-P03",
+        "target_stage_id": "BATCH06-DOC09-DE009-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0102",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

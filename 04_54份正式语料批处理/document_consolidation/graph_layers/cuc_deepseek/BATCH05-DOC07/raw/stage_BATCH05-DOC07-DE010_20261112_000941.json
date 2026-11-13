@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T00:09:41",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC07-DE010",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC07-DE010",
+  "usage": {
+    "prompt_tokens": 1334,
+    "total_tokens": 4215,
+    "completion_tokens": 2881,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1443
+    },
+    "time_to_first_token_ms": 22697,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC07-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆经周总理请示获毛主席同意并见面，听取毛主席对解放战争形势的分析；谈话以首先打济南、华东部队视其为战略决战序幕的判断作结。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于陈锐霆向周总理提出想见毛主席，止于毛主席谈首先打济南并称其为战略决战序幕。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆向周总理提出想见毛主席，周总理表示去看。\",\n      \"process_text\": \"最后我就跟周总理讲，我想看看毛主席行不行啊，我说我们到中央来是很难得的机会。他说毛主席忙得要死，我去看看。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0049\"\n      ],\n      \"evidence_quote\": \"最后我就跟周总理讲，我想看看毛主席行不行啊，我说我们到中央来是很难得的机会。他说毛主席忙得要死，我去看看。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"周总理亲自请示毛主席，毛主席同意接见，并将陈锐霆带到毛主席处。\",\n      \"process_text\": \"周总理的那个地方离着毛主席大概有二三百米的，他亲自去请示一下子毛主席，毛主席同意了接见我。他把我们带过去放在那个地方\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0051\"\n      ],\n      \"evidence_quote\": \"周总理的那个地方离着毛主席大概有二三百米的，他亲自去请示一下子毛主席，毛主席同意了接见我。他把我们带过去放在那个地方\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"毛主席停止与叶剑英谈话，与陈锐霆谈形势，指出解放战争已过最困难时期。\",\n      \"process_text\": \"这个时候毛主席正跟叶剑英在谈话，他停止谈话就跟我谈，就说讲讲形势吧，他讲这个形势就是说现在解放战争已经过了凹子了，把这个左手放在桌子上用右手指着（陈锐霆右手指着左手虎口处），现在解放战争已经过了凹子了，最困难的时候过去了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0051\"\n      ],\n      \"evidence_quote\": \"这个时候毛主席正跟叶剑英在谈话，他停止谈话就跟我谈，就说讲讲形势吧，他讲这个形势就是说现在解放战争已经过了凹子了，把这个左手放在桌子上用右手指着（陈锐霆右手指着左手虎口处），现在解放战争已经过了凹子了，最困难的时候过去了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE010-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"毛主席分析敌我兵力与城市攻坚，指出需炮兵和工程兵炸药，不可轻视敌人重兵。\",\n      \"process_text\": \"现在敌人总兵力还是比我们多，但是能够移动的兵力没有我们多了。但是他都占据了一些大城市，很坚固的城，（我们）就是要攻坚，就是要炮兵和工程兵的炸药，炸这个城，另外（敌人）都还有重兵，不可轻视。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0053\"\n      ],\n      \"evidence_quote\": \"现在敌人总兵力还是比我们多，但是能够移动的兵力没有我们多了。但是他都占据了一些大城市，很坚固的城，（我们）就是要攻坚，就是要炮兵和工程兵的炸药，炸这个城，另外（敌人）都还有重兵，不可轻视。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE010-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"毛主席指出首先打济南，华东部队后来视其为战略决战序幕。\",\n      \"process_text\": \"你们首先打的济南城池，以后我们华东部队都认为这是战略决战的序幕。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0053\"\n      ],\n      \"evidence_quote\": \"你们首先打的济南城池，以后我们华东部队都认为这是战略决战的序幕。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE010-P01\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0051\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE010-P02\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE010-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0051\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE010-P03\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE010-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0053\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE010-P04\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE010-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0053\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC07-DE010",
+    "event_enrichment": {
+      "result_state": "陈锐霆经周总理请示获毛主席同意并见面，听取毛主席对解放战争形势的分析；谈话以首先打济南、华东部队视其为战略决战序幕的判断作结。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于陈锐霆向周总理提出想见毛主席，止于毛主席谈首先打济南并称其为战略决战序幕。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC07-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆向周总理提出想见毛主席，周总理表示去看。",
+        "process_text": "最后我就跟周总理讲，我想看看毛主席行不行啊，我说我们到中央来是很难得的机会。他说毛主席忙得要死，我去看看。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0049"
+        ],
+        "evidence_quote": "最后我就跟周总理讲，我想看看毛主席行不行啊，我说我们到中央来是很难得的机会。他说毛主席忙得要死，我去看看。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "周总理亲自请示毛主席，毛主席同意接见，并将陈锐霆带到毛主席处。",
+        "process_text": "周总理的那个地方离着毛主席大概有二三百米的，他亲自去请示一下子毛主席，毛主席同意了接见我。他把我们带过去放在那个地方",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0051"
+        ],
+        "evidence_quote": "周总理的那个地方离着毛主席大概有二三百米的，他亲自去请示一下子毛主席，毛主席同意了接见我。他把我们带过去放在那个地方",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "毛主席停止与叶剑英谈话，与陈锐霆谈形势，指出解放战争已过最困难时期。",
+        "process_text": "这个时候毛主席正跟叶剑英在谈话，他停止谈话就跟我谈，就说讲讲形势吧，他讲这个形势就是说现在解放战争已经过了凹子了，把这个左手放在桌子上用右手指着（陈锐霆右手指着左手虎口处），现在解放战争已经过了凹子了，最困难的时候过去了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0051"
+        ],
+        "evidence_quote": "这个时候毛主席正跟叶剑英在谈话，他停止谈话就跟我谈，就说讲讲形势吧，他讲这个形势就是说现在解放战争已经过了凹子了，把这个左手放在桌子上用右手指着（陈锐霆右手指着左手虎口处），现在解放战争已经过了凹子了，最困难的时候过去了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE010-P04",
+        "stage_order": 4,
+        "stage_summary": "毛主席分析敌我兵力与城市攻坚，指出需炮兵和工程兵炸药，不可轻视敌人重兵。",
+        "process_text": "现在敌人总兵力还是比我们多，但是能够移动的兵力没有我们多了。但是他都占据了一些大城市，很坚固的城，（我们）就是要攻坚，就是要炮兵和工程兵的炸药，炸这个城，另外（敌人）都还有重兵，不可轻视。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0053"
+        ],
+        "evidence_quote": "现在敌人总兵力还是比我们多，但是能够移动的兵力没有我们多了。但是他都占据了一些大城市，很坚固的城，（我们）就是要攻坚，就是要炮兵和工程兵的炸药，炸这个城，另外（敌人）都还有重兵，不可轻视。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE010-P05",
+        "stage_order": 5,
+        "stage_summary": "毛主席指出首先打济南，华东部队后来视其为战略决战序幕。",
+        "process_text": "你们首先打的济南城池，以后我们华东部队都认为这是战略决战的序幕。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0053"
+        ],
+        "evidence_quote": "你们首先打的济南城池，以后我们华东部队都认为这是战略决战的序幕。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC07-DE010-P01",
+        "target_stage_id": "BATCH05-DOC07-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0051",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC07-DE010-P02",
+        "target_stage_id": "BATCH05-DOC07-DE010-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0051",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC07-DE010-P03",
+        "target_stage_id": "BATCH05-DOC07-DE010-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0053",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC07-DE010-P04",
+        "target_stage_id": "BATCH05-DOC07-DE010-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0053",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

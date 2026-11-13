@@ -1,0 +1,378 @@
+{
+  "run_time": "2026-11-12T18:09:48",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC06-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC06-DE001",
+  "usage": {
+    "prompt_tokens": 4649,
+    "total_tokens": 31647,
+    "completion_tokens": 26998,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 20138
+    },
+    "time_to_first_token_ms": 809454,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13498500
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC06-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰在访谈中完成对皖南事变原因与突围路线的评价：认为事变造成重大损失，是决策上的大问题、大失误，并归纳为五个原因；记者进一步归纳为国民党两个因素、自身内部三个因素；陈海峰回应项英往南走是否打游击，解释该路线是避免伤亡过大、比较安全，中央认可国民党三战区不至于下毒手，并认为对蒋介石狠毒的一面看得还不够，党内以后提高到“右倾”的高度。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为 S0004 陈海峰开始谈皖南事变争议与损失，终点为 S0102 陈海峰回应敌人坚决、对蒋介石狠毒认识不足并提到党内以后称为右倾；中间片段均围绕皖南事变原因、突围路线及相关追问。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰提出皖南事变过去有争议，并评价其结果对党的损失很大。\",\n      \"process_text\": \"陈海峰说皖南事变以个人看过去有争议、有各种说法，他认为最后产生这么一个结果，对党的损失很大，因为军部首脑机关基本摧毁了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0004\"\n      ],\n      \"evidence_quote\": \"    陈海峰：好的。皖南事变以我个人看呢，过去这个有争议，有各种说法。我认为呢，皖南事变最后产生这么一个结果，对我们党的损失是很大的。因为军部的首脑机关基本摧毁了，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈海峰以干部损失和叶挺、项英身份说明损失不可估计。\",\n      \"process_text\": \"陈海峰说教导队出来的队员现在副军级以上很多，假设这批干部出来，是抗日战争、解放战争、建国后建设干部，损失不可估计；叶挺是三个半军事专家，项英是党内唯一工人阶级出身，真正工人出身党员并不多。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0007\"\n      ],\n      \"evidence_quote\": \"    陈海峰：像我们教导队里面，那个时候出来的一些队员，现在副军级以上的很多。假设这一批干部出来，那就是抗日战争、解放战争、建国后的建设干部，那有一大批干部是宝贵的财产，所以损失是不可估计的。再加上叶挺将军是我们党内的三个半军事专家，这个是公认的，是不是，高级指挥员，军事专家。项英呢，也是我们这个党里面的唯一的工人阶级出身的。我们过去叫无产阶级政党，开始叫工人阶级政党，工人阶级先锋队才能入党，所以真正工人出身的党员并不多。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈海峰阐述蒋介石本质难移、“攘外必先安内”战略决策始终未变，反共高潮来了就要制造事件。\",\n      \"process_text\": \"陈海峰说蒋介石本质改变不了，“攘外必先安内”战略决策始终没有改变，被迫抗战，要消灭共产党，不在皖南也可能在西安、太原、石家庄发生，反共高潮来了就要制造事件，千方百计消灭主力。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0011\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那么就是说他科技也发展了，但是他这个地方本质不会改变的。他控制学时间（音），领事学时间（音），他是资本主义发展最高峰了。那么就说蒋介石的本质改变不了，他“攘外必先安内”，他这个战略决策始终没有改变的。他就是被迫来抗战的，西安事变以后，他是不得已而为之的，他不是自觉自愿，（有）他战略上自己的改变。所以呢，他要消灭共产党，几十年来都这么（样子）。他就是不在皖南，他可能在西安，他可能在太原，可能在石家庄发生这事。这种事情呢，它是会发生的，就是反共高潮来了，他就要制造事件，他要千方百计消灭主力。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"陈海峰认为第二原因是蒋介石借日本鬼子的刀消灭共产党未达目的后自己动手，从战略高度是必然。\",\n      \"process_text\": \"陈海峰说蒋介石本来把八路军、新四军到敌后去，是借日本鬼子的刀消灭共产党，目的没达到后不得不由自己动手；从战略高度是必然，别看偶然，是长期策划、长期准备、处心积虑消灭共产党，并提到解放战争大别山李先念在宣化店突围差点被消灭。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0013\"\n      ],\n      \"evidence_quote\": \"    陈海峰：所以说是蒋介石战略决策的一个手段。第二呢，他本来把你八路军、新四军到敌后去，他是借日本鬼子的刀来消灭你共产党。他这个目的没有达到，最后他不得不由自己来动手。所以从战略的高度来说呢，这是一个必然的。你别看它是个偶然事件，但他是长期策划，长期准备，处心积虑要消灭共产党。后面到解放战争一开始，在大别山，李先念在宣化店突围，差点我们这十几万二十万部队给他消灭了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"陈海峰指出自身原因包括叶项矛盾，强调党内领导决策层团结重要。\",\n      \"process_text\": \"陈海峰说第二是我们自己的，叶、项两个人一直有矛盾，开始没矛盾慢慢产生；党内领导决策层团结非常重要；叶挺本身过去是党员，离开党这一段，项英对他有看法。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0015\"\n      ],\n      \"evidence_quote\": \"    陈海峰：假使李先念不灵活啊，王震啊、王树声、任仲夷啊，假使他们的决策（听不清）一点，敏感性差一点，那个损失还要大得多了。那都突围出来了，是不是。第二，是我们自己的，就是说叶、项两个人一直有矛盾。开始没矛盾，慢慢产生的。这个呢，就是说党内的领导决策层的团结是非常重要。叶挺呢，本身过去是个党员，他离开了党这一段，项英对他有看法。你这么一个领导干部，你这么一个人才，你消极，想离开党，是不是。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"陈海峰说明项英地位高、叶挺列席无决策权，政委有最后决定权使叶挺受限制。\",\n      \"process_text\": \"陈海峰说叶挺列席参加，不是正式成员，有建议权、发言权，没有决策权；军事上应以叶挺为主，但政委有最后决定权，项英是东南局书记、新四军政委，叶挺军事上一说不算，发挥不了才能，受限制。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0019\"\n      ],\n      \"evidence_quote\": \"    陈海峰：好像现在卫生部一样的，卫生部党组，你陈竺就不能参加，但是有的会议就可以参加。请他参加，他是列席参加，他不是正式成员，他可以发言，有建议权、发言（权），他没有决策权。这样子呢，时间长了，这问题就来了。所以这样子呢，在军事上，应该是（以）叶挺为主，项英要听叶挺的。那么政治上，共产党的规定军队是政委有最后决定权。那么他是政委，他有最后决定权是不是，他的权力大。他（是）东南局书记，他是新四军的政委。叶挺，军事上一说不（算），他发挥不了他的才能，受限制。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"陈海峰说项英执行得不坚决但最后执行中央政策，并指出叶项在撤退路线上不一致。\",\n      \"process_text\": \"陈海峰说项英执行得不坚决，但最后想通了，做出决策，一批批把后方、干部、老弱病残先撤走，最后是青壮，说明决心，最后执行中央政策；第二个是叶项矛盾，项英不尊重叶挺，在撤退路线上两个人不一致。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0045\"\n      ],\n      \"evidence_quote\": \"    陈海峰：执行得不坚决。但最后他还是想通了，最后他（做出）决策，一批一批把后方先撤走啊，干部先撤走啊，老弱病残先撤走啊，最后是青壮啊。那说明他（的）决心了，最后还是执行中央政策了，这是一个问题。第二个呢，就是叶项之间的矛盾呢，项英不尊重叶挺，昨天讲到了，就是在撤退的路线上面，两个人不一致。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P08\",\n      \"stage_order\": 8,\n      \"stage_summary\": \"陈海峰认为项英保守、对国民党存在幻想、有点右倾，但中央电报也有错，不能全推给项英。\",\n      \"process_text\": \"陈海峰说项英保守一点，对国民党存在幻想，有点右倾；中央把责任都推给项英也不对，电报最后说估计几个月内还不会下毒手，可以稳定处理北撤问题；中央也有错，项英事事请示，走保守路线也是中央同意的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0047\"\n      ],\n      \"evidence_quote\": \"    陈海峰：项英呢，是保守一点，对于国民党呢，存在幻想，有点右倾。中央实际上把责任都推给项英也不对，你电报里就讲了嘛，（电报）最后就是说估计几（个）月之内，还不会下毒手，你们可以暂时怎么怎么的，可以稳定处理北撤的问题。那你这个中央也有错啊，是不是，你最后一股脑都放到项英头上，是不是。他事事请示你，他走这个保守路线，也是中央同意的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P09\",\n      \"stage_order\": 9,\n      \"stage_summary\": \"陈海峰认为叶挺的路线部署较好，可通过五个师防区打出去，保住三分之二。\",\n      \"process_text\": \"陈海峰说现在看来还是叶挺的路线比较好，虽然有危险，但部署得比较好；中间那条路线比较长，有52师、108师、40师，再加一两个师，放5个师，通过这5个师防区打出去，一定会有伤亡，但总归伤亡三分之一，可以保住三分之二，不至于全军覆没。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0052\"\n      ],\n      \"evidence_quote\": \"    陈海峰：现在看来，还是叶挺的那个路线比较好，虽然说有危险，但是你部署得比较好一点……中间那条路线比较长，他有52师，又有108师，有40师，有三个师，再加上一两个师，5个师譬如说，这条路线放5个师。那么我们通过这5个师的防区，打出去，一定会有伤亡。但是伤亡呢，总归伤亡三分之一吧，我可以保住三分之二，不至于全军覆没。还可以保持多数啊，牺牲少数，是吧。我们打敌后，抗战我们有经验啊。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P10\",\n      \"stage_order\": 10,\n      \"stage_summary\": \"陈海峰说明项英路线是向南以后再向东，靠近三战区，认为安全，出发点是估计国民党不会下毒手。\",\n      \"process_text\": \"陈海峰说向东走，项英是向南以后再向东，靠近三战区指挥机构，靠安徽屯溪很近，靠山边走，避开芜湖和南京方向，路并不少走还远一点；他认为安全，实际上就是估计国民党不会下毒手。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0058\"\n      ],\n      \"evidence_quote\": \"    陈海峰：向东走。他是向南以后再向东。那靠近三战区的这个指挥机构，靠安徽屯溪很近了。靠着这个山边走，避开芜湖和南京方向，路并不少走，还远一点呢。他认为安全，实际上就是估计国民党不会下毒手，这个出发点在这儿。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P11\",\n      \"stage_order\": 11,\n      \"stage_summary\": \"陈海峰认为往北走不通，大部队不能走，口子太小，日本封锁长江会全消灭。\",\n      \"process_text\": \"陈海峰说那都过不去，大部队不能走，那个地方的口子太小，日本鬼子长江一封锁，在江边上把你全消灭了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0064\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那都过不去，大部队不能走，那个地方的口子太小，日本鬼子长江一封锁，在江边上把你全消灭了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P12\",\n      \"stage_order\": 12,\n      \"stage_summary\": \"陈海峰认为往东走好。\",\n      \"process_text\": \"陈海峰说往东走好。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0066\"\n      ],\n      \"evidence_quote\": \"    陈海峰：往东走好。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P13\",\n      \"stage_order\": 13,\n      \"stage_summary\": \"陈海峰说准备充分，但被包围后没有后援，增援过不了江，敌人七个整师，突围突不出来，弹尽粮绝。\",\n      \"process_text\": \"陈海峰说一天可以到，就能会合，这条路线比较好一点、比较安全；第三个是准备还是充分的，但被包围以后没有后援，解放区增援部队没法过江，茅山集中在江边过不了江，增援不上；敌人七个整师，突围突不出来，弹尽粮绝；平时新四军每人挂三斤米袋，皖南撤出来每人五斤，加两斤，吃7天。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0083\"\n      ],\n      \"evidence_quote\": \"    陈海峰：一天可以到，就能会合。这条路线是比较好一点，这条路线比较安全。这个皖南事变呢，是这样子的。第三个呢，就是我们准备还是充分的。但是呢，你被包围以后，最后你没有后援哪。解放区的增援部队没有法过江哪，茅山集中在江边，过不了江啊，你没有用，增援不上。敌人七个整师，你突围突不出来，弹尽粮绝。平时我们打仗啊，新四军是带米袋，每个人挂三斤米袋。皖南撤出来的，每个人都五斤啊，加两斤，吃7天。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P14\",\n      \"stage_order\": 14,\n      \"stage_summary\": \"陈海峰说7天吃光、弹尽粮绝，伤员无人救，归纳五个原因，认为皖南事变是决策上的大问题、大失误。\",\n      \"process_text\": \"陈海峰说7天就吃光了，粮食也没有了，弹尽粮绝；最后一个就是伤员没有人救，轻伤可以一起走，重伤没办法解决，留18个人，解决不了；所以归纳起来是五个原因，皖南事变很惨，是决策上面的一个大的问题、一个大的失误。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0085\"\n      ],\n      \"evidence_quote\": \"    陈海峰：7天就吃光了，粮食也没有了，弹尽粮绝。最后一个呢，就是伤员没有人救。轻伤，部队的可以（一起走），重伤的没办法解决，就留18个人，你怎么解决伤员问题？解决不了。所以呢，我们归纳起来是五个原因。皖南事变呢，就是很惨，是我们决策上面的一个大的问题，一个大的失误，基本（是）这样子。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P15\",\n      \"stage_order\": 15,\n      \"stage_summary\": \"记者归纳为国民党有两个因素、自身内部有三个因素。\",\n      \"process_text\": \"记者说就是国民党有两个因素，我们自身内部有三个因素。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0086\"\n      ],\n      \"evidence_quote\": \"    记者：就是国民党有两个因素，我们自身内部有三个因素。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P16\",\n      \"stage_order\": 16,\n      \"stage_summary\": \"记者追问项英没有走叶挺选的路线而是往南走，是否想到南方山区隐蔽打游击。\",\n      \"process_text\": \"记者问陈老，项英没有走叶挺选的这条道，他是往南走了，有没有可能他是想到南方山区里面去隐蔽打游击。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0091\"\n      ],\n      \"evidence_quote\": \"    记者：陈老，项英没有走叶挺选的这条道啊，他是往南走了。有没有可能他是想到南方山区里面去隐蔽打游击？\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P17\",\n      \"stage_order\": 17,\n      \"stage_summary\": \"陈海峰回应项英往南走是否打游击，认为原来有这个说法，但个人决定不了，还有集体领导和中央问题，到江西发展老根据地打游击不可能。\",\n      \"process_text\": \"陈海峰说原来有这个说法，说他主要是这个指导思想；他个人也决定不了，因为还有集体领导问题、中央问题；他那个时候往哪去，没有出路；到江西去发展老根据地打游击，又回到三年游击战争，是不可能的事。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0092\"\n      ],\n      \"evidence_quote\": \"    陈海峰：原来有这个说法，说他主要（是）这个指导思想。这个他个人也决定不了，因为还有个集体领导问题，还有个中央问题呢，他也不至于。他那个时候往哪去？他没有出路。他到江西去发展老根据地，那你打游击？你又回到三年游击战争去了，是不是。那（是）不可能的事。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P18\",\n      \"stage_order\": 18,\n      \"stage_summary\": \"陈海峰解释该路线是避免伤亡过大、比较安全，中央认可国民党三战区不至于下毒手，因顾祝同原是叶挺下面排长、受叶挺领导。\",\n      \"process_text\": \"陈海峰说避免伤亡过大，好像这个路线比较安全；因为中央认可，中央认为国民党三战区不至于下这个毒手；因为顾祝同原来是叶挺下面的一个排长，原来是受叶挺领导的，所以他被俘以后都不敢下叶挺的枪，顾祝同见叶挺都先敬礼。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0098\"\n      ],\n      \"evidence_quote\": \"    陈海峰：避免伤亡过大，好像这个路线比较安全。因为中央认可，中央认为国民党三战区不至于下这个毒手。因为顾祝同原来是叶挺下面的一个排长，原来是受叶挺领导的。所以他被俘以后，都不敢下叶挺的枪，顾祝同见叶挺都先敬礼啊，他（是）领导啊。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P19\",\n      \"stage_order\": 19,\n      \"stage_summary\": \"陈海峰承认敌人坚决，认为对蒋介石狠毒的一面看得还不够，党内以后提高到“右倾”的高度。\",\n      \"process_text\": \"陈海峰说坚决；对蒋介石狠毒的一面，看得还不够，实际上；那么党内以后提高到了的高度，叫“右倾”了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0102\"\n      ],\n      \"evidence_quote\": \"    陈海峰：坚决。对蒋介石狠毒的一面，看得还不够，实际上。那么我们党内以后提高到了的高度，叫“右倾”了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P01\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P02\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P03\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P04\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P05\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P06\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P07\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P07\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P08\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P08\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P09\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P09\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P10\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P10\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P11\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P11\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P12\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P12\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P13\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P13\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P14\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P14\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P15\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P15\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P16\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P16\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P17\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P17\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P18\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P18\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P19\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC06-DE001",
+    "event_enrichment": {
+      "result_state": "陈海峰在访谈中完成对皖南事变原因与突围路线的评价：认为事变造成重大损失，是决策上的大问题、大失误，并归纳为五个原因；记者进一步归纳为国民党两个因素、自身内部三个因素；陈海峰回应项英往南走是否打游击，解释该路线是避免伤亡过大、比较安全，中央认可国民党三战区不至于下毒手，并认为对蒋介石狠毒的一面看得还不够，党内以后提高到“右倾”的高度。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起点为 S0004 陈海峰开始谈皖南事变争议与损失，终点为 S0102 陈海峰回应敌人坚决、对蒋介石狠毒认识不足并提到党内以后称为右倾；中间片段均围绕皖南事变原因、突围路线及相关追问。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰提出皖南事变过去有争议，并评价其结果对党的损失很大。",
+        "process_text": "陈海峰说皖南事变以个人看过去有争议、有各种说法，他认为最后产生这么一个结果，对党的损失很大，因为军部首脑机关基本摧毁了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0004"
+        ],
+        "evidence_quote": "    陈海峰：好的。皖南事变以我个人看呢，过去这个有争议，有各种说法。我认为呢，皖南事变最后产生这么一个结果，对我们党的损失是很大的。因为军部的首脑机关基本摧毁了，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "陈海峰以干部损失和叶挺、项英身份说明损失不可估计。",
+        "process_text": "陈海峰说教导队出来的队员现在副军级以上很多，假设这批干部出来，是抗日战争、解放战争、建国后建设干部，损失不可估计；叶挺是三个半军事专家，项英是党内唯一工人阶级出身，真正工人出身党员并不多。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0007"
+        ],
+        "evidence_quote": "    陈海峰：像我们教导队里面，那个时候出来的一些队员，现在副军级以上的很多。假设这一批干部出来，那就是抗日战争、解放战争、建国后的建设干部，那有一大批干部是宝贵的财产，所以损失是不可估计的。再加上叶挺将军是我们党内的三个半军事专家，这个是公认的，是不是，高级指挥员，军事专家。项英呢，也是我们这个党里面的唯一的工人阶级出身的。我们过去叫无产阶级政党，开始叫工人阶级政党，工人阶级先锋队才能入党，所以真正工人出身的党员并不多。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "陈海峰阐述蒋介石本质难移、“攘外必先安内”战略决策始终未变，反共高潮来了就要制造事件。",
+        "process_text": "陈海峰说蒋介石本质改变不了，“攘外必先安内”战略决策始终没有改变，被迫抗战，要消灭共产党，不在皖南也可能在西安、太原、石家庄发生，反共高潮来了就要制造事件，千方百计消灭主力。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0011"
+        ],
+        "evidence_quote": "    陈海峰：那么就是说他科技也发展了，但是他这个地方本质不会改变的。他控制学时间（音），领事学时间（音），他是资本主义发展最高峰了。那么就说蒋介石的本质改变不了，他“攘外必先安内”，他这个战略决策始终没有改变的。他就是被迫来抗战的，西安事变以后，他是不得已而为之的，他不是自觉自愿，（有）他战略上自己的改变。所以呢，他要消灭共产党，几十年来都这么（样子）。他就是不在皖南，他可能在西安，他可能在太原，可能在石家庄发生这事。这种事情呢，它是会发生的，就是反共高潮来了，他就要制造事件，他要千方百计消灭主力。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "陈海峰认为第二原因是蒋介石借日本鬼子的刀消灭共产党未达目的后自己动手，从战略高度是必然。",
+        "process_text": "陈海峰说蒋介石本来把八路军、新四军到敌后去，是借日本鬼子的刀消灭共产党，目的没达到后不得不由自己动手；从战略高度是必然，别看偶然，是长期策划、长期准备、处心积虑消灭共产党，并提到解放战争大别山李先念在宣化店突围差点被消灭。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0013"
+        ],
+        "evidence_quote": "    陈海峰：所以说是蒋介石战略决策的一个手段。第二呢，他本来把你八路军、新四军到敌后去，他是借日本鬼子的刀来消灭你共产党。他这个目的没有达到，最后他不得不由自己来动手。所以从战略的高度来说呢，这是一个必然的。你别看它是个偶然事件，但他是长期策划，长期准备，处心积虑要消灭共产党。后面到解放战争一开始，在大别山，李先念在宣化店突围，差点我们这十几万二十万部队给他消灭了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "陈海峰指出自身原因包括叶项矛盾，强调党内领导决策层团结重要。",
+        "process_text": "陈海峰说第二是我们自己的，叶、项两个人一直有矛盾，开始没矛盾慢慢产生；党内领导决策层团结非常重要；叶挺本身过去是党员，离开党这一段，项英对他有看法。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0015"
+        ],
+        "evidence_quote": "    陈海峰：假使李先念不灵活啊，王震啊、王树声、任仲夷啊，假使他们的决策（听不清）一点，敏感性差一点，那个损失还要大得多了。那都突围出来了，是不是。第二，是我们自己的，就是说叶、项两个人一直有矛盾。开始没矛盾，慢慢产生的。这个呢，就是说党内的领导决策层的团结是非常重要。叶挺呢，本身过去是个党员，他离开了党这一段，项英对他有看法。你这么一个领导干部，你这么一个人才，你消极，想离开党，是不是。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P06",
+        "stage_order": 6,
+        "stage_summary": "陈海峰说明项英地位高、叶挺列席无决策权，政委有最后决定权使叶挺受限制。",
+        "process_text": "陈海峰说叶挺列席参加，不是正式成员，有建议权、发言权，没有决策权；军事上应以叶挺为主，但政委有最后决定权，项英是东南局书记、新四军政委，叶挺军事上一说不算，发挥不了才能，受限制。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0019"
+        ],
+        "evidence_quote": "    陈海峰：好像现在卫生部一样的，卫生部党组，你陈竺就不能参加，但是有的会议就可以参加。请他参加，他是列席参加，他不是正式成员，他可以发言，有建议权、发言（权），他没有决策权。这样子呢，时间长了，这问题就来了。所以这样子呢，在军事上，应该是（以）叶挺为主，项英要听叶挺的。那么政治上，共产党的规定军队是政委有最后决定权。那么他是政委，他有最后决定权是不是，他的权力大。他（是）东南局书记，他是新四军的政委。叶挺，军事上一说不（算），他发挥不了他的才能，受限制。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P07",
+        "stage_order": 7,
+        "stage_summary": "陈海峰说项英执行得不坚决但最后执行中央政策，并指出叶项在撤退路线上不一致。",
+        "process_text": "陈海峰说项英执行得不坚决，但最后想通了，做出决策，一批批把后方、干部、老弱病残先撤走，最后是青壮，说明决心，最后执行中央政策；第二个是叶项矛盾，项英不尊重叶挺，在撤退路线上两个人不一致。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0045"
+        ],
+        "evidence_quote": "    陈海峰：执行得不坚决。但最后他还是想通了，最后他（做出）决策，一批一批把后方先撤走啊，干部先撤走啊，老弱病残先撤走啊，最后是青壮啊。那说明他（的）决心了，最后还是执行中央政策了，这是一个问题。第二个呢，就是叶项之间的矛盾呢，项英不尊重叶挺，昨天讲到了，就是在撤退的路线上面，两个人不一致。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P08",
+        "stage_order": 8,
+        "stage_summary": "陈海峰认为项英保守、对国民党存在幻想、有点右倾，但中央电报也有错，不能全推给项英。",
+        "process_text": "陈海峰说项英保守一点，对国民党存在幻想，有点右倾；中央把责任都推给项英也不对，电报最后说估计几个月内还不会下毒手，可以稳定处理北撤问题；中央也有错，项英事事请示，走保守路线也是中央同意的。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0047"
+        ],
+        "evidence_quote": "    陈海峰：项英呢，是保守一点，对于国民党呢，存在幻想，有点右倾。中央实际上把责任都推给项英也不对，你电报里就讲了嘛，（电报）最后就是说估计几（个）月之内，还不会下毒手，你们可以暂时怎么怎么的，可以稳定处理北撤的问题。那你这个中央也有错啊，是不是，你最后一股脑都放到项英头上，是不是。他事事请示你，他走这个保守路线，也是中央同意的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P09",
+        "stage_order": 9,
+        "stage_summary": "陈海峰认为叶挺的路线部署较好，可通过五个师防区打出去，保住三分之二。",
+        "process_text": "陈海峰说现在看来还是叶挺的路线比较好，虽然有危险，但部署得比较好；中间那条路线比较长，有52师、108师、40师，再加一两个师，放5个师，通过这5个师防区打出去，一定会有伤亡，但总归伤亡三分之一，可以保住三分之二，不至于全军覆没。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0052"
+        ],
+        "evidence_quote": "    陈海峰：现在看来，还是叶挺的那个路线比较好，虽然说有危险，但是你部署得比较好一点……中间那条路线比较长，他有52师，又有108师，有40师，有三个师，再加上一两个师，5个师譬如说，这条路线放5个师。那么我们通过这5个师的防区，打出去，一定会有伤亡。但是伤亡呢，总归伤亡三分之一吧，我可以保住三分之二，不至于全军覆没。还可以保持多数啊，牺牲少数，是吧。我们打敌后，抗战我们有经验啊。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P10",
+        "stage_order": 10,
+        "stage_summary": "陈海峰说明项英路线是向南以后再向东，靠近三战区，认为安全，出发点是估计国民党不会下毒手。",
+        "process_text": "陈海峰说向东走，项英是向南以后再向东，靠近三战区指挥机构，靠安徽屯溪很近，靠山边走，避开芜湖和南京方向，路并不少走还远一点；他认为安全，实际上就是估计国民党不会下毒手。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0058"
+        ],
+        "evidence_quote": "    陈海峰：向东走。他是向南以后再向东。那靠近三战区的这个指挥机构，靠安徽屯溪很近了。靠着这个山边走，避开芜湖和南京方向，路并不少走，还远一点呢。他认为安全，实际上就是估计国民党不会下毒手，这个出发点在这儿。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P11",
+        "stage_order": 11,
+        "stage_summary": "陈海峰认为往北走不通，大部队不能走，口子太小，日本封锁长江会全消灭。",
+        "process_text": "陈海峰说那都过不去，大部队不能走，那个地方的口子太小，日本鬼子长江一封锁，在江边上把你全消灭了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0064"
+        ],
+        "evidence_quote": "    陈海峰：那都过不去，大部队不能走，那个地方的口子太小，日本鬼子长江一封锁，在江边上把你全消灭了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P12",
+        "stage_order": 12,
+        "stage_summary": "陈海峰认为往东走好。",
+        "process_text": "陈海峰说往东走好。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0066"
+        ],
+        "evidence_quote": "    陈海峰：往东走好。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P13",
+        "stage_order": 13,
+        "stage_summary": "陈海峰说准备充分，但被包围后没有后援，增援过不了江，敌人七个整师，突围突不出来，弹尽粮绝。",
+        "process_text": "陈海峰说一天可以到，就能会合，这条路线比较好一点、比较安全；第三个是准备还是充分的，但被包围以后没有后援，解放区增援部队没法过江，茅山集中在江边过不了江，增援不上；敌人七个整师，突围突不出来，弹尽粮绝；平时新四军每人挂三斤米袋，皖南撤出来每人五斤，加两斤，吃7天。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0083"
+        ],
+        "evidence_quote": "    陈海峰：一天可以到，就能会合。这条路线是比较好一点，这条路线比较安全。这个皖南事变呢，是这样子的。第三个呢，就是我们准备还是充分的。但是呢，你被包围以后，最后你没有后援哪。解放区的增援部队没有法过江哪，茅山集中在江边，过不了江啊，你没有用，增援不上。敌人七个整师，你突围突不出来，弹尽粮绝。平时我们打仗啊，新四军是带米袋，每个人挂三斤米袋。皖南撤出来的，每个人都五斤啊，加两斤，吃7天。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P14",
+        "stage_order": 14,
+        "stage_summary": "陈海峰说7天吃光、弹尽粮绝，伤员无人救，归纳五个原因，认为皖南事变是决策上的大问题、大失误。",
+        "process_text": "陈海峰说7天就吃光了，粮食也没有了，弹尽粮绝；最后一个就是伤员没有人救，轻伤可以一起走，重伤没办法解决，留18个人，解决不了；所以归纳起来是五个原因，皖南事变很惨，是决策上面的一个大的问题、一个大的失误。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0085"
+        ],
+        "evidence_quote": "    陈海峰：7天就吃光了，粮食也没有了，弹尽粮绝。最后一个呢，就是伤员没有人救。轻伤，部队的可以（一起走），重伤的没办法解决，就留18个人，你怎么解决伤员问题？解决不了。所以呢，我们归纳起来是五个原因。皖南事变呢，就是很惨，是我们决策上面的一个大的问题，一个大的失误，基本（是）这样子。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P15",
+        "stage_order": 15,
+        "stage_summary": "记者归纳为国民党有两个因素、自身内部有三个因素。",
+        "process_text": "记者说就是国民党有两个因素，我们自身内部有三个因素。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0086"
+        ],
+        "evidence_quote": "    记者：就是国民党有两个因素，我们自身内部有三个因素。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P16",
+        "stage_order": 16,
+        "stage_summary": "记者追问项英没有走叶挺选的路线而是往南走，是否想到南方山区隐蔽打游击。",
+        "process_text": "记者问陈老，项英没有走叶挺选的这条道，他是往南走了，有没有可能他是想到南方山区里面去隐蔽打游击。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0091"
+        ],
+        "evidence_quote": "    记者：陈老，项英没有走叶挺选的这条道啊，他是往南走了。有没有可能他是想到南方山区里面去隐蔽打游击？",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P17",
+        "stage_order": 17,
+        "stage_summary": "陈海峰回应项英往南走是否打游击，认为原来有这个说法，但个人决定不了，还有集体领导和中央问题，到江西发展老根据地打游击不可能。",
+        "process_text": "陈海峰说原来有这个说法，说他主要是这个指导思想；他个人也决定不了，因为还有集体领导问题、中央问题；他那个时候往哪去，没有出路；到江西去发展老根据地打游击，又回到三年游击战争，是不可能的事。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0092"
+        ],
+        "evidence_quote": "    陈海峰：原来有这个说法，说他主要（是）这个指导思想。这个他个人也决定不了，因为还有个集体领导问题，还有个中央问题呢，他也不至于。他那个时候往哪去？他没有出路。他到江西去发展老根据地，那你打游击？你又回到三年游击战争去了，是不是。那（是）不可能的事。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P18",
+        "stage_order": 18,
+        "stage_summary": "陈海峰解释该路线是避免伤亡过大、比较安全，中央认可国民党三战区不至于下毒手，因顾祝同原是叶挺下面排长、受叶挺领导。",
+        "process_text": "陈海峰说避免伤亡过大，好像这个路线比较安全；因为中央认可，中央认为国民党三战区不至于下这个毒手；因为顾祝同原来是叶挺下面的一个排长，原来是受叶挺领导的，所以他被俘以后都不敢下叶挺的枪，顾祝同见叶挺都先敬礼。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0098"
+        ],
+        "evidence_quote": "    陈海峰：避免伤亡过大，好像这个路线比较安全。因为中央认可，中央认为国民党三战区不至于下这个毒手。因为顾祝同原来是叶挺下面的一个排长，原来是受叶挺领导的。所以他被俘以后，都不敢下叶挺的枪，顾祝同见叶挺都先敬礼啊，他（是）领导啊。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P19",
+        "stage_order": 19,
+        "stage_summary": "陈海峰承认敌人坚决，认为对蒋介石狠毒的一面看得还不够，党内以后提高到“右倾”的高度。",
+        "process_text": "陈海峰说坚决；对蒋介石狠毒的一面，看得还不够，实际上；那么党内以后提高到了的高度，叫“右倾”了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0102"
+        ],
+        "evidence_quote": "    陈海峰：坚决。对蒋介石狠毒的一面，看得还不够，实际上。那么我们党内以后提高到了的高度，叫“右倾”了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P01",
+        "target_stage_id": "BATCH07-DOC06-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P02",
+        "target_stage_id": "BATCH07-DOC06-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P03",
+        "target_stage_id": "BATCH07-DOC06-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P04",
+        "target_stage_id": "BATCH07-DOC06-DE001-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P05",
+        "target_stage_id": "BATCH07-DOC06-DE001-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P06",
+        "target_stage_id": "BATCH07-DOC06-DE001-P07",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P07",
+        "target_stage_id": "BATCH07-DOC06-DE001-P08",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P08",
+        "target_stage_id": "BATCH07-DOC06-DE001-P09",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P09",
+        "target_stage_id": "BATCH07-DOC06-DE001-P10",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P10",
+        "target_stage_id": "BATCH07-DOC06-DE001-P11",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P11",
+        "target_stage_id": "BATCH07-DOC06-DE001-P12",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P12",
+        "target_stage_id": "BATCH07-DOC06-DE001-P13",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P13",
+        "target_stage_id": "BATCH07-DOC06-DE001-P14",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P14",
+        "target_stage_id": "BATCH07-DOC06-DE001-P15",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P15",
+        "target_stage_id": "BATCH07-DOC06-DE001-P16",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P16",
+        "target_stage_id": "BATCH07-DOC06-DE001-P17",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P17",
+        "target_stage_id": "BATCH07-DOC06-DE001-P18",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P18",
+        "target_stage_id": "BATCH07-DOC06-DE001-P19",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

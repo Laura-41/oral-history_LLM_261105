@@ -1,0 +1,130 @@
+{
+  "run_time": "2026-11-11T23:03:24",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC02-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC02-DE005",
+  "usage": {
+    "prompt_tokens": 2123,
+    "total_tokens": 12810,
+    "completion_tokens": 10687,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8888
+    },
+    "time_to_first_token_ms": 89935,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 10686000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC02-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰完成约一周罗生特手术见习和另加约一周医院管理考察，认为收获很大，随后转往师部报到。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件始于部长安排陈海峰住进盐城军部医院见习罗生特手术，止于其结束约两周学习考察后转往师部。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"部长安排陈海峰住进盐城军部医院，批准其穿隔离衣、戴口罩在旁见习罗生特开刀一周。\",\n      \"process_text\": \"部长告诉陈海峰趁机会业务学习，住到医院一个礼拜；最近有批伤员，罗生特要开刀，可以见习；穿上隔离衣、戴上口罩站在旁边看，学点技术，批准见习罗生特开刀一个礼拜。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0033\"\n      ],\n      \"evidence_quote\": \"那么他做手术，那个部长啊，就告诉我，他说：“你趁这个机会业务上学习一下，你在这里住一个礼拜，你住到医院去。最近有批伤员，罗生特要开刀，你可以见习。”穿上隔离衣呀，戴上口罩啊，站在旁边，看他怎么开。这样子呢，学点技术，批准我见习罗生特开刀一个礼拜。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈海峰另加一周参观盐城军部医院，考察其管理方式。\",\n      \"process_text\": \"陈海峰因在皖南军部医院搞过外科病室副室长，想看看盐城军部医院怎么管，就考察一个礼拜，这是另外加一个礼拜，之后再到师部报到。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0035\"\n      ],\n      \"evidence_quote\": \"参观这个医院的管理。因为我在皖南军部医院搞过，是不是，外科病室的副室长嘛。那么盐城军部的医院怎么管的，看一看。就考察他一个礼拜，（这是）另外加一个礼拜，那么这样子（之后）呢，我再到师部去报到，这样子。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈海峰了解罗生特的专业背景、设备条件与手术细致风格。\",\n      \"process_text\": \"罗生特是专家，带来一套设备，泌尿外科设备比较全，导尿管软的硬的都有；他是奥地利人，一家都是革命的，曾被盖世太保打掉牙齿；他做手术非常细致，泌尿部分伤员做得更好更完善。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0037\",\n        \"BATCH04-DOC02-S0038\",\n        \"BATCH04-DOC02-S0041\"\n      ],\n      \"evidence_quote\": \"那么他呢，奥地利人嘛，他妹妹在伦敦嘛，这一家都是革命的了。他不是被抓到集中营去的嘛，盖世太保两拳就把他牙齿整个都打掉了嘛，他那个牙齿全部都是假牙。他就讲给我听的，他说我的牙齿全是假牙，就是德国的盖世太保打的，左边一拳，右边一拳，牙齿整个都没有了，他受了很多苦啊！罗生特做手术非常细致，一般的我们有印象，外科医生比较粗暴，手都比较快。他呢，比较细致。当时在泌尿这个部分的伤员，那就是做得更好了，更完善。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"陈海峰观察罗生特的手术操作、决断与手术水平，并对其表现感到满意。\",\n      \"process_text\": \"罗生特因是泌尿外科专家，腹部手术非常好，手术缝合都很标准；他双手打结、用血管镊子打结速度很快，看伤员后下决心果断不犹豫；医疗作风、诊断和手术水平高，一周做很多手术，一天七八个，共几十个，陈海峰很满意。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0043\",\n        \"BATCH04-DOC02-S0045\"\n      ],\n      \"evidence_quote\": \"他两个手打得都非常好。两个手打结，用血管镊子打结，速度非常快，就靠平时锻炼了。看这个伤员，一看以后下决心啊，很果断，不犹豫。该怎么样就怎么样，决心也很大。医疗作风，诊断的水平、手术的水平，业务水平，他的业务技术部分的细致，做得漂亮，手术做得标准，水平比较高。一个礼拜看他做了好多手术，一天要做七八个手术，那么（一礼拜）也做了几十个手术，看了以后，我在那里很满意。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE005-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"陈海峰总结短训班式学习收获，随后转往师部。\",\n      \"process_text\": \"陈海峰把这看作短训班学习一个礼拜，学了医院管理、手术和普通病手术；盐城军部普通病人多，全军送来，重伤病员多，见识多，一个礼拜收获很大；之后转到师部去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0047\",\n        \"BATCH04-DOC02-S0048\"\n      ],\n      \"evidence_quote\": \"比较多，全军送来的，又见识了多，是不是。那么炸伤的，都是重伤病员，重病人多。这样子呢，一个礼拜的收获还是很大。以后呢，我就转到师部去了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE005-P01\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0035\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE005-P02\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0037\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE005-P03\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE005-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0043\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE005-P04\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE005-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0048\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC02-DE005",
+    "event_enrichment": {
+      "result_state": "陈海峰完成约一周罗生特手术见习和另加约一周医院管理考察，认为收获很大，随后转往师部报到。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件始于部长安排陈海峰住进盐城军部医院见习罗生特手术，止于其结束约两周学习考察后转往师部。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC02-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "部长安排陈海峰住进盐城军部医院，批准其穿隔离衣、戴口罩在旁见习罗生特开刀一周。",
+        "process_text": "部长告诉陈海峰趁机会业务学习，住到医院一个礼拜；最近有批伤员，罗生特要开刀，可以见习；穿上隔离衣、戴上口罩站在旁边看，学点技术，批准见习罗生特开刀一个礼拜。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0033"
+        ],
+        "evidence_quote": "那么他做手术，那个部长啊，就告诉我，他说：“你趁这个机会业务上学习一下，你在这里住一个礼拜，你住到医院去。最近有批伤员，罗生特要开刀，你可以见习。”穿上隔离衣呀，戴上口罩啊，站在旁边，看他怎么开。这样子呢，学点技术，批准我见习罗生特开刀一个礼拜。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "陈海峰另加一周参观盐城军部医院，考察其管理方式。",
+        "process_text": "陈海峰因在皖南军部医院搞过外科病室副室长，想看看盐城军部医院怎么管，就考察一个礼拜，这是另外加一个礼拜，之后再到师部报到。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0035"
+        ],
+        "evidence_quote": "参观这个医院的管理。因为我在皖南军部医院搞过，是不是，外科病室的副室长嘛。那么盐城军部的医院怎么管的，看一看。就考察他一个礼拜，（这是）另外加一个礼拜，那么这样子（之后）呢，我再到师部去报到，这样子。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "陈海峰了解罗生特的专业背景、设备条件与手术细致风格。",
+        "process_text": "罗生特是专家，带来一套设备，泌尿外科设备比较全，导尿管软的硬的都有；他是奥地利人，一家都是革命的，曾被盖世太保打掉牙齿；他做手术非常细致，泌尿部分伤员做得更好更完善。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0037",
+          "BATCH04-DOC02-S0038",
+          "BATCH04-DOC02-S0041"
+        ],
+        "evidence_quote": "那么他呢，奥地利人嘛，他妹妹在伦敦嘛，这一家都是革命的了。他不是被抓到集中营去的嘛，盖世太保两拳就把他牙齿整个都打掉了嘛，他那个牙齿全部都是假牙。他就讲给我听的，他说我的牙齿全是假牙，就是德国的盖世太保打的，左边一拳，右边一拳，牙齿整个都没有了，他受了很多苦啊！罗生特做手术非常细致，一般的我们有印象，外科医生比较粗暴，手都比较快。他呢，比较细致。当时在泌尿这个部分的伤员，那就是做得更好了，更完善。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "陈海峰观察罗生特的手术操作、决断与手术水平，并对其表现感到满意。",
+        "process_text": "罗生特因是泌尿外科专家，腹部手术非常好，手术缝合都很标准；他双手打结、用血管镊子打结速度很快，看伤员后下决心果断不犹豫；医疗作风、诊断和手术水平高，一周做很多手术，一天七八个，共几十个，陈海峰很满意。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0043",
+          "BATCH04-DOC02-S0045"
+        ],
+        "evidence_quote": "他两个手打得都非常好。两个手打结，用血管镊子打结，速度非常快，就靠平时锻炼了。看这个伤员，一看以后下决心啊，很果断，不犹豫。该怎么样就怎么样，决心也很大。医疗作风，诊断的水平、手术的水平，业务水平，他的业务技术部分的细致，做得漂亮，手术做得标准，水平比较高。一个礼拜看他做了好多手术，一天要做七八个手术，那么（一礼拜）也做了几十个手术，看了以后，我在那里很满意。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE005-P05",
+        "stage_order": 5,
+        "stage_summary": "陈海峰总结短训班式学习收获，随后转往师部。",
+        "process_text": "陈海峰把这看作短训班学习一个礼拜，学了医院管理、手术和普通病手术；盐城军部普通病人多，全军送来，重伤病员多，见识多，一个礼拜收获很大；之后转到师部去。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0047",
+          "BATCH04-DOC02-S0048"
+        ],
+        "evidence_quote": "比较多，全军送来的，又见识了多，是不是。那么炸伤的，都是重伤病员，重病人多。这样子呢，一个礼拜的收获还是很大。以后呢，我就转到师部去了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC02-DE005-P01",
+        "target_stage_id": "BATCH04-DOC02-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0035",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE005-P02",
+        "target_stage_id": "BATCH04-DOC02-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0037",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE005-P03",
+        "target_stage_id": "BATCH04-DOC02-DE005-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC02-S0043",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE005-P04",
+        "target_stage_id": "BATCH04-DOC02-DE005-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC02-S0048",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

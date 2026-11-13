@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T09:33:19",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC04-DE005",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC04-DE005",
+  "usage": {
+    "prompt_tokens": 1227,
+    "total_tokens": 5051,
+    "completion_tokens": 3824,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2756
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 56316,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC04-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"说话人部队在第三天傍晚撤下来；此前三辆摩托车被推，无人会开，推时发出响声，一停又不响。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"边界依据片段内叙述推进：起于第二天碰见师的指挥所，止于第三天傍晚部队撤下来；事件名中的平型关后为一级事件背景，未在该片段直接出现。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"第二天与师指挥所人员相遇并反向行进\",\n      \"process_text\": \"第二天说话人往前走时碰见师的指挥所，对方从前面回来往后去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0029\"\n      ],\n      \"evidence_quote\": \"    杨永松：因为第二天我就碰见师的指挥所，他从前面回来，我不是还往前走的时候他就往后去。推了三辆摩托车，谁也不会开，谁也不懂啊，这一推“嘣咚嘣咚嘣咚嘣咚嘣咚”响了，你一停它又不响了。我记得是第三天的傍晚啊，我们部队就撤下来了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"推三辆不会开的摩托车，推时响、停时不响\",\n      \"process_text\": \"推了三辆摩托车，谁也不会开，谁也不懂，推时“嘣咚嘣咚嘣咚嘣咚嘣咚”响，一停又不响。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0029\"\n      ],\n      \"evidence_quote\": \"    杨永松：因为第二天我就碰见师的指挥所，他从前面回来，我不是还往前走的时候他就往后去。推了三辆摩托车，谁也不会开，谁也不懂啊，这一推“嘣咚嘣咚嘣咚嘣咚嘣咚”响了，你一停它又不响了。我记得是第三天的傍晚啊，我们部队就撤下来了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"第三天傍晚部队撤下来\",\n      \"process_text\": \"我记得是第三天的傍晚，我们部队就撤下来了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0029\"\n      ],\n      \"evidence_quote\": \"    杨永松：因为第二天我就碰见师的指挥所，他从前面回来，我不是还往前走的时候他就往后去。推了三辆摩托车，谁也不会开，谁也不懂啊，这一推“嘣咚嘣咚嘣咚嘣咚嘣咚”响了，你一停它又不响了。我记得是第三天的傍晚啊，我们部队就撤下来了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE005-P01\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0029\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE005-P02\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0029\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC04-DE005",
+    "event_enrichment": {
+      "result_state": "说话人部队在第三天傍晚撤下来；此前三辆摩托车被推，无人会开，推时发出响声，一停又不响。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "边界依据片段内叙述推进：起于第二天碰见师的指挥所，止于第三天傍晚部队撤下来；事件名中的平型关后为一级事件背景，未在该片段直接出现。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC04-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "第二天与师指挥所人员相遇并反向行进",
+        "process_text": "第二天说话人往前走时碰见师的指挥所，对方从前面回来往后去。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0029"
+        ],
+        "evidence_quote": "    杨永松：因为第二天我就碰见师的指挥所，他从前面回来，我不是还往前走的时候他就往后去。推了三辆摩托车，谁也不会开，谁也不懂啊，这一推“嘣咚嘣咚嘣咚嘣咚嘣咚”响了，你一停它又不响了。我记得是第三天的傍晚啊，我们部队就撤下来了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "推三辆不会开的摩托车，推时响、停时不响",
+        "process_text": "推了三辆摩托车，谁也不会开，谁也不懂，推时“嘣咚嘣咚嘣咚嘣咚嘣咚”响，一停又不响。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0029"
+        ],
+        "evidence_quote": "    杨永松：因为第二天我就碰见师的指挥所，他从前面回来，我不是还往前走的时候他就往后去。推了三辆摩托车，谁也不会开，谁也不懂啊，这一推“嘣咚嘣咚嘣咚嘣咚嘣咚”响了，你一停它又不响了。我记得是第三天的傍晚啊，我们部队就撤下来了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "第三天傍晚部队撤下来",
+        "process_text": "我记得是第三天的傍晚，我们部队就撤下来了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0029"
+        ],
+        "evidence_quote": "    杨永松：因为第二天我就碰见师的指挥所，他从前面回来，我不是还往前走的时候他就往后去。推了三辆摩托车，谁也不会开，谁也不懂啊，这一推“嘣咚嘣咚嘣咚嘣咚嘣咚”响了，你一停它又不响了。我记得是第三天的傍晚啊，我们部队就撤下来了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC04-DE005-P01",
+        "target_stage_id": "BATCH02-DOC04-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0029",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE005-P02",
+        "target_stage_id": "BATCH02-DOC04-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0029",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

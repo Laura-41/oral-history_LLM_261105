@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T08:39:15",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC03-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC03-DE006",
+  "usage": {
+    "prompt_tokens": 1333,
+    "total_tokens": 7489,
+    "completion_tokens": 6156,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5184
+    },
+    "time_to_first_token_ms": 89896,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC03-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"直罗镇战斗以后组织第三团，一团、三团、13团编为一师（115师），缴获武器保留一部分用于建设团。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于S0054提到直罗镇缴获武器及领导要求保留建设另外一个团，止于S0056说明直罗镇战斗以后组织第三团并编为一师。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"直罗镇缴获武器且领导要求保留建设另外一个团\",\n      \"process_text\": \"直罗镇还缴了一部分，还不是每个人一支；缴的武器当时领导说尽可能不要换，留起来要建设另外一个团。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0054\"\n      ],\n      \"evidence_quote\": \"直罗镇还缴了一部分，还不是每个人一支。那么缴的武器呢，当时这个领导还（说）尽可能不要换，留起来要建设另外一个团。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"为组织第三团保留一部分缴获枪\",\n      \"process_text\": \"要另外组织一个团，缴的枪不要全部给换，要留一部分。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0056\"\n      ],\n      \"evidence_quote\": \"要另外组织一个团，你尽交些不要的枪给他不合适啊。所以你缴的枪呢你不要全部给换了，要留一部分。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"直罗镇战斗以后组织第三团并编入一师\",\n      \"process_text\": \"直罗镇战斗以后组织一个第三团，一团、三团、13团编为一师，一师就（是115师）以后杨成武那个独立团了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0056\"\n      ],\n      \"evidence_quote\": \"那个时候呢就是要组织一个第三团，直罗镇战斗以后，组织一个第三团呢，就一团、三团、13团编为一师，一师就（是115师）以后杨成武那个独立团了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE006-P01\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE006-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0056\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE006-P02\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE006-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0056\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC03-DE006",
+    "event_enrichment": {
+      "result_state": "直罗镇战斗以后组织第三团，一团、三团、13团编为一师（115师），缴获武器保留一部分用于建设团。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于S0054提到直罗镇缴获武器及领导要求保留建设另外一个团，止于S0056说明直罗镇战斗以后组织第三团并编为一师。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC03-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "直罗镇缴获武器且领导要求保留建设另外一个团",
+        "process_text": "直罗镇还缴了一部分，还不是每个人一支；缴的武器当时领导说尽可能不要换，留起来要建设另外一个团。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0054"
+        ],
+        "evidence_quote": "直罗镇还缴了一部分，还不是每个人一支。那么缴的武器呢，当时这个领导还（说）尽可能不要换，留起来要建设另外一个团。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "为组织第三团保留一部分缴获枪",
+        "process_text": "要另外组织一个团，缴的枪不要全部给换，要留一部分。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0056"
+        ],
+        "evidence_quote": "要另外组织一个团，你尽交些不要的枪给他不合适啊。所以你缴的枪呢你不要全部给换了，要留一部分。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "直罗镇战斗以后组织第三团并编入一师",
+        "process_text": "直罗镇战斗以后组织一个第三团，一团、三团、13团编为一师，一师就（是115师）以后杨成武那个独立团了。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0056"
+        ],
+        "evidence_quote": "那个时候呢就是要组织一个第三团，直罗镇战斗以后，组织一个第三团呢，就一团、三团、13团编为一师，一师就（是115师）以后杨成武那个独立团了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC03-DE006-P01",
+        "target_stage_id": "BATCH01-DOC03-DE006-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH01-DOC03-S0056",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE006-P02",
+        "target_stage_id": "BATCH01-DOC03-DE006-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC03-S0056",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

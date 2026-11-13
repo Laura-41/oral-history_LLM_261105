@@ -1,0 +1,161 @@
+{
+  "run_time": "2026-11-12T09:56:33",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC06-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC06-DE001",
+  "usage": {
+    "prompt_tokens": 2722,
+    "total_tokens": 14584,
+    "completion_tokens": 11862,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9463
+    },
+    "time_to_first_token_ms": 183213,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11861000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC06-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"麒麟峰被142师攻占，日军宫崎联队大部分被消灭、小部分溜走，炮火支援造成重大伤亡，师长傅立平获五千块大洋奖励。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于S0005所述麒麟峰被日军宫崎联队占领、成为制高点，止于S0026所述麒麟峰打下来、日军无俘虏且小部分溜走、师长获奖励；S0026后半段撤下战场与修水防御为后续事件，不纳入本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"麒麟峰被日军宫崎联队占领并成为制高点\",\n      \"process_text\": \"日本鬼子有宫崎联队，他的主力绕过我们的部队，偷袭我们，占领了我们这麒麟峰，对我们的妨碍很大；麒麟峰是制高点、要害。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0005\"\n      ],\n      \"evidence_quote\": \"日本鬼子有宫崎联队，他的主力绕过我们的部队，偷袭我们，占领了我们这麒麟峰，对我们的妨碍很大！在麒麟峰上，（日军可以）观察我们附近的（情况），因为它这是个高地，所以还是个要害。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"炮兵团分散，陈锐霆随142师在东北方向占领阵地\",\n      \"process_text\": \"炮兵团分散，陈锐霆被分在142师当师工兵营营长，142师从麒麟峰东北方向占领阵地准备打上去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0007\"\n      ],\n      \"evidence_quote\": \"以后就把我们所在的炮兵团都分散了，三个师一个师（分）一个团。我被分在142师，当师工兵营的营长，参加那个作战。我们这个142师就打麒麟峰的东北，全军两个部队都从南面，从正面往北打，他这个斜坡是这样子的（陈锐霆以手作山，指示部队攻击方向），南边的部队这样往上打的。我们从这个地方（指东北方向）去，这个地方比较陡峭，不好进攻，不好打。142师就从这个地方打上去的，我们就在这个东北边占领阵地。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆配合725团协同作战，团长攻击中牺牲\",\n      \"process_text\": \"陈锐霆配合725团协同作战，团长往前攻击时壮烈牺牲。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0009\"\n      ],\n      \"evidence_quote\": \"那时候我当营长，配合725团嘛。这个团长也是我的两次同学，一个在济南第一师范的同学，山东寿光人。他当团长，我们俩是很好的朋友。我介绍他考河北军事政治学校，在政治学校我们也是同学，他干的是步兵，我干的是炮兵，我配合他协同作战。但是他往前攻击的时候壮烈牺牲了，一个子弹打在他头上，估计敌人是（派）特等射手打的他。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"下午炮火直接瞄准支援步兵进攻\",\n      \"process_text\": \"下午6点左右炮火准备进攻，近距离直接瞄准，炮弹几乎发发命中，以炮换炮为步兵开路。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0011\"\n      ],\n      \"evidence_quote\": \"下午大概6点左右吧，炮火准备进攻嘛。先打这炮，为步兵开路嘛。我这个炮离目标就是近距离两三千公尺吧，直接瞄准了，打的炮几乎发发命中。眼睛看着我们的炮打到敌人那个地方，敌人的人员伤亡情况，一发炮弹有时候打倒敌人两三个人呢！所以我说以炮换炮啊，打倒敌人我心里非常高兴的！\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"夜晚142师首先登上麒麟峰峰顶\",\n      \"process_text\": \"夜晚142师首先登到麒麟峰峰顶，上去的有724团营长刘义昆。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0011\"\n      ],\n      \"evidence_quote\": \"（到了）夜晚，142师首先登到麒麟峰的峰顶，上去的有刘义昆，724团的一个营长。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE001-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"次日查看战场，友军称迫击炮弹炸死占八成到九成\",\n      \"process_text\": \"第二天9点多不到10点陈锐霆爬上山，友军查看后说敌人死伤中被迫击炮弹炸死的大概占百分之八十到九十。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0014\"\n      ],\n      \"evidence_quote\": \"第二天我大概9点多钟不到10点钟，就爬到山上去，前头友军的部队也上来了，他跟我讲，他也是（到这个）地方查一查。他说敌人死伤的人里面被迫击炮弹炸死的大概占百分之八十到九十。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE001-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"麒麟峰攻占，日军大部分被消灭、小部分溜走，师长获奖励\",\n      \"process_text\": \"麒麟峰打下来，没有俘虏，日军大部分被打死、小部分溜走，师长傅立平获五千块大洋奖励，时间大体在1938年10月。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0026\"\n      ],\n      \"evidence_quote\": \"没有俘虏，都打死了，要不就是溜走了一小部分。哎呀，那个山上日本人尸体，想到感觉很惨，臭得要死！这个麒麟峰打下来，这是战场中心的一个制高点嘛，上面非常地高兴。给我们师长叫傅立平五千块大洋，（作为）奖励嘛。这个时间大体上就在（19）38年10月吧。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE001-P01\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0007\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE001-P02\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0009\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE001-P03\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0011\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE001-P04\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE001-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0011\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE001-P05\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE001-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0014\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE001-P06\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE001-P07\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0026\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC06-DE001",
+    "event_enrichment": {
+      "result_state": "麒麟峰被142师攻占，日军宫崎联队大部分被消灭、小部分溜走，炮火支援造成重大伤亡，师长傅立平获五千块大洋奖励。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于S0005所述麒麟峰被日军宫崎联队占领、成为制高点，止于S0026所述麒麟峰打下来、日军无俘虏且小部分溜走、师长获奖励；S0026后半段撤下战场与修水防御为后续事件，不纳入本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC06-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "麒麟峰被日军宫崎联队占领并成为制高点",
+        "process_text": "日本鬼子有宫崎联队，他的主力绕过我们的部队，偷袭我们，占领了我们这麒麟峰，对我们的妨碍很大；麒麟峰是制高点、要害。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0005"
+        ],
+        "evidence_quote": "日本鬼子有宫崎联队，他的主力绕过我们的部队，偷袭我们，占领了我们这麒麟峰，对我们的妨碍很大！在麒麟峰上，（日军可以）观察我们附近的（情况），因为它这是个高地，所以还是个要害。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "炮兵团分散，陈锐霆随142师在东北方向占领阵地",
+        "process_text": "炮兵团分散，陈锐霆被分在142师当师工兵营营长，142师从麒麟峰东北方向占领阵地准备打上去。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0007"
+        ],
+        "evidence_quote": "以后就把我们所在的炮兵团都分散了，三个师一个师（分）一个团。我被分在142师，当师工兵营的营长，参加那个作战。我们这个142师就打麒麟峰的东北，全军两个部队都从南面，从正面往北打，他这个斜坡是这样子的（陈锐霆以手作山，指示部队攻击方向），南边的部队这样往上打的。我们从这个地方（指东北方向）去，这个地方比较陡峭，不好进攻，不好打。142师就从这个地方打上去的，我们就在这个东北边占领阵地。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆配合725团协同作战，团长攻击中牺牲",
+        "process_text": "陈锐霆配合725团协同作战，团长往前攻击时壮烈牺牲。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0009"
+        ],
+        "evidence_quote": "那时候我当营长，配合725团嘛。这个团长也是我的两次同学，一个在济南第一师范的同学，山东寿光人。他当团长，我们俩是很好的朋友。我介绍他考河北军事政治学校，在政治学校我们也是同学，他干的是步兵，我干的是炮兵，我配合他协同作战。但是他往前攻击的时候壮烈牺牲了，一个子弹打在他头上，估计敌人是（派）特等射手打的他。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "下午炮火直接瞄准支援步兵进攻",
+        "process_text": "下午6点左右炮火准备进攻，近距离直接瞄准，炮弹几乎发发命中，以炮换炮为步兵开路。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0011"
+        ],
+        "evidence_quote": "下午大概6点左右吧，炮火准备进攻嘛。先打这炮，为步兵开路嘛。我这个炮离目标就是近距离两三千公尺吧，直接瞄准了，打的炮几乎发发命中。眼睛看着我们的炮打到敌人那个地方，敌人的人员伤亡情况，一发炮弹有时候打倒敌人两三个人呢！所以我说以炮换炮啊，打倒敌人我心里非常高兴的！",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "夜晚142师首先登上麒麟峰峰顶",
+        "process_text": "夜晚142师首先登到麒麟峰峰顶，上去的有724团营长刘义昆。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0011"
+        ],
+        "evidence_quote": "（到了）夜晚，142师首先登到麒麟峰的峰顶，上去的有刘义昆，724团的一个营长。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE001-P06",
+        "stage_order": 6,
+        "stage_summary": "次日查看战场，友军称迫击炮弹炸死占八成到九成",
+        "process_text": "第二天9点多不到10点陈锐霆爬上山，友军查看后说敌人死伤中被迫击炮弹炸死的大概占百分之八十到九十。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0014"
+        ],
+        "evidence_quote": "第二天我大概9点多钟不到10点钟，就爬到山上去，前头友军的部队也上来了，他跟我讲，他也是（到这个）地方查一查。他说敌人死伤的人里面被迫击炮弹炸死的大概占百分之八十到九十。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE001-P07",
+        "stage_order": 7,
+        "stage_summary": "麒麟峰攻占，日军大部分被消灭、小部分溜走，师长获奖励",
+        "process_text": "麒麟峰打下来，没有俘虏，日军大部分被打死、小部分溜走，师长傅立平获五千块大洋奖励，时间大体在1938年10月。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0026"
+        ],
+        "evidence_quote": "没有俘虏，都打死了，要不就是溜走了一小部分。哎呀，那个山上日本人尸体，想到感觉很惨，臭得要死！这个麒麟峰打下来，这是战场中心的一个制高点嘛，上面非常地高兴。给我们师长叫傅立平五千块大洋，（作为）奖励嘛。这个时间大体上就在（19）38年10月吧。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC06-DE001-P01",
+        "target_stage_id": "BATCH02-DOC06-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC06-S0007",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC06-DE001-P02",
+        "target_stage_id": "BATCH02-DOC06-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC06-S0009",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC06-DE001-P03",
+        "target_stage_id": "BATCH02-DOC06-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC06-S0011",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC06-DE001-P04",
+        "target_stage_id": "BATCH02-DOC06-DE001-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC06-S0011",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC06-DE001-P05",
+        "target_stage_id": "BATCH02-DOC06-DE001-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC06-S0014",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC06-DE001-P06",
+        "target_stage_id": "BATCH02-DOC06-DE001-P07",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC06-S0026",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

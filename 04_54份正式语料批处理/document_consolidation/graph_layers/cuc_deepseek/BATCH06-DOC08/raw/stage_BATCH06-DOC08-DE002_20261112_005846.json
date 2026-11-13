@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T00:58:46",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC08-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC08-DE002",
+  "usage": {
+    "prompt_tokens": 1287,
+    "total_tokens": 5587,
+    "completion_tokens": 4300,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3395
+    },
+    "time_to_first_token_ms": 33448,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC08-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"鲁南专员公署（鲁南专署）成立；随后罗帅带我们向师部靠近。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“为了成立专员公署”后的准备和统战工作为起点，以“鲁南专员公署成立起来了”“鲁南专署就建立起来了”及随后行动为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC08-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"为成立专员公署进行前期准备：政治部宣传队带一个连前往，罗帅接触各方人士做工作。\",\n      \"process_text\": \"为了成立专员公署，政治部宣传队带一个连前往，到那里个把月时间，罗帅接触各方面的人做工作。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC08-S0017\"\n      ],\n      \"evidence_quote\": \"为了成立专员公署，就我们就光政治部宣传队带了一个连，去了以后，到那里个把月时间，罗帅接触各方面的人做工作\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC08-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"准备当专员的于化琪及其他统战人士、部队人员常来，罗帅忙于联络；随后召开鲁南人民代表大会并选举专员。\",\n      \"process_text\": \"准备当专员的于化琪常来，其他统战人士和一些部队人员也来，罗帅忙得不得了；在那里召开鲁南人民代表大会，选了专员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC08-S0019\"\n      ],\n      \"evidence_quote\": \"再就是准备当专员的于化琪也是常来，还有其他的统战人士啊，一些部队什么人，他忙得不得了。就在那里开了鲁南人民代表大会，选了专员\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC08-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"鲁南专员公署（鲁南专署）建立；民运部长到峄县当县长，随后罗帅带我们向师部靠近。\",\n      \"process_text\": \"鲁南专署建立起来；政治部民运部长到峄县当县长；鲁南专署建立以后，罗帅带着我们跟师部靠近。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC08-S0021\"\n      ],\n      \"evidence_quote\": \"鲁南专署就建立起来了。我们政治部的民运部长到峄县当县长。鲁南专署建立起来以后，罗帅就带着我们跟师部靠近。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC08-DE002-P01\",\n      \"target_stage_id\": \"BATCH06-DOC08-DE002-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH06-DOC08-S0017\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC08-DE002-P02\",\n      \"target_stage_id\": \"BATCH06-DOC08-DE002-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC08-S0019\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC08-DE002",
+    "event_enrichment": {
+      "result_state": "鲁南专员公署（鲁南专署）成立；随后罗帅带我们向师部靠近。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以“为了成立专员公署”后的准备和统战工作为起点，以“鲁南专员公署成立起来了”“鲁南专署就建立起来了”及随后行动为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC08-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "为成立专员公署进行前期准备：政治部宣传队带一个连前往，罗帅接触各方人士做工作。",
+        "process_text": "为了成立专员公署，政治部宣传队带一个连前往，到那里个把月时间，罗帅接触各方面的人做工作。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC08-S0017"
+        ],
+        "evidence_quote": "为了成立专员公署，就我们就光政治部宣传队带了一个连，去了以后，到那里个把月时间，罗帅接触各方面的人做工作",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC08-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "准备当专员的于化琪及其他统战人士、部队人员常来，罗帅忙于联络；随后召开鲁南人民代表大会并选举专员。",
+        "process_text": "准备当专员的于化琪常来，其他统战人士和一些部队人员也来，罗帅忙得不得了；在那里召开鲁南人民代表大会，选了专员。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC08-S0019"
+        ],
+        "evidence_quote": "再就是准备当专员的于化琪也是常来，还有其他的统战人士啊，一些部队什么人，他忙得不得了。就在那里开了鲁南人民代表大会，选了专员",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC08-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "鲁南专员公署（鲁南专署）建立；民运部长到峄县当县长，随后罗帅带我们向师部靠近。",
+        "process_text": "鲁南专署建立起来；政治部民运部长到峄县当县长；鲁南专署建立以后，罗帅带着我们跟师部靠近。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC08-S0021"
+        ],
+        "evidence_quote": "鲁南专署就建立起来了。我们政治部的民运部长到峄县当县长。鲁南专署建立起来以后，罗帅就带着我们跟师部靠近。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC08-DE002-P01",
+        "target_stage_id": "BATCH06-DOC08-DE002-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH06-DOC08-S0017",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC08-DE002-P02",
+        "target_stage_id": "BATCH06-DOC08-DE002-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC08-S0019",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

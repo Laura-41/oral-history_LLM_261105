@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T09:59:37",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC06-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC06-DE002",
+  "usage": {
+    "prompt_tokens": 1415,
+    "total_tokens": 4634,
+    "completion_tokens": 3219,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2258
+    },
+    "time_to_first_token_ms": 49487,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3218000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC06-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队撤下战场并在旧街大坞附近休整后，转赴修水防线担任防御。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点承接前文麒麟峰战斗结束与奖励，以“不久以后，我们的部队就是撤下战场”进入本事件；终点以“第二年的二三月，又上去在修水的防线上担任防御嘛”结束。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"麒麟峰战斗结束后的背景与奖励\",\n      \"process_text\": \"麒麟峰打下来，是战场中心的一个制高点，上面非常高兴，给师长傅立平五千块大洋作为奖励，时间大体在1938年10月。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0026\"\n      ],\n      \"evidence_quote\": \"这个麒麟峰打下来，这是战场中心的一个制高点嘛，上面非常地高兴。给我们师长叫傅立平五千块大洋，（作为）奖励嘛。这个时间大体上就在（19）38年10月吧。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"部队撤下战场并在旧街大坞附近休整\",\n      \"process_text\": \"不久以后部队撤下战场，南昌到九江的路上有旧街大坞，142师师部在旧街大坞，炮兵营在那附近休息了大概两个多月。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0026\"\n      ],\n      \"evidence_quote\": \"不久以后，我们的部队就是撤下战场，南昌到九江的路上有旧街大坞（音），142师师部就在旧街大坞（音），我们炮兵营也就在那附近休息了大概两个多月吧。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"转赴修水防线担任防御\",\n      \"process_text\": \"第二年的二三月，部队又上去在修水的防线上担任防御。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0026\"\n      ],\n      \"evidence_quote\": \"第二年的二三月，又上去在修水的防线上担任防御嘛。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE002-P01\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE002-P02\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0026\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC06-DE002",
+    "event_enrichment": {
+      "result_state": "部队撤下战场并在旧街大坞附近休整后，转赴修水防线担任防御。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点承接前文麒麟峰战斗结束与奖励，以“不久以后，我们的部队就是撤下战场”进入本事件；终点以“第二年的二三月，又上去在修水的防线上担任防御嘛”结束。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC06-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "麒麟峰战斗结束后的背景与奖励",
+        "process_text": "麒麟峰打下来，是战场中心的一个制高点，上面非常高兴，给师长傅立平五千块大洋作为奖励，时间大体在1938年10月。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0026"
+        ],
+        "evidence_quote": "这个麒麟峰打下来，这是战场中心的一个制高点嘛，上面非常地高兴。给我们师长叫傅立平五千块大洋，（作为）奖励嘛。这个时间大体上就在（19）38年10月吧。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "部队撤下战场并在旧街大坞附近休整",
+        "process_text": "不久以后部队撤下战场，南昌到九江的路上有旧街大坞，142师师部在旧街大坞，炮兵营在那附近休息了大概两个多月。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0026"
+        ],
+        "evidence_quote": "不久以后，我们的部队就是撤下战场，南昌到九江的路上有旧街大坞（音），142师师部就在旧街大坞（音），我们炮兵营也就在那附近休息了大概两个多月吧。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "转赴修水防线担任防御",
+        "process_text": "第二年的二三月，部队又上去在修水的防线上担任防御。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0026"
+        ],
+        "evidence_quote": "第二年的二三月，又上去在修水的防线上担任防御嘛。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC06-DE002-P01",
+        "target_stage_id": "BATCH02-DOC06-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC06-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC06-DE002-P02",
+        "target_stage_id": "BATCH02-DOC06-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC06-S0026",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

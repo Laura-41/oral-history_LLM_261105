@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T19:05:14",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC08-DE009",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC08-DE009",
+  "usage": {
+    "prompt_tokens": 1152,
+    "total_tokens": 5655,
+    "completion_tokens": 4503,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3695
+    },
+    "time_to_first_token_ms": 137555,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4502000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC08-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"警卫连、特务连被拉出跑步两小时，傅秋涛自行指挥跑步\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据片段中“有天把那个警卫连、特务连拉出来跑步”起，至“跑了两个小时，他自己指挥”止，限定为一次醉酒拉跑步过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"傅秋涛处于醉酒状态\",\n      \"process_text\": \"他吃醉了酒麻烦，吃醉了\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0046\"\n      ],\n      \"evidence_quote\": \"他吃醉了酒麻烦，吃醉了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"傅秋涛将警卫连、特务连拉出来跑步\",\n      \"process_text\": \"有天把那个警卫连、特务连拉出来跑步\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0046\"\n      ],\n      \"evidence_quote\": \"有天把那个警卫连、特务连拉出来跑步\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"跑步持续两小时并由傅秋涛自行指挥\",\n      \"process_text\": \"跑了两个小时，他自己指挥，“一二一、一二一”\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0046\"\n      ],\n      \"evidence_quote\": \"跑了两个小时，他自己指挥，“一二一、一二一”\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE009-P01\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0046\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE009-P02\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE009-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0046\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC08-DE009",
+    "event_enrichment": {
+      "result_state": "警卫连、特务连被拉出跑步两小时，傅秋涛自行指挥跑步",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据片段中“有天把那个警卫连、特务连拉出来跑步”起，至“跑了两个小时，他自己指挥”止，限定为一次醉酒拉跑步过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC08-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "傅秋涛处于醉酒状态",
+        "process_text": "他吃醉了酒麻烦，吃醉了",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0046"
+        ],
+        "evidence_quote": "他吃醉了酒麻烦，吃醉了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "傅秋涛将警卫连、特务连拉出来跑步",
+        "process_text": "有天把那个警卫连、特务连拉出来跑步",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0046"
+        ],
+        "evidence_quote": "有天把那个警卫连、特务连拉出来跑步",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "跑步持续两小时并由傅秋涛自行指挥",
+        "process_text": "跑了两个小时，他自己指挥，“一二一、一二一”",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0046"
+        ],
+        "evidence_quote": "跑了两个小时，他自己指挥，“一二一、一二一”",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC08-DE009-P01",
+        "target_stage_id": "BATCH02-DOC08-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0046",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE009-P02",
+        "target_stage_id": "BATCH02-DOC08-DE009-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0046",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

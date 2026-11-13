@@ -1,0 +1,165 @@
+{
+  "run_time": "2026-11-12T16:40:09",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC02-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC02-DE001",
+  "usage": {
+    "prompt_tokens": 1992,
+    "total_tokens": 14677,
+    "completion_tokens": 12685,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10224
+    },
+    "time_to_first_token_ms": 190880,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 12684000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-23\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC02-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"苏北国际和平医院空出床位收治“七战七捷”伤员，前前后后大概收了一千二百多；抽调第三医疗队组建并建立华中军区野战军转运站，通过分站与水路将伤员从前线转至湖心寺后方，该医疗队/转运站后续叙述为一直变成转运总站并到山东变成华东军区转运总站。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于S0003所述苏北国际和平医院当时收留各分区转来病人，经S0004空出床位收“七战七捷”伤员；止于S0015所述该队/转运站后续变成华东军区转运总站的叙述，核心过程包括S0006-S0012组建建立转运站与伤员水路转运至湖心寺。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"苏北国际和平医院既有收治背景\",\n      \"process_text\": \"当时苏北国际和平医院收留各个分区转来的七八百个病人，轻的一部分撤去，还有一二百县团以上干部在这里治疗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0003\"\n      ],\n      \"evidence_quote\": \"    陈海峰：到现在,他这个全名英文的翻译都没有留下来，所以这个组织，希尔茨（音）等于是姓。这个就是苏北国际和平医院。实际上呢，当时我们收留了各个分区转来的七八百个病人，轻的一部分撤去，还有一二百，基本上都是县团以上的干部啊，在这里治疗。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"空出床位收治“七战七捷”伤员\",\n      \"process_text\": \"当时空出床位收“七战七捷”伤员，因战役打了一个多月，不断有重伤员来，前前后后大概收了一千二百多。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0004\"\n      ],\n      \"evidence_quote\": \"主要的呢，当时就空出床位来收“七战七捷”（的伤员）。因为“七战七捷”打了一个多月了，呖呖拉拉不断地有重伤员来。重伤员，前前后后呢，我们大概收了一千二百多。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"抽调第三医疗队组建转运站\",\n      \"process_text\": \"“七战七捷”一共四千多伤员，医院抽出一个医疗队，即第三医疗队、李兰丁的医疗队，去组建转运站。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0006\"\n      ],\n      \"evidence_quote\": \"    陈海峰：“七战七捷”一共四千多伤员。我们抽出了一个医疗队，就第三医疗队，李兰丁的这个医疗队呢，就去组建了转运站\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"建立华中军区野战军转运站并安排站长与医疗负责\",\n      \"process_text\": \"组建从前线转到后方的转运站，建立华中军区野战军转运站，抽调原来18旅的一个卫生部长当站长，转运伤员过程中的治疗、抢救由李兰丁医疗队负责。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0007\",\n        \"BATCH07-DOC02-S0008\"\n      ],\n      \"evidence_quote\": \"，就是从前线转到后方这个转运站，建立了华中军区的野战军转运站，抽调了原来18旅的一个卫生部长，老部长，后来当江苏省卫生厅长的，省里（音）当转运站的站长。这个转运伤员过程中间治疗呢、抢救呢，都由李兰丁这个医疗队负责。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"转运总站与分站设置\",\n      \"process_text\": \"伤员野战医院叫医疗总站、华中野战军转运总站，下面设好多分站，根据战役需要流动设置，水网地区配备双篙双桨船。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0010\"\n      ],\n      \"evidence_quote\": \"    陈海峰：这个伤员的野战（医院）叫医疗总站，华中野战军转运总站。下面呢，好多分站，根据每一个战役的需要，分站设在哪里，它流动的，分站比较艰苦一点。水网地区都是配备了船，就是讲的双篙双桨那种船。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE001-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"伤员经分站、总转站水路转运至湖心寺\",\n      \"process_text\": \"打海安或李堡时附近设分站，分站到总转站，总转站再转到后方湖心寺；水网地区走水路，用船只运输。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0011\",\n        \"BATCH07-DOC02-S0012\"\n      ],\n      \"evidence_quote\": \"就说要打海安了，靠近海安附近呢，设几个分站。要打李堡了，设几个分站。那分站到这个总转站，总转站再转到我们后方，转到这湖心寺来。都是用水路运输，那个时候都是水网地区，走水路就快，都（用）船只运输。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC02-DE001-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"转运距离与医疗队/转运站后续归属变化\",\n      \"process_text\": \"从苏中前线运到淮安有二三百里路，泰州附近也有二百多里路并设好多转运站；给出去的一个队以后没还，一直变成转运总站，以后到山东也是转运总站，变成华东军区转运总站。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC02-S0014\",\n        \"BATCH07-DOC02-S0015\"\n      ],\n      \"evidence_quote\": \"    陈海峰：从苏中前线运到我们淮安呢，也有二三百里路了。作战地区啊，最近的话，就是在泰州附近呢，也有二百多里路，设了好多转运站。不归我们指挥，我们指挥不了。就是给他一个队，以后就没还给我们，这个队一直变成转运总站，以后到山东也是转运总站，变成华东军区转运总站了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC02-DE001-P01\",\n      \"target_stage_id\": \"BATCH07-DOC02-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC02-S0004\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC02-DE001-P02\",\n      \"target_stage_id\": \"BATCH07-DOC02-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC02-S0006\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC02-DE001-P03\",\n      \"target_stage_id\": \"BATCH07-DOC02-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC02-S0007\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC02-DE001-P04\",\n      \"target_stage_id\": \"BATCH07-DOC02-DE001-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH07-DOC02-S0010\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC02-DE001-P05\",\n      \"target_stage_id\": \"BATCH07-DOC02-DE001-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC02-S0011\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC02-DE001-P06\",\n      \"target_stage_id\": \"BATCH07-DOC02-DE001-P07\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC02-S0015\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-23",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC02-DE001",
+    "event_enrichment": {
+      "result_state": "苏北国际和平医院空出床位收治“七战七捷”伤员，前前后后大概收了一千二百多；抽调第三医疗队组建并建立华中军区野战军转运站，通过分站与水路将伤员从前线转至湖心寺后方，该医疗队/转运站后续叙述为一直变成转运总站并到山东变成华东军区转运总站。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于S0003所述苏北国际和平医院当时收留各分区转来病人，经S0004空出床位收“七战七捷”伤员；止于S0015所述该队/转运站后续变成华东军区转运总站的叙述，核心过程包括S0006-S0012组建建立转运站与伤员水路转运至湖心寺。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC02-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "苏北国际和平医院既有收治背景",
+        "process_text": "当时苏北国际和平医院收留各个分区转来的七八百个病人，轻的一部分撤去，还有一二百县团以上干部在这里治疗。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0003"
+        ],
+        "evidence_quote": "    陈海峰：到现在,他这个全名英文的翻译都没有留下来，所以这个组织，希尔茨（音）等于是姓。这个就是苏北国际和平医院。实际上呢，当时我们收留了各个分区转来的七八百个病人，轻的一部分撤去，还有一二百，基本上都是县团以上的干部啊，在这里治疗。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC02-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "空出床位收治“七战七捷”伤员",
+        "process_text": "当时空出床位收“七战七捷”伤员，因战役打了一个多月，不断有重伤员来，前前后后大概收了一千二百多。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0004"
+        ],
+        "evidence_quote": "主要的呢，当时就空出床位来收“七战七捷”（的伤员）。因为“七战七捷”打了一个多月了，呖呖拉拉不断地有重伤员来。重伤员，前前后后呢，我们大概收了一千二百多。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC02-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "抽调第三医疗队组建转运站",
+        "process_text": "“七战七捷”一共四千多伤员，医院抽出一个医疗队，即第三医疗队、李兰丁的医疗队，去组建转运站。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0006"
+        ],
+        "evidence_quote": "    陈海峰：“七战七捷”一共四千多伤员。我们抽出了一个医疗队，就第三医疗队，李兰丁的这个医疗队呢，就去组建了转运站",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC02-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "建立华中军区野战军转运站并安排站长与医疗负责",
+        "process_text": "组建从前线转到后方的转运站，建立华中军区野战军转运站，抽调原来18旅的一个卫生部长当站长，转运伤员过程中的治疗、抢救由李兰丁医疗队负责。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0007",
+          "BATCH07-DOC02-S0008"
+        ],
+        "evidence_quote": "，就是从前线转到后方这个转运站，建立了华中军区的野战军转运站，抽调了原来18旅的一个卫生部长，老部长，后来当江苏省卫生厅长的，省里（音）当转运站的站长。这个转运伤员过程中间治疗呢、抢救呢，都由李兰丁这个医疗队负责。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH07-DOC02-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "转运总站与分站设置",
+        "process_text": "伤员野战医院叫医疗总站、华中野战军转运总站，下面设好多分站，根据战役需要流动设置，水网地区配备双篙双桨船。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0010"
+        ],
+        "evidence_quote": "    陈海峰：这个伤员的野战（医院）叫医疗总站，华中野战军转运总站。下面呢，好多分站，根据每一个战役的需要，分站设在哪里，它流动的，分站比较艰苦一点。水网地区都是配备了船，就是讲的双篙双桨那种船。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC02-DE001-P06",
+        "stage_order": 6,
+        "stage_summary": "伤员经分站、总转站水路转运至湖心寺",
+        "process_text": "打海安或李堡时附近设分站，分站到总转站，总转站再转到后方湖心寺；水网地区走水路，用船只运输。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0011",
+          "BATCH07-DOC02-S0012"
+        ],
+        "evidence_quote": "就说要打海安了，靠近海安附近呢，设几个分站。要打李堡了，设几个分站。那分站到这个总转站，总转站再转到我们后方，转到这湖心寺来。都是用水路运输，那个时候都是水网地区，走水路就快，都（用）船只运输。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC02-DE001-P07",
+        "stage_order": 7,
+        "stage_summary": "转运距离与医疗队/转运站后续归属变化",
+        "process_text": "从苏中前线运到淮安有二三百里路，泰州附近也有二百多里路并设好多转运站；给出去的一个队以后没还，一直变成转运总站，以后到山东也是转运总站，变成华东军区转运总站。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC02-S0014",
+          "BATCH07-DOC02-S0015"
+        ],
+        "evidence_quote": "    陈海峰：从苏中前线运到我们淮安呢，也有二三百里路了。作战地区啊，最近的话，就是在泰州附近呢，也有二百多里路，设了好多转运站。不归我们指挥，我们指挥不了。就是给他一个队，以后就没还给我们，这个队一直变成转运总站，以后到山东也是转运总站，变成华东军区转运总站了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC02-DE001-P01",
+        "target_stage_id": "BATCH07-DOC02-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC02-S0004",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC02-DE001-P02",
+        "target_stage_id": "BATCH07-DOC02-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC02-S0006",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC02-DE001-P03",
+        "target_stage_id": "BATCH07-DOC02-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC02-S0007",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC02-DE001-P04",
+        "target_stage_id": "BATCH07-DOC02-DE001-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH07-DOC02-S0010",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC02-DE001-P05",
+        "target_stage_id": "BATCH07-DOC02-DE001-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC02-S0011",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC02-DE001-P06",
+        "target_stage_id": "BATCH07-DOC02-DE001-P07",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC02-S0015",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

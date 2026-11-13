@@ -1,0 +1,211 @@
+{
+  "run_time": "2026-11-10T20:00:23",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC04-W001",
+  "technical_document_id": "BATCH03-DOC04",
+  "document_id": "07.陈海峰（二访）（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC04-S0002",
+    "BATCH03-DOC04-S0003",
+    "BATCH03-DOC04-S0004",
+    "BATCH03-DOC04-S0005",
+    "BATCH03-DOC04-S0006",
+    "BATCH03-DOC04-S0007",
+    "BATCH03-DOC04-S0008",
+    "BATCH03-DOC04-S0009",
+    "BATCH03-DOC04-S0010",
+    "BATCH03-DOC04-S0011",
+    "BATCH03-DOC04-S0012",
+    "BATCH03-DOC04-S0013",
+    "BATCH03-DOC04-S0014",
+    "BATCH03-DOC04-S0015",
+    "BATCH03-DOC04-S0016",
+    "BATCH03-DOC04-S0017",
+    "BATCH03-DOC04-S0018",
+    "BATCH03-DOC04-S0019",
+    "BATCH03-DOC04-S0020",
+    "BATCH03-DOC04-S0021",
+    "BATCH03-DOC04-S0022",
+    "BATCH03-DOC04-S0023",
+    "BATCH03-DOC04-S0024",
+    "BATCH03-DOC04-S0025",
+    "BATCH03-DOC04-S0026",
+    "BATCH03-DOC04-S0027",
+    "BATCH03-DOC04-S0028"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 11,
+    "unassigned_segment_count": 16,
+    "input_segment_count": 27,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH03-DOC04-W001-E02"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC04-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC04-W001-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC04-S0005",
+          "BATCH03-DOC04-S0007",
+          "BATCH03-DOC04-S0008",
+          "BATCH03-DOC04-S0010",
+          "BATCH03-DOC04-S0012",
+          "BATCH03-DOC04-S0014"
+        ],
+        "event": {
+          "event_name": "陈海峰1943年夏秋从苏中卫生学校调到老一团任卫生队长",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "调到老一团担任卫生队长",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "陈海峰",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "（19）43年夏天",
+              "normalized_value": "1943年夏天"
+            },
+            {
+              "kind": "TIME",
+              "value": "夏秋之间",
+              "normalized_value": "1943年夏秋之间"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "苏中卫生学校",
+              "normalized_value": "苏中卫生学校"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "调到老一团是夏秋之间。",
+          "type_basis": "调动和任职是组织行动与岗位变化，符合MATERIAL；“是老一团卫生队长”的身份关系作为调动结果融入事件，不单独标RELATIONAL；未把职业岗位标为Scope。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC04-W001-E02",
+        "source_segment_ids": [
+          "BATCH03-DOC04-S0014",
+          "BATCH03-DOC04-S0016",
+          "BATCH03-DOC04-S0022",
+          "BATCH03-DOC04-S0024",
+          "BATCH03-DOC04-S0026",
+          "BATCH03-DOC04-S0028"
+        ],
+        "event": {
+          "event_name": "陈海峰所在部队1944年3月车桥战役攻占车桥据点",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "攻占车桥据点",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "新四军",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "老一团",
+              "normalized_entity": "老一团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "车桥",
+              "normalized_entity": "车桥",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "日本鬼子",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1944年3月5号、3月6号",
+              "normalized_value": "1944-03-05至1944-03-06"
+            },
+            {
+              "kind": "TIME",
+              "value": "打了两天",
+              "normalized_value": "2天"
+            },
+            {
+              "kind": "MANNER",
+              "value": "主动进攻",
+              "normalized_value": "主动进攻"
+            },
+            {
+              "kind": "MANNER",
+              "value": "攻坚打援",
+              "normalized_value": "攻坚打援"
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "拔掉这个钉子",
+              "normalized_value": "拔除车桥日军据点"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那么这个“车桥战役”呢，是1944年3月5号、3月6号，打了两天。",
+          "type_basis": "作战、攻占据点和消灭敌军是物质过程；“主动进攻”“攻坚打援”为MANNER，“拔掉这个钉子”为目的；战略意义、整训八个月和延安表扬作为战役结果/背景合并，不单独建事件；淮安名称争议等外部背景排除。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC04-S0002",
+      "BATCH03-DOC04-S0003",
+      "BATCH03-DOC04-S0004",
+      "BATCH03-DOC04-S0006",
+      "BATCH03-DOC04-S0009",
+      "BATCH03-DOC04-S0011",
+      "BATCH03-DOC04-S0013",
+      "BATCH03-DOC04-S0015",
+      "BATCH03-DOC04-S0017",
+      "BATCH03-DOC04-S0018",
+      "BATCH03-DOC04-S0019",
+      "BATCH03-DOC04-S0020",
+      "BATCH03-DOC04-S0021",
+      "BATCH03-DOC04-S0023",
+      "BATCH03-DOC04-S0025",
+      "BATCH03-DOC04-S0027"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH03-DOC04-W001\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC04-W001-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC04-S0005\",\n        \"BATCH03-DOC04-S0007\",\n        \"BATCH03-DOC04-S0008\",\n        \"BATCH03-DOC04-S0010\",\n        \"BATCH03-DOC04-S0012\",\n        \"BATCH03-DOC04-S0014\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰1943年夏秋从苏中卫生学校调到老一团任卫生队长\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"调到老一团担任卫生队长\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"陈海峰\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"（19）43年夏天\",\n            \"normalized_value\": \"1943年夏天\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"夏秋之间\",\n            \"normalized_value\": \"1943年夏秋之间\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"苏中卫生学校\",\n            \"normalized_value\": \"苏中卫生学校\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"调到老一团是夏秋之间。\",\n        \"type_basis\": \"调动和任职是组织行动与岗位变化，符合MATERIAL；“是老一团卫生队长”的身份关系作为调动结果融入事件，不单独标RELATIONAL；未把职业岗位标为Scope。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC04-W001-E02\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC04-S0014\",\n        \"BATCH03-DOC04-S0016\",\n        \"BATCH03-DOC04-S0022\",\n        \"BATCH03-DOC04-S0024\",\n        \"BATCH03-DOC04-S0026\",\n        \"BATCH03-DOC04-S0028\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰所在部队1944年3月车桥战役攻占车桥据点\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"攻占车桥据点\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"新四军\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"老一团\",\n            \"normalized_entity\": \"老一团\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"车桥\",\n            \"normalized_entity\": \"车桥\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"日本鬼子\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"1944年3月5号、3月6号\",\n            \"normalized_value\": \"1944-03-05至1944-03-06\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"打了两天\",\n            \"normalized_value\": \"2天\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"主动进攻\",\n            \"normalized_value\": \"主动进攻\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"攻坚打援\",\n            \"normalized_value\": \"攻坚打援\"\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"拔掉这个钉子\",\n            \"normalized_value\": \"拔除车桥日军据点\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那么这个“车桥战役”呢，是1944年3月5号、3月6号，打了两天。\",\n        \"type_basis\": \"作战、攻占据点和消灭敌军是物质过程；“主动进攻”“攻坚打援”为MANNER，“拔掉这个钉子”为目的；战略意义、整训八个月和延安表扬作为战役结果/背景合并，不单独建事件；淮安名称争议等外部背景排除。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC04-S0002\",\n    \"BATCH03-DOC04-S0003\",\n    \"BATCH03-DOC04-S0004\",\n    \"BATCH03-DOC04-S0006\",\n    \"BATCH03-DOC04-S0009\",\n    \"BATCH03-DOC04-S0011\",\n    \"BATCH03-DOC04-S0013\",\n    \"BATCH03-DOC04-S0015\",\n    \"BATCH03-DOC04-S0017\",\n    \"BATCH03-DOC04-S0018\",\n    \"BATCH03-DOC04-S0019\",\n    \"BATCH03-DOC04-S0020\",\n    \"BATCH03-DOC04-S0021\",\n    \"BATCH03-DOC04-S0023\",\n    \"BATCH03-DOC04-S0025\",\n    \"BATCH03-DOC04-S0027\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 6023,
+    "total_tokens": 24679,
+    "completion_tokens": 18656,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 17074
+    },
+    "time_to_first_token_ms": 283810,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 18655000
+  }
+}

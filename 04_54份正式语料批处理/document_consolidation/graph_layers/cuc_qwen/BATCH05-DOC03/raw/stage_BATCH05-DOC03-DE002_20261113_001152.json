@@ -1,0 +1,144 @@
+{
+  "run_time": "2026-11-13T00:11:52",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC03-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC03-DE002",
+  "usage": {
+    "prompt_tokens": 1602,
+    "total_tokens": 13889,
+    "completion_tokens": 12287,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10308
+    },
+    "time_to_first_token_ms": 192331,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC03-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆随陈老总到淮北，经历朝阳集消灭敌人一个旅和泗县作战；泗县因大雨和洼地地形使第八师单独进入并伤亡较大，陈锐霆回山东用地方武装地方军把八师补充起来，执行部人员也回来。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"边界起于 S0007 所述解放战争一起、陈老总先到淮北、我随陈老总到淮北，止于 S0013 所述回山东用地方武装地方军把八师补充起来、执行部人员回来。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆随陈老总到达淮北，并说明当地人事、地形熟悉。\",\n      \"process_text\": \"陈老总就先到了淮北，我随着陈老总到了淮北，淮北原来就是我的熟地方，人事也熟悉，地形也熟悉。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0007\"\n      ],\n      \"evidence_quote\": \"陈老总就先到了淮北，我随着陈老总到了淮北，淮北原来就是我的熟地方，人事也熟悉，地形也熟悉。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"在朝阳集消灭敌人一个旅，接着打泗县，因下大雨仗没有打好。\",\n      \"process_text\": \"以后先在朝阳集消灭敌人一个旅，以后接着又打泗县，因为下大雨，仗没有打好。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0009\"\n      ],\n      \"evidence_quote\": \"以后先在朝阳集消灭敌人一个旅，以后接着又打泗县，因为下大雨，仗没有打好。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"泗县洼地因大雨水深、壕沟满平，其他部队进不去，第八师单独进入。\",\n      \"process_text\": \"本来我们（占据着）最大的优势的兵力，但是泗县是洼地，一下大雨那个水深，壕沟都满了，都平了，其他的部队进不去，结果北方地高，所以就是一个山东野战军的主力第八师（进去了）。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0009\"\n      ],\n      \"evidence_quote\": \"本来我们（占据着）最大的优势的兵力，但是泗县是洼地，一下大雨那个水深，壕沟都满了，都平了，其他的部队进不去，结果北方地高，所以就是一个山东野战军的主力第八师（进去了）。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"一个师对一个师，伤亡较大，一个师伤亡将近两千人。\",\n      \"process_text\": \"一个师对一个师，所以我们伤亡比较大，一个师伤亡将近两千人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0011\"\n      ],\n      \"evidence_quote\": \"一个师对一个师，所以我们伤亡比较大，一个师伤亡将近两千人。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE002-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"战后主力需要赶快补充，陈老总写信叫陈锐霆回山东搬兵，要人要钱要东西，并提及张云逸、黎玉负责。\",\n      \"process_text\": \"打完了仗以后，我们这个主力要赶快补充嘛，陈老总就写了一个信，叫我回山东去搬兵，要人要钱要东西，那个时候军事上张云逸在后头负责，地方上就是黎玉同志是山东省主席。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0011\"\n      ],\n      \"evidence_quote\": \"打完了仗以后，我们这个主力要赶快补充嘛，陈老总就写了一个信，叫我回山东去搬兵，要人要钱要东西，那个时候军事上张云逸在后头负责，地方上就是黎玉同志是山东省主席。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE002-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"陈锐霆回山东用地方武装地方军把八师补充起来，陈士榘、王德从执行部回来。\",\n      \"process_text\": \"我回来很痛快地就用地方武装地方军——那时候已经有一些军事训练了——就把八师补充起来了。这个时候我们在（军事调停）执行部的人，山东野战军原来的参谋长，山东军区115师的参谋长陈士榘，还有参谋处的副处长王德，也都从执行部回来了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0013\"\n      ],\n      \"evidence_quote\": \"我回来很痛快地就用地方武装地方军——那时候已经有一些军事训练了——就把八师补充起来了。这个时候我们在（军事调停）执行部的人，山东野战军原来的参谋长，山东军区115师的参谋长陈士榘，还有参谋处的副处长王德，也都从执行部回来了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE002-P01\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0009\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE002-P02\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE002-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0009\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE002-P03\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE002-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0011\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE002-P04\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE002-P05\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0011\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE002-P05\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE002-P06\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0013\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC03-DE002",
+    "event_enrichment": {
+      "result_state": "陈锐霆随陈老总到淮北，经历朝阳集消灭敌人一个旅和泗县作战；泗县因大雨和洼地地形使第八师单独进入并伤亡较大，陈锐霆回山东用地方武装地方军把八师补充起来，执行部人员也回来。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "边界起于 S0007 所述解放战争一起、陈老总先到淮北、我随陈老总到淮北，止于 S0013 所述回山东用地方武装地方军把八师补充起来、执行部人员回来。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC03-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆随陈老总到达淮北，并说明当地人事、地形熟悉。",
+        "process_text": "陈老总就先到了淮北，我随着陈老总到了淮北，淮北原来就是我的熟地方，人事也熟悉，地形也熟悉。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0007"
+        ],
+        "evidence_quote": "陈老总就先到了淮北，我随着陈老总到了淮北，淮北原来就是我的熟地方，人事也熟悉，地形也熟悉。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "在朝阳集消灭敌人一个旅，接着打泗县，因下大雨仗没有打好。",
+        "process_text": "以后先在朝阳集消灭敌人一个旅，以后接着又打泗县，因为下大雨，仗没有打好。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0009"
+        ],
+        "evidence_quote": "以后先在朝阳集消灭敌人一个旅，以后接着又打泗县，因为下大雨，仗没有打好。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "泗县洼地因大雨水深、壕沟满平，其他部队进不去，第八师单独进入。",
+        "process_text": "本来我们（占据着）最大的优势的兵力，但是泗县是洼地，一下大雨那个水深，壕沟都满了，都平了，其他的部队进不去，结果北方地高，所以就是一个山东野战军的主力第八师（进去了）。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0009"
+        ],
+        "evidence_quote": "本来我们（占据着）最大的优势的兵力，但是泗县是洼地，一下大雨那个水深，壕沟都满了，都平了，其他的部队进不去，结果北方地高，所以就是一个山东野战军的主力第八师（进去了）。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "一个师对一个师，伤亡较大，一个师伤亡将近两千人。",
+        "process_text": "一个师对一个师，所以我们伤亡比较大，一个师伤亡将近两千人。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0011"
+        ],
+        "evidence_quote": "一个师对一个师，所以我们伤亡比较大，一个师伤亡将近两千人。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE002-P05",
+        "stage_order": 5,
+        "stage_summary": "战后主力需要赶快补充，陈老总写信叫陈锐霆回山东搬兵，要人要钱要东西，并提及张云逸、黎玉负责。",
+        "process_text": "打完了仗以后，我们这个主力要赶快补充嘛，陈老总就写了一个信，叫我回山东去搬兵，要人要钱要东西，那个时候军事上张云逸在后头负责，地方上就是黎玉同志是山东省主席。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0011"
+        ],
+        "evidence_quote": "打完了仗以后，我们这个主力要赶快补充嘛，陈老总就写了一个信，叫我回山东去搬兵，要人要钱要东西，那个时候军事上张云逸在后头负责，地方上就是黎玉同志是山东省主席。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE002-P06",
+        "stage_order": 6,
+        "stage_summary": "陈锐霆回山东用地方武装地方军把八师补充起来，陈士榘、王德从执行部回来。",
+        "process_text": "我回来很痛快地就用地方武装地方军——那时候已经有一些军事训练了——就把八师补充起来了。这个时候我们在（军事调停）执行部的人，山东野战军原来的参谋长，山东军区115师的参谋长陈士榘，还有参谋处的副处长王德，也都从执行部回来了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0013"
+        ],
+        "evidence_quote": "我回来很痛快地就用地方武装地方军——那时候已经有一些军事训练了——就把八师补充起来了。这个时候我们在（军事调停）执行部的人，山东野战军原来的参谋长，山东军区115师的参谋长陈士榘，还有参谋处的副处长王德，也都从执行部回来了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC03-DE002-P01",
+        "target_stage_id": "BATCH05-DOC03-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC03-S0009",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC03-DE002-P02",
+        "target_stage_id": "BATCH05-DOC03-DE002-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC03-S0009",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC03-DE002-P03",
+        "target_stage_id": "BATCH05-DOC03-DE002-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH05-DOC03-S0011",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC03-DE002-P04",
+        "target_stage_id": "BATCH05-DOC03-DE002-P05",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH05-DOC03-S0011",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC03-DE002-P05",
+        "target_stage_id": "BATCH05-DOC03-DE002-P06",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC03-S0013",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

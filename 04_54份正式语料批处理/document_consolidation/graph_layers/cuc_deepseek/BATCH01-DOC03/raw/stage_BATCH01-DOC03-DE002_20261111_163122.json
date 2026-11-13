@@ -1,0 +1,252 @@
+{
+  "run_time": "2026-11-11T16:31:22",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC03-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC03-DE002",
+  "usage": {
+    "prompt_tokens": 2285,
+    "total_tokens": 13706,
+    "completion_tokens": 11421,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8204
+    },
+    "time_to_first_token_ms": 89979,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11420000
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC03-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"685团、686团参加平型关战斗，战斗至下午后部队伤亡很大；战后统计上战场1000多人，下来剩900人，实际参加战斗人员减员近半。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以S0012师决心23号发起战斗、22号向作战方向前进为起点，至S0043-S0047战后人数与减员统计为终点；中间含待机、进攻、雨裂沟战斗、顽抗与伤亡。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"师部决心23号发起战斗，部队22号向作战方向前进。\",\n      \"process_text\": \"师里面决心要在23号发起战斗，22号往作战方向去、往前走。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0012\"\n      ],\n      \"evidence_quote\": \"我们在可能是22号吧，师里面就决心要在23号发起战斗，就在22号往这个作战方向去，往前走。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"部队夜间12点出发，途中下雨，到山上等待进攻；淋湿受冷但情绪不低，决心打好第一仗。\",\n      \"process_text\": \"那天晚上12点部队出发，出发后下雨，到山上等着进攻开始；部队淋湿、较冷，但大家不因冷而情绪不高，决心第一仗一定要打好。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0023\"\n      ],\n      \"evidence_quote\": \"那天晚上12点我们部队就出发了，部队出发以后就下雨，到山上，在那里等着进攻开始。部队也淋湿了，也比较冷，但是大家都不会因为这个冷情绪不高，就是第一仗一定要打好。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"天亮后敌人警觉、似发现我方，我方发起进攻。\",\n      \"process_text\": \"天亮以后，敌人很警觉，好像发现了情况，我方看着敌人好像也发现我们了，就发起进攻。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0023\"\n      ],\n      \"evidence_quote\": \"在天亮以后啊，敌人他很警觉，也好像发现了情况，我们看着他好像也发现我们了，我们就发起进攻。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"685团在左翼、686团在右翼冲锋，能跑的敌人往雨裂沟里跑躲避。\",\n      \"process_text\": \"当时两个团，685团在左翼，686团在右翼，部队冲下去；敌人能跑的就往雨裂沟里跑，以图躲藏。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0026\"\n      ],\n      \"evidence_quote\": \"当时两个团，685团在左翼，686团在右翼，这个部队冲下去，敌人呢，能跑的他就往那个雨裂沟里跑，他不是可以躲起来吗？\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"未跑掉、未进沟的敌人遭手榴弹和枪火打击；部队将敌赶入雨裂沟后搜索，敌人顽强射击，我方出现伤亡。\",\n      \"process_text\": \"没有跑掉、后面没有进沟的敌人，被手榴弹和机枪、步枪打击；把敌人赶到雨裂沟后，部队又去搜索。敌人非常顽强、枪打得很准，一露头就被击中牺牲，沟里敌人利用沟边打我方。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0028\"\n      ],\n      \"evidence_quote\": \"没有跑掉的，后面的没有进去的，我们的手榴弹和机枪、步枪不就打他嘛！把敌人赶到那个雨裂沟里面去以后啊，部队又去搜索。按照我们国内战争的办法，我们下去（就可以）抓俘虏了。结果他那个非常顽强，枪也打得很准，你要一露头，他一枪就把你这个头上打个洞，就牺牲了。这一个雨裂沟里呀，人多人少也没准，一个的有，两个的有，上十个人的也有，他都挤到雨裂沟里隐蔽，利用那个沟边上可以打我们。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"因搜索伤亡，部队改变方法，先投手榴弹再下去，迫使敌人缴枪。\",\n      \"process_text\": \"这个时候伤亡一些人，马上改变方法：先弄一两个手榴弹下去，再下去；手榴弹爆炸后敌人非伤即亡，就缴枪了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0030\"\n      ],\n      \"evidence_quote\": \"所以这个时候伤亡一些人。马上改变方法，先弄一个两个手榴弹下去，再下去，这手榴弹爆炸里边不是伤就是亡，就缴枪了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"冲锋时干部带头，两个干部中连长牺牲、指导员负伤。\",\n      \"process_text\": \"他们两个人冲的时候不在一个连，这个连长牺牲了，指导员负伤了，因为干部带头。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0032\"\n      ],\n      \"evidence_quote\": \"他们两个人啊，就在冲这个的时候……他们两个不在一个连，这个连长牺牲了，指导员负伤了，因为干部带头啊。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P08\",\n      \"stage_order\": 8,\n      \"stage_summary\": \"战斗打到下午，685团方向敌人占据东西跑池利用村庄顽抗，686团方向敌人爬到老爷庙顽抗。\",\n      \"process_text\": \"战斗打到下午，685团方向的敌人占据东西跑池，利用村庄顽抗；右边686团方向的敌人爬到山上一个老爷庙，在那个地方顽抗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0032\"\n      ],\n      \"evidence_quote\": \"这个战斗打到下午，我们685团这个方向的敌人就占据东西跑池，利用村庄顽抗，右边686团这个方向的敌人呢，爬到山上一个老爷庙，在那个地方顽抗。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P09\",\n      \"stage_order\": 9,\n      \"stage_summary\": \"685团三个营打得伤亡都很大，686团伤亡也不小；具体数字因不在一起不知道。\",\n      \"process_text\": \"685团这三个营打得伤亡都很大，686团伤亡也不小；具体数字因为不在一起，不知道，反正伤亡都很大。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0041\"\n      ],\n      \"evidence_quote\": \"最左边那个营啊，就是梁兴初的营长，所以685团的这三个营啊，打得伤亡都很大，686团伤亡也不小，但具体数（字）因为我们不在一起，不知道，反正伤亡都很大。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P10\",\n      \"stage_order\": 10,\n      \"stage_summary\": \"战后统计：上战场1000多人，下来剩900人。\",\n      \"process_text\": \"战斗下来以后还剩下900人，我们上战场1000多人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0043\"\n      ],\n      \"evidence_quote\": \"整个战役，这个战斗下来以后，有800。下来以后还剩下900人，我们上战场1000多人嘛。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P11\",\n      \"stage_order\": 11,\n      \"stage_summary\": \"总人数不到一半，战斗部队是一半；团机关伤亡较小，仍占一部分人。\",\n      \"process_text\": \"总人数不到一半，战斗部队是一半了，因为这个团的机关里面伤亡小，还占了一部分人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0045\"\n      ],\n      \"evidence_quote\": \"（总人数的）不到一半，战斗部队是一半了，因为这个团的机关里面他伤亡就小啊，他还占了一部分人。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE002-P12\",\n      \"stage_order\": 12,\n      \"stage_summary\": \"通信排、电话排、警卫排、卫生队、机关、炊事员等合计，实际参加战斗的人去了一半。\",\n      \"process_text\": \"通信排、电话排、警卫排、卫生队、机关的人、炊事员这么一下，参加战斗的人来说，实际上去了一半。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0047\"\n      ],\n      \"evidence_quote\": \"通信排、电话排、警卫排、卫生队、机关的人、炊事员这么一下，参加战斗的人来说，实际上去了一半。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE002-P01\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0023\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE002-P02\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0023\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE002-P03\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE002-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0026\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE002-P04\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE002-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0028\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE002-P05\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE002-P06\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0030\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE002-P06\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE002-P07\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0032\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE002-P07\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE002-P08\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0032\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE002-P08\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE002-P09\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0041\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE002-P09\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE002-P10\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0043\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE002-P10\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE002-P11\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0045\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE002-P11\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE002-P12\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0047\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC03-DE002",
+    "event_enrichment": {
+      "result_state": "685团、686团参加平型关战斗，战斗至下午后部队伤亡很大；战后统计上战场1000多人，下来剩900人，实际参加战斗人员减员近半。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以S0012师决心23号发起战斗、22号向作战方向前进为起点，至S0043-S0047战后人数与减员统计为终点；中间含待机、进攻、雨裂沟战斗、顽抗与伤亡。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "师部决心23号发起战斗，部队22号向作战方向前进。",
+        "process_text": "师里面决心要在23号发起战斗，22号往作战方向去、往前走。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0012"
+        ],
+        "evidence_quote": "我们在可能是22号吧，师里面就决心要在23号发起战斗，就在22号往这个作战方向去，往前走。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "部队夜间12点出发，途中下雨，到山上等待进攻；淋湿受冷但情绪不低，决心打好第一仗。",
+        "process_text": "那天晚上12点部队出发，出发后下雨，到山上等着进攻开始；部队淋湿、较冷，但大家不因冷而情绪不高，决心第一仗一定要打好。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0023"
+        ],
+        "evidence_quote": "那天晚上12点我们部队就出发了，部队出发以后就下雨，到山上，在那里等着进攻开始。部队也淋湿了，也比较冷，但是大家都不会因为这个冷情绪不高，就是第一仗一定要打好。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "天亮后敌人警觉、似发现我方，我方发起进攻。",
+        "process_text": "天亮以后，敌人很警觉，好像发现了情况，我方看着敌人好像也发现我们了，就发起进攻。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0023"
+        ],
+        "evidence_quote": "在天亮以后啊，敌人他很警觉，也好像发现了情况，我们看着他好像也发现我们了，我们就发起进攻。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "685团在左翼、686团在右翼冲锋，能跑的敌人往雨裂沟里跑躲避。",
+        "process_text": "当时两个团，685团在左翼，686团在右翼，部队冲下去；敌人能跑的就往雨裂沟里跑，以图躲藏。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0026"
+        ],
+        "evidence_quote": "当时两个团，685团在左翼，686团在右翼，这个部队冲下去，敌人呢，能跑的他就往那个雨裂沟里跑，他不是可以躲起来吗？",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P05",
+        "stage_order": 5,
+        "stage_summary": "未跑掉、未进沟的敌人遭手榴弹和枪火打击；部队将敌赶入雨裂沟后搜索，敌人顽强射击，我方出现伤亡。",
+        "process_text": "没有跑掉、后面没有进沟的敌人，被手榴弹和机枪、步枪打击；把敌人赶到雨裂沟后，部队又去搜索。敌人非常顽强、枪打得很准，一露头就被击中牺牲，沟里敌人利用沟边打我方。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0028"
+        ],
+        "evidence_quote": "没有跑掉的，后面的没有进去的，我们的手榴弹和机枪、步枪不就打他嘛！把敌人赶到那个雨裂沟里面去以后啊，部队又去搜索。按照我们国内战争的办法，我们下去（就可以）抓俘虏了。结果他那个非常顽强，枪也打得很准，你要一露头，他一枪就把你这个头上打个洞，就牺牲了。这一个雨裂沟里呀，人多人少也没准，一个的有，两个的有，上十个人的也有，他都挤到雨裂沟里隐蔽，利用那个沟边上可以打我们。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P06",
+        "stage_order": 6,
+        "stage_summary": "因搜索伤亡，部队改变方法，先投手榴弹再下去，迫使敌人缴枪。",
+        "process_text": "这个时候伤亡一些人，马上改变方法：先弄一两个手榴弹下去，再下去；手榴弹爆炸后敌人非伤即亡，就缴枪了。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0030"
+        ],
+        "evidence_quote": "所以这个时候伤亡一些人。马上改变方法，先弄一个两个手榴弹下去，再下去，这手榴弹爆炸里边不是伤就是亡，就缴枪了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P07",
+        "stage_order": 7,
+        "stage_summary": "冲锋时干部带头，两个干部中连长牺牲、指导员负伤。",
+        "process_text": "他们两个人冲的时候不在一个连，这个连长牺牲了，指导员负伤了，因为干部带头。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0032"
+        ],
+        "evidence_quote": "他们两个人啊，就在冲这个的时候……他们两个不在一个连，这个连长牺牲了，指导员负伤了，因为干部带头啊。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P08",
+        "stage_order": 8,
+        "stage_summary": "战斗打到下午，685团方向敌人占据东西跑池利用村庄顽抗，686团方向敌人爬到老爷庙顽抗。",
+        "process_text": "战斗打到下午，685团方向的敌人占据东西跑池，利用村庄顽抗；右边686团方向的敌人爬到山上一个老爷庙，在那个地方顽抗。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0032"
+        ],
+        "evidence_quote": "这个战斗打到下午，我们685团这个方向的敌人就占据东西跑池，利用村庄顽抗，右边686团这个方向的敌人呢，爬到山上一个老爷庙，在那个地方顽抗。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P09",
+        "stage_order": 9,
+        "stage_summary": "685团三个营打得伤亡都很大，686团伤亡也不小；具体数字因不在一起不知道。",
+        "process_text": "685团这三个营打得伤亡都很大，686团伤亡也不小；具体数字因为不在一起，不知道，反正伤亡都很大。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0041"
+        ],
+        "evidence_quote": "最左边那个营啊，就是梁兴初的营长，所以685团的这三个营啊，打得伤亡都很大，686团伤亡也不小，但具体数（字）因为我们不在一起，不知道，反正伤亡都很大。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P10",
+        "stage_order": 10,
+        "stage_summary": "战后统计：上战场1000多人，下来剩900人。",
+        "process_text": "战斗下来以后还剩下900人，我们上战场1000多人。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0043"
+        ],
+        "evidence_quote": "整个战役，这个战斗下来以后，有800。下来以后还剩下900人，我们上战场1000多人嘛。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P11",
+        "stage_order": 11,
+        "stage_summary": "总人数不到一半，战斗部队是一半；团机关伤亡较小，仍占一部分人。",
+        "process_text": "总人数不到一半，战斗部队是一半了，因为这个团的机关里面伤亡小，还占了一部分人。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0045"
+        ],
+        "evidence_quote": "（总人数的）不到一半，战斗部队是一半了，因为这个团的机关里面他伤亡就小啊，他还占了一部分人。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE002-P12",
+        "stage_order": 12,
+        "stage_summary": "通信排、电话排、警卫排、卫生队、机关、炊事员等合计，实际参加战斗的人去了一半。",
+        "process_text": "通信排、电话排、警卫排、卫生队、机关的人、炊事员这么一下，参加战斗的人来说，实际上去了一半。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0047"
+        ],
+        "evidence_quote": "通信排、电话排、警卫排、卫生队、机关的人、炊事员这么一下，参加战斗的人来说，实际上去了一半。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC03-DE002-P01",
+        "target_stage_id": "BATCH01-DOC03-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC03-S0023",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE002-P02",
+        "target_stage_id": "BATCH01-DOC03-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC03-S0023",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE002-P03",
+        "target_stage_id": "BATCH01-DOC03-DE002-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC03-S0026",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE002-P04",
+        "target_stage_id": "BATCH01-DOC03-DE002-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC03-S0028",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE002-P05",
+        "target_stage_id": "BATCH01-DOC03-DE002-P06",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH01-DOC03-S0030",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE002-P06",
+        "target_stage_id": "BATCH01-DOC03-DE002-P07",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC03-S0032",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE002-P07",
+        "target_stage_id": "BATCH01-DOC03-DE002-P08",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC03-S0032",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE002-P08",
+        "target_stage_id": "BATCH01-DOC03-DE002-P09",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC03-S0041",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE002-P09",
+        "target_stage_id": "BATCH01-DOC03-DE002-P10",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH01-DOC03-S0043",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE002-P10",
+        "target_stage_id": "BATCH01-DOC03-DE002-P11",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH01-DOC03-S0045",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE002-P11",
+        "target_stage_id": "BATCH01-DOC03-DE002-P12",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH01-DOC03-S0047",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

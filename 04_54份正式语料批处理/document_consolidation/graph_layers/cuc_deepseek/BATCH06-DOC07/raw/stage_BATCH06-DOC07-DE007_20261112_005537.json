@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-12T00:55:37",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE007",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE007",
+  "usage": {
+    "prompt_tokens": 1880,
+    "total_tokens": 7270,
+    "completion_tokens": 5390,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4035
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 42474,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"湖心寺被没收，主持房内查获其与日本大佐合影及东亚学院毕业照片，并被认定为真实罪证。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于湖心寺背景及主持身份，经获得情报、查明特务训练背景，至没收湖心寺、查抄主持房子并查获照片、认定为罪证止；不含后文部队驻扎安排。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"湖心寺是苏北最大寺庙，有五进房子、五个大殿。\",\n      \"process_text\": \"这个寺庙（是）苏北最大的一个寺庙，这个有五进的房子，五个大殿。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0091\"\n      ],\n      \"evidence_quote\": \"寺庙”的“寺”。这个寺庙（是）苏北最大的一个寺庙，这个有五进的房子，五个大殿，第一大殿、第二大殿、第三大殿、第四大殿、第五（大殿）。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"住久后得到地方党内部情报，敌工部门转来消息，指主持和方丈是日本特务。\",\n      \"process_text\": \"等我们住的时间长了以后，得到地方党的内部情报，敌工部门转过来消息，这两个是日本特务。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0100\"\n      ],\n      \"evidence_quote\": \"    陈海峰：方丈叫什么呢……两个都是大学生。这个后来呢，等我们住的时间长了以后，得到地方党的内部情报，敌工部门转过来消息，这两个是日本特务。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"两人被指为经日本专门训练、埋藏很深的高级特务，出自南通日本鬼子办的特务训练机构东亚学院。\",\n      \"process_text\": \"一个方丈一个主持啊，是经过日本专门训练的高级特务，埋藏很深的。是南通日本鬼子办了一个特务训练的机构，叫东亚学院。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0101\"\n      ],\n      \"evidence_quote\": \"一个方丈一个主持啊，是经过日本专门训练的高级特务，埋藏很深的。是南通日本鬼子办了一个特务训练的机构，叫东亚学院。“东方”的“东”，“亚洲”的“亚”。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"没收湖心寺时查抄主持房子，在箱子里抄到主持与日本大佐的合影，并有东亚学院毕业照片。\",\n      \"process_text\": \"最后我们没收那个湖心寺的时候，抄主持的房子，箱子里面抄到一个照片，他和日本鬼子训练的那个大佐啊，一块拍的照。东亚学院毕业照片都有。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0103\"\n      ],\n      \"evidence_quote\": \"    陈海峰：（在南通）狼牙山庙里面办的，这个训练出来的。最后我们没收那个湖心寺的时候，抄主持的房子，箱子里面抄到一个照片，他和日本鬼子训练的那个大佐啊，一块拍的照。东亚学院毕业照片都有，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE007-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"认定查获照片为真实罪证。\",\n      \"process_text\": \"这个是真实罪证了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0104\"\n      ],\n      \"evidence_quote\": \"这个是真实罪证了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE007-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0100\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE007-P02\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE007-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0101\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE007-P03\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE007-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0103\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE007-P04\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE007-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0104\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE007",
+    "event_enrichment": {
+      "result_state": "湖心寺被没收，主持房内查获其与日本大佐合影及东亚学院毕业照片，并被认定为真实罪证。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于湖心寺背景及主持身份，经获得情报、查明特务训练背景，至没收湖心寺、查抄主持房子并查获照片、认定为罪证止；不含后文部队驻扎安排。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "湖心寺是苏北最大寺庙，有五进房子、五个大殿。",
+        "process_text": "这个寺庙（是）苏北最大的一个寺庙，这个有五进的房子，五个大殿。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0091"
+        ],
+        "evidence_quote": "寺庙”的“寺”。这个寺庙（是）苏北最大的一个寺庙，这个有五进的房子，五个大殿，第一大殿、第二大殿、第三大殿、第四大殿、第五（大殿）。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "住久后得到地方党内部情报，敌工部门转来消息，指主持和方丈是日本特务。",
+        "process_text": "等我们住的时间长了以后，得到地方党的内部情报，敌工部门转过来消息，这两个是日本特务。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0100"
+        ],
+        "evidence_quote": "    陈海峰：方丈叫什么呢……两个都是大学生。这个后来呢，等我们住的时间长了以后，得到地方党的内部情报，敌工部门转过来消息，这两个是日本特务。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "两人被指为经日本专门训练、埋藏很深的高级特务，出自南通日本鬼子办的特务训练机构东亚学院。",
+        "process_text": "一个方丈一个主持啊，是经过日本专门训练的高级特务，埋藏很深的。是南通日本鬼子办了一个特务训练的机构，叫东亚学院。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0101"
+        ],
+        "evidence_quote": "一个方丈一个主持啊，是经过日本专门训练的高级特务，埋藏很深的。是南通日本鬼子办了一个特务训练的机构，叫东亚学院。“东方”的“东”，“亚洲”的“亚”。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "没收湖心寺时查抄主持房子，在箱子里抄到主持与日本大佐的合影，并有东亚学院毕业照片。",
+        "process_text": "最后我们没收那个湖心寺的时候，抄主持的房子，箱子里面抄到一个照片，他和日本鬼子训练的那个大佐啊，一块拍的照。东亚学院毕业照片都有。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0103"
+        ],
+        "evidence_quote": "    陈海峰：（在南通）狼牙山庙里面办的，这个训练出来的。最后我们没收那个湖心寺的时候，抄主持的房子，箱子里面抄到一个照片，他和日本鬼子训练的那个大佐啊，一块拍的照。东亚学院毕业照片都有，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE007-P05",
+        "stage_order": 5,
+        "stage_summary": "认定查获照片为真实罪证。",
+        "process_text": "这个是真实罪证了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0104"
+        ],
+        "evidence_quote": "这个是真实罪证了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE007-P01",
+        "target_stage_id": "BATCH06-DOC07-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0100",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE007-P02",
+        "target_stage_id": "BATCH06-DOC07-DE007-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC07-S0101",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE007-P03",
+        "target_stage_id": "BATCH06-DOC07-DE007-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0103",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE007-P04",
+        "target_stage_id": "BATCH06-DOC07-DE007-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC07-S0104",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

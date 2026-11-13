@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T21:54:52",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC08-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC08-DE004",
+  "usage": {
+    "prompt_tokens": 1293,
+    "total_tokens": 2957,
+    "completion_tokens": 1664,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1127
+    },
+    "time_to_first_token_ms": 12899,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC08-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"新四军未能抵住日军进攻，叙述者以仅五个营的兵力说明难以作战。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以‘第六次“繁昌战斗”’日军进攻及‘我们抵不住了’为事件核心起止；后续关于营、团编制与火力的叙述属于背景说明，不纳入事件核心过程。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"日军以五六千至一万多人的规模进攻繁昌。\",\n      \"process_text\": \"日军在第六次繁昌战斗中来攻，兵力达五六千人乃至一万多人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0038\"\n      ],\n      \"evidence_quote\": \"那个时候日本鬼子一来都是五六千了，一万多了来了\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"新四军仅五个营，难以抵抗日军进攻。\",\n      \"process_text\": \"新四军方面抵不住日军进攻，只有五个营，难以应战。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0038\"\n      ],\n      \"evidence_quote\": \"那时候我们抵不住了。我们就五个营，怎么打？\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE004-P01\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE004-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0038\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC08-DE004",
+    "event_enrichment": {
+      "result_state": "新四军未能抵住日军进攻，叙述者以仅五个营的兵力说明难以作战。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "以‘第六次“繁昌战斗”’日军进攻及‘我们抵不住了’为事件核心起止；后续关于营、团编制与火力的叙述属于背景说明，不纳入事件核心过程。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC08-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "日军以五六千至一万多人的规模进攻繁昌。",
+        "process_text": "日军在第六次繁昌战斗中来攻，兵力达五六千人乃至一万多人。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0038"
+        ],
+        "evidence_quote": "那个时候日本鬼子一来都是五六千了，一万多了来了",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "新四军仅五个营，难以抵抗日军进攻。",
+        "process_text": "新四军方面抵不住日军进攻，只有五个营，难以应战。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0038"
+        ],
+        "evidence_quote": "那时候我们抵不住了。我们就五个营，怎么打？",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC08-DE004-P01",
+        "target_stage_id": "BATCH02-DOC08-DE004-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH02-DOC08-S0038",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

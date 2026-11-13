@@ -1,0 +1,320 @@
+{
+  "run_time": "2026-11-12T06:59:12",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH01-DOC01-W003",
+  "technical_document_id": "BATCH01-DOC01",
+  "document_id": "02.陈海峰（一访）（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH01-DOC01-S0037",
+    "BATCH01-DOC01-S0038",
+    "BATCH01-DOC01-S0039",
+    "BATCH01-DOC01-S0040",
+    "BATCH01-DOC01-S0041",
+    "BATCH01-DOC01-S0042",
+    "BATCH01-DOC01-S0043",
+    "BATCH01-DOC01-S0044",
+    "BATCH01-DOC01-S0045",
+    "BATCH01-DOC01-S0046",
+    "BATCH01-DOC01-S0047",
+    "BATCH01-DOC01-S0048",
+    "BATCH01-DOC01-S0049",
+    "BATCH01-DOC01-S0050",
+    "BATCH01-DOC01-S0051",
+    "BATCH01-DOC01-S0052"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 3,
+    "assigned_segment_count": 8,
+    "unassigned_segment_count": 8,
+    "input_segment_count": 16,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH01-DOC01-W003-E03"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH01-DOC01-W003",
+    "events": [
+      {
+        "candidate_id": "BATCH01-DOC01-W003-E01",
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0038",
+          "BATCH01-DOC01-S0040",
+          "BATCH01-DOC01-S0042"
+        ],
+        "event": {
+          "event_name": "抗日情报站监视敌情并镇压争取汉奸",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "监视敌情，镇压和争取汉奸",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "新四军抗日情报站/武工队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "武装侦察员",
+              "normalized_entity": "武工队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "他",
+              "normalized_entity": "汉奸/维持会长",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "维持会的会长",
+              "normalized_entity": "维持会长",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "日本部队",
+              "normalized_entity": "日本军队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "伪军",
+              "normalized_entity": "伪军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "几个据点",
+              "normalized_value": "敌占据点"
+            },
+            {
+              "kind": "MANNER",
+              "value": "尽量少用枪，少用子弹",
+              "normalized_value": "尽量少用枪弹"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "罪恶多的",
+              "normalized_value": "罪恶多"
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "便于我们战斗，便于我们抗日",
+              "normalized_value": "便于战斗和抗日"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们那个时候，这个情报站的任务主要是监视他范围里面的几个据点的日本部队的调动情况，便于我们战斗，便于我们抗日。",
+          "type_basis": "核心过程是情报站和武工队执行监视、镇压、争取等组织行动，Actor为我们/武装侦察员，Goal为汉奸、维持会长、日本部队和伪军，符合MATERIAL；教育、情报传递等言语或心理过程作为阶段，不改变主导类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W003-E02",
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0044",
+          "BATCH01-DOC01-S0046",
+          "BATCH01-DOC01-S0048",
+          "BATCH01-DOC01-S0050"
+        ],
+        "event": {
+          "event_name": "新四军到江南后赢得群众支持并壮大游击",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "赢得群众支持，参军增多，部队壮大并分散游击",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "新四军",
+              "normalized_entity": "新四军",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "江南老百姓",
+              "normalized_entity": "江南群众",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "部队",
+              "normalized_entity": "新四军部队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "参军的人",
+              "normalized_entity": "参军者",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "家乡的子弟兵",
+              "normalized_entity": "家乡子弟兵",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "江南",
+              "normalized_value": "江南地区"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "茅山地区，一直到江阴，后来到江阴东乡",
+              "normalized_value": "茅山至江阴东乡地区"
+            },
+            {
+              "kind": "TIME",
+              "value": "新四军刚到江南的时候",
+              "normalized_value": "新四军初到江南时期"
+            },
+            {
+              "kind": "MANNER",
+              "value": "纪律严明",
+              "normalized_value": "纪律严明"
+            },
+            {
+              "kind": "CONTENT",
+              "value": "叫花子兵",
+              "normalized_value": "叫花子兵"
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "抗日",
+              "normalized_value": "抗日"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "可是后来一看啊，纪律严明，和国民党的（军队）完全不一样，伪军就不用说了，老百姓思想转变了。",
+          "type_basis": "核心过程是新四军到江南后通过纪律和抗日表现改变群众态度，参军增多、部队壮大并分散游击，组织状态发生可观察改变，Actor为新四军和江南老百姓，Goal为部队、参军者和家乡子弟兵，符合MATERIAL；思想转变和称呼等心理/言语过程作为阶段。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W003-E03",
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0052"
+        ],
+        "event": {
+          "event_name": "李家桥渡运河遭遇战",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "渡运河时遭遇作战",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "新四军部队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "十余个鬼子",
+              "normalized_entity": "日本军队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "18个人",
+              "normalized_entity": "牺牲战士",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "一个营长",
+              "normalized_entity": "营长",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "有一次",
+              "normalized_value": "一次"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "常州的南门外",
+              "normalized_value": "常州南门外"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "李家桥",
+              "normalized_value": "坂上李家桥"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "渡运河",
+              "normalized_value": "渡运河"
+            },
+            {
+              "kind": "MANNER",
+              "value": "以多胜少",
+              "normalized_value": "以多胜少"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "十余个鬼子盯上我们了",
+              "normalized_value": "十余个鬼子盯上部队"
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "开辟武南根据地",
+              "normalized_value": "开辟武南根据地"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "在渡运河的时候，打了一场遭遇战，我们牺牲了18个人，还牺牲一个营长呢，那次我还掉到河里去了。",
+          "type_basis": "核心过程是渡运河时与十余鬼子遭遇作战，Actor为我们/我，Goal为鬼子和牺牲人员，符合MATERIAL；不是单纯存在或关系，因为有明确行动者和战斗对象。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH01-DOC01-S0037",
+      "BATCH01-DOC01-S0039",
+      "BATCH01-DOC01-S0041",
+      "BATCH01-DOC01-S0043",
+      "BATCH01-DOC01-S0045",
+      "BATCH01-DOC01-S0047",
+      "BATCH01-DOC01-S0049",
+      "BATCH01-DOC01-S0051"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH01-DOC01-W003\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W003-E01\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0038\",\n        \"BATCH01-DOC01-S0040\",\n        \"BATCH01-DOC01-S0042\"\n      ],\n      \"event\": {\n        \"event_name\": \"抗日情报站监视敌情并镇压争取汉奸\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"监视敌情，镇压和争取汉奸\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"新四军抗日情报站/武工队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"武装侦察员\",\n            \"normalized_entity\": \"武工队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"他\",\n            \"normalized_entity\": \"汉奸/维持会长\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"维持会的会长\",\n            \"normalized_entity\": \"维持会长\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"日本部队\",\n            \"normalized_entity\": \"日本军队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"伪军\",\n            \"normalized_entity\": \"伪军\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"几个据点\",\n            \"normalized_value\": \"敌占据点\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"尽量少用枪，少用子弹\",\n            \"normalized_value\": \"尽量少用枪弹\"\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"罪恶多的\",\n            \"normalized_value\": \"罪恶多\"\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"便于我们战斗，便于我们抗日\",\n            \"normalized_value\": \"便于战斗和抗日\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们那个时候，这个情报站的任务主要是监视他范围里面的几个据点的日本部队的调动情况，便于我们战斗，便于我们抗日。\",\n        \"type_basis\": \"核心过程是情报站和武工队执行监视、镇压、争取等组织行动，Actor为我们/武装侦察员，Goal为汉奸、维持会长、日本部队和伪军，符合MATERIAL；教育、情报传递等言语或心理过程作为阶段，不改变主导类型。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W003-E02\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0044\",\n        \"BATCH01-DOC01-S0046\",\n        \"BATCH01-DOC01-S0048\",\n        \"BATCH01-DOC01-S0050\"\n      ],\n      \"event\": {\n        \"event_name\": \"新四军到江南后赢得群众支持并壮大游击\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"赢得群众支持，参军增多，部队壮大并分散游击\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"新四军\",\n            \"normalized_entity\": \"新四军\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"江南老百姓\",\n            \"normalized_entity\": \"江南群众\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"部队\",\n            \"normalized_entity\": \"新四军部队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"参军的人\",\n            \"normalized_entity\": \"参军者\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"家乡的子弟兵\",\n            \"normalized_entity\": \"家乡子弟兵\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"江南\",\n            \"normalized_value\": \"江南地区\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"茅山地区，一直到江阴，后来到江阴东乡\",\n            \"normalized_value\": \"茅山至江阴东乡地区\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"新四军刚到江南的时候\",\n            \"normalized_value\": \"新四军初到江南时期\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"纪律严明\",\n            \"normalized_value\": \"纪律严明\"\n          },\n          {\n            \"kind\": \"CONTENT\",\n            \"value\": \"叫花子兵\",\n            \"normalized_value\": \"叫花子兵\"\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"抗日\",\n            \"normalized_value\": \"抗日\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"可是后来一看啊，纪律严明，和国民党的（军队）完全不一样，伪军就不用说了，老百姓思想转变了。\",\n        \"type_basis\": \"核心过程是新四军到江南后通过纪律和抗日表现改变群众态度，参军增多、部队壮大并分散游击，组织状态发生可观察改变，Actor为新四军和江南老百姓，Goal为部队、参军者和家乡子弟兵，符合MATERIAL；思想转变和称呼等心理/言语过程作为阶段。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W003-E03\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0052\"\n      ],\n      \"event\": {\n        \"event_name\": \"李家桥渡运河遭遇战\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"渡运河时遭遇作战\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"新四军部队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"十余个鬼子\",\n            \"normalized_entity\": \"日本军队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"18个人\",\n            \"normalized_entity\": \"牺牲战士\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"一个营长\",\n            \"normalized_entity\": \"营长\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"有一次\",\n            \"normalized_value\": \"一次\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"常州的南门外\",\n            \"normalized_value\": \"常州南门外\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"李家桥\",\n            \"normalized_value\": \"坂上李家桥\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"渡运河\",\n            \"normalized_value\": \"渡运河\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"以多胜少\",\n            \"normalized_value\": \"以多胜少\"\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"十余个鬼子盯上我们了\",\n            \"normalized_value\": \"十余个鬼子盯上部队\"\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"开辟武南根据地\",\n            \"normalized_value\": \"开辟武南根据地\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"在渡运河的时候，打了一场遭遇战，我们牺牲了18个人，还牺牲一个营长呢，那次我还掉到河里去了。\",\n        \"type_basis\": \"核心过程是渡运河时与十余鬼子遭遇作战，Actor为我们/我，Goal为鬼子和牺牲人员，符合MATERIAL；不是单纯存在或关系，因为有明确行动者和战斗对象。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH01-DOC01-S0037\",\n    \"BATCH01-DOC01-S0039\",\n    \"BATCH01-DOC01-S0041\",\n    \"BATCH01-DOC01-S0043\",\n    \"BATCH01-DOC01-S0045\",\n    \"BATCH01-DOC01-S0047\",\n    \"BATCH01-DOC01-S0049\",\n    \"BATCH01-DOC01-S0051\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5814,
+    "total_tokens": 21284,
+    "completion_tokens": 15470,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 13016
+    },
+    "time_to_first_token_ms": 233820,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 15469000
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-13T01:12:29",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC05-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC05-DE006",
+  "usage": {
+    "prompt_tokens": 1160,
+    "total_tokens": 6048,
+    "completion_tokens": 4888,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4290
+    },
+    "time_to_first_token_ms": 73639,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-15\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC05-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"我们趁机会了解苏南部队的卫生工作。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 S0182 所述到达茅山地区、溧阳和溧水交界并停下来，以及 S0184 所述大部队向南走、我们趁机会了解苏南部队卫生工作确定边界。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"到达茅山地区并停下来\",\n      \"process_text\": \"到茅山地区，到了溧阳和溧水的交界地方。我们就停下来了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0182\"\n      ],\n      \"evidence_quote\": \"    陈海峰：到茅山地区，到了溧阳和溧水的交界地方。我们就停下来了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"趁机会了解苏南部队卫生工作\",\n      \"process_text\": \"大部队就接着向南走，我们就趁机会了解苏南部队的卫生工作。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0184\"\n      ],\n      \"evidence_quote\": \"    陈海峰：大部队就接着向南走，我们就趁机会了解苏南部队的卫生工作。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC05-DE006-P01\",\n      \"target_stage_id\": \"BATCH05-DOC05-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-15",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC05-DE006",
+    "event_enrichment": {
+      "result_state": "我们趁机会了解苏南部队的卫生工作。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 S0182 所述到达茅山地区、溧阳和溧水交界并停下来，以及 S0184 所述大部队向南走、我们趁机会了解苏南部队卫生工作确定边界。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC05-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "到达茅山地区并停下来",
+        "process_text": "到茅山地区，到了溧阳和溧水的交界地方。我们就停下来了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0182"
+        ],
+        "evidence_quote": "    陈海峰：到茅山地区，到了溧阳和溧水的交界地方。我们就停下来了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC05-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "趁机会了解苏南部队卫生工作",
+        "process_text": "大部队就接着向南走，我们就趁机会了解苏南部队的卫生工作。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0184"
+        ],
+        "evidence_quote": "    陈海峰：大部队就接着向南走，我们就趁机会了解苏南部队的卫生工作。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC05-DE006-P01",
+        "target_stage_id": "BATCH05-DOC05-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

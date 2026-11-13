@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T08:06:32",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC01-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC01-DE008",
+  "usage": {
+    "prompt_tokens": 1270,
+    "total_tokens": 10937,
+    "completion_tokens": 9667,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8719
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9666000,
+    "time_to_first_token_ms": 144608
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V1-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC01-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰所在部队在情报来源增加、活动自由增加的情况下，以经常一个排、最多一个连的分散方式，在茅山地区、江阴、江阴东乡等地打游击。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 BATCH01-DOC01-S0050，从情报来源增加叙述开始，到部队分散打游击叙述结束，覆盖同一事件内部连续推进。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"情报来源增加\",\n      \"process_text\": \"他一得到什么情报，他的亲戚朋友在这个伪军里面，亲戚朋友在日本鬼子政权里面搞工作，得到什么消息，马上送给我们。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0050\"\n      ],\n      \"evidence_quote\": \"他一得到什么情报，他的亲戚朋友在这个伪军里面，亲戚朋友在日本鬼子政权里面搞工作，得到什么消息，马上送给我们。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"活动自由增加\",\n      \"process_text\": \"所以我们的情报来源就多了，我们活动的自由就多了，所以我们在敌人的鼻子底下，没有问题。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0050\"\n      ],\n      \"evidence_quote\": \"所以我们的情报来源就多了，我们活动的自由就多了，所以我们在敌人的鼻子底下，没有问题。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"部队分散游击\",\n      \"process_text\": \"我们的部队啊，一个连是很少在一块活动的，经常是一个排，最多一个连。我们一个团是分得很散的，在好多个县，我们在茅山地区，一直到江阴，后来到江阴东乡，我们都去，部队打游击嘛。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0050\"\n      ],\n      \"evidence_quote\": \"我们的部队啊，一个连是很少在一块活动的，经常是一个排，最多一个连。我们一个团是分得很散的，在好多个县，我们在茅山地区，一直到江阴，后来到江阴东乡，我们都去，部队打游击嘛。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE008-P01\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE008-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0050\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE008-P02\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0050\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V1-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC01-DE008",
+    "event_enrichment": {
+      "result_state": "陈海峰所在部队在情报来源增加、活动自由增加的情况下，以经常一个排、最多一个连的分散方式，在茅山地区、江阴、江阴东乡等地打游击。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 BATCH01-DOC01-S0050，从情报来源增加叙述开始，到部队分散打游击叙述结束，覆盖同一事件内部连续推进。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC01-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "情报来源增加",
+        "process_text": "他一得到什么情报，他的亲戚朋友在这个伪军里面，亲戚朋友在日本鬼子政权里面搞工作，得到什么消息，马上送给我们。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0050"
+        ],
+        "evidence_quote": "他一得到什么情报，他的亲戚朋友在这个伪军里面，亲戚朋友在日本鬼子政权里面搞工作，得到什么消息，马上送给我们。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "活动自由增加",
+        "process_text": "所以我们的情报来源就多了，我们活动的自由就多了，所以我们在敌人的鼻子底下，没有问题。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0050"
+        ],
+        "evidence_quote": "所以我们的情报来源就多了，我们活动的自由就多了，所以我们在敌人的鼻子底下，没有问题。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "部队分散游击",
+        "process_text": "我们的部队啊，一个连是很少在一块活动的，经常是一个排，最多一个连。我们一个团是分得很散的，在好多个县，我们在茅山地区，一直到江阴，后来到江阴东乡，我们都去，部队打游击嘛。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0050"
+        ],
+        "evidence_quote": "我们的部队啊，一个连是很少在一块活动的，经常是一个排，最多一个连。我们一个团是分得很散的，在好多个县，我们在茅山地区，一直到江阴，后来到江阴东乡，我们都去，部队打游击嘛。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC01-DE008-P01",
+        "target_stage_id": "BATCH01-DOC01-DE008-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH01-DOC01-S0050",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE008-P02",
+        "target_stage_id": "BATCH01-DOC01-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC01-S0050",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

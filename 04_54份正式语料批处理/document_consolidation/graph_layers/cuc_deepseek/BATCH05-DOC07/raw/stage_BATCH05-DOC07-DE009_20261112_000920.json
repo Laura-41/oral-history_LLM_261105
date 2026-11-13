@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T00:09:20",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC07-DE009",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC07-DE009",
+  "usage": {
+    "prompt_tokens": 1267,
+    "total_tokens": 3926,
+    "completion_tokens": 2659,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1875
+    },
+    "time_to_first_token_ms": 20573,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2658000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC07-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆完成三千字综合报告，原定由军委开会听取意见的安排改为书面报告。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以中央九月会议期间周总理要求写三千字综合报告为起点，至陈锐霆写出该报告为终点；后文杨尚昆、傅钟来看望不属于本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"中央九月会议期间各地方负责人到会，原定军委开会听取陈锐霆意见。\",\n      \"process_text\": \"中央九月会议期间各地方负责人到会，原定军委开会亲自听意见。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0045\"\n      ],\n      \"evidence_quote\": \"（当时）中央9月会议，各地方的头头，有省委书记，有华南、华东、西南、西北、东北、华北（七大区）的头头（都来开会）。我到中央的时候，有一部分已经到了，所以原来军委要开会亲自听听我的意见\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"因不能开会，周总理要求陈锐霆写三千字综合报告。\",\n      \"process_text\": \"周总理说写一个三千字的综合报告，不能开会了，因为大家都找毛主席谈问题。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0045\"\n      ],\n      \"evidence_quote\": \"后来周总理说你写一个三千字的综合报告吧，不能开会了，现在他们都找毛主席谈问题，毛主席忙得要死。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆写出三千字综合报告。\",\n      \"process_text\": \"我就在那写了一个三千字的综合报告。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0047\"\n      ],\n      \"evidence_quote\": \"我就在那写了一个三千字的综合报告。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE009-P01\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE009-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0045\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE009-P02\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE009-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0047\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC07-DE009",
+    "event_enrichment": {
+      "result_state": "陈锐霆完成三千字综合报告，原定由军委开会听取意见的安排改为书面报告。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以中央九月会议期间周总理要求写三千字综合报告为起点，至陈锐霆写出该报告为终点；后文杨尚昆、傅钟来看望不属于本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC07-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "中央九月会议期间各地方负责人到会，原定军委开会听取陈锐霆意见。",
+        "process_text": "中央九月会议期间各地方负责人到会，原定军委开会亲自听意见。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0045"
+        ],
+        "evidence_quote": "（当时）中央9月会议，各地方的头头，有省委书记，有华南、华东、西南、西北、东北、华北（七大区）的头头（都来开会）。我到中央的时候，有一部分已经到了，所以原来军委要开会亲自听听我的意见",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "因不能开会，周总理要求陈锐霆写三千字综合报告。",
+        "process_text": "周总理说写一个三千字的综合报告，不能开会了，因为大家都找毛主席谈问题。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0045"
+        ],
+        "evidence_quote": "后来周总理说你写一个三千字的综合报告吧，不能开会了，现在他们都找毛主席谈问题，毛主席忙得要死。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆写出三千字综合报告。",
+        "process_text": "我就在那写了一个三千字的综合报告。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0047"
+        ],
+        "evidence_quote": "我就在那写了一个三千字的综合报告。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC07-DE009-P01",
+        "target_stage_id": "BATCH05-DOC07-DE009-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH05-DOC07-S0045",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC07-DE009-P02",
+        "target_stage_id": "BATCH05-DOC07-DE009-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH05-DOC07-S0047",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

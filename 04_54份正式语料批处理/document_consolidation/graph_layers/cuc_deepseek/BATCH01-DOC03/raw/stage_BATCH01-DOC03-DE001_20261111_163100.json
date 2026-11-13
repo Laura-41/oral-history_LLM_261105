@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-11T16:31:00",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC03-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC03-DE001",
+  "usage": {
+    "prompt_tokens": 1286,
+    "total_tokens": 4089,
+    "completion_tokens": 2803,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2157
+    },
+    "time_to_first_token_ms": 21584,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2802000
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC03-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"唐亮完成对各股任务的分配，杨永松被安排协助民运股工作。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以政治组会议中唐亮说明即将进入阵地、进入战斗为背景，止于唐亮对杨永松说“你协助民运股工作”；不延伸至后续战斗或民运股具体执行过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"政治组会议动员，交代即将进入阵地和战斗。\",\n      \"process_text\": \"那天晚上政治组开会，唐亮主持会议，说明今晚进入阵地、明天进入战斗，要求发扬红军老传统、打出军威国威。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0017\"\n      ],\n      \"evidence_quote\": \"我们那天晚上政治组开会，唐亮主持会议，就说今天晚上就要进入阵地，明天就要进入战斗了，我们必须发扬我们红军的老传统，要打出军威国威来，要给全国人民一个高兴，也是个鼓励。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"唐亮分配各股任务，并安排杨永松协助民运股。\",\n      \"process_text\": \"唐亮分配组织股、宣传股随营参加战斗政治鼓励工作；民运股留后准备接收俘虏、动员担架；并让杨永松协助民运股工作。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0021\"\n      ],\n      \"evidence_quote\": \"那天晚上唐亮主任是分配组织股、宣传股跟着营里面参加战斗政治鼓励工作，民运股，曾思玉（音）的股长，留在后边，准备接收俘虏，准备动员担架。把我呢，说你协助民运股工作。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE001-P01\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0021\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC03-DE001",
+    "event_enrichment": {
+      "result_state": "唐亮完成对各股任务的分配，杨永松被安排协助民运股工作。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以政治组会议中唐亮说明即将进入阵地、进入战斗为背景，止于唐亮对杨永松说“你协助民运股工作”；不延伸至后续战斗或民运股具体执行过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC03-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "政治组会议动员，交代即将进入阵地和战斗。",
+        "process_text": "那天晚上政治组开会，唐亮主持会议，说明今晚进入阵地、明天进入战斗，要求发扬红军老传统、打出军威国威。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0017"
+        ],
+        "evidence_quote": "我们那天晚上政治组开会，唐亮主持会议，就说今天晚上就要进入阵地，明天就要进入战斗了，我们必须发扬我们红军的老传统，要打出军威国威来，要给全国人民一个高兴，也是个鼓励。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "唐亮分配各股任务，并安排杨永松协助民运股。",
+        "process_text": "唐亮分配组织股、宣传股随营参加战斗政治鼓励工作；民运股留后准备接收俘虏、动员担架；并让杨永松协助民运股工作。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0021"
+        ],
+        "evidence_quote": "那天晚上唐亮主任是分配组织股、宣传股跟着营里面参加战斗政治鼓励工作，民运股，曾思玉（音）的股长，留在后边，准备接收俘虏，准备动员担架。把我呢，说你协助民运股工作。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC03-DE001-P01",
+        "target_stage_id": "BATCH01-DOC03-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC03-S0021",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T23:24:14",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC06-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC06-DE003",
+  "usage": {
+    "prompt_tokens": 1438,
+    "total_tokens": 4710,
+    "completion_tokens": 3272,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2415
+    },
+    "time_to_first_token_ms": 25654,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC06-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"师部及卫校已南迁至启东海复镇；师部在海复镇一带驻扎约半年，时间约自1942年夏至1943年春节2月。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于师部决定南迁并迁往通、启、海，止于师部在海复镇驻扎约半年及卫校随师部南下。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"师部因部队困难决定南迁，迁往通、启、海，靠近上海，深入敌后。\",\n      \"process_text\": \"主力部队跳到外线去，师部决定南迁，迁到通、启、海，靠上海，到敌人的鼻子底下去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0083\"\n      ],\n      \"evidence_quote\": \"所以主力部队跳到外线去，师部就决定南迁，师部就迁到通、启、海去，南通、启东、海门，靠上海，到敌人的鼻子底下去。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"卫校随师部迁到启东的海复镇。\",\n      \"process_text\": \"卫校跟着师部迁到启东的海复镇。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0085\"\n      ],\n      \"evidence_quote\": \"卫校就跟着师部迁到启东的海复镇\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"1师师部在海复镇一带驻扎约半年，从1942年夏到1943年春节2月。\",\n      \"process_text\": \"1师师部在海复镇待了好多月，从1942年夏天一直待到1943年春节2月，差不多在海复镇这一带待了半年。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0085\"\n      ],\n      \"evidence_quote\": \"后来的1师师部在海复镇待了好多月，（从19）42年的夏天一直待到（19）43年的春节2月，差不多在海复镇这一带待了半年。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE003-P01\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE003-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0083\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE003-P02\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0085\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC06-DE003",
+    "event_enrichment": {
+      "result_state": "师部及卫校已南迁至启东海复镇；师部在海复镇一带驻扎约半年，时间约自1942年夏至1943年春节2月。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于师部决定南迁并迁往通、启、海，止于师部在海复镇驻扎约半年及卫校随师部南下。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC06-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "师部因部队困难决定南迁，迁往通、启、海，靠近上海，深入敌后。",
+        "process_text": "主力部队跳到外线去，师部决定南迁，迁到通、启、海，靠上海，到敌人的鼻子底下去。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0083"
+        ],
+        "evidence_quote": "所以主力部队跳到外线去，师部就决定南迁，师部就迁到通、启、海去，南通、启东、海门，靠上海，到敌人的鼻子底下去。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "卫校随师部迁到启东的海复镇。",
+        "process_text": "卫校跟着师部迁到启东的海复镇。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0085"
+        ],
+        "evidence_quote": "卫校就跟着师部迁到启东的海复镇",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "1师师部在海复镇一带驻扎约半年，从1942年夏到1943年春节2月。",
+        "process_text": "1师师部在海复镇待了好多月，从1942年夏天一直待到1943年春节2月，差不多在海复镇这一带待了半年。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0085"
+        ],
+        "evidence_quote": "后来的1师师部在海复镇待了好多月，（从19）42年的夏天一直待到（19）43年的春节2月，差不多在海复镇这一带待了半年。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC06-DE003-P01",
+        "target_stage_id": "BATCH04-DOC06-DE003-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC06-S0083",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE003-P02",
+        "target_stage_id": "BATCH04-DOC06-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC06-S0085",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

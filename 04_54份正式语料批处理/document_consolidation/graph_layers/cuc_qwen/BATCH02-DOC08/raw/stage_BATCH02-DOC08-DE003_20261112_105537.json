@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T10:55:37",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC08-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC08-DE003",
+  "usage": {
+    "prompt_tokens": 1611,
+    "total_tokens": 12370,
+    "completion_tokens": 10759,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9514
+    },
+    "tokens_per_second": 10758000,
+    "time_to_first_token_ms": 213506,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC08-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"二营多次主动出击、伏击骚扰敌人，并护送部队、叶挺、张云逸等过江；遇敌则打，过不去则返回再打，爱人、黄农等过江受阻。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 S0031 中“单我们二营打的，54次，不算保卫战，我们主动出击打伏击的，我们去骚扰他的，敌人正在抢粮，我们就去打的”至“碰到敌人就打，过不去再回来，再打”界定核心过程，并纳入紧随其后的“那么我这个爱人、黄农他们后来调到江北，过江，过了四个月过不去”作为过江受阻结果；其后关于皖南评价、电报、路线等内容不纳入本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"二营在敌人抢粮时主动出击、伏击骚扰\",\n      \"process_text\": \"单我们二营打的，54次，不算保卫战，我们主动出击打伏击的，我们去骚扰他的，敌人正在抢粮，我们就去打的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0031\"\n      ],\n      \"evidence_quote\": \"单我们二营打的，54次，不算保卫战，我们主动出击打伏击的，我们去骚扰他的，敌人正在抢粮，我们就去打的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"二营护送部队、叶挺、张云逸等过江\",\n      \"process_text\": \"我们护送这个部队过江了，护送叶挺将军过江了，护送张云逸过江了，护送哪个过江了\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0031\"\n      ],\n      \"evidence_quote\": \"比如说，我们护送这个部队过江了，护送叶挺将军过江了，护送张云逸过江了，护送哪个过江了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"过江中遇敌则打，过不去则返回再打\",\n      \"process_text\": \"碰到敌人就打，过不去再回来，再打。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0031\"\n      ],\n      \"evidence_quote\": \"碰到敌人就打，过不去再回来，再打。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"爱人、黄农等过江受阻\",\n      \"process_text\": \"那么我这个爱人、黄农他们后来调到江北，过江，过了四个月过不去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0031\"\n      ],\n      \"evidence_quote\": \"那么我这个爱人、黄农他们后来调到江北，过江，过了四个月过不去。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE003-P01\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE003-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0031\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE003-P02\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0031\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE003-P03\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE003-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0031\",\n      \"confidence\": \"LOW\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC08-DE003",
+    "event_enrichment": {
+      "result_state": "二营多次主动出击、伏击骚扰敌人，并护送部队、叶挺、张云逸等过江；遇敌则打，过不去则返回再打，爱人、黄农等过江受阻。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 S0031 中“单我们二营打的，54次，不算保卫战，我们主动出击打伏击的，我们去骚扰他的，敌人正在抢粮，我们就去打的”至“碰到敌人就打，过不去再回来，再打”界定核心过程，并纳入紧随其后的“那么我这个爱人、黄农他们后来调到江北，过江，过了四个月过不去”作为过江受阻结果；其后关于皖南评价、电报、路线等内容不纳入本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC08-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "二营在敌人抢粮时主动出击、伏击骚扰",
+        "process_text": "单我们二营打的，54次，不算保卫战，我们主动出击打伏击的，我们去骚扰他的，敌人正在抢粮，我们就去打的。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0031"
+        ],
+        "evidence_quote": "单我们二营打的，54次，不算保卫战，我们主动出击打伏击的，我们去骚扰他的，敌人正在抢粮，我们就去打的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "二营护送部队、叶挺、张云逸等过江",
+        "process_text": "我们护送这个部队过江了，护送叶挺将军过江了，护送张云逸过江了，护送哪个过江了",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0031"
+        ],
+        "evidence_quote": "比如说，我们护送这个部队过江了，护送叶挺将军过江了，护送张云逸过江了，护送哪个过江了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "过江中遇敌则打，过不去则返回再打",
+        "process_text": "碰到敌人就打，过不去再回来，再打。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0031"
+        ],
+        "evidence_quote": "碰到敌人就打，过不去再回来，再打。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "爱人、黄农等过江受阻",
+        "process_text": "那么我这个爱人、黄农他们后来调到江北，过江，过了四个月过不去。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0031"
+        ],
+        "evidence_quote": "那么我这个爱人、黄农他们后来调到江北，过江，过了四个月过不去。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC08-DE003-P01",
+        "target_stage_id": "BATCH02-DOC08-DE003-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC08-S0031",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE003-P02",
+        "target_stage_id": "BATCH02-DOC08-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0031",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE003-P03",
+        "target_stage_id": "BATCH02-DOC08-DE003-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0031",
+        "confidence": "LOW"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

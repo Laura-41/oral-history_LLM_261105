@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T22:54:55",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC01-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC01-DE002",
+  "usage": {
+    "prompt_tokens": 1386,
+    "total_tokens": 7034,
+    "completion_tokens": 5648,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4584
+    },
+    "time_to_first_token_ms": 47007,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-07\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC01-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队分散多路突围，避开日军，未与敌接触，无损失。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以部队开始撤退、敌人逼近为起点，以分散多路突围、未与敌接触且无损失为终点；依据S0015至S0024。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"部队开始撤退，尚未撤完时敌人已逼近。\",\n      \"process_text\": \"开始撤退，上午不到尚未撤完，敌人就到了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0015\"\n      ],\n      \"evidence_quote\": \"开始撤退了，上午不到……还没撤完呢，敌人就到了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"部队绕路，经里下河水网芦苇荡及村庄陆路避开日军。\",\n      \"process_text\": \"部队绕路，向北进入里下河水网地区，那里都是芦苇荡，并经过芦苇荡到泰州城之间的村庄陆路。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0020\"\n      ],\n      \"evidence_quote\": \"部队绕的路，他从北面，再向北是水网地区，叫里下河地区，都是芦苇荡。那么他靠芦苇荡到泰州城之间，这个地方有好多村庄都是陆路，就是苏陈庄的以北。苏陈庄以西是到泰州到扬州去的，苏陈庄以东就到姜堰，到瞿塘，到海安去的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"部队分散成几十路，从有路口处突围，侦察员和地方武装、地方人员配合带路。\",\n      \"process_text\": \"部队分散走了，分好多路，不是一路两路而是几十路，只要有路口可走的地方都突围；侦察员熟悉情况，当地地方武装、地方人员配合带路。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0024\"\n      ],\n      \"evidence_quote\": \"    陈海峰：分散走了，分好多路了，大家不是一路两路走了，那就几十路，只要有路口走的地方呢，都（突围了）。反正我们侦察员都熟悉，还有当地的地方武装、地方人员配合，带路。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"部队不与敌接触，行动较快，没有损失。\",\n      \"process_text\": \"部队不与敌人接触，走得快，没有损失。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0019\"\n      ],\n      \"evidence_quote\": \"    陈海峰：没有损失。不跟他接触了，我们部队走得快啊。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE002-P01\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE002-P02\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE002-P03\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE002-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0019\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-07",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC01-DE002",
+    "event_enrichment": {
+      "result_state": "部队分散多路突围，避开日军，未与敌接触，无损失。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以部队开始撤退、敌人逼近为起点，以分散多路突围、未与敌接触且无损失为终点；依据S0015至S0024。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC01-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "部队开始撤退，尚未撤完时敌人已逼近。",
+        "process_text": "开始撤退，上午不到尚未撤完，敌人就到了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0015"
+        ],
+        "evidence_quote": "开始撤退了，上午不到……还没撤完呢，敌人就到了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "部队绕路，经里下河水网芦苇荡及村庄陆路避开日军。",
+        "process_text": "部队绕路，向北进入里下河水网地区，那里都是芦苇荡，并经过芦苇荡到泰州城之间的村庄陆路。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0020"
+        ],
+        "evidence_quote": "部队绕的路，他从北面，再向北是水网地区，叫里下河地区，都是芦苇荡。那么他靠芦苇荡到泰州城之间，这个地方有好多村庄都是陆路，就是苏陈庄的以北。苏陈庄以西是到泰州到扬州去的，苏陈庄以东就到姜堰，到瞿塘，到海安去的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "部队分散成几十路，从有路口处突围，侦察员和地方武装、地方人员配合带路。",
+        "process_text": "部队分散走了，分好多路，不是一路两路而是几十路，只要有路口可走的地方都突围；侦察员熟悉情况，当地地方武装、地方人员配合带路。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0024"
+        ],
+        "evidence_quote": "    陈海峰：分散走了，分好多路了，大家不是一路两路走了，那就几十路，只要有路口走的地方呢，都（突围了）。反正我们侦察员都熟悉，还有当地的地方武装、地方人员配合，带路。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "部队不与敌接触，行动较快，没有损失。",
+        "process_text": "部队不与敌人接触，走得快，没有损失。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0019"
+        ],
+        "evidence_quote": "    陈海峰：没有损失。不跟他接触了，我们部队走得快啊。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC01-DE002-P01",
+        "target_stage_id": "BATCH04-DOC01-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC01-DE002-P02",
+        "target_stage_id": "BATCH04-DOC01-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC01-DE002-P03",
+        "target_stage_id": "BATCH04-DOC01-DE002-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC01-S0019",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

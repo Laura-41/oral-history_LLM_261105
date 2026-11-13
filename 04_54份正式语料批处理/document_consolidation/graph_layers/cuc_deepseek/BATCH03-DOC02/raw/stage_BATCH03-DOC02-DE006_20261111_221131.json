@@ -1,0 +1,180 @@
+{
+  "run_time": "2026-11-11T22:11:31",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC02-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC02-DE006",
+  "usage": {
+    "prompt_tokens": 1340,
+    "total_tokens": 9135,
+    "completion_tokens": 7795,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5800
+    },
+    "time_to_first_token_ms": 61266,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7794000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC02-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆推辞了副师长和陆军大学学习，师长表示晚一些时间再说；陈锐霆补充说明推辞副师长与希望带兵、团内收入等因素有关。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为师长称赞陈锐霆作战表现并转达提拔副师长意向，终点为陈锐霆推辞副师长和陆军大学学习、师长回应晚些再说，并含其补充说明推辞动因。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"师长称赞陈锐霆这一仗打得好，对军、师都有很好影响，为后续提拔提议作铺垫。\",\n      \"process_text\": \"师长称赞陈锐霆作战表现，说这一仗对军里面、师里面都有很好的影响。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0037\"\n      ],\n      \"evidence_quote\": \"他就说你很了不起啊，这一仗打的！对军里面，对师里面都有很好的影响啊！\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"师长转达与军长商量的提拔意向，提出让陈锐霆任师副师长。\",\n      \"process_text\": \"师长说与军长商量一下，想提陈锐霆当师里面的副师长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0037\"\n      ],\n      \"evidence_quote\": \"他说我们跟军长商量一下，想提你当师里面的副师长。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆以在团时间不长、希望带部队多待一个时期为由，推辞副师长。\",\n      \"process_text\": \"陈锐霆表示在团时间不长，希望带着部队多待一个时期。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0037\"\n      ],\n      \"evidence_quote\": \"我说我在团的时间不长，我希望带着部队多待一个时期。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"师长又提出陈锐霆可以到陆军大学去学习一期。\",\n      \"process_text\": \"师长提出陈锐霆可以到陆军大学去学习一期。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0037\"\n      ],\n      \"evidence_quote\": \"另外他那个时候说，你现在可以到陆军大学去学习一期\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE006-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"陈锐霆以在前方实战锻炼更好为由，推辞陆军大学学习。\",\n      \"process_text\": \"陈锐霆表示不如在前方实战锻炼更好一些。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0037\"\n      ],\n      \"evidence_quote\": \"我说我不如在前方实战锻炼更好一些吧。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE006-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"陈锐霆总结副师长和陆军大学学习均被推辞，师长回应晚一些时间再说。\",\n      \"process_text\": \"陈锐霆说当时叫他到陆军大学也好、当副师长也好，他都推辞了；师长说晚一些时间再说。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0037\"\n      ],\n      \"evidence_quote\": \"那时候叫我到陆军大学也好，当副师长也好，我都推辞了，他说那晚一些时间再说吧。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE006-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"陈锐霆补充说明不愿任副师长的带兵权考虑：他想带部队到敌后跟共产党一起打仗，任副师长是闲职、没有带兵权。\",\n      \"process_text\": \"陈锐霆补充说明：他想带着部队到敌后跟共产党一起打仗；任副师长是闲职，没有带兵权。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0041\"\n      ],\n      \"evidence_quote\": \"我想带着部队，我这个时候这个心，（想要）到敌后跟共产党（一起）打仗嘛。我带着兵，弄个闲（职），弄个副师长就没权力了，没有带兵的权嘛，就这个意思嘛。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE006-P08\",\n      \"stage_order\": 8,\n      \"stage_summary\": \"陈锐霆补充说明团内收入等实际考虑：他也想在团里多搞一些，团里收入相对比副师长高得多，各种费用很多。\",\n      \"process_text\": \"陈锐霆补充说明：他也想在团里多搞一些，团里收入相对比副师长高得多，各种费用很多。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0043\"\n      ],\n      \"evidence_quote\": \"另外的确我也想在团里面多搞一些，另外团里面收入也相对比副师长还高得多，各种费用相当多，都用不完，办公费、侦察费、训练费、作战费，各种费用很多嘛。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE006-P01\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE006-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0037\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE006-P02\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE006-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0037\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE006-P03\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE006-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0037\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE006-P04\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE006-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0037\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE006-P05\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE006-P06\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0037\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE006-P06\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE006-P07\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0041\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE006-P07\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE006-P08\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0043\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC02-DE006",
+    "event_enrichment": {
+      "result_state": "陈锐霆推辞了副师长和陆军大学学习，师长表示晚一些时间再说；陈锐霆补充说明推辞副师长与希望带兵、团内收入等因素有关。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起点为师长称赞陈锐霆作战表现并转达提拔副师长意向，终点为陈锐霆推辞副师长和陆军大学学习、师长回应晚些再说，并含其补充说明推辞动因。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC02-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "师长称赞陈锐霆这一仗打得好，对军、师都有很好影响，为后续提拔提议作铺垫。",
+        "process_text": "师长称赞陈锐霆作战表现，说这一仗对军里面、师里面都有很好的影响。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0037"
+        ],
+        "evidence_quote": "他就说你很了不起啊，这一仗打的！对军里面，对师里面都有很好的影响啊！",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "师长转达与军长商量的提拔意向，提出让陈锐霆任师副师长。",
+        "process_text": "师长说与军长商量一下，想提陈锐霆当师里面的副师长。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0037"
+        ],
+        "evidence_quote": "他说我们跟军长商量一下，想提你当师里面的副师长。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆以在团时间不长、希望带部队多待一个时期为由，推辞副师长。",
+        "process_text": "陈锐霆表示在团时间不长，希望带着部队多待一个时期。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0037"
+        ],
+        "evidence_quote": "我说我在团的时间不长，我希望带着部队多待一个时期。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "师长又提出陈锐霆可以到陆军大学去学习一期。",
+        "process_text": "师长提出陈锐霆可以到陆军大学去学习一期。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0037"
+        ],
+        "evidence_quote": "另外他那个时候说，你现在可以到陆军大学去学习一期",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE006-P05",
+        "stage_order": 5,
+        "stage_summary": "陈锐霆以在前方实战锻炼更好为由，推辞陆军大学学习。",
+        "process_text": "陈锐霆表示不如在前方实战锻炼更好一些。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0037"
+        ],
+        "evidence_quote": "我说我不如在前方实战锻炼更好一些吧。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE006-P06",
+        "stage_order": 6,
+        "stage_summary": "陈锐霆总结副师长和陆军大学学习均被推辞，师长回应晚一些时间再说。",
+        "process_text": "陈锐霆说当时叫他到陆军大学也好、当副师长也好，他都推辞了；师长说晚一些时间再说。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0037"
+        ],
+        "evidence_quote": "那时候叫我到陆军大学也好，当副师长也好，我都推辞了，他说那晚一些时间再说吧。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE006-P07",
+        "stage_order": 7,
+        "stage_summary": "陈锐霆补充说明不愿任副师长的带兵权考虑：他想带部队到敌后跟共产党一起打仗，任副师长是闲职、没有带兵权。",
+        "process_text": "陈锐霆补充说明：他想带着部队到敌后跟共产党一起打仗；任副师长是闲职，没有带兵权。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0041"
+        ],
+        "evidence_quote": "我想带着部队，我这个时候这个心，（想要）到敌后跟共产党（一起）打仗嘛。我带着兵，弄个闲（职），弄个副师长就没权力了，没有带兵的权嘛，就这个意思嘛。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE006-P08",
+        "stage_order": 8,
+        "stage_summary": "陈锐霆补充说明团内收入等实际考虑：他也想在团里多搞一些，团里收入相对比副师长高得多，各种费用很多。",
+        "process_text": "陈锐霆补充说明：他也想在团里多搞一些，团里收入相对比副师长高得多，各种费用很多。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0043"
+        ],
+        "evidence_quote": "另外的确我也想在团里面多搞一些，另外团里面收入也相对比副师长还高得多，各种费用相当多，都用不完，办公费、侦察费、训练费、作战费，各种费用很多嘛。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC02-DE006-P01",
+        "target_stage_id": "BATCH03-DOC02-DE006-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH03-DOC02-S0037",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC02-DE006-P02",
+        "target_stage_id": "BATCH03-DOC02-DE006-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC02-S0037",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC02-DE006-P03",
+        "target_stage_id": "BATCH03-DOC02-DE006-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC02-S0037",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC02-DE006-P04",
+        "target_stage_id": "BATCH03-DOC02-DE006-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC02-S0037",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC02-DE006-P05",
+        "target_stage_id": "BATCH03-DOC02-DE006-P06",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC02-S0037",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC02-DE006-P06",
+        "target_stage_id": "BATCH03-DOC02-DE006-P07",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC02-S0041",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC02-DE006-P07",
+        "target_stage_id": "BATCH03-DOC02-DE006-P08",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC02-S0043",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

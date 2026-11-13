@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-11T21:47:51",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC07-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC07-DE005",
+  "usage": {
+    "prompt_tokens": 1351,
+    "total_tokens": 4829,
+    "completion_tokens": 3478,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2180
+    },
+    "time_to_first_token_ms": 29679,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3477000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC07-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"一行人完成从云岭经小河口、茂林翻越麻岭坑的行程，在山顶看到日出与云海，随后下山到达麻岭坑村。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“我们从云岭步行到小河口”为起点，至“麻岭坑就是新四军留守处”结束；中间包含翻越麻岭坑、山顶看日出云海和下山到麻岭坑村。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"从云岭步行至小河口，路程约七八十里。\",\n      \"process_text\": \"从云岭步行到小河口，路程恐怕有七八十里。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0028\"\n      ],\n      \"evidence_quote\": \"我们从云岭步行到小河口，恐怕要有七八十里路。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"到达茂林后翻越麻岭坑，山高十八里。\",\n      \"process_text\": \"到了茂林，翻越叫麻岭坑的山，山有十八里路高。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0028\"\n      ],\n      \"evidence_quote\": \"到了茂林，就是皖南事变那个地方，茂林翻那个山，那个山叫麻岭坑，十八里路高呢。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"半夜爬山，天亮拂晓到达山顶，并第一次看到黄山。\",\n      \"process_text\": \"翻上山，半夜里爬，爬到天亮天刚拂晓时到达山顶，第一次看到黄山。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0028\"\n      ],\n      \"evidence_quote\": \"我们翻上去，哎呀，真漂亮！我们第一次看到黄山，半夜里爬爬，爬到天亮，天刚拂晓，爬到山顶上。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"在山顶观看日出与天然云海，认为第一次所见最漂亮、印象最深。\",\n      \"process_text\": \"在山顶看日出，觉得比泰山、衡山看日出都漂亮，后来六次到黄山看日出也不如第一次；云海天然漂亮，像刀一样。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0028\"\n      ],\n      \"evidence_quote\": \"哎呀！看那个日出，那个真是从来泰山看日出，什么衡山看日出，后来我六次到黄山看日出，没有我第一次看到（得）漂亮。那个时候是第一次，那个印象深刻，云海呀，真漂亮，都是天然的云海，一个一个跟个刀一样的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE005-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"翻过山下山，到达麻岭坑村，并提及该村为新四军留守处。\",\n      \"process_text\": \"翻过山下去，到麻岭坑村；该村现在还在，是 New Fourth Army 留守处。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0028\"\n      ],\n      \"evidence_quote\": \"翻过那个山下去呢，叫麻岭坑，麻岭坑那个村子现在还在，麻岭坑就是新四军留守处。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE005-P01\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0028\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE005-P02\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0028\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE005-P03\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE005-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0028\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE005-P04\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE005-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0028\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V2-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC07-DE005",
+    "event_enrichment": {
+      "result_state": "一行人完成从云岭经小河口、茂林翻越麻岭坑的行程，在山顶看到日出与云海，随后下山到达麻岭坑村。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以“我们从云岭步行到小河口”为起点，至“麻岭坑就是新四军留守处”结束；中间包含翻越麻岭坑、山顶看日出云海和下山到麻岭坑村。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC07-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "从云岭步行至小河口，路程约七八十里。",
+        "process_text": "从云岭步行到小河口，路程恐怕有七八十里。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0028"
+        ],
+        "evidence_quote": "我们从云岭步行到小河口，恐怕要有七八十里路。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "到达茂林后翻越麻岭坑，山高十八里。",
+        "process_text": "到了茂林，翻越叫麻岭坑的山，山有十八里路高。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0028"
+        ],
+        "evidence_quote": "到了茂林，就是皖南事变那个地方，茂林翻那个山，那个山叫麻岭坑，十八里路高呢。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "半夜爬山，天亮拂晓到达山顶，并第一次看到黄山。",
+        "process_text": "翻上山，半夜里爬，爬到天亮天刚拂晓时到达山顶，第一次看到黄山。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0028"
+        ],
+        "evidence_quote": "我们翻上去，哎呀，真漂亮！我们第一次看到黄山，半夜里爬爬，爬到天亮，天刚拂晓，爬到山顶上。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "在山顶观看日出与天然云海，认为第一次所见最漂亮、印象最深。",
+        "process_text": "在山顶看日出，觉得比泰山、衡山看日出都漂亮，后来六次到黄山看日出也不如第一次；云海天然漂亮，像刀一样。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0028"
+        ],
+        "evidence_quote": "哎呀！看那个日出，那个真是从来泰山看日出，什么衡山看日出，后来我六次到黄山看日出，没有我第一次看到（得）漂亮。那个时候是第一次，那个印象深刻，云海呀，真漂亮，都是天然的云海，一个一个跟个刀一样的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE005-P05",
+        "stage_order": 5,
+        "stage_summary": "翻过山下山，到达麻岭坑村，并提及该村为新四军留守处。",
+        "process_text": "翻过山下去，到麻岭坑村；该村现在还在，是 New Fourth Army 留守处。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0028"
+        ],
+        "evidence_quote": "翻过那个山下去呢，叫麻岭坑，麻岭坑那个村子现在还在，麻岭坑就是新四军留守处。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC07-DE005-P01",
+        "target_stage_id": "BATCH02-DOC07-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0028",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE005-P02",
+        "target_stage_id": "BATCH02-DOC07-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0028",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE005-P03",
+        "target_stage_id": "BATCH02-DOC07-DE005-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0028",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE005-P04",
+        "target_stage_id": "BATCH02-DOC07-DE005-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0028",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

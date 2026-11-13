@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-13T01:31:01",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC07-DE004",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC07-DE004",
+  "usage": {
+    "prompt_tokens": 1270,
+    "total_tokens": 5535,
+    "completion_tokens": 4265,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3623
+    },
+    "time_to_first_token_ms": 64068,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC07-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"敌人一个整编师在沙土集被消灭，两门榴弹炮被缴获并交给特纵。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 S0025 中从“后来我们到了外线的部队在沙土集也消灭了敌人的一个整编师”到“也交给了特纵。”的连续叙述；前句“三查三整”政治运动不属于本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"外线部队在沙土集消灭敌人一个整编师\",\n      \"process_text\": \"后来我们到了外线的部队在沙土集也消灭了敌人的一个整编师\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0025\"\n      ],\n      \"evidence_quote\": \"后来我们到了外线的部队在沙土集也消灭了敌人的一个整编师\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"宋时轮部队在沙土集缴获两门榴弹炮并交给特纵\",\n      \"process_text\": \"在那个地方宋时轮那个部队又缴获了两门榴弹炮，也交给了特纵。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0025\"\n      ],\n      \"evidence_quote\": \"在那个地方宋时轮那个部队又缴获了两门榴弹炮，也交给了特纵。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE004-P01\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0025\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC07-DE004",
+    "event_enrichment": {
+      "result_state": "敌人一个整编师在沙土集被消灭，两门榴弹炮被缴获并交给特纵。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 S0025 中从“后来我们到了外线的部队在沙土集也消灭了敌人的一个整编师”到“也交给了特纵。”的连续叙述；前句“三查三整”政治运动不属于本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC07-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "外线部队在沙土集消灭敌人一个整编师",
+        "process_text": "后来我们到了外线的部队在沙土集也消灭了敌人的一个整编师",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0025"
+        ],
+        "evidence_quote": "后来我们到了外线的部队在沙土集也消灭了敌人的一个整编师",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "宋时轮部队在沙土集缴获两门榴弹炮并交给特纵",
+        "process_text": "在那个地方宋时轮那个部队又缴获了两门榴弹炮，也交给了特纵。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0025"
+        ],
+        "evidence_quote": "在那个地方宋时轮那个部队又缴获了两门榴弹炮，也交给了特纵。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC07-DE004-P01",
+        "target_stage_id": "BATCH05-DOC07-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0025",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T19:13:27",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE001",
+  "usage": {
+    "prompt_tokens": 1661,
+    "total_tokens": 7676,
+    "completion_tokens": 6015,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4438
+    },
+    "time_to_first_token_ms": 88516,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 6014000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"日军沿河汽车推进受阻后向后转走、不再去川口；川口被突破后日军占领隰县、午城镇，并往东经蒲县与占领临汾的部队合并。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为 S0005 所述日本人攻破川口防线并增兵沿河汽车推进；中段为 S0007 所述日军到较高河处上不去、停在村子边做饭；终点为 S0009 所述日军汽车走不了、向后转走，以及川口被突破后占领隰县、午城镇并与临汾方向部队合并。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"日军突破川口防线并增兵沿河汽车推进\",\n      \"process_text\": \"日本人攻破了川口防线，以后又增加一个旅团，沿着双城（音）附近的一条河开着汽车一百多辆往上，我方在山上隐蔽准备打。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0005\"\n      ],\n      \"evidence_quote\": \"    杨永松：日本人攻破了川口防线，阎锡山两个军，人家一个旅团攻他，另外就是开始他没什么大打，我们就在附近，我们都知道。他以后又增加一个旅团，沿着双城（音）附近的一条河，那个河就是离川口很近，他开着汽车“嗡嗡”一百多辆往上，上到快到离川口不远的地方，我们就在山上，我们看他来以后，部队都隐蔽了，准备打了。结果一看越来越多，越来越多。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"日军沿河推进受阻后停车村边做饭\",\n      \"process_text\": \"日军到了靠近山比较高的河处，再上不那么顺利，看上不去了，就在下面村子边上停住，不放哨，拆老百姓柴火门窗做饭，鸡犬不存。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0007\"\n      ],\n      \"evidence_quote\": \"    杨永松：他到了靠近山比较高的地方那个河呀，看看比较高，再上不那么顺利，他不上了，他看上不去了，他就在下面那里有个村子边上，就停在那里。他也不放哨，我们部队离那里几百米，隐蔽在那地方，他就把老百姓的柴火，门、窗弄下来做饭吃。所以日本人到了那个地方啊，那老百姓家的鸡犬不存呀，小鸡更不用说了。他在里面做了一顿饭吃。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"日军报告汽车走不了并撤退不去川口\",\n      \"process_text\": \"日军大概有电报说汽车走不了了，下午来了一个飞机丢东西下来，发动汽车轰轰响后向后转走，不去川口。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0009\"\n      ],\n      \"evidence_quote\": \"    杨永松：他大概有电报跟上面说我这里汽车走不了了，以后下午来了一个飞机，看他丢了一个东西下来，以后听他发动汽车“轰轰”响，就向后转走了，他不去川口了。开始我们以为坦克来了，那么多，结果全部是汽车。所以川口被突破以后，就占领隰县，占领午城镇，往东他就经过还有一个蒲县吧，（与）占领临汾的部队就合并了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"川口突破后日军占领隰县午城镇并与临汾方向部队合并\",\n      \"process_text\": \"川口被突破以后，就占领隰县，占领午城镇，往东经过还有一个蒲县吧，（与）占领临汾的部队就合并了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0009\"\n      ],\n      \"evidence_quote\": \"    杨永松：他大概有电报跟上面说我这里汽车走不了了，以后下午来了一个飞机，看他丢了一个东西下来，以后听他发动汽车“轰轰”响，就向后转走了，他不去川口了。开始我们以为坦克来了，那么多，结果全部是汽车。所以川口被突破以后，就占领隰县，占领午城镇，往东他就经过还有一个蒲县吧，（与）占领临汾的部队就合并了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE001-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0007\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE001-P02\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE001-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0009\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE001-P03\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE001-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0009\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE001",
+    "event_enrichment": {
+      "result_state": "日军沿河汽车推进受阻后向后转走、不再去川口；川口被突破后日军占领隰县、午城镇，并往东经蒲县与占领临汾的部队合并。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为 S0005 所述日本人攻破川口防线并增兵沿河汽车推进；中段为 S0007 所述日军到较高河处上不去、停在村子边做饭；终点为 S0009 所述日军汽车走不了、向后转走，以及川口被突破后占领隰县、午城镇并与临汾方向部队合并。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "日军突破川口防线并增兵沿河汽车推进",
+        "process_text": "日本人攻破了川口防线，以后又增加一个旅团，沿着双城（音）附近的一条河开着汽车一百多辆往上，我方在山上隐蔽准备打。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0005"
+        ],
+        "evidence_quote": "    杨永松：日本人攻破了川口防线，阎锡山两个军，人家一个旅团攻他，另外就是开始他没什么大打，我们就在附近，我们都知道。他以后又增加一个旅团，沿着双城（音）附近的一条河，那个河就是离川口很近，他开着汽车“嗡嗡”一百多辆往上，上到快到离川口不远的地方，我们就在山上，我们看他来以后，部队都隐蔽了，准备打了。结果一看越来越多，越来越多。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "日军沿河推进受阻后停车村边做饭",
+        "process_text": "日军到了靠近山比较高的河处，再上不那么顺利，看上不去了，就在下面村子边上停住，不放哨，拆老百姓柴火门窗做饭，鸡犬不存。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0007"
+        ],
+        "evidence_quote": "    杨永松：他到了靠近山比较高的地方那个河呀，看看比较高，再上不那么顺利，他不上了，他看上不去了，他就在下面那里有个村子边上，就停在那里。他也不放哨，我们部队离那里几百米，隐蔽在那地方，他就把老百姓的柴火，门、窗弄下来做饭吃。所以日本人到了那个地方啊，那老百姓家的鸡犬不存呀，小鸡更不用说了。他在里面做了一顿饭吃。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "日军报告汽车走不了并撤退不去川口",
+        "process_text": "日军大概有电报说汽车走不了了，下午来了一个飞机丢东西下来，发动汽车轰轰响后向后转走，不去川口。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0009"
+        ],
+        "evidence_quote": "    杨永松：他大概有电报跟上面说我这里汽车走不了了，以后下午来了一个飞机，看他丢了一个东西下来，以后听他发动汽车“轰轰”响，就向后转走了，他不去川口了。开始我们以为坦克来了，那么多，结果全部是汽车。所以川口被突破以后，就占领隰县，占领午城镇，往东他就经过还有一个蒲县吧，（与）占领临汾的部队就合并了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "川口突破后日军占领隰县午城镇并与临汾方向部队合并",
+        "process_text": "川口被突破以后，就占领隰县，占领午城镇，往东经过还有一个蒲县吧，（与）占领临汾的部队就合并了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0009"
+        ],
+        "evidence_quote": "    杨永松：他大概有电报跟上面说我这里汽车走不了了，以后下午来了一个飞机，看他丢了一个东西下来，以后听他发动汽车“轰轰”响，就向后转走了，他不去川口了。开始我们以为坦克来了，那么多，结果全部是汽车。所以川口被突破以后，就占领隰县，占领午城镇，往东他就经过还有一个蒲县吧，（与）占领临汾的部队就合并了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE001-P01",
+        "target_stage_id": "BATCH03-DOC06-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0007",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE001-P02",
+        "target_stage_id": "BATCH03-DOC06-DE001-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH03-DOC06-S0009",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE001-P03",
+        "target_stage_id": "BATCH03-DOC06-DE001-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC06-S0009",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

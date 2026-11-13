@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-12T12:20:56",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC02-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC02-DE008",
+  "usage": {
+    "prompt_tokens": 1270,
+    "total_tokens": 5028,
+    "completion_tokens": 3758,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3145
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3757000,
+    "time_to_first_token_ms": 94469
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC02-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队开到阜阳集中\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"自“以后敌人占了宜昌”起，至“部队开到阜阳去集中”止；前句关于掌握武力、枪杆子的内容不属于本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"宜昌被占后在分乡场防御一个多月\",\n      \"process_text\": \"以后敌人占了宜昌，我又到了宜昌，北关外头有个分乡场，我就是在那防御嘛，一个多月。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0048\"\n      ],\n      \"evidence_quote\": \"以后敌人占了宜昌，我又到了宜昌，北关外头有个分乡场，我就是在那防御嘛，一个多月。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"奉命开赴阜阳集中\",\n      \"process_text\": \"以后上面有命令，要赶快进入山东，所以把这部队要赶快到皖北进入安徽阜阳附近，部队开到阜阳去集中。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0048\"\n      ],\n      \"evidence_quote\": \"以后上面有命令，要赶快进入山东，所以把这部队要赶快到皖北进入安徽阜阳附近，部队开到阜阳去集中。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE008-P01\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0048\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC02-DE008",
+    "event_enrichment": {
+      "result_state": "部队开到阜阳集中",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "自“以后敌人占了宜昌”起，至“部队开到阜阳去集中”止；前句关于掌握武力、枪杆子的内容不属于本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC02-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "宜昌被占后在分乡场防御一个多月",
+        "process_text": "以后敌人占了宜昌，我又到了宜昌，北关外头有个分乡场，我就是在那防御嘛，一个多月。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0048"
+        ],
+        "evidence_quote": "以后敌人占了宜昌，我又到了宜昌，北关外头有个分乡场，我就是在那防御嘛，一个多月。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "奉命开赴阜阳集中",
+        "process_text": "以后上面有命令，要赶快进入山东，所以把这部队要赶快到皖北进入安徽阜阳附近，部队开到阜阳去集中。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0048"
+        ],
+        "evidence_quote": "以后上面有命令，要赶快进入山东，所以把这部队要赶快到皖北进入安徽阜阳附近，部队开到阜阳去集中。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC02-DE008-P01",
+        "target_stage_id": "BATCH03-DOC02-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC02-S0048",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

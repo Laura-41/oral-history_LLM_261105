@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T17:03:54",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC03-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC03-DE003",
+  "usage": {
+    "prompt_tokens": 1415,
+    "total_tokens": 9542,
+    "completion_tokens": 8127,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6817
+    },
+    "time_to_first_token_ms": 129355,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC03-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰在口述中确认3支队相关幸存老人陈克希（音）、张耀华（音）、何志远的身份，并总结3支队最后他知道的留下几个老人，皖南事变打光了。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 S0043 中陈海峰逐一说明陈克希（音）、张耀华（音）、何志远的身份与近况，至 S0047 中补充“前几年死了”并总结“3支队最后我知道的，留下来就这么几个老人。没有人了，皖南事变打光了。”结束。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC03-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰说明3支队原小卫生员陈克希（音）的身份与近况\",\n      \"process_text\": \"陈海峰说3支队原来他下面的一个小卫生员叫陈克希（音），这两年没有通信，可能过世，八十多岁，在济南当卫生防疫站站长，退休十多年，就是3支队的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC03-S0043\"\n      ],\n      \"evidence_quote\": \"3支队的原来我下面的一个小卫生员叫陈克希（音），这两年也没有通信了，可能也过世了，也八十多岁了。他在济南当卫生防疫站站长，退休十多年了，他就是3支队的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC03-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈海峰说明二营医务员张耀华（音）的身份与近况\",\n      \"process_text\": \"陈海峰说还有一个在上海、空军的，他下面二营的一个医务员叫张耀华（音），在山东中风，这两年死掉了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC03-S0043\"\n      ],\n      \"evidence_quote\": \"我所知道的，还有一个在上海，空军的，我下面二营的一个医务员，（他）叫张耀华（音），在山东，中风了，这两年死掉了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC03-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈海峰说明山东省军区政委何志远的身份\",\n      \"process_text\": \"陈海峰说最后留下的几个人中还有山东省军区的一个政委叫何志远，人口“何”。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC03-S0043\"\n      ],\n      \"evidence_quote\": \"最后留下的几个人，还有山东省军区的一个政委，叫何志远，人口“何”。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC03-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"陈海峰补充“前几年死了”并总结3支队最后知道的留下几个老人、皖南事变打光\",\n      \"process_text\": \"陈海峰补充“前几年死了”，并总结3支队最后他知道的留下来就这么几个老人，没有人了，皖南事变打光了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC03-S0047\"\n      ],\n      \"evidence_quote\": \"前几年死了。所以3支队最后我知道的，留下来就这么几个老人。没有人了，皖南事变打光了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC03-DE003-P01\",\n      \"target_stage_id\": \"BATCH07-DOC03-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC03-S0043\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC03-DE003-P02\",\n      \"target_stage_id\": \"BATCH07-DOC03-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC03-S0043\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC03-DE003-P03\",\n      \"target_stage_id\": \"BATCH07-DOC03-DE003-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC03-S0047\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC03-DE003",
+    "event_enrichment": {
+      "result_state": "陈海峰在口述中确认3支队相关幸存老人陈克希（音）、张耀华（音）、何志远的身份，并总结3支队最后他知道的留下几个老人，皖南事变打光了。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 S0043 中陈海峰逐一说明陈克希（音）、张耀华（音）、何志远的身份与近况，至 S0047 中补充“前几年死了”并总结“3支队最后我知道的，留下来就这么几个老人。没有人了，皖南事变打光了。”结束。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC03-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰说明3支队原小卫生员陈克希（音）的身份与近况",
+        "process_text": "陈海峰说3支队原来他下面的一个小卫生员叫陈克希（音），这两年没有通信，可能过世，八十多岁，在济南当卫生防疫站站长，退休十多年，就是3支队的。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC03-S0043"
+        ],
+        "evidence_quote": "3支队的原来我下面的一个小卫生员叫陈克希（音），这两年也没有通信了，可能也过世了，也八十多岁了。他在济南当卫生防疫站站长，退休十多年了，他就是3支队的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH07-DOC03-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "陈海峰说明二营医务员张耀华（音）的身份与近况",
+        "process_text": "陈海峰说还有一个在上海、空军的，他下面二营的一个医务员叫张耀华（音），在山东中风，这两年死掉了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC03-S0043"
+        ],
+        "evidence_quote": "我所知道的，还有一个在上海，空军的，我下面二营的一个医务员，（他）叫张耀华（音），在山东，中风了，这两年死掉了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH07-DOC03-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "陈海峰说明山东省军区政委何志远的身份",
+        "process_text": "陈海峰说最后留下的几个人中还有山东省军区的一个政委叫何志远，人口“何”。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC03-S0043"
+        ],
+        "evidence_quote": "最后留下的几个人，还有山东省军区的一个政委，叫何志远，人口“何”。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH07-DOC03-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "陈海峰补充“前几年死了”并总结3支队最后知道的留下几个老人、皖南事变打光",
+        "process_text": "陈海峰补充“前几年死了”，并总结3支队最后他知道的留下来就这么几个老人，没有人了，皖南事变打光了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC03-S0047"
+        ],
+        "evidence_quote": "前几年死了。所以3支队最后我知道的，留下来就这么几个老人。没有人了，皖南事变打光了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC03-DE003-P01",
+        "target_stage_id": "BATCH07-DOC03-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC03-S0043",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC03-DE003-P02",
+        "target_stage_id": "BATCH07-DOC03-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC03-S0043",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC03-DE003-P03",
+        "target_stage_id": "BATCH07-DOC03-DE003-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC03-S0047",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

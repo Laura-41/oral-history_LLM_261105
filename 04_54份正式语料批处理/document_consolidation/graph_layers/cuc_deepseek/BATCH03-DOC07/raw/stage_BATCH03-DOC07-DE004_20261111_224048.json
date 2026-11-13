@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T22:40:48",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC07-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC07-DE004",
+  "usage": {
+    "prompt_tokens": 1462,
+    "total_tokens": 4747,
+    "completion_tokens": 3285,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2314
+    },
+    "time_to_first_token_ms": 25367,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC07-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"普包运动与卫生战士制度已推广，每班有卫生战士并逐步增至3人；阻击战中80%伤员实现自包互包，伤亡残废减少，战士急救、卫生知识和自我保障水平提高，成为群众运动。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件起于S0028所述开展普包运动、卫生战士增多，止于S0030所述推广至全新四军并在阻击战中见效；周淑敏发明权等旁支细节不纳入边界。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"开展普包运动，教战士自包互包、就地取材。\",\n      \"process_text\": \"教战士开展“普包运动”，做到每个战士有急救包，能自包互包，并学会包扎、止血和就地取材。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0028\"\n      ],\n      \"evidence_quote\": \"那以后呢我们就教有“普包运动”，每一个战士都有急救包。那么可以自包，你腿上受伤，自己可以马上去包。告诉他们怎么包扎，怎么止血，怎么就地取材，什么木棍啊、竹片啊、棍子的话，自己给绑起来。自包互包，自己包扎，互相包扎，就开展“普包运动”。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"命名并推广卫生战士经验，每班配置卫生战士并逐步增加。\",\n      \"process_text\": \"将这一做法命名为“卫生战士”并推广经验，全新四军都称“卫生战士”，每班配置卫生战士并逐步增加至三个。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0030\"\n      ],\n      \"evidence_quote\": \"就起了个名字叫“卫生战士”，以后推广他的经验，我们全新四军都叫“卫生战士”，每一个班都有卫生战士，一个班一个卫生战士，加到两个卫生战士，加到三个卫生战士。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"阻击战中自包互包见效，减少伤亡残废并形成群众运动。\",\n      \"process_text\": \"在阻击战中，80%的伤员实行自包互包，减少伤亡和残废，提高战士急救、卫生知识和自我保障水平，成为群众运动。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0030\"\n      ],\n      \"evidence_quote\": \"这一次阻击战中间呢，80%都是自包互包的，就减少伤亡，减少残废。所以呀，把普遍战士的急救水平提高了，卫生知识水平提高了，自我保障的水平提高了，变成群众运动了，就（是）群众运动、群众路线深入到每个战士了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE004-P01\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE004-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0030\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE004-P02\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE004-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0030\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC07-DE004",
+    "event_enrichment": {
+      "result_state": "普包运动与卫生战士制度已推广，每班有卫生战士并逐步增至3人；阻击战中80%伤员实现自包互包，伤亡残废减少，战士急救、卫生知识和自我保障水平提高，成为群众运动。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件起于S0028所述开展普包运动、卫生战士增多，止于S0030所述推广至全新四军并在阻击战中见效；周淑敏发明权等旁支细节不纳入边界。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC07-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "开展普包运动，教战士自包互包、就地取材。",
+        "process_text": "教战士开展“普包运动”，做到每个战士有急救包，能自包互包，并学会包扎、止血和就地取材。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0028"
+        ],
+        "evidence_quote": "那以后呢我们就教有“普包运动”，每一个战士都有急救包。那么可以自包，你腿上受伤，自己可以马上去包。告诉他们怎么包扎，怎么止血，怎么就地取材，什么木棍啊、竹片啊、棍子的话，自己给绑起来。自包互包，自己包扎，互相包扎，就开展“普包运动”。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "命名并推广卫生战士经验，每班配置卫生战士并逐步增加。",
+        "process_text": "将这一做法命名为“卫生战士”并推广经验，全新四军都称“卫生战士”，每班配置卫生战士并逐步增加至三个。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0030"
+        ],
+        "evidence_quote": "就起了个名字叫“卫生战士”，以后推广他的经验，我们全新四军都叫“卫生战士”，每一个班都有卫生战士，一个班一个卫生战士，加到两个卫生战士，加到三个卫生战士。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "阻击战中自包互包见效，减少伤亡残废并形成群众运动。",
+        "process_text": "在阻击战中，80%的伤员实行自包互包，减少伤亡和残废，提高战士急救、卫生知识和自我保障水平，成为群众运动。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0030"
+        ],
+        "evidence_quote": "这一次阻击战中间呢，80%都是自包互包的，就减少伤亡，减少残废。所以呀，把普遍战士的急救水平提高了，卫生知识水平提高了，自我保障的水平提高了，变成群众运动了，就（是）群众运动、群众路线深入到每个战士了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC07-DE004-P01",
+        "target_stage_id": "BATCH03-DOC07-DE004-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH03-DOC07-S0030",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC07-DE004-P02",
+        "target_stage_id": "BATCH03-DOC07-DE004-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC07-S0030",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,375 @@
+{
+  "run_time": "2026-11-11T05:01:37",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH04-DOC08-W001",
+  "technical_document_id": "BATCH04-DOC08",
+  "document_id": "10.陈锐霆 090509（三校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH04-DOC08-S0002",
+    "BATCH04-DOC08-S0003",
+    "BATCH04-DOC08-S0004",
+    "BATCH04-DOC08-S0005",
+    "BATCH04-DOC08-S0006",
+    "BATCH04-DOC08-S0007",
+    "BATCH04-DOC08-S0008",
+    "BATCH04-DOC08-S0009",
+    "BATCH04-DOC08-S0010",
+    "BATCH04-DOC08-S0011",
+    "BATCH04-DOC08-S0012",
+    "BATCH04-DOC08-S0013",
+    "BATCH04-DOC08-S0014",
+    "BATCH04-DOC08-S0015",
+    "BATCH04-DOC08-S0016",
+    "BATCH04-DOC08-S0017",
+    "BATCH04-DOC08-S0018",
+    "BATCH04-DOC08-S0019",
+    "BATCH04-DOC08-S0020",
+    "BATCH04-DOC08-S0021",
+    "BATCH04-DOC08-S0022",
+    "BATCH04-DOC08-S0023",
+    "BATCH04-DOC08-S0024"
+  ],
+  "json_valid": true,
+  "validation_errors": [
+    "events[0].event.evidence_quote不在该事件所列原文片段中",
+    "events[5].event.evidence_quote不在该事件所列原文片段中"
+  ],
+  "technical_passed": false,
+  "metrics": {
+    "event_count": 6,
+    "assigned_segment_count": 11,
+    "unassigned_segment_count": 12,
+    "input_segment_count": 23,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH04-DOC08-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E01",
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0003"
+        ],
+        "event": {
+          "event_name": "陈锐霆因起义负伤获得部队老同志尊重",
+          "event_type": "RELATIONAL",
+          "event_type_zh": "关系",
+          "core_process": "获得尊重",
+          "participants": [
+            {
+              "role": "Carrier",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Attribute",
+              "mention": "很尊重",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "在部队敌我兵力很悬殊的时候起义，另外自己负了重伤",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "虽然我入党的时间比较短一些，另外一个没参加长征，但是底下的老同志们都对我还是很尊重的。因为我在部队敌我兵力很悬殊的时候起义，另外自己负了重伤，所以（他们）对我非常尊敬，跟我的关系处理得都还不错。",
+          "type_basis": "核心是陈锐霆与部队老同志及司令部、政治部、供给部、卫生部之间的相互关系状态，使用Carrier+Attribute；起义负伤作为原因，不单独构成物质事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E02",
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0005"
+        ],
+        "event": {
+          "event_name": "陈锐霆领导军部整风学习",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "领导整风",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Scope",
+              "mention": "整风",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "学习快要结束了",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "军部",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那个时候军部给几个大单位都在整风，学习快要结束了，我就领导整风，我也比较熟悉，在党校的学习就是这一套，在新四军四师也是这一套。",
+          "type_basis": "核心是陈锐霆执行领导整风学习的组织行动，使用Actor+Scope；不是心理或关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E03",
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0005",
+          "BATCH04-DOC08-S0008",
+          "BATCH04-DOC08-S0010"
+        ],
+        "event": {
+          "event_name": "陈锐霆得知日本投降并参加庆祝",
+          "event_type": "MENTAL",
+          "event_type_zh": "心理",
+          "core_process": "得知日本投降并庆祝",
+          "participants": [
+            {
+              "role": "Senser",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Phenomenon",
+              "mention": "日本投降",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "MANNER",
+              "value": "狂欢",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "哎呦，那个时候开大会，庆祝胜利，人们都流泪了！打了八年，他妈！死了那么多的同志！听到日本投降，都是狂欢啊！开大会庆祝嘛，给地方上也做宣传。",
+          "type_basis": "核心是陈锐霆/人们听到日本投降并产生情绪反应，庆祝大会是伴随行动；使用Senser+Phenomenon，排除MATERIAL因为主过程不是物理改变。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E04",
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "event": {
+          "event_name": "陈锐霆被任命为淮阴警备司令",
+          "event_type": "RELATIONAL",
+          "event_type_zh": "关系",
+          "core_process": "担任警备司令",
+          "participants": [
+            {
+              "role": "Carrier",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Attribute",
+              "mention": "警备司令",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "中央来了命令，就要三师调东北去，洪学智同志走了",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "淮阴",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "鬼子投降以后",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "接着三师打下了淮阴，洪学智那个时候是独立旅的旅长，打下淮阴后他（当）的警备司令。鬼子投降以后，打下淮阴来，军部一下子就转到淮阴了。到那里以后，中央来了命令，就要三师调东北去，洪学智同志走了，他的警备司令（一职）由我来担任。",
+          "type_basis": "核心结果是陈锐霆获得淮阴警备司令职务身份，使用Carrier+Attribute；打下淮阴、军部转移是背景行动，不改变关系主导。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E05",
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0012",
+          "BATCH04-DOC08-S0014",
+          "BATCH04-DOC08-S0016"
+        ],
+        "event": {
+          "event_name": "陈锐霆作为先遣代表赴山东汇报并协助安置军部驻地",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "赴山东汇报并搞驻地",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "山东",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Scope",
+              "mention": "汇报",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "黎玉",
+              "normalized_entity": "黎玉",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "临沂的西关，里头有个天主教堂",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "请他帮助搞驻地",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我这淮阴的警备司令也没上任，两个司令都没上任（陈锐霆笑），是命（我）作为一个先遣的代表吧，先到了山东去。山东是黎玉同志在那儿负责，就向他汇报新四军军部的情况，另外部队上来的情况，主要是讲军部的情况，请他帮助搞驻地。我们就住在临沂的西关，里头有个天主教堂，就住在那个地方。",
+          "type_basis": "核心是陈锐霆执行先遣任务：到山东、汇报、请帮助搞驻地，属于组织行动/执行任务；汇报言语是阶段，不是事件整体主导。",
+          "alternative_event_type": "VERBAL",
+          "ambiguity_reason": "“汇报新四军军部的情况”是明确言语交换，但事件核心还包括移动、请帮助搞驻地等组织行动，两类均有依据。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E06",
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0018",
+          "BATCH04-DOC08-S0020",
+          "BATCH04-DOC08-S0022",
+          "BATCH04-DOC08-S0024"
+        ],
+        "event": {
+          "event_name": "陈锐霆参与鲁南停战后接待美国代表并发生讲话交锋",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "接待美国代表并发生讲话交锋",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "陈老总",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "美国的一个代表",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Sayer",
+              "mention": "他们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1月13号以后",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "临沂",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "好好接待",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "没出息，自己打自己；无论如何不能够忘记过去啊，现在我们从战争中（走出来），现在停战了，但是不要忘了过去",
+          "evidence_quote": "但是我们欢迎他（时候），他们讲话里边就是批评我们没出息，自己打自己。最后陈老总接着又讲话，他说无论如何不能够忘记过去啊，他说现在我们从战争中（走出来），现在停战了，但是不要忘了过去。",
+          "type_basis": "核心是欢迎美国代表时的讲话、批评与反驳，属于明确象征交换；使用Sayer+Receiver，接待和演出是伴随阶段。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH04-DOC08-S0002",
+      "BATCH04-DOC08-S0004",
+      "BATCH04-DOC08-S0006",
+      "BATCH04-DOC08-S0007",
+      "BATCH04-DOC08-S0009",
+      "BATCH04-DOC08-S0011",
+      "BATCH04-DOC08-S0013",
+      "BATCH04-DOC08-S0015",
+      "BATCH04-DOC08-S0017",
+      "BATCH04-DOC08-S0019",
+      "BATCH04-DOC08-S0021",
+      "BATCH04-DOC08-S0023"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH04-DOC08-W001\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W001-E01\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0003\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆因起义负伤获得部队老同志尊重\",\n        \"event_type\": \"RELATIONAL\",\n        \"event_type_zh\": \"关系\",\n        \"core_process\": \"获得尊重\",\n        \"participants\": [\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"很尊重\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"在部队敌我兵力很悬殊的时候起义，另外自己负了重伤\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"虽然我入党的时间比较短一些，另外一个没参加长征，但是底下的老同志们都对我还是很尊重的。因为我在部队敌我兵力很悬殊的时候起义，另外自己负了重伤，所以（他们）对我非常尊敬，跟我的关系处理得都还不错。\",\n        \"type_basis\": \"核心是陈锐霆与部队老同志及司令部、政治部、供给部、卫生部之间的相互关系状态，使用Carrier+Attribute；起义负伤作为原因，不单独构成物质事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W001-E02\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0005\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆领导军部整风学习\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"领导整风\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"整风\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"学习快要结束了\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"军部\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那个时候军部给几个大单位都在整风，学习快要结束了，我就领导整风，我也比较熟悉，在党校的学习就是这一套，在新四军四师也是这一套。\",\n        \"type_basis\": \"核心是陈锐霆执行领导整风学习的组织行动，使用Actor+Scope；不是心理或关系。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W001-E03\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0005\",\n        \"BATCH04-DOC08-S0008\",\n        \"BATCH04-DOC08-S0010\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆得知日本投降并参加庆祝\",\n        \"event_type\": \"MENTAL\",\n        \"event_type_zh\": \"心理\",\n        \"core_process\": \"得知日本投降并庆祝\",\n        \"participants\": [\n          {\n            \"role\": \"Senser\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Phenomenon\",\n            \"mention\": \"日本投降\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"狂欢\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"哎呦，那个时候开大会，庆祝胜利，人们都流泪了！打了八年，他妈！死了那么多的同志！听到日本投降，都是狂欢啊！开大会庆祝嘛，给地方上也做宣传。\",\n        \"type_basis\": \"核心是陈锐霆/人们听到日本投降并产生情绪反应，庆祝大会是伴随行动；使用Senser+Phenomenon，排除MATERIAL因为主过程不是物理改变。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W001-E04\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0010\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆被任命为淮阴警备司令\",\n        \"event_type\": \"RELATIONAL\",\n        \"event_type_zh\": \"关系\",\n        \"core_process\": \"担任警备司令\",\n        \"participants\": [\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"警备司令\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"中央来了命令，就要三师调东北去，洪学智同志走了\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"淮阴\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"鬼子投降以后\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"接着三师打下了淮阴，洪学智那个时候是独立旅的旅长，打下淮阴后他（当）的警备司令。鬼子投降以后，打下淮阴来，军部一下子就转到淮阴了。到那里以后，中央来了命令，就要三师调东北去，洪学智同志走了，他的警备司令（一职）由我来担任。\",\n        \"type_basis\": \"核心结果是陈锐霆获得淮阴警备司令职务身份，使用Carrier+Attribute；打下淮阴、军部转移是背景行动，不改变关系主导。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W001-E05\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0012\",\n        \"BATCH04-DOC08-S0014\",\n        \"BATCH04-DOC08-S0016\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆作为先遣代表赴山东汇报并协助安置军部驻地\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"赴山东汇报并搞驻地\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"山东\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"汇报\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"黎玉\",\n            \"normalized_entity\": \"黎玉\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"临沂的西关，里头有个天主教堂\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"请他帮助搞驻地\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我这淮阴的警备司令也没上任，两个司令都没上任（陈锐霆笑），是命（我）作为一个先遣的代表吧，先到了山东去。山东是黎玉同志在那儿负责，就向他汇报新四军军部的情况，另外部队上来的情况，主要是讲军部的情况，请他帮助搞驻地。我们就住在临沂的西关，里头有个天主教堂，就住在那个地方。\",\n        \"type_basis\": \"核心是陈锐霆执行先遣任务：到山东、汇报、请帮助搞驻地，属于组织行动/执行任务；汇报言语是阶段，不是事件整体主导。\",\n        \"alternative_event_type\": \"VERBAL\",\n        \"ambiguity_reason\": \"“汇报新四军军部的情况”是明确言语交换，但事件核心还包括移动、请帮助搞驻地等组织行动，两类均有依据。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W001-E06\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0018\",\n        \"BATCH04-DOC08-S0020\",\n        \"BATCH04-DOC08-S0022\",\n        \"BATCH04-DOC08-S0024\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆参与鲁南停战后接待美国代表并发生讲话交锋\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"接待美国代表并发生讲话交锋\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"陈老总\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"美国的一个代表\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"他们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"1月13号以后\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"临沂\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"好好接待\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"没出息，自己打自己；无论如何不能够忘记过去啊，现在我们从战争中（走出来），现在停战了，但是不要忘了过去\",\n        \"evidence_quote\": \"但是我们欢迎他（时候），他们讲话里边就是批评我们没出息，自己打自己。最后陈老总接着又讲话，他说无论如何不能够忘记过去啊，他说现在我们从战争中（走出来），现在停战了，但是不要忘了过去。\",\n        \"type_basis\": \"核心是欢迎美国代表时的讲话、批评与反驳，属于明确象征交换；使用Sayer+Receiver，接待和演出是伴随阶段。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH04-DOC08-S0002\",\n    \"BATCH04-DOC08-S0004\",\n    \"BATCH04-DOC08-S0006\",\n    \"BATCH04-DOC08-S0007\",\n    \"BATCH04-DOC08-S0009\",\n    \"BATCH04-DOC08-S0011\",\n    \"BATCH04-DOC08-S0013\",\n    \"BATCH04-DOC08-S0015\",\n    \"BATCH04-DOC08-S0017\",\n    \"BATCH04-DOC08-S0019\",\n    \"BATCH04-DOC08-S0021\",\n    \"BATCH04-DOC08-S0023\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5899,
+    "total_tokens": 34750,
+    "completion_tokens": 28851,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 25610
+    },
+    "time_to_first_token_ms": 434471,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 14425000
+  }
+}

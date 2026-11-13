@@ -1,0 +1,109 @@
+{
+  "run_time": "2026-11-12T00:47:52",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC06-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC06-DE008",
+  "usage": {
+    "prompt_tokens": 1357,
+    "total_tokens": 6216,
+    "completion_tokens": 4859,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3635
+    },
+    "tokens_per_second": 4858000,
+    "time_to_first_token_ms": 37506,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC06-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队完成渡江，并接收江阴要塞，随后由政治委员接管要塞军官。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据事件给定片段，起于渡江前敌情与对英舰“紫石英”号的警告，止于过江后接收江阴要塞及政治委员接管要塞军官。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"渡江前，敌军基本撤离，未发生大的战斗，南京解放；20号英舰“紫石英”号驶近三岔口江面，炮三团团长与陈锐霆商量后发炮警告其不要继续前进。\",\n      \"process_text\": \"渡江时敌人基本撤走，没有大的战斗，南京解放；20号“紫石英”号从上海驶来，炮三团团长与陈锐霆商量后警告其不要继续前进，警告炮弹距兵舰数百公尺。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0020\"\n      ],\n      \"evidence_quote\": \"渡江的时候敌人基本上都撤了，没有进行大的战斗，就把南京解放了，南京是国民党那个时候国家的首府嘛。这个时候20号吧，敌人从上海派的一艘兵舰“紫石英”号，要到南京的大使馆保护他们大使馆的人员。到了离镇江不太远，有个三岔口的江面，紫石英号往南走的时候，我们炮三团团长跟我商量了以后，就是警告他，不要继续前进了，我们要过江了嘛。我们警告他的炮弹，离他的兵舰还有好几百公尺。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈锐霆随部队渡江，并回忆自己23号过江，但记不太清楚。\",\n      \"process_text\": \"随后部队渡江；陈锐霆回忆自己23号过江，但记不太清楚。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0017\",\n        \"BATCH06-DOC06-S0032\"\n      ],\n      \"evidence_quote\": \"这以后接着我们就渡江了\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"过江后接收江阴要塞；要塞内有地下党活动，两名团长为党员，炮口对国民党地区；司令被迫起义，约三千人。\",\n      \"process_text\": \"过江就接收江阴要塞；要塞有地下党活动，两个团长是党员，大炮向国民党地区打；司令被迫起义，有三千来人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0032\"\n      ],\n      \"evidence_quote\": \"过江就接收江阴要塞，江阴要塞有我们地下党的活动啊，有两个团长是我们的党员，他们大炮就是向他们自己，向国民党地区打，不向我们这个地方打。他这个司令实际上被迫地起义了，有三千来人嘛。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"政治委员从后方到来，接管江阴要塞的军官。\",\n      \"process_text\": \"一过江就接收要塞，以后政治委员从后边来，接管江阴要塞的军官。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0032\"\n      ],\n      \"evidence_quote\": \"我一过了江就接收这个，以后我们的政治委员从后边来，他就接管这个江阴要塞的军官嘛。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE008-P01\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0017\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE008-P02\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0032\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE008-P03\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE008-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0032\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC06-DE008",
+    "event_enrichment": {
+      "result_state": "部队完成渡江，并接收江阴要塞，随后由政治委员接管要塞军官。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据事件给定片段，起于渡江前敌情与对英舰“紫石英”号的警告，止于过江后接收江阴要塞及政治委员接管要塞军官。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC06-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "渡江前，敌军基本撤离，未发生大的战斗，南京解放；20号英舰“紫石英”号驶近三岔口江面，炮三团团长与陈锐霆商量后发炮警告其不要继续前进。",
+        "process_text": "渡江时敌人基本撤走，没有大的战斗，南京解放；20号“紫石英”号从上海驶来，炮三团团长与陈锐霆商量后警告其不要继续前进，警告炮弹距兵舰数百公尺。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0020"
+        ],
+        "evidence_quote": "渡江的时候敌人基本上都撤了，没有进行大的战斗，就把南京解放了，南京是国民党那个时候国家的首府嘛。这个时候20号吧，敌人从上海派的一艘兵舰“紫石英”号，要到南京的大使馆保护他们大使馆的人员。到了离镇江不太远，有个三岔口的江面，紫石英号往南走的时候，我们炮三团团长跟我商量了以后，就是警告他，不要继续前进了，我们要过江了嘛。我们警告他的炮弹，离他的兵舰还有好几百公尺。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "陈锐霆随部队渡江，并回忆自己23号过江，但记不太清楚。",
+        "process_text": "随后部队渡江；陈锐霆回忆自己23号过江，但记不太清楚。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0017",
+          "BATCH06-DOC06-S0032"
+        ],
+        "evidence_quote": "这以后接着我们就渡江了",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "过江后接收江阴要塞；要塞内有地下党活动，两名团长为党员，炮口对国民党地区；司令被迫起义，约三千人。",
+        "process_text": "过江就接收江阴要塞；要塞有地下党活动，两个团长是党员，大炮向国民党地区打；司令被迫起义，有三千来人。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0032"
+        ],
+        "evidence_quote": "过江就接收江阴要塞，江阴要塞有我们地下党的活动啊，有两个团长是我们的党员，他们大炮就是向他们自己，向国民党地区打，不向我们这个地方打。他这个司令实际上被迫地起义了，有三千来人嘛。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "政治委员从后方到来，接管江阴要塞的军官。",
+        "process_text": "一过江就接收要塞，以后政治委员从后边来，接管江阴要塞的军官。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0032"
+        ],
+        "evidence_quote": "我一过了江就接收这个，以后我们的政治委员从后边来，他就接管这个江阴要塞的军官嘛。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC06-DE008-P01",
+        "target_stage_id": "BATCH06-DOC06-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0017",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE008-P02",
+        "target_stage_id": "BATCH06-DOC06-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0032",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE008-P03",
+        "target_stage_id": "BATCH06-DOC06-DE008-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0032",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

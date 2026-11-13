@@ -1,0 +1,147 @@
+{
+  "run_time": "2026-11-11T13:13:35",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC01-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC01-DE005",
+  "usage": {
+    "prompt_tokens": 2261,
+    "total_tokens": 10716,
+    "completion_tokens": 8455,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6628
+    },
+    "time_to_first_token_ms": 65225,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8454000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V1-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC01-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰以副站长身份实际领导十几个情报站，在常州周边及城内据点附近形成情报网络，开展敌军动态监视、地形侦察和对汉奸维持会长的镇压与争取，并获取日伪扫荡情报以做准备。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈海峰介绍抗日情报站和澄西抗日情报总站、陈剑雄任站长为起点，到其说明情报站监视敌军调动、便于战斗抗日及乡绅支援经费为终点；中间包含任副站长、指挥情报站、侦察与锄奸等过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"介绍澄西抗日情报总站的建立背景：情报站由江抗侦察参谋领导，在家乡利用亲戚、朋友、同学等可靠关系建立，陈剑雄任总站站长。\",\n      \"process_text\": \"抗日情报站由江抗侦察参谋领导，在家乡利用亲戚、要好的朋友和同学等可靠关系建立，逐步发展地下党；总站为澄西抗日情报总站，陈剑雄任站长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0028\"\n      ],\n      \"evidence_quote\": \"抗日情报总站叫澄西抗日情报总站，站长就是江抗三路司令部的侦察参谋，我那个哥哥叫陈剑雄。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈海峰任澄西抗日情报总站副站长，实际指挥十几个情报站；情报站分布在常州周围及城内、日军据点附近。\",\n      \"process_text\": \"陈剑雄接总站站长，我任副站长，指挥十几个情报站；情报站遍布常州周围，城内和日军据点附近也设站。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0030\",\n        \"BATCH01-DOC01-S0032\"\n      ],\n      \"evidence_quote\": \"陈剑雄呢，他接总站站长，我是副站长，我就指挥十几个情报站。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"明确情报站任务：监视范围内敌军动态，掌握日伪军增减、活动规律、装备和碉堡人数，绘制地形图，并掌握汉奸、维持会长向据点汇报的情况。\",\n      \"process_text\": \"目标不同，任务有几条，第一是监视范围内敌军动态；还要掌握日伪军增减、活动规律、装备、碉堡人数，画地形图，掌握汉奸和维持会长汇报情况。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0036\",\n        \"BATCH01-DOC01-S0038\"\n      ],\n      \"evidence_quote\": \"目标不同，他任务是几条，第一就是监视他这个范围（内）敌军的动态。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"对汉奸和维持会长实施镇压：派武装侦察员或武工队，尽量少用枪弹，夜间到其家中绑走并投入河中；罪恶多者镇压。\",\n      \"process_text\": \"对汉奸维持会长，有时派武装侦察员（后来的武工队）镇压，尽量少用枪和子弹；晚上到他家里绑走，捆上绳子、绑上石头扔到河里；罪恶多的就镇压。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0038\",\n        \"BATCH01-DOC01-S0040\"\n      ],\n      \"evidence_quote\": \"干掉他，尽量少用枪，少用子弹。有的时候，晚上到他家里去，讲得不好听，像绑架一样地绑来，把他绳子一捆，石头一弄，就扔到河里去。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE005-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"对可争取的汉奸维持会长进行教育争取，使其成为两面派，表面应付日伪、心向中国，并为我方送情报。\",\n      \"process_text\": \"有的能够争取的，就争取他做两面派，教育他表面应付日伪但心是红的，是中国人，争取他送情报。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0040\"\n      ],\n      \"evidence_quote\": \"有的能够争取的，我们就争取，争取他做两面派，你对日本鬼子白的黑的，但你心应该是红的，你是中国人，教育他。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE005-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"通过两面派维持会长等渠道获取日伪增兵和扫荡计划，提前做准备；维持会长有红心、黑心等多种；抗日乡绅支援抗日经费。\",\n      \"process_text\": \"通过两面派维持会长等渠道获知日伪增兵和扫荡计划，提前做准备；维持会长有红心、黑心等多种；抗日乡绅支援抗日经费。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0042\"\n      ],\n      \"evidence_quote\": \"这边增加了，鬼子来了，得到伪军连长枪（音）了，他说日本鬼子要扫荡，准备调多少部队来，扫荡哪些地方，我们就知道了，我们就做准备。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE005-P01\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0030\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE005-P02\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE005-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0036\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE005-P03\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE005-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0038\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE005-P04\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE005-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0040\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE005-P05\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE005-P06\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0042\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC01-DE005",
+    "event_enrichment": {
+      "result_state": "陈海峰以副站长身份实际领导十几个情报站，在常州周边及城内据点附近形成情报网络，开展敌军动态监视、地形侦察和对汉奸维持会长的镇压与争取，并获取日伪扫荡情报以做准备。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以陈海峰介绍抗日情报站和澄西抗日情报总站、陈剑雄任站长为起点，到其说明情报站监视敌军调动、便于战斗抗日及乡绅支援经费为终点；中间包含任副站长、指挥情报站、侦察与锄奸等过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC01-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "介绍澄西抗日情报总站的建立背景：情报站由江抗侦察参谋领导，在家乡利用亲戚、朋友、同学等可靠关系建立，陈剑雄任总站站长。",
+        "process_text": "抗日情报站由江抗侦察参谋领导，在家乡利用亲戚、要好的朋友和同学等可靠关系建立，逐步发展地下党；总站为澄西抗日情报总站，陈剑雄任站长。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0028"
+        ],
+        "evidence_quote": "抗日情报总站叫澄西抗日情报总站，站长就是江抗三路司令部的侦察参谋，我那个哥哥叫陈剑雄。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "陈海峰任澄西抗日情报总站副站长，实际指挥十几个情报站；情报站分布在常州周围及城内、日军据点附近。",
+        "process_text": "陈剑雄接总站站长，我任副站长，指挥十几个情报站；情报站遍布常州周围，城内和日军据点附近也设站。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0030",
+          "BATCH01-DOC01-S0032"
+        ],
+        "evidence_quote": "陈剑雄呢，他接总站站长，我是副站长，我就指挥十几个情报站。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "明确情报站任务：监视范围内敌军动态，掌握日伪军增减、活动规律、装备和碉堡人数，绘制地形图，并掌握汉奸、维持会长向据点汇报的情况。",
+        "process_text": "目标不同，任务有几条，第一是监视范围内敌军动态；还要掌握日伪军增减、活动规律、装备、碉堡人数，画地形图，掌握汉奸和维持会长汇报情况。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0036",
+          "BATCH01-DOC01-S0038"
+        ],
+        "evidence_quote": "目标不同，他任务是几条，第一就是监视他这个范围（内）敌军的动态。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "对汉奸和维持会长实施镇压：派武装侦察员或武工队，尽量少用枪弹，夜间到其家中绑走并投入河中；罪恶多者镇压。",
+        "process_text": "对汉奸维持会长，有时派武装侦察员（后来的武工队）镇压，尽量少用枪和子弹；晚上到他家里绑走，捆上绳子、绑上石头扔到河里；罪恶多的就镇压。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0038",
+          "BATCH01-DOC01-S0040"
+        ],
+        "evidence_quote": "干掉他，尽量少用枪，少用子弹。有的时候，晚上到他家里去，讲得不好听，像绑架一样地绑来，把他绳子一捆，石头一弄，就扔到河里去。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE005-P05",
+        "stage_order": 5,
+        "stage_summary": "对可争取的汉奸维持会长进行教育争取，使其成为两面派，表面应付日伪、心向中国，并为我方送情报。",
+        "process_text": "有的能够争取的，就争取他做两面派，教育他表面应付日伪但心是红的，是中国人，争取他送情报。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0040"
+        ],
+        "evidence_quote": "有的能够争取的，我们就争取，争取他做两面派，你对日本鬼子白的黑的，但你心应该是红的，你是中国人，教育他。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE005-P06",
+        "stage_order": 6,
+        "stage_summary": "通过两面派维持会长等渠道获取日伪增兵和扫荡计划，提前做准备；维持会长有红心、黑心等多种；抗日乡绅支援抗日经费。",
+        "process_text": "通过两面派维持会长等渠道获知日伪增兵和扫荡计划，提前做准备；维持会长有红心、黑心等多种；抗日乡绅支援抗日经费。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0042"
+        ],
+        "evidence_quote": "这边增加了，鬼子来了，得到伪军连长枪（音）了，他说日本鬼子要扫荡，准备调多少部队来，扫荡哪些地方，我们就知道了，我们就做准备。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC01-DE005-P01",
+        "target_stage_id": "BATCH01-DOC01-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC01-S0030",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE005-P02",
+        "target_stage_id": "BATCH01-DOC01-DE005-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH01-DOC01-S0036",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE005-P03",
+        "target_stage_id": "BATCH01-DOC01-DE005-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC01-S0038",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE005-P04",
+        "target_stage_id": "BATCH01-DOC01-DE005-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC01-S0040",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE005-P05",
+        "target_stage_id": "BATCH01-DOC01-DE005-P06",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH01-DOC01-S0042",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

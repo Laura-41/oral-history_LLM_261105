@@ -1,0 +1,127 @@
+{
+  "run_time": "2026-11-11T23:13:57",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC03-DE009",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC03-DE009",
+  "usage": {
+    "prompt_tokens": 1659,
+    "total_tokens": 10205,
+    "completion_tokens": 8546,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7093
+    },
+    "time_to_first_token_ms": 76896,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8545000
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC03-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"新团部与政治处已组织起来，张仁初任团长，团领导多为新配；留在杨勇处的部分另组织相当于旅一级的司令部、政治部，并留一个营准备扩编。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以686团分散掩护师部、杨勇把团部大部分留在自己处为起因，涵盖临时组织团机关、任命团长、组织新团部与政治处、配备新团领导，以及分编后另一部分另组指挥机构并准备扩编；止于准备扩编的叙述。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"686团分散掩护师部，杨勇把团部大部分留在自己处，形成临时组织团机关的动因。\",\n      \"process_text\": \"686团分散在几个方面掩护师部；杨勇把团部大部分留在自己那里，因此需要临时组织团的机关。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0056\"\n      ],\n      \"evidence_quote\": \"686团就分散在几个方面来掩护师部，因为686团本身，因为（杨勇是）它这个团长，他也把团部的大部分留在杨勇那里了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"临时组织团的机关，安排四个教导员职务，刘西元任政委，覃士冕任政治主任并设副主任。\",\n      \"process_text\": \"临时组织团的机关，四个教导员都安排了职务，刘西元当了政委，覃士冕任政治主任，另有副主任。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0056\"\n      ],\n      \"evidence_quote\": \"他这里要临时组织团的机关，四个教导员，刘西元当了政委，还有什么人呢？政治主任覃士冕，还有一个副主任，还有一个……反正四个教导员都安排了职务。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"任命团长，组织新的团部与政治处，团长为张仁初。\",\n      \"process_text\": \"任命团长，组织新的团部，组织政治处，团长是张仁初。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0059\",\n        \"BATCH04-DOC03-S0061\"\n      ],\n      \"evidence_quote\": \"组织新的团部，组织政治处，团长是张仁初\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE009-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"配备新的团领导，营教导员和直属队教导员被提升为团政委、副政委、政治主任、副主任等职。\",\n      \"process_text\": \"团的政委、副政委、政治主任、副主任等由营教导员和直属队教导员提升，团领导都是新的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0063\"\n      ],\n      \"evidence_quote\": \"他这个团的政委、副政委、政治主任、副主任，刘西元是营教导员，覃士冕是营教导员，还有一个直属队的教导员，都提了。所以这个团作为团部来说，它团的领导都是新的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE009-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"分编后留在杨勇处的部分另组织相当于旅一级的司令部、政治部，留一个营并组织小团机关，准备扩编。\",\n      \"process_text\": \"在那边组织相当于旅一级的司令部、政治部；留一个营，组织小的团机关，准备扩大部队后慢慢扩编，正规化后编成一个团。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0065\"\n      ],\n      \"evidence_quote\": \"他在那边就组织一个相当于旅一级的司令部、政治部了。他这一个营留在那里，他实际上也组织了小的团的机关，他准备这个营扩大部队以后，慢慢就扩编了。正规化以后编成一个团。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE009-P01\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0056\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE009-P02\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE009-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0061\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE009-P03\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE009-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0063\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE009-P04\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE009-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0065\",\n      \"confidence\": \"LOW\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC03-DE009",
+    "event_enrichment": {
+      "result_state": "新团部与政治处已组织起来，张仁初任团长，团领导多为新配；留在杨勇处的部分另组织相当于旅一级的司令部、政治部，并留一个营准备扩编。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以686团分散掩护师部、杨勇把团部大部分留在自己处为起因，涵盖临时组织团机关、任命团长、组织新团部与政治处、配备新团领导，以及分编后另一部分另组指挥机构并准备扩编；止于准备扩编的叙述。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC03-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "686团分散掩护师部，杨勇把团部大部分留在自己处，形成临时组织团机关的动因。",
+        "process_text": "686团分散在几个方面掩护师部；杨勇把团部大部分留在自己那里，因此需要临时组织团的机关。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0056"
+        ],
+        "evidence_quote": "686团就分散在几个方面来掩护师部，因为686团本身，因为（杨勇是）它这个团长，他也把团部的大部分留在杨勇那里了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "临时组织团的机关，安排四个教导员职务，刘西元任政委，覃士冕任政治主任并设副主任。",
+        "process_text": "临时组织团的机关，四个教导员都安排了职务，刘西元当了政委，覃士冕任政治主任，另有副主任。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0056"
+        ],
+        "evidence_quote": "他这里要临时组织团的机关，四个教导员，刘西元当了政委，还有什么人呢？政治主任覃士冕，还有一个副主任，还有一个……反正四个教导员都安排了职务。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "任命团长，组织新的团部与政治处，团长为张仁初。",
+        "process_text": "任命团长，组织新的团部，组织政治处，团长是张仁初。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0059",
+          "BATCH04-DOC03-S0061"
+        ],
+        "evidence_quote": "组织新的团部，组织政治处，团长是张仁初",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE009-P04",
+        "stage_order": 4,
+        "stage_summary": "配备新的团领导，营教导员和直属队教导员被提升为团政委、副政委、政治主任、副主任等职。",
+        "process_text": "团的政委、副政委、政治主任、副主任等由营教导员和直属队教导员提升，团领导都是新的。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0063"
+        ],
+        "evidence_quote": "他这个团的政委、副政委、政治主任、副主任，刘西元是营教导员，覃士冕是营教导员，还有一个直属队的教导员，都提了。所以这个团作为团部来说，它团的领导都是新的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE009-P05",
+        "stage_order": 5,
+        "stage_summary": "分编后留在杨勇处的部分另组织相当于旅一级的司令部、政治部，留一个营并组织小团机关，准备扩编。",
+        "process_text": "在那边组织相当于旅一级的司令部、政治部；留一个营，组织小的团机关，准备扩大部队后慢慢扩编，正规化后编成一个团。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0065"
+        ],
+        "evidence_quote": "他在那边就组织一个相当于旅一级的司令部、政治部了。他这一个营留在那里，他实际上也组织了小的团的机关，他准备这个营扩大部队以后，慢慢就扩编了。正规化以后编成一个团。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC03-DE009-P01",
+        "target_stage_id": "BATCH04-DOC03-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0056",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE009-P02",
+        "target_stage_id": "BATCH04-DOC03-DE009-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0061",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE009-P03",
+        "target_stage_id": "BATCH04-DOC03-DE009-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC03-S0063",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE009-P04",
+        "target_stage_id": "BATCH04-DOC03-DE009-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0065",
+        "confidence": "LOW"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

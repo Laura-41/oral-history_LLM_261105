@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T23:19:09",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC04-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC04-DE005",
+  "usage": {
+    "prompt_tokens": 1250,
+    "total_tokens": 5479,
+    "completion_tokens": 4229,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3318
+    },
+    "time_to_first_token_ms": 37793,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4228000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC04-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"邓子恢要求陈锐霆留下聊一聊、讲一讲情况，并明确湖西不用去、由他回去向彭师长讲；陈锐霆原拟向师部汇报党校学习情况的安排被口头调整。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于邓子恢在四师检查工作时向陈锐霆提出留下聊情况，止于其表示湖西不用去、由他回告彭师长；前文电报与到四师作为背景，后文同行叙述不纳入本事件核心。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆因新四军电报要求回去而到四师，原计划过洪泽湖到西边向师部汇报党校学习情况。\",\n      \"process_text\": \"新四军打电报要陈锐霆回去，他到了四师；本来打算过洪泽湖到西边向师部汇报党校学习情况。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0039\"\n      ],\n      \"evidence_quote\": \"这个时候新四军打电报非要（把我）要回去，我就到了四师。我本来想过洪泽湖到西边去给师部汇报一下党校学习的情况。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"邓子恢当时在新四军四师检查工作，并具有淮北地区党委书记和新四军政治委员身份。\",\n      \"process_text\": \"邓子恢在新四军四师检查工作，是淮北地区的党委书记，又是新四军的政治委员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0041\"\n      ],\n      \"evidence_quote\": \"这个时候新四军四师的政委邓子恢，在那个地方检查工作。他是淮北地区的党委书记，又是新四军的政治委员。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"邓子恢当面对陈锐霆提出留下聊一聊、讲一讲情况，并说湖西不要去了，由自己回去向彭师长讲。\",\n      \"process_text\": \"邓子恢对陈锐霆说，自己在这里，让他聊一聊、讲一讲情况，湖西不要去了，自己回去向彭师长讲。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0041\"\n      ],\n      \"evidence_quote\": \"他说我在这儿，你给我聊一聊，讲一讲你们的情况，湖西就不要去了，我回去给彭师长讲一讲。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE005-P01\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0041\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE005-P02\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE005-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0041\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC04-DE005",
+    "event_enrichment": {
+      "result_state": "邓子恢要求陈锐霆留下聊一聊、讲一讲情况，并明确湖西不用去、由他回去向彭师长讲；陈锐霆原拟向师部汇报党校学习情况的安排被口头调整。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于邓子恢在四师检查工作时向陈锐霆提出留下聊情况，止于其表示湖西不用去、由他回告彭师长；前文电报与到四师作为背景，后文同行叙述不纳入本事件核心。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC04-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆因新四军电报要求回去而到四师，原计划过洪泽湖到西边向师部汇报党校学习情况。",
+        "process_text": "新四军打电报要陈锐霆回去，他到了四师；本来打算过洪泽湖到西边向师部汇报党校学习情况。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0039"
+        ],
+        "evidence_quote": "这个时候新四军打电报非要（把我）要回去，我就到了四师。我本来想过洪泽湖到西边去给师部汇报一下党校学习的情况。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "邓子恢当时在新四军四师检查工作，并具有淮北地区党委书记和新四军政治委员身份。",
+        "process_text": "邓子恢在新四军四师检查工作，是淮北地区的党委书记，又是新四军的政治委员。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0041"
+        ],
+        "evidence_quote": "这个时候新四军四师的政委邓子恢，在那个地方检查工作。他是淮北地区的党委书记，又是新四军的政治委员。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "邓子恢当面对陈锐霆提出留下聊一聊、讲一讲情况，并说湖西不要去了，由自己回去向彭师长讲。",
+        "process_text": "邓子恢对陈锐霆说，自己在这里，让他聊一聊、讲一讲情况，湖西不要去了，自己回去向彭师长讲。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0041"
+        ],
+        "evidence_quote": "他说我在这儿，你给我聊一聊，讲一讲你们的情况，湖西就不要去了，我回去给彭师长讲一讲。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC04-DE005-P01",
+        "target_stage_id": "BATCH04-DOC04-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC04-S0041",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC04-DE005-P02",
+        "target_stage_id": "BATCH04-DOC04-DE005-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC04-S0041",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

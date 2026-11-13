@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T22:37:09",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE014",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE014",
+  "usage": {
+    "prompt_tokens": 1219,
+    "total_tokens": 5331,
+    "completion_tokens": 4112,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3272
+    },
+    "time_to_first_token_ms": 43741,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE014\",\n  \"event_enrichment\": {\n    \"result_state\": \"115师到达鲁西地区并在该地停留\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以反扫荡后决定继续东进、经总部批准为起点，以夜过平汉路和卫河、到达鲁西地区为终点；不展开此前阻击与反扫荡战斗。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE014-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"反扫荡后决定继续东进，经总部批准从东南大山走出，到黎城附近集结整顿数日\",\n      \"process_text\": \"115师继续执行东进任务，经总部批准从东南边大山走出，到黎城附近集结整顿了几天。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0080\"\n      ],\n      \"evidence_quote\": \"这时候我们115师应该就继续执行我们东进的任务了。经过总部的批准，我们就从东南边，从大山里走出去，走到黎城附近，没在城里，在那集结了几天。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE014-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"整顿后出东阳关往东，通过铁路继续东进\",\n      \"process_text\": \"整顿了几天以后，出东阳关往东，通过铁路继续东进。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0080\"\n      ],\n      \"evidence_quote\": \"整顿了几天以后，出东阳关往东，通过铁路，就到了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE014-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"经鹤壁镇夜过平汉路，再过卫河，从武林镇过卫河，到达鲁西地区\",\n      \"process_text\": \"经鹤壁镇，夜过平汉路，再过卫河，从武林镇（音）过卫河，到达鲁西地区。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0081\"\n      ],\n      \"evidence_quote\": \"鹤壁镇。鹤壁还有铁路通到平汉线上，鹤壁是一个矿，所以我们夜过平汉，再过卫河，从武林镇（音）过的卫河，就到了鲁西地区，在那里。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE014-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE014-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0080\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE014-P02\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE014-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0081\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE014",
+    "event_enrichment": {
+      "result_state": "115师到达鲁西地区并在该地停留",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以反扫荡后决定继续东进、经总部批准为起点，以夜过平汉路和卫河、到达鲁西地区为终点；不展开此前阻击与反扫荡战斗。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE014-P01",
+        "stage_order": 1,
+        "stage_summary": "反扫荡后决定继续东进，经总部批准从东南大山走出，到黎城附近集结整顿数日",
+        "process_text": "115师继续执行东进任务，经总部批准从东南边大山走出，到黎城附近集结整顿了几天。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0080"
+        ],
+        "evidence_quote": "这时候我们115师应该就继续执行我们东进的任务了。经过总部的批准，我们就从东南边，从大山里走出去，走到黎城附近，没在城里，在那集结了几天。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE014-P02",
+        "stage_order": 2,
+        "stage_summary": "整顿后出东阳关往东，通过铁路继续东进",
+        "process_text": "整顿了几天以后，出东阳关往东，通过铁路继续东进。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0080"
+        ],
+        "evidence_quote": "整顿了几天以后，出东阳关往东，通过铁路，就到了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE014-P03",
+        "stage_order": 3,
+        "stage_summary": "经鹤壁镇夜过平汉路，再过卫河，从武林镇过卫河，到达鲁西地区",
+        "process_text": "经鹤壁镇，夜过平汉路，再过卫河，从武林镇（音）过卫河，到达鲁西地区。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0081"
+        ],
+        "evidence_quote": "鹤壁镇。鹤壁还有铁路通到平汉线上，鹤壁是一个矿，所以我们夜过平汉，再过卫河，从武林镇（音）过的卫河，就到了鲁西地区，在那里。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE014-P01",
+        "target_stage_id": "BATCH03-DOC06-DE014-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0080",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE014-P02",
+        "target_stage_id": "BATCH03-DOC06-DE014-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0081",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

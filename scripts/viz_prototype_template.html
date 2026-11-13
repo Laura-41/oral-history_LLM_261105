@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>口述史图谱 · 交互原型</title>
+<style>
+:root{
+  --paper:#F6F1E7; --surface:#FBF8F1; --surface2:#F1E9DA; --ink:#221E19;
+  --muted:#6B6257; --faint:#9A9082; --seal:#973E31; --scroll:#EEE1C8;
+  --line:rgba(34,30,25,.14); --line2:rgba(34,30,25,.28);
+  --oral:#973E31; --editorial:#5A6B7A; --interviewer:#8A8172;
+  --ok:#3F6B4F; --warn:#A8712A;
+}
+body.night{
+  --paper:#1B1916; --surface:#23201C; --surface2:#2C2822; --ink:#EDE6D6;
+  --muted:#ADA393; --faint:#7E766A; --seal:#C4634F; --scroll:#2E2A24;
+  --line:rgba(237,230,214,.15); --line2:rgba(237,230,214,.3);
+  --oral:#D0806B; --editorial:#8FA8BA; --interviewer:#A79E8E;
+  --ok:#85B492; --warn:#D6A85E;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:13px; line-height:1.6;
+}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+.serif{font-family:"Noto Serif SC","Songti SC","STSong","SimSun",serif}
+.topbar{
+  height:62px;display:flex;align-items:center;gap:24px;padding:0 22px;
+  border-bottom:1px solid var(--line);background:var(--surface);
+}
+.brand{display:flex;align-items:center;gap:11px;min-width:210px}
+.seal{
+  width:34px;height:34px;background:var(--seal);color:#fff;border-radius:3px;
+  display:flex;align-items:center;justify-content:center;font-size:19px;
+  font-family:"STKaiti","Kaiti SC",serif;transform:rotate(-4deg);flex:none;
+}
+.brand-zh{font-size:16px;font-weight:600;letter-spacing:2px;line-height:1.2}
+.brand-en{font-size:10px;color:var(--faint);letter-spacing:1.2px;margin-top:2px}
+.tabs{display:flex;gap:4px;flex:1}
+.tab{
+  background:transparent;border:0;border-bottom:2px solid transparent;
+  padding:19px 16px 17px;color:var(--muted);font-size:13px;letter-spacing:1px;
+}
+.tab:hover{color:var(--ink)}
+.tab.active{color:var(--seal);border-bottom-color:var(--seal);font-weight:600}
+.topright{display:flex;align-items:center;gap:8px}
+.scope-badge{
+  font-size:11px;color:var(--muted);border:1px solid var(--line);
+  padding:4px 9px;border-radius:20px;white-space:nowrap;
+}
+.ghost{
+  background:transparent;border:1px solid var(--line2);border-radius:4px;
+  padding:5px 11px;font-size:12px;color:var(--muted);white-space:nowrap;
+}
+.ghost:hover{border-color:var(--seal);color:var(--seal)}
+.ghost.subtle{border-style:dashed}
+.ghost.on{background:var(--seal);color:#fff;border-color:var(--seal)}
+main{height:calc(100% - 62px - 30px);overflow:hidden}
+.view{display:none;height:100%}
+.view.active{display:block}
+#view-trajectory.active{display:grid;grid-template-columns:224px minmax(0,1fr) 348px}
+.panel{background:var(--surface);overflow-y:auto;height:100%}
+.doclist{border-right:1px solid var(--line)}
+.evidence-panel{border-left:1px solid var(--line)}
+.panel-pad{padding:16px}
+.traj-main{overflow-y:auto;height:100%;padding:18px 22px 40px}
+.panel-title{
+  font-size:11px;letter-spacing:2px;color:var(--faint);margin:0 0 12px;
+  text-transform:uppercase;
+}
+.doc-group{margin-bottom:14px}
+.doc-group-label{
+  font-size:11px;color:var(--faint);padding:0 16px 5px;letter-spacing:1px;
+}
+.doc-item{
+  display:block;width:100%;text-align:left;border:0;background:transparent;
+  padding:9px 16px;border-left:3px solid transparent;color:var(--ink);
+}
+.doc-item:hover{background:var(--surface2)}
+.doc-item.active{background:var(--surface2);border-left-color:var(--seal)}
+.doc-item .t{font-size:13px;font-weight:500}
+.doc-item .m{font-size:11px;color:var(--faint);margin-top:2px}
+.doc-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+.doc-head h1{font-size:23px;margin:0;font-weight:500;letter-spacing:1px}
+.doc-head .sub{font-size:12px;color:var(--muted);margin-top:4px}
+.meta-chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{
+  display:inline-flex;align-items:center;gap:4px;font-size:11px;
+  border:1px solid var(--line);border-radius:3px;padding:3px 8px;color:var(--muted);
+  background:var(--surface);
+}
+.chip.ok{border-color:var(--ok);color:var(--ok)}
+.chip.solid{border-color:var(--seal);color:var(--seal)}
+.chip b{font-weight:600}
+.askbar{display:flex;gap:8px;margin-bottom:8px}
+.askbar input{
+  flex:1;background:var(--surface);border:1px solid var(--line2);border-radius:4px;
+  padding:9px 12px;outline:none;min-width:0;
+}
+.askbar input:focus{border-color:var(--seal)}
+.askbar button{
+  background:var(--seal);color:#fff;border:0;border-radius:4px;padding:0 18px;white-space:nowrap;
+}
+.ask-hint{font-size:11px;color:var(--faint);margin-bottom:12px}
+.slots{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;min-height:0}
+.slot{
+  display:inline-flex;align-items:center;gap:6px;background:var(--surface2);
+  border:1px solid var(--line);border-radius:20px;padding:3px 6px 3px 10px;font-size:11px;
+}
+.slot .k{color:var(--faint)}
+.slot button{border:0;background:transparent;color:var(--faint);font-size:13px;line-height:1;padding:0 2px}
+.slot button:hover{color:var(--seal)}
+.query-echo{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;
+  color:var(--faint);background:var(--surface2);border-radius:3px;padding:5px 9px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.orderbar{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:9px 0;margin-bottom:14px;flex-wrap:wrap;
+}
+.order-tabs{display:flex;gap:4px}
+.order-tabs button{
+  background:transparent;border:1px solid transparent;border-radius:3px;
+  padding:5px 13px;font-size:12px;color:var(--muted);
+}
+.order-tabs button.active{background:var(--seal);color:#fff}
+.order-tools{display:flex;align-items:center;gap:10px}
+.order-hint{font-size:11px;color:var(--faint)}
+.bump-wrap{background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:10px 14px;margin-bottom:14px}
+.bump-wrap[hidden]{display:none}
+.bump-head{font-size:11px;color:var(--muted);margin-bottom:4px}
+.event-track{position:relative;padding-left:20px}
+.event-track:before{
+  content:'';position:absolute;left:5px;top:14px;bottom:14px;width:1px;background:var(--line2);
+}
+.event-card{
+  position:relative;background:var(--surface);border:1px solid var(--line);
+  border-radius:5px;padding:12px 15px;margin-bottom:10px;cursor:pointer;
+  transition:border-color .15s,transform .15s;
+}
+.event-card:hover{border-color:var(--seal);transform:translateX(2px)}
+.event-card.selected{border-color:var(--seal);box-shadow:inset 3px 0 0 var(--seal)}
+.event-card.backjump{border-left:3px solid var(--seal)}
+.event-card:before{
+  content:'';position:absolute;left:-19px;top:20px;width:9px;height:9px;
+  border-radius:50%;background:var(--surface);border:2px solid var(--line2);
+}
+.event-card.selected:before,.event-card.backjump:before{background:var(--seal);border-color:var(--seal)}
+.ec-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.ec-name{font-size:14px;font-weight:500;line-height:1.45}
+.ec-orders{font-size:10.5px;color:var(--faint);white-space:nowrap;margin-top:3px}
+.ec-meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
+.ec-back{margin-top:7px;font-size:11.5px;color:var(--seal);line-height:1.5}
+.ec-back:before{content:'↩ ';font-size:13px}
+.badge{font-size:10.5px;border-radius:2px;padding:1px 6px;border:1px solid var(--line);color:var(--muted)}
+.badge.oral{color:var(--oral);border-color:var(--oral)}
+.badge.editorial{color:var(--editorial);border-color:var(--editorial)}
+.badge.interviewer{color:var(--interviewer);border-color:var(--interviewer)}
+.badge.confirmed{color:var(--ok);border-color:var(--ok)}
+.badge.candidate{color:var(--warn);border-color:var(--warn)}
+.badge.review{color:var(--seal);border-color:var(--seal)}
+.empty{padding:26px 14px;color:var(--faint);font-size:12px;text-align:center}
+.ev-head{padding:16px 16px 12px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--surface);z-index:2}
+.ev-head h2{font-size:15px;margin:0 0 6px;font-weight:500;line-height:1.5}
+.ev-body{padding:14px 16px 40px}
+.ev-sec{margin-bottom:18px}
+.ev-sec h3{
+  font-size:11px;letter-spacing:1.5px;color:var(--faint);margin:0 0 8px;
+  border-bottom:1px solid var(--line);padding-bottom:5px;font-weight:500;
+}
+.ev-text{font-size:12.5px;line-height:1.75;color:var(--ink)}
+.ev-muted{font-size:11.5px;color:var(--muted);line-height:1.7}
+.kv{display:grid;grid-template-columns:70px 1fr;gap:5px 8px;font-size:12px}
+.kv .k{color:var(--faint)}
+.stage-chain{border-left:2px solid var(--scroll);padding-left:12px;margin-left:3px}
+.stage-item{position:relative;padding:0 0 12px}
+.stage-item:last-child{padding-bottom:0}
+.stage-item:before{
+  content:'';position:absolute;left:-17px;top:6px;width:7px;height:7px;
+  border-radius:50%;background:var(--scroll);border:1px solid var(--line2);
+}
+.stage-item .sn{font-size:10.5px;color:var(--faint)}
+.stage-item .ss{font-size:12.5px;font-weight:500}
+.stage-item .sp{font-size:11.5px;color:var(--muted)}
+.quote{
+  background:var(--surface2);border-left:2px solid var(--scroll);
+  padding:9px 11px;margin-bottom:8px;border-radius:0 3px 3px 0;font-size:12.5px;line-height:1.8;
+}
+.quote .qh{font-size:10.5px;color:var(--faint);margin-bottom:5px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.quote mark{background:rgba(151,62,49,.16);color:inherit;padding:0 1px;border-radius:2px}
+body.night .quote mark{background:rgba(196,99,79,.28)}
+.quote-body{max-height:150px;overflow-y:auto;white-space:pre-wrap;word-break:break-all}
+.mini-link{font-size:11px;color:var(--seal);background:transparent;border:0;padding:0;text-decoration:underline}
+#view-cross.active,#view-evidence.active,#view-research.active{display:flex;flex-direction:column}
+.cross-head{padding:14px 22px 12px;border-bottom:1px solid var(--line);background:var(--surface)}
+.facet-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px}
+.facet-tabs button{
+  background:transparent;border:1px solid var(--line2);border-radius:3px;
+  padding:5px 12px;font-size:12px;color:var(--muted);
+}
+.facet-tabs button.active{background:var(--seal);color:#fff;border-color:var(--seal)}
+.cross-filters{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.cross-filters label{font-size:11.5px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.cross-filters select{
+  background:var(--surface);border:1px solid var(--line2);border-radius:3px;padding:3px 7px;font-size:11.5px;
+}
+.cross-body{display:grid;grid-template-columns:250px minmax(0,1fr);flex:1;min-height:0}
+.facet-list{border-right:1px solid var(--line)}
+.facet-results{overflow-y:auto;padding:16px 22px 40px}
+.facet-item{
+  display:block;width:100%;text-align:left;border:0;border-left:3px solid transparent;
+  background:transparent;padding:8px 14px;color:var(--ink);font-size:12.5px;
+}
+.facet-item:hover{background:var(--surface2)}
+.facet-item.active{background:var(--surface2);border-left-color:var(--seal)}
+.facet-item .cnt{float:right;color:var(--faint);font-size:11px}
+.facet-item .sub{display:block;font-size:10.5px;color:var(--faint)}
+.result-group{margin-bottom:22px}
+.result-group h3{
+  font-size:12px;font-weight:500;color:var(--seal);margin:0 0 9px;
+  padding-bottom:6px;border-bottom:1px solid var(--line);letter-spacing:.5px;
+}
+.result-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(238px,1fr));gap:9px}
+.result-card{
+  background:var(--surface);border:1px solid var(--line);border-radius:4px;
+  padding:10px 12px;cursor:pointer;
+}
+.result-card:hover{border-color:var(--seal)}
+.result-card .rt{font-size:12.5px;font-weight:500;line-height:1.5}
+.result-card .rm{font-size:11px;color:var(--muted);margin-top:5px;display:flex;gap:6px;flex-wrap:wrap}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:18px}
+.stat-card{background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:13px 15px}
+.stat-card .n{font-size:24px;font-weight:500;line-height:1.2}
+.stat-card .l{font-size:11.5px;color:var(--muted);margin-top:4px}
+.evidence-view-body,.research-body{overflow-y:auto;padding:20px 24px 50px;flex:1}
+.section{
+  background:var(--surface);border:1px solid var(--line);border-radius:5px;
+  padding:16px 18px;margin-bottom:16px;
+}
+.section h2{font-size:15px;font-weight:500;margin:0 0 10px;letter-spacing:.5px}
+.section p{font-size:12.5px;color:var(--muted);margin:0 0 9px;line-height:1.8}
+.section ul{margin:6px 0 0;padding-left:18px;font-size:12.5px;color:var(--muted);line-height:1.9}
+.note-line{border-left:3px solid var(--seal);padding:6px 0 6px 12px;color:var(--seal);font-size:12px;margin-bottom:14px;line-height:1.8}
+.seg-browser{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:14px;margin-top:12px}
+.seg-list{max-height:340px;overflow-y:auto;border:1px solid var(--line);border-radius:4px}
+.seg-row{
+  display:block;width:100%;text-align:left;background:transparent;border:0;
+  border-bottom:1px solid var(--line);padding:7px 11px;font-size:12px;
+}
+.seg-row:hover,.seg-row.active{background:var(--surface2)}
+.seg-row .sid{font-size:10px;color:var(--faint);margin-right:7px}
+.seg-row .stxt{color:var(--ink)}
+.seg-detail{border:1px solid var(--line);border-radius:4px;padding:12px;font-size:12px;background:var(--surface2)}
+.review-row{
+  display:flex;justify-content:space-between;gap:10px;padding:7px 0;
+  border-bottom:1px solid var(--line);font-size:12px;
+}
+.review-row:last-child{border-bottom:0}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{text-align:left;padding:8px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--faint);font-weight:500;font-size:11px;white-space:nowrap}
+td.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px}
+.research-banner{
+  background:var(--surface2);border:1px dashed var(--seal);color:var(--seal);
+  padding:9px 13px;border-radius:4px;font-size:12px;margin-bottom:16px;
+}
+.footer{
+  height:30px;border-top:1px solid var(--line);display:flex;align-items:center;
+  justify-content:space-between;padding:0 20px;font-size:10.5px;color:var(--faint);
+  background:var(--surface);
+}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-thumb{background:var(--line2);border-radius:4px}
+@media(max-width:1180px){
+  #view-trajectory.active{grid-template-columns:190px minmax(0,1fr) 300px}
+  .cross-body{grid-template-columns:210px minmax(0,1fr)}
+}
+@media(max-width:900px){
+  #view-trajectory.active{grid-template-columns:1fr;height:auto}
+  .doclist,.evidence-panel{height:auto;max-height:260px}
+  .traj-main{height:auto}
+  main{height:auto;overflow:visible}
+  .topbar{flex-wrap:wrap;height:auto;padding:10px 14px;gap:10px}
+  .seg-browser{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="seal">述</div>
+    <div><div class="brand-zh serif">口述史图谱</div><div class="brand-en">ORAL HISTORY GRAPH · PROTOTYPE</div></div>
+  </div>
+  <nav class="tabs">
+    <button class="tab active" data-view="trajectory">单人轨迹</button>
+    <button class="tab" data-view="cross">交叉档案</button>
+    <button class="tab" data-view="evidence">证据与裁决</button>
+  </nav>
+  <div class="topright">
+    <span class="scope-badge">6 份人工标注 · 词表 v1.0</span>
+    <button class="ghost" id="themeBtn">熄灯夜读</button>
+    <button class="ghost subtle" id="researchBtn">研究视图</button>
+  </div>
+</header>
+
+<main>
+  <section class="view active" id="view-trajectory">
+    <aside class="panel doclist"><div class="panel-pad" id="docList"></div></aside>
+    <div class="traj-main">
+      <div class="doc-head" id="docHead"></div>
+      <div class="askbar">
+        <input id="askInput" placeholder="用一句话提问，例如：陈海峰 1931 到 1937 年在上海的事">
+        <button id="askBtn">检索</button>
+      </div>
+      <div class="ask-hint">问句会被编译为受约束的查询条件并返回逐字证据，不生成自然语言结论。预设：陈海峰 1931 到 1937 年在上海的事 / 陈锐霆 参军 / 杨永松 平型关 / 待复核 的实体</div>
+      <div class="slots" id="slots"></div>
+      <div id="askResults" class="ask-results"></div>
+      <div class="orderbar">
+        <div class="order-tabs">
+          <button class="active" data-order="historical">历史序</button>
+          <button data-order="narrative">叙述序</button>
+        </div>
+        <div class="order-tools">
+          <span class="order-hint" id="orderHint"></span>
+          <button class="ghost" id="bumpBtn">双序对照</button>
+        </div>
+      </div>
+      <div class="bump-wrap" id="bumpWrap" hidden>
+        <div class="bump-head">左轴「讲」＝原文讲述位次，右轴「史」＝历史发生位次；朱红连线为讲述时回补的更早经历。连线只表示顺序差异，不代表关系强度。</div>
+        <svg id="bumpSvg" width="100%" role="img" aria-label="叙述序与历史序对照斜线图"></svg>
+      </div>
+      <div class="event-track" id="eventTrack"></div>
+    </div>
+    <aside class="panel evidence-panel" id="evidencePanel"></aside>
+  </section>
+
+  <section class="view" id="view-cross">
+    <div class="cross-head">
+      <div class="facet-tabs" id="facetTabs"></div>
+      <div class="cross-filters">
+        <label>资料性质
+          <select id="sourceFilter">
+            <option value="">全部</option>
+            <option value="ORAL_TESTIMONY">仅口述原话</option>
+            <option value="EDITORIAL_PROFILE">仅编者小传</option>
+            <option value="EDITORIAL_NOTE">仅编者注释</option>
+          </select>
+        </label>
+        <div class="query-echo" id="queryEcho">query({}) — 与单人轨迹的问句共用同一查询层</div>
+      </div>
+    </div>
+    <div class="cross-body">
+      <aside class="panel facet-list"><div class="panel-pad" id="facetList"></div></aside>
+      <div class="facet-results" id="facetResults"></div>
+    </div>
+  </section>
+
+  <section class="view" id="view-evidence">
+    <div class="evidence-view-body" id="evidenceViewBody"></div>
+  </section>
+
+  <section class="view" id="view-research">
+    <div class="research-body" id="researchBody"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span id="footerLeft">口述史图谱交互原型 · 数据来自 6 份人工标注 Demo</span>
+  <span>逐字保真 · 不确定性可见 · 候选与放行分离</span>
+</footer>
+
+<script>/*__DATA__*/</script>
+<script>
+(function(){
+'use strict';
+var $ = function(s,r){return (r||document).querySelector(s);};
+var $$ = function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));};
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function group(arr,key){var m={};arr.forEach(function(r){var k=typeof key==='function'?key(r):r[key];(m[k]=m[k]||[]).push(r);});return m;}
+function index(arr,key){var m={};arr.forEach(function(r){m[r[key]]=r;});return m;}
+function uniq(a){return Array.from(new Set(a));}
+
+var I={
+  docById:index(DB.docs,'doc_id'),
+  eventsByDoc:group(DB.events,'doc_id'),
+  timesByEvent:group(DB.times,'event_id'),
+  stagesByEvent:group(DB.stages,'event_id'),
+  circByEvent:group(DB.circumstances,'event_id'),
+  partByEvent:group(DB.participants,'event_id'),
+  procByEvent:group(DB.processes,'event_id'),
+  attachByTarget:group(DB.attachments,function(r){return r.target_type+':'+r.target_id;}),
+  targetsBySegment:group(DB.attachments,'segment_id'),
+  segmentsByDoc:group(DB.segments,'doc_id'),
+  segmentById:index(DB.segments,'segment_id'),
+  entityById:index(DB.entities,'entity_id'),
+  mentionsBySegment:group(DB.mentions,'segment_id'),
+  exprBySegment:group(DB.timeExpressions,'segment_id'),
+  aliasesByEntity:group(DB.aliases,'entity_id'),
+  annotationsByDoc:group(DB.annotations,'doc_id'),
+  coverageByDoc:index(DB.coverage,'doc_id')
+};
+var S={view:'trajectory',docId:DB.docs[0].doc_id,order:'historical',selectedEvent:null,
+       facet:'time',facetValue:null,sourceStatus:'',slots:{},askResults:null,theme:'light',segDoc:null,segId:null};
+
+/* ---------- 共用查询层：A 的问句、B 的切面、C 的证据都走这里 ---------- */
+function eventDoc(e){return I.docById[e.doc_id]||{};}
+function eventYears(e){
+  return (I.timesByEvent[e.event_id]||[]).map(function(t){return (t.normalized_start||'').slice(0,4);})
+    .filter(function(y){return /^\d{4}$/.test(y);});
+}
+function eventSegments(e){
+  var ids={};(I.attachByTarget['EVENT:'+e.event_id]||[]).forEach(function(a){ids[a.segment_id]=1;});
+  (I.timesByEvent[e.event_id]||[]).forEach(function(t){if(t.evidence_segment_id)ids[t.evidence_segment_id]=1;});
+  (I.circByEvent[e.event_id]||[]).forEach(function(c){if(c.evidence_segment_id)ids[c.evidence_segment_id]=1;});
+  (I.partByEvent[e.event_id]||[]).forEach(function(p){if(p.evidence_segment_id)ids[p.evidence_segment_id]=1;});
+  (I.stagesByEvent[e.event_id]||[]).forEach(function(st){
+    (I.attachByTarget['STAGE:'+st.stage_id]||[]).forEach(function(a){ids[a.segment_id]=1;});
+  });
+  return Object.keys(ids).map(function(id){return I.segmentById[id];}).filter(Boolean)
+    .sort(function(a,b){return (+a.segment_order||0)-(+b.segment_order||0);});
+}
+function eventSourceStatuses(e){
+  var ss=[];
+  (I.timesByEvent[e.event_id]||[]).forEach(function(t){if(t.source_status)ss.push(t.source_status);});
+  eventSegments(e).forEach(function(s){if(s.speaker_type==='INTERVIEWEE')ss.push('ORAL_TESTIMONY');});
+  return uniq(ss);
+}
+function entityLabel(id){
+  var en=I.entityById[id];
+  if(en)return en.canonical_name;
+  return id||'';
+}
+function facetKeyFor(e,facet,value){
+  if(facet==='time')return eventYears(e).some(function(y){return y===value;});
+  if(facet==='place')return (I.circByEvent[e.event_id]||[]).some(function(c){
+    return c.kind==='LOCATION'&&(c.entity_id||c.value_text)===value;});
+  if(facet==='org')return (I.partByEvent[e.event_id]||[]).some(function(p){
+    return ['MILITARY_UNIT','ORGANIZATION'].indexOf(p.entity_type)>=0&&p.entity_id===value;});
+  if(facet==='person')return (I.partByEvent[e.event_id]||[]).some(function(p){return p.entity_type==='PERSON'&&p.entity_id===value;});
+  if(facet==='segment')return (I.attachByTarget['EVENT:'+e.event_id]||[]).some(function(a){return a.segment_id===value;});
+  if(facet==='narrator'){
+    var d=eventDoc(e);
+    if(value==='INTERVIEWEE')return eventSegments(e).some(function(s){return s.speaker_type==='INTERVIEWEE';});
+    if(value==='EDITOR')return eventSegments(e).some(function(s){return s.speaker_type==='EDITOR';});
+    return eventSegments(e).some(function(s){return s.speaker_type==='INTERVIEWER';});
+  }
+  return false;
+}
+function query(f){
+  f=f||{};
+  return DB.events.filter(function(e){
+    if(f.docId&&e.doc_id!==f.docId)return false;
+    if(f.person&&eventDoc(e).interviewee!==f.person)return false;
+    if(f.years&&f.years.length){
+      var ys=eventYears(e);
+      if(!ys.length)return false;
+      if(!ys.some(function(y){return f.years.indexOf(y)>=0;}))return false;
+    }
+    var hasEntity=f.entityIds&&f.entityIds.length,hasKeyword=f.keywords&&f.keywords.length;
+    if(hasEntity||hasKeyword){
+      var ids=[];
+      (I.circByEvent[e.event_id]||[]).forEach(function(c){if(c.entity_id)ids.push(c.entity_id);});
+      (I.partByEvent[e.event_id]||[]).forEach(function(p){if(p.entity_id)ids.push(p.entity_id);});
+      var hay=[e.event_name,e.result_state,e.boundary_note||''].join(' ');
+      (I.circByEvent[e.event_id]||[]).forEach(function(c){hay+=' '+c.value_text+' '+entityLabel(c.entity_id);});
+      (I.partByEvent[e.event_id]||[]).forEach(function(p){hay+=' '+p.entity_name;});
+      var okEntity=hasEntity&&f.entityIds.some(function(id){return ids.indexOf(id)>=0;});
+      var okKeyword=hasKeyword&&f.keywords.some(function(k){return hay.indexOf(k)>=0;});
+      if(!(okEntity||okKeyword))return false;
+    }
+    if(f.sourceStatus){
+      var ss=eventSourceStatuses(e);
+      if(ss.indexOf(f.sourceStatus)<0)return false;
+    }
+    if(f.reviewStatus&&e.review_status!==f.reviewStatus)return false;
+    if(f.facet&&f.facetValue!==null&&f.facetValue!==undefined){
+      if(!facetKeyFor(e,f.facet,f.facetValue))return false;
+    }
+    return true;
+  }).sort(function(a,b){
+    var k=S.order==='narrative'?'narrative_order':'historical_order';
+    return (+a[k]||0)-(+b[k]||0);
+  });
+}
+function echoQuery(f){
+  var parts=[];
+  Object.keys(f).forEach(function(k){
+    if(f[k]===null||f[k]===undefined||f[k]===''||(Array.isArray(f[k])&&!f[k].length))return;
+    parts.push(k+': '+JSON.stringify(f[k]));
+  });
+  return 'query({ '+parts.join(', ')+' })';
+}
+
+/* ---------- A 单人轨迹 ---------- */
+function renderDocList(){
+  var byPerson=group(DB.docs,'interviewee');
+  var h='<p class="panel-title">受访者 / 访谈</p>';
+  Object.keys(byPerson).forEach(function(p){
+    h+='<div class="doc-group"><div class="doc-group-label">'+esc(p)+' · '+byPerson[p].length+' 份</div>';
+    byPerson[p].forEach(function(d){
+      var evs=I.eventsByDoc[d.doc_id]||[];
+      h+='<button class="doc-item'+(d.doc_id===S.docId?' active':'')+'" data-doc="'+esc(d.doc_id)+'">'
+        +'<div class="t">'+esc(d.title)+'</div>'
+        +'<div class="m">第 '+esc(d.visit_no)+' 访 · '+esc(d.interview_date)+' · '+evs.length+' 事件</div></button>';
+    });
+    h+='</div>';
+  });
+  $('#docList').innerHTML=h;
+  $$('.doc-item').forEach(function(b){b.onclick=function(){
+    S.docId=b.dataset.doc;S.selectedEvent=null;S.askResults=null;S.slots={};
+    $('#askInput').value='';renderSlots();renderTrajectory();renderEvidencePanel(null);
+  };});
+}
+function renderDocHead(){
+  var d=I.docById[S.docId],c=I.coverageByDoc[S.docId]||{},evs=I.eventsByDoc[S.docId]||[];
+  var segs=I.segmentsByDoc[S.docId]||[];
+  $('#docHead').innerHTML='<div><h1 class="serif">'+esc(d.title)+'</h1>'
+    +'<div class="sub">'+esc(d.interviewee)+' · 第 '+esc(d.visit_no)+' 访 · '+esc(d.interview_date)
+    +' · '+esc(d.version)+'</div></div>'
+    +'<div class="meta-chips">'
+    +'<span class="chip">'+evs.length+' 事件</span>'
+    +'<span class="chip">'+segs.length+' 逐字片段</span>'
+    +'<span class="chip">覆盖率 <b>'+esc(c.coverage_rate||'—')+'</b></span>'
+    +'<span class="chip ok">'+esc(c.audit_status||'—')+'</span>'
+    +'<span class="chip solid">人工标注 · v1.0</span></div>';
+}
+function sortedEvents(){
+  var evs=(I.eventsByDoc[S.docId]||[]).slice();
+  var k=S.order==='narrative'?'narrative_order':'historical_order';
+  evs.sort(function(a,b){return (+a[k]||0)-(+b[k]||0);});
+  return evs;
+}
+function isBackjump(e){return (+e.historical_order)<(+e.narrative_order);}
+function renderOrderHint(){
+  var evs=I.eventsByDoc[S.docId]||[];
+  var same=evs.every(function(e){return e.narrative_order===e.historical_order;});
+  $('#orderHint').textContent=same
+    ? '本份叙述序与历史序一致，切换不改变排列'
+    : (S.order==='historical'?'按事件发生顺序排列；切到叙述序可见原文讲述顺序':'按原文讲述顺序排列；切到历史序可见事件发生顺序');
+}
+function eventCardHtml(e,opts){
+  opts=opts||{};
+  var t=(I.timesByEvent[e.event_id]||[])[0]||{};
+  var stages=I.stagesByEvent[e.event_id]||[];
+  var segs=eventSegments(e);
+  var loc=(I.circByEvent[e.event_id]||[]).filter(function(c){return c.kind==='LOCATION';})[0];
+  var back=isBackjump(e);
+  var h='<div class="event-card'+(S.selectedEvent===e.event_id?' selected':'')+(back?' backjump':'')+'" data-event="'+esc(e.event_id)+'">'
+   +'<div class="ec-top"><div><div class="ec-name">'+esc(e.event_name)+'</div>'
+   +'<div class="ec-orders">讲 '+esc(e.narrative_order)+' · 史 '+esc(e.historical_order)+'</div></div>'
+   +'<span class="badge '+statusClass(e.review_status)+'">'+esc(e.review_status||'—')+'</span></div>'
+   +'<div class="ec-meta">'
+   +'<span class="chip">'+esc(t.raw_text||'时间待补')+'</span>'
+   +(t.precision?'<span class="badge">'+esc(t.precision)+' / '+esc(t.certainty)+'</span>':'')
+   +'<span class="badge '+sourceClass(t.source_status)+'">'+esc(t.source_status||'—')+'</span>'
+   +(stages.length?'<span class="chip">'+stages.length+' 阶段</span>':'<span class="badge">未切分阶段</span>')
+   +'<span class="chip">'+segs.length+' 条逐字证据</span>'
+   +(loc?'<span class="chip">'+esc(loc.value_text||entityLabel(loc.entity_id))+'</span>':'')
+   +'</div>';
+  if(back&&!opts.compact){
+    h+='<div class="ec-back">原文讲述顺序排第 '+esc(e.narrative_order)
+      +'，历史发生顺序排第 '+esc(e.historical_order)+'：这段经历是讲到后面才回补的。</div>';
+  }
+  h+='</div>';
+  return h;
+}
+function statusClass(s){return s==='CONFIRMED'?'confirmed':s==='NEEDS_REVIEW'?'review':'candidate';}
+function sourceClass(s){
+  if(s==='ORAL_TESTIMONY')return 'oral';
+  if(s==='EDITORIAL_PROFILE'||s==='EDITORIAL_NOTE'||s==='inferred_from_structure')return 'editorial';
+  if(s==='INTERVIEWER_QUESTION')return 'interviewer';
+  return '';
+}
+function renderTrajectory(){
+  renderDocList();renderDocHead();renderOrderHint();
+  var evs=sortedEvents();
+  $('#eventTrack').innerHTML=evs.length?evs.map(function(e){return eventCardHtml(e);}).join('')
+    :'<div class="empty">这份文档暂无事件</div>';
+  $$('.event-card').forEach(function(c){c.onclick=function(){
+    S.selectedEvent=c.dataset.event;renderTrajectory();renderEvidencePanel(S.selectedEvent);
+  };});
+  renderBump();
+}
+function renderBump(){
+  var evs=(I.eventsByDoc[S.docId]||[]).slice()
+    .sort(function(a,b){return (+a.narrative_order)-(+b.narrative_order);});
+  var n=evs.length,top=18,rowH=Math.max(22,Math.min(38,220/Math.max(n,1))),H=top*2+rowH*(n-1)+10;
+  var svg=$('#bumpSvg');svg.setAttribute('viewBox','0 0 600 '+H);svg.setAttribute('height',H);
+  var ns='http://www.w3.org/2000/svg';
+  function el(t,a){var e=document.createElementNS(ns,t);Object.keys(a).forEach(function(k){e.setAttribute(k,a[k]);});return e;}
+  function txt(x,y,s,anchor,fill){var e=el('text',{x:x,y:y,'font-size':11,'text-anchor':anchor||'start',fill:fill||'var(--muted)','font-family':'sans-serif'});e.textContent=s;return e;}
+  svg.innerHTML='';
+  svg.appendChild(txt(20,12,'讲','middle','var(--faint)'));
+  svg.appendChild(txt(560,12,'史','middle','var(--faint)'));
+  svg.appendChild(el('line',{x1:20,y1:top,x2:20,y2:top+rowH*(n-1),stroke:'var(--line2)','stroke-width':.5}));
+  svg.appendChild(el('line',{x1:560,y1:top,x2:560,y2:top+rowH*(n-1),stroke:'var(--line2)','stroke-width':.5}));
+  function y(k){return top+(k-1)*rowH;}
+  evs.forEach(function(e,i){
+    var nn=+e.narrative_order,hh=+e.historical_order,back=hh<nn;
+    svg.appendChild(el('line',{x1:20,y1:y(nn),x2:560,y2:y(hh),
+      stroke:back?'var(--seal)':'var(--line2)','stroke-width':back?1.8:1,
+      'stroke-opacity':back?1:.75}));
+    svg.appendChild(el('circle',{cx:20,cy:y(nn),r:3,fill:back?'var(--seal)':'var(--faint)'}));
+    svg.appendChild(el('circle',{cx:560,cy:y(hh),r:3,fill:back?'var(--seal)':'var(--faint)'}));
+    if(back)svg.appendChild(txt(36,y(nn)-3,e.event_name.slice(0,16),'start','var(--seal)'));
+  });
+}
+
+/* ---------- 逐字证据面板 ---------- */
+function highlighted(seg){
+  var text=seg.verbatim_text||'',ranges=[];
+  (I.exprBySegment[seg.segment_id]||[]).forEach(function(x){
+    var a=+x.start_offset,b=+x.end_offset;if(b>a&&b<=text.length)ranges.push([a,b,'t']);
+  });
+  ranges.sort(function(a,b){return a[0]-b[0];});
+  var merged=[];
+  ranges.forEach(function(r){
+    if(merged.length&&r[0]<=merged[merged.length-1][1])merged[merged.length-1][1]=Math.max(merged[merged.length-1][1],r[1]);
+    else merged.push(r.slice());
+  });
+  var out='',pos=0;
+  merged.forEach(function(r){
+    out+=esc(text.slice(pos,r[0]))+'<mark>'+esc(text.slice(r[0],r[1]))+'</mark>';pos=r[1];
+  });
+  out+=esc(text.slice(pos));
+  return out;
+}
+function speakerBadge(s){
+  var map={INTERVIEWEE:['受访者原话','oral'],EDITOR:['编者文字','editorial'],INTERVIEWER:['访谈提问','interviewer']};
+  var m=map[s]||[s||'—',''];
+  return '<span class="badge '+m[1]+'">'+esc(m[0])+'</span>';
+}
+function renderEvidencePanel(eventId){
+  var p=$('#evidencePanel');
+  if(!eventId){
+    p.innerHTML='<div class="panel-pad"><p class="panel-title">逐字证据</p>'
+      +'<div class="empty">点击左侧任一事件，查看它的时间、阶段链、参与者与逐字原文。<br><br>任何断言都可以回到逐字片段，这是本图谱与普通年表最不一样的地方。</div></div>';
+    return;
+  }
+  var e=DB.events.filter(function(x){return x.event_id===eventId;})[0];
+  if(!e)return;
+  var t=(I.timesByEvent[e.event_id]||[])[0]||{};
+  var stages=(I.stagesByEvent[e.event_id]||[]).slice().sort(function(a,b){return (+a.stage_order)-(+b.stage_order);});
+  var segs=eventSegments(e);
+  var circ=I.circByEvent[e.event_id]||[],parts=I.partByEvent[e.event_id]||[];
+  var proc=(I.procByEvent[e.event_id]||[])[0]||{};
+  var h='<div class="ev-head"><div class="panel-title">事件 · 逐字证据</div><h2 class="serif">'+esc(e.event_name)+'</h2>'
+    +'<div class="meta-chips"><span class="chip">讲 '+esc(e.narrative_order)+' / 史 '+esc(e.historical_order)+'</span>'
+    +'<span class="badge '+statusClass(e.review_status)+'">'+esc(e.review_status)+'</span>'
+    +(e.confidence?'<span class="chip">置信 '+esc(e.confidence)+'</span>':'')
+    +(e.factuality?'<span class="chip">'+esc(e.factuality)+'</span>':'')+'</div></div><div class="ev-body">';
+  h+='<div class="ev-sec"><h3>结果与边界</h3><div class="ev-text">'+esc(e.result_state||'—')+'</div>'
+    +(e.boundary_note?'<div class="ev-muted" style="margin-top:6px">边界：'+esc(e.boundary_note)+'</div>':'')+'</div>';
+  h+='<div class="ev-sec"><h3>时间表达</h3><div class="kv">'
+    +'<span class="k">原文</span><span>'+esc(t.raw_text||'时间待补')+'</span>'
+    +'<span class="k">归一化</span><span>'+esc(t.normalized_start||'—')+(t.normalized_end?' → '+esc(t.normalized_end):'')+'</span>'
+    +'<span class="k">精度</span><span>'+esc(t.precision||'—')+' / '+esc(t.certainty||'—')+'</span>'
+    +'<span class="k">来源</span><span><span class="badge '+sourceClass(t.source_status)+'">'+esc(t.source_status||'—')+'</span></span>'
+    +'</div></div>';
+  h+='<div class="ev-sec"><h3>过程阶段链 · '+stages.length+' 步</h3>'
+    +(stages.length?'<div class="stage-chain">'+stages.map(function(s){
+      return '<div class="stage-item"><div class="sn">阶段 '+esc(s.stage_order)+' · SEQUENCE</div>'
+        +'<div class="ss">'+esc(s.stage_summary||'—')+'</div>'
+        +(s.process_text?'<div class="sp">'+esc(s.process_text)+'</div>':'')+'</div>';
+    }).join('')+'</div>':'<div class="ev-muted">无阶段记录</div>')+'</div>';
+  if(parts.length)h+='<div class="ev-sec"><h3>参与者</h3><div class="ev-text">'
+    +parts.map(function(p){return esc(p.entity_name||entityLabel(p.entity_id))+(p.role?' <span class="ev-muted">('+esc(p.role)+')</span>':'');}).join(' · ')+'</div></div>';
+  if(circ.length)h+='<div class="ev-sec"><h3>环境</h3><div class="ev-text">'
+    +circ.map(function(c){return '<span class="badge">'+esc(c.kind)+'</span> '+esc(c.value_text||entityLabel(c.entity_id));}).join('<br>')+'</div></div>';
+  h+='<div class="ev-sec"><h3>逐字证据 · '+segs.length+' 段</h3>';
+  if(!segs.length)h+='<div class="ev-muted">无挂接片段</div>';
+  segs.slice(0,12).forEach(function(s){
+    h+='<div class="quote"><div class="qh"><span>'+esc(s.segment_id)+'</span>'
+      +speakerBadge(s.speaker_type)
+      +'<span class="badge">'+esc(s.segment_type||'')+'</span></div>'
+      +'<div class="quote-body serif">'+highlighted(s)+'</div>'
+      +'<button class="mini-link" data-seg="'+esc(s.segment_id)+'">在证据浏览器中查看支撑关系 →</button></div>';
+  });
+  if(segs.length>12)h+='<div class="ev-muted">另有 '+(segs.length-12)+' 段，可在证据浏览器中查看。</div>';
+  h+='</div>';
+  h+='<div class="ev-sec"><h3>交叉查询</h3><button class="ghost" id="toCross">以该事件的地点 / 组织进入交叉档案 →</button></div>';
+  h+='</div>';
+  p.innerHTML=h;
+  $$('[data-seg]',p).forEach(function(b){b.onclick=function(){
+    S.segId=b.dataset.seg;S.segDoc=(I.segmentById[S.segId]||{}).doc_id;
+    switchView('evidence');renderEvidenceView();
+  };});
+  var to=$('#toCross',p);
+  if(to)to.onclick=function(){
+    switchView('cross');S.facet='place';
+    var loc=(I.circByEvent[e.event_id]||[]).filter(function(c){return c.kind==='LOCATION';})[0];
+    S.facetValue=loc?(loc.entity_id||loc.value_text):null;
+    renderCross();
+  };
+}
+
+/* ---------- 自然语言问句 → 受约束槽位 ---------- */
+function buildEntityVocab(){
+  var v=[];
+  DB.entities.forEach(function(e){
+    if(e.canonical_name&&e.canonical_name.length>=2)v.push({text:e.canonical_name,id:e.entity_id});
+  });
+  DB.aliases.forEach(function(a){
+    if(a.alias_text&&a.alias_text.length>=2)v.push({text:a.alias_text,id:a.entity_id});
+  });
+  return v.sort(function(a,b){return b.text.length-a.text.length;});
+}
+var VOCAB=buildEntityVocab();
+function parseQuestion(q){
+  var f={},slots=[],rest=q;
+  DB.docs.forEach(function(d){
+    if(q.indexOf(d.interviewee)>=0){f.person=d.interviewee;slots.push({k:'人物',v:d.interviewee});rest=rest.split(d.interviewee).join(' ');}
+  });
+  var range=q.match(/(\d{4})\s*(?:-|—|~|到|至|至)\s*(\d{4})/);
+  var years=[];
+  if(range){
+    for(var y=+range[1];y<=+range[2];y++)years.push(String(y));
+    rest=rest.replace(range[0],' ');
+    slots.push({k:'时间',v:range[1]+'–'+range[2]});
+  }else{
+    var ys=q.match(/\d{4}/g)||[];
+    if(ys.length){years=ys;slots.push({k:'时间',v:ys.join('、')});ys.forEach(function(y){rest=rest.split(y).join(' ');});}
+  }
+  if(years.length)f.years=years;
+  var ss=null;
+  [['ORAL_TESTIMONY',['口述','亲口','受访者']],['EDITORIAL_PROFILE',['编者','小传']],['NEEDS_REVIEW',['待复核','待裁决']]].forEach(function(p){
+    if(!ss&&p[1].some(function(w){return q.indexOf(w)>=0;}))ss=p[0];
+  });
+  if(ss){
+    if(ss==='NEEDS_REVIEW'){f.reviewStatus='NEEDS_REVIEW';slots.push({k:'状态',v:'待复核'});}
+    else{f.sourceStatus=ss;slots.push({k:'资料性质',v:ss});}
+  }
+  var ids=[],hit=[];
+  VOCAB.forEach(function(v){
+    if(ids.length>=4)return;
+    if(q.indexOf(v.text)>=0&&hit.indexOf(v.text)<0){
+      hit.push(v.text);if(ids.indexOf(v.id)<0)ids.push(v.id);
+    }
+  });
+  if(ids.length){f.entityIds=ids;slots.push({k:'实体',v:hit.slice(0,4).join('、')});hit.forEach(function(t){rest=rest.split(t).join(' ');});}
+  var kws=rest.replace(/[的在了和与及到从是时候期年月份中前后以后关于请查问找哪些什么、，。？?！!\s]/g,' ')
+    .split(/\s+/).filter(function(w){return w.length>=2&&!/^\d+$/.test(w);}).slice(0,3);
+  if(kws.length){f.keywords=kws;slots.push({k:'关键词',v:kws.join('、')});}
+  return {f:f,slots:slots};
+}
+var SLOT_KEY={'人物':'person','时间':'years','资料性质':'sourceStatus','状态':'reviewStatus','实体':'entityIds','关键词':'keywords'};
+function renderSlots(){
+  var h='';
+  (S.slots.slots||[]).forEach(function(s,i){
+    h+='<span class="slot"><span class="k">'+esc(s.k)+'</span><b>'+esc(s.v)+'</b>'
+      +'<button data-slot="'+i+'" title="移除该条件">×</button></span>';
+  });
+  var el=$('#slots');el.innerHTML=h;
+  $$('[data-slot]',el).forEach(function(b){b.onclick=function(){
+    var removed=S.slots.slots.splice(+b.dataset.slot,1)[0];
+    if(removed&&SLOT_KEY[removed.k])delete S.slots.f[SLOT_KEY[removed.k]];
+    renderSlots();renderAskResults(S.slots.f||{});
+  };});
+}
+function runAsk(){
+  var q=$('#askInput').value.trim();
+  if(!q){S.askResults=null;S.slots={};$('#askResults').innerHTML='';renderSlots();return;}
+  S.slots=parseQuestion(q);renderSlots();
+  renderAskResults(S.slots.f);
+}
+function renderAskResults(f){
+  f=f||{};var evs=query(f);S.askResults=evs;
+  var h='<div style="margin:2px 0 14px"><div class="query-echo" style="margin-bottom:8px">'
+    +esc(echoQuery(f))+' → '+evs.length+' 个事件</div>';
+  if(!evs.length)h+='<div class="empty">没有命中。可删掉一个条件再试，或换个说法。</div>';
+  else{
+    h+='<div class="result-grid">'+evs.slice(0,12).map(function(e){
+      return '<div class="result-card" data-ask="'+esc(e.event_id)+'"><div class="rt">'+esc(e.event_name)+'</div>'
+        +'<div class="rm"><span>'+esc(eventDoc(e).interviewee)+'</span><span>讲 '+esc(e.narrative_order)
+        +' / 史 '+esc(e.historical_order)+'</span><span>'+esc(((I.timesByEvent[e.event_id]||[])[0]||{}).raw_text||'时间待补')+'</span></div></div>';
+    }).join('')+'</div>';
+    if(evs.length>12)h+='<div class="ev-muted" style="margin-top:8px">另有 '+(evs.length-12)+' 个事件，可到交叉档案里按切面继续收窄。</div>';
+  }
+  h+='</div>';
+  $('#askResults').innerHTML=h;
+  $$('[data-ask]').forEach(function(c){c.onclick=function(){
+    var e=DB.events.filter(function(x){return x.event_id===c.dataset.ask;})[0];
+    S.docId=e.doc_id;S.selectedEvent=e.event_id;renderTrajectory();renderEvidencePanel(e.event_id);
+  };});
+}
+
+/* ---------- B 交叉档案 ---------- */
+var FACETS=[
+  {k:'time',label:'同一时间'},
+  {k:'place',label:'同一地点'},
+  {k:'org',label:'同一军队 / 组织'},
+  {k:'person',label:'同一人物共现'},
+  {k:'segment',label:'同一逐字片段'},
+  {k:'narrator',label:'谁在讲谁'}
+];
+function facetValues(k){
+  var m={};
+  function add(key,label,sub){if(!key)return;var o=m[key]=m[key]||{key:key,label:label||key,sub:sub||'',events:{}};}
+  DB.events.forEach(function(e){
+    if(k==='time')eventYears(e).forEach(function(y){add(y,y,'年份');m[y].events[e.event_id]=1;});
+    if(k==='place')(I.circByEvent[e.event_id]||[]).forEach(function(c){
+      if(c.kind!=='LOCATION')return;var key=c.entity_id||c.value_text;if(!key)return;
+      add(key,c.value_text||entityLabel(c.entity_id),entityLabel(c.entity_id));m[key].events[e.event_id]=1;});
+    if(k==='org')(I.partByEvent[e.event_id]||[]).forEach(function(p){
+      if(['MILITARY_UNIT','ORGANIZATION'].indexOf(p.entity_type)<0||!p.entity_id)return;
+      add(p.entity_id,p.entity_name||entityLabel(p.entity_id),p.entity_type==='MILITARY_UNIT'?'部队':'组织');
+      m[p.entity_id].events[e.event_id]=1;});
+    if(k==='person')(I.partByEvent[e.event_id]||[]).forEach(function(p){
+      if(p.entity_type!=='PERSON'||!p.entity_id)return;
+      add(p.entity_id,p.entity_name||entityLabel(p.entity_id),'人物');m[p.entity_id].events[e.event_id]=1;});
+    if(k==='segment')(I.attachByTarget['EVENT:'+e.event_id]||[]).forEach(function(a){
+      var seg=I.segmentById[a.segment_id];if(!seg)return;
+      add(a.segment_id,(seg.verbatim_text||'').slice(0,20)+'…',seg.speaker_type||'');
+      m[a.segment_id].events[e.event_id]=1;});
+    if(k==='narrator')eventSegments(e).forEach(function(s){
+      var key=s.speaker_type||'OTHER';
+      var labels={INTERVIEWEE:'受访者原话',EDITOR:'编者文字',INTERVIEWER:'访谈提问'};
+      add(key,labels[key]||key,'逐字片段讲述者');m[key].events[e.event_id]=1;});
+  });
+  return Object.keys(m).map(function(key){
+    var o=m[key];o.count=Object.keys(o.events).length;delete o.events;return o;
+  }).sort(function(a,b){return b.count-a.count||a.label.localeCompare(b.label,'zh');});
+}
+function renderCross(){
+  $('#facetTabs').innerHTML=FACETS.map(function(f){
+    return '<button class="'+(S.facet===f.k?'active':'')+'" data-facet="'+f.k+'">'+f.label+'</button>';
+  }).join('');
+  $$('[data-facet]').forEach(function(b){b.onclick=function(){S.facet=b.dataset.facet;S.facetValue=null;renderCross();};});
+  var values=facetValues(S.facet);
+  if(S.facetValue===null||!values.some(function(v){return v.key===S.facetValue;}))
+    S.facetValue=values.length?values[0].key:null;
+  $('#facetList').innerHTML='<p class="panel-title">切面取值 · '+values.length+'</p>'
+    +(values.length?values.map(function(v){
+      return '<button class="facet-item'+(v.key===S.facetValue?' active':'')+'" data-value="'+esc(v.key)+'">'
+        +'<span class="cnt">'+v.count+'</span>'+esc(v.label)
+        +(v.sub?'<span class="sub">'+esc(v.sub)+'</span>':'')+'</button>';
+    }).join(''):'<div class="empty">该切面暂无取值</div>');
+  $$('[data-value]').forEach(function(b){b.onclick=function(){S.facetValue=b.dataset.value;renderCross();};});
+  var f={facet:S.facet,facetValue:S.facetValue,sourceStatus:S.sourceStatus};
+  $('#queryEcho').textContent=echoQuery(f)+' — 与单人轨迹的问句共用同一查询层';
+  var evs=query(f);
+  var byDoc=group(evs,'doc_id');
+  var h='';
+  if(!evs.length)h='<div class="empty">当前条件下没有命中事件。换一个切面取值，或把「资料性质」调回全部。</div>';
+  Object.keys(byDoc).forEach(function(docId){
+    var d=I.docById[docId]||{};
+    h+='<div class="result-group"><h3>'+esc(d.title||docId)+' · '+esc(d.interviewee||'')
+      +' · '+byDoc[docId].length+' 个事件</h3><div class="result-grid">'
+      +byDoc[docId].map(function(e){
+        var t=(I.timesByEvent[e.event_id]||[])[0]||{};
+        return '<div class="result-card" data-cross="'+esc(e.event_id)+'"><div class="rt">'+esc(e.event_name)+'</div>'
+          +'<div class="rm"><span>讲 '+esc(e.narrative_order)+' / 史 '+esc(e.historical_order)+'</span>'
+          +'<span>'+esc(t.raw_text||'时间待补')+'</span>'
+          +'<span class="badge '+sourceClass(t.source_status)+'">'+esc(t.source_status||'—')+'</span></div></div>';
+      }).join('')+'</div></div>';
+  });
+  $('#facetResults').innerHTML='<div class="note-line">这是档案格视图，不是地图：本批语料的地点大多没有经纬度，按地点分格比画地图更诚实。「同一逐字片段」可反查一段原文支撑了哪些人的哪些事件。</div>'+h;
+  $$('[data-cross]').forEach(function(c){c.onclick=function(){
+    var e=DB.events.filter(function(x){return x.event_id===c.dataset.cross;})[0];
+    S.docId=e.doc_id;S.selectedEvent=e.event_id;switchView('trajectory');renderTrajectory();renderEvidencePanel(e.event_id);
+  };});
+}
+
+/* ---------- C 证据与裁决 ---------- */
+function renderEvidenceView(){
+  var total=DB.events.length,segs=DB.segments.length,ents=DB.entities.length,att=DB.attachments.length;
+  var confirmed=DB.events.filter(function(e){return e.review_status==='CONFIRMED';}).length;
+  var candSeg=DB.segments.filter(function(s){return s.review_status==='MODEL_CANDIDATE';}).length;
+  var candEnt=DB.entities.filter(function(e){return e.review_status==='MODEL_CANDIDATE';}).length;
+  var needs=DB.entities.filter(function(e){return e.review_status==='NEEDS_REVIEW';});
+  var h='<p class="panel-title">证据与裁决 · 数据口径</p>';
+  h+='<div class="cards">'
+    +'<div class="stat-card"><div class="n">'+DB.docs.length+'</div><div class="l">份人工标注 Demo（词表 v1.0）</div></div>'
+    +'<div class="stat-card"><div class="n">'+total+'</div><div class="l">事件 · 全部 '+confirmed+' 条已确认</div></div>'
+    +'<div class="stat-card"><div class="n">'+segs+'</div><div class="l">逐字片段 · '+candSeg+' 条为候选态</div></div>'
+    +'<div class="stat-card"><div class="n">'+ents+'</div><div class="l">实体 · '+candEnt+' 条候选 / '+needs.length+' 条待复核</div></div>'
+    +'<div class="stat-card"><div class="n">'+att+'</div><div class="l">逐字挂接 · 断言可回溯原文</div></div>'
+    +'</div>';
+  h+='<div class="section"><h2>数据范围声明</h2>'
+    +'<p>本原型只接 <b>6 份人工标注 Demo</b>，不含大模型线结果，不做双模型对照。所有字段以 Demo 的 18 张 CSV 为准（词表 v1.0）。'
+    +'正式批次的 54 份语料仍在标注与门禁中，界面不会把部分结果伪装成全量。</p>'
+    +'<ul><li>事件层已 CONFIRMED，但逐字片段、实体、时间表达式仍大量为 MODEL_CANDIDATE —— 状态分层可见，不能一律当成事实。</li>'
+    +'<li>资料性质必须区分 ORAL_TESTIMONY（受访者亲口）与 EDITORIAL_PROFILE / EDITORIAL_NOTE（编者文字），否则会把编者小传写成口述证据。</li>'
+    +'<li>跨访谈疑似同一经历只标 NEEDS_REVIEW，不自动合并；本原型不提供合并操作。</li></ul></div>';
+  h+='<div class="section"><h2>待复核队列 · '+needs.length+' 条实体</h2>';
+  h+=needs.length?needs.map(function(e){
+    return '<div class="review-row"><div><b>'+esc(e.canonical_name)+'</b> <span class="ev-muted">'
+      +esc(e.entity_type)+' / '+esc(e.entity_subtype||'')+'</span><div class="ev-muted">'
+      +esc((e.description||'').slice(0,90))+'</div></div><span class="badge review">NEEDS_REVIEW</span></div>';
+  }).join(''):'<p>暂无待复核实体。</p>';
+  h+='</div>';
+  h+='<div class="section"><h2>逐字证据浏览器</h2>'
+    +'<p>选一份访谈，点一个片段，看它同时支撑了哪些事件与阶段 —— 这是「同一逐字片段」交叉切面的底层依据。</p>'
+    +'<div style="margin-bottom:10px"><select id="segDocSel" style="background:var(--surface);border:1px solid var(--line2);border-radius:3px;padding:5px 9px">'
+    +DB.docs.map(function(d){return '<option value="'+esc(d.doc_id)+'"'+(d.doc_id===(S.segDoc||DB.docs[0].doc_id)?' selected':'')+'>'+esc(d.title)+'</option>';}).join('')
+    +'</select></div><div class="seg-browser"><div class="seg-list" id="segList"></div><div class="seg-detail" id="segDetail"></div></div></div>';
+  h+='<div class="section"><h2>图示语义声明</h2><ul>'
+    +'<li>轨迹上的连线只表示顺序与阶段衔接，不代表关系强度或地理距离。</li>'
+    +'<li>颜色用于区分状态与资料性质，不编码置信度高低。</li>'
+    +'<li>时间显示保留原始表达（如「约 1935 年」「返乡半个多月以后」），不推算成确定公历日期。</li>'
+    +'<li>「讲 / 史」两个位次来自人工标注；原型不展示任何跳跃度分数。</li>'
+    +'</ul></div>';
+  $('#evidenceViewBody').innerHTML=h;
+  var sel=$('#segDocSel');
+  sel.onchange=function(){S.segDoc=sel.value;S.segId=null;renderSegBrowser();};
+  if(!S.segDoc)S.segDoc=DB.docs[0].doc_id;
+  renderSegBrowser();
+}
+function renderSegBrowser(){
+  var segs=(I.segmentsByDoc[S.segDoc]||[]).slice()
+    .sort(function(a,b){return (+a.segment_order)-(+b.segment_order);});
+  if(!S.segId||!segs.some(function(s){return s.segment_id===S.segId;}))S.segId=segs.length?segs[0].segment_id:null;
+  $('#segList').innerHTML=segs.map(function(s){
+    return '<button class="seg-row'+(s.segment_id===S.segId?' active':'')+'" data-srow="'+esc(s.segment_id)+'">'
+      +'<span class="sid">'+esc(s.segment_order)+'</span>'
+      +'<span class="stxt">'+esc((s.verbatim_text||'').slice(0,34))+'</span></button>';
+  }).join('')||'<div class="empty">无片段</div>';
+  $$('[data-srow]').forEach(function(b){b.onclick=function(){S.segId=b.dataset.srow;renderSegBrowser();};});
+  var seg=I.segmentById[S.segId];
+  if(!seg){$('#segDetail').innerHTML='<div class="empty">选择一个片段</div>';return;}
+  var targets=(I.targetsBySegment[seg.segment_id]||[]);
+  var evIds=uniq(targets.filter(function(t){return t.target_type==='EVENT';}).map(function(t){return t.target_id;}));
+  var stIds=uniq(targets.filter(function(t){return t.target_type==='STAGE';}).map(function(t){return t.target_id;}));
+  $('#segDetail').innerHTML='<div class="qh" style="margin-bottom:7px"><span>'+esc(seg.segment_id)+'</span>'
+    +speakerBadge(seg.speaker_type)+'</div>'
+    +'<div class="quote-body serif" style="max-height:150px;overflow:auto;white-space:pre-wrap;margin-bottom:10px">'+highlighted(seg)+'</div>'
+    +'<div class="ev-muted" style="margin-bottom:5px">支撑事件 '+evIds.length+' 个</div>'
+    +(evIds.map(function(id){
+      var e=DB.events.filter(function(x){return x.event_id===id;})[0];
+      return e?'<div class="review-row"><button class="mini-link" data-jump="'+esc(id)+'">'+esc(e.event_name.slice(0,24))+'</button></div>':'';
+    }).join('')||'<div class="ev-muted">—</div>')
+    +'<div class="ev-muted" style="margin:10px 0 5px">支撑阶段 '+stIds.length+' 个 · 挂接共 '+targets.length+' 条</div>';
+  $$('[data-jump]').forEach(function(b){b.onclick=function(){
+    var e=DB.events.filter(function(x){return x.event_id===b.dataset.jump;})[0];
+    if(e){S.docId=e.doc_id;S.selectedEvent=e.event_id;switchView('trajectory');renderTrajectory();renderEvidencePanel(e.event_id);}
+  };});
+}
+
+/* ---------- 研究视图：独立于用户端，可导出 CSV ---------- */
+function renderResearch(){
+  var rows=DB.researchMetrics||[];
+  var h='<p class="panel-title">研究视图 · 不进入用户端界面</p>'
+    +'<div class="research-banner">这一页只给研究者与论文使用：叙事跳跃度作为语料特征与标注一致性诊断指标。'
+    +'主界面（单人轨迹 / 交叉档案 / 证据与裁决）不出现任何跳跃度分数。</div>';
+  h+='<div class="section"><h2>6 份人工 Demo · 双时序指标</h2>'
+    +'<p>口径：把事件按 <code>narrative_order</code> 排列，取其 <code>historical_order</code> 构成序列；'
+    +'逆序对即「讲述时回补了更早经历」的次数；归一化跳跃度 = 逆序对 / C(n,2)；'
+    +'Kendall τ = 1 − 4·逆序对 / (n(n−1))。样本每份仅 5–10 个事件，单条回补即可显著改变取值，'
+    +'故不宜作为面向读者的评分。</p>'
+    +'<table><thead><tr><th>文档</th><th>事件数</th><th>历史序序列</th><th>逆序对</th>'
+    +'<th>归一化跳跃度</th><th>Kendall τ</th><th>最大回跳</th><th>回补事件</th></tr></thead><tbody>'
+    +rows.map(function(r){
+      return '<tr><td>'+esc(r.title)+'<div class="ev-muted">'+esc(r.doc_id)+'</div></td>'
+        +'<td>'+r.event_count+'</td><td class="mono">'+esc(r.historical_order_sequence)+'</td>'
+        +'<td>'+r.inversions+' / '+r.max_inversions+'</td><td>'+r.normalized_jump.toFixed(3)+'</td>'
+        +'<td>'+r.kendall_tau.toFixed(3)+'</td><td>'+r.max_backjump_span+'</td>'
+        +'<td>'+esc(r.backjump_events)+'</td></tr>';
+    }).join('')+'</tbody></table>'
+    +'<div style="margin-top:12px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">'
+    +'<button class="ghost" id="csvBtn" style="border-color:var(--seal);color:var(--seal)">导出指标 CSV ↓</button>'
+    +'<span class="ev-muted">同一份数据已落盘为 06_可视化原型/叙事跳跃度指标_6份Demo.csv</span></div></div>';
+  h+='<div class="section"><h2>口径边界（写论文时请保留）</h2><ul>'
+    +'<li>本表只基于 6 份<b>人工标注</b>的双时序，两序由人工独立赋值。</li>'
+    +'<li>大模型线的 <code>historical_order</code> 目前是导入脚本按原文片段顺序写入的占位值，与 <code>narrative_order</code> 相同；'
+    +'该线跳跃度恒为 0，<b>不得与人工线直接比较，也不得当作独立的历史事件序</b>。</li>'
+    +'<li>大模型线 <code>event_times.precision=RELATIVE</code> 占比高（「返乡半个多月以后」一类），靠时间字段反推历史序不可靠。</li>'
+    +'<li>质检用法：若一批文档的归一化跳跃度全部为 0，应报警「历史序未独立赋值」，而不是解读为受访者都按时间顺叙。</li>'
+    +'</ul></div>';
+  h+='<div class="section"><h2>可延展的研究指标</h2><ul>'
+    +'<li>归一化 Kendall τ 距离 / 最大回跳跨度 / 回补事件数，按受访者、访谈轮次、主题分组比较。</li>'
+    +'<li>回补事件的语言学特征：是否由访谈提问触发、是否伴随时间状语、是否集中在特定主题。</li>'
+    +'<li>与 <code>source_status</code> 交叉：回补处更容易出现编者补充还是受访者自述。</li>'
+    +'</ul></div>';
+  $('#researchBody').innerHTML=h;
+  $('#csvBtn').onclick=function(){
+    var cols=['doc_id','title','event_count','historical_order_sequence','inversions','max_inversions',
+      'normalized_jump','kendall_tau','max_backjump_span','backjump_count','backjump_events','note'];
+    var lines=[cols.join(',')].concat(rows.map(function(r){
+      return cols.map(function(c){return '"'+String(r[c]).replace(/"/g,'""')+'"';}).join(',');
+    }));
+    var blob=new Blob(['\ufeff'+lines.join('\r\n')],{type:'text/csv;charset=utf-8'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);
+    a.download='叙事跳跃度指标_6份Demo.csv';document.body.appendChild(a);a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},500);
+  };
+}
+
+/* ---------- 视图切换与全局绑定 ---------- */
+function switchView(v){
+  S.view=v;
+  $$('.view').forEach(function(s){s.classList.toggle('active',s.id==='view-'+v);});
+  $$('.tab').forEach(function(b){b.classList.toggle('active',b.dataset.view===v);});
+  $('#researchBtn').classList.toggle('on',v==='research');
+  if(v==='cross')renderCross();
+  if(v==='evidence')renderEvidenceView();
+  if(v==='research')renderResearch();
+}
+$$('.tab').forEach(function(b){b.onclick=function(){switchView(b.dataset.view);};});
+$('#researchBtn').onclick=function(){switchView(S.view==='research'?'trajectory':'research');};
+$('#themeBtn').onclick=function(){
+  S.theme=S.theme==='light'?'night':'light';
+  document.body.classList.toggle('night',S.theme==='night');
+  $('#themeBtn').textContent=S.theme==='night'?'点灯展卷':'熄灯夜读';
+  try{localStorage.setItem('ohg-theme',S.theme);}catch(e){}
+  if(S.view==='trajectory')renderBump();
+};
+$$('.order-tabs button').forEach(function(b){b.onclick=function(){
+  S.order=b.dataset.order;
+  $$('.order-tabs button').forEach(function(x){x.classList.toggle('active',x===b);});
+  renderTrajectory();
+};});
+$('#bumpBtn').onclick=function(){
+  var w=$('#bumpWrap');w.hidden=!w.hidden;
+  $('#bumpBtn').textContent=w.hidden?'双序对照':'收起对照';
+  if(!w.hidden)renderBump();
+};
+$('#askBtn').onclick=runAsk;
+$('#askInput').addEventListener('keydown',function(ev){if(ev.key==='Enter')runAsk();});
+$('#sourceFilter').onchange=function(){S.sourceStatus=this.value;renderCross();};
+document.addEventListener('keydown',function(ev){
+  if(ev.key==='Escape'&&S.view==='research')switchView('trajectory');
+});
+try{if(localStorage.getItem('ohg-theme')==='night')$('#themeBtn').click();}catch(e){}
+
+$('#footerLeft').textContent='口述史图谱交互原型 · 6 份人工标注 · 40 事件 / '
+  +DB.segments.length+' 逐字片段 / '+DB.attachments.length+' 挂接 · 生成于 '+DB.meta.generated_at;
+renderTrajectory();renderEvidencePanel(null);
+window.OHG={S:S,DB:DB,query:query,switchView:switchView,parseQuestion:parseQuestion,
+  renderTrajectory:renderTrajectory,renderCross:renderCross,renderEvidenceView:renderEvidenceView,
+  renderResearch:renderResearch,renderEvidencePanel:renderEvidencePanel,echoQuery:echoQuery};
+var vm=location.search.match(/view=(trajectory|cross|evidence|research)/);
+if(vm)switchView(vm[1]);
+})();
+</script>
+</body>
+</html>

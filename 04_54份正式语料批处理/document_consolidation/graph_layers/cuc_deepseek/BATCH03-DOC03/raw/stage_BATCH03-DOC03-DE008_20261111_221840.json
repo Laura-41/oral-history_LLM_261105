@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T22:18:40",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC03-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC03-DE008",
+  "usage": {
+    "prompt_tokens": 1158,
+    "total_tokens": 3528,
+    "completion_tokens": 2370,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1614
+    },
+    "time_to_first_token_ms": 19854,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC03-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"部分新四军人员（含干部）因田大夫开具的证明得到身份掩护和保护。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以“皖南事变”后为起点，以田大夫开证明并保护下部分干部为终点；仅依据S0082、S0084所述。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"皖南事变后，田大夫救助了许多新四军人员。\",\n      \"process_text\": \"“皖南事变”以后，田大夫救了我们很多人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0082\"\n      ],\n      \"evidence_quote\": \"“皖南事变”以后啊，他救了我们很多人\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"田大夫开具证明，将相关人员身份说成非部队指战员，而是刻蜡板、教唱歌的文化教员。\",\n      \"process_text\": \"他发证明，说明这些人不是部队指战员，是刻蜡板的、教唱歌的文化教员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0082\"\n      ],\n      \"evidence_quote\": \"他发证明，这个不是部队指战员，是刻蜡板的，他是这个教唱歌的文化教员。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"实际上其中有些是干部，被田大夫保护下来，救了不少人。\",\n      \"process_text\": \"实际上有些都是干部，给他保护下来的，他救了不少。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0084\"\n      ],\n      \"evidence_quote\": \"实际上有些都是干部，给他保护下来的，他救了不少，这个田大夫非常好的。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE008-P01\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0082\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE008-P02\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE008-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0084\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC03-DE008",
+    "event_enrichment": {
+      "result_state": "部分新四军人员（含干部）因田大夫开具的证明得到身份掩护和保护。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以“皖南事变”后为起点，以田大夫开证明并保护下部分干部为终点；仅依据S0082、S0084所述。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC03-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "皖南事变后，田大夫救助了许多新四军人员。",
+        "process_text": "“皖南事变”以后，田大夫救了我们很多人。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0082"
+        ],
+        "evidence_quote": "“皖南事变”以后啊，他救了我们很多人",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "田大夫开具证明，将相关人员身份说成非部队指战员，而是刻蜡板、教唱歌的文化教员。",
+        "process_text": "他发证明，说明这些人不是部队指战员，是刻蜡板的、教唱歌的文化教员。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0082"
+        ],
+        "evidence_quote": "他发证明，这个不是部队指战员，是刻蜡板的，他是这个教唱歌的文化教员。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "实际上其中有些是干部，被田大夫保护下来，救了不少人。",
+        "process_text": "实际上有些都是干部，给他保护下来的，他救了不少。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0084"
+        ],
+        "evidence_quote": "实际上有些都是干部，给他保护下来的，他救了不少，这个田大夫非常好的。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC03-DE008-P01",
+        "target_stage_id": "BATCH03-DOC03-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC03-S0082",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC03-DE008-P02",
+        "target_stage_id": "BATCH03-DOC03-DE008-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC03-S0084",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

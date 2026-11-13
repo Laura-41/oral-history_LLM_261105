@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T23:44:54",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC02-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC02-DE001",
+  "usage": {
+    "prompt_tokens": 1639,
+    "total_tokens": 4453,
+    "completion_tokens": 2814,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1960
+    },
+    "time_to_first_token_ms": 22444,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-13\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC02-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"伤员在塘园乡继续接受治疗，敌方清乡尚未明确开始，治疗活动仍在延续。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以叙述搬至塘园乡并在该地继续治疗伤员为核心起止；师部转移、敌人清乡准备与增兵作为同时背景，不改变本事件边界。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"转移到塘园乡驻扎，为继续治疗伤员提供落脚点。\",\n      \"process_text\": \"搬到塘园乡住下。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0008\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我们就住到塘园乡去了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"在塘园乡接续治疗伤员，同时面对敌人清乡时间不明、四边屯兵增多的背景。\",\n      \"process_text\": \"在塘园乡接着治疗伤员；敌方清乡开始时间保密，四周围兵力越来越多。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0020\"\n      ],\n      \"evidence_quote\": \"那么我们就在那里接着治疗伤员。但是敌人是什么时候正式开始清乡，哪一天正式开始，不知道，这个（是）保密的。他是搞突然袭击，他四边都屯兵，在崇明县屯兵，在上海屯兵，在常熟屯兵，苏州屯兵，江阴屯兵，镇江屯兵、扬州屯兵，那么四周围（的）兵越来越多越来越多越来越多。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"在日军意图解决苏南、苏中抗日根据地而具体开始时间不明的情况下，仍继续治疗伤员。\",\n      \"process_text\": \"日军调来意图彻底解决苏南、苏中抗日根据地，具体哪一天开始不知道，仍在那里继续治疗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0023\"\n      ],\n      \"evidence_quote\": \"日本鬼子调过来，要解决苏南、苏中抗日根据地啊，他要来彻底解决这个问题。这哪一天开始不知道，我们在那里继续治疗了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE001-P01\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0020\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE001-P02\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0023\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-13",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC02-DE001",
+    "event_enrichment": {
+      "result_state": "伤员在塘园乡继续接受治疗，敌方清乡尚未明确开始，治疗活动仍在延续。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以叙述搬至塘园乡并在该地继续治疗伤员为核心起止；师部转移、敌人清乡准备与增兵作为同时背景，不改变本事件边界。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC02-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "转移到塘园乡驻扎，为继续治疗伤员提供落脚点。",
+        "process_text": "搬到塘园乡住下。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0008"
+        ],
+        "evidence_quote": "    陈海峰：我们就住到塘园乡去了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "在塘园乡接续治疗伤员，同时面对敌人清乡时间不明、四边屯兵增多的背景。",
+        "process_text": "在塘园乡接着治疗伤员；敌方清乡开始时间保密，四周围兵力越来越多。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0020"
+        ],
+        "evidence_quote": "那么我们就在那里接着治疗伤员。但是敌人是什么时候正式开始清乡，哪一天正式开始，不知道，这个（是）保密的。他是搞突然袭击，他四边都屯兵，在崇明县屯兵，在上海屯兵，在常熟屯兵，苏州屯兵，江阴屯兵，镇江屯兵、扬州屯兵，那么四周围（的）兵越来越多越来越多越来越多。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "在日军意图解决苏南、苏中抗日根据地而具体开始时间不明的情况下，仍继续治疗伤员。",
+        "process_text": "日军调来意图彻底解决苏南、苏中抗日根据地，具体哪一天开始不知道，仍在那里继续治疗。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0023"
+        ],
+        "evidence_quote": "日本鬼子调过来，要解决苏南、苏中抗日根据地啊，他要来彻底解决这个问题。这哪一天开始不知道，我们在那里继续治疗了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC02-DE001-P01",
+        "target_stage_id": "BATCH05-DOC02-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC02-S0020",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE001-P02",
+        "target_stage_id": "BATCH05-DOC02-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC02-S0023",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

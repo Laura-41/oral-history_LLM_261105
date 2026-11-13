@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T00:05:18",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC06-DE007",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC06-DE007",
+  "usage": {
+    "prompt_tokens": 1247,
+    "total_tokens": 2637,
+    "completion_tokens": 1390,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 688
+    },
+    "time_to_first_token_ms": 11017,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC06-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队与山东中共历山特委会合后夜渡黄河，到达临沂西边、费县西南边的梁邱、柱子一带。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于历山特委听到部队到来并与部队会合，止于部队到达临沂西、费县西南的梁邱、柱子。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"历山特委听到部队到来后与部队会合。\",\n      \"process_text\": \"历山特委听到我们来了，可能上级也有指示，就跟我们合在一起。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0024\"\n      ],\n      \"evidence_quote\": \"听到我们来了，可能上级也有指示，就跟我们合在一起\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"部队夜间渡过黄河。\",\n      \"process_text\": \"会合后夜渡黄河。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0024\"\n      ],\n      \"evidence_quote\": \"夜渡黄河\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"部队到达临沂西、费县西南的梁邱、柱子。\",\n      \"process_text\": \"夜渡黄河后到达临沂的西边、费县的西南边，即梁邱、柱子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0024\"\n      ],\n      \"evidence_quote\": \"就到了临沂的西边，费县的西南边，就是梁邱、柱子\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC06-DE007-P01\",\n      \"target_stage_id\": \"BATCH05-DOC06-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC06-S0024\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC06-DE007-P02\",\n      \"target_stage_id\": \"BATCH05-DOC06-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC06-S0024\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC06-DE007",
+    "event_enrichment": {
+      "result_state": "部队与山东中共历山特委会合后夜渡黄河，到达临沂西边、费县西南边的梁邱、柱子一带。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于历山特委听到部队到来并与部队会合，止于部队到达临沂西、费县西南的梁邱、柱子。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC06-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "历山特委听到部队到来后与部队会合。",
+        "process_text": "历山特委听到我们来了，可能上级也有指示，就跟我们合在一起。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0024"
+        ],
+        "evidence_quote": "听到我们来了，可能上级也有指示，就跟我们合在一起",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC06-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "部队夜间渡过黄河。",
+        "process_text": "会合后夜渡黄河。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0024"
+        ],
+        "evidence_quote": "夜渡黄河",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC06-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "部队到达临沂西、费县西南的梁邱、柱子。",
+        "process_text": "夜渡黄河后到达临沂的西边、费县的西南边，即梁邱、柱子。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0024"
+        ],
+        "evidence_quote": "就到了临沂的西边，费县的西南边，就是梁邱、柱子",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC06-DE007-P01",
+        "target_stage_id": "BATCH05-DOC06-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC06-S0024",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC06-DE007-P02",
+        "target_stage_id": "BATCH05-DOC06-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC06-S0024",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

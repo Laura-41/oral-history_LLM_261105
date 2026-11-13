@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T09:25:06",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC04-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC04-DE002",
+  "usage": {
+    "prompt_tokens": 1483,
+    "total_tokens": 11872,
+    "completion_tokens": 10389,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8911
+    },
+    "time_to_first_token_ms": 173775,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC04-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"中央军飞机对公路上的缴获汽车投弹后，现场冒烟，叙述者推断大概烧了汽车；叙述者称部队有意识地要撤。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于S0007中央军飞机返回并看见公路上一百多辆缴获汽车，S0009补充缴获物资堆积；止于S0013汽车冒烟/被烧及部队有意识要撤，S0013后句687团打退骑兵为相邻后续，不作为本事件核心结果。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"中央军飞机返回并发现公路上的缴获汽车\",\n      \"process_text\": \"中央军的飞机又回来了，回来以后看见我们下面缴的汽车，一百多辆，摆好长一溜呢。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0007\"\n      ],\n      \"evidence_quote\": \"    杨永松：过了不久又回来了。当时不知怎么往回来了，（其实）他是看见中央军的飞机往回跑，他跑了以后不远，后面咱们的飞机来了。结果中央军这个飞机追追追，他也追不上了。日本飞机跑了，中央军的飞机又回来了，回来以后看见我们下面缴的汽车，一百多辆，摆好长一溜呢。据说是这车上还有一门炮，这个炮是谁弄上的我不知道，反正我们那个团没有弄到，我们团在这边（杨永松往左边比划）。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"缴获汽车相关物资堆积情况\",\n      \"process_text\": \"有一门75步兵炮，这么长的（杨永松两手示意）。另外那个炮弹呢，老百姓说堆得跟山一样，就堆得比较高啊。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0009\"\n      ],\n      \"evidence_quote\": \"    杨永松：有一门75步兵炮，这么长的（杨永松两手示意）。另外那个炮弹呢，老百姓说堆得跟山一样，就堆得比较高啊。我碰见教导（音）那个被服一蒙（音）……但是我们不认识啊，这么大家伙，那么长，他扛着好几个回来。所以炮弹、步机枪子弹、粮食、干粮这些物资啊，堆积如山，形容是这样的，堆得很长。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"中央军飞机向缴获汽车投弹\",\n      \"process_text\": \"所以这个中央军飞机回来以后，他撂了几个炸弹，也不知道撂准没有，我这看不见，就光知道那边“咣咣”的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0011\"\n      ],\n      \"evidence_quote\": \"    杨永松：所以这个中央军飞机回来以后，他撂了几个炸弹，也不知道撂准没有，我这看不见，就光知道那边“咣咣”的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"汽车冒烟/被烧，部队有意识要撤\",\n      \"process_text\": \"中央军他炸那个公路上的车啊。好像那个时候，第二天（还是）哪一天啊，就有意识地要撤。因为敌人增援已经来了，但是不知道有多少。我看见冒烟了，很高，大概就烧那个汽车了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0013\"\n      ],\n      \"evidence_quote\": \"    杨永松：中央军他炸那个公路上的车啊。好像那个时候，第二天（还是）哪一天啊，就有意识地要撤。因为敌人增援已经来了，但是不知道有多少。我看见冒烟了，很高，大概就烧那个汽车了。687团上去以后，他就把他的骑兵就打退了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE002-P01\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE002-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0009\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE002-P02\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0011\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE002-P03\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE002-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0013\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC04-DE002",
+    "event_enrichment": {
+      "result_state": "中央军飞机对公路上的缴获汽车投弹后，现场冒烟，叙述者推断大概烧了汽车；叙述者称部队有意识地要撤。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于S0007中央军飞机返回并看见公路上一百多辆缴获汽车，S0009补充缴获物资堆积；止于S0013汽车冒烟/被烧及部队有意识要撤，S0013后句687团打退骑兵为相邻后续，不作为本事件核心结果。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC04-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "中央军飞机返回并发现公路上的缴获汽车",
+        "process_text": "中央军的飞机又回来了，回来以后看见我们下面缴的汽车，一百多辆，摆好长一溜呢。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0007"
+        ],
+        "evidence_quote": "    杨永松：过了不久又回来了。当时不知怎么往回来了，（其实）他是看见中央军的飞机往回跑，他跑了以后不远，后面咱们的飞机来了。结果中央军这个飞机追追追，他也追不上了。日本飞机跑了，中央军的飞机又回来了，回来以后看见我们下面缴的汽车，一百多辆，摆好长一溜呢。据说是这车上还有一门炮，这个炮是谁弄上的我不知道，反正我们那个团没有弄到，我们团在这边（杨永松往左边比划）。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "缴获汽车相关物资堆积情况",
+        "process_text": "有一门75步兵炮，这么长的（杨永松两手示意）。另外那个炮弹呢，老百姓说堆得跟山一样，就堆得比较高啊。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0009"
+        ],
+        "evidence_quote": "    杨永松：有一门75步兵炮，这么长的（杨永松两手示意）。另外那个炮弹呢，老百姓说堆得跟山一样，就堆得比较高啊。我碰见教导（音）那个被服一蒙（音）……但是我们不认识啊，这么大家伙，那么长，他扛着好几个回来。所以炮弹、步机枪子弹、粮食、干粮这些物资啊，堆积如山，形容是这样的，堆得很长。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "中央军飞机向缴获汽车投弹",
+        "process_text": "所以这个中央军飞机回来以后，他撂了几个炸弹，也不知道撂准没有，我这看不见，就光知道那边“咣咣”的。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0011"
+        ],
+        "evidence_quote": "    杨永松：所以这个中央军飞机回来以后，他撂了几个炸弹，也不知道撂准没有，我这看不见，就光知道那边“咣咣”的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "汽车冒烟/被烧，部队有意识要撤",
+        "process_text": "中央军他炸那个公路上的车啊。好像那个时候，第二天（还是）哪一天啊，就有意识地要撤。因为敌人增援已经来了，但是不知道有多少。我看见冒烟了，很高，大概就烧那个汽车了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0013"
+        ],
+        "evidence_quote": "    杨永松：中央军他炸那个公路上的车啊。好像那个时候，第二天（还是）哪一天啊，就有意识地要撤。因为敌人增援已经来了，但是不知道有多少。我看见冒烟了，很高，大概就烧那个汽车了。687团上去以后，他就把他的骑兵就打退了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC04-DE002-P01",
+        "target_stage_id": "BATCH02-DOC04-DE002-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC04-S0009",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE002-P02",
+        "target_stage_id": "BATCH02-DOC04-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0011",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE002-P03",
+        "target_stage_id": "BATCH02-DOC04-DE002-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0013",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

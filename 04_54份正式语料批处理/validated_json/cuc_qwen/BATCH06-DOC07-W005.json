@@ -1,0 +1,143 @@
+{
+  "validated_at": "2026-11-11T22:54:54",
+  "source_raw_response": "04_54份正式语料批处理/raw_responses/cuc_qwen/20261111_225053_BATCH06-DOC07-W005.json",
+  "model_id": "cuc/qwen",
+  "window_id": "BATCH06-DOC07-W005",
+  "technical_document_id": "BATCH06-DOC07",
+  "document_id": "21.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 7,
+    "unassigned_segment_count": 9,
+    "input_segment_count": 16,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH06-DOC07-W005-E02"
+  ],
+  "postprocessed_output": {
+    "window_id": "BATCH06-DOC07-W005",
+    "events": [
+      {
+        "candidate_id": "BATCH06-DOC07-W005-E01",
+        "source_segment_ids": [
+          "BATCH06-DOC07-S0180",
+          "BATCH06-DOC07-S0182",
+          "BATCH06-DOC07-S0184",
+          "BATCH06-DOC07-S0185",
+          "BATCH06-DOC07-S0186"
+        ],
+        "event": {
+          "event_name": "湖心寺老风景区被毁弃及大殿住伤病员",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "建东边风景区、毁掉西边风景区并住伤病员",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他",
+              "normalized_entity": null,
+              "certainty": "LOW"
+            },
+            {
+              "role": "Goal",
+              "mention": "东边风景区",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "西边这个风景区",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "LOW"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "大殿",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他建东边风景区去了，西边这个风景区是老风景区，这个给毁掉了，当时那个风景非常好。",
+          "type_basis": "核心是建东边风景区、毁掉西边风景区以及大殿住伤病员等可观察变化；“他”指代不明，“住伤病员”语义不清，且部分内容为环境描述，因此保留候选并需复核。",
+          "alternative_event_type": "RELATIONAL",
+          "ambiguity_reason": "湖心寺周围风景、照片和竹林等描述具有关系或存在属性，是否构成独立物质经历不确定；“他”指代不明，“住伤病员”语义不清。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC07-W005-E02",
+        "source_segment_ids": [
+          "BATCH06-DOC07-S0186",
+          "BATCH06-DOC07-S0187",
+          "BATCH06-DOC07-S0188"
+        ],
+        "event": {
+          "event_name": "党中央来看房子并告知保密",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "来看房子并告知保密",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "党中央",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "MANNER",
+              "value": "偷偷地",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道",
+          "evidence_quote": "党中央来看了房子，而且偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道。那说明这个事情是真的。",
+          "type_basis": "核心是“偷偷地告诉我们……不得提”的明确象征交换和保密要求；“来看房子/地形”作为同一事件阶段，不单独建事件；Sayer/Receiver 符合言语过程角色。",
+          "alternative_event_type": "MATERIAL",
+          "ambiguity_reason": "“来看房子/地形”具有物质行动特征，且 Sayer 具体是党中央还是领导人员不完全明确。；候选触及文档最后一个受访者片段，需人工确认叙述是否已完整。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH06-DOC07-S0174",
+      "BATCH06-DOC07-S0175",
+      "BATCH06-DOC07-S0176",
+      "BATCH06-DOC07-S0177",
+      "BATCH06-DOC07-S0178",
+      "BATCH06-DOC07-S0179",
+      "BATCH06-DOC07-S0181",
+      "BATCH06-DOC07-S0183",
+      "BATCH06-DOC07-S0189"
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 4950,
+    "total_tokens": 20629,
+    "completion_tokens": 15679,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14428
+    },
+    "time_to_first_token_ms": 241315,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 15678000
+  }
+}

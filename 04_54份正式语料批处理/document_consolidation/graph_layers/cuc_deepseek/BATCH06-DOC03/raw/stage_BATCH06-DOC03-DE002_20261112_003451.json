@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-12T00:34:51",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC03-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC03-DE002",
+  "usage": {
+    "prompt_tokens": 1376,
+    "total_tokens": 3713,
+    "completion_tokens": 2337,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1691
+    },
+    "time_to_first_token_ms": 18062,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC03-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"杨永松到特务团任政治主任；该团为两个营八个连、无第三营，团长吴世安，副团长张策平。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以六团一部与师部特务营编成特务团为背景起点，以杨永松自述去当政治主任及该团编制、主官说明为终点；后续罗政委派干部、部队改编为苏鲁支队等属于其他事件，不纳入。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"六团一部分到鲁南，与师部特务营编成特务团，为杨永松赴任提供组织背景。\",\n      \"process_text\": \"六团一部分到鲁南，与师部特务营编成一个特务团。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0028\"\n      ],\n      \"evidence_quote\": \"这个六团一部分就到鲁南我们那个地方，就跟师部的特务营编成一个特务团。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"杨永松到特务团任政治主任，并说明该团编制与团长、副团长。\",\n      \"process_text\": \"特务团两个营八个连，没有第三营，我去当政治主任；团长是吴世安，副团长是张策平。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0030\"\n      ],\n      \"evidence_quote\": \"这个特务团两个营八个连，没有第三营，我就去当政治主任，团长是吴世安，副团长就是六团的副团长，叫张策平，这老党员，牙齿都掉了，60多岁了，在军队干也很艰苦。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE002-P01\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE002-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0028\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC03-DE002",
+    "event_enrichment": {
+      "result_state": "杨永松到特务团任政治主任；该团为两个营八个连、无第三营，团长吴世安，副团长张策平。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以六团一部与师部特务营编成特务团为背景起点，以杨永松自述去当政治主任及该团编制、主官说明为终点；后续罗政委派干部、部队改编为苏鲁支队等属于其他事件，不纳入。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC03-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "六团一部分到鲁南，与师部特务营编成特务团，为杨永松赴任提供组织背景。",
+        "process_text": "六团一部分到鲁南，与师部特务营编成一个特务团。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0028"
+        ],
+        "evidence_quote": "这个六团一部分就到鲁南我们那个地方，就跟师部的特务营编成一个特务团。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "杨永松到特务团任政治主任，并说明该团编制与团长、副团长。",
+        "process_text": "特务团两个营八个连，没有第三营，我去当政治主任；团长是吴世安，副团长是张策平。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0030"
+        ],
+        "evidence_quote": "这个特务团两个营八个连，没有第三营，我就去当政治主任，团长是吴世安，副团长就是六团的副团长，叫张策平，这老党员，牙齿都掉了，60多岁了，在军队干也很艰苦。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC03-DE002-P01",
+        "target_stage_id": "BATCH06-DOC03-DE002-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH06-DOC03-S0028",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

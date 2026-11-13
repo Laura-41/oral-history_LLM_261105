@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-12T11:33:12",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC09-DE009",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC09-DE009",
+  "usage": {
+    "prompt_tokens": 1183,
+    "total_tokens": 5156,
+    "completion_tokens": 3973,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3332
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3972000,
+    "time_to_first_token_ms": 87418
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC09-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"卫立煌回国后大概在北京或某处居住，并受到咱们供应。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为 BATCH02-DOC09-S0093 提到卫立煌在蒋介石那吃不开、解放以后回到咱们；终点为 BATCH02-DOC09-S0095 提到回国后大概在北京住还是在哪里、反正咱们供应他。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"背景与回国：卫立煌在蒋介石那吃不开，解放以后回到咱们。\",\n      \"process_text\": \"卫立煌这个人也是在蒋介石那吃不开，解放以后他就回到咱们……\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0093\"\n      ],\n      \"evidence_quote\": \"卫立煌这个人也是在蒋介石那吃不开，解放以后他就回到咱们……\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"回国后居住与供应：大概在北京或某处居住，由咱们供应。\",\n      \"process_text\": \"回国了，大概就在北京住还是在哪里，反正咱们供应他。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0095\"\n      ],\n      \"evidence_quote\": \"    杨永松：回国了，大概就在北京住还是在哪里，反正咱们供应他。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE009-P01\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0095\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC09-DE009",
+    "event_enrichment": {
+      "result_state": "卫立煌回国后大概在北京或某处居住，并受到咱们供应。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为 BATCH02-DOC09-S0093 提到卫立煌在蒋介石那吃不开、解放以后回到咱们；终点为 BATCH02-DOC09-S0095 提到回国后大概在北京住还是在哪里、反正咱们供应他。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC09-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "背景与回国：卫立煌在蒋介石那吃不开，解放以后回到咱们。",
+        "process_text": "卫立煌这个人也是在蒋介石那吃不开，解放以后他就回到咱们……",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0093"
+        ],
+        "evidence_quote": "卫立煌这个人也是在蒋介石那吃不开，解放以后他就回到咱们……",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "回国后居住与供应：大概在北京或某处居住，由咱们供应。",
+        "process_text": "回国了，大概就在北京住还是在哪里，反正咱们供应他。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0095"
+        ],
+        "evidence_quote": "    杨永松：回国了，大概就在北京住还是在哪里，反正咱们供应他。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC09-DE009-P01",
+        "target_stage_id": "BATCH02-DOC09-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0095",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

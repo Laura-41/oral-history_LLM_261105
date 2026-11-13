@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T13:49:17",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC02-DE009",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC02-DE009",
+  "usage": {
+    "prompt_tokens": 1309,
+    "total_tokens": 7749,
+    "completion_tokens": 6440,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5359
+    },
+    "time_to_first_token_ms": 95449,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-18\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC02-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"保健盒仍保存于家里，小卫生包仍保存；陈海峰准备将保健盒捐给军事医科院但尚未联系，捐赠未执行。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"边界以S0101中保健盒还在家里、准备捐给军事医科院且未联系，以及S0103中小卫生包还有为核心；S0101中最后一批保存的战争环境物品和S0103中解放后搜家拿走88件作为同一保存/处置背景纳入。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"保健盒保存于家里并形成捐赠准备\",\n      \"process_text\": \"陈海峰说（保健盒）那个盒子还在（家里）这儿呢，他准备捐给军事医科院，但还没跟他们联系。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0101\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我带了，（保健盒）那个盒子还在（家里）这儿呢，我准备捐给军事医科院，我还没跟他们联系呢。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"说明所保存物品为最后一批战争环境物品\",\n      \"process_text\": \"陈海峰说这是最后一批他保存的战争环境的东西，过去他们医院的都给盐城那个纪念馆了，弄了一个没保车（音）装走的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0101\"\n      ],\n      \"evidence_quote\": \"最后一批，我保存的战争环境的东西啊，过去我们医院的都给盐城那个纪念馆了，弄了一个没保车（音）装走的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"回忆搜家收走部分物品但小卫生包仍保存\",\n      \"process_text\": \"陈海峰说解放以后到北京，军队到他家里搜，拿走了88件，招生广告、竹子做的代替品等被收走或展览，但带着看粟司令（病）的小卫生包还有。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0103\"\n      ],\n      \"evidence_quote\": \"    陈海峰：解放以后没有多久，到北京来，军队到我家里来搜……“抄家”，拿走了88件。就是苏浙医务职业学校的招生广告，都拿去了。我竹子做的一些代替品啊，在天安门城楼上都展览哪，第一次卫生会议展览的，1951年，把我这个收了好多东西去。书里面还有表扬我的那个信啊。这个小的，带着看粟司令（病）那个小卫生包还有呢。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE009-P01\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE009-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0101\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE009-P02\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE009-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0103\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-18",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC02-DE009",
+    "event_enrichment": {
+      "result_state": "保健盒仍保存于家里，小卫生包仍保存；陈海峰准备将保健盒捐给军事医科院但尚未联系，捐赠未执行。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "边界以S0101中保健盒还在家里、准备捐给军事医科院且未联系，以及S0103中小卫生包还有为核心；S0101中最后一批保存的战争环境物品和S0103中解放后搜家拿走88件作为同一保存/处置背景纳入。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC02-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "保健盒保存于家里并形成捐赠准备",
+        "process_text": "陈海峰说（保健盒）那个盒子还在（家里）这儿呢，他准备捐给军事医科院，但还没跟他们联系。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0101"
+        ],
+        "evidence_quote": "    陈海峰：我带了，（保健盒）那个盒子还在（家里）这儿呢，我准备捐给军事医科院，我还没跟他们联系呢。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "说明所保存物品为最后一批战争环境物品",
+        "process_text": "陈海峰说这是最后一批他保存的战争环境的东西，过去他们医院的都给盐城那个纪念馆了，弄了一个没保车（音）装走的。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0101"
+        ],
+        "evidence_quote": "最后一批，我保存的战争环境的东西啊，过去我们医院的都给盐城那个纪念馆了，弄了一个没保车（音）装走的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "回忆搜家收走部分物品但小卫生包仍保存",
+        "process_text": "陈海峰说解放以后到北京，军队到他家里搜，拿走了88件，招生广告、竹子做的代替品等被收走或展览，但带着看粟司令（病）的小卫生包还有。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0103"
+        ],
+        "evidence_quote": "    陈海峰：解放以后没有多久，到北京来，军队到我家里来搜……“抄家”，拿走了88件。就是苏浙医务职业学校的招生广告，都拿去了。我竹子做的一些代替品啊，在天安门城楼上都展览哪，第一次卫生会议展览的，1951年，把我这个收了好多东西去。书里面还有表扬我的那个信啊。这个小的，带着看粟司令（病）那个小卫生包还有呢。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC02-DE009-P01",
+        "target_stage_id": "BATCH06-DOC02-DE009-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC02-S0101",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE009-P02",
+        "target_stage_id": "BATCH06-DOC02-DE009-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0103",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

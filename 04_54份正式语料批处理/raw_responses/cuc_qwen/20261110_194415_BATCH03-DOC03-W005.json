@@ -1,0 +1,283 @@
+{
+  "run_time": "2026-11-10T19:44:15",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC03-W005",
+  "technical_document_id": "BATCH03-DOC03",
+  "document_id": "06.陈海峰（二访）（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC03-S0069",
+    "BATCH03-DOC03-S0070",
+    "BATCH03-DOC03-S0071",
+    "BATCH03-DOC03-S0072",
+    "BATCH03-DOC03-S0073",
+    "BATCH03-DOC03-S0074",
+    "BATCH03-DOC03-S0075",
+    "BATCH03-DOC03-S0076",
+    "BATCH03-DOC03-S0077",
+    "BATCH03-DOC03-S0078",
+    "BATCH03-DOC03-S0079",
+    "BATCH03-DOC03-S0080",
+    "BATCH03-DOC03-S0081",
+    "BATCH03-DOC03-S0082",
+    "BATCH03-DOC03-S0083",
+    "BATCH03-DOC03-S0084",
+    "BATCH03-DOC03-S0085",
+    "BATCH03-DOC03-S0086",
+    "BATCH03-DOC03-S0087",
+    "BATCH03-DOC03-S0088",
+    "BATCH03-DOC03-S0089",
+    "BATCH03-DOC03-S0090"
+  ],
+  "json_valid": true,
+  "validation_errors": [
+    "events[2].event.evidence_quote不在该事件所列原文片段中"
+  ],
+  "technical_passed": false,
+  "metrics": {
+    "event_count": 3,
+    "assigned_segment_count": 8,
+    "unassigned_segment_count": 14,
+    "input_segment_count": 22,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC03-W005",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC03-W005-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC03-S0072",
+          "BATCH03-DOC03-S0074",
+          "BATCH03-DOC03-S0076"
+        ],
+        "event": {
+          "event_name": "中分村山上被围火攻后卫生队抢救伤员并突围转移",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "突围转移",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们卫生队",
+              "normalized_entity": "新四军卫生队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "鬼子",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "国民党医疗队",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Client",
+              "mention": "伤员",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "山上",
+              "normalized_value": "中分村山上"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "竹林子",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "月亮洞",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "紫杉岭（音）",
+              "normalized_value": "紫杉岭"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "中分村的西南方向",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "半夜里",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "土办法",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "中分村撤到山上以后，鬼子（在）中分村的东南方向，都是一片一片山，到处都是竹林子，鬼子把我们包围了，发现山上有新四军。包围以后，火攻，从山底下架火烧，往山上烧，那天烧了一天呀，“哗哗哗哗哗”。在山上（有）几条小路，后面山就更高了。他把这个山就给围住了，我们就跟他跟他打游击，都用那个土办法牵制他。",
+          "type_basis": "核心是包围、火攻、打游击、抢救伤员和突围转移等可观察行动与位置变化，参与者配置为Actor、Client，符合MATERIAL；不是单纯心理、关系或存在。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC03-W005-E02",
+        "source_segment_ids": [
+          "BATCH03-DOC03-S0074",
+          "BATCH03-DOC03-S0079",
+          "BATCH03-DOC03-S0080",
+          "BATCH03-DOC03-S0086"
+        ],
+        "event": {
+          "event_name": "国民党19医疗大队派队到新四军及三支队医疗队撤走争取医生",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "撤走并争取医生",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "国民党医疗队",
+              "normalized_entity": "中国红十字会医疗大队第19大队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "三个医生",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Client",
+              "mention": "我们新四军",
+              "normalized_entity": "新四军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "军部",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "三支队",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "太残酷了",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "欢送",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "大队有好多医疗队，派到我们新四军是两个小队，一个放在军部，一个放在三支队。三支队是打两仗（陈海峰比划数目二），太残酷了！一万多鬼子一弄，把他吓坏了，他请求调回去，就撤走了。撤走那次欢送他，我还是卫生队长，还代表新四军。那天把我喝醉了，我原来是喝白干我可以喝一斤呢，现在一口不能喝了。可是争取了三个医生，参加我们新四军，搞工作。",
+          "type_basis": "派队、撤走、欢送和争取医生属于组织行动与人员调动，有可观察结果，符合MATERIAL；医疗队归属信息作为背景并入该经历，不单独作为RELATIONAL。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC03-W005-E03",
+        "source_segment_ids": [
+          "BATCH03-DOC03-S0082",
+          "BATCH03-DOC03-S0084"
+        ],
+        "event": {
+          "event_name": "皖南事变后田医生发证明保护干部",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "发证明保护干部",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "田什么基（音）",
+              "normalized_entity": "田医生",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "干部",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Client",
+              "mention": "我们很多人",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "“皖南事变”以后",
+              "normalized_value": "皖南事变后"
+            },
+            {
+              "kind": "MANNER",
+              "value": "刻蜡板",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "“皖南事变”以后啊，他救了我们很多人，他发证明，这个不是部队指指员，是刻蜡板的，他是这个教唱歌的文化教员。",
+          "type_basis": "发证明、刻蜡板和保护干部是可观察行动并产生保护结果，符合MATERIAL；不是仅建立身份或属性关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC03-S0069",
+      "BATCH03-DOC03-S0070",
+      "BATCH03-DOC03-S0071",
+      "BATCH03-DOC03-S0073",
+      "BATCH03-DOC03-S0075",
+      "BATCH03-DOC03-S0077",
+      "BATCH03-DOC03-S0078",
+      "BATCH03-DOC03-S0081",
+      "BATCH03-DOC03-S0083",
+      "BATCH03-DOC03-S0085",
+      "BATCH03-DOC03-S0087",
+      "BATCH03-DOC03-S0088",
+      "BATCH03-DOC03-S0089",
+      "BATCH03-DOC03-S0090"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH03-DOC03-W005\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC03-W005-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC03-S0072\",\n        \"BATCH03-DOC03-S0074\",\n        \"BATCH03-DOC03-S0076\"\n      ],\n      \"event\": {\n        \"event_name\": \"中分村山上被围火攻后卫生队抢救伤员并突围转移\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"突围转移\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们卫生队\",\n            \"normalized_entity\": \"新四军卫生队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"鬼子\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"国民党医疗队\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Client\",\n            \"mention\": \"伤员\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"山上\",\n            \"normalized_value\": \"中分村山上\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"竹林子\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"月亮洞\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"紫杉岭（音）\",\n            \"normalized_value\": \"紫杉岭\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"中分村的西南方向\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"半夜里\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"土办法\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"中分村撤到山上以后，鬼子（在）中分村的东南方向，都是一片一片山，到处都是竹林子，鬼子把我们包围了，发现山上有新四军。包围以后，火攻，从山底下架火烧，往山上烧，那天烧了一天呀，“哗哗哗哗哗”。在山上（有）几条小路，后面山就更高了。他把这个山就给围住了，我们就跟他跟他打游击，都用那个土办法牵制他。\",\n        \"type_basis\": \"核心是包围、火攻、打游击、抢救伤员和突围转移等可观察行动与位置变化，参与者配置为Actor、Client，符合MATERIAL；不是单纯心理、关系或存在。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC03-W005-E02\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC03-S0074\",\n        \"BATCH03-DOC03-S0079\",\n        \"BATCH03-DOC03-S0080\",\n        \"BATCH03-DOC03-S0086\"\n      ],\n      \"event\": {\n        \"event_name\": \"国民党19医疗大队派队到新四军及三支队医疗队撤走争取医生\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"撤走并争取医生\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"国民党医疗队\",\n            \"normalized_entity\": \"中国红十字会医疗大队第19大队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"三个医生\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Client\",\n            \"mention\": \"我们新四军\",\n            \"normalized_entity\": \"新四军\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"军部\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"三支队\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"太残酷了\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"欢送\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"大队有好多医疗队，派到我们新四军是两个小队，一个放在军部，一个放在三支队。三支队是打两仗（陈海峰比划数目二），太残酷了！一万多鬼子一弄，把他吓坏了，他请求调回去，就撤走了。撤走那次欢送他，我还是卫生队长，还代表新四军。那天把我喝醉了，我原来是喝白干我可以喝一斤呢，现在一口不能喝了。可是争取了三个医生，参加我们新四军，搞工作。\",\n        \"type_basis\": \"派队、撤走、欢送和争取医生属于组织行动与人员调动，有可观察结果，符合MATERIAL；医疗队归属信息作为背景并入该经历，不单独作为RELATIONAL。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC03-W005-E03\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC03-S0082\",\n        \"BATCH03-DOC03-S0084\"\n      ],\n      \"event\": {\n        \"event_name\": \"皖南事变后田医生发证明保护干部\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"发证明保护干部\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"田什么基（音）\",\n            \"normalized_entity\": \"田医生\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"干部\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Client\",\n            \"mention\": \"我们很多人\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"“皖南事变”以后\",\n            \"normalized_value\": \"皖南事变后\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"刻蜡板\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"“皖南事变”以后啊，他救了我们很多人，他发证明，这个不是部队指指员，是刻蜡板的，他是这个教唱歌的文化教员。\",\n        \"type_basis\": \"发证明、刻蜡板和保护干部是可观察行动并产生保护结果，符合MATERIAL；不是仅建立身份或属性关系。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC03-S0069\",\n    \"BATCH03-DOC03-S0070\",\n    \"BATCH03-DOC03-S0071\",\n    \"BATCH03-DOC03-S0073\",\n    \"BATCH03-DOC03-S0075\",\n    \"BATCH03-DOC03-S0077\",\n    \"BATCH03-DOC03-S0078\",\n    \"BATCH03-DOC03-S0081\",\n    \"BATCH03-DOC03-S0083\",\n    \"BATCH03-DOC03-S0085\",\n    \"BATCH03-DOC03-S0087\",\n    \"BATCH03-DOC03-S0088\",\n    \"BATCH03-DOC03-S0089\",\n    \"BATCH03-DOC03-S0090\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5663,
+    "total_tokens": 26278,
+    "completion_tokens": 20615,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 18373
+    },
+    "time_to_first_token_ms": 309101,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 20614000
+  }
+}

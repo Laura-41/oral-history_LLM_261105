@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T09:22:47",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC04-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC04-DE001",
+  "usage": {
+    "prompt_tokens": 1338,
+    "total_tokens": 10764,
+    "completion_tokens": 9426,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7921
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 138535,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC04-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"杨永松折返并躲入水沟观察，日本飞机十几架往南去了。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据给定 source_segment_ids：S0003 提供敌人骑兵联队背景，S0005 从“他不让我过嘛”到“往南去了”覆盖拦截、折返、敌机、躲水沟观察与飞机离去。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"杨永松听说敌人骑兵联队来并估计其编制\",\n      \"process_text\": \"听说是敌人来的一个骑兵联队，说有五六百匹马，骑兵联队他们下面没有大队，他可能就直接是骑兵中队。咱们跟东北军打仗的时候，他那个骑兵也是直接四个连，下面没有营，估计日本人那个编制可能也是没有营，他联队是等于咱们的团。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0003\"\n      ],\n      \"evidence_quote\": \"    杨永松：听说是敌人来的一个骑兵联队，说有五六百匹马，骑兵联队他们下面没有大队，他可能就直接是骑兵中队。咱们跟东北军打仗的时候，他那个骑兵也是直接四个连，下面没有营，估计日本人那个编制可能也是没有营，他联队是等于咱们的团。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"杨永松因不让他过而往回走\",\n      \"process_text\": \"他不让我过嘛，我就只好往回走啊\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0005\"\n      ],\n      \"evidence_quote\": \"他不让我过嘛，我就只好往回走啊\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"飞机飞得很矮且没有开枪，杨永松手枪打不着\",\n      \"process_text\": \"结果这个飞机来了，飞得很矮，他也没有开枪，我就手枪也打不着（杨永松笑）。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0005\"\n      ],\n      \"evidence_quote\": \"结果这个飞机来了，飞得很矮，他也没有开枪，我就手枪也打不着（杨永松笑）。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"杨永松躲到水沟里看一会儿并认为飞机高度超过手枪射程\",\n      \"process_text\": \"我想，因为我说他妈你飞这么低啊，你手枪就打三十米左右二十五米，他飞怎么样也有上百米高啊。我就又躲到那个水沟里看一会儿。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0005\"\n      ],\n      \"evidence_quote\": \"我想，因为我说他妈你飞这么低啊，你手枪就打三十米左右二十五米，他飞怎么样也有上百米高啊。我就又躲到那个水沟里看一会儿。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"日本飞机十几架往南去了，口述者推测可能是一个编队\",\n      \"process_text\": \"这个时候，日本飞机十几架，可能是一个什么编队吧，往南去了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0005\"\n      ],\n      \"evidence_quote\": \"这个时候，日本飞机十几架，可能是一个什么编队吧，往南去了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE001-P01\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE001-P02\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0005\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE001-P03\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0005\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE001-P04\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE001-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0005\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC04-DE001",
+    "event_enrichment": {
+      "result_state": "杨永松折返并躲入水沟观察，日本飞机十几架往南去了。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "依据给定 source_segment_ids：S0003 提供敌人骑兵联队背景，S0005 从“他不让我过嘛”到“往南去了”覆盖拦截、折返、敌机、躲水沟观察与飞机离去。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC04-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "杨永松听说敌人骑兵联队来并估计其编制",
+        "process_text": "听说是敌人来的一个骑兵联队，说有五六百匹马，骑兵联队他们下面没有大队，他可能就直接是骑兵中队。咱们跟东北军打仗的时候，他那个骑兵也是直接四个连，下面没有营，估计日本人那个编制可能也是没有营，他联队是等于咱们的团。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0003"
+        ],
+        "evidence_quote": "    杨永松：听说是敌人来的一个骑兵联队，说有五六百匹马，骑兵联队他们下面没有大队，他可能就直接是骑兵中队。咱们跟东北军打仗的时候，他那个骑兵也是直接四个连，下面没有营，估计日本人那个编制可能也是没有营，他联队是等于咱们的团。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "杨永松因不让他过而往回走",
+        "process_text": "他不让我过嘛，我就只好往回走啊",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0005"
+        ],
+        "evidence_quote": "他不让我过嘛，我就只好往回走啊",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "飞机飞得很矮且没有开枪，杨永松手枪打不着",
+        "process_text": "结果这个飞机来了，飞得很矮，他也没有开枪，我就手枪也打不着（杨永松笑）。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0005"
+        ],
+        "evidence_quote": "结果这个飞机来了，飞得很矮，他也没有开枪，我就手枪也打不着（杨永松笑）。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "杨永松躲到水沟里看一会儿并认为飞机高度超过手枪射程",
+        "process_text": "我想，因为我说他妈你飞这么低啊，你手枪就打三十米左右二十五米，他飞怎么样也有上百米高啊。我就又躲到那个水沟里看一会儿。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0005"
+        ],
+        "evidence_quote": "我想，因为我说他妈你飞这么低啊，你手枪就打三十米左右二十五米，他飞怎么样也有上百米高啊。我就又躲到那个水沟里看一会儿。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "日本飞机十几架往南去了，口述者推测可能是一个编队",
+        "process_text": "这个时候，日本飞机十几架，可能是一个什么编队吧，往南去了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0005"
+        ],
+        "evidence_quote": "这个时候，日本飞机十几架，可能是一个什么编队吧，往南去了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC04-DE001-P01",
+        "target_stage_id": "BATCH02-DOC04-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE001-P02",
+        "target_stage_id": "BATCH02-DOC04-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0005",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE001-P03",
+        "target_stage_id": "BATCH02-DOC04-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0005",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE001-P04",
+        "target_stage_id": "BATCH02-DOC04-DE001-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0005",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

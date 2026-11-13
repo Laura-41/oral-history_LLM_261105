@@ -1,0 +1,246 @@
+{
+  "run_time": "2026-11-12T03:35:39",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH07-DOC03-W003",
+  "technical_document_id": "BATCH07-DOC03",
+  "document_id": "02.陈海峰（三访）20110815（二校后 阅读版）.doc",
+  "input_segment_ids": [
+    "BATCH07-DOC03-S0044",
+    "BATCH07-DOC03-S0045",
+    "BATCH07-DOC03-S0046",
+    "BATCH07-DOC03-S0047",
+    "BATCH07-DOC03-S0048",
+    "BATCH07-DOC03-S0049",
+    "BATCH07-DOC03-S0050",
+    "BATCH07-DOC03-S0051",
+    "BATCH07-DOC03-S0052",
+    "BATCH07-DOC03-S0053",
+    "BATCH07-DOC03-S0054",
+    "BATCH07-DOC03-S0055",
+    "BATCH07-DOC03-S0056",
+    "BATCH07-DOC03-S0057",
+    "BATCH07-DOC03-S0058",
+    "BATCH07-DOC03-S0059",
+    "BATCH07-DOC03-S0060",
+    "BATCH07-DOC03-S0061",
+    "BATCH07-DOC03-S0062",
+    "BATCH07-DOC03-S0063",
+    "BATCH07-DOC03-S0064",
+    "BATCH07-DOC03-S0065",
+    "BATCH07-DOC03-S0066",
+    "BATCH07-DOC03-S0067",
+    "BATCH07-DOC03-S0068",
+    "BATCH07-DOC03-S0069",
+    "BATCH07-DOC03-S0070",
+    "BATCH07-DOC03-S0071",
+    "BATCH07-DOC03-S0072",
+    "BATCH07-DOC03-S0073"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 13,
+    "unassigned_segment_count": 17,
+    "input_segment_count": 30,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH07-DOC03-W003-E02"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH07-DOC03-W003",
+    "events": [
+      {
+        "candidate_id": "BATCH07-DOC03-W003-E01",
+        "source_segment_ids": [
+          "BATCH07-DOC03-S0045"
+        ],
+        "event": {
+          "event_name": "陈海峰与何志远、赖少其共事结识",
+          "event_type": "RELATIONAL",
+          "event_type_zh": "关系",
+          "core_process": "是老朋友",
+          "participants": [
+            {
+              "role": "Carrier",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Carrier",
+              "mention": "何志远",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Carrier",
+              "mention": "赖少其",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Attribute",
+              "mention": "老朋友",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "皖南事变之前",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "苏北",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "以后到了苏北，我当五团卫生队长，他也到五团来，也当宣传股长，我们两次在一块（陈海峰微笑），所以我们是老朋友。",
+          "type_basis": "核心是确认陈海峰与何志远、赖少其的共事和‘老朋友’关系，参与者配置为Carrier+Attribute；职务和交接作为关系背景。因‘当卫生队长/宣传股长’也可按职业劳动归MATERIAL，故保留NEEDS_REVIEW。",
+          "alternative_event_type": "MATERIAL",
+          "ambiguity_reason": "‘我当五团卫生队长’‘他也到五团来，也当宣传股长’可视为职业劳动/组织行动，而‘我们是老朋友’是关系结果，主导类型需人工确认。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      },
+      {
+        "candidate_id": "BATCH07-DOC03-W003-E02",
+        "source_segment_ids": [
+          "BATCH07-DOC03-S0050",
+          "BATCH07-DOC03-S0052",
+          "BATCH07-DOC03-S0054",
+          "BATCH07-DOC03-S0056",
+          "BATCH07-DOC03-S0058",
+          "BATCH07-DOC03-S0060",
+          "BATCH07-DOC03-S0062",
+          "BATCH07-DOC03-S0064",
+          "BATCH07-DOC03-S0067",
+          "BATCH07-DOC03-S0069",
+          "BATCH07-DOC03-S0071",
+          "BATCH07-DOC03-S0073"
+        ],
+        "event": {
+          "event_name": "东进北渡大队第三批组织出发并过青弋江受阻",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "组织出发过江",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "李康侯（音）",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "军部参谋处的十几个人",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "52师",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "东进北渡大队第三批",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "青弋江",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "12月8号半夜12点钟",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "萧村",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "丁潭",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "马头镇",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "东",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "轻装",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们唱着抗战歌曲过江，他们就阻止我们过江，不让我们走，用机枪扫射，不对我们人。",
+          "type_basis": "核心是组织东进北渡大队第三批、集合出发、行军、过青弋江及被52师阻止，属于空间移动/组织行动/执行任务，可用What did X do?测试；参与者为Actor/Goal；唱歌、情绪、路线说明和鱼水情作为同一东进经历的阶段，不单独建事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH07-DOC03-S0044",
+      "BATCH07-DOC03-S0046",
+      "BATCH07-DOC03-S0047",
+      "BATCH07-DOC03-S0048",
+      "BATCH07-DOC03-S0049",
+      "BATCH07-DOC03-S0051",
+      "BATCH07-DOC03-S0053",
+      "BATCH07-DOC03-S0055",
+      "BATCH07-DOC03-S0057",
+      "BATCH07-DOC03-S0059",
+      "BATCH07-DOC03-S0061",
+      "BATCH07-DOC03-S0063",
+      "BATCH07-DOC03-S0065",
+      "BATCH07-DOC03-S0066",
+      "BATCH07-DOC03-S0068",
+      "BATCH07-DOC03-S0070",
+      "BATCH07-DOC03-S0072"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH07-DOC03-W003\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH07-DOC03-W003-E01\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC03-S0045\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰与何志远、赖少其共事结识\",\n        \"event_type\": \"RELATIONAL\",\n        \"event_type_zh\": \"关系\",\n        \"core_process\": \"是老朋友\",\n        \"participants\": [\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"何志远\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"赖少其\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"老朋友\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"皖南事变之前\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"苏北\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"以后到了苏北，我当五团卫生队长，他也到五团来，也当宣传股长，我们两次在一块（陈海峰微笑），所以我们是老朋友。\",\n        \"type_basis\": \"核心是确认陈海峰与何志远、赖少其的共事和‘老朋友’关系，参与者配置为Carrier+Attribute；职务和交接作为关系背景。因‘当卫生队长/宣传股长’也可按职业劳动归MATERIAL，故保留NEEDS_REVIEW。\",\n        \"alternative_event_type\": \"MATERIAL\",\n        \"ambiguity_reason\": \"‘我当五团卫生队长’‘他也到五团来，也当宣传股长’可视为职业劳动/组织行动，而‘我们是老朋友’是关系结果，主导类型需人工确认。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH07-DOC03-W003-E02\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC03-S0050\",\n        \"BATCH07-DOC03-S0052\",\n        \"BATCH07-DOC03-S0054\",\n        \"BATCH07-DOC03-S0056\",\n        \"BATCH07-DOC03-S0058\",\n        \"BATCH07-DOC03-S0060\",\n        \"BATCH07-DOC03-S0062\",\n        \"BATCH07-DOC03-S0064\",\n        \"BATCH07-DOC03-S0067\",\n        \"BATCH07-DOC03-S0069\",\n        \"BATCH07-DOC03-S0071\",\n        \"BATCH07-DOC03-S0073\"\n      ],\n      \"event\": {\n        \"event_name\": \"东进北渡大队第三批组织出发并过青弋江受阻\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"组织出发过江\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"李康侯（音）\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"军部参谋处的十几个人\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"52师\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"东进北渡大队第三批\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"青弋江\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"12月8号半夜12点钟\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"萧村\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"丁潭\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"马头镇\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"东\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"轻装\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们唱着抗战歌曲过江，他们就阻止我们过江，不让我们走，用机枪扫射，不对我们人。\",\n        \"type_basis\": \"核心是组织东进北渡大队第三批、集合出发、行军、过青弋江及被52师阻止，属于空间移动/组织行动/执行任务，可用What did X do?测试；参与者为Actor/Goal；唱歌、情绪、路线说明和鱼水情作为同一东进经历的阶段，不单独建事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH07-DOC03-S0044\",\n    \"BATCH07-DOC03-S0046\",\n    \"BATCH07-DOC03-S0047\",\n    \"BATCH07-DOC03-S0048\",\n    \"BATCH07-DOC03-S0049\",\n    \"BATCH07-DOC03-S0051\",\n    \"BATCH07-DOC03-S0053\",\n    \"BATCH07-DOC03-S0055\",\n    \"BATCH07-DOC03-S0057\",\n    \"BATCH07-DOC03-S0059\",\n    \"BATCH07-DOC03-S0061\",\n    \"BATCH07-DOC03-S0063\",\n    \"BATCH07-DOC03-S0065\",\n    \"BATCH07-DOC03-S0066\",\n    \"BATCH07-DOC03-S0068\",\n    \"BATCH07-DOC03-S0070\",\n    \"BATCH07-DOC03-S0072\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 6320,
+    "total_tokens": 30159,
+    "completion_tokens": 23839,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 21999
+    },
+    "time_to_first_token_ms": 358920,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11919000
+  }
+}

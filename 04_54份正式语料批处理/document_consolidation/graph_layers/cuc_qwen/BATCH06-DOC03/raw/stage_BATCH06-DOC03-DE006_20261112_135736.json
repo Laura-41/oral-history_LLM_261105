@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T13:57:36",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC03-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC03-DE006",
+  "usage": {
+    "prompt_tokens": 1389,
+    "total_tokens": 7376,
+    "completion_tokens": 5987,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4523
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 88500,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC03-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"罗政委与郭洪涛解决湖西肃托相关问题后返回山区，时间约为12月中旬。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 BATCH06-DOC03-S0026，从罗因湖西肃托事件着急、等郭洪涛到，到带一个连经津浦路、微山湖赴苏鲁豫交界解决问题，再到返回山区且时间约12月中旬。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"湖西肃托事件触发，罗着急并等待郭洪涛到\",\n      \"process_text\": \"罗是很着急，因为“湖西肃托事件”啊，他就等郭洪涛到了以后。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0026\"\n      ],\n      \"evidence_quote\": \"可是我们那时候不知道，罗是很着急，因为“湖西肃托事件”啊，他就等郭洪涛到了以后，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"带一个连经津浦路、微山湖抵达苏鲁豫交界\",\n      \"process_text\": \"带着一个连通过津浦路，通过微山湖，就到了那个地方，那里叫苏鲁豫吧，就三省交界的地方。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0026\"\n      ],\n      \"evidence_quote\": \"带着一个连通过津浦路，通过微山湖，就到了那个地方，那里叫苏鲁豫吧，就三省交界的地方。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"说明湖西肃托事件在当地被搞起\",\n      \"process_text\": \"“湖西肃托事件”就是支队政治部主任王凤鸣，兼四大队政委，副支队长兼大队长是梁兴初，他们在地委一个部长唆使底下，把这个肃反事件搞起来了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0026\"\n      ],\n      \"evidence_quote\": \"“湖西肃托事件”就是支队政治部主任王凤鸣，兼四大队政委，副支队长兼大队长是梁兴初，他们在地委一个部长唆使底下，把这个肃反事件搞起来了，这个咱们就不详细说了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"罗政委与郭洪涛赴当地解决问题\",\n      \"process_text\": \"罗政委（跟郭洪涛）就去解决那个问题。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0026\"\n      ],\n      \"evidence_quote\": \"罗政委（跟郭洪涛）就去解决那个问题。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE006-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"解决问题后返回山区，时间约12月中旬\",\n      \"process_text\": \"解决那个问题完了以后，再回到山区来的时候，已经到了12月快中旬了，大概。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0026\"\n      ],\n      \"evidence_quote\": \"解决那个问题完了以后，再回到山区来的时候，已经到了12月快中旬了，大概。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE006-P01\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE006-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE006-P02\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE006-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE006-P03\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE006-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE006-P04\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE006-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0026\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC03-DE006",
+    "event_enrichment": {
+      "result_state": "罗政委与郭洪涛解决湖西肃托相关问题后返回山区，时间约为12月中旬。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 BATCH06-DOC03-S0026，从罗因湖西肃托事件着急、等郭洪涛到，到带一个连经津浦路、微山湖赴苏鲁豫交界解决问题，再到返回山区且时间约12月中旬。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC03-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "湖西肃托事件触发，罗着急并等待郭洪涛到",
+        "process_text": "罗是很着急，因为“湖西肃托事件”啊，他就等郭洪涛到了以后。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0026"
+        ],
+        "evidence_quote": "可是我们那时候不知道，罗是很着急，因为“湖西肃托事件”啊，他就等郭洪涛到了以后，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "带一个连经津浦路、微山湖抵达苏鲁豫交界",
+        "process_text": "带着一个连通过津浦路，通过微山湖，就到了那个地方，那里叫苏鲁豫吧，就三省交界的地方。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0026"
+        ],
+        "evidence_quote": "带着一个连通过津浦路，通过微山湖，就到了那个地方，那里叫苏鲁豫吧，就三省交界的地方。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "说明湖西肃托事件在当地被搞起",
+        "process_text": "“湖西肃托事件”就是支队政治部主任王凤鸣，兼四大队政委，副支队长兼大队长是梁兴初，他们在地委一个部长唆使底下，把这个肃反事件搞起来了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0026"
+        ],
+        "evidence_quote": "“湖西肃托事件”就是支队政治部主任王凤鸣，兼四大队政委，副支队长兼大队长是梁兴初，他们在地委一个部长唆使底下，把这个肃反事件搞起来了，这个咱们就不详细说了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "罗政委与郭洪涛赴当地解决问题",
+        "process_text": "罗政委（跟郭洪涛）就去解决那个问题。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0026"
+        ],
+        "evidence_quote": "罗政委（跟郭洪涛）就去解决那个问题。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE006-P05",
+        "stage_order": 5,
+        "stage_summary": "解决问题后返回山区，时间约12月中旬",
+        "process_text": "解决那个问题完了以后，再回到山区来的时候，已经到了12月快中旬了，大概。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0026"
+        ],
+        "evidence_quote": "解决那个问题完了以后，再回到山区来的时候，已经到了12月快中旬了，大概。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC03-DE006-P01",
+        "target_stage_id": "BATCH06-DOC03-DE006-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH06-DOC03-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE006-P02",
+        "target_stage_id": "BATCH06-DOC03-DE006-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC03-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE006-P03",
+        "target_stage_id": "BATCH06-DOC03-DE006-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC03-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE006-P04",
+        "target_stage_id": "BATCH06-DOC03-DE006-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC03-S0026",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

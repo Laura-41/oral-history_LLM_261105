@@ -1,0 +1,143 @@
+{
+  "run_time": "2026-11-13T02:01:41",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC09-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC09-DE003",
+  "usage": {
+    "prompt_tokens": 1509,
+    "total_tokens": 9474,
+    "completion_tokens": 7965,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6271
+    },
+    "tokens_per_second": 7964000,
+    "time_to_first_token_ms": 117320,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-17\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC09-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰在参观后形成对美国医院保留旧手术室、使用旧楼小房间以及办公/实验室空间较小，与国内办公空间扩大形成比较的感知。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"自S0083提及乙醚美国发明、美国波士顿最大的医院及“我去参观过”开始，经S0085-S0086描述所见手术室、旧楼、小房间和办公条件比较，至S0087“外国都没有这样子，他那个很小”结束。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"交代乙醚发明地与参观医院背景\",\n      \"process_text\": \"乙醚是美国发明的了，美国波士顿最大的医院，我去参观过。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0083\"\n      ],\n      \"evidence_quote\": \"乙醚是美国发明的了，美国波士顿最大的医院，我去参观过。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"看到保留的第一次麻醉手术室与第一瓶乙醚\",\n      \"process_text\": \"他第一次用麻醉药的一个手术室还保留在那里，第一瓶乙醚还放在手术室（里），到现在还教育学生。我去了以后，他拿给我看，\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0085\"\n      ],\n      \"evidence_quote\": \"他第一次用麻醉药的一个手术室还保留在那里，第一瓶乙醚还放在手术室（里），到现在还教育学生。我去了以后，他拿给我看，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"感知美国医院手术条件较旧\",\n      \"process_text\": \"他们手术条件比我们现在差得多了，他们还在用，一个旧楼（音），\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0085\"\n      ],\n      \"evidence_quote\": \"他们手术条件比我们现在差得多了，他们还在用，一个旧楼（音），\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"比较美国仍用旧条件与国内办公空间扩大\",\n      \"process_text\": \"旁边小房间都用。美国那么好条件，他现在还用。我们现在，浪费！办公什么那么大，越来越大。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0086\"\n      ],\n      \"evidence_quote\": \"旁边小房间都用。美国那么好条件，他现在还用。我们现在，浪费！办公什么那么大，越来越大。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"比较外国实验室主任小桌子与国内大办公室\",\n      \"process_text\": \"那个外国的实验室主任啊，就这个实验室角上放一个小桌子。我们都当实验室主任啊，当什么系主任啊，乖乖弄一个大办公室。那个处长以上，局长以上，部长以上，那个办公室都大得不得了，你看。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0086\"\n      ],\n      \"evidence_quote\": \"那个外国的实验室主任啊，就这个实验室角上放一个小桌子。我们都当实验室主任啊，当什么系主任啊，乖乖弄一个大办公室。那个处长以上，局长以上，部长以上，那个办公室都大得不得了，你看。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE003-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"总结外国没有这样大的办公条件\",\n      \"process_text\": \"外国都没有这样子，他那个很小。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0087\"\n      ],\n      \"evidence_quote\": \"外国都没有这样子，他那个很小。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE003-P01\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC09-S0085\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE003-P02\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC09-S0085\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE003-P03\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE003-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC09-S0086\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE003-P04\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE003-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC09-S0086\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE003-P05\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE003-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC09-S0087\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-17",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC09-DE003",
+    "event_enrichment": {
+      "result_state": "陈海峰在参观后形成对美国医院保留旧手术室、使用旧楼小房间以及办公/实验室空间较小，与国内办公空间扩大形成比较的感知。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "自S0083提及乙醚美国发明、美国波士顿最大的医院及“我去参观过”开始，经S0085-S0086描述所见手术室、旧楼、小房间和办公条件比较，至S0087“外国都没有这样子，他那个很小”结束。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC09-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "交代乙醚发明地与参观医院背景",
+        "process_text": "乙醚是美国发明的了，美国波士顿最大的医院，我去参观过。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0083"
+        ],
+        "evidence_quote": "乙醚是美国发明的了，美国波士顿最大的医院，我去参观过。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "看到保留的第一次麻醉手术室与第一瓶乙醚",
+        "process_text": "他第一次用麻醉药的一个手术室还保留在那里，第一瓶乙醚还放在手术室（里），到现在还教育学生。我去了以后，他拿给我看，",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0085"
+        ],
+        "evidence_quote": "他第一次用麻醉药的一个手术室还保留在那里，第一瓶乙醚还放在手术室（里），到现在还教育学生。我去了以后，他拿给我看，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "感知美国医院手术条件较旧",
+        "process_text": "他们手术条件比我们现在差得多了，他们还在用，一个旧楼（音），",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0085"
+        ],
+        "evidence_quote": "他们手术条件比我们现在差得多了，他们还在用，一个旧楼（音），",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "比较美国仍用旧条件与国内办公空间扩大",
+        "process_text": "旁边小房间都用。美国那么好条件，他现在还用。我们现在，浪费！办公什么那么大，越来越大。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0086"
+        ],
+        "evidence_quote": "旁边小房间都用。美国那么好条件，他现在还用。我们现在，浪费！办公什么那么大，越来越大。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "比较外国实验室主任小桌子与国内大办公室",
+        "process_text": "那个外国的实验室主任啊，就这个实验室角上放一个小桌子。我们都当实验室主任啊，当什么系主任啊，乖乖弄一个大办公室。那个处长以上，局长以上，部长以上，那个办公室都大得不得了，你看。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0086"
+        ],
+        "evidence_quote": "那个外国的实验室主任啊，就这个实验室角上放一个小桌子。我们都当实验室主任啊，当什么系主任啊，乖乖弄一个大办公室。那个处长以上，局长以上，部长以上，那个办公室都大得不得了，你看。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE003-P06",
+        "stage_order": 6,
+        "stage_summary": "总结外国没有这样大的办公条件",
+        "process_text": "外国都没有这样子，他那个很小。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0087"
+        ],
+        "evidence_quote": "外国都没有这样子，他那个很小。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC09-DE003-P01",
+        "target_stage_id": "BATCH05-DOC09-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC09-S0085",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC09-DE003-P02",
+        "target_stage_id": "BATCH05-DOC09-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC09-S0085",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC09-DE003-P03",
+        "target_stage_id": "BATCH05-DOC09-DE003-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC09-S0086",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC09-DE003-P04",
+        "target_stage_id": "BATCH05-DOC09-DE003-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC09-S0086",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC09-DE003-P05",
+        "target_stage_id": "BATCH05-DOC09-DE003-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC09-S0087",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

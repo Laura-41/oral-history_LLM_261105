@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T00:36:36",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC03-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC03-DE005",
+  "usage": {
+    "prompt_tokens": 1590,
+    "total_tokens": 6149,
+    "completion_tokens": 4559,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3009
+    },
+    "time_to_first_token_ms": 38309,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC03-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"城前/城后据点被攻入、日军一度撤走，但部队回到白彦附近后日军再次占领白彦\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以哨兵第二天发现日军西撤、部队追击为起点，至部队回白彦附近后日军再占为终点；中间包含追至据点、遭重机枪压制、傍晚遭炮击、爬墙攻入等过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"第二天哨兵发现日军从大村子往西撤，团长留下一个排警戒、动员，部队离七八里路拼命追击。\",\n      \"process_text\": \"第二天发现敌人出大村子往西撤，团长留下一个排警戒、动员，部队离七八里路拼命追。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0050\"\n      ],\n      \"evidence_quote\": \"结果我们警戒的哨兵，第二天发现敌人出那个大村子往西撤了，我们团长留下一个排在那边警戒、动员，也离了七八里路呢，拼命追！\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"686团得知后也随后追来；部队追到城前或城后据点，遭小山嘴上的重机枪压制，伤亡很大。\",\n      \"process_text\": \"我们追在前面，686团知道后也在后面追来；追到城前还是城后那个据点，另有一个小山嘴子，上面放了一挺重机枪压制，伤亡搞得很大。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0050\"\n      ],\n      \"evidence_quote\": \"我们这一追，686团也知道了，我们追在前面，他在后面也追着来了。就追到是叫城前还是城后那个据点，他还另外有个小山嘴子，上面放了一挺重机枪，对我们（压制）……伤亡搞得很大。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"傍晚日军两辆汽车运来炮、弹药并猛烈炮击；部队在坟地隐蔽，开阔地营遭几十发炮弹，伤亡十余人。\",\n      \"process_text\": \"晚上快要天黑时，日军两辆汽车装了炮、弹药，狠狠打了一顿；江拥辉那个营位置比较开阔，遭几十发炮弹打中，伤亡十好几，另两个连在坟地隐蔽。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0052\"\n      ],\n      \"evidence_quote\": \"晚上快要天黑的时候，来了两辆汽车，装了炮、弹药，已经下午三四点钟，春天嘛，估计很快就黑了，狠狠地打了我们一顿。江拥辉那个营啊……我们在这边（杨永松示意在右边），他这个营在（左手）这边，那个营在（右手外侧）那边，我们在中间。结果他那个营位置比较开阔，我们这两个连在坟地里面隐蔽着了，他那个比较开阔地方，（给日本人）打了几十发炮弹，打中我们部队，他们伤亡十好几。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"炮击停止后，部队爬墙冲入据点，日军逃跑；百姓说明日军怕八路军、用汽车拉走伤兵后撤走，城后据点本应收复。\",\n      \"process_text\": \"打完以后没动静了，就爬墙冲进去，日军跑了；老百姓说日军怕八路军，汽车送了炮、子弹来，把伤兵拉走，打完就跑了；城后这个据点本应收复。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0052\"\n      ],\n      \"evidence_quote\": \"打完以后，没动静了，就爬墙！冲，打进去，他跑了！院子里面老百姓说，他怕你们八路，那来了汽车，送了炮、子弹来，把伤兵拉走了。刚才跟你们打一阵以后，打完就跑了，老百姓告诉我们。这样（城后）这个据点不就应该收复了吧\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE005-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"部队回到白彦附近后，日军再次占领。\",\n      \"process_text\": \"我们回到白彦附近来之后，日军又占了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0052\"\n      ],\n      \"evidence_quote\": \"可是我们回到白彦附近来（之后），他又占了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE005-P01\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0050\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE005-P02\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0052\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE005-P03\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE005-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0052\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE005-P04\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE005-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0052\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC03-DE005",
+    "event_enrichment": {
+      "result_state": "城前/城后据点被攻入、日军一度撤走，但部队回到白彦附近后日军再次占领白彦",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以哨兵第二天发现日军西撤、部队追击为起点，至部队回白彦附近后日军再占为终点；中间包含追至据点、遭重机枪压制、傍晚遭炮击、爬墙攻入等过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC03-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "第二天哨兵发现日军从大村子往西撤，团长留下一个排警戒、动员，部队离七八里路拼命追击。",
+        "process_text": "第二天发现敌人出大村子往西撤，团长留下一个排警戒、动员，部队离七八里路拼命追。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0050"
+        ],
+        "evidence_quote": "结果我们警戒的哨兵，第二天发现敌人出那个大村子往西撤了，我们团长留下一个排在那边警戒、动员，也离了七八里路呢，拼命追！",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "686团得知后也随后追来；部队追到城前或城后据点，遭小山嘴上的重机枪压制，伤亡很大。",
+        "process_text": "我们追在前面，686团知道后也在后面追来；追到城前还是城后那个据点，另有一个小山嘴子，上面放了一挺重机枪压制，伤亡搞得很大。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0050"
+        ],
+        "evidence_quote": "我们这一追，686团也知道了，我们追在前面，他在后面也追着来了。就追到是叫城前还是城后那个据点，他还另外有个小山嘴子，上面放了一挺重机枪，对我们（压制）……伤亡搞得很大。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "傍晚日军两辆汽车运来炮、弹药并猛烈炮击；部队在坟地隐蔽，开阔地营遭几十发炮弹，伤亡十余人。",
+        "process_text": "晚上快要天黑时，日军两辆汽车装了炮、弹药，狠狠打了一顿；江拥辉那个营位置比较开阔，遭几十发炮弹打中，伤亡十好几，另两个连在坟地隐蔽。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0052"
+        ],
+        "evidence_quote": "晚上快要天黑的时候，来了两辆汽车，装了炮、弹药，已经下午三四点钟，春天嘛，估计很快就黑了，狠狠地打了我们一顿。江拥辉那个营啊……我们在这边（杨永松示意在右边），他这个营在（左手）这边，那个营在（右手外侧）那边，我们在中间。结果他那个营位置比较开阔，我们这两个连在坟地里面隐蔽着了，他那个比较开阔地方，（给日本人）打了几十发炮弹，打中我们部队，他们伤亡十好几。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "炮击停止后，部队爬墙冲入据点，日军逃跑；百姓说明日军怕八路军、用汽车拉走伤兵后撤走，城后据点本应收复。",
+        "process_text": "打完以后没动静了，就爬墙冲进去，日军跑了；老百姓说日军怕八路军，汽车送了炮、子弹来，把伤兵拉走，打完就跑了；城后这个据点本应收复。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0052"
+        ],
+        "evidence_quote": "打完以后，没动静了，就爬墙！冲，打进去，他跑了！院子里面老百姓说，他怕你们八路，那来了汽车，送了炮、子弹来，把伤兵拉走了。刚才跟你们打一阵以后，打完就跑了，老百姓告诉我们。这样（城后）这个据点不就应该收复了吧",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE005-P05",
+        "stage_order": 5,
+        "stage_summary": "部队回到白彦附近后，日军再次占领。",
+        "process_text": "我们回到白彦附近来之后，日军又占了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0052"
+        ],
+        "evidence_quote": "可是我们回到白彦附近来（之后），他又占了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC03-DE005-P01",
+        "target_stage_id": "BATCH06-DOC03-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC03-S0050",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE005-P02",
+        "target_stage_id": "BATCH06-DOC03-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC03-S0052",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE005-P03",
+        "target_stage_id": "BATCH06-DOC03-DE005-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC03-S0052",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE005-P04",
+        "target_stage_id": "BATCH06-DOC03-DE005-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC03-S0052",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

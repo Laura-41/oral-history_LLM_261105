@@ -1,0 +1,164 @@
+{
+  "run_time": "2026-11-12T00:53:33",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE004",
+  "usage": {
+    "prompt_tokens": 1720,
+    "total_tokens": 8921,
+    "completion_tokens": 7201,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5336
+    },
+    "time_to_first_token_ms": 59108,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7200000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"苏皖边区政府在淮阴组建，李一氓任主席，刘季萍（音）、方毅任副主席；华中军区成立并设6个后扩至8个军分区，华中野战军成立，粟裕、谭震林等分任军区与野战军领导；班子基本由原苏浙军区转换，苏中部队并入华中军区，并有调张鼎丞任华中军区司令员的建议。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为地方工作人员撤到淮阴并组织苏皖边区政府，终点为华中军区、华中野战军组建及相关领导班子安排（含张鼎丞任职建议）；不延伸到后续军事行动。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"地方工作人员撤至淮阴并组织苏皖边区政府\",\n      \"process_text\": \"地方工作人员大部分撤到淮阴，在淮阴组织苏皖边区政府。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0042\"\n      ],\n      \"evidence_quote\": \"地方的工作人员大部分撤到淮阴，在淮阴呢，就组织了一个苏皖边区政府。“江苏”的“苏”，皖就是安徽。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"确定苏皖边区政府主席为李一氓\",\n      \"process_text\": \"苏皖边区政府主席由李一氓担任。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0044\"\n      ],\n      \"evidence_quote\": \"    陈海峰：苏皖边区政府，主席就是李一氓。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"确定苏皖边区政府副主席人选\",\n      \"process_text\": \"边区政府副主席包括搞教育的刘季萍（音）和方毅。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0045\"\n      ],\n      \"evidence_quote\": \"副主席呢，有一个搞教育的，刘季萍（音），还有一个方毅，原来中央政治局委员，国家科委的主任呢。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"方毅分管地方，军队组建华中军区、军分区和华中野战军\",\n      \"process_text\": \"方毅任边区政府副主席并管地方；军队成立华中军区，开始6个军分区，后来到8个军分区；主力部队成立华中野战军。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0046\"\n      ],\n      \"evidence_quote\": \"方毅呢，当这个苏皖边区政府副主席，那么他就是管地方。军队呢，就成立华中军区。华中军区当时成立了8个军分区——开始6个军分区，后来到8个军分区。主力部队呢，成立叫华中野战军。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE004-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"任命华中军区与华中野战军主要领导\",\n      \"process_text\": \"粟裕任司令员，谭震林任政委；谭震林兼华中军区副政委和华中野战军政委，粟裕任华中军区副司令员并兼华中野战军司令员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0048\",\n        \"BATCH06-DOC07-S0049\"\n      ],\n      \"evidence_quote\": \"    陈海峰：粟裕还是司令员，谭震林是政委。谭震林是华中军区的副政委，兼华中野战军的政委。粟裕呢，是华中军区副司令员，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE004-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"班子由原苏浙军区转换，苏中部队并入华中军区\",\n      \"process_text\": \"这一套班子基本是原来苏浙军区的班子；苏浙军区班子变成华中军区，原来留在苏中的都并到华中军区来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0050\",\n        \"BATCH06-DOC07-S0051\"\n      ],\n      \"evidence_quote\": \"苏浙军区班子变成华中军区，原来留在苏中的都并到华中军区来。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE004-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"粟裕建议调张鼎丞任华中军区司令员\",\n      \"process_text\": \"粟裕本来要兼华中军区司令员，他建议中央调张鼎丞来，请张鼎丞当华中军区司令员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0053\"\n      ],\n      \"evidence_quote\": \"    陈海峰：欸，到过来。粟老总本来要兼华中军区司令员，他就建议啊，要中央把张鼎丞调来。他两个是老搭档，张鼎丞原来（是）2支队司令，粟裕是副司令，他建议请张鼎丞来当华中军区司令员。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE004-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0044\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE004-P02\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0045\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE004-P03\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE004-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0046\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE004-P04\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE004-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0048\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE004-P05\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE004-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0051\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE004-P06\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE004-P07\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0053\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE004",
+    "event_enrichment": {
+      "result_state": "苏皖边区政府在淮阴组建，李一氓任主席，刘季萍（音）、方毅任副主席；华中军区成立并设6个后扩至8个军分区，华中野战军成立，粟裕、谭震林等分任军区与野战军领导；班子基本由原苏浙军区转换，苏中部队并入华中军区，并有调张鼎丞任华中军区司令员的建议。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起点为地方工作人员撤到淮阴并组织苏皖边区政府，终点为华中军区、华中野战军组建及相关领导班子安排（含张鼎丞任职建议）；不延伸到后续军事行动。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "地方工作人员撤至淮阴并组织苏皖边区政府",
+        "process_text": "地方工作人员大部分撤到淮阴，在淮阴组织苏皖边区政府。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0042"
+        ],
+        "evidence_quote": "地方的工作人员大部分撤到淮阴，在淮阴呢，就组织了一个苏皖边区政府。“江苏”的“苏”，皖就是安徽。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "确定苏皖边区政府主席为李一氓",
+        "process_text": "苏皖边区政府主席由李一氓担任。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0044"
+        ],
+        "evidence_quote": "    陈海峰：苏皖边区政府，主席就是李一氓。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "确定苏皖边区政府副主席人选",
+        "process_text": "边区政府副主席包括搞教育的刘季萍（音）和方毅。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0045"
+        ],
+        "evidence_quote": "副主席呢，有一个搞教育的，刘季萍（音），还有一个方毅，原来中央政治局委员，国家科委的主任呢。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "方毅分管地方，军队组建华中军区、军分区和华中野战军",
+        "process_text": "方毅任边区政府副主席并管地方；军队成立华中军区，开始6个军分区，后来到8个军分区；主力部队成立华中野战军。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0046"
+        ],
+        "evidence_quote": "方毅呢，当这个苏皖边区政府副主席，那么他就是管地方。军队呢，就成立华中军区。华中军区当时成立了8个军分区——开始6个军分区，后来到8个军分区。主力部队呢，成立叫华中野战军。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE004-P05",
+        "stage_order": 5,
+        "stage_summary": "任命华中军区与华中野战军主要领导",
+        "process_text": "粟裕任司令员，谭震林任政委；谭震林兼华中军区副政委和华中野战军政委，粟裕任华中军区副司令员并兼华中野战军司令员。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0048",
+          "BATCH06-DOC07-S0049"
+        ],
+        "evidence_quote": "    陈海峰：粟裕还是司令员，谭震林是政委。谭震林是华中军区的副政委，兼华中野战军的政委。粟裕呢，是华中军区副司令员，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE004-P06",
+        "stage_order": 6,
+        "stage_summary": "班子由原苏浙军区转换，苏中部队并入华中军区",
+        "process_text": "这一套班子基本是原来苏浙军区的班子；苏浙军区班子变成华中军区，原来留在苏中的都并到华中军区来。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0050",
+          "BATCH06-DOC07-S0051"
+        ],
+        "evidence_quote": "苏浙军区班子变成华中军区，原来留在苏中的都并到华中军区来。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE004-P07",
+        "stage_order": 7,
+        "stage_summary": "粟裕建议调张鼎丞任华中军区司令员",
+        "process_text": "粟裕本来要兼华中军区司令员，他建议中央调张鼎丞来，请张鼎丞当华中军区司令员。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0053"
+        ],
+        "evidence_quote": "    陈海峰：欸，到过来。粟老总本来要兼华中军区司令员，他就建议啊，要中央把张鼎丞调来。他两个是老搭档，张鼎丞原来（是）2支队司令，粟裕是副司令，他建议请张鼎丞来当华中军区司令员。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE004-P01",
+        "target_stage_id": "BATCH06-DOC07-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0044",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE004-P02",
+        "target_stage_id": "BATCH06-DOC07-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0045",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE004-P03",
+        "target_stage_id": "BATCH06-DOC07-DE004-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0046",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE004-P04",
+        "target_stage_id": "BATCH06-DOC07-DE004-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0048",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE004-P05",
+        "target_stage_id": "BATCH06-DOC07-DE004-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0051",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE004-P06",
+        "target_stage_id": "BATCH06-DOC07-DE004-P07",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0053",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

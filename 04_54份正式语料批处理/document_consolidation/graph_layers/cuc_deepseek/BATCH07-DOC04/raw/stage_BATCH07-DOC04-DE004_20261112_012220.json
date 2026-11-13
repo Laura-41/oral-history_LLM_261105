@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T01:22:20",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC04-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC04-DE004",
+  "usage": {
+    "prompt_tokens": 1341,
+    "total_tokens": 8424,
+    "completion_tokens": 7083,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6041
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7082000,
+    "time_to_first_token_ms": 60038
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC04-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰等人翻墙进入对面院子，并在堆有柴禾的院子里躲藏一昼夜后于第二天离开。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于被忠义救国军包围，止于翻墙进入对面院子并躲藏至第二天离开；原文后续窗子复位属事后交代。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰等人到情报站站长住处后，被从宜兴来的两百多名忠义救国军包围。\",\n      \"process_text\": \"众人到那个地方后，没想到被忠义救国军包围，对方来了两百多人，从宜兴来的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0037\"\n      ],\n      \"evidence_quote\": \"我们到那个地方去，没想到被忠义救国军包围，来（了）两百多人，从宜兴来的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"秘密住处被敌人侦察到，遭挨家挨户搜索；情报站站长掩护众人住在楼上。\",\n      \"process_text\": \"住处被侦察到后，敌人挨家挨户搜索；情报站站长掩护众人，众人住在楼上。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0037\"\n      ],\n      \"evidence_quote\": \"怎么就被（敌人）侦察到了，挨家挨户搜索。他掩护我们，我们住在那个楼上。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"情报站站长取下窗子架在夹道两边围墙上，众人翻墙跳到对面院子。\",\n      \"process_text\": \"他取下窗子，架在夹道的两边围墙上面，众人翻墙跳到对面一个院子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0037\"\n      ],\n      \"evidence_quote\": \"他（把）窗子拿下来，架在夹道的两边围墙上面，我们翻墙跳到对面一个院子。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"众人在堆有柴禾的院子里躲藏一晚上又一天，第二天才离开。\",\n      \"process_text\": \"对面院子里堆着柴禾等杂物，众人躲了一晚上，白天又躲了一天，第二天才走。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0039\"\n      ],\n      \"evidence_quote\": \"院子里堆着柴禾什么东西，乱七八糟的那个地方，躲了一晚上，白天又躲了一天，第二天我们才走。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE004-P01\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0037\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE004-P02\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE004-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0037\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE004-P03\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE004-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0039\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC04-DE004",
+    "event_enrichment": {
+      "result_state": "陈海峰等人翻墙进入对面院子，并在堆有柴禾的院子里躲藏一昼夜后于第二天离开。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于被忠义救国军包围，止于翻墙进入对面院子并躲藏至第二天离开；原文后续窗子复位属事后交代。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC04-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰等人到情报站站长住处后，被从宜兴来的两百多名忠义救国军包围。",
+        "process_text": "众人到那个地方后，没想到被忠义救国军包围，对方来了两百多人，从宜兴来的。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0037"
+        ],
+        "evidence_quote": "我们到那个地方去，没想到被忠义救国军包围，来（了）两百多人，从宜兴来的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "秘密住处被敌人侦察到，遭挨家挨户搜索；情报站站长掩护众人住在楼上。",
+        "process_text": "住处被侦察到后，敌人挨家挨户搜索；情报站站长掩护众人，众人住在楼上。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0037"
+        ],
+        "evidence_quote": "怎么就被（敌人）侦察到了，挨家挨户搜索。他掩护我们，我们住在那个楼上。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "情报站站长取下窗子架在夹道两边围墙上，众人翻墙跳到对面院子。",
+        "process_text": "他取下窗子，架在夹道的两边围墙上面，众人翻墙跳到对面一个院子。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0037"
+        ],
+        "evidence_quote": "他（把）窗子拿下来，架在夹道的两边围墙上面，我们翻墙跳到对面一个院子。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "众人在堆有柴禾的院子里躲藏一晚上又一天，第二天才离开。",
+        "process_text": "对面院子里堆着柴禾等杂物，众人躲了一晚上，白天又躲了一天，第二天才走。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0039"
+        ],
+        "evidence_quote": "院子里堆着柴禾什么东西，乱七八糟的那个地方，躲了一晚上，白天又躲了一天，第二天我们才走。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC04-DE004-P01",
+        "target_stage_id": "BATCH07-DOC04-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC04-S0037",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE004-P02",
+        "target_stage_id": "BATCH07-DOC04-DE004-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH07-DOC04-S0037",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE004-P03",
+        "target_stage_id": "BATCH07-DOC04-DE004-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH07-DOC04-S0039",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

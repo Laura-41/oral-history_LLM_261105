@@ -1,0 +1,148 @@
+{
+  "run_time": "2026-11-11T23:54:49",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC04-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC04-DE001",
+  "usage": {
+    "prompt_tokens": 3637,
+    "total_tokens": 9008,
+    "completion_tokens": 5371,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3687
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 42387
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC04-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"约二十多个不到三十名半重伤员在兴化水网地区芦苇荡隐蔽治疗约二十天后，与另一部分在蒋家墩子会合；十几人出院要求回部队，仍留十几个继续治疗。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为轻伤转移后分股、陈海峰带半重伤员和医疗组单独行动；终点为约二十天后两组在蒋家墩子合并、部分出院部分继续治疗。不含轻伤主力转移至蒋家墩子的独立过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"伤员分股，陈海峰带约三十名半重伤员和医疗组单独行动，另大部分人员转移至蒋家墩子。\",\n      \"process_text\": \"轻伤先转移后分股，陈海峰带一个医疗组和约三十名仍需治疗、行动不便的半重伤员，其余三分之二人员转移至蒋家墩子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0003\",\n        \"BATCH05-DOC04-S0005\",\n        \"BATCH05-DOC04-S0008\",\n        \"BATCH05-DOC04-S0009\",\n        \"BATCH05-DOC04-S0010\"\n      ],\n      \"evidence_quote\": \"那么这部分伤员呢，我就带了一个医疗组，带了一部分人。我们平时都准备好的，一分为二（或是）一分为三，都是有分工的。那么我们三分之二的人转移到蒋家墩子，就是东台的海边上。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"从四分区出发，经东台梁垛、安丰富安之间的地下通道，夜间渡河进入兴化水网地区。\",\n      \"process_text\": \"从四分区出来，经东台县城以南梁垛、安丰和富安之间的地下通道，夜间用小船渡过大河，进入兴化水网地区。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0012\",\n        \"BATCH05-DOC04-S0013\",\n        \"BATCH05-DOC04-S0017\",\n        \"BATCH05-DOC04-S0019\",\n        \"BATCH05-DOC04-S0021\",\n        \"BATCH05-DOC04-S0022\",\n        \"BATCH05-DOC04-S0024\",\n        \"BATCH05-DOC04-S0025\",\n        \"BATCH05-DOC04-S0026\"\n      ],\n      \"evidence_quote\": \"晚上呢，小船可以下去。一拉，（从河堤）翻过去，翻过去就到大河，大河一过去，北面小船可以接过去。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"在兴化芦苇荡中的小庄子打埋伏，日间隐蔽、夜间休整，群众和地方组织协助警戒与船只保障。\",\n      \"process_text\": \"在芦苇荡中间群众基础较好的小庄子打埋伏，白天进芦苇荡深处隐蔽，晚上回村休息并轮流放哨，群众帮助警戒，地方党和政府预备船只，伤员营养靠鱼虾等。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0032\",\n        \"BATCH05-DOC04-S0035\",\n        \"BATCH05-DOC04-S0036\",\n        \"BATCH05-DOC04-S0038\",\n        \"BATCH05-DOC04-S0041\",\n        \"BATCH05-DOC04-S0044\",\n        \"BATCH05-DOC04-S0046\",\n        \"BATCH05-DOC04-S0047\",\n        \"BATCH05-DOC04-S0048\"\n      ],\n      \"evidence_quote\": \"那个地方（是）一片很大的芦苇荡，我们就在芦苇荡中间（的）几个小庄子，那群众基础比较好，那么我们就在那里去打埋伏。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"在芦苇荡约二十天后，与另一部分合并，返回蒋家墩子。\",\n      \"process_text\": \"在兴化水网地区芦苇荡待了约二十天左右，后来与另一部分合并，又回到蒋家墩子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0067\",\n        \"BATCH05-DOC04-S0068\",\n        \"BATCH05-DOC04-S0069\"\n      ],\n      \"evidence_quote\": \"在那里大概待了有二十天左右，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"合并后有十几人出院并要求回部队，仍留十几个继续接受治疗。\",\n      \"process_text\": \"合并后有十几个伤员出院，能够走了并要求回部队；仍留十几个继续接受治疗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0070\",\n        \"BATCH05-DOC04-S0071\"\n      ],\n      \"evidence_quote\": \"他能够走了，要求回部队去。那部队真后怕（音），受不了，接受治疗的还是留了十几个，那么两个（组）就合并了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE001-P01\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0012\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE001-P02\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0032\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE001-P03\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0067\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE001-P04\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE001-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0070\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC04-DE001",
+    "event_enrichment": {
+      "result_state": "约二十多个不到三十名半重伤员在兴化水网地区芦苇荡隐蔽治疗约二十天后，与另一部分在蒋家墩子会合；十几人出院要求回部队，仍留十几个继续治疗。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起点为轻伤转移后分股、陈海峰带半重伤员和医疗组单独行动；终点为约二十天后两组在蒋家墩子合并、部分出院部分继续治疗。不含轻伤主力转移至蒋家墩子的独立过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC04-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "伤员分股，陈海峰带约三十名半重伤员和医疗组单独行动，另大部分人员转移至蒋家墩子。",
+        "process_text": "轻伤先转移后分股，陈海峰带一个医疗组和约三十名仍需治疗、行动不便的半重伤员，其余三分之二人员转移至蒋家墩子。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0003",
+          "BATCH05-DOC04-S0005",
+          "BATCH05-DOC04-S0008",
+          "BATCH05-DOC04-S0009",
+          "BATCH05-DOC04-S0010"
+        ],
+        "evidence_quote": "那么这部分伤员呢，我就带了一个医疗组，带了一部分人。我们平时都准备好的，一分为二（或是）一分为三，都是有分工的。那么我们三分之二的人转移到蒋家墩子，就是东台的海边上。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "从四分区出发，经东台梁垛、安丰富安之间的地下通道，夜间渡河进入兴化水网地区。",
+        "process_text": "从四分区出来，经东台县城以南梁垛、安丰和富安之间的地下通道，夜间用小船渡过大河，进入兴化水网地区。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0012",
+          "BATCH05-DOC04-S0013",
+          "BATCH05-DOC04-S0017",
+          "BATCH05-DOC04-S0019",
+          "BATCH05-DOC04-S0021",
+          "BATCH05-DOC04-S0022",
+          "BATCH05-DOC04-S0024",
+          "BATCH05-DOC04-S0025",
+          "BATCH05-DOC04-S0026"
+        ],
+        "evidence_quote": "晚上呢，小船可以下去。一拉，（从河堤）翻过去，翻过去就到大河，大河一过去，北面小船可以接过去。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "在兴化芦苇荡中的小庄子打埋伏，日间隐蔽、夜间休整，群众和地方组织协助警戒与船只保障。",
+        "process_text": "在芦苇荡中间群众基础较好的小庄子打埋伏，白天进芦苇荡深处隐蔽，晚上回村休息并轮流放哨，群众帮助警戒，地方党和政府预备船只，伤员营养靠鱼虾等。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0032",
+          "BATCH05-DOC04-S0035",
+          "BATCH05-DOC04-S0036",
+          "BATCH05-DOC04-S0038",
+          "BATCH05-DOC04-S0041",
+          "BATCH05-DOC04-S0044",
+          "BATCH05-DOC04-S0046",
+          "BATCH05-DOC04-S0047",
+          "BATCH05-DOC04-S0048"
+        ],
+        "evidence_quote": "那个地方（是）一片很大的芦苇荡，我们就在芦苇荡中间（的）几个小庄子，那群众基础比较好，那么我们就在那里去打埋伏。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "在芦苇荡约二十天后，与另一部分合并，返回蒋家墩子。",
+        "process_text": "在兴化水网地区芦苇荡待了约二十天左右，后来与另一部分合并，又回到蒋家墩子。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0067",
+          "BATCH05-DOC04-S0068",
+          "BATCH05-DOC04-S0069"
+        ],
+        "evidence_quote": "在那里大概待了有二十天左右，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "合并后有十几人出院并要求回部队，仍留十几个继续接受治疗。",
+        "process_text": "合并后有十几个伤员出院，能够走了并要求回部队；仍留十几个继续接受治疗。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0070",
+          "BATCH05-DOC04-S0071"
+        ],
+        "evidence_quote": "他能够走了，要求回部队去。那部队真后怕（音），受不了，接受治疗的还是留了十几个，那么两个（组）就合并了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC04-DE001-P01",
+        "target_stage_id": "BATCH05-DOC04-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC04-S0012",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC04-DE001-P02",
+        "target_stage_id": "BATCH05-DOC04-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC04-S0032",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC04-DE001-P03",
+        "target_stage_id": "BATCH05-DOC04-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC04-S0067",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC04-DE001-P04",
+        "target_stage_id": "BATCH05-DOC04-DE001-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC04-S0070",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

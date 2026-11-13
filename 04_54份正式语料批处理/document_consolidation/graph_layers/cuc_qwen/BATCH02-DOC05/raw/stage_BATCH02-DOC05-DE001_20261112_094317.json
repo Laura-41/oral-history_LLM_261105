@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T09:43:17",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC05-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC05-DE001",
+  "usage": {
+    "prompt_tokens": 1682,
+    "total_tokens": 8512,
+    "completion_tokens": 6830,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5460
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 101533,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC05-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"叶挺常来军医处看学生打篮球并聊天，询问学生学习、籍贯和参加时间等情况，与学生融洽；其常来军医处也与后来架桥、纪念为叶挺桥相关。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件从军医处靠近军部、叶挺晚间拄杖来到军医处开始，经其常来架桥、与军医处长聊天、观看学生打篮球并鼓掌，到休息时询问学生学习情况并融洽结束；S0009后半段学生时间紧张与去图书馆借还书为相关背景，不扩展为独立事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"军医处靠近军部，叶挺晚间从罗里村方向拄杖来到军医处。\",\n      \"process_text\": \"军医处离军部很近，罗里村是军部所在地，叶挺等住在那里；叶挺将军几乎每天晚上吃过晚饭，带两个警卫员，拄着手杖“咯噔咯噔”就来了，要过一个小河，现在建了叶挺桥。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0005\"\n      ],\n      \"evidence_quote\": \"陈海峰：离开军部大概三华里左右，离开云岭大概一华里左右,叫罗里村，罗里村是军部所在地。叶挺、项英、李一氓、周子昆，他们都住在那个地方，所以我们离得很近。叶挺将军几乎每天晚上吃过晚饭，带了两个警卫员，他拄着手杖，“咯噔咯噔”就来了。我书上有，那要过一个小河，那小河现在建了个桥，叫叶挺桥。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"叶挺因常来军医处促成架桥，并与军医处长聊天、观看学生打篮球并鼓掌。\",\n      \"process_text\": \"以前没有桥，后来因为叶挺老要到军医处来架了木板桥，现在修得较好，为纪念他叫叶挺桥；他和军医处长沈其震是好朋友，来了以后聊聊天；另外他老看学生打篮球，学生吃过晚饭在关帝庙门口老百姓晒麦子的场打篮球，打得好他还鼓掌。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0007\"\n      ],\n      \"evidence_quote\": \"陈海峰：以前没有桥，后来建的，因为叶挺老要到军医处来，这样就架了一个木板桥。现在修得比较好，为了纪念他，叫叶挺桥。因为他和军医处长沈其震是好朋友，在澳门的时候，一直（是）很好的朋友，他来了以后聊聊天。另外呢，他老看我们打篮球，我们吃过晚饭就在关帝庙门口，老百姓晒麦子的一个场，上面做了篮球架，我们打篮球。打篮球的时候呢，叶挺老来看，打得好嘛，他还鼓掌。打篮球休息的时候，就跟我们学生聊几句，叶挺（是）很平易近人的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"叶挺休息时询问学生学习、籍贯和参加时间，了解情况，与学生融洽。\",\n      \"process_text\": \"叶挺问学生参加学习怎么样、哪里人、参加多久、在教导队学得怎么样；实际是了解情况、调查研究，和学生很融洽。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0009\"\n      ],\n      \"evidence_quote\": \"陈海峰：问问你们参加学习怎么样啊，你们哪里人，参加多久了？在教导队学得怎么样？实际他也是了解情况，调查研究，和学生很融洽的。我们这个学生确实比较（时间）紧张，你像我和朱潮两个人比较要好一点，我们（都在）三班是吧。除了半个小时的午睡，最晚到一个小时，就要出来上课了，那么半个多小时吧。就说这样子的时间，我们还要（走）半里路多一点到罗里村军部的图书馆。图书馆里书最多，我们要借书、还书。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE001-P01\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0007\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE001-P02\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE001-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0009\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC05-DE001",
+    "event_enrichment": {
+      "result_state": "叶挺常来军医处看学生打篮球并聊天，询问学生学习、籍贯和参加时间等情况，与学生融洽；其常来军医处也与后来架桥、纪念为叶挺桥相关。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "事件从军医处靠近军部、叶挺晚间拄杖来到军医处开始，经其常来架桥、与军医处长聊天、观看学生打篮球并鼓掌，到休息时询问学生学习情况并融洽结束；S0009后半段学生时间紧张与去图书馆借还书为相关背景，不扩展为独立事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC05-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "军医处靠近军部，叶挺晚间从罗里村方向拄杖来到军医处。",
+        "process_text": "军医处离军部很近，罗里村是军部所在地，叶挺等住在那里；叶挺将军几乎每天晚上吃过晚饭，带两个警卫员，拄着手杖“咯噔咯噔”就来了，要过一个小河，现在建了叶挺桥。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0005"
+        ],
+        "evidence_quote": "陈海峰：离开军部大概三华里左右，离开云岭大概一华里左右,叫罗里村，罗里村是军部所在地。叶挺、项英、李一氓、周子昆，他们都住在那个地方，所以我们离得很近。叶挺将军几乎每天晚上吃过晚饭，带了两个警卫员，他拄着手杖，“咯噔咯噔”就来了。我书上有，那要过一个小河，那小河现在建了个桥，叫叶挺桥。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "叶挺因常来军医处促成架桥，并与军医处长聊天、观看学生打篮球并鼓掌。",
+        "process_text": "以前没有桥，后来因为叶挺老要到军医处来架了木板桥，现在修得较好，为纪念他叫叶挺桥；他和军医处长沈其震是好朋友，来了以后聊聊天；另外他老看学生打篮球，学生吃过晚饭在关帝庙门口老百姓晒麦子的场打篮球，打得好他还鼓掌。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0007"
+        ],
+        "evidence_quote": "陈海峰：以前没有桥，后来建的，因为叶挺老要到军医处来，这样就架了一个木板桥。现在修得比较好，为了纪念他，叫叶挺桥。因为他和军医处长沈其震是好朋友，在澳门的时候，一直（是）很好的朋友，他来了以后聊聊天。另外呢，他老看我们打篮球，我们吃过晚饭就在关帝庙门口，老百姓晒麦子的一个场，上面做了篮球架，我们打篮球。打篮球的时候呢，叶挺老来看，打得好嘛，他还鼓掌。打篮球休息的时候，就跟我们学生聊几句，叶挺（是）很平易近人的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "叶挺休息时询问学生学习、籍贯和参加时间，了解情况，与学生融洽。",
+        "process_text": "叶挺问学生参加学习怎么样、哪里人、参加多久、在教导队学得怎么样；实际是了解情况、调查研究，和学生很融洽。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0009"
+        ],
+        "evidence_quote": "陈海峰：问问你们参加学习怎么样啊，你们哪里人，参加多久了？在教导队学得怎么样？实际他也是了解情况，调查研究，和学生很融洽的。我们这个学生确实比较（时间）紧张，你像我和朱潮两个人比较要好一点，我们（都在）三班是吧。除了半个小时的午睡，最晚到一个小时，就要出来上课了，那么半个多小时吧。就说这样子的时间，我们还要（走）半里路多一点到罗里村军部的图书馆。图书馆里书最多，我们要借书、还书。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC05-DE001-P01",
+        "target_stage_id": "BATCH02-DOC05-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC05-S0007",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC05-DE001-P02",
+        "target_stage_id": "BATCH02-DOC05-DE001-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC05-S0009",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

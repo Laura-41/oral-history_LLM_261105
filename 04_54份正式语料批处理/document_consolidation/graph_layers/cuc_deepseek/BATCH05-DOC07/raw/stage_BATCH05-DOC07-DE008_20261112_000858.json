@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T00:08:58",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC07-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC07-DE008",
+  "usage": {
+    "prompt_tokens": 1163,
+    "total_tokens": 3949,
+    "completion_tokens": 2786,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1719
+    },
+    "time_to_first_token_ms": 21888,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC07-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆将一个连的火炮给了叶剑英（华北军大），叶剑英随后随陈锐霆将炮取回，非常高兴。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以叶剑英说明华北军大无炮、欲成立炮兵部队训练炮兵为起点，以炮被取回、叶剑英高兴为终点；均在同一片段S0043内。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"叶剑英筹办华北军大，缺炮，向陈锐霆说明要成立炮兵部队训练炮兵。\",\n      \"process_text\": \"他搞华北军大，当校长，一门炮也没有，要成立炮兵部队训练炮兵，并给陈锐霆讲这个情况。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0043\"\n      ],\n      \"evidence_quote\": \"那个时候他搞一个华北军大，他当校长，他一门炮也没有，他要成立炮兵部队训练炮兵。他给我讲这个情况\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈锐霆答应调一个连的炮，叶剑英提醒需请示粟裕；陈锐霆表示炮归自己管、没问题。\",\n      \"process_text\": \"陈锐霆说弄一个连来；叶剑英提醒请示粟裕；陈锐霆说没问题，炮完全归自己管。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0043\"\n      ],\n      \"evidence_quote\": \"我说我弄一个连来，他说你要请示一下粟裕同志看他同意不。我说没问题，我们这个地方这个炮就完全归我管。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆以炮多弹少、用不着那么多炮为由，决定给一个连的炮。\",\n      \"process_text\": \"陈锐霆说炮多弹少，用不着那么多炮，就给了一个连的炮。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0043\"\n      ],\n      \"evidence_quote\": \"我说我们炮多弹少，用不着那么多的炮。我就给了他一个连的炮\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"陈锐霆回来时，叶剑英随他一起将炮取回，十分高兴。\",\n      \"process_text\": \"陈锐霆回来时，叶剑英跟着一起把炮取回去，非常高兴。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0043\"\n      ],\n      \"evidence_quote\": \"以后我回来的时候他跟着我一起，，就把炮取回去了，所以他非常地高兴。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE008-P01\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0043\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE008-P02\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE008-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0043\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE008-P03\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE008-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0043\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC07-DE008",
+    "event_enrichment": {
+      "result_state": "陈锐霆将一个连的火炮给了叶剑英（华北军大），叶剑英随后随陈锐霆将炮取回，非常高兴。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以叶剑英说明华北军大无炮、欲成立炮兵部队训练炮兵为起点，以炮被取回、叶剑英高兴为终点；均在同一片段S0043内。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC07-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "叶剑英筹办华北军大，缺炮，向陈锐霆说明要成立炮兵部队训练炮兵。",
+        "process_text": "他搞华北军大，当校长，一门炮也没有，要成立炮兵部队训练炮兵，并给陈锐霆讲这个情况。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0043"
+        ],
+        "evidence_quote": "那个时候他搞一个华北军大，他当校长，他一门炮也没有，他要成立炮兵部队训练炮兵。他给我讲这个情况",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "陈锐霆答应调一个连的炮，叶剑英提醒需请示粟裕；陈锐霆表示炮归自己管、没问题。",
+        "process_text": "陈锐霆说弄一个连来；叶剑英提醒请示粟裕；陈锐霆说没问题，炮完全归自己管。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0043"
+        ],
+        "evidence_quote": "我说我弄一个连来，他说你要请示一下粟裕同志看他同意不。我说没问题，我们这个地方这个炮就完全归我管。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆以炮多弹少、用不着那么多炮为由，决定给一个连的炮。",
+        "process_text": "陈锐霆说炮多弹少，用不着那么多炮，就给了一个连的炮。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0043"
+        ],
+        "evidence_quote": "我说我们炮多弹少，用不着那么多的炮。我就给了他一个连的炮",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "陈锐霆回来时，叶剑英随他一起将炮取回，十分高兴。",
+        "process_text": "陈锐霆回来时，叶剑英跟着一起把炮取回去，非常高兴。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0043"
+        ],
+        "evidence_quote": "以后我回来的时候他跟着我一起，，就把炮取回去了，所以他非常地高兴。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC07-DE008-P01",
+        "target_stage_id": "BATCH05-DOC07-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0043",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC07-DE008-P02",
+        "target_stage_id": "BATCH05-DOC07-DE008-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH05-DOC07-S0043",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC07-DE008-P03",
+        "target_stage_id": "BATCH05-DOC07-DE008-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0043",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

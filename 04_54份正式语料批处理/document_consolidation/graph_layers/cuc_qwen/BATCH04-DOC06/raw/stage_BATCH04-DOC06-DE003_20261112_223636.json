@@ -1,0 +1,143 @@
+{
+  "run_time": "2026-11-12T22:36:36",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC06-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC06-DE003",
+  "usage": {
+    "prompt_tokens": 3220,
+    "total_tokens": 19463,
+    "completion_tokens": 16243,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14022
+    },
+    "tokens_per_second": 16242000,
+    "time_to_first_token_ms": 239861,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC06-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"医院/医疗队在沿海盐沼及村庄中形成极度分散、化装便衣的隐蔽安置状态，鬼子扫荡时伤员被分散到其不能到达的地方，外部难以见到医院和医生。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于 S0037 的医院范围与村庄住伤员背景，经 S0059 清乡回来到达贾家屯子、S0061 盐沼地下无路、S0065 扫荡时极度分散、S0069 见不到医院、S0071 化装便衣，止于 S0071 的‘医生、护士都是化装的，伤员都穿便衣。’；S0029—S0058 作为医院范围与沿海盐沼背景纳入一级事件边界。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"医院范围极大，小村庄和大户人家中住有伤员\",\n      \"process_text\": \"一个医疗队在那儿，最北面是蹲门口，所以南北六七十华里，东西八十多华里，你说世界上哪有这么大的医院呢？这个里面的小村庄，甚至大户人家住的，有很多都有住伤员。只要我们这个医疗队在那中心一站，周围的大大小小，大户人家都有。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0037\"\n      ],\n      \"evidence_quote\": \"一个医疗队在那儿，最北面是蹲门口，所以南北六七十华里，东西八十多华里，你说世界上哪有这么大的医院呢？这个里面的小村庄，甚至大户人家住的，有很多都有住伤员。只要我们这个医疗队在那中心一站，周围的大大小小，大户人家都有。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"清乡归来后到达最边上的贾家屯子，盐沼中分散且相对安全\",\n      \"process_text\": \"就是我们清乡回来，就到了曹家埠旁边一个贾家屯子（音）。那个地方呢，就是最边上了，那个医院就这么大。盐沼里面都分散比较安全，盐沼里面呢，它这有吃的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0059\"\n      ],\n      \"evidence_quote\": \"就是我们清乡回来，就到了曹家埠旁边一个贾家屯子（音）。那个地方呢，就是最边上了，那个医院就这么大。盐沼里面都分散比较安全，盐沼里面呢，它这有吃的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"盐沼分散、地下居住、无路可通，医院极度分散\",\n      \"process_text\": \"因为烧盐的，他有吃的东西。你不会饿死人，一个盐沼和一个盐沼就相差几百米，相差半华里。一家一户的盐沼非常散，那个地面上看不到的。海边那个海草啊，就是海的芦苇啊，海草长了有半米一米高。他那个房子半边是在地下，住的人啊，都在地下，所以日本鬼子根本（不去）……没有路，都是牛车走的路，没有道路的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0061\"\n      ],\n      \"evidence_quote\": \"因为烧盐的，他有吃的东西。你不会饿死人，一个盐沼和一个盐沼就相差几百米，相差半华里。一家一户的盐沼非常散，那个地面上看不到的。海边那个海草啊，就是海的芦苇啊，海草长了有半米一米高。他那个房子半边是在地下，住的人啊，都在地下，所以日本鬼子根本（不去）……没有路，都是牛车走的路，没有道路的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"鬼子不扫荡时收拢治疗，大扫荡时极度分散，重伤员分散到鬼子不能到的地方\",\n      \"process_text\": \"就是说鬼子不扫荡了，收拢，那边有治疗。鬼子进行大扫荡了，极度分散。重伤员分散得更远一点，（到）鬼子不能到的地方。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0065\"\n      ],\n      \"evidence_quote\": \"就是说鬼子不扫荡了，收拢，那边有治疗。鬼子进行大扫荡了，极度分散。重伤员分散得更远一点，（到）鬼子不能到的地方。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"分散隐蔽后外部见不到医院、看不到医生\",\n      \"process_text\": \"你根本见不到医院，根本看不到一个医生，可以说，\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0069\"\n      ],\n      \"evidence_quote\": \"你根本见不到医院，根本看不到一个医生，可以说，\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE003-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"医生、护士和伤员化装穿便衣，以日常物品伪装医疗行为\",\n      \"process_text\": \"都是化装，不穿白大衣了，鬼子扫荡不能穿白大衣。都背着个小篮子啊，女同志假装……换药的东西在篮子里头，上面都是放着鸡蛋了什么东西，伪装啊。都是围着围裙啊，头上扎的布啊，都化装啊，都穿便衣。医生、护士都是化装的，伤员都穿便衣。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0071\"\n      ],\n      \"evidence_quote\": \"都是化装，不穿白大衣了，鬼子扫荡不能穿白大衣。都背着个小篮子啊，女同志假装……换药的东西在篮子里头，上面都是放着鸡蛋了什么东西，伪装啊。都是围着围裙啊，头上扎的布啊，都化装啊，都穿便衣。医生、护士都是化装的，伤员都穿便衣。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE003-P01\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0059\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE003-P02\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE003-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0061\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE003-P03\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE003-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0065\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE003-P04\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE003-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0069\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE003-P05\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE003-P06\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0071\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC06-DE003",
+    "event_enrichment": {
+      "result_state": "医院/医疗队在沿海盐沼及村庄中形成极度分散、化装便衣的隐蔽安置状态，鬼子扫荡时伤员被分散到其不能到达的地方，外部难以见到医院和医生。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于 S0037 的医院范围与村庄住伤员背景，经 S0059 清乡回来到达贾家屯子、S0061 盐沼地下无路、S0065 扫荡时极度分散、S0069 见不到医院、S0071 化装便衣，止于 S0071 的‘医生、护士都是化装的，伤员都穿便衣。’；S0029—S0058 作为医院范围与沿海盐沼背景纳入一级事件边界。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC06-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "医院范围极大，小村庄和大户人家中住有伤员",
+        "process_text": "一个医疗队在那儿，最北面是蹲门口，所以南北六七十华里，东西八十多华里，你说世界上哪有这么大的医院呢？这个里面的小村庄，甚至大户人家住的，有很多都有住伤员。只要我们这个医疗队在那中心一站，周围的大大小小，大户人家都有。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0037"
+        ],
+        "evidence_quote": "一个医疗队在那儿，最北面是蹲门口，所以南北六七十华里，东西八十多华里，你说世界上哪有这么大的医院呢？这个里面的小村庄，甚至大户人家住的，有很多都有住伤员。只要我们这个医疗队在那中心一站，周围的大大小小，大户人家都有。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "清乡归来后到达最边上的贾家屯子，盐沼中分散且相对安全",
+        "process_text": "就是我们清乡回来，就到了曹家埠旁边一个贾家屯子（音）。那个地方呢，就是最边上了，那个医院就这么大。盐沼里面都分散比较安全，盐沼里面呢，它这有吃的。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0059"
+        ],
+        "evidence_quote": "就是我们清乡回来，就到了曹家埠旁边一个贾家屯子（音）。那个地方呢，就是最边上了，那个医院就这么大。盐沼里面都分散比较安全，盐沼里面呢，它这有吃的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "盐沼分散、地下居住、无路可通，医院极度分散",
+        "process_text": "因为烧盐的，他有吃的东西。你不会饿死人，一个盐沼和一个盐沼就相差几百米，相差半华里。一家一户的盐沼非常散，那个地面上看不到的。海边那个海草啊，就是海的芦苇啊，海草长了有半米一米高。他那个房子半边是在地下，住的人啊，都在地下，所以日本鬼子根本（不去）……没有路，都是牛车走的路，没有道路的。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0061"
+        ],
+        "evidence_quote": "因为烧盐的，他有吃的东西。你不会饿死人，一个盐沼和一个盐沼就相差几百米，相差半华里。一家一户的盐沼非常散，那个地面上看不到的。海边那个海草啊，就是海的芦苇啊，海草长了有半米一米高。他那个房子半边是在地下，住的人啊，都在地下，所以日本鬼子根本（不去）……没有路，都是牛车走的路，没有道路的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "鬼子不扫荡时收拢治疗，大扫荡时极度分散，重伤员分散到鬼子不能到的地方",
+        "process_text": "就是说鬼子不扫荡了，收拢，那边有治疗。鬼子进行大扫荡了，极度分散。重伤员分散得更远一点，（到）鬼子不能到的地方。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0065"
+        ],
+        "evidence_quote": "就是说鬼子不扫荡了，收拢，那边有治疗。鬼子进行大扫荡了，极度分散。重伤员分散得更远一点，（到）鬼子不能到的地方。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "分散隐蔽后外部见不到医院、看不到医生",
+        "process_text": "你根本见不到医院，根本看不到一个医生，可以说，",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0069"
+        ],
+        "evidence_quote": "你根本见不到医院，根本看不到一个医生，可以说，",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE003-P06",
+        "stage_order": 6,
+        "stage_summary": "医生、护士和伤员化装穿便衣，以日常物品伪装医疗行为",
+        "process_text": "都是化装，不穿白大衣了，鬼子扫荡不能穿白大衣。都背着个小篮子啊，女同志假装……换药的东西在篮子里头，上面都是放着鸡蛋了什么东西，伪装啊。都是围着围裙啊，头上扎的布啊，都化装啊，都穿便衣。医生、护士都是化装的，伤员都穿便衣。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0071"
+        ],
+        "evidence_quote": "都是化装，不穿白大衣了，鬼子扫荡不能穿白大衣。都背着个小篮子啊，女同志假装……换药的东西在篮子里头，上面都是放着鸡蛋了什么东西，伪装啊。都是围着围裙啊，头上扎的布啊，都化装啊，都穿便衣。医生、护士都是化装的，伤员都穿便衣。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC06-DE003-P01",
+        "target_stage_id": "BATCH04-DOC06-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC06-S0059",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE003-P02",
+        "target_stage_id": "BATCH04-DOC06-DE003-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC06-S0061",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE003-P03",
+        "target_stage_id": "BATCH04-DOC06-DE003-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC06-S0065",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE003-P04",
+        "target_stage_id": "BATCH04-DOC06-DE003-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC06-S0069",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE003-P05",
+        "target_stage_id": "BATCH04-DOC06-DE003-P06",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC06-S0071",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

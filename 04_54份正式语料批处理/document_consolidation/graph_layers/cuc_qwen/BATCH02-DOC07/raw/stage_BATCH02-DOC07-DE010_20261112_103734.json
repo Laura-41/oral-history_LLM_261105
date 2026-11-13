@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T10:37:34",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC07-DE010",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC07-DE010",
+  "usage": {
+    "prompt_tokens": 1614,
+    "total_tokens": 7809,
+    "completion_tokens": 6195,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4863
+    },
+    "time_to_first_token_ms": 136306,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC07-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"公共卫生训练班学员在课后付诸学习，本村周围露天厕所被加盖改造，卫生宣传从本村扩展到南堡村、中分村教导队，并派小组到三支队开展宣传、检查卫生、剪指甲、理发；洗澡和消灭虱子等卫生习惯在班内得到培养。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件边界依据 S0047 中“公共卫生课姬鹏飞教完以后，我们就付诸学习”至“剪指甲、理发”，以及 S0049 中“洗澡。好多他们消灭虱子，就是在这个班里面给我们培养的。”；S0049 后半段卫生行政课讲述作为背景，不改变事件边界。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"公共卫生课教完后付诸学习，改造本村周围露天厕所。\",\n      \"process_text\": \"当时公共卫生课姬鹏飞教完以后，我们就付诸学习。我们在我们村的周围，首先呢，就改造那个厕所。那个村子里的厕所都是露天的，我们都给它加盖，上面用玉米杆、竹子呀，山上那个树砍下来以后，搭成厕所。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0047\"\n      ],\n      \"evidence_quote\": \"当时公共卫生课姬鹏飞教完以后，我们就付诸学习。我们在我们村的周围，首先呢，就改造那个厕所。那个村子里的厕所都是露天的，我们都给它加盖，上面用玉米杆、竹子呀，山上那个树砍下来以后，搭成厕所。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"卫生宣传从本村扩展到南堡村和中分村教导队，并开展预防接种与卫生课。\",\n      \"process_text\": \"从我们队伍的村扩展到南堡村，扩展到中分村教导队去宣传，给他们打预防针，种牛痘，上卫生课，宣传。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0047\"\n      ],\n      \"evidence_quote\": \"从我们队伍的村扩展到南堡村，扩展到中分村教导队去宣传，给他们打预防针，种牛痘，上卫生课，宣传。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"派小组到三支队宣传卫生，并开展检查卫生、剪指甲、理发。\",\n      \"process_text\": \"后来还派了小组，一直到三支队去宣传这个卫生，宣传卫生、检查卫生、剪指甲、理发。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0047\"\n      ],\n      \"evidence_quote\": \"后来还派了小组，一直到三支队去宣传这个卫生，宣传卫生、检查卫生、剪指甲、理发。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE010-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"洗澡、消灭虱子等卫生习惯在训练班内得到培养。\",\n      \"process_text\": \"洗澡。好多他们消灭虱子，就是在这个班里面给我们培养的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0049\"\n      ],\n      \"evidence_quote\": \"洗澡。好多他们消灭虱子，就是在这个班里面给我们培养的。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE010-P01\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0047\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE010-P02\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE010-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0047\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE010-P03\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE010-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0049\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC07-DE010",
+    "event_enrichment": {
+      "result_state": "公共卫生训练班学员在课后付诸学习，本村周围露天厕所被加盖改造，卫生宣传从本村扩展到南堡村、中分村教导队，并派小组到三支队开展宣传、检查卫生、剪指甲、理发；洗澡和消灭虱子等卫生习惯在班内得到培养。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件边界依据 S0047 中“公共卫生课姬鹏飞教完以后，我们就付诸学习”至“剪指甲、理发”，以及 S0049 中“洗澡。好多他们消灭虱子，就是在这个班里面给我们培养的。”；S0049 后半段卫生行政课讲述作为背景，不改变事件边界。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC07-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "公共卫生课教完后付诸学习，改造本村周围露天厕所。",
+        "process_text": "当时公共卫生课姬鹏飞教完以后，我们就付诸学习。我们在我们村的周围，首先呢，就改造那个厕所。那个村子里的厕所都是露天的，我们都给它加盖，上面用玉米杆、竹子呀，山上那个树砍下来以后，搭成厕所。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0047"
+        ],
+        "evidence_quote": "当时公共卫生课姬鹏飞教完以后，我们就付诸学习。我们在我们村的周围，首先呢，就改造那个厕所。那个村子里的厕所都是露天的，我们都给它加盖，上面用玉米杆、竹子呀，山上那个树砍下来以后，搭成厕所。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "卫生宣传从本村扩展到南堡村和中分村教导队，并开展预防接种与卫生课。",
+        "process_text": "从我们队伍的村扩展到南堡村，扩展到中分村教导队去宣传，给他们打预防针，种牛痘，上卫生课，宣传。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0047"
+        ],
+        "evidence_quote": "从我们队伍的村扩展到南堡村，扩展到中分村教导队去宣传，给他们打预防针，种牛痘，上卫生课，宣传。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "派小组到三支队宣传卫生，并开展检查卫生、剪指甲、理发。",
+        "process_text": "后来还派了小组，一直到三支队去宣传这个卫生，宣传卫生、检查卫生、剪指甲、理发。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0047"
+        ],
+        "evidence_quote": "后来还派了小组，一直到三支队去宣传这个卫生，宣传卫生、检查卫生、剪指甲、理发。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE010-P04",
+        "stage_order": 4,
+        "stage_summary": "洗澡、消灭虱子等卫生习惯在训练班内得到培养。",
+        "process_text": "洗澡。好多他们消灭虱子，就是在这个班里面给我们培养的。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0049"
+        ],
+        "evidence_quote": "洗澡。好多他们消灭虱子，就是在这个班里面给我们培养的。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC07-DE010-P01",
+        "target_stage_id": "BATCH02-DOC07-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0047",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE010-P02",
+        "target_stage_id": "BATCH02-DOC07-DE010-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0047",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE010-P03",
+        "target_stage_id": "BATCH02-DOC07-DE010-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0049",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T22:33:09",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE008",
+  "usage": {
+    "prompt_tokens": 1155,
+    "total_tokens": 3533,
+    "completion_tokens": 2378,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1844
+    },
+    "time_to_first_token_ms": 18987,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2377000
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"肖华率曾国华支队到达鲁西。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以‘敌人扫荡挺厉害，兵多了粮食也困难’为背景起点，以‘一步到了鲁西’为事件终点；后续五团、六团整编及刘贤权、周贯五等内容不属于本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"所在地区敌人扫荡加剧、兵员增多导致粮食困难，构成转移背景。\",\n      \"process_text\": \"敌人扫荡挺厉害，兵多了粮食也困难\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0050\"\n      ],\n      \"evidence_quote\": \"肖华那个地方啊，以后敌人扫荡挺厉害，兵多了粮食也困难\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"肖华带领曾国华支队直接转移到达鲁西。\",\n      \"process_text\": \"肖华是带着曾国华那个支队，一步到了鲁西\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0050\"\n      ],\n      \"evidence_quote\": \"结果肖华是带着曾国华那个支队，一步到了鲁西。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE008-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE008-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0050\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE008",
+    "event_enrichment": {
+      "result_state": "肖华率曾国华支队到达鲁西。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "以‘敌人扫荡挺厉害，兵多了粮食也困难’为背景起点，以‘一步到了鲁西’为事件终点；后续五团、六团整编及刘贤权、周贯五等内容不属于本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "所在地区敌人扫荡加剧、兵员增多导致粮食困难，构成转移背景。",
+        "process_text": "敌人扫荡挺厉害，兵多了粮食也困难",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0050"
+        ],
+        "evidence_quote": "肖华那个地方啊，以后敌人扫荡挺厉害，兵多了粮食也困难",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "肖华带领曾国华支队直接转移到达鲁西。",
+        "process_text": "肖华是带着曾国华那个支队，一步到了鲁西",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0050"
+        ],
+        "evidence_quote": "结果肖华是带着曾国华那个支队，一步到了鲁西。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE008-P01",
+        "target_stage_id": "BATCH03-DOC06-DE008-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH03-DOC06-S0050",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

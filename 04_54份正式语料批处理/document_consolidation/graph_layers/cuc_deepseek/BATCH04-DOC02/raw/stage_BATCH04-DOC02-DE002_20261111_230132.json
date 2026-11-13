@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T23:01:32",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC02-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC02-DE002",
+  "usage": {
+    "prompt_tokens": 1278,
+    "total_tokens": 4712,
+    "completion_tokens": 3434,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2627
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3433000,
+    "time_to_first_token_ms": 30302
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC02-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰被师部卫生部选为全师模范卫生队长，并自述成为新四军第一个全军的模范卫生队长。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件起于报告送交师部卫生部，止于全师卫生大会表彰并选陈海峰为模范卫生队长；随后自述成为全军模范卫生队长作为结果状态保留，S0017推广中草药内容不纳入本事件核心阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"报告完成后送交师部卫生部\",\n      \"process_text\": \"报告弄好了以后，我们把这个报告又送到师部卫生部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0014\"\n      ],\n      \"evidence_quote\": \"报告弄好了以后，我们把这个报告又送到师部卫生部。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"师部卫生部召开全师卫生大会，表扬2旅、5团和陈海峰个人，并选陈海峰为全师模范卫生队长\",\n      \"process_text\": \"师部卫生部开全师卫生大会，表扬我们2旅，表扬我们5团，还表扬我个人，把陈海峰选为全师的模范卫生队长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0015\"\n      ],\n      \"evidence_quote\": \"师部卫生部开全师卫生大会，表扬我们2旅，表扬我们5团，还表扬我个人，把陈海峰选为全师的模范卫生队长。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈海峰自述因此很早成为新四军第一个全军的模范卫生队长\",\n      \"process_text\": \"所以我很早就变成新四军第一个全军的模范卫生队长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0016\"\n      ],\n      \"evidence_quote\": \"所以我很早就变成新四军第一个全军的模范卫生队长。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE002-P01\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0015\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE002-P02\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE002-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0016\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC02-DE002",
+    "event_enrichment": {
+      "result_state": "陈海峰被师部卫生部选为全师模范卫生队长，并自述成为新四军第一个全军的模范卫生队长。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件起于报告送交师部卫生部，止于全师卫生大会表彰并选陈海峰为模范卫生队长；随后自述成为全军模范卫生队长作为结果状态保留，S0017推广中草药内容不纳入本事件核心阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC02-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "报告完成后送交师部卫生部",
+        "process_text": "报告弄好了以后，我们把这个报告又送到师部卫生部。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0014"
+        ],
+        "evidence_quote": "报告弄好了以后，我们把这个报告又送到师部卫生部。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "师部卫生部召开全师卫生大会，表扬2旅、5团和陈海峰个人，并选陈海峰为全师模范卫生队长",
+        "process_text": "师部卫生部开全师卫生大会，表扬我们2旅，表扬我们5团，还表扬我个人，把陈海峰选为全师的模范卫生队长。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0015"
+        ],
+        "evidence_quote": "师部卫生部开全师卫生大会，表扬我们2旅，表扬我们5团，还表扬我个人，把陈海峰选为全师的模范卫生队长。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "陈海峰自述因此很早成为新四军第一个全军的模范卫生队长",
+        "process_text": "所以我很早就变成新四军第一个全军的模范卫生队长。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0016"
+        ],
+        "evidence_quote": "所以我很早就变成新四军第一个全军的模范卫生队长。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC02-DE002-P01",
+        "target_stage_id": "BATCH04-DOC02-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0015",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE002-P02",
+        "target_stage_id": "BATCH04-DOC02-DE002-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC02-S0016",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

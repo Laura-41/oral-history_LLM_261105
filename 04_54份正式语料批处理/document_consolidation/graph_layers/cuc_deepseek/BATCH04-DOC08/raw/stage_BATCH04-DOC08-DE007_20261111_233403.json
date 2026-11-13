@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T23:34:03",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC08-DE007",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC08-DE007",
+  "usage": {
+    "prompt_tokens": 1200,
+    "total_tokens": 3695,
+    "completion_tokens": 2495,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1627
+    },
+    "time_to_first_token_ms": 20782,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC08-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈毅明确反对派陈锐霆去济南，陈锐霆事后表示陈毅讲得非常对，并认为若去济南很可能被捉。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于有人提议让熟悉国民党部队的陈锐霆跟着去济南，止于陈锐霆事后认同陈毅判断并称这是插曲。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"有人提议让熟悉国民党部队的陈锐霆跟着去济南。\",\n      \"process_text\": \"到济南去的时候，有些人提议，因为陈锐霆对国民党那个部队熟悉，叫他也跟着去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0026\"\n      ],\n      \"evidence_quote\": \"另外到济南去的时候，有些人提议，我对国民党那个部队熟悉，叫我也跟着去。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈毅听后反对，指出到济南后国民党会当陈锐霆是叛徒并把他捉起来。\",\n      \"process_text\": \"陈老总一听，反问“他怎么能去”，并说明现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0026\"\n      ],\n      \"evidence_quote\": \"陈老总一听，“他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。”\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆事后认同陈毅的判断，并分析若去济南很可能马上被捉。\",\n      \"process_text\": \"以后他们对我讲，我说陈老总讲得非常对；如果我到济南去，马上就把我捉起来，完全有可能的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0028\"\n      ],\n      \"evidence_quote\": \"陈锐霆：以后他们对我讲，我说陈老总讲得非常对。我的军长就是李仙洲，92军的军长，师长那个时候是王耀武，他做的第二把手，另外一个山东的保安司令叫傅立平，就是原来142师的我那个师的师长。如果我到济南去，马上就把我捉起来，完全有可能的。这是一个插曲。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE007-P01\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0026\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE007-P02\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE007-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0028\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC08-DE007",
+    "event_enrichment": {
+      "result_state": "陈毅明确反对派陈锐霆去济南，陈锐霆事后表示陈毅讲得非常对，并认为若去济南很可能被捉。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于有人提议让熟悉国民党部队的陈锐霆跟着去济南，止于陈锐霆事后认同陈毅判断并称这是插曲。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC08-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "有人提议让熟悉国民党部队的陈锐霆跟着去济南。",
+        "process_text": "到济南去的时候，有些人提议，因为陈锐霆对国民党那个部队熟悉，叫他也跟着去。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0026"
+        ],
+        "evidence_quote": "另外到济南去的时候，有些人提议，我对国民党那个部队熟悉，叫我也跟着去。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "陈毅听后反对，指出到济南后国民党会当陈锐霆是叛徒并把他捉起来。",
+        "process_text": "陈老总一听，反问“他怎么能去”，并说明现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0026"
+        ],
+        "evidence_quote": "陈老总一听，“他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。”",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆事后认同陈毅的判断，并分析若去济南很可能马上被捉。",
+        "process_text": "以后他们对我讲，我说陈老总讲得非常对；如果我到济南去，马上就把我捉起来，完全有可能的。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0028"
+        ],
+        "evidence_quote": "陈锐霆：以后他们对我讲，我说陈老总讲得非常对。我的军长就是李仙洲，92军的军长，师长那个时候是王耀武，他做的第二把手，另外一个山东的保安司令叫傅立平，就是原来142师的我那个师的师长。如果我到济南去，马上就把我捉起来，完全有可能的。这是一个插曲。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC08-DE007-P01",
+        "target_stage_id": "BATCH04-DOC08-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC08-S0026",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC08-DE007-P02",
+        "target_stage_id": "BATCH04-DOC08-DE007-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC08-S0028",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

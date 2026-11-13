@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-12T00:41:13",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC05-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC05-DE001",
+  "usage": {
+    "prompt_tokens": 1190,
+    "total_tokens": 5170,
+    "completion_tokens": 3980,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3338
+    },
+    "time_to_first_token_ms": 34741,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-20\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC05-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"两个多月的正常整训结束，卫生部重新部署并转入战斗化，任务转向与国民党争夺全国胜利成果。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以转移到宜兴太华乡后开展正常治疗、培养人才、总结天目山战役经验为起点，以得知日本宣布投降后重新部署、两个多月正常状态转为战斗化为终点。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC05-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"转移至太华乡后开展正常治疗、人才培养和战役经验总结\",\n      \"process_text\": \"转移到宜兴太华乡后，主要进行正常治疗、正规培养人才、总结天目山战役经验教训、巩固胜利成果，并准备迎接更大的斗争。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC05-S0003\"\n      ],\n      \"evidence_quote\": \"我们从苏浙军区一起……统统转移到宜兴的太华乡这一带以后呢，主要是进行正常治疗，正规地培养人才，总结天目山战役的经验教训，巩固胜利成果为主。这个时候呢，准备迎接更大的斗争。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC05-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"形势变化后重新部署，由正常整训转入战斗化\",\n      \"process_text\": \"宣布投降后形势发生大变化，得到消息后重新部署，把两个多月来的正常情况完全转为战斗化，主要任务是与国民党争夺全国胜利成果。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC05-S0006\"\n      ],\n      \"evidence_quote\": \"宣布投降（了），这个时候呢，来了个大的变化。得到这个消息以后呢，就重新部署了，把这两个多月来正常的情况呢，完全又战斗化了。战斗化的主要任务是什么呢？要和国民党争夺全国胜利成果的问题。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC05-DE001-P01\",\n      \"target_stage_id\": \"BATCH06-DOC05-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC05-S0006\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-20",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC05-DE001",
+    "event_enrichment": {
+      "result_state": "两个多月的正常整训结束，卫生部重新部署并转入战斗化，任务转向与国民党争夺全国胜利成果。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以转移到宜兴太华乡后开展正常治疗、培养人才、总结天目山战役经验为起点，以得知日本宣布投降后重新部署、两个多月正常状态转为战斗化为终点。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC05-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "转移至太华乡后开展正常治疗、人才培养和战役经验总结",
+        "process_text": "转移到宜兴太华乡后，主要进行正常治疗、正规培养人才、总结天目山战役经验教训、巩固胜利成果，并准备迎接更大的斗争。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC05-S0003"
+        ],
+        "evidence_quote": "我们从苏浙军区一起……统统转移到宜兴的太华乡这一带以后呢，主要是进行正常治疗，正规地培养人才，总结天目山战役的经验教训，巩固胜利成果为主。这个时候呢，准备迎接更大的斗争。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC05-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "形势变化后重新部署，由正常整训转入战斗化",
+        "process_text": "宣布投降后形势发生大变化，得到消息后重新部署，把两个多月来的正常情况完全转为战斗化，主要任务是与国民党争夺全国胜利成果。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC05-S0006"
+        ],
+        "evidence_quote": "宣布投降（了），这个时候呢，来了个大的变化。得到这个消息以后呢，就重新部署了，把这两个多月来正常的情况呢，完全又战斗化了。战斗化的主要任务是什么呢？要和国民党争夺全国胜利成果的问题。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC05-DE001-P01",
+        "target_stage_id": "BATCH06-DOC05-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC05-S0006",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

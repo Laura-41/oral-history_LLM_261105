@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-11T22:53:17",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC09-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC09-DE008",
+  "usage": {
+    "prompt_tokens": 1359,
+    "total_tokens": 4920,
+    "completion_tokens": 3561,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2359
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3560000,
+    "time_to_first_token_ms": 32257
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC09-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆确认新四军物质生活艰苦、伙食差，但精神生活丰富愉快、同志关系好，并表达参加革命不怕受苦的态度。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以罗会廉说明物质生活差为起点，到陈锐霆表明参加革命不怕受苦为终点；中间包含伙食对比与精神生活感受。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"罗会廉告知新四军物质生活非常差，与陈锐霆当时生活差距明显。\",\n      \"process_text\": \"罗会廉就讲，物质生活非常地差，和你现在相比不是一般地差！\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0088\"\n      ],\n      \"evidence_quote\": \"罗会廉就讲，物质生活非常地差，和你现在相比不是一般地差！\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈锐霆以自己当团长时有小厨房、吃得较好作对照。\",\n      \"process_text\": \"我那个时候当团长，团里边有小厨房，吃得挺好的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0088\"\n      ],\n      \"evidence_quote\": \"我那个时候当团长，团里边有小厨房，吃得挺好的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆描述新四军伙食差，师长与大家同吃，饭比老百姓还差。\",\n      \"process_text\": \"我们那个地方吃得太差了，师长吃的跟我们大家都是一样的，吃那个饭比老百姓还差\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0088\"\n      ],\n      \"evidence_quote\": \"我们那个地方吃得太差了，师长吃的跟我们大家都是一样的，吃那个饭比老百姓还差\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"陈锐霆感到精神生活很好，有唱歌跳舞等娱乐。\",\n      \"process_text\": \"但是这个精神生活非常地好，唱歌啊、跳舞啊，\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0088\"\n      ],\n      \"evidence_quote\": \"但是这个精神生活非常地好，唱歌啊、跳舞啊，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE008-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"陈锐霆在娱乐互动中感到愉快、同志关系好，并表示参加革命不怕受苦。\",\n      \"process_text\": \"在一起（做一些娱乐）动作，都非常愉快，同志之间的关系非常地好！我知道参加革命嘛，就不怕受苦。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0090\"\n      ],\n      \"evidence_quote\": \"在一起（做一些娱乐）动作，都非常愉快，同志之间的关系非常地好！我知道参加革命嘛，就不怕受苦。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE008-P01\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0088\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE008-P02\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0088\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE008-P03\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE008-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0088\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE008-P04\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE008-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0090\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC09-DE008",
+    "event_enrichment": {
+      "result_state": "陈锐霆确认新四军物质生活艰苦、伙食差，但精神生活丰富愉快、同志关系好，并表达参加革命不怕受苦的态度。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以罗会廉说明物质生活差为起点，到陈锐霆表明参加革命不怕受苦为终点；中间包含伙食对比与精神生活感受。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC09-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "罗会廉告知新四军物质生活非常差，与陈锐霆当时生活差距明显。",
+        "process_text": "罗会廉就讲，物质生活非常地差，和你现在相比不是一般地差！",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0088"
+        ],
+        "evidence_quote": "罗会廉就讲，物质生活非常地差，和你现在相比不是一般地差！",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "陈锐霆以自己当团长时有小厨房、吃得较好作对照。",
+        "process_text": "我那个时候当团长，团里边有小厨房，吃得挺好的。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0088"
+        ],
+        "evidence_quote": "我那个时候当团长，团里边有小厨房，吃得挺好的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆描述新四军伙食差，师长与大家同吃，饭比老百姓还差。",
+        "process_text": "我们那个地方吃得太差了，师长吃的跟我们大家都是一样的，吃那个饭比老百姓还差",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0088"
+        ],
+        "evidence_quote": "我们那个地方吃得太差了，师长吃的跟我们大家都是一样的，吃那个饭比老百姓还差",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "陈锐霆感到精神生活很好，有唱歌跳舞等娱乐。",
+        "process_text": "但是这个精神生活非常地好，唱歌啊、跳舞啊，",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0088"
+        ],
+        "evidence_quote": "但是这个精神生活非常地好，唱歌啊、跳舞啊，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE008-P05",
+        "stage_order": 5,
+        "stage_summary": "陈锐霆在娱乐互动中感到愉快、同志关系好，并表示参加革命不怕受苦。",
+        "process_text": "在一起（做一些娱乐）动作，都非常愉快，同志之间的关系非常地好！我知道参加革命嘛，就不怕受苦。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0090"
+        ],
+        "evidence_quote": "在一起（做一些娱乐）动作，都非常愉快，同志之间的关系非常地好！我知道参加革命嘛，就不怕受苦。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC09-DE008-P01",
+        "target_stage_id": "BATCH03-DOC09-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC09-S0088",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE008-P02",
+        "target_stage_id": "BATCH03-DOC09-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC09-S0088",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE008-P03",
+        "target_stage_id": "BATCH03-DOC09-DE008-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC09-S0088",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE008-P04",
+        "target_stage_id": "BATCH03-DOC09-DE008-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC09-S0090",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

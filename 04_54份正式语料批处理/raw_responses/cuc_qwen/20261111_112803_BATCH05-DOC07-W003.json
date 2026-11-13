@@ -1,0 +1,288 @@
+{
+  "run_time": "2026-11-11T11:28:03",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH05-DOC07-W003",
+  "technical_document_id": "BATCH05-DOC07",
+  "document_id": "12.陈锐霆 090509（二校完 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH05-DOC07-S0042",
+    "BATCH05-DOC07-S0043",
+    "BATCH05-DOC07-S0044",
+    "BATCH05-DOC07-S0045",
+    "BATCH05-DOC07-S0046",
+    "BATCH05-DOC07-S0047",
+    "BATCH05-DOC07-S0048",
+    "BATCH05-DOC07-S0049",
+    "BATCH05-DOC07-S0050",
+    "BATCH05-DOC07-S0051",
+    "BATCH05-DOC07-S0052",
+    "BATCH05-DOC07-S0053",
+    "BATCH05-DOC07-S0054",
+    "BATCH05-DOC07-S0055",
+    "BATCH05-DOC07-S0056",
+    "BATCH05-DOC07-S0057",
+    "BATCH05-DOC07-S0058"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 3,
+    "assigned_segment_count": 8,
+    "unassigned_segment_count": 9,
+    "input_segment_count": 17,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH05-DOC07-W003-E03"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH05-DOC07-W003",
+    "events": [
+      {
+        "candidate_id": "BATCH05-DOC07-W003-E01",
+        "source_segment_ids": [
+          "BATCH05-DOC07-S0043"
+        ],
+        "event": {
+          "event_name": "陈锐霆向华北军大提供炮兵连并取回",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "提供并取回炮",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "他",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "一个连的炮",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Client",
+              "mention": "华北军大",
+              "normalized_entity": "华北军大",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "我就给了他一个连的炮，以后我回来的时候他跟着我一起，，就把炮取回去了，所以他非常地高兴。",
+          "type_basis": "核心过程是‘给炮’和‘取回炮’，属于组织行动和物质变化；参与者配置为Actor、Recipient、Goal、Client，可用What did X do?测试；言语协商只服务于借炮行动，不单独建事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH05-DOC07-W003-E02",
+        "source_segment_ids": [
+          "BATCH05-DOC07-S0045",
+          "BATCH05-DOC07-S0047",
+          "BATCH05-DOC07-S0049",
+          "BATCH05-DOC07-S0051",
+          "BATCH05-DOC07-S0053"
+        ],
+        "event": {
+          "event_name": "陈锐霆赴中央写综合报告并获接见谈形势",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "写综合报告并谈形势",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "周总理",
+              "normalized_entity": "周恩来",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Verbiage",
+              "mention": "三千字的综合报告",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Sayer",
+              "mention": "周总理",
+              "normalized_entity": "周恩来",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Sayer",
+              "mention": "毛主席",
+              "normalized_entity": "毛泽东",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "中央9月会议",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "中央",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "一个小房子",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "毛主席忙得要死",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "看看毛主席",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "现在解放战争已经过了凹子了，最困难的时候过去了。",
+          "evidence_quote": "我就在那写了一个三千字的综合报告。",
+          "type_basis": "核心过程是写三千字综合报告、向周总理请求见毛主席、毛主席谈形势，属于书写和言说等象征交换；参与者配置为Sayer、Receiver、Verbiage，投射内容写入projected_content；到中央、跑动、带过去等移动过程服务于同一汇报和接见目标，S0053的形势判断和济南战役评价仍属于中央谈话/汇报语境，不单独建事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH05-DOC07-W003-E03",
+        "source_segment_ids": [
+          "BATCH05-DOC07-S0055",
+          "BATCH05-DOC07-S0057"
+        ],
+        "event": {
+          "event_name": "陈锐霆所属特纵炮兵参与济南战役东西线作战",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "分线作战并占领外线",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "炮兵",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我这个特纵带的榴弹炮团，野炮",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "西线车站那一带",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "商埠那一带",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "东门",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "外线",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Scope",
+              "mention": "东线的作战",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "打济南的时候",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "各自作战",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "因为没有电话线通不了电话，其他的通信手段也没有，那个城池又比较大",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "西线就是我这个特纵带的榴弹炮团，野炮，打西线车站那一带，商埠那一带；打东线打东门的时候，外线很快地就占领了。",
+          "type_basis": "核心过程是炮兵分两大坨担负东线作战、炮击西线车站和商埠、打东门时外线被占领，属于作战和物质变化；参与者配置为Actor、Goal、Scope，可用What happened?测试；通信困难和城池较大作为原因，不改变主导类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH05-DOC07-S0042",
+      "BATCH05-DOC07-S0044",
+      "BATCH05-DOC07-S0046",
+      "BATCH05-DOC07-S0048",
+      "BATCH05-DOC07-S0050",
+      "BATCH05-DOC07-S0052",
+      "BATCH05-DOC07-S0054",
+      "BATCH05-DOC07-S0056",
+      "BATCH05-DOC07-S0058"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH05-DOC07-W003\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH05-DOC07-W003-E01\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC07-S0043\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆向华北军大提供炮兵连并取回\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"提供并取回炮\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"他\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"一个连的炮\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Client\",\n            \"mention\": \"华北军大\",\n            \"normalized_entity\": \"华北军大\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我就给了他一个连的炮，以后我回来的时候他跟着我一起，，就把炮取回去了，所以他非常地高兴。\",\n        \"type_basis\": \"核心过程是‘给炮’和‘取回炮’，属于组织行动和物质变化；参与者配置为Actor、Recipient、Goal、Client，可用What did X do?测试；言语协商只服务于借炮行动，不单独建事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH05-DOC07-W003-E02\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC07-S0045\",\n        \"BATCH05-DOC07-S0047\",\n        \"BATCH05-DOC07-S0049\",\n        \"BATCH05-DOC07-S0051\",\n        \"BATCH05-DOC07-S0053\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆赴中央写综合报告并获接见谈形势\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"写综合报告并谈形势\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"周总理\",\n            \"normalized_entity\": \"周恩来\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Verbiage\",\n            \"mention\": \"三千字的综合报告\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"周总理\",\n            \"normalized_entity\": \"周恩来\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"毛主席\",\n            \"normalized_entity\": \"毛泽东\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"中央9月会议\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"中央\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"一个小房子\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"毛主席忙得要死\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"看看毛主席\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"现在解放战争已经过了凹子了，最困难的时候过去了。\",\n        \"evidence_quote\": \"我就在那写了一个三千字的综合报告。\",\n        \"type_basis\": \"核心过程是写三千字综合报告、向周总理请求见毛主席、毛主席谈形势，属于书写和言说等象征交换；参与者配置为Sayer、Receiver、Verbiage，投射内容写入projected_content；到中央、跑动、带过去等移动过程服务于同一汇报和接见目标，S0053的形势判断和济南战役评价仍属于中央谈话/汇报语境，不单独建事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH05-DOC07-W003-E03\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC07-S0055\",\n        \"BATCH05-DOC07-S0057\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆所属特纵炮兵参与济南战役东西线作战\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"分线作战并占领外线\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"炮兵\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我这个特纵带的榴弹炮团，野炮\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"西线车站那一带\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"商埠那一带\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"东门\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"外线\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"东线的作战\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"打济南的时候\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"各自作战\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"因为没有电话线通不了电话，其他的通信手段也没有，那个城池又比较大\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"西线就是我这个特纵带的榴弹炮团，野炮，打西线车站那一带，商埠那一带；打东线打东门的时候，外线很快地就占领了。\",\n        \"type_basis\": \"核心过程是炮兵分两大坨担负东线作战、炮击西线车站和商埠、打东门时外线被占领，属于作战和物质变化；参与者配置为Actor、Goal、Scope，可用What happened?测试；通信困难和城池较大作为原因，不改变主导类型。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH05-DOC07-S0042\",\n    \"BATCH05-DOC07-S0044\",\n    \"BATCH05-DOC07-S0046\",\n    \"BATCH05-DOC07-S0048\",\n    \"BATCH05-DOC07-S0050\",\n    \"BATCH05-DOC07-S0052\",\n    \"BATCH05-DOC07-S0054\",\n    \"BATCH05-DOC07-S0056\",\n    \"BATCH05-DOC07-S0058\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5295,
+    "total_tokens": 28232,
+    "completion_tokens": 22937,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 20727
+    },
+    "time_to_first_token_ms": 445176,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11468000
+  }
+}

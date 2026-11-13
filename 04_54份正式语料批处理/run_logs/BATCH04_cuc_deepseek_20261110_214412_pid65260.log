@@ -1,0 +1,18 @@
+BATCH04 / cuc/deepseek：9份文档、38个窗口、19个步骤。
+
+=== 窗口抽取 BATCH04-DOC01 ===
++ /opt/homebrew/opt/python@3.14/bin/python3.14 scripts/run_formal_batch.py --model cuc/deepseek --batch BATCH04 --document BATCH04-DOC01 --timeout 600
+窗口清单：batch04_manifest.csv（共38行）
+[1/5] 请求 cuc/deepseek / BATCH04-DOC01-W001，最长等待600秒……
+  通过：2个候选，边缘待复核0个，结果已保存。
+[2/5] 请求 cuc/deepseek / BATCH04-DOC01-W002，最长等待600秒……
+  通过：3个候选，边缘待复核1个，结果已保存。
+[3/5] 请求 cuc/deepseek / BATCH04-DOC01-W003，最长等待600秒……
+  通过：1个候选，边缘待复核1个，结果已保存。
+[4/5] 请求 cuc/deepseek / BATCH04-DOC01-W004，最长等待600秒……
+  通过：1个候选，边缘待复核1个，结果已保存。
+[5/5] 请求 cuc/deepseek / BATCH04-DOC01-W005，最长等待600秒……
+失败并停止：连接被远端中断：[Errno 54] Connection reset by peer
+步骤失败（退出码 1）：窗口抽取 BATCH04-DOC01；按熔断规则停止本批。
+
+本批在「窗口抽取 BATCH04-DOC01」中断。已完成结果全部保留，不要进入下一批；排查后可用同一命令断点续跑。

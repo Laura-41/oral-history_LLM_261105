@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T14:00:36",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC03-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC03-DE008",
+  "usage": {
+    "prompt_tokens": 1440,
+    "total_tokens": 7177,
+    "completion_tokens": 5737,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4784
+    },
+    "time_to_first_token_ms": 84878,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC03-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"该部队被改编为苏鲁支队，彭嘉庆任政委，胡芸生任参谋长。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以“就在这个之前，罗到鲁南以后……”为起点，以“就把这个部队改编为苏鲁支队。”为终点；前文特务团人事安排与后文686团到来不属于本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"改编前的部队来源与罗政委到来背景\",\n      \"process_text\": \"罗到鲁南以后，把刚才说的义勇队在国民党的张里元那里编个叫19团，以后又搞什么直辖四团；咱们到那里以后，罗政委在大概10月份左右来的时候。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0030\"\n      ],\n      \"evidence_quote\": \"就在这个之前，罗到鲁南以后，把刚才说的义勇队，在国民党的张里元那里编个叫19团，以后又搞什么直辖四团，咱们到那里以后，罗政委他在大概10月份左右来的时候啊\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"派遣彭嘉庆、胡芸生担任支队干部\",\n      \"process_text\": \"罗政委赶快派彭嘉庆去当政委，派胡芸生去当参谋长；当时只派这么两个，没派更多的人去。那当时部队少，干部也少。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0030\"\n      ],\n      \"evidence_quote\": \"就赶快派彭嘉庆去当政委，派胡芸生去当参谋长。当时就派这么（两个），没派更多的人去。那当时部队少，干部也少。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"部队改编为苏鲁支队\",\n      \"process_text\": \"就把这个部队改编为苏鲁支队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0030\"\n      ],\n      \"evidence_quote\": \"就把这个部队改编为苏鲁支队。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE008-P01\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0030\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE008-P02\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE008-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0030\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC03-DE008",
+    "event_enrichment": {
+      "result_state": "该部队被改编为苏鲁支队，彭嘉庆任政委，胡芸生任参谋长。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以“就在这个之前，罗到鲁南以后……”为起点，以“就把这个部队改编为苏鲁支队。”为终点；前文特务团人事安排与后文686团到来不属于本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC03-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "改编前的部队来源与罗政委到来背景",
+        "process_text": "罗到鲁南以后，把刚才说的义勇队在国民党的张里元那里编个叫19团，以后又搞什么直辖四团；咱们到那里以后，罗政委在大概10月份左右来的时候。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0030"
+        ],
+        "evidence_quote": "就在这个之前，罗到鲁南以后，把刚才说的义勇队，在国民党的张里元那里编个叫19团，以后又搞什么直辖四团，咱们到那里以后，罗政委他在大概10月份左右来的时候啊",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "派遣彭嘉庆、胡芸生担任支队干部",
+        "process_text": "罗政委赶快派彭嘉庆去当政委，派胡芸生去当参谋长；当时只派这么两个，没派更多的人去。那当时部队少，干部也少。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0030"
+        ],
+        "evidence_quote": "就赶快派彭嘉庆去当政委，派胡芸生去当参谋长。当时就派这么（两个），没派更多的人去。那当时部队少，干部也少。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "部队改编为苏鲁支队",
+        "process_text": "就把这个部队改编为苏鲁支队。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0030"
+        ],
+        "evidence_quote": "就把这个部队改编为苏鲁支队。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC03-DE008-P01",
+        "target_stage_id": "BATCH06-DOC03-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC03-S0030",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE008-P02",
+        "target_stage_id": "BATCH06-DOC03-DE008-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC03-S0030",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

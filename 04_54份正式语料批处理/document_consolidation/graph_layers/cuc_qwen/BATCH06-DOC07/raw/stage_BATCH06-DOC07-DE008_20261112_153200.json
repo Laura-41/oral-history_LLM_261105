@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T15:32:00",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE008",
+  "usage": {
+    "prompt_tokens": 1646,
+    "total_tokens": 11257,
+    "completion_tokens": 9611,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8078
+    },
+    "time_to_first_token_ms": 143659,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9610000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"中央迁驻湖心寺的计划没有实现，医院被要求对外保密，叙述者认为事情是真的。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"边界依据输入片段：S0165 起述中央准备设在淮安并派人到湖心寺看房子；S0167/S0168 述医院从湖心寺搬到河下镇及湖心寺环境；S0186-S0188 述党中央偷偷告知医院、要求保密，并说明已看房子/地形及实现后安排。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"中央准备迁驻华中/淮安并派人查看湖心寺，叙述者交代未实现背景\",\n      \"process_text\": \"    陈海峰：没有实现，打仗了，打“反蒋”（音）了好。第二个的问题呢，就是隔江而治呢，就是中央准备搬到华中来。我们党中央准备设在淮安，现在看起来没有材料全部公布的，但是有些那个回忆录，有些文章里面隐隐约约地提到这个事，没有明显地讲这东西。但是我是知道内幕，我们这些直接单位有关系啊，中央已经派人来看房子了。中央派了人，司令部带了人，卫生部带了人，到我们这个湖心寺来看，中央机构就设在湖心寺。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0165\"\n      ],\n      \"evidence_quote\": \"    陈海峰：没有实现，打仗了，打“反蒋”（音）了好。第二个的问题呢，就是隔江而治呢，就是中央准备搬到华中来。我们党中央准备设在淮安，现在看起来没有材料全部公布的，但是有些那个回忆录，有些文章里面隐隐约约地提到这个事，没有明显地讲这东西。但是我是知道内幕，我们这些直接单位有关系啊，中央已经派人来看房子了。中央派了人，司令部带了人，卫生部带了人，到我们这个湖心寺来看，中央机构就设在湖心寺。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"医院从湖心寺迁至河下镇并描述湖心寺位置环境\",\n      \"process_text\": \"    陈海峰：我们（从）湖心寺搬家，我们医院就搬到对面一个镇上，叫河下镇，隔了一条运河。这个庙呢，在河的南边，这个庙是非常漂亮的一个庙，是苏北地区非常好的一个风景区，\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0167\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我们（从）湖心寺搬家，我们医院就搬到对面一个镇上，叫河下镇，隔了一条运河。这个庙呢，在河的南边，这个庙是非常漂亮的一个庙，是苏北地区非常好的一个风景区，\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"中央偷偷告知医院迁驻计划并要求对外保密\",\n      \"process_text\": \"伤病员了。这是第二个事情啊。党中央来看了房子，而且偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道。那说明这个事情是真的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0186\"\n      ],\n      \"evidence_quote\": \"伤病员了。这是第二个事情啊。党中央来看了房子，而且偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道。那说明这个事情是真的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"说明中央已看地形及实现后的安排\",\n      \"process_text\": \"已经来看地形了，如果实现的话，怎么搞法。第二个，如果中央搬来以后，而且里面有一个计划，那个时候讨论中间，大家都知道的，（淮安）要变成叫江淮市。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0188\"\n      ],\n      \"evidence_quote\": \"已经来看地形了，如果实现的话，怎么搞法。第二个，如果中央搬来以后，而且里面有一个计划，那个时候讨论中间，大家都知道的，（淮安）要变成叫江淮市。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE008-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE008-P02\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE008-P03\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE008-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0188\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE008",
+    "event_enrichment": {
+      "result_state": "中央迁驻湖心寺的计划没有实现，医院被要求对外保密，叙述者认为事情是真的。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "边界依据输入片段：S0165 起述中央准备设在淮安并派人到湖心寺看房子；S0167/S0168 述医院从湖心寺搬到河下镇及湖心寺环境；S0186-S0188 述党中央偷偷告知医院、要求保密，并说明已看房子/地形及实现后安排。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "中央准备迁驻华中/淮安并派人查看湖心寺，叙述者交代未实现背景",
+        "process_text": "    陈海峰：没有实现，打仗了，打“反蒋”（音）了好。第二个的问题呢，就是隔江而治呢，就是中央准备搬到华中来。我们党中央准备设在淮安，现在看起来没有材料全部公布的，但是有些那个回忆录，有些文章里面隐隐约约地提到这个事，没有明显地讲这东西。但是我是知道内幕，我们这些直接单位有关系啊，中央已经派人来看房子了。中央派了人，司令部带了人，卫生部带了人，到我们这个湖心寺来看，中央机构就设在湖心寺。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0165"
+        ],
+        "evidence_quote": "    陈海峰：没有实现，打仗了，打“反蒋”（音）了好。第二个的问题呢，就是隔江而治呢，就是中央准备搬到华中来。我们党中央准备设在淮安，现在看起来没有材料全部公布的，但是有些那个回忆录，有些文章里面隐隐约约地提到这个事，没有明显地讲这东西。但是我是知道内幕，我们这些直接单位有关系啊，中央已经派人来看房子了。中央派了人，司令部带了人，卫生部带了人，到我们这个湖心寺来看，中央机构就设在湖心寺。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "医院从湖心寺迁至河下镇并描述湖心寺位置环境",
+        "process_text": "    陈海峰：我们（从）湖心寺搬家，我们医院就搬到对面一个镇上，叫河下镇，隔了一条运河。这个庙呢，在河的南边，这个庙是非常漂亮的一个庙，是苏北地区非常好的一个风景区，",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0167"
+        ],
+        "evidence_quote": "    陈海峰：我们（从）湖心寺搬家，我们医院就搬到对面一个镇上，叫河下镇，隔了一条运河。这个庙呢，在河的南边，这个庙是非常漂亮的一个庙，是苏北地区非常好的一个风景区，",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "中央偷偷告知医院迁驻计划并要求对外保密",
+        "process_text": "伤病员了。这是第二个事情啊。党中央来看了房子，而且偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道。那说明这个事情是真的。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0186"
+        ],
+        "evidence_quote": "伤病员了。这是第二个事情啊。党中央来看了房子，而且偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道。那说明这个事情是真的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "说明中央已看地形及实现后的安排",
+        "process_text": "已经来看地形了，如果实现的话，怎么搞法。第二个，如果中央搬来以后，而且里面有一个计划，那个时候讨论中间，大家都知道的，（淮安）要变成叫江淮市。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0188"
+        ],
+        "evidence_quote": "已经来看地形了，如果实现的话，怎么搞法。第二个，如果中央搬来以后，而且里面有一个计划，那个时候讨论中间，大家都知道的，（淮安）要变成叫江淮市。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE008-P01",
+        "target_stage_id": "BATCH06-DOC07-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE008-P02",
+        "target_stage_id": "BATCH06-DOC07-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE008-P03",
+        "target_stage_id": "BATCH06-DOC07-DE008-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC07-S0188",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

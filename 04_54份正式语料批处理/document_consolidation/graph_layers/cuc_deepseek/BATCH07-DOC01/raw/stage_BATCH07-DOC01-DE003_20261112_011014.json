@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T01:10:14",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC01-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC01-DE003",
+  "usage": {
+    "prompt_tokens": 1228,
+    "total_tokens": 3421,
+    "completion_tokens": 2193,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1369
+    },
+    "time_to_first_token_ms": 16948,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-15\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC01-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"学校由特校改建为南京炮校，并经历改称第三炮校又改回南京炮校；部队正规化并招收约200名女生。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“到了南京以后”为起点，至“还招了大概200来人”所述招生规模为止；后续人名举例不纳入本事件边界。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"到南京后，特校改建为南京炮校，并随第三野战军番号改称第三炮校，后又改回南京炮校。\",\n      \"process_text\": \"到了南京以后，我们这个特校就变成南京炮校，以后（因为是）第三野战军嘛，又改成第三炮校，以后又改回来，还是南京炮校。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0025\"\n      ],\n      \"evidence_quote\": \"到了南京以后，我们这个特校就变成南京炮校，以后（因为是）第三野战军嘛，又改成第三炮校，以后又改回来，还是南京炮校。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"叙述者与政治委员担任首任名誉的、不驻校的校长和政治委员。\",\n      \"process_text\": \"我跟政治委员都是首任的，名誉的，不驻校的校长跟政治委员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0025\"\n      ],\n      \"evidence_quote\": \"我跟政治委员都是首任的，名誉的，不驻校的校长跟政治委员。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"部队进入正规化状态，并招收约200名女生。\",\n      \"process_text\": \"但是部队就是很正规了，又招女生，还招了大概200来人\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0025\"\n      ],\n      \"evidence_quote\": \"但是部队就是很正规了，又招女生，还招了大概200来人\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE003-P01\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0025\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE003-P02\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0025\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-15",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC01-DE003",
+    "event_enrichment": {
+      "result_state": "学校由特校改建为南京炮校，并经历改称第三炮校又改回南京炮校；部队正规化并招收约200名女生。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以“到了南京以后”为起点，至“还招了大概200来人”所述招生规模为止；后续人名举例不纳入本事件边界。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC01-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "到南京后，特校改建为南京炮校，并随第三野战军番号改称第三炮校，后又改回南京炮校。",
+        "process_text": "到了南京以后，我们这个特校就变成南京炮校，以后（因为是）第三野战军嘛，又改成第三炮校，以后又改回来，还是南京炮校。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0025"
+        ],
+        "evidence_quote": "到了南京以后，我们这个特校就变成南京炮校，以后（因为是）第三野战军嘛，又改成第三炮校，以后又改回来，还是南京炮校。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "叙述者与政治委员担任首任名誉的、不驻校的校长和政治委员。",
+        "process_text": "我跟政治委员都是首任的，名誉的，不驻校的校长跟政治委员。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0025"
+        ],
+        "evidence_quote": "我跟政治委员都是首任的，名誉的，不驻校的校长跟政治委员。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "部队进入正规化状态，并招收约200名女生。",
+        "process_text": "但是部队就是很正规了，又招女生，还招了大概200来人",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0025"
+        ],
+        "evidence_quote": "但是部队就是很正规了，又招女生，还招了大概200来人",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC01-DE003-P01",
+        "target_stage_id": "BATCH07-DOC01-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC01-S0025",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC01-DE003-P02",
+        "target_stage_id": "BATCH07-DOC01-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC01-S0025",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

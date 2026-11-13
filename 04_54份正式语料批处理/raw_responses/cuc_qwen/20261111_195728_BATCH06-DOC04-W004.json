@@ -1,0 +1,113 @@
+{
+  "run_time": "2026-11-11T19:57:28",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH06-DOC04-W004",
+  "technical_document_id": "BATCH06-DOC04",
+  "document_id": "19.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH06-DOC04-S0074",
+    "BATCH06-DOC04-S0075",
+    "BATCH06-DOC04-S0076",
+    "BATCH06-DOC04-S0077",
+    "BATCH06-DOC04-S0078"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 3,
+    "unassigned_segment_count": 2,
+    "input_segment_count": 5,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH06-DOC04-W004-E01"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH06-DOC04-W004",
+    "events": [
+      {
+        "candidate_id": "BATCH06-DOC04-W004-E01",
+        "source_segment_ids": [
+          "BATCH06-DOC04-S0074",
+          "BATCH06-DOC04-S0075",
+          "BATCH06-DOC04-S0077"
+        ],
+        "event": {
+          "event_name": "中央表扬苏浙军区三次天目山自卫反击战胜利并指示总结经验教训",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "表扬并指示总结经验教训",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "中央",
+              "normalized_entity": "中央",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "你们",
+              "normalized_entity": "苏浙军区",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Target",
+              "mention": "三次天目山自卫反击战",
+              "normalized_entity": "三次天目山自卫反击战",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "OTHER",
+              "value": "取得伟大的胜利",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "部队调动、组织、临时编制，互相支援，这个大兵团作战的，在形成这个假降中间，诱敌深入的这个组织得最好的一次",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "这个战役一个是险胜，一个是以少胜多，是诱敌深入成功的一个战例，是大兵团作战的运动战，在运动中间消灭敌人有生力量（的）一个典范事例。那么也为今后解放战争中间，大兵团作战打下了良好基础。",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "对于敌人来讲呢，他有他的教训，我们有我们教训，对于我们来讲呢，胜利呢，最后得到了。",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "你们要认真总结经验教训",
+          "evidence_quote": "苏浙军区三次天目山自卫反击战取得彻底胜利，但是中央指出来，你们要认真总结经验教训。",
+          "type_basis": "核心过程是中央对苏浙军区三次天目山自卫反击战胜利发出表扬，并指示“认真总结经验教训”，属于明确象征交换；Sayer=中央，Receiver=你们（苏浙军区），Target=三次天目山自卫反击战，projected_content承载指示内容。战役胜利本身具物质过程依据，故保留MATERIAL备选并设NEEDS_REVIEW。",
+          "alternative_event_type": "MATERIAL",
+          "ambiguity_reason": "窗口同时叙述苏浙军区战役取得彻底胜利（物质/作战结果）和中央表扬、指示总结经验教训（言语评价），主导类型需复核。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH06-DOC04-S0076",
+      "BATCH06-DOC04-S0078"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH06-DOC04-W004\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH06-DOC04-W004-E01\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC04-S0074\",\n        \"BATCH06-DOC04-S0075\",\n        \"BATCH06-DOC04-S0077\"\n      ],\n      \"event\": {\n        \"event_name\": \"中央表扬苏浙军区三次天目山自卫反击战胜利并指示总结经验教训\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"表扬并指示总结经验教训\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"中央\",\n            \"normalized_entity\": \"中央\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"你们\",\n            \"normalized_entity\": \"苏浙军区\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Target\",\n            \"mention\": \"三次天目山自卫反击战\",\n            \"normalized_entity\": \"三次天目山自卫反击战\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"取得伟大的胜利\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"部队调动、组织、临时编制，互相支援，这个大兵团作战的，在形成这个假降中间，诱敌深入的这个组织得最好的一次\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"这个战役一个是险胜，一个是以少胜多，是诱敌深入成功的一个战例，是大兵团作战的运动战，在运动中间消灭敌人有生力量（的）一个典范事例。那么也为今后解放战争中间，大兵团作战打下了良好基础。\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"对于敌人来讲呢，他有他的教训，我们有我们教训，对于我们来讲呢，胜利呢，最后得到了。\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"你们要认真总结经验教训\",\n        \"evidence_quote\": \"苏浙军区三次天目山自卫反击战取得彻底胜利，但是中央指出来，你们要认真总结经验教训。\",\n        \"type_basis\": \"核心过程是中央对苏浙军区三次天目山自卫反击战胜利发出表扬，并指示“认真总结经验教训”，属于明确象征交换；Sayer=中央，Receiver=你们（苏浙军区），Target=三次天目山自卫反击战，projected_content承载指示内容。战役胜利本身具物质过程依据，故保留MATERIAL备选并设NEEDS_REVIEW。\",\n        \"alternative_event_type\": \"MATERIAL\",\n        \"ambiguity_reason\": \"窗口同时叙述苏浙军区战役取得彻底胜利（物质/作战结果）和中央表扬、指示总结经验教训（言语评价），主导类型需复核。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH06-DOC04-S0076\",\n    \"BATCH06-DOC04-S0078\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 4439,
+    "total_tokens": 14911,
+    "completion_tokens": 10472,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9649
+    },
+    "time_to_first_token_ms": 284753,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5235500
+  }
+}

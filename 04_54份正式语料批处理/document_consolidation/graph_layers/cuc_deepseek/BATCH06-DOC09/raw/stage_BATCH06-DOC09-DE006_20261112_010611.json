@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T01:06:11",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC09-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC09-DE006",
+  "usage": {
+    "prompt_tokens": 1238,
+    "total_tokens": 3903,
+    "completion_tokens": 2665,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1889
+    },
+    "time_to_first_token_ms": 23227,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2664000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-22\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC09-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"司机绕行躲避，飞机未击中，司机脱险返回，满头大汗且气愤。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以国民党飞机误认并低空扫射吉普车为起点，以司机绕行脱险返回为终点；不纳入后文医院挂牌仪式。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"国民党飞机误认吉普车为新四军华中军区领导干部座车，低空扫射追击。\",\n      \"process_text\": \"国民党飞机以为是我们新四军华中军区的领导干部呢，吉普车嘛，低空扫射，对那个吉普车后面啪啪啪啪啪打。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0090\"\n      ],\n      \"evidence_quote\": \"国民党飞机以为是我们新四军华中军区的领导干部呢，吉普车嘛，低空扫射，对那个吉普车后面啪啪啪啪啪打。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"司机凭经验在狭窄公路上绕行躲避，飞机跟随射击未中，司机险些丧命。\",\n      \"process_text\": \"那个飞机跟着他打没有打中，他跟着绕，那公路也不宽，差点被打死了\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0090\"\n      ],\n      \"evidence_quote\": \"那个飞机跟着他打没有打中，他跟着绕，那公路也不宽，差点被打死了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"司机脱险返回，满头大汗且气愤。\",\n      \"process_text\": \"他气坏了，回来以后满头大汗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0090\"\n      ],\n      \"evidence_quote\": \"他气坏了，回来以后满头大汗。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE006-P01\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE006-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0090\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE006-P02\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE006-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0090\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-22",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC09-DE006",
+    "event_enrichment": {
+      "result_state": "司机绕行躲避，飞机未击中，司机脱险返回，满头大汗且气愤。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以国民党飞机误认并低空扫射吉普车为起点，以司机绕行脱险返回为终点；不纳入后文医院挂牌仪式。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC09-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "国民党飞机误认吉普车为新四军华中军区领导干部座车，低空扫射追击。",
+        "process_text": "国民党飞机以为是我们新四军华中军区的领导干部呢，吉普车嘛，低空扫射，对那个吉普车后面啪啪啪啪啪打。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0090"
+        ],
+        "evidence_quote": "国民党飞机以为是我们新四军华中军区的领导干部呢，吉普车嘛，低空扫射，对那个吉普车后面啪啪啪啪啪打。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "司机凭经验在狭窄公路上绕行躲避，飞机跟随射击未中，司机险些丧命。",
+        "process_text": "那个飞机跟着他打没有打中，他跟着绕，那公路也不宽，差点被打死了",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0090"
+        ],
+        "evidence_quote": "那个飞机跟着他打没有打中，他跟着绕，那公路也不宽，差点被打死了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "司机脱险返回，满头大汗且气愤。",
+        "process_text": "他气坏了，回来以后满头大汗。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0090"
+        ],
+        "evidence_quote": "他气坏了，回来以后满头大汗。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC09-DE006-P01",
+        "target_stage_id": "BATCH06-DOC09-DE006-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC09-S0090",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE006-P02",
+        "target_stage_id": "BATCH06-DOC09-DE006-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC09-S0090",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

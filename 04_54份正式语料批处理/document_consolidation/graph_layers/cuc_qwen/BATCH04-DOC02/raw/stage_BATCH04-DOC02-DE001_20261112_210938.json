@@ -1,0 +1,147 @@
+{
+  "run_time": "2026-11-12T21:09:38",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC02-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC02-DE001",
+  "usage": {
+    "prompt_tokens": 2125,
+    "total_tokens": 12660,
+    "completion_tokens": 10535,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8118
+    },
+    "tokens_per_second": 10534000,
+    "time_to_first_token_ms": 155397,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC02-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"公筷运动在团内落实并巩固，卫生经验交流整理后向团长和师部汇报，团内与师部均予表扬，陈海峰被选为全师模范卫生队长，师部表示要推广3师好的地方/中草药。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为 S0003 所述团长批准、团内发公筷并组织吃饭；终点为 S0015/S0016 所述师部全师卫生大会表扬并选陈海峰为全师模范卫生队长，S0017 所述师部推广3师好的地方/中草药作为后续影响纳入边界。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"团长批准并落实公筷运动\",\n      \"process_text\": \"    陈海峰：“公筷运动”，这个是团长批准，团里面的钱，每一个班都发到公筷。班长、副班长有一个人管这个事，吃饭的时候，就是值班（的）值日员，值日的战士，打好菜，都分好，第一碗饭都盛好。每次都要点名的了，要唱歌。唱完歌以后，大家一个班一个班吃饭，围成一圈。但是呢，过去都是自己（用）筷子，往里面（夹着）吃，那你嘴巴里的细菌都到菜里去了。我们家里面现在都是不分食，也是在这两个菜盆子里头。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0003\"\n      ],\n      \"evidence_quote\": \"    陈海峰：“公筷运动”，这个是团长批准，团里面的钱，每一个班都发到公筷。班长、副班长有一个人管这个事，吃饭的时候，就是值班（的）值日员，值日的战士，打好菜，都分好，第一碗饭都盛好。每次都要点名的了，要唱歌。唱完歌以后，大家一个班一个班吃饭，围成一圈。但是呢，过去都是自己（用）筷子，往里面（夹着）吃，那你嘴巴里的细菌都到菜里去了。我们家里面现在都是不分食，也是在这两个菜盆子里头。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"明确公筷保存、烫洗和使用规则\",\n      \"process_text\": \"    陈海峰：菜盆子都是洋铁做的了。那个碗嘛，是一个洋铁子碗，都发的啦，挂在腰里面了。每人自己一双筷子，那么班长、副班长呢，他有公筷，他保存。有几双公筷，每次放在里面，吃之前用开水烫一下。只准用公筷夹菜，放在自己的碗上面，不准自己的筷子到菜里面去。卫生啊，消化道的传染病啊，病从口入嘛。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0005\"\n      ],\n      \"evidence_quote\": \"    陈海峰：菜盆子都是洋铁做的了。那个碗嘛，是一个洋铁子碗，都发的啦，挂在腰里面了。每人自己一双筷子，那么班长、副班长呢，他有公筷，他保存。有几双公筷，每次放在里面，吃之前用开水烫一下。只准用公筷夹菜，放在自己的碗上面，不准自己的筷子到菜里面去。卫生啊，消化道的传染病啊，病从口入嘛。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"说明病从口入并开展跨师卫生交流\",\n      \"process_text\": \"这样子呢，防止夏天的各种传染病啊，病从口入。“公筷运动“，3师没有，我们1师（有），我们就交流。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0006\",\n        \"BATCH04-DOC02-S0007\"\n      ],\n      \"evidence_quote\": \"这样子呢，防止夏天的各种传染病啊，病从口入。“公筷运动“，3师没有，我们1师（有），我们就交流。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"交流后记录整理并向团长汇报获团内表扬\",\n      \"process_text\": \"    陈海峰：我们把我们好的给他，那么他好的中药给我们。回来以后，带了他们学的资料啊，我们记录啊，拿回来整理。记录完了以后，我们给团长汇报，哎，团长很高兴。搞成以后，那个团长更注意卫生，表扬我们一番，在全团大会上也表扬，“我们也一定要巩固好公筷运动。我们的卫生机关、卫生制度，晓得嘛，我们以后要争取戒烟。”那个时候，1师还发烟呢，营以上干部发一条烟，飞马牌烟，连的干部发半条，战士不发，没有烟。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0009\",\n        \"BATCH04-DOC02-S0013\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我们把我们好的给他，那么他好的中药给我们。回来以后，带了他们学的资料啊，我们记录啊，拿回来整理。记录完了以后，我们给团长汇报，哎，团长很高兴。搞成以后，那个团长更注意卫生，表扬我们一番，在全团大会上也表扬，“我们也一定要巩固好公筷运动。我们的卫生机关、卫生制度，晓得嘛，我们以后要争取戒烟。”那个时候，1师还发烟呢，营以上干部发一条烟，飞马牌烟，连的干部发半条，战士不发，没有烟。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"报告送师部卫生部并获全师表扬选模范\",\n      \"process_text\": \"师部卫生部开全师卫生大会，表扬我们2旅，表扬我们5团，还表扬我个人，把陈海峰选为全师的模范卫生队长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0014\",\n        \"BATCH04-DOC02-S0015\",\n        \"BATCH04-DOC02-S0016\"\n      ],\n      \"evidence_quote\": \"师部卫生部开全师卫生大会，表扬我们2旅，表扬我们5团，还表扬我个人，把陈海峰选为全师的模范卫生队长。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE001-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"师部推广3师好的地方/中草药\",\n      \"process_text\": \"那么我们把这个报告（给）了师部，师部呢，也把这个3师好的地方，我们要推广中草药。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0017\"\n      ],\n      \"evidence_quote\": \"那么我们把这个报告（给）了师部，师部呢，也把这个3师好的地方，我们要推广中草药。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE001-P01\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0005\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE001-P02\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0007\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE001-P03\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE001-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0009\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE001-P04\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE001-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0014\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE001-P05\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE001-P06\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0017\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC02-DE001",
+    "event_enrichment": {
+      "result_state": "公筷运动在团内落实并巩固，卫生经验交流整理后向团长和师部汇报，团内与师部均予表扬，陈海峰被选为全师模范卫生队长，师部表示要推广3师好的地方/中草药。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为 S0003 所述团长批准、团内发公筷并组织吃饭；终点为 S0015/S0016 所述师部全师卫生大会表扬并选陈海峰为全师模范卫生队长，S0017 所述师部推广3师好的地方/中草药作为后续影响纳入边界。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC02-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "团长批准并落实公筷运动",
+        "process_text": "    陈海峰：“公筷运动”，这个是团长批准，团里面的钱，每一个班都发到公筷。班长、副班长有一个人管这个事，吃饭的时候，就是值班（的）值日员，值日的战士，打好菜，都分好，第一碗饭都盛好。每次都要点名的了，要唱歌。唱完歌以后，大家一个班一个班吃饭，围成一圈。但是呢，过去都是自己（用）筷子，往里面（夹着）吃，那你嘴巴里的细菌都到菜里去了。我们家里面现在都是不分食，也是在这两个菜盆子里头。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0003"
+        ],
+        "evidence_quote": "    陈海峰：“公筷运动”，这个是团长批准，团里面的钱，每一个班都发到公筷。班长、副班长有一个人管这个事，吃饭的时候，就是值班（的）值日员，值日的战士，打好菜，都分好，第一碗饭都盛好。每次都要点名的了，要唱歌。唱完歌以后，大家一个班一个班吃饭，围成一圈。但是呢，过去都是自己（用）筷子，往里面（夹着）吃，那你嘴巴里的细菌都到菜里去了。我们家里面现在都是不分食，也是在这两个菜盆子里头。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "明确公筷保存、烫洗和使用规则",
+        "process_text": "    陈海峰：菜盆子都是洋铁做的了。那个碗嘛，是一个洋铁子碗，都发的啦，挂在腰里面了。每人自己一双筷子，那么班长、副班长呢，他有公筷，他保存。有几双公筷，每次放在里面，吃之前用开水烫一下。只准用公筷夹菜，放在自己的碗上面，不准自己的筷子到菜里面去。卫生啊，消化道的传染病啊，病从口入嘛。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0005"
+        ],
+        "evidence_quote": "    陈海峰：菜盆子都是洋铁做的了。那个碗嘛，是一个洋铁子碗，都发的啦，挂在腰里面了。每人自己一双筷子，那么班长、副班长呢，他有公筷，他保存。有几双公筷，每次放在里面，吃之前用开水烫一下。只准用公筷夹菜，放在自己的碗上面，不准自己的筷子到菜里面去。卫生啊，消化道的传染病啊，病从口入嘛。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "说明病从口入并开展跨师卫生交流",
+        "process_text": "这样子呢，防止夏天的各种传染病啊，病从口入。“公筷运动“，3师没有，我们1师（有），我们就交流。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0006",
+          "BATCH04-DOC02-S0007"
+        ],
+        "evidence_quote": "这样子呢，防止夏天的各种传染病啊，病从口入。“公筷运动“，3师没有，我们1师（有），我们就交流。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "交流后记录整理并向团长汇报获团内表扬",
+        "process_text": "    陈海峰：我们把我们好的给他，那么他好的中药给我们。回来以后，带了他们学的资料啊，我们记录啊，拿回来整理。记录完了以后，我们给团长汇报，哎，团长很高兴。搞成以后，那个团长更注意卫生，表扬我们一番，在全团大会上也表扬，“我们也一定要巩固好公筷运动。我们的卫生机关、卫生制度，晓得嘛，我们以后要争取戒烟。”那个时候，1师还发烟呢，营以上干部发一条烟，飞马牌烟，连的干部发半条，战士不发，没有烟。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0009",
+          "BATCH04-DOC02-S0013"
+        ],
+        "evidence_quote": "    陈海峰：我们把我们好的给他，那么他好的中药给我们。回来以后，带了他们学的资料啊，我们记录啊，拿回来整理。记录完了以后，我们给团长汇报，哎，团长很高兴。搞成以后，那个团长更注意卫生，表扬我们一番，在全团大会上也表扬，“我们也一定要巩固好公筷运动。我们的卫生机关、卫生制度，晓得嘛，我们以后要争取戒烟。”那个时候，1师还发烟呢，营以上干部发一条烟，飞马牌烟，连的干部发半条，战士不发，没有烟。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "报告送师部卫生部并获全师表扬选模范",
+        "process_text": "师部卫生部开全师卫生大会，表扬我们2旅，表扬我们5团，还表扬我个人，把陈海峰选为全师的模范卫生队长。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0014",
+          "BATCH04-DOC02-S0015",
+          "BATCH04-DOC02-S0016"
+        ],
+        "evidence_quote": "师部卫生部开全师卫生大会，表扬我们2旅，表扬我们5团，还表扬我个人，把陈海峰选为全师的模范卫生队长。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE001-P06",
+        "stage_order": 6,
+        "stage_summary": "师部推广3师好的地方/中草药",
+        "process_text": "那么我们把这个报告（给）了师部，师部呢，也把这个3师好的地方，我们要推广中草药。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0017"
+        ],
+        "evidence_quote": "那么我们把这个报告（给）了师部，师部呢，也把这个3师好的地方，我们要推广中草药。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC02-DE001-P01",
+        "target_stage_id": "BATCH04-DOC02-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0005",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE001-P02",
+        "target_stage_id": "BATCH04-DOC02-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0007",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE001-P03",
+        "target_stage_id": "BATCH04-DOC02-DE001-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC02-S0009",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE001-P04",
+        "target_stage_id": "BATCH04-DOC02-DE001-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0014",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE001-P05",
+        "target_stage_id": "BATCH04-DOC02-DE001-P06",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC02-S0017",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

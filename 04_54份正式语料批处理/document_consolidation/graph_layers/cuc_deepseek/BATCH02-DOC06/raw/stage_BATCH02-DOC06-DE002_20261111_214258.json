@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T21:42:58",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC06-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC06-DE002",
+  "usage": {
+    "prompt_tokens": 1184,
+    "total_tokens": 4492,
+    "completion_tokens": 3308,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2530
+    },
+    "time_to_first_token_ms": 25472,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3307000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC06-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"完成上山查看，确认友军部队也上山查看，并观察到山顶战场遗留物和部分尸体发臭。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为“第二天……就爬到山上去”，终点为山顶战场观察及尸体发臭的补充描述；不扩展到此前战斗过程或后续独立事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"次日约9点多至10点前上山\",\n      \"process_text\": \"第二天大概9点多钟不到10点钟，主人公爬到山上去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0014\"\n      ],\n      \"evidence_quote\": \"第二天我大概9点多钟不到10点钟，就爬到山上去\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"与上山的友军部队相遇并交谈\",\n      \"process_text\": \"前头友军的部队也上来了，对方表示也是到这个地点查一查。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0014\"\n      ],\n      \"evidence_quote\": \"前头友军的部队也上来了，他跟我讲，他也是（到这个）地方查一查。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"在山顶观察战场遗留物与尸体状况\",\n      \"process_text\": \"山顶上当时没有现在这类塑料袋包装，日军遗留物很多，山头上花花绿绿，死尸有的已经发臭；并提及第二次进攻后第三天尸体发臭。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0015\"\n      ],\n      \"evidence_quote\": \"山顶上那个时候咱们还没有现在这个塑料袋子之类的包装，那个时候日本都有了好多（这样的）东西，山头上花花绿绿的，死尸有的都臭了。进攻了第二次，隔了三天了嘛，第三天那个尸体都臭了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE002-P01\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0014\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE002-P02\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0015\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC06-DE002",
+    "event_enrichment": {
+      "result_state": "完成上山查看，确认友军部队也上山查看，并观察到山顶战场遗留物和部分尸体发臭。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起点为“第二天……就爬到山上去”，终点为山顶战场观察及尸体发臭的补充描述；不扩展到此前战斗过程或后续独立事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC06-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "次日约9点多至10点前上山",
+        "process_text": "第二天大概9点多钟不到10点钟，主人公爬到山上去。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0014"
+        ],
+        "evidence_quote": "第二天我大概9点多钟不到10点钟，就爬到山上去",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "与上山的友军部队相遇并交谈",
+        "process_text": "前头友军的部队也上来了，对方表示也是到这个地点查一查。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0014"
+        ],
+        "evidence_quote": "前头友军的部队也上来了，他跟我讲，他也是（到这个）地方查一查。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "在山顶观察战场遗留物与尸体状况",
+        "process_text": "山顶上当时没有现在这类塑料袋包装，日军遗留物很多，山头上花花绿绿，死尸有的已经发臭；并提及第二次进攻后第三天尸体发臭。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0015"
+        ],
+        "evidence_quote": "山顶上那个时候咱们还没有现在这个塑料袋子之类的包装，那个时候日本都有了好多（这样的）东西，山头上花花绿绿的，死尸有的都臭了。进攻了第二次，隔了三天了嘛，第三天那个尸体都臭了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC06-DE002-P01",
+        "target_stage_id": "BATCH02-DOC06-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC06-S0014",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC06-DE002-P02",
+        "target_stage_id": "BATCH02-DOC06-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC06-S0015",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

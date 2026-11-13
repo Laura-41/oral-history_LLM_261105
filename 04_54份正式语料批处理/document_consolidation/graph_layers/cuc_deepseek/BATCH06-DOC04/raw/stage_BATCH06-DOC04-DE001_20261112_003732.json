@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T00:37:32",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC04-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC04-DE001",
+  "usage": {
+    "prompt_tokens": 1251,
+    "total_tokens": 6487,
+    "completion_tokens": 5236,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4243
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 40314,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-19\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC04-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"粟司令注射奎宁后约20分钟停止发抖，剩余奎宁交由医生处理。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以陈海峰取奎宁针为粟司令注射为起点，以注射见效及将自带奎宁交给医生为终点；原文对注射与交接的先后有重叠表述。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰取来奎宁针，为粟司令臀部注射。\",\n      \"process_text\": \"马上拿奎宁针给粟司令臀部注射，一针打下去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0003\"\n      ],\n      \"evidence_quote\": \"那么粟司令呢，马上我就拿了这个奎宁针啊，给他臀部注射，一针就打下去了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"注射后约20分钟见效，粟司令不再发抖。\",\n      \"process_text\": \"打下去没有几分钟，20分钟，马上见效果，他就不抖了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0004\"\n      ],\n      \"evidence_quote\": \"打下去没有几分钟，20分钟啊，马上见效果了嘛，他就不抖了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"交代当时奎宁针稀少且受控，将自带几支交给医生。\",\n      \"process_text\": \"奎宁针很少，高干才用，日本鬼子和国民党都控制；我把带的那几支交给医生。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0005\"\n      ],\n      \"evidence_quote\": \"反正我们医院里还有了。奎宁针都很少，那时候没有啊，那个时候都是高干才用了，都不敢用。日本鬼子都控制啊，国民党也控制的。那么我把我带的那几支呢，都交给医生了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"交给医生后，由医生给粟司令打针。\",\n      \"process_text\": \"交给他以后给粟司令打。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0007\"\n      ],\n      \"evidence_quote\": \"交给他以后给粟司令打。\",\n      \"confidence\": \"LOW\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC04-DE001-P01\",\n      \"target_stage_id\": \"BATCH06-DOC04-DE001-P02\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC04-S0004\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC04-DE001-P02\",\n      \"target_stage_id\": \"BATCH06-DOC04-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC04-S0005\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC04-DE001-P03\",\n      \"target_stage_id\": \"BATCH06-DOC04-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC04-S0007\",\n      \"confidence\": \"LOW\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-19",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC04-DE001",
+    "event_enrichment": {
+      "result_state": "粟司令注射奎宁后约20分钟停止发抖，剩余奎宁交由医生处理。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以陈海峰取奎宁针为粟司令注射为起点，以注射见效及将自带奎宁交给医生为终点；原文对注射与交接的先后有重叠表述。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC04-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰取来奎宁针，为粟司令臀部注射。",
+        "process_text": "马上拿奎宁针给粟司令臀部注射，一针打下去。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0003"
+        ],
+        "evidence_quote": "那么粟司令呢，马上我就拿了这个奎宁针啊，给他臀部注射，一针就打下去了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC04-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "注射后约20分钟见效，粟司令不再发抖。",
+        "process_text": "打下去没有几分钟，20分钟，马上见效果，他就不抖了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0004"
+        ],
+        "evidence_quote": "打下去没有几分钟，20分钟啊，马上见效果了嘛，他就不抖了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC04-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "交代当时奎宁针稀少且受控，将自带几支交给医生。",
+        "process_text": "奎宁针很少，高干才用，日本鬼子和国民党都控制；我把带的那几支交给医生。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0005"
+        ],
+        "evidence_quote": "反正我们医院里还有了。奎宁针都很少，那时候没有啊，那个时候都是高干才用了，都不敢用。日本鬼子都控制啊，国民党也控制的。那么我把我带的那几支呢，都交给医生了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC04-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "交给医生后，由医生给粟司令打针。",
+        "process_text": "交给他以后给粟司令打。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0007"
+        ],
+        "evidence_quote": "交给他以后给粟司令打。",
+        "confidence": "LOW"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC04-DE001-P01",
+        "target_stage_id": "BATCH06-DOC04-DE001-P02",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC04-S0004",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC04-DE001-P02",
+        "target_stage_id": "BATCH06-DOC04-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC04-S0005",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC04-DE001-P03",
+        "target_stage_id": "BATCH06-DOC04-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC04-S0007",
+        "confidence": "LOW"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

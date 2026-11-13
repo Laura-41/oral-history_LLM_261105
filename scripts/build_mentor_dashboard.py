@@ -39,6 +39,16 @@ OFFICIAL_CSV = CONS / "导师查看_事件一览.csv"
 HTML_NAME = "导师查看_事件总看板.html"
 CSV_NAME = "导师查看_人工6份标注一览.csv"
 
+# 云服务公开配置：来自 workbuddy_cloud_service.activate 返回的 publicConfig。
+# 只包含允许下发到浏览器的公开值；环境 ID／服务端密钥一律不进前端代码。
+# 前端初始化只从这份配置取值，不从 location、环境变量或猜测的域名推导。
+PUBLIC_CONFIG = {
+    "endpoint": "https://event-annotation-board.app.workbuddy.host",
+    "oauthRelayBaseUrl": "https://www.workbuddy.cn/v2/as/genie-baas/oauth",
+    "publishableKey": "wbpk_g7jlFWpMAguEvbJe1XwG0K_dJwHcrkxA0LeSaR031x1Uc1a69KhhK62",
+}
+CLOUD_TABLE = "dashboard_events"
+
 TYPE_ZH = {
     "MATERIAL_EVENT": "物质事件",
     "MENTAL_EVENT": "心理事件",
@@ -302,16 +312,18 @@ TEMPLATE = r"""<!DOCTYPE html>
   input[type=search] { min-width:270px; }
   .count { margin-left:auto; color:var(--muted); font-size:13px; }
   .tablebox { overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--panel); }
-  table { width:100%; min-width:1500px; border-collapse:collapse; }
-  table.human { table-layout:fixed; min-width:1600px; }
+  /* 宽表随窗口自适应：不设固定 min-width，电脑端不再出现横向滚动 */
+  table { width:100%; min-width:0; border-collapse:collapse; table-layout:fixed; }
+  table.human { table-layout:fixed; min-width:0; }
   th { background:#eef2f7; text-align:left; font-size:12px; color:#334155; font-weight:600;
-       padding:10px; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:2; }
+       padding:10px; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:2;
+       overflow-wrap:anywhere; }
   td { padding:10px; border-bottom:1px solid #eef1f5; vertical-align:top; font-size:13px;
-       word-break:break-word; }
-  table.human .id { word-break:break-all; }
+       word-break:break-word; overflow-wrap:anywhere; }
+  td .id { word-break:break-all; }
   tr:hover td { background:#fafbfe; }
-  .nowrap { white-space:nowrap; }
-  .ename { font-weight:600; min-width:180px; }
+  .nowrap { white-space:normal; }
+  .ename { font-weight:600; min-width:0; }
   .id { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11.5px; color:#64748b; }
   .muted { color:var(--muted); font-size:12px; }
   .badge { display:inline-block; padding:1px 8px; border-radius:12px; font-size:12px; color:#fff; white-space:nowrap; }
@@ -328,7 +340,7 @@ TEMPLATE = r"""<!DOCTYPE html>
   details { margin-top:5px; }
   summary { cursor:pointer; color:var(--accent); font-size:12px; }
   .verbatim { margin-top:6px; background:#f8fafc; border-left:3px solid #cbd5e1; padding:8px 12px;
-              font-size:12.5px; color:#334155; white-space:pre-wrap; max-width:640px;
+              font-size:12.5px; color:#334155; white-space:pre-wrap; max-width:100%;
               max-height:360px; overflow:auto; }
   .verbatim .sh { color:#0f766e; font-weight:600; }
   .verbatim .sb { color:#b45309; }
@@ -336,18 +348,22 @@ TEMPLATE = r"""<!DOCTYPE html>
                  border-left:4px solid var(--human); border-radius:8px; background:#fbfffe; }
   .stage-card h4 { margin:0 0 4px; font-size:13px; }
   .stage-card .meta { font-size:12px; color:var(--muted); margin-bottom:6px; }
-  .quote { color:#334155; font-size:12.5px; max-width:420px; }
+  .quote { color:#334155; font-size:12.5px; max-width:100%; }
   .quote::before { content:"“"; color:#94a3b8; }
   .quote::after { content:"”"; color:#94a3b8; }
-  .st { font-size:12px; white-space:nowrap; }
+  .st { font-size:12px; white-space:normal; }
   .st.ok { color:#0f766e; font-weight:600; }
   .st.review { color:#b45309; }
   .foot { margin-top:22px; color:var(--muted); font-size:12.5px; line-height:1.9; }
   .foot code { background:#eef2f7; padding:1px 5px; border-radius:4px; font-size:12px; }
   .hidden { display:none !important; }
+  .cloud { border-radius:8px; padding:9px 14px; margin-bottom:14px; font-size:12.5px; line-height:1.6; }
+  .cloud.pending { background:#f1f5f9; border:1px solid #e2e8f0; color:#475569; }
+  .cloud.ok { background:#ecfdf5; border:1px solid #a7f3d0; color:#065f46; }
+  .cloud.bad { background:#fff7ed; border:1px solid #fed7aa; color:#9a3412; }
   .expand { font:inherit; font-size:12px; cursor:pointer; margin-top:6px; padding:4px 9px;
             border:1px solid #99f6e4; border-radius:6px; background:#ecfdf5;
-            color:#0f766e; font-weight:600; white-space:nowrap; }
+            color:#0f766e; font-weight:600; white-space:normal; width:100%; }
   .expand.on { background:#0f766e; color:#fff; }
   .detail-row td { background:#f7fafc; border-bottom:2px solid #cbd5e1; padding:14px; }
   .detail-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
@@ -357,6 +373,81 @@ TEMPLATE = r"""<!DOCTYPE html>
   .panel h3:not(:first-child) { margin-top:16px; }
   .detail-row .verbatim { max-width:100%; max-height:260px; }
   @media (max-width:1100px) { .detail-grid { grid-template-columns:1fr; } }
+  /* ===== 中小窗口（≤1180px）：宽表改为「一事件一卡片」，彻底消除横向滚动 ===== */
+  @media screen and (max-width:1180px) {
+    .tablebox { border:0; background:transparent; overflow:visible; }
+    table, table.human { display:block; width:100%; min-width:0; table-layout:auto; }
+    thead { display:none; }
+    tbody { display:block; }
+    tbody > tr { display:block; background:var(--panel); border:1px solid var(--line);
+                 border-radius:10px; padding:10px 14px; margin-bottom:12px; }
+    tbody > tr:hover td { background:transparent; }
+    tbody > tr > td { display:block; border:0; border-bottom:1px dashed #edf1f5;
+                      padding:7px 0; font-size:13px; }
+    tbody > tr > td:last-child { border-bottom:0; }
+    tbody > tr > td::before { content:attr(data-label); display:inline-block; font-size:11px;
+                              color:#0f766e; background:#f0fdfa; border-radius:4px;
+                              padding:0 6px; font-weight:600; margin-bottom:4px; }
+    tbody > tr.detail-row { margin-top:-10px; border-top:0; border-radius:0 0 10px 10px;
+                            background:#f7fafc; padding:0; }
+    tbody > tr.empty-row { margin-top:0; border-radius:10px; padding:12px; }
+    tbody > tr.detail-row > td { padding:12px; border-bottom:0; }
+    .detail-row td::before, .empty-row td::before { display:none; }
+    .detail-row .verbatim, .verbatim { max-width:100%; }
+    .quote { max-width:100%; }
+    .st { white-space:normal; }
+    .ename { min-width:0; }
+    .expand { display:block; width:100%; padding:9px; font-size:13px; margin-top:8px; }
+  }
+  /* 中等宽度：卡片内字段两列平铺，充分利用窗口宽度 */
+  @media screen and (min-width:761px) and (max-width:1180px) {
+    tbody > tr:not(.detail-row):not(.empty-row) {
+      display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); column-gap:22px;
+      max-width:1080px; margin-left:auto; margin-right:auto; padding:12px 18px;
+      position:relative;
+    }
+    /* 序号移到卡片右上角做角标，不再独占一格造成空白 */
+    tbody > tr > td[data-label="序号"] {
+      position:absolute; top:8px; right:16px; border:0; padding:0;
+      font-size:11px; color:var(--muted); text-align:right;
+    }
+    tbody > tr > td[data-label="序号"]::before {
+      content:'# '; background:none; color:var(--muted); padding:0;
+    }
+    /* 人工视图：显式指定行列，短字段两两配对、长字段占整行，杜绝半格空白 */
+    table.human tbody > tr > td[data-label="文档来源"] { grid-column:1; grid-row:1; }
+    table.human tbody > tr > td[data-label="一级事件"] { grid-column:2; grid-row:1; }
+    table.human tbody > tr > td[data-label="类型 / 时间"] { grid-column:1; grid-row:2; }
+    table.human tbody > tr > td[data-label="一级事件原文"] { grid-column:2; grid-row:2; }
+    table.human tbody > tr > td[data-label="相关属性"] { grid-column:1 / -1; grid-row:3; }
+    table.human tbody > tr > td[data-label^="二级阶段"] { grid-column:1 / -1; grid-row:4; }
+    table.human tbody > tr > td[data-label="复核状态"] { grid-column:1 / -1; grid-row:5; }
+    tbody > tr.detail-row, tbody > tr.empty-row {
+      max-width:1080px; margin-left:auto; margin-right:auto;
+    }
+    tbody > tr > td { min-width:0; }
+    .detail-grid { grid-template-columns:1fr 1fr; gap:16px; }
+  }
+  /* ===== 手机窄屏：在卡片版式上进一步缩小间距与字号 ===== */
+  @media screen and (max-width:760px) {
+    .wrap { padding:16px 12px 40px; }
+    h1 { font-size:20px; }
+    .sub { font-size:12px; line-height:1.55; }
+    .tab { flex:1 1 100%; padding:10px 12px; font-size:13px; }
+    .link { margin-left:0; }
+    .warn { padding:10px 12px; font-size:12px; line-height:1.6; }
+    .cloud { font-size:12px; padding:8px 10px; margin-bottom:12px; }
+    .cards { gap:8px; }
+    .card { flex:1 1 calc(33% - 8px); min-width:96px; padding:10px 6px; text-align:center; }
+    .card .num { font-size:20px; }
+    .card .lab { font-size:11px; }
+    .filters { padding:10px; gap:8px; }
+    .filters > select { flex:1 1 calc(50% - 8px); min-width:0; width:auto; }
+    .filters > input[type=search] { flex:1 1 100%; min-width:0; }
+    .filters .count { flex:1 1 100%; margin-left:0; text-align:right; }
+    .detail-grid { grid-template-columns:1fr; gap:12px; }
+    .foot { font-size:11.5px; line-height:1.75; }
+  }
   @media print {
     body { background:#fff; } .filters, .topbar, summary, .expand { display:none; }
     .verbatim { max-height:none; display:block !important; }
@@ -369,13 +460,14 @@ TEMPLATE = r"""<!DOCTYPE html>
 <body>
 <div class="wrap">
   <h1>事件标注结果总看板</h1>
-  <div class="sub">生成时间：__NOW__　｜　只读整理，未改动任何标注结果　｜　两个视图的数据来源与状态互不相同，请勿混读</div>
+  <div class="sub">生成时间：__NOW__　｜　只读整理，未改动任何标注结果　｜　两个视图的数据来源与状态互不相同，请勿混读　｜　版式随窗口宽度自适应，宽窗口为宽表、窄窗口自动改为卡片，均无需左右滑动</div>
 
   <div class="topbar">
     <button class="tab on human" id="tabHuman" onclick="switchView('human')">① 人工已标注 6 份（Demo）</button>
     <button class="tab" id="tabOfficial" onclick="switchView('official')">② 大模型正式结果（候选）</button>
-    <a class="link" href="导师查看_事件一览.html">打开原来的单表看板 ↗</a>
   </div>
+
+  <div class="cloud pending" id="cloudStatus">☁ 正在连接云端数据源…</div>
 
   <div class="warn human" id="warnHuman">
     <b>人工 6 份说明：</b>这一视图是<b>研究者人工核验过的 6 份工作流 Demo</b>（<code>WORKFLOW_DEMO</code>），
@@ -419,7 +511,10 @@ TEMPLATE = r"""<!DOCTYPE html>
   <div class="foot" id="foot"></div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@tencent-ai/workbuddy-cloud-sdk@dev/lib/index.global.js"></script>
 <script>
+const PUBLIC_CONFIG = __PUBLIC_CONFIG__;
+const CLOUD_TABLE = '__CLOUD_TABLE__';
 const HUMAN = __HUMAN__;
 const OFFICIAL = __OFFICIAL__;
 const COLORS = __COLORS__;
@@ -502,6 +597,10 @@ function detailRow(r) {
   '</div></td></tr>';
 }
 
+// data-label 供手机端卡片式版式显示字段名；电脑端宽表不使用。
+const td = (label, html, cls) =>
+  '<td' + (cls ? ' class="' + cls + '"' : '') + ' data-label="' + label + '">' + html + '</td>';
+
 function humanRow(r) {
   const col = COLORS[r['事件类型(中文)']] || '#475569';
   const doc = r._doc;
@@ -514,30 +613,30 @@ function humanRow(r) {
   const circShort = (r['环境成分'] || '').split('；').slice(0, 1).join('；');
   const open = OPEN.has(r['序号']);
   return '<tr>' +
-    '<td class="nowrap">' + r['序号'] + '</td>' +
-    '<td><div class="ename">' + esc(doc.title) + '</div>' +
+    td('序号', r['序号'], 'nowrap') +
+    td('文档来源', '<div class="ename">' + esc(doc.title) + '</div>' +
         '<div class="id">' + esc(doc.id) + '</div>' +
-        '<div class="muted">' + esc(doc.person) + '　' + esc(doc.date) + '</div></td>' +
-    '<td><div class="ename">' + esc(r['事件名称']) + '</div>' +
+        '<div class="muted">' + esc(doc.person) + '　' + esc(doc.date) + '</div>') +
+    td('一级事件', '<div class="ename">' + esc(r['事件名称']) + '</div>' +
         '<div class="id">' + esc(r['一级事件ID']) + '</div>' +
-        '<div class="kv"><b>结果：</b>' + esc(r['结果状态']) + '</div></td>' +
-    '<td class="nowrap"><span class="badge" style="background:' + col + '">' + esc(r['事件类型(中文)']) + '</span>' +
+        '<div class="kv"><b>结果：</b>' + esc(r['结果状态']) + '</div>') +
+    td('类型 / 时间', '<span class="badge" style="background:' + col + '">' + esc(r['事件类型(中文)']) + '</span>' +
         '<div class="id">' + esc(r['事件类型(英文)']) + '</div>' +
         '<div class="kv"><b>时间：</b>' + esc(r['事件时间原文']) + '</div>' +
-        '<div class="id">' + esc(r['规范起止']) + '　' + esc(r['时间精度']) + '</div></td>' +
-    '<td><div class="kv"><b>核心过程：</b>' + esc(r['核心过程']) + '</div>' +
+        '<div class="id">' + esc(r['规范起止']) + '　' + esc(r['时间精度']) + '</div>', 'nowrap') +
+    td('相关属性', '<div class="kv"><b>核心过程：</b>' + esc(r['核心过程']) + '</div>' +
         '<div class="kv"><b>参与者：</b>' + esc(partShort) + '</div>' +
         '<div class="kv"><b>环境：</b>' + esc(circShort) + '</div>' +
         '<div class="kv"><b>事实性：</b>' + esc(r['事实性']) + '／' + esc(r['置信度']) + '</div>' +
-        '<div class="muted">全部属性见下方完整档案</div></td>' +
-    '<td><span class="tag ev">逐字证据 ' + evE + '</span><span class="tag">共 ' + evN + ' 段</span>' +
-        '<div class="muted">逐字原文见下方完整档案</div></td>' +
-    '<td><span class="tag" style="background:#ecfdf5;border-color:#a7f3d0;color:#065f46">' + stages.length + ' 个二级阶段</span>' +
-        stageLabel +
-        '<div class="muted">阶段原文见下方完整档案</div></td>' +
-    '<td class="st ok">' + esc(r['事件复核状态']) + '<div class="id">人工标注 Demo</div>' +
+        '<div class="muted">全部属性见下方完整档案</div>') +
+    td('一级事件原文', '<span class="tag ev">逐字证据 ' + evE + '</span><span class="tag">共 ' + evN + ' 段</span>' +
+        '<div class="muted">逐字原文见下方完整档案</div>') +
+    td('二级阶段（几个 / 是什么）',
+        '<span class="tag" style="background:#ecfdf5;border-color:#a7f3d0;color:#065f46">' + stages.length + ' 个二级阶段</span>' +
+        stageLabel + '<div class="muted">阶段原文见下方完整档案</div>') +
+    td('复核状态', esc(r['事件复核状态']) + '<div class="id">人工标注 Demo</div>' +
         '<button class="expand' + (open ? ' on' : '') + '" onclick="toggleDetail(' + r['序号'] + ')">' +
-        (open ? '收起完整档案 ▲' : '展开完整档案 ▼') + '</button></td>' +
+        (open ? '收起档案 ▲' : '展开档案 ▼') + '</button>', 'st ok') +
   '</tr>';
 }
 
@@ -546,25 +645,28 @@ function officialRow(r) {
   const stCls = st.includes('待') ? 'review' : 'ok';
   const col = COLORS[r['事件类型(中文)']] || '#475569';
   return '<tr>' +
-    '<td class="nowrap">' + esc(r['序号']) + '</td>' +
-    '<td class="nowrap"><span class="model">' + esc(r['模型']) + '</span></td>' +
-    '<td class="nowrap"><div>' + esc(r['文档编号']) + '</div><div class="id">' + esc(r['受访者']) + '</div></td>' +
-    '<td class="id nowrap">' + esc(r['一级事件ID']) + '</td>' +
-    '<td class="ename">' + esc(r['事件名称']) + '</td>' +
-    '<td class="nowrap"><span class="badge" style="background:' + col + '">' + esc(r['事件类型(中文)']) + '</span>' +
-        '<div class="id">' + esc(r['事件类型(英文)']) + '</div></td>' +
-    '<td>' + esc(r['核心过程']) + '</td>' +
-    '<td class="nowrap">' + esc(r['经历范围']) + '<div class="id">' + esc(r['完整性']) + '</div></td>' +
-    '<td class="quote">' + esc(r['事件逐字证据引文']) + '</td>' +
-    '<td><details><summary>展开逐字原文</summary><div class="verbatim">' + esc(r['原文片段(逐字)']) + '</div></details></td>' +
-    '<td class="st ' + stCls + '">' + esc(st) + '</td>' +
-    '<td class="st">' + esc(r['人工复核状态']) + '<div class="id">' + esc(r['放行状态']) + '</div></td>' +
+    td('序号', esc(r['序号']), 'nowrap') +
+    td('模型', '<span class="model">' + esc(r['模型']) + '</span>', 'nowrap') +
+    td('文档', '<div>' + esc(r['文档编号']) + '</div><div class="id">' + esc(r['受访者']) + '</div>', 'nowrap') +
+    td('事件ID', esc(r['一级事件ID']), 'id nowrap') +
+    td('一级事件名称', esc(r['事件名称']), 'ename') +
+    td('类型', '<span class="badge" style="background:' + col + '">' + esc(r['事件类型(中文)']) + '</span>' +
+        '<div class="id">' + esc(r['事件类型(英文)']) + '</div>', 'nowrap') +
+    td('核心过程', esc(r['核心过程'])) +
+    td('经历范围', esc(r['经历范围']) + '<div class="id">' + esc(r['完整性']) + '</div>', 'nowrap') +
+    td('逐字证据引文', esc(r['事件逐字证据引文']), 'quote') +
+    td('原文片段', '<details><summary>展开逐字原文</summary><div class="verbatim">' +
+        esc(r['原文片段(逐字)']) + '</div></details>') +
+    td('自动状态', esc(st), 'st ' + stCls) +
+    td('人工结论', esc(r['人工复核状态']) + '<div class="id">' + esc(r['放行状态']) + '</div>', 'st') +
   '</tr>';
 }
 
 const HEAD_HUMAN = [['#','3%'],['文档来源','12%'],['一级事件','15%'],['类型 / 时间','11%'],
-                    ['相关属性','19%'],['一级事件原文','12%'],['二级阶段（几个 / 是什么）','20%'],['复核状态','8%']];
-const HEAD_OFFICIAL = ['#','模型','文档','事件ID','一级事件名称','类型','核心过程','经历范围','逐字证据引文','原文片段','自动状态','人工结论'];
+                    ['相关属性','19%'],['一级事件原文','12%'],['二级阶段（几个 / 是什么）','18%'],['复核状态','10%']];
+const HEAD_OFFICIAL = [['#','3%'],['模型','7%'],['文档','8%'],['事件ID','9%'],['一级事件名称','13%'],
+                       ['类型','7%'],['核心过程','12%'],['经历范围','7%'],['逐字证据引文','12%'],
+                       ['原文片段','9%'],['自动状态','7%'],['人工结论','6%']];
 
 function humanStats() {
   const docs = uniq(HUMAN.map(r => r['文档编号']));
@@ -630,7 +732,7 @@ function renderHuman() {
   $('thead').innerHTML = '<tr>' + HEAD_HUMAN.map(([h, w]) => '<th style="width:' + w + '">' + h + '</th>').join('') + '</tr>';
   $('tb').innerHTML = list.length
     ? list.map(r => humanRow(r) + (OPEN.has(r['序号']) ? detailRow(r) : '')).join('')
-    : '<tr><td colspan="8" class="muted">没有符合条件的事件，请放宽筛选。</td></tr>';
+    : '<tr class="empty-row"><td colspan="8" class="muted">没有符合条件的事件，请放宽筛选。</td></tr>';
 }
 
 function renderOfficial() {
@@ -643,9 +745,9 @@ function renderOfficial() {
               .join(' ').toLowerCase().includes(k))
   );
   $('oCnt').textContent = '显示 ' + list.length + ' / ' + OFFICIAL.length + ' 条';
-  $('thead').innerHTML = '<tr>' + HEAD_OFFICIAL.map(h => '<th>' + h + '</th>').join('') + '</tr>';
+  $('thead').innerHTML = '<tr>' + HEAD_OFFICIAL.map(([h, w]) => '<th style="width:' + w + '">' + h + '</th>').join('') + '</tr>';
   $('tb').innerHTML = list.length ? list.map(officialRow).join('')
-    : '<tr><td colspan="12" class="muted">没有符合条件的事件，请放宽筛选。</td></tr>';
+    : '<tr class="empty-row"><td colspan="12" class="muted">没有符合条件的事件，请放宽筛选。</td></tr>';
 }
 
 function switchView(v) {
@@ -665,17 +767,92 @@ function switchView(v) {
       '相关属性含事件类型、时间、核心过程、参与者、环境、结果状态、事实性、置信度与边界说明。' +
       '「一级事件原文」按 <code>SourceAttachment.target_type=EVENT</code> 回取 <code>SourceSegment.verbatim_text</code>，' +
       '并按 <code>function</code> 标注用途；「二级阶段」按 <code>ProcessStage.stage_order</code> 排列，' +
-      '点开任一行右侧的<b>「展开完整档案」</b>即可看到各阶段逐字原文与 <code>NEXT_STAGE.logic</code>。<br>' +
+      '点开任一行右侧的<b>「展开档案」</b>即可看到各阶段逐字原文与 <code>NEXT_STAGE.logic</code>。<br>' +
       '<b>数据来源</b>：<code>现行标注/neo4j_demo/import/*.csv</code>（由 6 份人工标注 Demo 合并而成，只读）；' +
       '配套可 Excel 打开的明细表：<code>导师查看_人工6份标注一览.csv</code>。<br>' +
       '<b>分享单条</b>：网址后加 <code>?open=3</code> 可直接展开第 3 条事件的完整档案；' +
       '<code>?view=official</code> 可直接打开正式结果视图。<br>' +
+      '<b>云端数据源</b>：人工 6 份视图的一级事件清单存于云数据库 <code>dashboard_events</code>（公开只读），' +
+      '页面启动时通过 WorkBuddy 云 SDK 读取并驱动主表；连接失败会在页首明确提示并回退到页面内嵌快照。' +
+      '逐字原文仍内嵌在本页，未上云。<br>' +
       '<b>提醒</b>：6 份为 <code>WORKFLOW_DEMO</code> 工作流演示样本，可作人工标注样例与方法展示，<b>不是正式测试金标准</b>；' +
       '两层原文允许双重挂接，片段数不可相加。'
     : '<b>字段口径</b>：每行 = 一条大模型文档级归并后的「一级事件」（<code>consolidated_output.document_events</code>）。' +
       '全部仍是 <code>MODEL_CANDIDATE</code>，本轮<b>没有</b>二级过程阶段。<br>' +
       '<b>数据来源</b>：<code>导师查看_事件一览.csv</code>（由 <code>scripts/build_mentor_overview.py</code> 从 <code>validated_json/&lt;模型目录&gt;/</code> 只读生成）。' +
       '按模型隔离，<code>cuc_deepseek</code> 与 <code>cuc_qwen</code> 结果请勿混读为一份标注。';
+}
+
+// ===== 云服务接入：一级事件清单从云数据库读取，驱动人工视图主表 =====
+function errText(e) {
+  if (!e) return '未知错误';
+  if (typeof e === 'string') return e;
+  if (e.message) return String(e.message);
+  if (e.error_description) return String(e.error_description);
+  if (e.code) return '错误码 ' + String(e.code);
+  try { return JSON.stringify(e).slice(0, 180); } catch (_) { return '未知错误'; }
+}
+function cloudBox(cls, text) {
+  const box = $('cloudStatus');
+  box.className = 'cloud ' + cls;
+  box.textContent = text;
+}
+function applyCloudRows(rows) {
+  const byId = new Map(rows.map(r => [r.event_id, r]));
+  let matched = 0, mismatch = 0;
+  HUMAN.forEach(r => {
+    const c = byId.get(r['一级事件ID']);
+    if (!c) return;
+    matched++;
+    if (c.event_name) r['事件名称'] = c.event_name;
+    if (c.event_type_zh) r['事件类型(中文)'] = c.event_type_zh;
+    if (c.review_status) r['事件复核状态'] = c.review_status;
+    if (c.doc_title) r._doc.title = c.doc_title;
+    if (c.doc_id) r._doc.id = c.doc_id;
+    if (Number(c.stage_count) !== r._stages.length) mismatch++;
+  });
+  const keepType = $('hType').value, keepStatus = $('hStatus').value;
+  fillSelect('hType', uniq(HUMAN.map(r => r['事件类型(中文)'])), '全部事件类型');
+  fillSelect('hStatus', uniq(HUMAN.map(r => r['事件复核状态'])), '全部复核状态');
+  $('hType').value = keepType;
+  $('hStatus').value = keepStatus;
+  return { matched: matched, mismatch: mismatch };
+}
+async function initCloud() {
+  const G = window.WorkBuddyCloud;
+  if (!G || !G.createWorkBuddyCloud) {
+    cloudBox('bad', '⚠ 云端 SDK 未加载（需要联网加载 CDN）。当前展示页面内嵌快照，未使用云端数据。');
+    return;
+  }
+  let cloud;
+  try {
+    cloud = G.createWorkBuddyCloud({
+      endpoint: PUBLIC_CONFIG.endpoint,
+      oauthRelayBaseUrl: PUBLIC_CONFIG.oauthRelayBaseUrl,
+      publishableKey: PUBLIC_CONFIG.publishableKey
+    });
+  } catch (e) {
+    cloudBox('bad', '⚠ 云端初始化失败：' + errText(e) + '。当前展示页面内嵌快照。');
+    return;
+  }
+  try {
+    const res = await cloud.database.from(CLOUD_TABLE)
+      .select('seq,doc_id,doc_title,event_id,event_name,event_type_zh,stage_count,stage_names,review_status')
+      .order('seq', { ascending: true });
+    if (res.error) throw res.error;
+    const rows = res.data;
+    if (!Array.isArray(rows) || rows.length === 0) throw new Error('云端返回 0 条记录');
+    const applied = applyCloudRows(rows);
+    const docs = new Set(rows.map(r => r.doc_id)).size;
+    const stages = rows.reduce((n, r) => n + (Number(r.stage_count) || 0), 0);
+    cloudBox('ok', '☁ 云端数据源已连接（人工 6 份视图）：从云数据库 ' + CLOUD_TABLE + ' 读取 ' +
+      rows.length + ' 条一级事件 / ' + docs + ' 份文档 / ' + stages + ' 个二级阶段；' +
+      '主表的事件名称、类型、文档来源、复核状态由云端记录驱动' +
+      (applied.mismatch ? '（有 ' + applied.mismatch + ' 条阶段数与本地快照不一致，请核对）' : '') + '。');
+    switchView(VIEW);
+  } catch (e) {
+    cloudBox('bad', '⚠ 云端连接失败：' + errText(e) + '。当前展示的是页面内嵌快照（离线可读，未使用云端数据）。');
+  }
 }
 
 // 初始化筛选选项
@@ -697,6 +874,7 @@ window.addEventListener('beforeprint', () => {
 });
 const viewParam = new URLSearchParams(location.search).get('view');
 switchView(viewParam === 'official' ? 'official' : 'human');
+initCloud();
 </script>
 </body>
 </html>
@@ -720,10 +898,28 @@ def write_html(human_rows, official_rows, path):
 
     doc = (TEMPLATE
            .replace("__NOW__", datetime.now().strftime("%Y-%m-%d %H:%M"))
+           .replace("__PUBLIC_CONFIG__", js(PUBLIC_CONFIG))
+           .replace("__CLOUD_TABLE__", CLOUD_TABLE)
            .replace("__HUMAN__", js(slim))
            .replace("__OFFICIAL__", js(official_rows))
            .replace("__COLORS__", js(colors)))
     path.write_text(doc, encoding="utf-8")
+
+
+def write_publish_copy(html_text, path):
+    """线上分享版：仍是单文件自包含，去掉本地附件说明并加保密提示。
+
+    发布目录只放这一份 index.html，本地 CSV 附件不在其中；其余内容、
+    数据与本地看板逐字一致。
+    """
+    online = html_text.replace(
+        '<b>人工 6 份说明：</b>',
+        '<b>在线分享版提示：</b>本页含未公开的口述史逐字原文，请勿转发扩散。<br><b>人工 6 份说明：</b>')
+    online = online.replace(
+        '配套可 Excel 打开的明细表：<code>导师查看_人工6份标注一览.csv</code>。',
+        '明细表另存为本地文件 <code>导师查看_人工6份标注一览.csv</code>（线上分享版不含附件）。')
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(online, encoding="utf-8")
 
 
 def main():
@@ -737,6 +933,9 @@ def main():
     official = collect_official()
     write_human_csv(human, out / CSV_NAME)
     write_html(human, official, out / HTML_NAME)
+    # 同步一份「只含单页」的线上分享版；重跑脚本即自动更新，不会上传整个批处理目录。
+    pub = out / "publish_mentor_dashboard" / "index.html"
+    write_publish_copy((out / HTML_NAME).read_text(encoding="utf-8"), pub)
 
     stages = sum(len(r["_stages"]) for r in human)
     print(f"人工 6 份：{len({r['文档编号'] for r in human})} 份文档 / {len(human)} 条一级事件 / {stages} 个二级阶段")
@@ -744,6 +943,7 @@ def main():
     print("输出：")
     print(f"  {out / HTML_NAME}")
     print(f"  {out / CSV_NAME}")
+    print(f"  {pub}  （线上分享版，单独目录，只含这一个文件）")
 
 
 if __name__ == "__main__":

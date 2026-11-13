@@ -1,0 +1,144 @@
+{
+  "run_time": "2026-11-12T20:02:04",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC07-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC07-DE003",
+  "usage": {
+    "prompt_tokens": 2222,
+    "total_tokens": 17154,
+    "completion_tokens": 14932,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12260
+    },
+    "time_to_first_token_ms": 218195,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 14931000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC07-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"日军伤员48人送抵医疗队后24人伤重死亡、24人送走，己方收容约一百二；救治以先抢救己方战士为原则，并进行开刀、止血、换夹板等处置；普包运动与卫生战士经验形成并在全新四军推广，阻击战中80%自包互包，减少伤亡残废，提高战士急救、卫生知识和自我保障水平。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为 S0022 所述日军俘虏伤员送抵医疗队及抢救，依次经过 S0024 救治顺序、S0026 收容数量、S0028 医疗处置与普包运动/卫生战士经验，止于 S0030 所述卫生战士经验推广及阻击战自包互包效果。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"日军俘虏伤员48人送抵医疗队，24人伤重死亡、24人送走，送来后均进行抢救。\",\n      \"process_text\": \"日本鬼子当时抓到活的是48个，送到医疗队，最后活的送到司令部的，送走的是24个，那都没有错，（有）24个死掉了，因为伤太重。当时都拼刺刀啊，刺死得多，刺重伤都是。送来以后呢，那么抢救都一样抢救了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0022\"\n      ],\n      \"evidence_quote\": \"日本鬼子当时抓到活的是48个，送到医疗队，最后活的送到司令部的，送走的是24个，那都没有错，（有）24个死掉了，因为伤太重。当时都拼刺刀啊，刺死得多，刺重伤都是。送来以后呢，那么抢救都一样抢救了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"救治顺序上先抢救己方战士，日军伤员稍晚。\",\n      \"process_text\": \"我们实话实说地讲，首先还是抢救我们自己的（战士）。我们自己的战士重伤，你不去先抢救自己的？日本鬼子重伤，两个相比之下，我是先抢救自己的嘛，是不是？他得稍微晚一点嘛，是不是？\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0024\"\n      ],\n      \"evidence_quote\": \"我们实话实说地讲，首先还是抢救我们自己的（战士）。我们自己的战士重伤，你不去先抢救自己的？日本鬼子重伤，两个相比之下，我是先抢救自己的嘛，是不是？他得稍微晚一点嘛，是不是？\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"己方收容约一百二，收容任务为200到300，日军48个不计入，部分日军伤员途中死亡。\",\n      \"process_text\": \"我们当时收容了一百二左右，给我们（的）收容任务是200到300，我们当时收容有一半，鬼子那48个不算。48个为什么不算？他有一部分呢，是在路上就死了，抬到我们那里就（是）尸首了，抬的人不知道。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0026\"\n      ],\n      \"evidence_quote\": \"我们当时收容了一百二左右，给我们（的）收容任务是200到300，我们当时收容有一半，鬼子那48个不算。48个为什么不算？他有一部分呢，是在路上就死了，抬到我们那里就（是）尸首了，抬的人不知道。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"医疗队对伤员进行开刀、止血、换夹板等处置，前期情况较简单。\",\n      \"process_text\": \"我们该开刀的开刀，该止血的止血，换夹板的换夹板了，前面都是比较简单。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0028\"\n      ],\n      \"evidence_quote\": \"我们该开刀的开刀，该止血的止血，换夹板的换夹板了，前面都是比较简单。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"与抗战早期相比，卫生员和卫生战士增加，教战士使用急救包、自包互包、就地取材，形成普包运动，并提及周淑敏创造卫生战士经验。\",\n      \"process_text\": \"那个时候比较好了，那个时候好在哪了呢？就是和抗战早期不一样了，早期抗战都靠医务人员，抢救不了，连队一个卫生员，以后两个卫生员，以后是一个班有3个卫生战士。那以后呢我们就教有“普包运动”，每一个战士都有急救包。那么可以自包，你腿上受伤，自己可以马上去包。告诉他们怎么包扎，怎么止血，怎么就地取材，什么木棍啊、竹片啊，棍子的话，自己给绑起来。自包互包，自己包扎，互相包扎，就开展“普包运动”。那么卫生战士就多了，每一个班就有3个卫生战士，再加上“普包运动”。卫生战士这个发明权呢，就是现在河南新乡医学院的一个图书馆主任，是原来我的老部下，那叫周淑敏（音）。周淑敏（音）这个人很能干的，而且脑子不错，他以后在南通警卫团，他创造的这个卫生战士。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0028\"\n      ],\n      \"evidence_quote\": \"那个时候比较好了，那个时候好在哪了呢？就是和抗战早期不一样了，早期抗战都靠医务人员，抢救不了，连队一个卫生员，以后两个卫生员，以后是一个班有3个卫生战士。那以后呢我们就教有“普包运动”，每一个战士都有急救包。那么可以自包，你腿上受伤，自己可以马上去包。告诉他们怎么包扎，怎么止血，怎么就地取材，什么木棍啊、竹片啊，棍子的话，自己给绑起来。自包互包，自己包扎，互相包扎，就开展“普包运动”。那么卫生战士就多了，每一个班就有3个卫生战士，再加上“普包运动”。卫生战士这个发明权呢，就是现在河南新乡医学院的一个图书馆主任，是原来我的老部下，那叫周淑敏（音）。周淑敏（音）这个人很能干的，而且脑子不错，他以后在南通警卫团，他创造的这个卫生战士。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC07-DE003-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"卫生战士经验在全新四军推广，每班卫生战士由1个增加到3个，普包运动进一步发展；阻击战中80%自包互包，减少伤亡残废，提高战士急救、卫生知识和自我保障水平，成为群众运动。\",\n      \"process_text\": \"就起了个名字叫“卫生战士”，以后推广他的经验，我们全新四军都叫“卫生战士”，每一个班都有卫生战士，一个班一个卫生战士，加到两个卫生战士，加到三个卫生战士。一个就是开展“普包运动”，从这个基础上再发展。这一次阻击战中间呢，80%都是自包互包的，就减少伤亡，减少残废。所以呀，把普遍战士的急救水平提高了，卫生知识水平提高了，自我保障的水平提高了，变成群众运动了，就（是）群众运动、群众路线深入到每个战士了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC07-S0030\"\n      ],\n      \"evidence_quote\": \"就起了个名字叫“卫生战士”，以后推广他的经验，我们全新四军都叫“卫生战士”，每一个班都有卫生战士，一个班一个卫生战士，加到两个卫生战士，加到三个卫生战士。一个就是开展“普包运动”，从这个基础上再发展。这一次阻击战中间呢，80%都是自包互包的，就减少伤亡，减少残废。所以呀，把普遍战士的急救水平提高了，卫生知识水平提高了，自我保障的水平提高了，变成群众运动了，就（是）群众运动、群众路线深入到每个战士了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE003-P01\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0024\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE003-P02\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE003-P03\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE003-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0028\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE003-P04\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE003-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0028\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC07-DE003-P05\",\n      \"target_stage_id\": \"BATCH03-DOC07-DE003-P06\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC07-S0030\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC07-DE003",
+    "event_enrichment": {
+      "result_state": "日军伤员48人送抵医疗队后24人伤重死亡、24人送走，己方收容约一百二；救治以先抢救己方战士为原则，并进行开刀、止血、换夹板等处置；普包运动与卫生战士经验形成并在全新四军推广，阻击战中80%自包互包，减少伤亡残废，提高战士急救、卫生知识和自我保障水平。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为 S0022 所述日军俘虏伤员送抵医疗队及抢救，依次经过 S0024 救治顺序、S0026 收容数量、S0028 医疗处置与普包运动/卫生战士经验，止于 S0030 所述卫生战士经验推广及阻击战自包互包效果。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC07-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "日军俘虏伤员48人送抵医疗队，24人伤重死亡、24人送走，送来后均进行抢救。",
+        "process_text": "日本鬼子当时抓到活的是48个，送到医疗队，最后活的送到司令部的，送走的是24个，那都没有错，（有）24个死掉了，因为伤太重。当时都拼刺刀啊，刺死得多，刺重伤都是。送来以后呢，那么抢救都一样抢救了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0022"
+        ],
+        "evidence_quote": "日本鬼子当时抓到活的是48个，送到医疗队，最后活的送到司令部的，送走的是24个，那都没有错，（有）24个死掉了，因为伤太重。当时都拼刺刀啊，刺死得多，刺重伤都是。送来以后呢，那么抢救都一样抢救了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "救治顺序上先抢救己方战士，日军伤员稍晚。",
+        "process_text": "我们实话实说地讲，首先还是抢救我们自己的（战士）。我们自己的战士重伤，你不去先抢救自己的？日本鬼子重伤，两个相比之下，我是先抢救自己的嘛，是不是？他得稍微晚一点嘛，是不是？",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0024"
+        ],
+        "evidence_quote": "我们实话实说地讲，首先还是抢救我们自己的（战士）。我们自己的战士重伤，你不去先抢救自己的？日本鬼子重伤，两个相比之下，我是先抢救自己的嘛，是不是？他得稍微晚一点嘛，是不是？",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "己方收容约一百二，收容任务为200到300，日军48个不计入，部分日军伤员途中死亡。",
+        "process_text": "我们当时收容了一百二左右，给我们（的）收容任务是200到300，我们当时收容有一半，鬼子那48个不算。48个为什么不算？他有一部分呢，是在路上就死了，抬到我们那里就（是）尸首了，抬的人不知道。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0026"
+        ],
+        "evidence_quote": "我们当时收容了一百二左右，给我们（的）收容任务是200到300，我们当时收容有一半，鬼子那48个不算。48个为什么不算？他有一部分呢，是在路上就死了，抬到我们那里就（是）尸首了，抬的人不知道。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "医疗队对伤员进行开刀、止血、换夹板等处置，前期情况较简单。",
+        "process_text": "我们该开刀的开刀，该止血的止血，换夹板的换夹板了，前面都是比较简单。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0028"
+        ],
+        "evidence_quote": "我们该开刀的开刀，该止血的止血，换夹板的换夹板了，前面都是比较简单。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "与抗战早期相比，卫生员和卫生战士增加，教战士使用急救包、自包互包、就地取材，形成普包运动，并提及周淑敏创造卫生战士经验。",
+        "process_text": "那个时候比较好了，那个时候好在哪了呢？就是和抗战早期不一样了，早期抗战都靠医务人员，抢救不了，连队一个卫生员，以后两个卫生员，以后是一个班有3个卫生战士。那以后呢我们就教有“普包运动”，每一个战士都有急救包。那么可以自包，你腿上受伤，自己可以马上去包。告诉他们怎么包扎，怎么止血，怎么就地取材，什么木棍啊、竹片啊，棍子的话，自己给绑起来。自包互包，自己包扎，互相包扎，就开展“普包运动”。那么卫生战士就多了，每一个班就有3个卫生战士，再加上“普包运动”。卫生战士这个发明权呢，就是现在河南新乡医学院的一个图书馆主任，是原来我的老部下，那叫周淑敏（音）。周淑敏（音）这个人很能干的，而且脑子不错，他以后在南通警卫团，他创造的这个卫生战士。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0028"
+        ],
+        "evidence_quote": "那个时候比较好了，那个时候好在哪了呢？就是和抗战早期不一样了，早期抗战都靠医务人员，抢救不了，连队一个卫生员，以后两个卫生员，以后是一个班有3个卫生战士。那以后呢我们就教有“普包运动”，每一个战士都有急救包。那么可以自包，你腿上受伤，自己可以马上去包。告诉他们怎么包扎，怎么止血，怎么就地取材，什么木棍啊、竹片啊，棍子的话，自己给绑起来。自包互包，自己包扎，互相包扎，就开展“普包运动”。那么卫生战士就多了，每一个班就有3个卫生战士，再加上“普包运动”。卫生战士这个发明权呢，就是现在河南新乡医学院的一个图书馆主任，是原来我的老部下，那叫周淑敏（音）。周淑敏（音）这个人很能干的，而且脑子不错，他以后在南通警卫团，他创造的这个卫生战士。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC07-DE003-P06",
+        "stage_order": 6,
+        "stage_summary": "卫生战士经验在全新四军推广，每班卫生战士由1个增加到3个，普包运动进一步发展；阻击战中80%自包互包，减少伤亡残废，提高战士急救、卫生知识和自我保障水平，成为群众运动。",
+        "process_text": "就起了个名字叫“卫生战士”，以后推广他的经验，我们全新四军都叫“卫生战士”，每一个班都有卫生战士，一个班一个卫生战士，加到两个卫生战士，加到三个卫生战士。一个就是开展“普包运动”，从这个基础上再发展。这一次阻击战中间呢，80%都是自包互包的，就减少伤亡，减少残废。所以呀，把普遍战士的急救水平提高了，卫生知识水平提高了，自我保障的水平提高了，变成群众运动了，就（是）群众运动、群众路线深入到每个战士了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC07-S0030"
+        ],
+        "evidence_quote": "就起了个名字叫“卫生战士”，以后推广他的经验，我们全新四军都叫“卫生战士”，每一个班都有卫生战士，一个班一个卫生战士，加到两个卫生战士，加到三个卫生战士。一个就是开展“普包运动”，从这个基础上再发展。这一次阻击战中间呢，80%都是自包互包的，就减少伤亡，减少残废。所以呀，把普遍战士的急救水平提高了，卫生知识水平提高了，自我保障的水平提高了，变成群众运动了，就（是）群众运动、群众路线深入到每个战士了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC07-DE003-P01",
+        "target_stage_id": "BATCH03-DOC07-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC07-S0024",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC07-DE003-P02",
+        "target_stage_id": "BATCH03-DOC07-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC07-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC07-DE003-P03",
+        "target_stage_id": "BATCH03-DOC07-DE003-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC07-S0028",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC07-DE003-P04",
+        "target_stage_id": "BATCH03-DOC07-DE003-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC07-S0028",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC07-DE003-P05",
+        "target_stage_id": "BATCH03-DOC07-DE003-P06",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC07-S0030",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

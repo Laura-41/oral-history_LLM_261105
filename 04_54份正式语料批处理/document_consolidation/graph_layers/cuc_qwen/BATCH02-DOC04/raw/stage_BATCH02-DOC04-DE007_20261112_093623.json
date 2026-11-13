@@ -1,0 +1,111 @@
+{
+  "run_time": "2026-11-12T09:36:23",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC04-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC04-DE007",
+  "usage": {
+    "prompt_tokens": 1874,
+    "total_tokens": 7959,
+    "completion_tokens": 6085,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4668
+    },
+    "time_to_first_token_ms": 101759,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 6084000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC04-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"《良友》画报社在石咀镇组织仿平型关进攻镜头的拍摄，完成水沟边对峙镜头后，因上山头动作被认为与平型关不一样、不太像，最终停止后续拍摄。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为 S0055 中部队在石咀镇住一天后，总部介绍《良友》画报社来拍电影并要求仿照平型关进攻作战动作；终点为 S0069 中指挥员对上山头动作表示怀疑，认为不太像，不拍了。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"总部介绍《良友》画报社到石咀镇，要求部队仿照平型关进攻作战动作拍摄电影。\",\n      \"process_text\": \"部队在石咀镇住一天后，总部介绍《良友》画报社来拍电影，要他们仿照平型关进攻作战时的动作来拍。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0055\"\n      ],\n      \"evidence_quote\": \"再就是在那里住了一天，就总部介绍《良友》画报社来拍电影，要我们呢仿照平型关你们进攻作战的时候（的动作），他来拍。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"拍摄地形被反复选择，最终确定以冲锋后趴到水沟边对峙作为镜头，并要通过开阔地、旱田到沟边。\",\n      \"process_text\": \"地形选来选去没有合适；进攻地点前面有平地和前水沟，冲锋后趴到水沟边对峙，电影拍这个；拍摄要通过一二百米开阔地、北方旱田，然后趴到沟边。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0057\",\n        \"BATCH02-DOC04-S0059\"\n      ],\n      \"evidence_quote\": \"这个地形选来选去，没有一个合适的地形。就这个地方呢，我们进攻那个地方前面有点平地，前面有个水沟，就是冲锋以后就趴到水沟边上对峙起来了，他这个电影就拍这个。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"部队表演冲锋到水沟边趴下，完成该镜头后，画报社要求部队上侧翼山头。\",\n      \"process_text\": \"前面有水沟，到了水沟边趴下，因为对面没有敌情；弄完这个镜头以后，画报社要求部队上山头上去，侧翼有个山头。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0063\",\n        \"BATCH02-DOC04-S0065\"\n      ],\n      \"evidence_quote\": \"弄完这个镜头以后，他要这个部队呀上山头上去，咱们侧翼有个山头，上去。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"对上山头镜头产生质疑，认为与平型关不一样、不太像，指挥员怀疑，最终停止拍摄。\",\n      \"process_text\": \"有人说不行，跟平型关不一样，部队不同意拍；最后上山头被问干什么，指挥员怀疑，认为不太像，不拍了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0067\",\n        \"BATCH02-DOC04-S0069\"\n      ],\n      \"evidence_quote\": \"最后那里回来以后，上这个小山，你上去干什么？那指挥员有点怀疑，算了，这个不太像，不拍了吧？那就不拍了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE007-P01\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0057\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE007-P02\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0059\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE007-P03\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE007-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0067\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC04-DE007",
+    "event_enrichment": {
+      "result_state": "《良友》画报社在石咀镇组织仿平型关进攻镜头的拍摄，完成水沟边对峙镜头后，因上山头动作被认为与平型关不一样、不太像，最终停止后续拍摄。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为 S0055 中部队在石咀镇住一天后，总部介绍《良友》画报社来拍电影并要求仿照平型关进攻作战动作；终点为 S0069 中指挥员对上山头动作表示怀疑，认为不太像，不拍了。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC04-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "总部介绍《良友》画报社到石咀镇，要求部队仿照平型关进攻作战动作拍摄电影。",
+        "process_text": "部队在石咀镇住一天后，总部介绍《良友》画报社来拍电影，要他们仿照平型关进攻作战时的动作来拍。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0055"
+        ],
+        "evidence_quote": "再就是在那里住了一天，就总部介绍《良友》画报社来拍电影，要我们呢仿照平型关你们进攻作战的时候（的动作），他来拍。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "拍摄地形被反复选择，最终确定以冲锋后趴到水沟边对峙作为镜头，并要通过开阔地、旱田到沟边。",
+        "process_text": "地形选来选去没有合适；进攻地点前面有平地和前水沟，冲锋后趴到水沟边对峙，电影拍这个；拍摄要通过一二百米开阔地、北方旱田，然后趴到沟边。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0057",
+          "BATCH02-DOC04-S0059"
+        ],
+        "evidence_quote": "这个地形选来选去，没有一个合适的地形。就这个地方呢，我们进攻那个地方前面有点平地，前面有个水沟，就是冲锋以后就趴到水沟边上对峙起来了，他这个电影就拍这个。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "部队表演冲锋到水沟边趴下，完成该镜头后，画报社要求部队上侧翼山头。",
+        "process_text": "前面有水沟，到了水沟边趴下，因为对面没有敌情；弄完这个镜头以后，画报社要求部队上山头上去，侧翼有个山头。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0063",
+          "BATCH02-DOC04-S0065"
+        ],
+        "evidence_quote": "弄完这个镜头以后，他要这个部队呀上山头上去，咱们侧翼有个山头，上去。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "对上山头镜头产生质疑，认为与平型关不一样、不太像，指挥员怀疑，最终停止拍摄。",
+        "process_text": "有人说不行，跟平型关不一样，部队不同意拍；最后上山头被问干什么，指挥员怀疑，认为不太像，不拍了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0067",
+          "BATCH02-DOC04-S0069"
+        ],
+        "evidence_quote": "最后那里回来以后，上这个小山，你上去干什么？那指挥员有点怀疑，算了，这个不太像，不拍了吧？那就不拍了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC04-DE007-P01",
+        "target_stage_id": "BATCH02-DOC04-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0057",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE007-P02",
+        "target_stage_id": "BATCH02-DOC04-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0059",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE007-P03",
+        "target_stage_id": "BATCH02-DOC04-DE007-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC04-S0067",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

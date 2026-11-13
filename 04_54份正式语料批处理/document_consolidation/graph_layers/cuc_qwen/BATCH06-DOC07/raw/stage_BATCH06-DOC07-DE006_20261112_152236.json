@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T15:22:36",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE006",
+  "usage": {
+    "prompt_tokens": 1329,
+    "total_tokens": 7425,
+    "completion_tokens": 6096,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5126
+    },
+    "time_to_first_token_ms": 117393,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 6095000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"国民党部队在（南）京、沪沿线及江北沿长江以北增加，内战苗头出现，随后6月、7月开始打“七战七捷”。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于S0134所述5月开始紧张、内战苗头出现、敌人在调兵；经S0136所述调兵遣将、增加部队；止于S0137所述6月、7月开始打“七战七捷”。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"5月出现内战苗头与调兵迹象\",\n      \"process_text\": \"到5月开始紧张，5月有迹象，内战苗头出来，敌人在调兵。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0134\"\n      ],\n      \"evidence_quote\": \"11月，（到）12月，这个时候整编、整训、建立机构，调整成立边区政府。一直2月、3月、4月、5月……到5月就开始紧张了。5月就已经有迹象，就是要内战的苗头出来了，敌人在调兵。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"国民党部队在（南）京、沪沿线及江北沿长江以北增加\",\n      \"process_text\": \"调兵遣将，（南）京、沪沿线增加部队，江北沿长江以北国民党部队大批增加。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0136\"\n      ],\n      \"evidence_quote\": \"    陈海峰：调兵遣将啊，（南）京、沪沿线呢，都是增加部队。江北也……沿长江以北，国民党部队大批地增加。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"6月、7月开始打“七战七捷”\",\n      \"process_text\": \"6月、7月开始打“七战七捷”。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0137\"\n      ],\n      \"evidence_quote\": \"所以6月、7月就开始打“七战七捷”了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE006-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE006-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0136\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE006-P02\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE006-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0137\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": null\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE006",
+    "event_enrichment": {
+      "result_state": "国民党部队在（南）京、沪沿线及江北沿长江以北增加，内战苗头出现，随后6月、7月开始打“七战七捷”。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于S0134所述5月开始紧张、内战苗头出现、敌人在调兵；经S0136所述调兵遣将、增加部队；止于S0137所述6月、7月开始打“七战七捷”。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "5月出现内战苗头与调兵迹象",
+        "process_text": "到5月开始紧张，5月有迹象，内战苗头出来，敌人在调兵。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0134"
+        ],
+        "evidence_quote": "11月，（到）12月，这个时候整编、整训、建立机构，调整成立边区政府。一直2月、3月、4月、5月……到5月就开始紧张了。5月就已经有迹象，就是要内战的苗头出来了，敌人在调兵。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "国民党部队在（南）京、沪沿线及江北沿长江以北增加",
+        "process_text": "调兵遣将，（南）京、沪沿线增加部队，江北沿长江以北国民党部队大批增加。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0136"
+        ],
+        "evidence_quote": "    陈海峰：调兵遣将啊，（南）京、沪沿线呢，都是增加部队。江北也……沿长江以北，国民党部队大批地增加。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "6月、7月开始打“七战七捷”",
+        "process_text": "6月、7月开始打“七战七捷”。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0137"
+        ],
+        "evidence_quote": "所以6月、7月就开始打“七战七捷”了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE006-P01",
+        "target_stage_id": "BATCH06-DOC07-DE006-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC07-S0136",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE006-P02",
+        "target_stage_id": "BATCH06-DOC07-DE006-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC07-S0137",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": null
+  },
+  "request_error": null
+}

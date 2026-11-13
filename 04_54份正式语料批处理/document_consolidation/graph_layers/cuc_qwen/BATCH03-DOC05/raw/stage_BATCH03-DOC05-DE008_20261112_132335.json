@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T13:23:35",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC05-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC05-DE008",
+  "usage": {
+    "prompt_tokens": 1410,
+    "total_tokens": 6628,
+    "completion_tokens": 5218,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4239
+    },
+    "time_to_first_token_ms": 79241,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-07\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC05-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆编设警卫小连并部署于河沟另一边；当夜外出报告国民党部队情况后深夜返回，刚躺下即听到外面有声音，事件止于听到声音。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为 S0042 所述编设警卫小连及部署，终点为 S0044 所述当夜返回后刚躺下听到外面有声音；未包含后续处置或声音来源。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"编设警卫小连并部署在河沟另一边\",\n      \"process_text\": \"陈锐霆到部队后听军代表方中铎意见，未重视张爱萍意见，编了一个警卫小连，也是个大排；自己住河沟这一边，警卫部队住河沟那一边。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0042\"\n      ],\n      \"evidence_quote\": \"我那时候也到了自己的部队，一切我就听军代表方中铎的意见，我们都没有重视张爱萍的意见，（没有）加强自己的警卫。但是也做了一些活动，就编了一个警卫小连吧，也是个大排，编了这么一个警卫部队。但是我们住的那个地方河沟子很多，我们住到河沟的这一边，警卫部队就住到河沟的那一边。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"当夜因妇救会、县委机关问题外出报告国民党部队情况并深夜返回\",\n      \"process_text\": \"当夜因当地妇救会、县委一些机关有问题要问，陈锐霆被叫去报告国民党部队情况，回来时已12点多。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0044\"\n      ],\n      \"evidence_quote\": \"当夜的时候，因为这个地方的妇救会、县委的一些机关有些问题要问我，叫我报告国民党部队的情况。我们回来的时候已经都12点多了，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"刚躺下即听到外面有声音\",\n      \"process_text\": \"陈锐霆深夜返回后刚躺下，就听到外面有声音。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0044\"\n      ],\n      \"evidence_quote\": \"我刚躺下，就听到外面有声音。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE008-P01\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE008-P02\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0044\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-07",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC05-DE008",
+    "event_enrichment": {
+      "result_state": "陈锐霆编设警卫小连并部署于河沟另一边；当夜外出报告国民党部队情况后深夜返回，刚躺下即听到外面有声音，事件止于听到声音。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为 S0042 所述编设警卫小连及部署，终点为 S0044 所述当夜返回后刚躺下听到外面有声音；未包含后续处置或声音来源。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC05-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "编设警卫小连并部署在河沟另一边",
+        "process_text": "陈锐霆到部队后听军代表方中铎意见，未重视张爱萍意见，编了一个警卫小连，也是个大排；自己住河沟这一边，警卫部队住河沟那一边。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0042"
+        ],
+        "evidence_quote": "我那时候也到了自己的部队，一切我就听军代表方中铎的意见，我们都没有重视张爱萍的意见，（没有）加强自己的警卫。但是也做了一些活动，就编了一个警卫小连吧，也是个大排，编了这么一个警卫部队。但是我们住的那个地方河沟子很多，我们住到河沟的这一边，警卫部队就住到河沟的那一边。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "当夜因妇救会、县委机关问题外出报告国民党部队情况并深夜返回",
+        "process_text": "当夜因当地妇救会、县委一些机关有问题要问，陈锐霆被叫去报告国民党部队情况，回来时已12点多。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0044"
+        ],
+        "evidence_quote": "当夜的时候，因为这个地方的妇救会、县委的一些机关有些问题要问我，叫我报告国民党部队的情况。我们回来的时候已经都12点多了，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "刚躺下即听到外面有声音",
+        "process_text": "陈锐霆深夜返回后刚躺下，就听到外面有声音。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0044"
+        ],
+        "evidence_quote": "我刚躺下，就听到外面有声音。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC05-DE008-P01",
+        "target_stage_id": "BATCH03-DOC05-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC05-DE008-P02",
+        "target_stage_id": "BATCH03-DOC05-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC05-S0044",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

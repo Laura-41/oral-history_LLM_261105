@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-12T08:42:21",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC02-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC02-DE001",
+  "usage": {
+    "prompt_tokens": 1634,
+    "total_tokens": 8422,
+    "completion_tokens": 6788,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5146
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 6787000,
+    "time_to_first_token_ms": 100349
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC02-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆视察城西南炮兵阵地时遭敌炮击，弹片击中武装带铜环和图囊/新票子，但皮肉未受伤。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于S0004对城西南炮兵阵地及敌系留气球观察的背景叙述，止于S0012“皮肉一点都没受伤”；中间S0006-S0010为视察、试射、按倒、炮击与弹片击中随身物品的连续过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"城西南炮兵阵地背景与部署\",\n      \"process_text\": \"敌人系留气球在上边观察城里情况，炮兵阵地两个连在城西南边空地散开放列。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0004\"\n      ],\n      \"evidence_quote\": \"陈锐霆：敌人系留气球啊，在上边观察我们城里边的情况嘛。我那个炮兵阵地两个连就在城的西南边，西南角有那么一块空地。那块空地相当地大，就在那个地方两个连就散开放列了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"视察阵地时遇敌试射\",\n      \"process_text\": \"我到阵地上去视察的时候，敌人一发炮弹离着我20多公尺，我估计它是试射，接着还要打；代理团长也在跟前。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0006\"\n      ],\n      \"evidence_quote\": \"陈锐霆：我到阵地上去视察的时候，敌人一发炮弹离着我20多公尺，我估计它是试射，接着还要打。我们代理的团长也在我跟前，也是我们的同学，也是陆军大学毕业的。他是副团长代理团长，团长叫林家训，东北人，因为年纪大了没有到前方来。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"按倒代理团长并遭敌一排炮击\",\n      \"process_text\": \"我把他按到地下，接着敌人一排炮就来了，气浪把我打倒，身上中了两块弹片，医生认为若打到腹部就完蛋了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0008\"\n      ],\n      \"evidence_quote\": \"陈锐霆：我把他按到地下，接着敌人一排炮就来了，我这个身上觉得一下子被力量很大的气浪打倒了。这个事情也很巧，我身上中了两块弹片，那个十公分的重炮，弹片都很长、很大、很尖锐的，我们的医生看到了，就说（如果）弹片打到的是腹部，或什么地方就完蛋了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"弹片击中武装带铜环与图囊新票子\",\n      \"process_text\": \"一发炮弹打在我武装带前边铜环，另一发打在我左边图囊和刚发的新票子上，新票子被打出窟窿并折叠。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0010\"\n      ],\n      \"evidence_quote\": \"陈锐霆：但是很巧，一发炮弹就打在我武装带前边的一个铜环这个地方，两层皮子，中间一个柱子（陈锐霆在腰间比划），；另外一发打在我左边的一个图囊上，就是装地图的。那个时候才发了工资，两百七八十块钱，不到三百块钱嘛，（都是）新票子。弹片打在图囊上，又打在这一叠新票子上，新票子被打了个窟窿，都折叠了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"皮肉未受伤\",\n      \"process_text\": \"但是我皮肉一点都没受伤。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0012\"\n      ],\n      \"evidence_quote\": \"陈锐霆：但是我皮肉一点都没受伤。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE001-P01\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0006\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE001-P02\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0008\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE001-P03\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE001-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0010\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE001-P04\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE001-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0012\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC02-DE001",
+    "event_enrichment": {
+      "result_state": "陈锐霆视察城西南炮兵阵地时遭敌炮击，弹片击中武装带铜环和图囊/新票子，但皮肉未受伤。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于S0004对城西南炮兵阵地及敌系留气球观察的背景叙述，止于S0012“皮肉一点都没受伤”；中间S0006-S0010为视察、试射、按倒、炮击与弹片击中随身物品的连续过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC02-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "城西南炮兵阵地背景与部署",
+        "process_text": "敌人系留气球在上边观察城里情况，炮兵阵地两个连在城西南边空地散开放列。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0004"
+        ],
+        "evidence_quote": "陈锐霆：敌人系留气球啊，在上边观察我们城里边的情况嘛。我那个炮兵阵地两个连就在城的西南边，西南角有那么一块空地。那块空地相当地大，就在那个地方两个连就散开放列了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "视察阵地时遇敌试射",
+        "process_text": "我到阵地上去视察的时候，敌人一发炮弹离着我20多公尺，我估计它是试射，接着还要打；代理团长也在跟前。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0006"
+        ],
+        "evidence_quote": "陈锐霆：我到阵地上去视察的时候，敌人一发炮弹离着我20多公尺，我估计它是试射，接着还要打。我们代理的团长也在我跟前，也是我们的同学，也是陆军大学毕业的。他是副团长代理团长，团长叫林家训，东北人，因为年纪大了没有到前方来。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "按倒代理团长并遭敌一排炮击",
+        "process_text": "我把他按到地下，接着敌人一排炮就来了，气浪把我打倒，身上中了两块弹片，医生认为若打到腹部就完蛋了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0008"
+        ],
+        "evidence_quote": "陈锐霆：我把他按到地下，接着敌人一排炮就来了，我这个身上觉得一下子被力量很大的气浪打倒了。这个事情也很巧，我身上中了两块弹片，那个十公分的重炮，弹片都很长、很大、很尖锐的，我们的医生看到了，就说（如果）弹片打到的是腹部，或什么地方就完蛋了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "弹片击中武装带铜环与图囊新票子",
+        "process_text": "一发炮弹打在我武装带前边铜环，另一发打在我左边图囊和刚发的新票子上，新票子被打出窟窿并折叠。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0010"
+        ],
+        "evidence_quote": "陈锐霆：但是很巧，一发炮弹就打在我武装带前边的一个铜环这个地方，两层皮子，中间一个柱子（陈锐霆在腰间比划），；另外一发打在我左边的一个图囊上，就是装地图的。那个时候才发了工资，两百七八十块钱，不到三百块钱嘛，（都是）新票子。弹片打在图囊上，又打在这一叠新票子上，新票子被打了个窟窿，都折叠了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "皮肉未受伤",
+        "process_text": "但是我皮肉一点都没受伤。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0012"
+        ],
+        "evidence_quote": "陈锐霆：但是我皮肉一点都没受伤。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC02-DE001-P01",
+        "target_stage_id": "BATCH02-DOC02-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC02-S0006",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC02-DE001-P02",
+        "target_stage_id": "BATCH02-DOC02-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC02-S0008",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC02-DE001-P03",
+        "target_stage_id": "BATCH02-DOC02-DE001-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC02-S0010",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC02-DE001-P04",
+        "target_stage_id": "BATCH02-DOC02-DE001-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC02-S0012",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

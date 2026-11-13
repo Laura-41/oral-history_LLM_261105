@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-11T13:16:23",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC01-DE009",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC01-DE009",
+  "usage": {
+    "prompt_tokens": 2693,
+    "total_tokens": 13569,
+    "completion_tokens": 10876,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9472
+    },
+    "time_to_first_token_ms": 85419,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V1-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC01-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"庙桥战斗后，部队突围到望山桥一带休整；陈海峰靠手榴弹脱身，蹿过六条小河坝跟上部队。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以部队在庙桥与日军正面遭遇、发生庙桥战斗为起点，以陈海峰投弹脱身、过河跟上部队并随部队到望山桥休整为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"部队走小路穿桑园，到庙桥与日军正面遭遇，发生庙桥战斗。\",\n      \"process_text\": \"不能走大路，部队走小路在桑园里穿来穿去；到庙桥后与日本鬼子正面遭遇，打了一仗，即庙桥战斗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0058\"\n      ],\n      \"evidence_quote\": \"我们不能走大路啊，都走小路，在桑园里穿来穿去。到了庙桥以后和日本鬼子就正面遭遇了，打了一仗，那次战斗叫庙桥战斗。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"遭遇战中陈海峰差点被日军抓住，身上带有手榴弹。\",\n      \"process_text\": \"在遭遇战中，陈海峰差点被日军抓住，好在他身上有个手榴弹。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0072\"\n      ],\n      \"evidence_quote\": \"我们在这个地方碰到遭遇战了，哎呀，我差点给他抓住了。好在我身上有个手榴弹\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈海峰拉响手榴弹扔向日军，趁爆炸烟雾蹿入玉米地，再进入山药地。\",\n      \"process_text\": \"陈海峰一路走，拉下引线把手榴弹扔过去；爆炸后趁烟雾一个箭步蹿到玉米地，再进入山药地。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0078\"\n      ],\n      \"evidence_quote\": \"一路走一路走，把那个（引线）拉下来一抠，歪过头就扔过去。一扔过去，赶紧弯腰，距离就二十米（都）不到，“咣”的一声就炸了。一炸，鬼子就哇哇叫，炸死多少鬼子，炸伤多少（鬼子），我也不知道。一冒烟，我一看，嘿，这次机会来了，我就一个箭步蹿到面前的一块玉米地里。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE009-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"陈海峰蹿过六条小河坝，跟上部队。\",\n      \"process_text\": \"陈海峰蹿出去六条小河坝，跟上部队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0080\"\n      ],\n      \"evidence_quote\": \"那个河坝都不大，都是六米八米十几米左右，小河坝多，一家伙蹿出去六条小河坝，跟上部队。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE009-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"部队突围到望山桥，并在望山桥休整几天。\",\n      \"process_text\": \"庙桥战斗后，部队突围，到望山桥；在望山桥休整了几天。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0065\"\n      ],\n      \"evidence_quote\": \"庙桥打了一仗以后，我们等于（是）突围，就突出了，我们就到望山桥，再往前有一片山。这个地方都是平原，对我们非常不利，我们到望山桥那边去了。（在）望山桥休整了几天\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE009-P01\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0072\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE009-P02\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE009-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0078\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE009-P03\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE009-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0080\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE009-P04\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE009-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0065\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC01-DE009",
+    "event_enrichment": {
+      "result_state": "庙桥战斗后，部队突围到望山桥一带休整；陈海峰靠手榴弹脱身，蹿过六条小河坝跟上部队。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以部队在庙桥与日军正面遭遇、发生庙桥战斗为起点，以陈海峰投弹脱身、过河跟上部队并随部队到望山桥休整为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC01-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "部队走小路穿桑园，到庙桥与日军正面遭遇，发生庙桥战斗。",
+        "process_text": "不能走大路，部队走小路在桑园里穿来穿去；到庙桥后与日本鬼子正面遭遇，打了一仗，即庙桥战斗。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0058"
+        ],
+        "evidence_quote": "我们不能走大路啊，都走小路，在桑园里穿来穿去。到了庙桥以后和日本鬼子就正面遭遇了，打了一仗，那次战斗叫庙桥战斗。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "遭遇战中陈海峰差点被日军抓住，身上带有手榴弹。",
+        "process_text": "在遭遇战中，陈海峰差点被日军抓住，好在他身上有个手榴弹。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0072"
+        ],
+        "evidence_quote": "我们在这个地方碰到遭遇战了，哎呀，我差点给他抓住了。好在我身上有个手榴弹",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "陈海峰拉响手榴弹扔向日军，趁爆炸烟雾蹿入玉米地，再进入山药地。",
+        "process_text": "陈海峰一路走，拉下引线把手榴弹扔过去；爆炸后趁烟雾一个箭步蹿到玉米地，再进入山药地。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0078"
+        ],
+        "evidence_quote": "一路走一路走，把那个（引线）拉下来一抠，歪过头就扔过去。一扔过去，赶紧弯腰，距离就二十米（都）不到，“咣”的一声就炸了。一炸，鬼子就哇哇叫，炸死多少鬼子，炸伤多少（鬼子），我也不知道。一冒烟，我一看，嘿，这次机会来了，我就一个箭步蹿到面前的一块玉米地里。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE009-P04",
+        "stage_order": 4,
+        "stage_summary": "陈海峰蹿过六条小河坝，跟上部队。",
+        "process_text": "陈海峰蹿出去六条小河坝，跟上部队。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0080"
+        ],
+        "evidence_quote": "那个河坝都不大，都是六米八米十几米左右，小河坝多，一家伙蹿出去六条小河坝，跟上部队。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE009-P05",
+        "stage_order": 5,
+        "stage_summary": "部队突围到望山桥，并在望山桥休整几天。",
+        "process_text": "庙桥战斗后，部队突围，到望山桥；在望山桥休整了几天。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0065"
+        ],
+        "evidence_quote": "庙桥打了一仗以后，我们等于（是）突围，就突出了，我们就到望山桥，再往前有一片山。这个地方都是平原，对我们非常不利，我们到望山桥那边去了。（在）望山桥休整了几天",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC01-DE009-P01",
+        "target_stage_id": "BATCH01-DOC01-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC01-S0072",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE009-P02",
+        "target_stage_id": "BATCH01-DOC01-DE009-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH01-DOC01-S0078",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE009-P03",
+        "target_stage_id": "BATCH01-DOC01-DE009-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC01-S0080",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE009-P04",
+        "target_stage_id": "BATCH01-DOC01-DE009-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH01-DOC01-S0065",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

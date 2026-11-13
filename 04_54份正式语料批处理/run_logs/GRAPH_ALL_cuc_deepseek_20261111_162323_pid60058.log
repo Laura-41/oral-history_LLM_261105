@@ -1,0 +1,225 @@
+图谱新增层批量执行：cuc/deepseek
+日志：04_54份正式语料批处理/run_logs/GRAPH_ALL_cuc_deepseek_20261111_162323_pid60058.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+单次 API 等待上限：3600s（DeepSeek 线若曾超时，可用 TIMEOUT=3600）
+语料口径：60 份总账 = 6 份人工 Demo + 54 份正式语料；BATCH01 三份同为正式语料，全数纳入。
+
+一级层结果 54 份｜新增层已验收 1 份｜本次待跑 53 份
+待跑清单：
+  BATCH01-DOC02
+  BATCH01-DOC03
+  BATCH02-DOC01
+  BATCH02-DOC02
+  BATCH02-DOC03
+  BATCH02-DOC04
+  BATCH02-DOC05
+  BATCH02-DOC06
+  BATCH02-DOC07
+  BATCH02-DOC08
+  BATCH02-DOC09
+  BATCH03-DOC01
+  BATCH03-DOC02
+  BATCH03-DOC03
+  BATCH03-DOC04
+  BATCH03-DOC05
+  BATCH03-DOC06
+  BATCH03-DOC07
+  BATCH03-DOC08
+  BATCH03-DOC09
+  BATCH04-DOC01
+  BATCH04-DOC02
+  BATCH04-DOC03
+  BATCH04-DOC04
+  BATCH04-DOC05
+  BATCH04-DOC06
+  BATCH04-DOC07
+  BATCH04-DOC08
+  BATCH04-DOC09
+  BATCH05-DOC01
+  BATCH05-DOC02
+  BATCH05-DOC03
+  BATCH05-DOC04
+  BATCH05-DOC05
+  BATCH05-DOC06
+  BATCH05-DOC07
+  BATCH05-DOC08
+  BATCH05-DOC09
+  BATCH06-DOC01
+  BATCH06-DOC02
+  BATCH06-DOC03
+  BATCH06-DOC04
+  BATCH06-DOC05
+  BATCH06-DOC06
+  BATCH06-DOC07
+  BATCH06-DOC08
+  BATCH06-DOC09
+  BATCH07-DOC01
+  BATCH07-DOC02
+  BATCH07-DOC03
+  BATCH07-DOC04
+  BATCH07-DOC05
+  BATCH07-DOC06
+
+[1/54] BATCH01-DOC01 已验收，跳过
+[2/54] ===== BATCH01-DOC02 开始 =====
+单文档验证：BATCH01-DOC02 / cuc/deepseek
+日志：04_54份正式语料批处理/run_logs/GRAPH_VERIFY_BATCH01-DOC02_cuc_deepseek_20261111_162323_pid60124.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+
+===== L0 零 API 底座表 =====
+[落盘] BATCH01-DOC02 / cuc/deepseek
+  原文片段 84｜一级事件 8｜覆盖率 1.0000
+  人工视图：无
+    documents                  1 行
+    source_segments           84 行
+    source_attachments        87 行
+    coverage_audit             1 行
+    document_annotations      35 行
+    event_nodes                8 行
+    event_processes            8 行
+    event_participants        16 行
+    event_circumstances       19 行
+    event_next                 7 行
+  警告 3 条（详见 L0_report.json）
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH01-DOC02
+
+===== L1/L2 模型任务（真实 API 调用） =====
+[真实调用] BATCH01-DOC02 / cuc/deepseek / tasks=stage,entity_time
+  一级事件 8｜原文片段 84｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH01-DOC02/raw
+
+== stage：8 次调用 ==
+  [1/8] stage_BATCH01-DOC02-DE001 已有成功响应，跳过（断点续跑）
+  [2/8] stage_BATCH01-DOC02-DE002 已有成功响应，跳过（断点续跑）
+  [3/8] stage_BATCH01-DOC02-DE003 已有成功响应，跳过（断点续跑）
+  [4/8] stage_BATCH01-DOC02-DE004 已有成功响应，跳过（断点续跑）
+  [5/8] stage_BATCH01-DOC02-DE005 已有成功响应，跳过（断点续跑）
+  [6/8] stage_BATCH01-DOC02-DE006 已有成功响应，跳过（断点续跑）
+  [7/8] stage_BATCH01-DOC02-DE007 已有成功响应，跳过（断点续跑）
+  [8/8] stage_BATCH01-DOC02-DE008 已有成功响应，跳过（断点续跑）
+
+== entity_time：1 次调用 ==
+  [1/1] 请求 entity_time/CRT-03，输入 25,035 字符，最长等待 3600s……
+  完成：total_tokens=62747
+
+全部完成：9 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH01-DOC02 --model cuc/deepseek --write
+
+===== 后处理：校验、算偏移、生成 18 张 CSV =====
+  环境成分待人工复核 4 条（就近归类／规范值待补，另出清单）
+[落盘] BATCH01-DOC02 / cuc/deepseek
+  stage 响应 8｜entity_time 响应 1｜覆盖率 1.0000
+    documents                  1 行
+    source_segments           84 行
+    source_attachments       116 行
+    coverage_audit             1 行
+    document_annotations      35 行
+    event_nodes                8 行
+    event_processes            8 行
+    event_participants        16 行
+    event_circumstances       19 行
+    event_next                 7 行
+    process_stages            29 行
+    stage_next                23 行
+    event_times                8 行
+    time_expressions          24 行
+    entities                  95 行
+    entity_mentions           72 行
+    entity_aliases            14 行
+    entity_relations          45 行
+  校验问题 2 条｜偏移待核 16 条
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH01-DOC02
+
+===== 18 表完整性验收 =====
+[通过] BATCH01-DOC02 / cuc/deepseek
+  片段 84｜事件 8｜阶段 29｜实体 95｜提及 72｜时间表达 24｜覆盖率 1.0000
+  报告：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH01-DOC02/VALIDATION_report.json
+
+===== L3/L4 导出 24 张 import CSV =====
+[落盘] 模型线 cuc/deepseek｜已验收文档 2 份
+  生平叠加视图：疑似同一经历 0 组（只标 NEEDS_REVIEW，交人工）；人工 MERGE 生效 0 组，KEEP_SEPARATE 0 组
+
+== 24 张 import CSV 规模 ==
+  documents                     2 行
+  source_segments             170 行
+  source_attachments          238 行
+  event_nodes                  17 行
+  event_processes              17 行
+  event_participants           34 行
+  event_circumstances          34 行
+  process_stages               61 行
+  stage_next                   47 行
+  event_next                   15 行
+  entities                    160 行
+  entity_mentions             136 行
+  entity_aliases               17 行
+  entity_relations             45 行
+  event_times                  17 行
+  time_expressions             50 行
+  document_annotations         74 行
+  coverage_audit                2 行
+  person_subjects               2 行
+  document_persons              2 行
+  life_episodes                13 行
+  life_episode_sources         13 行
+  life_episode_next            11 行
+  narrated_contexts             3 行
+
+  警告 159 条（详见报告）
+
+  已写入：05_合并与Neo4j/import_cuc_deepseek
+
+===== 完成 =====
+结果：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH01-DOC02/
+图谱导入：05_合并与Neo4j/import_cuc_deepseek/
+请把 VALIDATION_report.json 与 prepare_summary.json 交助手复核，再决定是否放行 BATCH03。
+[2/54] ===== BATCH01-DOC02 完成 =====
+[3/54] ===== BATCH01-DOC03 开始 =====
+单文档验证：BATCH01-DOC03 / cuc/deepseek
+日志：04_54份正式语料批处理/run_logs/GRAPH_VERIFY_BATCH01-DOC03_cuc_deepseek_20261111_163100_pid61989.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+
+===== L0 零 API 底座表 =====
+[落盘] BATCH01-DOC03 / cuc/deepseek
+  原文片段 97｜一级事件 7｜覆盖率 1.0000
+  人工视图：无
+    documents                  1 行
+    source_segments           97 行
+    source_attachments        97 行
+    coverage_audit             1 行
+    document_annotations      35 行
+    event_nodes                7 行
+    event_processes            7 行
+    event_participants        14 行
+    event_circumstances       21 行
+    event_next                 6 行
+  警告 1 条（详见 L0_report.json）
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH01-DOC03
+
+===== L1/L2 模型任务（真实 API 调用） =====
+[真实调用] BATCH01-DOC03 / cuc/deepseek / tasks=stage,entity_time
+  一级事件 7｜原文片段 97｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH01-DOC03/raw
+
+== stage：7 次调用 ==
+  [1/7] 请求 stage/BATCH01-DOC03-DE001，输入 3,213 字符，最长等待 3600s……
+  完成：total_tokens=4089
+  [2/7] 请求 stage/BATCH01-DOC03-DE002，输入 5,505 字符，最长等待 3600s……
+  完成：total_tokens=13706
+  [3/7] 请求 stage/BATCH01-DOC03-DE003，输入 3,003 字符，最长等待 3600s……
+  完成：total_tokens=2678
+  [4/7] 请求 stage/BATCH01-DOC03-DE004，输入 2,971 字符，最长等待 3600s……
+  完成：total_tokens=1923
+  [5/7] 请求 stage/BATCH01-DOC03-DE005，输入 3,355 字符，最长等待 3600s……
+  完成：total_tokens=7516
+  [6/7] 请求 stage/BATCH01-DOC03-DE006，输入 3,258 字符，最长等待 3600s……
+  完成：total_tokens=4961
+  [7/7] 请求 stage/BATCH01-DOC03-DE007，输入 3,508 字符，最长等待 3600s……
+  完成：total_tokens=5124
+
+== entity_time：1 次调用 ==
+  [1/1] 请求 entity_time/YYS-02，输入 28,873 字符，最长等待 3600s……
+  失败并停止：HTTP 500: {"error":{"message":"upstream error: do request failed (request id: 202611110835017631804258268d9d68gXDLKq2)","type":"new_api_error","param":"","code":"do_request_failed"}}
+
+entity_time 在第 1 次调用熔断；已完成结果全部保留，重跑同一命令即断点续跑。
+
+熔断于：L1/L2 模型任务（真实 API 调用）。已完成结果全部保留，修好后重跑同一命令即可。
+
+熔断于 BATCH01-DOC03。已完成结果全部保留；修好后重跑同一命令即断点续跑。

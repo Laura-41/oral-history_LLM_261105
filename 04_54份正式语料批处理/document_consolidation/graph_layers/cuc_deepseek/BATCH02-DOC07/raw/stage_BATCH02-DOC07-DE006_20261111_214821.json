@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T21:48:21",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC07-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC07-DE006",
+  "usage": {
+    "prompt_tokens": 1273,
+    "total_tokens": 5672,
+    "completion_tokens": 4399,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3352
+    },
+    "tokens_per_second": 4398000,
+    "time_to_first_token_ms": 37221,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC07-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"姬鹏飞（吉洛）以麻岭坑留守处主任身份接应了我们；接应后政治工作严格，秘密审查繁重，同时强调争取和尊重知识分子。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件边界以麻岭坑留守处姬鹏飞身份及“接应我们的”为核心；前文屯溪—太平过滤为到达背景，后文政治工作、秘密审查与知识分子政策为接应后的展开。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"外来知识分子由地下党经屯溪转送，到太平先经过过滤。\",\n      \"process_text\": \"外面来的知识分子参（加）新四军的，经过屯溪，国民党挡不住的，地下党送过来的，都要经过这个地方。首先过滤，就（在）太平县过滤，从屯溪过来到太平，太平过来过滤，老百姓都从那儿走。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0030\"\n      ],\n      \"evidence_quote\": \"外面来的知识分子参（加）新四军的，经过屯溪，国民党挡不住的，地下党送过来的，都要经过这个地方。首先过滤，就（在）太平县过滤，从屯溪过来到太平，太平过来过滤，老百姓都从那儿走。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"姬鹏飞（时名吉洛）在麻岭坑任主任，接应我们。\",\n      \"process_text\": \"那么麻岭坑呢，是姬鹏飞在那里，那个时候他名字叫吉洛，后来改成姬鹏飞。他到新四军一师还叫吉洛，叫吉政委，以后才叫姬鹏飞。那么他是主任，接应我们的\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0030\"\n      ],\n      \"evidence_quote\": \"那么麻岭坑呢，是姬鹏飞在那里，那个时候他名字叫吉洛，后来改成姬鹏飞。他到新四军一师还叫吉洛，叫吉政委，以后才叫姬鹏飞。那么他是主任，接应我们的\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"接应后政治工作严格，针对外来知识分子开展秘密审查，同时强调争取、尊重知识分子并作政治保证。\",\n      \"process_text\": \"所以政治工作管得非常严。因为他都是知识分子，都是外来的，有没有夹杂不可靠的人，你还不知道，所以秘密的审查工作也比较繁重。党又不公开是不是。这个时候，一方面要争取知识分子，尊重知识分子，这是主流。政治上还要保证呀，那个时候后面是国民党呀，经过国民党统战区来的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0030\"\n      ],\n      \"evidence_quote\": \"所以政治工作管得非常严。因为他都是知识分子，都是外来的，有没有夹杂不可靠的人，你还不知道，所以秘密的审查工作也比较繁重。党又不公开是不是。这个时候，一方面要争取知识分子，尊重知识分子，这是主流。政治上还要保证呀，那个时候后面是国民党呀，经过国民党统战区来的。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE006-P01\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0030\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE006-P02\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE006-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0030\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC07-DE006",
+    "event_enrichment": {
+      "result_state": "姬鹏飞（吉洛）以麻岭坑留守处主任身份接应了我们；接应后政治工作严格，秘密审查繁重，同时强调争取和尊重知识分子。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件边界以麻岭坑留守处姬鹏飞身份及“接应我们的”为核心；前文屯溪—太平过滤为到达背景，后文政治工作、秘密审查与知识分子政策为接应后的展开。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC07-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "外来知识分子由地下党经屯溪转送，到太平先经过过滤。",
+        "process_text": "外面来的知识分子参（加）新四军的，经过屯溪，国民党挡不住的，地下党送过来的，都要经过这个地方。首先过滤，就（在）太平县过滤，从屯溪过来到太平，太平过来过滤，老百姓都从那儿走。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0030"
+        ],
+        "evidence_quote": "外面来的知识分子参（加）新四军的，经过屯溪，国民党挡不住的，地下党送过来的，都要经过这个地方。首先过滤，就（在）太平县过滤，从屯溪过来到太平，太平过来过滤，老百姓都从那儿走。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "姬鹏飞（时名吉洛）在麻岭坑任主任，接应我们。",
+        "process_text": "那么麻岭坑呢，是姬鹏飞在那里，那个时候他名字叫吉洛，后来改成姬鹏飞。他到新四军一师还叫吉洛，叫吉政委，以后才叫姬鹏飞。那么他是主任，接应我们的",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0030"
+        ],
+        "evidence_quote": "那么麻岭坑呢，是姬鹏飞在那里，那个时候他名字叫吉洛，后来改成姬鹏飞。他到新四军一师还叫吉洛，叫吉政委，以后才叫姬鹏飞。那么他是主任，接应我们的",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "接应后政治工作严格，针对外来知识分子开展秘密审查，同时强调争取、尊重知识分子并作政治保证。",
+        "process_text": "所以政治工作管得非常严。因为他都是知识分子，都是外来的，有没有夹杂不可靠的人，你还不知道，所以秘密的审查工作也比较繁重。党又不公开是不是。这个时候，一方面要争取知识分子，尊重知识分子，这是主流。政治上还要保证呀，那个时候后面是国民党呀，经过国民党统战区来的。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0030"
+        ],
+        "evidence_quote": "所以政治工作管得非常严。因为他都是知识分子，都是外来的，有没有夹杂不可靠的人，你还不知道，所以秘密的审查工作也比较繁重。党又不公开是不是。这个时候，一方面要争取知识分子，尊重知识分子，这是主流。政治上还要保证呀，那个时候后面是国民党呀，经过国民党统战区来的。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC07-DE006-P01",
+        "target_stage_id": "BATCH02-DOC07-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0030",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE006-P02",
+        "target_stage_id": "BATCH02-DOC07-DE006-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH02-DOC07-S0030",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

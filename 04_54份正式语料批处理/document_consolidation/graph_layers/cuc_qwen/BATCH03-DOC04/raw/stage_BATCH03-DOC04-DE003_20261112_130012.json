@@ -1,0 +1,144 @@
+{
+  "run_time": "2026-11-12T13:00:12",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC04-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC04-DE003",
+  "usage": {
+    "prompt_tokens": 2011,
+    "total_tokens": 14617,
+    "completion_tokens": 12606,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10788
+    },
+    "time_to_first_token_ms": 185627,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 12605000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-07\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC04-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"老一团经整编合并小团后被称为主力团，部队规模扩大并准备打大仗、反攻；口述同时提到‘这个仗打完以后’老一团改成教导旅，成为名副其实的旅。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为 S0038 所述1943年以后部队整编、小部队合并到主力；终点为 S0046 所述装备、训练、作战方式转变；S0042 为1师主力团构成与老一团来源的补充说明。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC04-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"1943年后部队整编，小部队合并到主力，主力团规模扩大\",\n      \"process_text\": \"1943年以后部队经过整编，把一些小的部队合并到主力，一个主力团等于一个旅，一团三千二百多人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC04-S0038\"\n      ],\n      \"evidence_quote\": \"我们（19）43年以后呢，部队经过整编以后呢，就是把一些小的部队合并到主力。那么一个主力团呢，等于一个旅。平时一个团就是八百人到一千二这样子，那么现在一个主力团呢，就是三千左右，我们一团就三千二百多人，就等于一个旅。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC04-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"老一团在整编合并后改成教导旅\",\n      \"process_text\": \"这个仗打完以后，老一团改成教导旅。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC04-S0038\"\n      ],\n      \"evidence_quote\": \"所以这个仗打完以后呢，我们这个老一团就改成教导旅。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC04-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"老一团变成名副其实的旅\",\n      \"process_text\": \"就变成旅了，名副其实的旅。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC04-S0040\"\n      ],\n      \"evidence_quote\": \"就变成旅了，名副其实的旅。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC04-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"1师主力团构成与老一团来源说明\",\n      \"process_text\": \"1师主力团是三个，1、4、6；老一团是叶飞的主力，过去皖南新四军6团的底子，6团两个营发展成老一团。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC04-S0042\"\n      ],\n      \"evidence_quote\": \"1师下面是这样子，主力团是三个，1、4、6。老一团是叶飞的主力，就是过去皖南新四军6团的底子，6团两个营发展成这个老一团。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC04-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"老一团并小团成主力团，准备打大仗和反攻\",\n      \"process_text\": \"老一团并了好几个小团进来，并了以后叫做主力团，因为要准备打大仗，考虑到今后是要有反攻。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC04-S0044\"\n      ],\n      \"evidence_quote\": \"我们这个老一团呢，也并了好几个小团进来，所以并了以后呢，那叫做主力团，因为要准备打大仗了，考虑到今后是要有反攻。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC04-DE003-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"为打大仗进行装备、训练和作战方式转变\",\n      \"process_text\": \"不能小打小闹，装备和训练要改良，作战方式由游击战变成运动战，再由运动战变成阵地战和运动战结合，战术、部队结构和装备改变。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC04-S0046\"\n      ],\n      \"evidence_quote\": \"不能老是小打小闹，装备要改良，训练要改良，作战的方式逐渐要转变了。由逐渐的游击战变成运动战，由运动战变成阵地战和运动战结合。这样子呢，战术也要改变了，部队的结构就改变了，装备也改变了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC04-DE003-P01\",\n      \"target_stage_id\": \"BATCH03-DOC04-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC04-S0038\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC04-DE003-P02\",\n      \"target_stage_id\": \"BATCH03-DOC04-DE003-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC04-S0040\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC04-DE003-P03\",\n      \"target_stage_id\": \"BATCH03-DOC04-DE003-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC04-S0042\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC04-DE003-P04\",\n      \"target_stage_id\": \"BATCH03-DOC04-DE003-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC04-S0044\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC04-DE003-P05\",\n      \"target_stage_id\": \"BATCH03-DOC04-DE003-P06\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH03-DOC04-S0046\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-07",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC04-DE003",
+    "event_enrichment": {
+      "result_state": "老一团经整编合并小团后被称为主力团，部队规模扩大并准备打大仗、反攻；口述同时提到‘这个仗打完以后’老一团改成教导旅，成为名副其实的旅。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起点为 S0038 所述1943年以后部队整编、小部队合并到主力；终点为 S0046 所述装备、训练、作战方式转变；S0042 为1师主力团构成与老一团来源的补充说明。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC04-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "1943年后部队整编，小部队合并到主力，主力团规模扩大",
+        "process_text": "1943年以后部队经过整编，把一些小的部队合并到主力，一个主力团等于一个旅，一团三千二百多人。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC04-S0038"
+        ],
+        "evidence_quote": "我们（19）43年以后呢，部队经过整编以后呢，就是把一些小的部队合并到主力。那么一个主力团呢，等于一个旅。平时一个团就是八百人到一千二这样子，那么现在一个主力团呢，就是三千左右，我们一团就三千二百多人，就等于一个旅。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC04-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "老一团在整编合并后改成教导旅",
+        "process_text": "这个仗打完以后，老一团改成教导旅。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC04-S0038"
+        ],
+        "evidence_quote": "所以这个仗打完以后呢，我们这个老一团就改成教导旅。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC04-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "老一团变成名副其实的旅",
+        "process_text": "就变成旅了，名副其实的旅。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC04-S0040"
+        ],
+        "evidence_quote": "就变成旅了，名副其实的旅。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC04-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "1师主力团构成与老一团来源说明",
+        "process_text": "1师主力团是三个，1、4、6；老一团是叶飞的主力，过去皖南新四军6团的底子，6团两个营发展成老一团。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC04-S0042"
+        ],
+        "evidence_quote": "1师下面是这样子，主力团是三个，1、4、6。老一团是叶飞的主力，就是过去皖南新四军6团的底子，6团两个营发展成这个老一团。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC04-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "老一团并小团成主力团，准备打大仗和反攻",
+        "process_text": "老一团并了好几个小团进来，并了以后叫做主力团，因为要准备打大仗，考虑到今后是要有反攻。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC04-S0044"
+        ],
+        "evidence_quote": "我们这个老一团呢，也并了好几个小团进来，所以并了以后呢，那叫做主力团，因为要准备打大仗了，考虑到今后是要有反攻。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC04-DE003-P06",
+        "stage_order": 6,
+        "stage_summary": "为打大仗进行装备、训练和作战方式转变",
+        "process_text": "不能小打小闹，装备和训练要改良，作战方式由游击战变成运动战，再由运动战变成阵地战和运动战结合，战术、部队结构和装备改变。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC04-S0046"
+        ],
+        "evidence_quote": "不能老是小打小闹，装备要改良，训练要改良，作战的方式逐渐要转变了。由逐渐的游击战变成运动战，由运动战变成阵地战和运动战结合。这样子呢，战术也要改变了，部队的结构就改变了，装备也改变了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC04-DE003-P01",
+        "target_stage_id": "BATCH03-DOC04-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC04-S0038",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC04-DE003-P02",
+        "target_stage_id": "BATCH03-DOC04-DE003-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC04-S0040",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC04-DE003-P03",
+        "target_stage_id": "BATCH03-DOC04-DE003-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC04-S0042",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC04-DE003-P04",
+        "target_stage_id": "BATCH03-DOC04-DE003-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC04-S0044",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC04-DE003-P05",
+        "target_stage_id": "BATCH03-DOC04-DE003-P06",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH03-DOC04-S0046",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

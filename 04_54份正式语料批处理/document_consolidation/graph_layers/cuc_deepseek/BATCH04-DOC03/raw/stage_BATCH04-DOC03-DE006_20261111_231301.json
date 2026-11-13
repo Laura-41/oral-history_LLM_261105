@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T23:13:01",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC03-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC03-DE006",
+  "usage": {
+    "prompt_tokens": 1218,
+    "total_tokens": 3248,
+    "completion_tokens": 2030,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1212
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 15823
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC03-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"杨勇率三营及从师直属队抽调的两个连、政治处全部留驻鲁西，担负扩大部队、建设根据地的任务。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于师部决定带686团东进并留下三营与杨勇，止于杨勇留驻鲁西并明确扩大部队、建设根据地的任务。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"师部带686团东进，决定留下三营和杨勇。\",\n      \"process_text\": \"师部要带着686团过去，686团留一个三营，并留下杨勇。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0037\"\n      ],\n      \"evidence_quote\": \"当时师部要带着686团过去，就686团留一个三营，留个杨勇。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"因只给一个营太少，从师直属队抽调两个连并留下整个直属政治处。\",\n      \"process_text\": \"杨勇原来当团长，只给一个营太少，于是向师直属队抽两个连，并留下整个直属政治处。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0037\"\n      ],\n      \"evidence_quote\": \"杨勇原来是团长，给他一个营，结果太少了，向师直属队抽了两个连，还有整个直属政治处，就张国华，除了梁必业他副主任，他留下。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"杨勇带两个连和政治处全部留驻鲁西，执行扩大部队、建设根据地任务。\",\n      \"process_text\": \"给杨勇两个连和政治处全部，他留到鲁西，任务就是扩大部队、建设根据地。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0038\"\n      ],\n      \"evidence_quote\": \"鲁西了。他的任务就是扩大咱们的部队，建设根据地。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE006-P01\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0037\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE006-P02\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE006-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0037\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC03-DE006",
+    "event_enrichment": {
+      "result_state": "杨勇率三营及从师直属队抽调的两个连、政治处全部留驻鲁西，担负扩大部队、建设根据地的任务。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于师部决定带686团东进并留下三营与杨勇，止于杨勇留驻鲁西并明确扩大部队、建设根据地的任务。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC03-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "师部带686团东进，决定留下三营和杨勇。",
+        "process_text": "师部要带着686团过去，686团留一个三营，并留下杨勇。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0037"
+        ],
+        "evidence_quote": "当时师部要带着686团过去，就686团留一个三营，留个杨勇。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "因只给一个营太少，从师直属队抽调两个连并留下整个直属政治处。",
+        "process_text": "杨勇原来当团长，只给一个营太少，于是向师直属队抽两个连，并留下整个直属政治处。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0037"
+        ],
+        "evidence_quote": "杨勇原来是团长，给他一个营，结果太少了，向师直属队抽了两个连，还有整个直属政治处，就张国华，除了梁必业他副主任，他留下。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "杨勇带两个连和政治处全部留驻鲁西，执行扩大部队、建设根据地任务。",
+        "process_text": "给杨勇两个连和政治处全部，他留到鲁西，任务就是扩大部队、建设根据地。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0038"
+        ],
+        "evidence_quote": "鲁西了。他的任务就是扩大咱们的部队，建设根据地。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC03-DE006-P01",
+        "target_stage_id": "BATCH04-DOC03-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0037",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE006-P02",
+        "target_stage_id": "BATCH04-DOC03-DE006-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0037",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T07:10:24",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH07-DOC06-W006",
+  "technical_document_id": "BATCH07-DOC06",
+  "document_id": "05.陈海峰（三访）20110816（一校后 阅读版）.doc",
+  "input_segment_ids": [
+    "BATCH07-DOC06-S0131",
+    "BATCH07-DOC06-S0132",
+    "BATCH07-DOC06-S0133",
+    "BATCH07-DOC06-S0134",
+    "BATCH07-DOC06-S0135",
+    "BATCH07-DOC06-S0136",
+    "BATCH07-DOC06-S0137",
+    "BATCH07-DOC06-S0138",
+    "BATCH07-DOC06-S0139",
+    "BATCH07-DOC06-S0140",
+    "BATCH07-DOC06-S0141",
+    "BATCH07-DOC06-S0142",
+    "BATCH07-DOC06-S0143"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 2,
+    "unassigned_segment_count": 11,
+    "input_segment_count": 13,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH07-DOC06-W006-E01"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH07-DOC06-W006",
+    "events": [
+      {
+        "candidate_id": "BATCH07-DOC06-W006-E01",
+        "source_segment_ids": [
+          "BATCH07-DOC06-S0132",
+          "BATCH07-DOC06-S0134"
+        ],
+        "event": {
+          "event_name": "陈海峰被派往二旅五团",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "被派往二旅五团",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他",
+              "normalized_entity": "李振湘",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "1师师部",
+              "normalized_value": "新四军第一师师部"
+            }
+          ],
+          "projected_content": "你现在不是5团的卫生队长嘛，现在你还是回你的5团去。你到2旅5团去。",
+          "evidence_quote": "那么他找我了，说你现在不是5团的卫生队长嘛，现在你还是回你的5团去。（陈海峰笑）怎么还回5团？5团都没有了，还回5团！（跟我说是）你到2旅5团去。",
+          "type_basis": "核心过程为组织分配/调动，属物质过程；李振湘为Actor，陈海峰为Goal；言语指示是阶段，不单独定为言语事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH07-DOC06-S0131",
+      "BATCH07-DOC06-S0133",
+      "BATCH07-DOC06-S0135",
+      "BATCH07-DOC06-S0136",
+      "BATCH07-DOC06-S0137",
+      "BATCH07-DOC06-S0138",
+      "BATCH07-DOC06-S0139",
+      "BATCH07-DOC06-S0140",
+      "BATCH07-DOC06-S0141",
+      "BATCH07-DOC06-S0142",
+      "BATCH07-DOC06-S0143"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH07-DOC06-W006\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH07-DOC06-W006-E01\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC06-S0132\",\n        \"BATCH07-DOC06-S0134\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰被派往二旅五团\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"被派往二旅五团\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"他\",\n            \"normalized_entity\": \"李振湘\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"1师师部\",\n            \"normalized_value\": \"新四军第一师师部\"\n          }\n        ],\n        \"projected_content\": \"你现在不是5团的卫生队长嘛，现在你还是回你的5团去。你到2旅5团去。\",\n        \"evidence_quote\": \"那么他找我了，说你现在不是5团的卫生队长嘛，现在你还是回你的5团去。（陈海峰笑）怎么还回5团？5团都没有了，还回5团！（跟我说是）你到2旅5团去。\",\n        \"type_basis\": \"核心过程为组织分配/调动，属物质过程；李振湘为Actor，陈海峰为Goal；言语指示是阶段，不单独定为言语事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH07-DOC06-S0131\",\n    \"BATCH07-DOC06-S0133\",\n    \"BATCH07-DOC06-S0135\",\n    \"BATCH07-DOC06-S0136\",\n    \"BATCH07-DOC06-S0137\",\n    \"BATCH07-DOC06-S0138\",\n    \"BATCH07-DOC06-S0139\",\n    \"BATCH07-DOC06-S0140\",\n    \"BATCH07-DOC06-S0141\",\n    \"BATCH07-DOC06-S0142\",\n    \"BATCH07-DOC06-S0143\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 4962,
+    "total_tokens": 20903,
+    "completion_tokens": 15941,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 15362
+    },
+    "time_to_first_token_ms": 126221,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 15940000
+  }
+}

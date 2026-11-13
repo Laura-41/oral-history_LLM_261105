@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T01:04:58",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC09-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC09-DE005",
+  "usage": {
+    "prompt_tokens": 1412,
+    "total_tokens": 8295,
+    "completion_tokens": 6883,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5578
+    },
+    "time_to_first_token_ms": 72526,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-22\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC09-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"湖心寺医院遭轰炸扫射，已负伤伤员发生二次负伤；外籍外科医生目睹后向国民党政府提出严正抗议，并赴淮安边区政府外事处定期汇报。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据S0086-S0088：起于“七战七捷”中间国民党飞机轰炸湖心寺并隔一两天扫射，止于外籍医生向国民党政府抗议及赴淮安边区政府外事处汇报；协议与红十字标志作为事件内背景纳入。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"在“七战七捷”中间，国民党飞机轰炸湖心寺，隔一两天又扫射；此前协议要求医院不得轰炸并设置红十字标志。\",\n      \"process_text\": \"在“七战七捷”中间，国民党轰炸湖心寺，隔一两天来扫射；协议约定医院不准轰炸，屋顶放置红十字标志。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0086\"\n      ],\n      \"evidence_quote\": \"就是到“七战七捷”中间，国民党轰炸我们湖心寺，隔了一两天来扫射。定好协议呀，就是医院不准轰炸，要我们屋顶上放红十字。那多大，多少米宽，多少米长，多少见方，大的红十字放到顶上，标志更明显了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"飞机对着红十字扫射，机枪子弹造成已负伤伤员二次负伤，医院楼上楼下住满重伤员。\",\n      \"process_text\": \"飞机对着红十字扫射，机枪子弹打下，造成伤员二次负伤；楼上楼下都住满伤员，重伤多。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0086\"\n      ],\n      \"evidence_quote\": \"那对着（红）十字扫射，飞机上子弹这么大（陈海峰比划约30厘米左右），打下来，我们二次负伤的伤员都有。我们楼上楼下都住了伤员，都住满的，都重伤多啊。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"外科医生亲眼看到伤员二次负伤，气愤地向国民党政府提出严正抗议，指责对方不执行协议、机枪对红十字打。\",\n      \"process_text\": \"外科医生亲眼看到前方负伤的伤员到这里第二次负伤，气愤得很；他向国民党政府提出严正抗议，质问为何不执行协议、机枪对着红十字打。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0088\"\n      ],\n      \"evidence_quote\": \"那个机枪子弹那么大子弹，打下来“啪啪啪啪啪”，有些伤员前方负伤，到这里来第二次负伤，这个外科医生亲眼都看到了。你看我们为持久和平服务的，在前方负伤，在这里又负伤了，他气愤得很。那我们淮安有个电台，每天播音的，那功率也比较小。他向国民党政府提出严正抗议，你们不执行协议，是宋庆龄女士请我来的，我差点被你们打死了。你们的机枪对着我们的红十字打，讲好不对红十字打的，是不是啊，他提抗议。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"外籍医生赴淮安边区政府外事处每周汇报，院方派美国吉普车接送。\",\n      \"process_text\": \"外籍医生到淮安边区政府外事处，一个礼拜汇报一次，回来院方派美国吉普车给他。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0088\"\n      ],\n      \"evidence_quote\": \"他来淮安边区政府一个外事处，一个礼拜去汇报一次，回来我们派了一个美国的吉普车给他。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE005-P01\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE005-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0086\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE005-P02\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE005-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0088\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE005-P03\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE005-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0088\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-22",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC09-DE005",
+    "event_enrichment": {
+      "result_state": "湖心寺医院遭轰炸扫射，已负伤伤员发生二次负伤；外籍外科医生目睹后向国民党政府提出严正抗议，并赴淮安边区政府外事处定期汇报。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "依据S0086-S0088：起于“七战七捷”中间国民党飞机轰炸湖心寺并隔一两天扫射，止于外籍医生向国民党政府抗议及赴淮安边区政府外事处汇报；协议与红十字标志作为事件内背景纳入。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC09-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "在“七战七捷”中间，国民党飞机轰炸湖心寺，隔一两天又扫射；此前协议要求医院不得轰炸并设置红十字标志。",
+        "process_text": "在“七战七捷”中间，国民党轰炸湖心寺，隔一两天来扫射；协议约定医院不准轰炸，屋顶放置红十字标志。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0086"
+        ],
+        "evidence_quote": "就是到“七战七捷”中间，国民党轰炸我们湖心寺，隔了一两天来扫射。定好协议呀，就是医院不准轰炸，要我们屋顶上放红十字。那多大，多少米宽，多少米长，多少见方，大的红十字放到顶上，标志更明显了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "飞机对着红十字扫射，机枪子弹造成已负伤伤员二次负伤，医院楼上楼下住满重伤员。",
+        "process_text": "飞机对着红十字扫射，机枪子弹打下，造成伤员二次负伤；楼上楼下都住满伤员，重伤多。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0086"
+        ],
+        "evidence_quote": "那对着（红）十字扫射，飞机上子弹这么大（陈海峰比划约30厘米左右），打下来，我们二次负伤的伤员都有。我们楼上楼下都住了伤员，都住满的，都重伤多啊。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "外科医生亲眼看到伤员二次负伤，气愤地向国民党政府提出严正抗议，指责对方不执行协议、机枪对红十字打。",
+        "process_text": "外科医生亲眼看到前方负伤的伤员到这里第二次负伤，气愤得很；他向国民党政府提出严正抗议，质问为何不执行协议、机枪对着红十字打。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0088"
+        ],
+        "evidence_quote": "那个机枪子弹那么大子弹，打下来“啪啪啪啪啪”，有些伤员前方负伤，到这里来第二次负伤，这个外科医生亲眼都看到了。你看我们为持久和平服务的，在前方负伤，在这里又负伤了，他气愤得很。那我们淮安有个电台，每天播音的，那功率也比较小。他向国民党政府提出严正抗议，你们不执行协议，是宋庆龄女士请我来的，我差点被你们打死了。你们的机枪对着我们的红十字打，讲好不对红十字打的，是不是啊，他提抗议。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "外籍医生赴淮安边区政府外事处每周汇报，院方派美国吉普车接送。",
+        "process_text": "外籍医生到淮安边区政府外事处，一个礼拜汇报一次，回来院方派美国吉普车给他。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0088"
+        ],
+        "evidence_quote": "他来淮安边区政府一个外事处，一个礼拜去汇报一次，回来我们派了一个美国的吉普车给他。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC09-DE005-P01",
+        "target_stage_id": "BATCH06-DOC09-DE005-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC09-S0086",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE005-P02",
+        "target_stage_id": "BATCH06-DOC09-DE005-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC09-S0088",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE005-P03",
+        "target_stage_id": "BATCH06-DOC09-DE005-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0088",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

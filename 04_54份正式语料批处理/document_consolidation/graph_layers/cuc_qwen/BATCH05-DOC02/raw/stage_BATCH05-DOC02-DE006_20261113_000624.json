@@ -1,0 +1,180 @@
+{
+  "run_time": "2026-11-13T00:06:24",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC02-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC02-DE006",
+  "usage": {
+    "prompt_tokens": 1777,
+    "total_tokens": 15745,
+    "completion_tokens": 13968,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 11758
+    },
+    "time_to_first_token_ms": 214574,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13967000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-13\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC02-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"三仓河多次战斗火烧后烧得光光，师部改驻吴家桥、沈灶一带；丰利镇五次变成焦土，损失很大。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于 S0185 师部回到三仓河并述七次战斗火烧，经 S0186 根据地、S0188-S0190 篦梳扫荡/清乡与三仓河烧光、S0193 师部改驻吴家桥/沈灶，止于 S0196 丰利镇五次焦土损失很大。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"师部回到三仓河，三仓河经历七次战斗和七次火烧\",\n      \"process_text\": \"师部又回到老地方了，回到三仓河来了。三仓河是七次战斗啊，七次火烧三仓河啊，三仓河变成焦土啊七次。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0185\"\n      ],\n      \"evidence_quote\": \"这个伤员就走了。走了以后呢，部队都撤到二分区来了，回到原来东台以东的海边上。师部又回到老地方了，回到三仓河来了。三仓河是七次战斗啊，七次火烧三仓河啊，三仓河变成焦土啊七次。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"三仓河被说明为师部根据地\",\n      \"process_text\": \"就是我们师部的根据地。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0186\"\n      ],\n      \"evidence_quote\": \"就是我们师部的根据地。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"提及篦梳扫荡的时间背景\",\n      \"process_text\": \"    陈海峰：就是那个篦梳扫荡的时候，\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0188\"\n      ],\n      \"evidence_quote\": \"    陈海峰：就是那个篦梳扫荡的时候，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"补充清乡的时间背景\",\n      \"process_text\": \"加上清乡这个时候。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0189\"\n      ],\n      \"evidence_quote\": \"加上清乡这个时候。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE006-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"三仓河被烧得光光\",\n      \"process_text\": \"这个三仓河烧得光光的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0190\"\n      ],\n      \"evidence_quote\": \"这个三仓河烧得光光的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE006-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"师部不在三仓河驻，改驻吴家桥，沈灶也驻部队\",\n      \"process_text\": \"一个小镇，几十户人家，我们师部不在那里驻了，驻在吴家桥。镇长都住在部队。一仓河还有一个小镇，离开一仓河不太远呢，九里十里路一个沈灶，这个地方都是驻的部队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0193\"\n      ],\n      \"evidence_quote\": \"一个小镇，几十户人家，我们师部不在那里驻了，驻在吴家桥。镇长都住在部队。一仓河还有一个小镇，离开一仓河不太远呢，九里十里路一个沈灶，这个地方都是驻的部队。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE006-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"提及清乡区的丰利\",\n      \"process_text\": \"    陈海峰：清乡区的那个丰利啊。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0195\"\n      ],\n      \"evidence_quote\": \"    陈海峰：清乡区的那个丰利啊。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC02-DE006-P08\",\n      \"stage_order\": 8,\n      \"stage_summary\": \"丰利镇五次变成焦土，损失很大\",\n      \"process_text\": \"丰利镇啊，是5次变成焦土啊，所以损失是很大的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC02-S0196\"\n      ],\n      \"evidence_quote\": \"丰利镇啊，是5次变成焦土啊，所以损失是很大的。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE006-P01\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE006-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0186\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE006-P02\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE006-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0188\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE006-P03\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE006-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0189\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE006-P04\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE006-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0190\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE006-P05\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE006-P06\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0193\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE006-P06\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE006-P07\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0195\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC02-DE006-P07\",\n      \"target_stage_id\": \"BATCH05-DOC02-DE006-P08\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC02-S0196\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-13",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC02-DE006",
+    "event_enrichment": {
+      "result_state": "三仓河多次战斗火烧后烧得光光，师部改驻吴家桥、沈灶一带；丰利镇五次变成焦土，损失很大。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于 S0185 师部回到三仓河并述七次战斗火烧，经 S0186 根据地、S0188-S0190 篦梳扫荡/清乡与三仓河烧光、S0193 师部改驻吴家桥/沈灶，止于 S0196 丰利镇五次焦土损失很大。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC02-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "师部回到三仓河，三仓河经历七次战斗和七次火烧",
+        "process_text": "师部又回到老地方了，回到三仓河来了。三仓河是七次战斗啊，七次火烧三仓河啊，三仓河变成焦土啊七次。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0185"
+        ],
+        "evidence_quote": "这个伤员就走了。走了以后呢，部队都撤到二分区来了，回到原来东台以东的海边上。师部又回到老地方了，回到三仓河来了。三仓河是七次战斗啊，七次火烧三仓河啊，三仓河变成焦土啊七次。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "三仓河被说明为师部根据地",
+        "process_text": "就是我们师部的根据地。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0186"
+        ],
+        "evidence_quote": "就是我们师部的根据地。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "提及篦梳扫荡的时间背景",
+        "process_text": "    陈海峰：就是那个篦梳扫荡的时候，",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0188"
+        ],
+        "evidence_quote": "    陈海峰：就是那个篦梳扫荡的时候，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "补充清乡的时间背景",
+        "process_text": "加上清乡这个时候。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0189"
+        ],
+        "evidence_quote": "加上清乡这个时候。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE006-P05",
+        "stage_order": 5,
+        "stage_summary": "三仓河被烧得光光",
+        "process_text": "这个三仓河烧得光光的。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0190"
+        ],
+        "evidence_quote": "这个三仓河烧得光光的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE006-P06",
+        "stage_order": 6,
+        "stage_summary": "师部不在三仓河驻，改驻吴家桥，沈灶也驻部队",
+        "process_text": "一个小镇，几十户人家，我们师部不在那里驻了，驻在吴家桥。镇长都住在部队。一仓河还有一个小镇，离开一仓河不太远呢，九里十里路一个沈灶，这个地方都是驻的部队。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0193"
+        ],
+        "evidence_quote": "一个小镇，几十户人家，我们师部不在那里驻了，驻在吴家桥。镇长都住在部队。一仓河还有一个小镇，离开一仓河不太远呢，九里十里路一个沈灶，这个地方都是驻的部队。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE006-P07",
+        "stage_order": 7,
+        "stage_summary": "提及清乡区的丰利",
+        "process_text": "    陈海峰：清乡区的那个丰利啊。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0195"
+        ],
+        "evidence_quote": "    陈海峰：清乡区的那个丰利啊。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC02-DE006-P08",
+        "stage_order": 8,
+        "stage_summary": "丰利镇五次变成焦土，损失很大",
+        "process_text": "丰利镇啊，是5次变成焦土啊，所以损失是很大的。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC02-S0196"
+        ],
+        "evidence_quote": "丰利镇啊，是5次变成焦土啊，所以损失是很大的。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC02-DE006-P01",
+        "target_stage_id": "BATCH05-DOC02-DE006-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC02-S0186",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE006-P02",
+        "target_stage_id": "BATCH05-DOC02-DE006-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC02-S0188",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE006-P03",
+        "target_stage_id": "BATCH05-DOC02-DE006-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC02-S0189",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE006-P04",
+        "target_stage_id": "BATCH05-DOC02-DE006-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC02-S0190",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE006-P05",
+        "target_stage_id": "BATCH05-DOC02-DE006-P06",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC02-S0193",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE006-P06",
+        "target_stage_id": "BATCH05-DOC02-DE006-P07",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC02-S0195",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC02-DE006-P07",
+        "target_stage_id": "BATCH05-DOC02-DE006-P08",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC02-S0196",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

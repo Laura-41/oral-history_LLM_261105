@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-12T07:59:28",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC01-DE005",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC01-DE005",
+  "usage": {
+    "prompt_tokens": 1273,
+    "total_tokens": 8096,
+    "completion_tokens": 6823,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5998
+    },
+    "time_to_first_token_ms": 102354,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V1-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC01-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"国民党第74师在垛庄被“我们老家的老部队”主攻消灭。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件核心边界取片段中“在垛庄消灭（国民党）74师，主攻的，就是我们老家的老部队。”；前文部队发展沿革作为背景阶段，不扩展为独立事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"交代老部队由江抗三路发展为主力军/六纵队，并成为打孟良崮部队的背景。\",\n      \"process_text\": \"就是说我们八个人是哥哥带下来发展的，发展了五十几个抗日青年，选了八个人来参加“江抗三路”。“江抗三路”由一百多人发展到一个团，一个团参加主力军，主力军的一个旅以后就变成（第）六纵队。就是你们看到打孟良崮的（部队），打孟良崮的那个军长就是叶挺、王必成，叶帅（听不清）打74师的，以后打孟良崮的那个部队就变成24集团军。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0020\"\n      ],\n      \"evidence_quote\": \"就是说我们八个人是哥哥带下来发展的，发展了五十几个抗日青年，选了八个人来参加“江抗三路”。“江抗三路”由一百多人发展到一个团，一个团参加主力军，主力军的一个旅以后就变成（第）六纵队。就是你们看到打孟良崮的（部队），打孟良崮的那个军长就是叶挺、王必成，叶帅（听不清）打74师的，以后打孟良崮的那个部队就变成24集团军。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"在垛庄主攻消灭国民党第74师。\",\n      \"process_text\": \"在垛庄消灭（国民党）74师，主攻的，就是我们老家的老部队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0020\"\n      ],\n      \"evidence_quote\": \"在垛庄消灭（国民党）74师，主攻的，就是我们老家的老部队。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE005-P01\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0020\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC01-DE005",
+    "event_enrichment": {
+      "result_state": "国民党第74师在垛庄被“我们老家的老部队”主攻消灭。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件核心边界取片段中“在垛庄消灭（国民党）74师，主攻的，就是我们老家的老部队。”；前文部队发展沿革作为背景阶段，不扩展为独立事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC01-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "交代老部队由江抗三路发展为主力军/六纵队，并成为打孟良崮部队的背景。",
+        "process_text": "就是说我们八个人是哥哥带下来发展的，发展了五十几个抗日青年，选了八个人来参加“江抗三路”。“江抗三路”由一百多人发展到一个团，一个团参加主力军，主力军的一个旅以后就变成（第）六纵队。就是你们看到打孟良崮的（部队），打孟良崮的那个军长就是叶挺、王必成，叶帅（听不清）打74师的，以后打孟良崮的那个部队就变成24集团军。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0020"
+        ],
+        "evidence_quote": "就是说我们八个人是哥哥带下来发展的，发展了五十几个抗日青年，选了八个人来参加“江抗三路”。“江抗三路”由一百多人发展到一个团，一个团参加主力军，主力军的一个旅以后就变成（第）六纵队。就是你们看到打孟良崮的（部队），打孟良崮的那个军长就是叶挺、王必成，叶帅（听不清）打74师的，以后打孟良崮的那个部队就变成24集团军。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "在垛庄主攻消灭国民党第74师。",
+        "process_text": "在垛庄消灭（国民党）74师，主攻的，就是我们老家的老部队。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0020"
+        ],
+        "evidence_quote": "在垛庄消灭（国民党）74师，主攻的，就是我们老家的老部队。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC01-DE005-P01",
+        "target_stage_id": "BATCH01-DOC01-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC01-S0020",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

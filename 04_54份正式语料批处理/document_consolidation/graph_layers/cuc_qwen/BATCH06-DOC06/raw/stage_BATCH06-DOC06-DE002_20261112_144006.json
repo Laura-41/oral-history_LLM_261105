@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T14:40:06",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC06-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC06-DE002",
+  "usage": {
+    "prompt_tokens": 1559,
+    "total_tokens": 18860,
+    "completion_tokens": 17301,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 16130
+    },
+    "time_to_first_token_ms": 255228,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 17300000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC06-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"国民党被围部队在五天停战期间有三千人向我方投降，礼炮和喊话劝降行动结束。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于 S0003 所述‘另外在这个阶段，快过新年了，停战五天了’并放礼炮；止于 S0005 所述‘国民党五天里面有三千人跑到我们这边来投降’。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"新年停战期间，我方以迫击炮放五发礼炮给国民党被围部队新年献礼\",\n      \"process_text\": \"另外在这个阶段，快过新年了，停战五天了，另外前膛炮是我们的迫击炮，是小炮，大炮的炮弹的我们没有嘛，我们小炮的炮弹自己造。所以一个炮五发弹，我们给国民党被围的部队新年献礼（陈锐霆笑），给他礼炮，一门炮放了五发。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0003\"\n      ],\n      \"evidence_quote\": \"另外在这个阶段，快过新年了，停战五天了，另外前膛炮是我们的迫击炮，是小炮，大炮的炮弹的我们没有嘛，我们小炮的炮弹自己造。所以一个炮五发弹，我们给国民党被围的部队新年献礼（陈锐霆笑），给他礼炮，一门炮放了五发。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"国民党被围部队缺粮、空投有限，我方打五发炮弹并口头宣传喊话劝降\",\n      \"process_text\": \"这个时候国民党的部队被围起来，几天以后没粮食吃了，都是靠空投。空投有限，他十几万人在那个地方，上面空投的东西不够用的，都抢了，一下来就抢，有些东西他投得不准，都飘到我们地区里面，我们收到了。所以这个时候一个是我们打了五发炮弹，加上我们口头的宣传、喊话\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0005\"\n      ],\n      \"evidence_quote\": \"这个时候国民党的部队被围起来，几天以后没粮食吃了，都是靠空投。空投有限，他十几万人在那个地方，上面空投的东西不够用的，都抢了，一下来就抢，有些东西他投得不准，都飘到我们地区里面，我们收到了。所以这个时候一个是我们打了五发炮弹，加上我们口头的宣传、喊话\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"国民党被围部队三三两两、一个班一个排来投降，五天里三千人投降\",\n      \"process_text\": \"敌人三三两两，一个班，一个排，都向我们这个地方来投降，因为没东西吃嘛。国民党五天里面有三千人跑到我们这边来投降。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0005\"\n      ],\n      \"evidence_quote\": \"敌人三三两两，一个班，一个排，都向我们这个地方来投降，因为没东西吃嘛。国民党五天里面有三千人跑到我们这边来投降。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE002-P01\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0005\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE002-P02\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE002-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0005\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC06-DE002",
+    "event_enrichment": {
+      "result_state": "国民党被围部队在五天停战期间有三千人向我方投降，礼炮和喊话劝降行动结束。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于 S0003 所述‘另外在这个阶段，快过新年了，停战五天了’并放礼炮；止于 S0005 所述‘国民党五天里面有三千人跑到我们这边来投降’。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC06-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "新年停战期间，我方以迫击炮放五发礼炮给国民党被围部队新年献礼",
+        "process_text": "另外在这个阶段，快过新年了，停战五天了，另外前膛炮是我们的迫击炮，是小炮，大炮的炮弹的我们没有嘛，我们小炮的炮弹自己造。所以一个炮五发弹，我们给国民党被围的部队新年献礼（陈锐霆笑），给他礼炮，一门炮放了五发。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0003"
+        ],
+        "evidence_quote": "另外在这个阶段，快过新年了，停战五天了，另外前膛炮是我们的迫击炮，是小炮，大炮的炮弹的我们没有嘛，我们小炮的炮弹自己造。所以一个炮五发弹，我们给国民党被围的部队新年献礼（陈锐霆笑），给他礼炮，一门炮放了五发。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "国民党被围部队缺粮、空投有限，我方打五发炮弹并口头宣传喊话劝降",
+        "process_text": "这个时候国民党的部队被围起来，几天以后没粮食吃了，都是靠空投。空投有限，他十几万人在那个地方，上面空投的东西不够用的，都抢了，一下来就抢，有些东西他投得不准，都飘到我们地区里面，我们收到了。所以这个时候一个是我们打了五发炮弹，加上我们口头的宣传、喊话",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0005"
+        ],
+        "evidence_quote": "这个时候国民党的部队被围起来，几天以后没粮食吃了，都是靠空投。空投有限，他十几万人在那个地方，上面空投的东西不够用的，都抢了，一下来就抢，有些东西他投得不准，都飘到我们地区里面，我们收到了。所以这个时候一个是我们打了五发炮弹，加上我们口头的宣传、喊话",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "国民党被围部队三三两两、一个班一个排来投降，五天里三千人投降",
+        "process_text": "敌人三三两两，一个班，一个排，都向我们这个地方来投降，因为没东西吃嘛。国民党五天里面有三千人跑到我们这边来投降。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0005"
+        ],
+        "evidence_quote": "敌人三三两两，一个班，一个排，都向我们这个地方来投降，因为没东西吃嘛。国民党五天里面有三千人跑到我们这边来投降。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC06-DE002-P01",
+        "target_stage_id": "BATCH06-DOC06-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0005",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE002-P02",
+        "target_stage_id": "BATCH06-DOC06-DE002-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC06-S0005",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

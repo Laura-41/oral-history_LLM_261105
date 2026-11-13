@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T10:05:34",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC06-DE005",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC06-DE005",
+  "usage": {
+    "prompt_tokens": 1631,
+    "total_tokens": 10914,
+    "completion_tokens": 9283,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8222
+    },
+    "tokens_per_second": 9282000,
+    "time_to_first_token_ms": 159224,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC06-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"戴之奇在南岳游干班总理纪念周上公开骂共产党，部分人对其在国共合作时期骂共产党提出质疑。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件边界取 S0038 前半段南岳游干班戴之奇骂共产党、S0040 记者追问、S0041 前半段确认公开骂及总理纪念周、S0044 后半段部分人质疑；S0038 后半段宿北战役、S0041 后半段人员变动、S0044 前半段游击战术不纳入本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"南岳游干班学习期间，国民党政治部主任戴之奇在国共合作时期每周六骂共产党。\",\n      \"process_text\": \"在南岳游干班学习的时候，国民党的政治部主任叫戴之奇，戴之奇每一个礼拜六都骂共产党。那个时候国共合作嘛，他还骂共产党。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0038\"\n      ],\n      \"evidence_quote\": \"在南岳游干班学习的时候，国民党的政治部主任叫戴之奇，戴之奇每一个礼拜六都骂共产党。那个时候国共合作嘛，他还骂共产党。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"戴之奇在总理纪念周上公开骂共产党得到确认。\",\n      \"process_text\": \"就公开地骂！国民党那个时候有个总理纪念周，纪念孙中山总理，每一个礼拜六都有，他每一个礼拜六都骂共产党。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0040\",\n        \"BATCH02-DOC06-S0041\"\n      ],\n      \"evidence_quote\": \"就公开地骂！国民党那个时候有个总理纪念周，纪念孙中山总理，每一个礼拜六都有，他每一个礼拜六都骂共产党。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"部分人对戴之奇在国共合作时期骂共产党表示质疑。\",\n      \"process_text\": \"有些人对这个戴之奇的骂，就说现在国共合作你骂共产党干什么？共产党也是抗日的嘛，在敌后发展部队抗日，为什么不好？那个时候我们都在敌后嘛。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0044\"\n      ],\n      \"evidence_quote\": \"有些人对这个戴之奇的骂，就说现在国共合作你骂共产党干什么？共产党也是抗日的嘛，在敌后发展部队抗日，为什么不好？那个时候我们都在敌后嘛。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE005-P01\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0040\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE005-P02\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE005-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0044\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC06-DE005",
+    "event_enrichment": {
+      "result_state": "戴之奇在南岳游干班总理纪念周上公开骂共产党，部分人对其在国共合作时期骂共产党提出质疑。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件边界取 S0038 前半段南岳游干班戴之奇骂共产党、S0040 记者追问、S0041 前半段确认公开骂及总理纪念周、S0044 后半段部分人质疑；S0038 后半段宿北战役、S0041 后半段人员变动、S0044 前半段游击战术不纳入本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC06-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "南岳游干班学习期间，国民党政治部主任戴之奇在国共合作时期每周六骂共产党。",
+        "process_text": "在南岳游干班学习的时候，国民党的政治部主任叫戴之奇，戴之奇每一个礼拜六都骂共产党。那个时候国共合作嘛，他还骂共产党。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0038"
+        ],
+        "evidence_quote": "在南岳游干班学习的时候，国民党的政治部主任叫戴之奇，戴之奇每一个礼拜六都骂共产党。那个时候国共合作嘛，他还骂共产党。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "戴之奇在总理纪念周上公开骂共产党得到确认。",
+        "process_text": "就公开地骂！国民党那个时候有个总理纪念周，纪念孙中山总理，每一个礼拜六都有，他每一个礼拜六都骂共产党。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0040",
+          "BATCH02-DOC06-S0041"
+        ],
+        "evidence_quote": "就公开地骂！国民党那个时候有个总理纪念周，纪念孙中山总理，每一个礼拜六都有，他每一个礼拜六都骂共产党。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "部分人对戴之奇在国共合作时期骂共产党表示质疑。",
+        "process_text": "有些人对这个戴之奇的骂，就说现在国共合作你骂共产党干什么？共产党也是抗日的嘛，在敌后发展部队抗日，为什么不好？那个时候我们都在敌后嘛。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0044"
+        ],
+        "evidence_quote": "有些人对这个戴之奇的骂，就说现在国共合作你骂共产党干什么？共产党也是抗日的嘛，在敌后发展部队抗日，为什么不好？那个时候我们都在敌后嘛。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC06-DE005-P01",
+        "target_stage_id": "BATCH02-DOC06-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC06-S0040",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC06-DE005-P02",
+        "target_stage_id": "BATCH02-DOC06-DE005-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH02-DOC06-S0044",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

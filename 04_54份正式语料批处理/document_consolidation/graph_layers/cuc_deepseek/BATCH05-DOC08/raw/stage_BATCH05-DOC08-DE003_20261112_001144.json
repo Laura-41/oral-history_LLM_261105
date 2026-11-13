@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T00:11:44",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC08-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC08-DE003",
+  "usage": {
+    "prompt_tokens": 1521,
+    "total_tokens": 4406,
+    "completion_tokens": 2885,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2018
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2884000,
+    "time_to_first_token_ms": 22300
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-16\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC08-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"分家后未带医院、医疗队或前方休养所，仅以司令部门诊部几名工作人员组成卫生部南下，处于人员与物资匮乏状态。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于分家争执及李部长决定一个都不带，止于仅带司令部门诊部几个人称卫生部南下、两手空空。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"分家时争执激烈，南方人员争着南下，苏中本地人员被要求留下。\",\n      \"process_text\": \"分家时吵得一塌糊涂，南方人员争着南下，苏中本地人员越要求越不放、要留下来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0031\"\n      ],\n      \"evidence_quote\": \"那个时候分家呀，吵得一塌糊涂。分家中间，谁哪家，南方的人都争着南下，他就要求南下。解放江南了嘛，准备进上海，进南京嘛，进杭州嘛，大家家乡在那里，打了这么多年，要打回老家去，是不是，要求走。苏中（本地人）呢，你越要求的，越不放，要留下来。所以那个分家，哎呀，弄得个一塌糊涂。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"李部长有些生气，决定到那边自己再发展，一个都不带。\",\n      \"process_text\": \"李部长有点生气，最后决定到那边去自己再发展，一个都不带。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0031\"\n      ],\n      \"evidence_quote\": \"那么最后呢，李部长呢，他也有点生气。最后算了，我们到那边去，自己再发展，一个都不带。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"仅带司令部门诊部几个人，称卫生部，两手空空南下。\",\n      \"process_text\": \"就是司令部门诊部几个人，叫卫生部，几个工作人员，就南下了，两手空空。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0033\"\n      ],\n      \"evidence_quote\": \"就是司令部门诊部几个人，叫卫生部，几个工作人员，就南下了。两手空空啊，\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE003-P01\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0031\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE003-P02\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE003-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0033\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-16",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC08-DE003",
+    "event_enrichment": {
+      "result_state": "分家后未带医院、医疗队或前方休养所，仅以司令部门诊部几名工作人员组成卫生部南下，处于人员与物资匮乏状态。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于分家争执及李部长决定一个都不带，止于仅带司令部门诊部几个人称卫生部南下、两手空空。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC08-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "分家时争执激烈，南方人员争着南下，苏中本地人员被要求留下。",
+        "process_text": "分家时吵得一塌糊涂，南方人员争着南下，苏中本地人员越要求越不放、要留下来。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0031"
+        ],
+        "evidence_quote": "那个时候分家呀，吵得一塌糊涂。分家中间，谁哪家，南方的人都争着南下，他就要求南下。解放江南了嘛，准备进上海，进南京嘛，进杭州嘛，大家家乡在那里，打了这么多年，要打回老家去，是不是，要求走。苏中（本地人）呢，你越要求的，越不放，要留下来。所以那个分家，哎呀，弄得个一塌糊涂。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "李部长有些生气，决定到那边自己再发展，一个都不带。",
+        "process_text": "李部长有点生气，最后决定到那边去自己再发展，一个都不带。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0031"
+        ],
+        "evidence_quote": "那么最后呢，李部长呢，他也有点生气。最后算了，我们到那边去，自己再发展，一个都不带。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "仅带司令部门诊部几个人，称卫生部，两手空空南下。",
+        "process_text": "就是司令部门诊部几个人，叫卫生部，几个工作人员，就南下了，两手空空。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0033"
+        ],
+        "evidence_quote": "就是司令部门诊部几个人，叫卫生部，几个工作人员，就南下了。两手空空啊，",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC08-DE003-P01",
+        "target_stage_id": "BATCH05-DOC08-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC08-S0031",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC08-DE003-P02",
+        "target_stage_id": "BATCH05-DOC08-DE003-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC08-S0033",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

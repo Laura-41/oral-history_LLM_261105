@@ -1,0 +1,198 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/graph_enrichment_output_schema_v1.0.json",
+  "title": "图谱层补齐 v1.0 两个下游任务的输出契约",
+  "description": "stage = 二级阶段拆分与一级事件补完；entity_time = 实体与时间归一化。两个任务互不依赖，输出一律不含字符偏移，偏移由下游脚本确定性计算。",
+  "type": "object",
+  "oneOf": [
+    { "$ref": "#/$defs/stage_output" },
+    { "$ref": "#/$defs/entity_time_output" }
+  ],
+  "$defs": {
+    "confidence": { "type": "string", "enum": ["HIGH", "MEDIUM", "LOW"] },
+    "ids": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["document_id", "task", "prompt_version", "schema_version"],
+      "properties": {
+        "document_id": { "type": "string", "minLength": 1 },
+        "task": { "type": "string" },
+        "prompt_version": { "const": "graph_enrichment_v1.0" },
+        "schema_version": { "const": "v1.0" }
+      }
+    },
+    "stage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stage_id", "stage_order", "stage_summary", "process_text", "evidence_segment_ids", "evidence_quote", "confidence"],
+      "properties": {
+        "stage_id": { "type": "string", "pattern": "^[A-Za-z0-9_-]+-P[0-9]{2}$" },
+        "stage_order": { "type": "integer", "minimum": 1 },
+        "stage_summary": { "type": "string", "minLength": 1 },
+        "process_text": { "type": "string", "minLength": 1 },
+        "evidence_segment_ids": { "$ref": "#/$defs/ids" },
+        "evidence_quote": { "type": "string", "minLength": 1 },
+        "confidence": { "$ref": "#/$defs/confidence" }
+      }
+    },
+    "stage_link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_stage_id", "target_stage_id", "logic", "confidence"],
+      "properties": {
+        "source_stage_id": { "type": "string", "minLength": 1 },
+        "target_stage_id": { "type": "string", "minLength": 1 },
+        "logic": { "type": "string", "enum": ["SEQUENCE", "ENABLES", "CAUSES", "RESULTS_IN", "ELABORATES"] },
+        "evidence_segment_id": { "type": "string" },
+        "confidence": { "$ref": "#/$defs/confidence" }
+      }
+    },
+    "stage_output": {
+      "allOf": [
+        { "$ref": "#/$defs/meta" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["document_id", "task", "prompt_version", "schema_version", "event_id", "event_enrichment", "stages", "stage_next"],
+          "properties": {
+            "task": { "const": "stage" },
+            "document_id": { "type": "string", "minLength": 1 },
+            "prompt_version": { "const": "graph_enrichment_v1.0" },
+            "schema_version": { "const": "v1.0" },
+            "event_id": { "type": "string", "minLength": 1 },
+            "event_enrichment": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["result_state", "factuality", "confidence", "boundary_note", "boundary_confidence"],
+              "properties": {
+                "result_state": { "type": "string" },
+                "factuality": { "type": "string", "enum": ["FACT", "REPORTED", "NEGATED", "INTENDED", "HYPOTHETICAL"] },
+                "confidence": { "$ref": "#/$defs/confidence" },
+                "boundary_note": { "type": "string" },
+                "boundary_confidence": { "$ref": "#/$defs/confidence" }
+              }
+            },
+            "stages": { "type": "array", "items": { "$ref": "#/$defs/stage" } },
+            "stage_next": { "type": "array", "items": { "$ref": "#/$defs/stage_link" } },
+            "no_stage_reason": { "type": "string" }
+          },
+          "if": { "properties": { "stages": { "maxItems": 0 } }, "required": ["stages"] },
+          "then": { "required": ["no_stage_reason"] }
+        }
+      ]
+    },
+    "entity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entity_id", "canonical_name", "entity_type", "entity_subtype", "authority_status", "confidence"],
+      "properties": {
+        "entity_id": { "type": "string", "minLength": 1 },
+        "canonical_name": { "type": "string", "minLength": 1 },
+        "entity_type": { "type": "string", "enum": ["PERSON", "PLACE", "ORGANIZATION", "MILITARY_UNIT", "HISTORICAL_EVENT", "PUBLICATION", "OTHER"] },
+        "entity_subtype": { "type": "string", "enum": ["INDIVIDUAL", "KINSHIP_PERSON", "ADMINISTRATIVE_PLACE", "SETTLEMENT", "ADDRESS", "LANDMARK", "ROUTE", "PARTY_ORGANIZATION", "SCHOOL", "HOSPITAL", "GOVERNMENT_AGENCY", "PRINTING_HOUSE", "MILITARY_FORMATION", "MASS_ORGANIZATION", "BATTLE", "POLITICAL_EVENT", "WAR", "BOOK", "PERIODICAL", "WEAPON", "INFRASTRUCTURE", "OTHER"] },
+        "description": { "type": "string" },
+        "authority_status": { "type": "string", "enum": ["CANONICAL", "LOCAL_CANONICAL", "TRANSCRIPTION_UNCERTAIN", "UNRESOLVED"] },
+        "confidence": { "$ref": "#/$defs/confidence" }
+      }
+    },
+    "mention": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mention_id", "segment_id", "entity_id", "mention_text", "mention_function", "source_status", "confidence"],
+      "properties": {
+        "mention_id": { "type": "string", "minLength": 1 },
+        "segment_id": { "type": "string", "minLength": 1 },
+        "entity_id": { "type": "string", "minLength": 1 },
+        "mention_text": { "type": "string", "minLength": 1 },
+        "mention_function": { "type": "string", "enum": ["PARTICIPANT", "CIRCUMSTANCE", "MENTION_ONLY", "ANNOTATION_SUBJECT", "PROFILE_FACT", "SPEAKER"] },
+        "source_status": { "type": "string", "enum": ["ORAL_TESTIMONY", "EDITORIAL_PROFILE", "EDITORIAL_NOTE", "INTERVIEWER_QUESTION", "STRUCTURAL_INFERENCE", "MIXED"] },
+        "confidence": { "$ref": "#/$defs/confidence" }
+      }
+    },
+    "alias": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["alias_id", "entity_id", "alias_text", "alias_type", "confidence"],
+      "properties": {
+        "alias_id": { "type": "string", "minLength": 1 },
+        "entity_id": { "type": "string", "minLength": 1 },
+        "alias_text": { "type": "string", "minLength": 1 },
+        "alias_type": { "type": "string", "enum": ["ALIAS", "ABBREVIATION", "HISTORICAL_NAME", "TRANSCRIPTION_VARIANT", "DESCRIPTIVE_NAME"] },
+        "evidence_segment_id": { "type": "string" },
+        "confidence": { "$ref": "#/$defs/confidence" }
+      }
+    },
+    "entity_relation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["relation_id", "source_entity_id", "relation_type", "target_entity_id", "source_status", "confidence"],
+      "properties": {
+        "relation_id": { "type": "string", "minLength": 1 },
+        "source_entity_id": { "type": "string", "minLength": 1 },
+        "relation_type": { "type": "string", "enum": ["BORN_IN", "WORKED_AT", "STUDIED_AT", "MEMBER_OF", "HELD_POSITION_AT", "PART_OF", "LOCATED_IN", "RELATED_TO", "POSSIBLY_SAME_AS"] },
+        "target_entity_id": { "type": "string", "minLength": 1 },
+        "role_label": { "type": "string" },
+        "start_date": { "type": "string" },
+        "end_date": { "type": "string" },
+        "evidence_segment_id": { "type": "string" },
+        "source_status": { "type": "string", "enum": ["ORAL_TESTIMONY", "EDITORIAL_PROFILE", "EDITORIAL_NOTE", "INTERVIEWER_QUESTION", "STRUCTURAL_INFERENCE", "MIXED"] },
+        "confidence": { "$ref": "#/$defs/confidence" }
+      }
+    },
+    "event_time": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["event_id", "raw_text", "normalized_start", "normalized_end", "precision", "certainty", "source_status", "confidence"],
+      "properties": {
+        "event_id": { "type": "string", "minLength": 1 },
+        "raw_text": { "type": "string" },
+        "normalized_start": { "type": "string" },
+        "normalized_end": { "type": "string" },
+        "precision": { "type": "string", "enum": ["DAY", "MONTH", "YEAR", "INTERVAL", "RELATIVE", "UNKNOWN"] },
+        "certainty": { "type": "string", "enum": ["EXACT", "APPROXIMATE", "OPEN_START", "OPEN_END", "UNCERTAIN"] },
+        "source_status": { "type": "string", "enum": ["ORAL_TESTIMONY", "EDITORIAL_PROFILE", "EDITORIAL_NOTE", "INTERVIEWER_QUESTION", "STRUCTURAL_INFERENCE", "MIXED"] },
+        "evidence_segment_id": { "type": "string" },
+        "confidence": { "$ref": "#/$defs/confidence" }
+      }
+    },
+    "time_expression": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["segment_id", "raw_text", "normalized_start", "normalized_end", "precision", "expression_type", "certainty", "source_status", "confidence"],
+      "properties": {
+        "segment_id": { "type": "string", "minLength": 1 },
+        "raw_text": { "type": "string", "minLength": 1 },
+        "normalized_start": { "type": "string" },
+        "normalized_end": { "type": "string" },
+        "precision": { "type": "string", "enum": ["DAY", "MONTH", "YEAR", "INTERVAL", "RELATIVE", "UNKNOWN"] },
+        "expression_type": { "type": "string", "enum": ["DATE", "INTERVAL"] },
+        "certainty": { "type": "string", "enum": ["EXACT", "APPROXIMATE", "OPEN_START", "OPEN_END", "UNCERTAIN"] },
+        "source_status": { "type": "string", "enum": ["ORAL_TESTIMONY", "EDITORIAL_PROFILE", "EDITORIAL_NOTE", "INTERVIEWER_QUESTION", "STRUCTURAL_INFERENCE", "MIXED"] },
+        "confidence": { "$ref": "#/$defs/confidence" }
+      }
+    },
+    "entity_time_output": {
+      "allOf": [
+        { "$ref": "#/$defs/meta" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["document_id", "task", "prompt_version", "schema_version", "entities", "entity_mentions", "entity_aliases", "entity_relations", "event_times", "time_expressions"],
+          "properties": {
+            "task": { "const": "entity_time" },
+            "document_id": { "type": "string", "minLength": 1 },
+            "prompt_version": { "const": "graph_enrichment_v1.0" },
+            "schema_version": { "const": "v1.0" },
+            "entities": { "type": "array", "items": { "$ref": "#/$defs/entity" } },
+            "entity_mentions": { "type": "array", "items": { "$ref": "#/$defs/mention" } },
+            "entity_aliases": { "type": "array", "items": { "$ref": "#/$defs/alias" } },
+            "entity_relations": { "type": "array", "items": { "$ref": "#/$defs/entity_relation" } },
+            "event_times": { "type": "array", "items": { "$ref": "#/$defs/event_time" } },
+            "time_expressions": { "type": "array", "items": { "$ref": "#/$defs/time_expression" } }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T15:39:58",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC08-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC08-DE002",
+  "usage": {
+    "prompt_tokens": 1488,
+    "total_tokens": 7872,
+    "completion_tokens": 6384,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5186
+    },
+    "time_to_first_token_ms": 109957,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC08-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"政工会在游击中间开完，特务团解散，两个营编成一个营，两个老连编到苏鲁支队，杨永松到师政治部当秘书长。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"从“四五月份敌人扫荡”开始，到“特务团解散了就把我弄去”结束，覆盖召开政工会、解散特务团、改编部队和杨永松调任。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC08-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"反扫荡期间罗帅召开附近几个团的政工会并在游击中完成\",\n      \"process_text\": \"四五月份敌人扫荡，罗帅召开附近几个团的政工会，在游击中间把它开完了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC08-S0015\"\n      ],\n      \"evidence_quote\": \"四五月份敌人扫荡，罗帅召开附近几个团的政工会，在游击中间把它开完了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC08-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"在政工会过程中解散特务团\",\n      \"process_text\": \"在这个中间呢，把特务团解散了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC08-S0015\"\n      ],\n      \"evidence_quote\": \"在这个中间呢，把特务团解散了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC08-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"改编两个营并调两个老连到苏鲁支队以加强战斗力\",\n      \"process_text\": \"就把两个营编成一个营，把两个老连就编到苏鲁支队，就是义勇队组织起来的，要加强它的战斗力。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC08-S0015\"\n      ],\n      \"evidence_quote\": \"就把两个营编成一个营，把两个老连就编到苏鲁支队，就是义勇队组织起来的，要加强它的战斗力。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC08-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"杨永松被调到师政治部任秘书长\",\n      \"process_text\": \"我就到了师政治部当秘书长去了。我昨天说我要不去，粱必业组织部长，罗叫他管政治部，行政什么都由他管，他呢，特务团解散了就把我弄去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC08-S0015\"\n      ],\n      \"evidence_quote\": \"我就到了师政治部当秘书长去了。我昨天说我要不去，粱必业组织部长，罗叫他管政治部，行政什么都由他管，他呢，特务团解散了就把我弄去。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC08-DE002-P01\",\n      \"target_stage_id\": \"BATCH06-DOC08-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC08-S0015\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC08-DE002-P02\",\n      \"target_stage_id\": \"BATCH06-DOC08-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC08-S0015\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC08-DE002-P03\",\n      \"target_stage_id\": \"BATCH06-DOC08-DE002-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC08-S0015\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC08-DE002",
+    "event_enrichment": {
+      "result_state": "政工会在游击中间开完，特务团解散，两个营编成一个营，两个老连编到苏鲁支队，杨永松到师政治部当秘书长。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "从“四五月份敌人扫荡”开始，到“特务团解散了就把我弄去”结束，覆盖召开政工会、解散特务团、改编部队和杨永松调任。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC08-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "反扫荡期间罗帅召开附近几个团的政工会并在游击中完成",
+        "process_text": "四五月份敌人扫荡，罗帅召开附近几个团的政工会，在游击中间把它开完了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC08-S0015"
+        ],
+        "evidence_quote": "四五月份敌人扫荡，罗帅召开附近几个团的政工会，在游击中间把它开完了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC08-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "在政工会过程中解散特务团",
+        "process_text": "在这个中间呢，把特务团解散了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC08-S0015"
+        ],
+        "evidence_quote": "在这个中间呢，把特务团解散了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC08-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "改编两个营并调两个老连到苏鲁支队以加强战斗力",
+        "process_text": "就把两个营编成一个营，把两个老连就编到苏鲁支队，就是义勇队组织起来的，要加强它的战斗力。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC08-S0015"
+        ],
+        "evidence_quote": "就把两个营编成一个营，把两个老连就编到苏鲁支队，就是义勇队组织起来的，要加强它的战斗力。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC08-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "杨永松被调到师政治部任秘书长",
+        "process_text": "我就到了师政治部当秘书长去了。我昨天说我要不去，粱必业组织部长，罗叫他管政治部，行政什么都由他管，他呢，特务团解散了就把我弄去。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC08-S0015"
+        ],
+        "evidence_quote": "我就到了师政治部当秘书长去了。我昨天说我要不去，粱必业组织部长，罗叫他管政治部，行政什么都由他管，他呢，特务团解散了就把我弄去。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC08-DE002-P01",
+        "target_stage_id": "BATCH06-DOC08-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC08-S0015",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC08-DE002-P02",
+        "target_stage_id": "BATCH06-DOC08-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC08-S0015",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC08-DE002-P03",
+        "target_stage_id": "BATCH06-DOC08-DE002-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC08-S0015",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

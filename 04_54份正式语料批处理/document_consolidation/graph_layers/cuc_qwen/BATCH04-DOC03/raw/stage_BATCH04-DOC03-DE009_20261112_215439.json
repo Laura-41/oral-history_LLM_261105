@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T21:54:39",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC03-DE009",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC03-DE009",
+  "usage": {
+    "prompt_tokens": 1590,
+    "total_tokens": 10412,
+    "completion_tokens": 8822,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7534
+    },
+    "time_to_first_token_ms": 130702,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8821000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC03-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"师部已转移离开常村，县的大队、县的区队比较快地组织起来；敌人知道存在一个不太小的指挥机关，但不确定是否为115师师部。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于 S0065 中“我们到了泰西以后”开始描述师部到泰西后声势大、宣传群众不能保密；止于 S0071 中“具体是115师师部可能还不知道”说明暴露程度与转移、动员结果。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"到泰西后声势扩大，宣传群众导致不能保密\",\n      \"process_text\": \"我们到了泰西以后，声势比较大，宣传群众不能保密，人家就知道老八路来了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0065\"\n      ],\n      \"evidence_quote\": \"我们到了泰西以后，那声势就比较大，因为大家都挺高兴，那个时候反正抗日嘛，都宣传，大家都劲头挺足，因为你要宣传群众，就不能保密了，内部是不讲，人家就知道老八路来了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"师部在常村停留并暴露后转移\",\n      \"process_text\": \"师部在常村住着，目标暴露后又转移地方，最多住个把月就得走。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0071\"\n      ],\n      \"evidence_quote\": \"我们自己以后，就在常村住着，目标也暴露了，又转移了地方。就不像山西总部和129师大山里头，一住好几年，我们师部最多住个把月，这是最多的，就得走。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"动员群众参加地方党并组织县大队、区队\",\n      \"process_text\": \"声势大、群众高兴，参加地方党，动员参加并组织县的大队、县的区队，比较快地组织起来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0071\"\n      ],\n      \"evidence_quote\": \"声势大，群众也高兴，参加地方党，动员参加、组织县的大队、县的区队呀，也比较快地组织起来。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE009-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"暴露程度被说明为敌人知道有指挥机关但不确定是否115师师部\",\n      \"process_text\": \"暴露了115师，但敌人不知道是不是115师，只知道是一个不太小的指挥机关，具体是否115师师部可能还不知道。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0071\"\n      ],\n      \"evidence_quote\": \"因为暴露了115师，但是（敌人）不知道是不是115师，但知道是一个指挥机关，这个指挥机关还不太小，这一点他知道了，具体是115师师部可能还不知道。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE009-P01\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0071\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE009-P02\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE009-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0071\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE009-P03\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE009-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0071\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC03-DE009",
+    "event_enrichment": {
+      "result_state": "师部已转移离开常村，县的大队、县的区队比较快地组织起来；敌人知道存在一个不太小的指挥机关，但不确定是否为115师师部。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于 S0065 中“我们到了泰西以后”开始描述师部到泰西后声势大、宣传群众不能保密；止于 S0071 中“具体是115师师部可能还不知道”说明暴露程度与转移、动员结果。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC03-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "到泰西后声势扩大，宣传群众导致不能保密",
+        "process_text": "我们到了泰西以后，声势比较大，宣传群众不能保密，人家就知道老八路来了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0065"
+        ],
+        "evidence_quote": "我们到了泰西以后，那声势就比较大，因为大家都挺高兴，那个时候反正抗日嘛，都宣传，大家都劲头挺足，因为你要宣传群众，就不能保密了，内部是不讲，人家就知道老八路来了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "师部在常村停留并暴露后转移",
+        "process_text": "师部在常村住着，目标暴露后又转移地方，最多住个把月就得走。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0071"
+        ],
+        "evidence_quote": "我们自己以后，就在常村住着，目标也暴露了，又转移了地方。就不像山西总部和129师大山里头，一住好几年，我们师部最多住个把月，这是最多的，就得走。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "动员群众参加地方党并组织县大队、区队",
+        "process_text": "声势大、群众高兴，参加地方党，动员参加并组织县的大队、县的区队，比较快地组织起来。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0071"
+        ],
+        "evidence_quote": "声势大，群众也高兴，参加地方党，动员参加、组织县的大队、县的区队呀，也比较快地组织起来。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE009-P04",
+        "stage_order": 4,
+        "stage_summary": "暴露程度被说明为敌人知道有指挥机关但不确定是否115师师部",
+        "process_text": "暴露了115师，但敌人不知道是不是115师，只知道是一个不太小的指挥机关，具体是否115师师部可能还不知道。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0071"
+        ],
+        "evidence_quote": "因为暴露了115师，但是（敌人）不知道是不是115师，但知道是一个指挥机关，这个指挥机关还不太小，这一点他知道了，具体是115师师部可能还不知道。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC03-DE009-P01",
+        "target_stage_id": "BATCH04-DOC03-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0071",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE009-P02",
+        "target_stage_id": "BATCH04-DOC03-DE009-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0071",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE009-P03",
+        "target_stage_id": "BATCH04-DOC03-DE009-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0071",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-12T01:00:15",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC08-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC08-DE005",
+  "usage": {
+    "prompt_tokens": 1132,
+    "total_tokens": 3497,
+    "completion_tokens": 2365,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1823
+    },
+    "time_to_first_token_ms": 19133,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC08-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"小会结束，罗帅受到批评，批评者指出其部队进山东以来个别犯错误犯纪律问题严重。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以‘大概他们这里商量了一下’为起点，至‘说了一顿’结束；其后‘他开高干会目的……’为背景说明，‘湖西肃反’另属其他话题。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC08-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"商量并召开小会\",\n      \"process_text\": \"他们商量后召开小会。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC08-S0047\"\n      ],\n      \"evidence_quote\": \"大概他们这里商量了一下，就开了个小会\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC08-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"小会上批评罗帅，指其部队纪律问题严重\",\n      \"process_text\": \"会上把罗帅批了一顿，指出其部队进山东以来个别犯错误犯纪律严重，说了一顿。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC08-S0047\"\n      ],\n      \"evidence_quote\": \"把罗帅批了一顿，你这部队进到山东以来，个别犯错误犯纪律的怎么严重……说了一顿。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC08-DE005-P01\",\n      \"target_stage_id\": \"BATCH06-DOC08-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC08-S0047\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC08-DE005",
+    "event_enrichment": {
+      "result_state": "小会结束，罗帅受到批评，批评者指出其部队进山东以来个别犯错误犯纪律问题严重。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "以‘大概他们这里商量了一下’为起点，至‘说了一顿’结束；其后‘他开高干会目的……’为背景说明，‘湖西肃反’另属其他话题。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC08-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "商量并召开小会",
+        "process_text": "他们商量后召开小会。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC08-S0047"
+        ],
+        "evidence_quote": "大概他们这里商量了一下，就开了个小会",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC08-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "小会上批评罗帅，指其部队纪律问题严重",
+        "process_text": "会上把罗帅批了一顿，指出其部队进山东以来个别犯错误犯纪律严重，说了一顿。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC08-S0047"
+        ],
+        "evidence_quote": "把罗帅批了一顿，你这部队进到山东以来，个别犯错误犯纪律的怎么严重……说了一顿。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC08-DE005-P01",
+        "target_stage_id": "BATCH06-DOC08-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC08-S0047",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

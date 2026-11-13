@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T21:46:11",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC07-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC07-DE002",
+  "usage": {
+    "prompt_tokens": 1215,
+    "total_tokens": 5913,
+    "completion_tokens": 4698,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3831
+    },
+    "time_to_first_token_ms": 37972,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC07-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"训练班学员接受了公共卫生课以及社会医学、卫生行政学、管理学等课程培训，并听取姬鹏飞在卫生行政课中关于红军、八路军卫生工作传统和对新四军学员期望的讲授。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以‘我们名称叫公共卫生训练班’为起点，至‘班那个情况基本上（是）这个样子’结束，涵盖训练班名称、公共卫生课授课人、卫生行政相关课程及姬鹏飞授课内容。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"公共卫生训练班开设公共卫生课，由王聿先讲授。\",\n      \"process_text\": \"训练班名称为公共卫生训练班，公共卫生课由王聿先讲授。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0018\"\n      ],\n      \"evidence_quote\": \"我们名称叫公共卫生训练班，那么公共卫生课就是王聿先给我们讲（的），卫生行政管理部队。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"学员学习社会医学、卫生行政学、管理学课程，由姬鹏飞讲授。\",\n      \"process_text\": \"学习社会医学、卫生行政学、管理学这门课，由姬鹏飞讲授。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0018\"\n      ],\n      \"evidence_quote\": \"现在学社会医学卫生行政学管理学这门课，当时谁来给我们讲呢？姬鹏飞。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"姬鹏飞在卫生行政课中讲述红军、八路军传统，勉励新四军学员做得更好并向好的医生护士学习。\",\n      \"process_text\": \"姬鹏飞在卫生行政课中讲到红军时代、八路军的情况，并要求新四军学员做得更好，利用好的条件向大夫、护士学习。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0049\"\n      ],\n      \"evidence_quote\": \"姬鹏飞给我们上的卫生行政课里，讲到红军时代怎么样，讲到八路军里面是怎么样，讲到现在你们新四军应该做得比我们更好。你们有那么好的条件，那么多大夫，那么多好的外来的护士医生是不是，你们要好好地向他学习，班那个情况基本上（是）这个样子。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE002-P01\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0018\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE002-P02\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE002-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0049\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC07-DE002",
+    "event_enrichment": {
+      "result_state": "训练班学员接受了公共卫生课以及社会医学、卫生行政学、管理学等课程培训，并听取姬鹏飞在卫生行政课中关于红军、八路军卫生工作传统和对新四军学员期望的讲授。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以‘我们名称叫公共卫生训练班’为起点，至‘班那个情况基本上（是）这个样子’结束，涵盖训练班名称、公共卫生课授课人、卫生行政相关课程及姬鹏飞授课内容。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC07-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "公共卫生训练班开设公共卫生课，由王聿先讲授。",
+        "process_text": "训练班名称为公共卫生训练班，公共卫生课由王聿先讲授。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0018"
+        ],
+        "evidence_quote": "我们名称叫公共卫生训练班，那么公共卫生课就是王聿先给我们讲（的），卫生行政管理部队。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "学员学习社会医学、卫生行政学、管理学课程，由姬鹏飞讲授。",
+        "process_text": "学习社会医学、卫生行政学、管理学这门课，由姬鹏飞讲授。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0018"
+        ],
+        "evidence_quote": "现在学社会医学卫生行政学管理学这门课，当时谁来给我们讲呢？姬鹏飞。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "姬鹏飞在卫生行政课中讲述红军、八路军传统，勉励新四军学员做得更好并向好的医生护士学习。",
+        "process_text": "姬鹏飞在卫生行政课中讲到红军时代、八路军的情况，并要求新四军学员做得更好，利用好的条件向大夫、护士学习。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0049"
+        ],
+        "evidence_quote": "姬鹏飞给我们上的卫生行政课里，讲到红军时代怎么样，讲到八路军里面是怎么样，讲到现在你们新四军应该做得比我们更好。你们有那么好的条件，那么多大夫，那么多好的外来的护士医生是不是，你们要好好地向他学习，班那个情况基本上（是）这个样子。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC07-DE002-P01",
+        "target_stage_id": "BATCH02-DOC07-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0018",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE002-P02",
+        "target_stage_id": "BATCH02-DOC07-DE002-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC07-S0049",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

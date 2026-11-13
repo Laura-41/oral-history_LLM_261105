@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T22:13:24",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC03-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC03-DE001",
+  "usage": {
+    "prompt_tokens": 1644,
+    "total_tokens": 7353,
+    "completion_tokens": 5709,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4274
+    },
+    "tokens_per_second": 5708000,
+    "time_to_first_token_ms": 44180,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC03-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"伏击任务完成，部队转移至老虎山根据地休息；己方无牺牲、仅一两个轻伤，估计日军二百余人至少死伤一半，叙述者确认该战为二营所打的铁门闩伏击战。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以铁门闩伏击日军运输部队为起点，包含战后集合、检查救治、转移至老虎山休息及战果确认；史书误记与部队归属的评论作为战后说明，不另立事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"伏击日军运输弹药部队，集中火力杀伤敌人，达成伏击目的。\",\n      \"process_text\": \"敌方是运输弹药部队，需保障弹药；我方达到伏击目的，杀伤敌人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0005\"\n      ],\n      \"evidence_quote\": \"陈海峰：他不敢深入，因为那个地方崇山峻岭，他到山地作战，他得警惕。他那个部队是运输弹药（的）部队，他要保障那个弹药呢，不然弹药被我们抢掉了，他不是跟我们完了嘛。所以他要保障那个，我们呢，达到伏击的目的了，杀伤敌人的目的了。因为我们这个……\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"下山后集合队伍，检查掉队和负伤人员，卫生员包扎，仍在战场监视下。\",\n      \"process_text\": \"下山以后集合队伍，检查有没有掉队的、滚下来负伤的、要包扎的；连队卫生员很快包扎。此时仍是战场，鬼子往山上爬，飞机在上空监视。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0003\"\n      ],\n      \"evidence_quote\": \"陈海峰：下山以后就集合队伍了，检查有没有掉队的，有没有滚下来的负伤的，要包扎的。我们这个连队卫生员呢，把他包扎了，很快解决（了）。这还是战场啊，鬼子往山上爬呢，飞机还在上面监视呢。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"因靠近繁昌、敌增援快而来不及，翻过两座山转移至老虎山老营部休息。\",\n      \"process_text\": \"没有拿到，来不及；因靠繁昌太近、增援快，中分村还有鬼子。随后翻过两座山，到根据地老虎山老营部休息。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0007\"\n      ],\n      \"evidence_quote\": \"陈海峰：没有拿到，来不及。因为他靠繁昌太近，他增援部队快，中分村还有鬼子。中分村、铁门闩、繁昌城，那边是个五里亭（陈海峰指示几地的相对位置）。这是县的一个土马路，很窄的，那个马路就这么宽（陈海峰比划不到一米宽），沿着山边上走的那个路。我们就翻过两座山以后呢，就到我们的根据地休息了，到老虎山，老虎山是我们的老营部。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"战后确认无牺牲、伏击任务完成，估计日军死伤至少一半，己方仅轻伤两个，并说明该战为二营所打。\",\n      \"process_text\": \"那天没有牺牲，仗打得很漂亮，伏击任务完成；二百多个鬼子估计至少死伤一半，我方轻伤两个，完全是胜利的；并指出铁门闩伏击战是二营打的，不是一营。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0011\"\n      ],\n      \"evidence_quote\": \"陈海峰：那天没有牺牲的，那个仗打得很漂亮，我们伏击任务完成了。那就是二百多个鬼子的话，估计至少死伤一半。因为我们火力比较集中，轻重机枪，再加上密集的手榴弹，打下去，至少杀伤一半。那我们也是轻伤两个，所以说完全是胜利的。这是在“第六次繁昌战斗”的一个局部战斗，但是在史书里记载的时候呢，他记错了，那个场面他也没有很好描绘，说明写的那个人啊，他没参加这次战斗。他是写的一营，我们是二营，“铁门闩伏击战”是二营打的，不是一营打的。 \",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE001-P01\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0003\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE001-P02\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0007\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE001-P03\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0011\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC03-DE001",
+    "event_enrichment": {
+      "result_state": "伏击任务完成，部队转移至老虎山根据地休息；己方无牺牲、仅一两个轻伤，估计日军二百余人至少死伤一半，叙述者确认该战为二营所打的铁门闩伏击战。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以铁门闩伏击日军运输部队为起点，包含战后集合、检查救治、转移至老虎山休息及战果确认；史书误记与部队归属的评论作为战后说明，不另立事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC03-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "伏击日军运输弹药部队，集中火力杀伤敌人，达成伏击目的。",
+        "process_text": "敌方是运输弹药部队，需保障弹药；我方达到伏击目的，杀伤敌人。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0005"
+        ],
+        "evidence_quote": "陈海峰：他不敢深入，因为那个地方崇山峻岭，他到山地作战，他得警惕。他那个部队是运输弹药（的）部队，他要保障那个弹药呢，不然弹药被我们抢掉了，他不是跟我们完了嘛。所以他要保障那个，我们呢，达到伏击的目的了，杀伤敌人的目的了。因为我们这个……",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "下山后集合队伍，检查掉队和负伤人员，卫生员包扎，仍在战场监视下。",
+        "process_text": "下山以后集合队伍，检查有没有掉队的、滚下来负伤的、要包扎的；连队卫生员很快包扎。此时仍是战场，鬼子往山上爬，飞机在上空监视。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0003"
+        ],
+        "evidence_quote": "陈海峰：下山以后就集合队伍了，检查有没有掉队的，有没有滚下来的负伤的，要包扎的。我们这个连队卫生员呢，把他包扎了，很快解决（了）。这还是战场啊，鬼子往山上爬呢，飞机还在上面监视呢。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "因靠近繁昌、敌增援快而来不及，翻过两座山转移至老虎山老营部休息。",
+        "process_text": "没有拿到，来不及；因靠繁昌太近、增援快，中分村还有鬼子。随后翻过两座山，到根据地老虎山老营部休息。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0007"
+        ],
+        "evidence_quote": "陈海峰：没有拿到，来不及。因为他靠繁昌太近，他增援部队快，中分村还有鬼子。中分村、铁门闩、繁昌城，那边是个五里亭（陈海峰指示几地的相对位置）。这是县的一个土马路，很窄的，那个马路就这么宽（陈海峰比划不到一米宽），沿着山边上走的那个路。我们就翻过两座山以后呢，就到我们的根据地休息了，到老虎山，老虎山是我们的老营部。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "战后确认无牺牲、伏击任务完成，估计日军死伤至少一半，己方仅轻伤两个，并说明该战为二营所打。",
+        "process_text": "那天没有牺牲，仗打得很漂亮，伏击任务完成；二百多个鬼子估计至少死伤一半，我方轻伤两个，完全是胜利的；并指出铁门闩伏击战是二营打的，不是一营。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0011"
+        ],
+        "evidence_quote": "陈海峰：那天没有牺牲的，那个仗打得很漂亮，我们伏击任务完成了。那就是二百多个鬼子的话，估计至少死伤一半。因为我们火力比较集中，轻重机枪，再加上密集的手榴弹，打下去，至少杀伤一半。那我们也是轻伤两个，所以说完全是胜利的。这是在“第六次繁昌战斗”的一个局部战斗，但是在史书里记载的时候呢，他记错了，那个场面他也没有很好描绘，说明写的那个人啊，他没参加这次战斗。他是写的一营，我们是二营，“铁门闩伏击战”是二营打的，不是一营打的。 ",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC03-DE001-P01",
+        "target_stage_id": "BATCH03-DOC03-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC03-S0003",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC03-DE001-P02",
+        "target_stage_id": "BATCH03-DOC03-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC03-S0007",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC03-DE001-P03",
+        "target_stage_id": "BATCH03-DOC03-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC03-S0011",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

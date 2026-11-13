@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T01:13:00",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC01-DE009",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC01-DE009",
+  "usage": {
+    "prompt_tokens": 1167,
+    "total_tokens": 4024,
+    "completion_tokens": 2857,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1968
+    },
+    "time_to_first_token_ms": 24670,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-15\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC01-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"张茜当面问起陈锐霆多年未看望陈毅，陈锐霆以司令职务重要、外事活动多以及自身无时间作解释，并认为彼此关系不会因此变差。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以张茜偶遇陈锐霆并当面发问为核心；前接陈锐霆到北京后数年未看望陈毅的背景，后接陈锐霆的解释性回答，均在同一片段内。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆到北京后数年未去看望陈毅，构成张茜发问的背景。\",\n      \"process_text\": \"陈锐霆离开陈毅到北京后，好几年没有去看望陈毅。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0040\"\n      ],\n      \"evidence_quote\": \"他到了北京来，好几年我也没去看他\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"张茜偶遇陈锐霆，仍称其“陈处长”，并问是否得罪了他、为何不到家里来看看。\",\n      \"process_text\": \"张茜有一次碰到陈锐霆，叫他陈处长，问他怎么得罪他了，为什么没到他们那里看看他们。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0040\"\n      ],\n      \"evidence_quote\": \"他的夫人张茜，我们很熟悉了，有一次碰到我，她还叫我陈处长，她说我们怎么得罪你了，你也没到我们这里来看看我们。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆解释未去看望的原因，认为司令职务重要、外事多不便打扰，自己身边顾问围绕没有时间，并判断关系不会因此变差。\",\n      \"process_text\": \"陈锐霆回答说，司令职务那么重要，外事活动那么多，不能去打扰；自己身边好几个顾问围着转，一点时间也没有；他知道不去看陈毅，关系也不会差。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0040\"\n      ],\n      \"evidence_quote\": \"哎呀，我说，司令职务那么重要，外事（活动）那么多，我不能去打扰他；另外我自己，好几个顾问（音）围着我转，我一点时间也没有。我知道我不去看他，我们的关系也不会差，的确是。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE009-P01\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE009-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0040\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE009-P02\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE009-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0040\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-15",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC01-DE009",
+    "event_enrichment": {
+      "result_state": "张茜当面问起陈锐霆多年未看望陈毅，陈锐霆以司令职务重要、外事活动多以及自身无时间作解释，并认为彼此关系不会因此变差。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以张茜偶遇陈锐霆并当面发问为核心；前接陈锐霆到北京后数年未看望陈毅的背景，后接陈锐霆的解释性回答，均在同一片段内。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC01-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆到北京后数年未去看望陈毅，构成张茜发问的背景。",
+        "process_text": "陈锐霆离开陈毅到北京后，好几年没有去看望陈毅。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0040"
+        ],
+        "evidence_quote": "他到了北京来，好几年我也没去看他",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "张茜偶遇陈锐霆，仍称其“陈处长”，并问是否得罪了他、为何不到家里来看看。",
+        "process_text": "张茜有一次碰到陈锐霆，叫他陈处长，问他怎么得罪他了，为什么没到他们那里看看他们。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0040"
+        ],
+        "evidence_quote": "他的夫人张茜，我们很熟悉了，有一次碰到我，她还叫我陈处长，她说我们怎么得罪你了，你也没到我们这里来看看我们。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆解释未去看望的原因，认为司令职务重要、外事多不便打扰，自己身边顾问围绕没有时间，并判断关系不会因此变差。",
+        "process_text": "陈锐霆回答说，司令职务那么重要，外事活动那么多，不能去打扰；自己身边好几个顾问围着转，一点时间也没有；他知道不去看陈毅，关系也不会差。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0040"
+        ],
+        "evidence_quote": "哎呀，我说，司令职务那么重要，外事（活动）那么多，我不能去打扰他；另外我自己，好几个顾问（音）围着我转，我一点时间也没有。我知道我不去看他，我们的关系也不会差，的确是。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC01-DE009-P01",
+        "target_stage_id": "BATCH07-DOC01-DE009-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH07-DOC01-S0040",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC01-DE009-P02",
+        "target_stage_id": "BATCH07-DOC01-DE009-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH07-DOC01-S0040",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-12T15:44:01",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC08-DE004",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC08-DE004",
+  "usage": {
+    "prompt_tokens": 1223,
+    "total_tokens": 6371,
+    "completion_tokens": 5148,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4503
+    },
+    "time_to_first_token_ms": 84106,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5147000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC08-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"师部走到白彦以北，六七十华里的一个比较大的村子；政治部住在叫公家山（音），离那二里地。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据 S0023 中‘因为反扫荡以后’至‘离那二里地’确定本事件；其后‘那时候罗帅就考虑呀……’转入罗帅对部队发展的考虑，不属于本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC08-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"反扫荡后师部转移至白彦以北的较大村子\",\n      \"process_text\": \"反扫荡以后，师部就走到白彦以北，六七十华里的一个比较大的村子，在那个地方\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC08-S0023\"\n      ],\n      \"evidence_quote\": \"因为反扫荡以后，师部就走到白彦以北，六七十华里的一个比较大的村子，在那个地方\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC08-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"政治部驻公家山（音），离那二里地\",\n      \"process_text\": \"政治部住在叫公家山（音），离那二里地\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC08-S0023\"\n      ],\n      \"evidence_quote\": \"我们政治部呢就住在叫公家山（音），离那二里地\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC08-DE004-P01\",\n      \"target_stage_id\": \"BATCH06-DOC08-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC08-S0023\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC08-DE004",
+    "event_enrichment": {
+      "result_state": "师部走到白彦以北，六七十华里的一个比较大的村子；政治部住在叫公家山（音），离那二里地。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "依据 S0023 中‘因为反扫荡以后’至‘离那二里地’确定本事件；其后‘那时候罗帅就考虑呀……’转入罗帅对部队发展的考虑，不属于本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC08-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "反扫荡后师部转移至白彦以北的较大村子",
+        "process_text": "反扫荡以后，师部就走到白彦以北，六七十华里的一个比较大的村子，在那个地方",
+        "evidence_segment_ids": [
+          "BATCH06-DOC08-S0023"
+        ],
+        "evidence_quote": "因为反扫荡以后，师部就走到白彦以北，六七十华里的一个比较大的村子，在那个地方",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC08-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "政治部驻公家山（音），离那二里地",
+        "process_text": "政治部住在叫公家山（音），离那二里地",
+        "evidence_segment_ids": [
+          "BATCH06-DOC08-S0023"
+        ],
+        "evidence_quote": "我们政治部呢就住在叫公家山（音），离那二里地",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC08-DE004-P01",
+        "target_stage_id": "BATCH06-DOC08-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC08-S0023",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

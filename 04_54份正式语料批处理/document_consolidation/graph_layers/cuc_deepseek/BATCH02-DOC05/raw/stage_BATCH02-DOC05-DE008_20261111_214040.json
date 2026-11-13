@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T21:40:40",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC05-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC05-DE008",
+  "usage": {
+    "prompt_tokens": 1416,
+    "total_tokens": 2631,
+    "completion_tokens": 1215,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 710
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 9817,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC05-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"周恩来参观了军医处淋浴室，并对淋浴室及史沫特莱的贡献表示赞扬和感谢。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件起于周恩来在时去参观军医处淋浴室，止于他对淋浴室大加赞扬并感谢史沫特莱。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"周恩来参观军医处淋浴室\",\n      \"process_text\": \"周总理在的时候，去参观了这个淋浴室。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0072\"\n      ],\n      \"evidence_quote\": \"那么周总理在的时候，就去参观了这个淋浴室\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"周恩来对淋浴室大加赞扬并感谢史沫特莱\",\n      \"process_text\": \"周恩来对淋浴室大加赞扬，并非常感谢史沫特莱。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0072\"\n      ],\n      \"evidence_quote\": \"大加赞扬，非常感谢史沫特莱。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE008-P01\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0072\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC05-DE008",
+    "event_enrichment": {
+      "result_state": "周恩来参观了军医处淋浴室，并对淋浴室及史沫特莱的贡献表示赞扬和感谢。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件起于周恩来在时去参观军医处淋浴室，止于他对淋浴室大加赞扬并感谢史沫特莱。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC05-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "周恩来参观军医处淋浴室",
+        "process_text": "周总理在的时候，去参观了这个淋浴室。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0072"
+        ],
+        "evidence_quote": "那么周总理在的时候，就去参观了这个淋浴室",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "周恩来对淋浴室大加赞扬并感谢史沫特莱",
+        "process_text": "周恩来对淋浴室大加赞扬，并非常感谢史沫特莱。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0072"
+        ],
+        "evidence_quote": "大加赞扬，非常感谢史沫特莱。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC05-DE008-P01",
+        "target_stage_id": "BATCH02-DOC05-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC05-S0072",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

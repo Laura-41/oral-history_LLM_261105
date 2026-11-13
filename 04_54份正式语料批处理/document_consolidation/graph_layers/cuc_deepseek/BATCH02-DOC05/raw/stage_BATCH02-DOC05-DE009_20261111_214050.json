@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T21:40:50",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC05-DE009",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC05-DE009",
+  "usage": {
+    "prompt_tokens": 1325,
+    "total_tokens": 4800,
+    "completion_tokens": 3475,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2286
+    },
+    "time_to_first_token_ms": 30916,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC05-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"云岭和中村教导队遭轰炸，老百姓及教导队医务所护士出现死伤，部队伤亡较少；轰炸后全班出动救援，但军医处仅有几副担架，救援条件不足。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于7月1号日军13架飞机突然轰炸云岭，止于轰炸后全班出动救老百姓、军医处担架不足的记述。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"7月1号，日军13架飞机在无情报情况下突然轰炸云岭。\",\n      \"process_text\": \"7月1号日本鬼子13架飞机，突如其来，没情报，我们都不知道，这个时候就炸云岭。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0076\"\n      ],\n      \"evidence_quote\": \"7月1号日本鬼子13架飞机，突如其来，没情报，我们都不知道，这个时候就炸云岭。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"云岭街上的老百姓和零散部队遭轰炸；军部实际驻罗里村，正式部队分散驻在山坡。\",\n      \"process_text\": \"云岭还住老百姓，都炸了老百姓，那里零零散散有些部队，正式的部队都不驻在街上面，都驻在山坡上。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0076\"\n      ],\n      \"evidence_quote\": \"因为我们军部在云岭嘛，实际上我们军部的位置是在罗里村，离开云岭还有一里多路。云岭还住老百姓，都炸了老百姓，那里零零散散有些部队，正式的部队都不驻在街上面，都驻在山坡上。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"中村教导队被炸得很厉害，教导队医务所一名姓冯的护士和好些老百姓被炸死，许多老百姓被炸伤，部队伤亡较少。\",\n      \"process_text\": \"炸了中村教导队，教导队炸得很厉害，炸死教导队医务所护士和好些老百姓，炸伤好多老百姓，部队伤亡很少。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0078\"\n      ],\n      \"evidence_quote\": \"那么就炸了中村教导队，教导队炸得很厉害，还炸死了教导队医务所的护士，一个姓冯的，（叫）什么名字我忘了，现在还有一个墓在那。还炸死了好些老百姓，炸伤了好多老百姓，实际上部队呀，没有炸伤多少，炸伤一部分，很少，主要是炸的老百姓。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE009-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"轰炸后，全班马上出动救老百姓；因事先没有准备，军医处只有几副担架。\",\n      \"process_text\": \"炸老百姓以后，我们全班马上就出动，就去救老百姓，因为事先没有准备，我们军医处也只是几副担架。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0078\"\n      ],\n      \"evidence_quote\": \"炸老百姓以后呢，我们全班马上就出动，就去救老百姓，因为事先没有准备啊，我们军医处也只是几副担架。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE009-P01\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0076\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE009-P02\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE009-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0078\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE009-P03\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE009-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0078\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC05-DE009",
+    "event_enrichment": {
+      "result_state": "云岭和中村教导队遭轰炸，老百姓及教导队医务所护士出现死伤，部队伤亡较少；轰炸后全班出动救援，但军医处仅有几副担架，救援条件不足。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于7月1号日军13架飞机突然轰炸云岭，止于轰炸后全班出动救老百姓、军医处担架不足的记述。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC05-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "7月1号，日军13架飞机在无情报情况下突然轰炸云岭。",
+        "process_text": "7月1号日本鬼子13架飞机，突如其来，没情报，我们都不知道，这个时候就炸云岭。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0076"
+        ],
+        "evidence_quote": "7月1号日本鬼子13架飞机，突如其来，没情报，我们都不知道，这个时候就炸云岭。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "云岭街上的老百姓和零散部队遭轰炸；军部实际驻罗里村，正式部队分散驻在山坡。",
+        "process_text": "云岭还住老百姓，都炸了老百姓，那里零零散散有些部队，正式的部队都不驻在街上面，都驻在山坡上。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0076"
+        ],
+        "evidence_quote": "因为我们军部在云岭嘛，实际上我们军部的位置是在罗里村，离开云岭还有一里多路。云岭还住老百姓，都炸了老百姓，那里零零散散有些部队，正式的部队都不驻在街上面，都驻在山坡上。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "中村教导队被炸得很厉害，教导队医务所一名姓冯的护士和好些老百姓被炸死，许多老百姓被炸伤，部队伤亡较少。",
+        "process_text": "炸了中村教导队，教导队炸得很厉害，炸死教导队医务所护士和好些老百姓，炸伤好多老百姓，部队伤亡很少。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0078"
+        ],
+        "evidence_quote": "那么就炸了中村教导队，教导队炸得很厉害，还炸死了教导队医务所的护士，一个姓冯的，（叫）什么名字我忘了，现在还有一个墓在那。还炸死了好些老百姓，炸伤了好多老百姓，实际上部队呀，没有炸伤多少，炸伤一部分，很少，主要是炸的老百姓。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE009-P04",
+        "stage_order": 4,
+        "stage_summary": "轰炸后，全班马上出动救老百姓；因事先没有准备，军医处只有几副担架。",
+        "process_text": "炸老百姓以后，我们全班马上就出动，就去救老百姓，因为事先没有准备，我们军医处也只是几副担架。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0078"
+        ],
+        "evidence_quote": "炸老百姓以后呢，我们全班马上就出动，就去救老百姓，因为事先没有准备啊，我们军医处也只是几副担架。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC05-DE009-P01",
+        "target_stage_id": "BATCH02-DOC05-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC05-S0076",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC05-DE009-P02",
+        "target_stage_id": "BATCH02-DOC05-DE009-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC05-S0078",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC05-DE009-P03",
+        "target_stage_id": "BATCH02-DOC05-DE009-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC05-S0078",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

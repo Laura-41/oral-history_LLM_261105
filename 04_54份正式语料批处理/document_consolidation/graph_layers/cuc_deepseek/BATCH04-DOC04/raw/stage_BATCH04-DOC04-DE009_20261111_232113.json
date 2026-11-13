@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T23:21:13",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC04-DE009",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC04-DE009",
+  "usage": {
+    "prompt_tokens": 1156,
+    "total_tokens": 5062,
+    "completion_tokens": 3906,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3021
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 33644
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC04-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"已调至军部任参谋处长兼对美军联络处处长；参谋处下辖七个科，胡立教所掌空中情报和警卫团归参谋处领导。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以军部调任命令为起点，以实际调至军部及到任后参谋处构成说明为终点；此前在司令部参谋处工作不计入本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"在司令部参谋处工作不久后，军部下达调任命令，拟调陈锐霆任军部参谋处长兼对美军联络处处长。\",\n      \"process_text\": \"到司令部参谋处工作没有好久，军部又来了命令，调我到军部去当参谋处长，兼着对美军联络处的处长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0057\"\n      ],\n      \"evidence_quote\": \"到司令部参谋处工作没有好久，军部又来了命令，调我到军部去当参谋处长，兼着对美军联络处的处长。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"邓政委谈话动员，强调对美联络需要其经历，劝其服从全局、不再讲价钱。\",\n      \"process_text\": \"邓政委他说不能够再讲价钱了，别人他干不了，特别要跟美国打交道，你离开国民党那个部队，都还了解一些情况，军部调你去也是有一定的道理，那就去吧，为全局吧。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0057\"\n      ],\n      \"evidence_quote\": \"邓政委他说不能够再讲价钱了，别人他干不了，特别要跟美国打交道，你离开国民党那个部队，都还了解一些情况，军部调你去也是有一定的道理，那就去吧，为全局吧。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆服从调动，被正式调至军部；到任时参谋处七个科都是长征老干部。\",\n      \"process_text\": \"就把我调到军部去了，军部那个时候七个科都是长征的老干部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0057\"\n      ],\n      \"evidence_quote\": \"就把我调到军部去了，军部那个时候七个科都是长征的老干部。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE009-P01\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0057\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE009-P02\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE009-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0057\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC04-DE009",
+    "event_enrichment": {
+      "result_state": "已调至军部任参谋处长兼对美军联络处处长；参谋处下辖七个科，胡立教所掌空中情报和警卫团归参谋处领导。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以军部调任命令为起点，以实际调至军部及到任后参谋处构成说明为终点；此前在司令部参谋处工作不计入本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC04-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "在司令部参谋处工作不久后，军部下达调任命令，拟调陈锐霆任军部参谋处长兼对美军联络处处长。",
+        "process_text": "到司令部参谋处工作没有好久，军部又来了命令，调我到军部去当参谋处长，兼着对美军联络处的处长。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0057"
+        ],
+        "evidence_quote": "到司令部参谋处工作没有好久，军部又来了命令，调我到军部去当参谋处长，兼着对美军联络处的处长。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "邓政委谈话动员，强调对美联络需要其经历，劝其服从全局、不再讲价钱。",
+        "process_text": "邓政委他说不能够再讲价钱了，别人他干不了，特别要跟美国打交道，你离开国民党那个部队，都还了解一些情况，军部调你去也是有一定的道理，那就去吧，为全局吧。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0057"
+        ],
+        "evidence_quote": "邓政委他说不能够再讲价钱了，别人他干不了，特别要跟美国打交道，你离开国民党那个部队，都还了解一些情况，军部调你去也是有一定的道理，那就去吧，为全局吧。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆服从调动，被正式调至军部；到任时参谋处七个科都是长征老干部。",
+        "process_text": "就把我调到军部去了，军部那个时候七个科都是长征的老干部。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0057"
+        ],
+        "evidence_quote": "就把我调到军部去了，军部那个时候七个科都是长征的老干部。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC04-DE009-P01",
+        "target_stage_id": "BATCH04-DOC04-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC04-S0057",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC04-DE009-P02",
+        "target_stage_id": "BATCH04-DOC04-DE009-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH04-DOC04-S0057",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T22:07:29",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC04-DE005",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC04-DE005",
+  "usage": {
+    "prompt_tokens": 1388,
+    "total_tokens": 9291,
+    "completion_tokens": 7903,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6658
+    },
+    "time_to_first_token_ms": 118397,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC04-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆被调到军部，担任参谋处长兼对美军联络处处长；到任后参谋处实际起给各师通信、了解情况的作用，华中局跟新四军军部驻在一起，保护他们的安全。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据 S0057 从“到司令部参谋处工作没有好久”起，经军部命令、邓政委劝说、“就把我调到军部去了”，并延伸至 S0059 对参谋处实际作用的说明；事件核心为调任军部参谋处长兼对美军联络处处长。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"军部命令调任参谋处长兼对美军联络处处长\",\n      \"process_text\": \"到司令部参谋处工作没有好久，军部又来了命令，调我到军部去当参谋处长，兼着对美军联络处的处长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0057\"\n      ],\n      \"evidence_quote\": \"到司令部参谋处工作没有好久，军部又来了命令，调我到军部去当参谋处长，兼着对美军联络处的处长。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"邓政委劝说接受调任，强调为全局\",\n      \"process_text\": \"邓政委他说不能够再讲价钱了，别人他干不了，特别要跟美国打交道，你离开国民党那个部队，都还了解一些情况，军部调你去也是有一定的道理，那就去吧，为全局吧。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0057\"\n      ],\n      \"evidence_quote\": \"邓政委他说不能够再讲价钱了，别人他干不了，特别要跟美国打交道，你离开国民党那个部队，都还了解一些情况，军部调你去也是有一定的道理，那就去吧，为全局吧。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆被调到军部\",\n      \"process_text\": \"就把我调到军部去了\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0057\"\n      ],\n      \"evidence_quote\": \"就把我调到军部去了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"到任后参谋处承担通信、了解情况与保护安全等作用\",\n      \"process_text\": \"所以实际上我们这参谋处就是起给各师通信的作用，了解情况的作用，另外华中局跟新四军军部驻在一起，保护他们的安全。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0059\"\n      ],\n      \"evidence_quote\": \"所以实际上我们这参谋处就是起给各师通信的作用，了解情况的作用，另外华中局跟新四军军部驻在一起，保护他们的安全。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE005-P01\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0057\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE005-P02\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE005-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0057\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE005-P03\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE005-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0059\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC04-DE005",
+    "event_enrichment": {
+      "result_state": "陈锐霆被调到军部，担任参谋处长兼对美军联络处处长；到任后参谋处实际起给各师通信、了解情况的作用，华中局跟新四军军部驻在一起，保护他们的安全。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "依据 S0057 从“到司令部参谋处工作没有好久”起，经军部命令、邓政委劝说、“就把我调到军部去了”，并延伸至 S0059 对参谋处实际作用的说明；事件核心为调任军部参谋处长兼对美军联络处处长。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC04-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "军部命令调任参谋处长兼对美军联络处处长",
+        "process_text": "到司令部参谋处工作没有好久，军部又来了命令，调我到军部去当参谋处长，兼着对美军联络处的处长。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0057"
+        ],
+        "evidence_quote": "到司令部参谋处工作没有好久，军部又来了命令，调我到军部去当参谋处长，兼着对美军联络处的处长。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "邓政委劝说接受调任，强调为全局",
+        "process_text": "邓政委他说不能够再讲价钱了，别人他干不了，特别要跟美国打交道，你离开国民党那个部队，都还了解一些情况，军部调你去也是有一定的道理，那就去吧，为全局吧。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0057"
+        ],
+        "evidence_quote": "邓政委他说不能够再讲价钱了，别人他干不了，特别要跟美国打交道，你离开国民党那个部队，都还了解一些情况，军部调你去也是有一定的道理，那就去吧，为全局吧。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆被调到军部",
+        "process_text": "就把我调到军部去了",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0057"
+        ],
+        "evidence_quote": "就把我调到军部去了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "到任后参谋处承担通信、了解情况与保护安全等作用",
+        "process_text": "所以实际上我们这参谋处就是起给各师通信的作用，了解情况的作用，另外华中局跟新四军军部驻在一起，保护他们的安全。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0059"
+        ],
+        "evidence_quote": "所以实际上我们这参谋处就是起给各师通信的作用，了解情况的作用，另外华中局跟新四军军部驻在一起，保护他们的安全。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC04-DE005-P01",
+        "target_stage_id": "BATCH04-DOC04-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC04-S0057",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC04-DE005-P02",
+        "target_stage_id": "BATCH04-DOC04-DE005-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC04-S0057",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC04-DE005-P03",
+        "target_stage_id": "BATCH04-DOC04-DE005-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC04-S0059",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

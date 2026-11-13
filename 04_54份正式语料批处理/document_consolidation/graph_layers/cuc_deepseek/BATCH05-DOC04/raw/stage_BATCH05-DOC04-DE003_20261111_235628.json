@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T23:56:28",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC04-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC04-DE003",
+  "usage": {
+    "prompt_tokens": 1337,
+    "total_tokens": 6118,
+    "completion_tokens": 4781,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4080
+    },
+    "time_to_first_token_ms": 37238,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC04-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"马苏政经三次手术后被治好；他记住医务人员跪在担架旁换药，并因此愿意留在后方工作。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于担架旁跪着换药及马苏政重伤自述，止于三次手术后治好；不含其职务履历等背景信息。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"担架旁跪着换药\",\n      \"process_text\": \"医务人员在担架旁跪着给伤员换药，马苏政记住了这个担架和跪着换药的情景。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0091\"\n      ],\n      \"evidence_quote\": \"他就记住，就是这个担架，跪在那里给他换药。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"重伤并三次手术\",\n      \"process_text\": \"马苏政自述当时重伤不能动，先后开了三次刀。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0092\"\n      ],\n      \"evidence_quote\": \"我当时不能动啊，重伤啊！”他说。他开了三次刀，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"手术治愈\",\n      \"process_text\": \"经过三次手术，才把他治好。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0093\"\n      ],\n      \"evidence_quote\": \"才把他治好。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE003-P01\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0092\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE003-P02\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE003-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0093\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC04-DE003",
+    "event_enrichment": {
+      "result_state": "马苏政经三次手术后被治好；他记住医务人员跪在担架旁换药，并因此愿意留在后方工作。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于担架旁跪着换药及马苏政重伤自述，止于三次手术后治好；不含其职务履历等背景信息。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC04-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "担架旁跪着换药",
+        "process_text": "医务人员在担架旁跪着给伤员换药，马苏政记住了这个担架和跪着换药的情景。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0091"
+        ],
+        "evidence_quote": "他就记住，就是这个担架，跪在那里给他换药。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "重伤并三次手术",
+        "process_text": "马苏政自述当时重伤不能动，先后开了三次刀。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0092"
+        ],
+        "evidence_quote": "我当时不能动啊，重伤啊！”他说。他开了三次刀，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "手术治愈",
+        "process_text": "经过三次手术，才把他治好。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0093"
+        ],
+        "evidence_quote": "才把他治好。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC04-DE003-P01",
+        "target_stage_id": "BATCH05-DOC04-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC04-S0092",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC04-DE003-P02",
+        "target_stage_id": "BATCH05-DOC04-DE003-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC04-S0093",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,348 @@
+{
+  "run_time": "2026-11-11T20:53:20",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH06-DOC06-W002",
+  "technical_document_id": "BATCH06-DOC06",
+  "document_id": "14.陈锐霆 090510（二校完 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH06-DOC06-S0016",
+    "BATCH06-DOC06-S0017",
+    "BATCH06-DOC06-S0018",
+    "BATCH06-DOC06-S0019",
+    "BATCH06-DOC06-S0020",
+    "BATCH06-DOC06-S0021",
+    "BATCH06-DOC06-S0022",
+    "BATCH06-DOC06-S0023",
+    "BATCH06-DOC06-S0024",
+    "BATCH06-DOC06-S0025",
+    "BATCH06-DOC06-S0026",
+    "BATCH06-DOC06-S0027",
+    "BATCH06-DOC06-S0028",
+    "BATCH06-DOC06-S0029",
+    "BATCH06-DOC06-S0030",
+    "BATCH06-DOC06-S0031",
+    "BATCH06-DOC06-S0032",
+    "BATCH06-DOC06-S0033",
+    "BATCH06-DOC06-S0034",
+    "BATCH06-DOC06-S0035",
+    "BATCH06-DOC06-S0036",
+    "BATCH06-DOC06-S0037",
+    "BATCH06-DOC06-S0038",
+    "BATCH06-DOC06-S0039",
+    "BATCH06-DOC06-S0040",
+    "BATCH06-DOC06-S0041",
+    "BATCH06-DOC06-S0042"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 5,
+    "assigned_segment_count": 11,
+    "unassigned_segment_count": 16,
+    "input_segment_count": 27,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH06-DOC06-W002-E04",
+    "BATCH06-DOC06-W002-E05"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH06-DOC06-W002",
+    "events": [
+      {
+        "candidate_id": "BATCH06-DOC06-W002-E01",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0017",
+          "BATCH06-DOC06-S0020",
+          "BATCH06-DOC06-S0029"
+        ],
+        "event": {
+          "event_name": "陈锐霆所在部队渡江并解放南京",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "渡江，解放南京",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈锐霆所在部队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "南京",
+              "normalized_entity": "南京",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "MANNER",
+              "value": "没有进行大的战斗",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "渡江的时候敌人基本上都撤了，没有进行大的战斗，就把南京解放了，南京是国民党那个时候国家的首府嘛。",
+          "type_basis": "核心过程是部队渡江、进入并解放南京，属于组织行动和作战；可用 What did X do? 测试。写诗和记者评价只作为渡江后的总结细节，不改变主导类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W002-E02",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0020",
+          "BATCH06-DOC06-S0022",
+          "BATCH06-DOC06-S0024"
+        ],
+        "event": {
+          "event_name": "炮兵部队警告并炮击紫石英号及援救英舰",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "警告并炮击紫石英号、伴侣号",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈锐霆所在炮兵部队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "炮三团团长",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "紫石英号",
+              "normalized_entity": "紫石英号",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "伴侣号",
+              "normalized_entity": "伴侣号",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "20号",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "镇江附近三岔口江面",
+              "normalized_value": "镇江附近"
+            },
+            {
+              "kind": "MANNER",
+              "value": "居高临下",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "紫石英号往南走的时候，我们炮三团团长跟我商量了以后，就是警告他，不要继续前进了，我们要过江了嘛。我们警告他的炮弹，离他的兵舰还有好几百公尺。",
+          "type_basis": "核心是炮兵部队对紫石英号实施警告、还击和炮击，并造成搁浅，后续援救的伴侣号也被打伤，属于物质/作战；警告言语是作战阶段，不单独作为言语事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W002-E03",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0024",
+          "BATCH06-DOC06-S0026",
+          "BATCH06-DOC06-S0028",
+          "BATCH06-DOC06-S0029"
+        ],
+        "event": {
+          "event_name": "炮兵部队与英舰伦敦号、黑天鹅号炮战",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "炮击伦敦号与黑天鹅号",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈锐霆所在炮兵部队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "这个旗舰",
+              "normalized_entity": "伦敦号",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "黑天鹅",
+              "normalized_entity": "黑天鹅号",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "第二天",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "离江岸大概四五公里",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他向我们这个纵深打了一炮，他有那个24公分的重炮，口径比较大，威力比较大。离江岸大概四五公里，我们一个步兵团的团长正在这开作战会议，一发炮弹打在那个地方，把团长也打牺牲了。以后我们也向这个旗舰，向这个“黑天鹅”开炮，把它的烟筒都给打掉了，很狼狈的。",
+          "type_basis": "核心是英舰炮击纵深、我方还击旗舰和黑天鹅号，属于物质/作战；旗舰名称确认和报纸描写是辅助信息。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W002-E04",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0032",
+          "BATCH06-DOC06-S0034",
+          "BATCH06-DOC06-S0040",
+          "BATCH06-DOC06-S0042"
+        ],
+        "event": {
+          "event_name": "陈锐霆过江后接收江阴要塞并安排接管",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "接收江阴要塞",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "江阴要塞",
+              "normalized_entity": "江阴要塞",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我们的政治委员",
+              "normalized_entity": "张凯",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "江阴要塞的军官",
+              "normalized_entity": "江阴要塞军官",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "23号",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "过江就接收江阴要塞，江阴要塞有我们地下党的活动啊，有两个团长是我们的党员，他们大炮就是向他们自己，向国民党地区打，不向我们这个地方打。他这个司令实际上被迫地起义了，有三千来人嘛。我一过了江就接收这个，以后我们的政治委员从后边来，他就接管这个江阴要塞的军官嘛。",
+          "type_basis": "核心是陈锐霆过江后接收江阴要塞，并安排政治委员接管军官、炮三团团长任副司令，属于组织行动；地下党动员和汇报是背景阶段。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC06-W002-E05",
+        "source_segment_ids": [
+          "BATCH06-DOC06-S0042"
+        ],
+        "event": {
+          "event_name": "陈锐霆到常州武进参加三野会议并讨论接收上海委员会设置",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "到常州武进参加三野会议",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "三野开两次会",
+              "normalized_entity": "三野会议",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "4月30号",
+              "normalized_value": "4月30日"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "常州、武进",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "接收上海",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我就到了常州，到了武进嘛，在那个地方三野开两次会，这是4月30号了。这个时候接收上海的委员会，由政治部主任唐亮做接收的主任嘛。",
+          "type_basis": "核心是陈锐霆到常州武进参加三野会议，并讨论接收上海委员会和军管会设置，属于组织行动；不是单纯关系或言语。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH06-DOC06-S0016",
+      "BATCH06-DOC06-S0018",
+      "BATCH06-DOC06-S0019",
+      "BATCH06-DOC06-S0021",
+      "BATCH06-DOC06-S0023",
+      "BATCH06-DOC06-S0025",
+      "BATCH06-DOC06-S0027",
+      "BATCH06-DOC06-S0030",
+      "BATCH06-DOC06-S0031",
+      "BATCH06-DOC06-S0033",
+      "BATCH06-DOC06-S0035",
+      "BATCH06-DOC06-S0036",
+      "BATCH06-DOC06-S0037",
+      "BATCH06-DOC06-S0038",
+      "BATCH06-DOC06-S0039",
+      "BATCH06-DOC06-S0041"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH06-DOC06-W002\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W002-E01\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0017\",\n        \"BATCH06-DOC06-S0020\",\n        \"BATCH06-DOC06-S0029\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆所在部队渡江并解放南京\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"渡江，解放南京\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈锐霆所在部队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"南京\",\n            \"normalized_entity\": \"南京\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"没有进行大的战斗\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"渡江的时候敌人基本上都撤了，没有进行大的战斗，就把南京解放了，南京是国民党那个时候国家的首府嘛。\",\n        \"type_basis\": \"核心过程是部队渡江、进入并解放南京，属于组织行动和作战；可用 What did X do? 测试。写诗和记者评价只作为渡江后的总结细节，不改变主导类型。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W002-E02\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0020\",\n        \"BATCH06-DOC06-S0022\",\n        \"BATCH06-DOC06-S0024\"\n      ],\n      \"event\": {\n        \"event_name\": \"炮兵部队警告并炮击紫石英号及援救英舰\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"警告并炮击紫石英号、伴侣号\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈锐霆所在炮兵部队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"炮三团团长\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"紫石英号\",\n            \"normalized_entity\": \"紫石英号\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"伴侣号\",\n            \"normalized_entity\": \"伴侣号\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"20号\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"镇江附近三岔口江面\",\n            \"normalized_value\": \"镇江附近\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"居高临下\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"紫石英号往南走的时候，我们炮三团团长跟我商量了以后，就是警告他，不要继续前进了，我们要过江了嘛。我们警告他的炮弹，离他的兵舰还有好几百公尺。\",\n        \"type_basis\": \"核心是炮兵部队对紫石英号实施警告、还击和炮击，并造成搁浅，后续援救的伴侣号也被打伤，属于物质/作战；警告言语是作战阶段，不单独作为言语事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W002-E03\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0024\",\n        \"BATCH06-DOC06-S0026\",\n        \"BATCH06-DOC06-S0028\",\n        \"BATCH06-DOC06-S0029\"\n      ],\n      \"event\": {\n        \"event_name\": \"炮兵部队与英舰伦敦号、黑天鹅号炮战\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"炮击伦敦号与黑天鹅号\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈锐霆所在炮兵部队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"这个旗舰\",\n            \"normalized_entity\": \"伦敦号\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"黑天鹅\",\n            \"normalized_entity\": \"黑天鹅号\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"第二天\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"离江岸大概四五公里\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"他向我们这个纵深打了一炮，他有那个24公分的重炮，口径比较大，威力比较大。离江岸大概四五公里，我们一个步兵团的团长正在这开作战会议，一发炮弹打在那个地方，把团长也打牺牲了。以后我们也向这个旗舰，向这个“黑天鹅”开炮，把它的烟筒都给打掉了，很狼狈的。\",\n        \"type_basis\": \"核心是英舰炮击纵深、我方还击旗舰和黑天鹅号，属于物质/作战；旗舰名称确认和报纸描写是辅助信息。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W002-E04\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0032\",\n        \"BATCH06-DOC06-S0034\",\n        \"BATCH06-DOC06-S0040\",\n        \"BATCH06-DOC06-S0042\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆过江后接收江阴要塞并安排接管\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"接收江阴要塞\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"江阴要塞\",\n            \"normalized_entity\": \"江阴要塞\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们的政治委员\",\n            \"normalized_entity\": \"张凯\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"江阴要塞的军官\",\n            \"normalized_entity\": \"江阴要塞军官\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"23号\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"过江就接收江阴要塞，江阴要塞有我们地下党的活动啊，有两个团长是我们的党员，他们大炮就是向他们自己，向国民党地区打，不向我们这个地方打。他这个司令实际上被迫地起义了，有三千来人嘛。我一过了江就接收这个，以后我们的政治委员从后边来，他就接管这个江阴要塞的军官嘛。\",\n        \"type_basis\": \"核心是陈锐霆过江后接收江阴要塞，并安排政治委员接管军官、炮三团团长任副司令，属于组织行动；地下党动员和汇报是背景阶段。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC06-W002-E05\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC06-S0042\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆到常州武进参加三野会议并讨论接收上海委员会设置\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"到常州武进参加三野会议\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"三野开两次会\",\n            \"normalized_entity\": \"三野会议\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"4月30号\",\n            \"normalized_value\": \"4月30日\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"常州、武进\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"接收上海\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我就到了常州，到了武进嘛，在那个地方三野开两次会，这是4月30号了。这个时候接收上海的委员会，由政治部主任唐亮做接收的主任嘛。\",\n        \"type_basis\": \"核心是陈锐霆到常州武进参加三野会议，并讨论接收上海委员会和军管会设置，属于组织行动；不是单纯关系或言语。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH06-DOC06-S0016\",\n    \"BATCH06-DOC06-S0018\",\n    \"BATCH06-DOC06-S0019\",\n    \"BATCH06-DOC06-S0021\",\n    \"BATCH06-DOC06-S0023\",\n    \"BATCH06-DOC06-S0025\",\n    \"BATCH06-DOC06-S0027\",\n    \"BATCH06-DOC06-S0030\",\n    \"BATCH06-DOC06-S0031\",\n    \"BATCH06-DOC06-S0033\",\n    \"BATCH06-DOC06-S0035\",\n    \"BATCH06-DOC06-S0036\",\n    \"BATCH06-DOC06-S0037\",\n    \"BATCH06-DOC06-S0038\",\n    \"BATCH06-DOC06-S0039\",\n    \"BATCH06-DOC06-S0041\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 6070,
+    "total_tokens": 26270,
+    "completion_tokens": 20200,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 17247
+    },
+    "time_to_first_token_ms": 314831,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 10099500
+  }
+}

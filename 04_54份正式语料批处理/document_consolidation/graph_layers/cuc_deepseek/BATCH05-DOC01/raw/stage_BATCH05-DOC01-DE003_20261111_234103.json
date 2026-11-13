@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T23:41:03",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC01-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC01-DE003",
+  "usage": {
+    "prompt_tokens": 1037,
+    "total_tokens": 3072,
+    "completion_tokens": 2035,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1480
+    },
+    "time_to_first_token_ms": 16047,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC01-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"奴化教育通过宣传“大东亚共荣圈”及推行其课本、教日文、学日语等方式得到实施。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于“第四个阶段就是进行奴化教育”，止于“都要学日语”，涵盖宣传话语与课程语言措施。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"宣传“大东亚共荣圈”及“解放、拯救、恩人”话语。\",\n      \"process_text\": \"宣传其“大东亚共荣圈”，宣称“我们是来解放你们的，我们是救你们的，我们是你的恩人啊”。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0097\"\n      ],\n      \"evidence_quote\": \"第四个阶段就是进行奴化教育。就是宣传他的大东亚共荣圈，我们是来解放你们的，我们是救你们的，我们是你的恩人啊，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"推行其课本，教日文、学日语。\",\n      \"process_text\": \"课本都要用其指定的，都要教日文，都要学日语。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0097\"\n      ],\n      \"evidence_quote\": \"课本都要用他的，都要教日文，都要学日语。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE003-P01\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0097\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC01-DE003",
+    "event_enrichment": {
+      "result_state": "奴化教育通过宣传“大东亚共荣圈”及推行其课本、教日文、学日语等方式得到实施。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于“第四个阶段就是进行奴化教育”，止于“都要学日语”，涵盖宣传话语与课程语言措施。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC01-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "宣传“大东亚共荣圈”及“解放、拯救、恩人”话语。",
+        "process_text": "宣传其“大东亚共荣圈”，宣称“我们是来解放你们的，我们是救你们的，我们是你的恩人啊”。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0097"
+        ],
+        "evidence_quote": "第四个阶段就是进行奴化教育。就是宣传他的大东亚共荣圈，我们是来解放你们的，我们是救你们的，我们是你的恩人啊，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "推行其课本，教日文、学日语。",
+        "process_text": "课本都要用其指定的，都要教日文，都要学日语。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0097"
+        ],
+        "evidence_quote": "课本都要用他的，都要教日文，都要学日语。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC01-DE003-P01",
+        "target_stage_id": "BATCH05-DOC01-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC01-S0097",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

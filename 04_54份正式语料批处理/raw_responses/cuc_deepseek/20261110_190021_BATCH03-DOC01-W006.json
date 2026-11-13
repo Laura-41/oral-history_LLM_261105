@@ -1,0 +1,115 @@
+{
+  "run_time": "2026-11-10T19:00:21",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC01-W006",
+  "technical_document_id": "BATCH03-DOC01",
+  "document_id": "05.陈海峰（二访）（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC01-S0078",
+    "BATCH03-DOC01-S0079",
+    "BATCH03-DOC01-S0080",
+    "BATCH03-DOC01-S0081",
+    "BATCH03-DOC01-S0082",
+    "BATCH03-DOC01-S0083",
+    "BATCH03-DOC01-S0084"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 3,
+    "unassigned_segment_count": 4,
+    "input_segment_count": 7,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH03-DOC01-W006-E01"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC01-W006",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC01-W006-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC01-S0079",
+          "BATCH03-DOC01-S0081",
+          "BATCH03-DOC01-S0083"
+        ],
+        "event": {
+          "event_name": "繁昌战斗撤退途中遭炮击并滚下山",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "撤退遭炮击后滚下山",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰所在部队（营部）",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "打到最后",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "繁昌城",
+              "normalized_value": "繁昌城附近"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "往山上",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "山顶",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "向山下滚",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "山下",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "四发炮弹爆炸了，“乓乓乓乓”就打在我们这个中间啊！差一点这个营部全军覆没",
+          "type_basis": "核心过程为部队在敌炮火下撤往山上、遭炮击后奉命滚下山，属空间移动和军事行动；参与者为Actor，符合MATERIAL允许角色。营长命令等言语过程服务于同一撤退行动，不另立VERBAL事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC01-S0078",
+      "BATCH03-DOC01-S0080",
+      "BATCH03-DOC01-S0082",
+      "BATCH03-DOC01-S0084"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH03-DOC01-W006\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC01-W006-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC01-S0079\",\n        \"BATCH03-DOC01-S0081\",\n        \"BATCH03-DOC01-S0083\"\n      ],\n      \"event\": {\n        \"event_name\": \"繁昌战斗撤退途中遭炮击并滚下山\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"撤退遭炮击后滚下山\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰所在部队（营部）\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"打到最后\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"繁昌城\",\n            \"normalized_value\": \"繁昌城附近\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"往山上\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"山顶\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"向山下滚\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"山下\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"四发炮弹爆炸了，“乓乓乓乓”就打在我们这个中间啊！差一点这个营部全军覆没\",\n        \"type_basis\": \"核心过程为部队在敌炮火下撤往山上、遭炮击后奉命滚下山，属空间移动和军事行动；参与者为Actor，符合MATERIAL允许角色。营长命令等言语过程服务于同一撤退行动，不另立VERBAL事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC01-S0078\",\n    \"BATCH03-DOC01-S0080\",\n    \"BATCH03-DOC01-S0082\",\n    \"BATCH03-DOC01-S0084\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5068,
+    "total_tokens": 11913,
+    "completion_tokens": 6845,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6265
+    },
+    "tokens_per_second": 6844000,
+    "time_to_first_token_ms": 79812,
+    "time_per_output_token_ms": 0
+  }
+}

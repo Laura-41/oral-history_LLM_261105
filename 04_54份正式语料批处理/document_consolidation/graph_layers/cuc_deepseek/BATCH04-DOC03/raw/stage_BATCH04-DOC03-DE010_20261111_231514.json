@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T23:15:14",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC03-DE010",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC03-DE010",
+  "usage": {
+    "prompt_tokens": 1171,
+    "total_tokens": 3542,
+    "completion_tokens": 2371,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1630
+    },
+    "time_to_first_token_ms": 22988,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC03-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"追悼大会在常村召开，会场坐满、声势较大，敌人得知。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以原文“这样我们在常村又开了一个师部组织的追悼大会”为事件起点，至“敌人当然也就知道了”为终点；前文六支队牺牲团长作为触发背景，后文李基魁等人到访不纳入本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"六支队牺牲一名团长，成为召开追悼大会的触发背景。\",\n      \"process_text\": \"结果他们六支队就牺牲一个团长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0069\"\n      ],\n      \"evidence_quote\": \"结果他们六支队就牺牲一个团长。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"师部在常村组织召开追悼大会，会场坐满。\",\n      \"process_text\": \"这样我们在常村又开了一个师部组织的追悼大会，村子里一个比较大的场子都坐得满满的了\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0069\"\n      ],\n      \"evidence_quote\": \"这样我们在常村又开了一个师部组织的追悼大会，村子里一个比较大的场子都坐得满满的了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"追悼大会声势较大，敌人得知。\",\n      \"process_text\": \"这个声势也比较大，敌人当然也就知道了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0069\"\n      ],\n      \"evidence_quote\": \"这个声势也比较大，敌人当然也就知道了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE010-P01\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE010-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0069\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE010-P02\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE010-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0069\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC03-DE010",
+    "event_enrichment": {
+      "result_state": "追悼大会在常村召开，会场坐满、声势较大，敌人得知。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以原文“这样我们在常村又开了一个师部组织的追悼大会”为事件起点，至“敌人当然也就知道了”为终点；前文六支队牺牲团长作为触发背景，后文李基魁等人到访不纳入本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC03-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "六支队牺牲一名团长，成为召开追悼大会的触发背景。",
+        "process_text": "结果他们六支队就牺牲一个团长。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0069"
+        ],
+        "evidence_quote": "结果他们六支队就牺牲一个团长。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "师部在常村组织召开追悼大会，会场坐满。",
+        "process_text": "这样我们在常村又开了一个师部组织的追悼大会，村子里一个比较大的场子都坐得满满的了",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0069"
+        ],
+        "evidence_quote": "这样我们在常村又开了一个师部组织的追悼大会，村子里一个比较大的场子都坐得满满的了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "追悼大会声势较大，敌人得知。",
+        "process_text": "这个声势也比较大，敌人当然也就知道了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0069"
+        ],
+        "evidence_quote": "这个声势也比较大，敌人当然也就知道了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC03-DE010-P01",
+        "target_stage_id": "BATCH04-DOC03-DE010-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH04-DOC03-S0069",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE010-P02",
+        "target_stage_id": "BATCH04-DOC03-DE010-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC03-S0069",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

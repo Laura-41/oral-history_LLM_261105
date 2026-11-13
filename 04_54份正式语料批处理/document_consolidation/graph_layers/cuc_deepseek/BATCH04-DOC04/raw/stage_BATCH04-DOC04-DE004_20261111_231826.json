@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-11T23:18:26",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC04-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC04-DE004",
+  "usage": {
+    "prompt_tokens": 1415,
+    "total_tokens": 6556,
+    "completion_tokens": 5141,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3998
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 43720,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC04-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆仍暂留军部随军长活动，并已到三师参观、见张爱萍会操自我批评；四师回电未至。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于党校提前结束后拟留陈锐霆任参谋处长并电四师，止于其住军部随军长活动并到三师参观、见张爱萍会操自我批评；四师回电未至作为等待状态保留。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"党校提前结束后，因干部少，新四军参谋长和司令员拟留陈锐霆任参谋处长，并打电报给四师。\",\n      \"process_text\": \"党校提前结束，干部少，新四军参谋长跟司令员想把我留那个地方当参谋处长，打电报给四师。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0035\"\n      ],\n      \"evidence_quote\": \"所以党校也要提前结束，十月得到消息，（党校）一期到11月就结束了。结束了以后，那个时候干部少，新四军的参谋长跟司令员就想着把我留那个地方当参谋处长，打电报给四师\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"四师好久不回电报，陈锐霆住在军部，随军长活动等待。\",\n      \"process_text\": \"四师好久不回电报，我就住在军部，随军长活动。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0035\"\n      ],\n      \"evidence_quote\": \"好久不回电报，我就住在军部，随军长活动\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆到三师黄克诚部队，见到张爱萍在会操时因晚到四分钟做自我批评。\",\n      \"process_text\": \"也到过三师黄克诚那个部队，也见了张爱萍在会操的时候做自我批评。他晚到了四分钟，拿着表看了看，自己做了自我批评。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0035\"\n      ],\n      \"evidence_quote\": \"也到过三师黄克诚那个部队，也见了张爱萍在会操的时候做自我批评。他晚到了四分钟，拿着表看了看，自己做了自我批评。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"陈锐霆观察三师部队会操，认为张爱萍整军有办法、模范作用好，部队着装和动作整齐。\",\n      \"process_text\": \"部队会操的时候，三师的部队，张爱萍整军很有办法，他模范作用也好，那个部队穿的、动作都很整齐，比赛嘛都是挺好的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0037\"\n      ],\n      \"evidence_quote\": \"部队会操的时候，三师的部队，张爱萍整军很有办法，他模范作用也好，那个部队穿的、动作都很整齐，比赛嘛都是挺好的。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE004-P01\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0035\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE004-P02\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0035\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE004-P03\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE004-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0037\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC04-DE004",
+    "event_enrichment": {
+      "result_state": "陈锐霆仍暂留军部随军长活动，并已到三师参观、见张爱萍会操自我批评；四师回电未至。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于党校提前结束后拟留陈锐霆任参谋处长并电四师，止于其住军部随军长活动并到三师参观、见张爱萍会操自我批评；四师回电未至作为等待状态保留。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC04-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "党校提前结束后，因干部少，新四军参谋长和司令员拟留陈锐霆任参谋处长，并打电报给四师。",
+        "process_text": "党校提前结束，干部少，新四军参谋长跟司令员想把我留那个地方当参谋处长，打电报给四师。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0035"
+        ],
+        "evidence_quote": "所以党校也要提前结束，十月得到消息，（党校）一期到11月就结束了。结束了以后，那个时候干部少，新四军的参谋长跟司令员就想着把我留那个地方当参谋处长，打电报给四师",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "四师好久不回电报，陈锐霆住在军部，随军长活动等待。",
+        "process_text": "四师好久不回电报，我就住在军部，随军长活动。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0035"
+        ],
+        "evidence_quote": "好久不回电报，我就住在军部，随军长活动",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆到三师黄克诚部队，见到张爱萍在会操时因晚到四分钟做自我批评。",
+        "process_text": "也到过三师黄克诚那个部队，也见了张爱萍在会操的时候做自我批评。他晚到了四分钟，拿着表看了看，自己做了自我批评。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0035"
+        ],
+        "evidence_quote": "也到过三师黄克诚那个部队，也见了张爱萍在会操的时候做自我批评。他晚到了四分钟，拿着表看了看，自己做了自我批评。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "陈锐霆观察三师部队会操，认为张爱萍整军有办法、模范作用好，部队着装和动作整齐。",
+        "process_text": "部队会操的时候，三师的部队，张爱萍整军很有办法，他模范作用也好，那个部队穿的、动作都很整齐，比赛嘛都是挺好的。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0037"
+        ],
+        "evidence_quote": "部队会操的时候，三师的部队，张爱萍整军很有办法，他模范作用也好，那个部队穿的、动作都很整齐，比赛嘛都是挺好的。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC04-DE004-P01",
+        "target_stage_id": "BATCH04-DOC04-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC04-S0035",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC04-DE004-P02",
+        "target_stage_id": "BATCH04-DOC04-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC04-S0035",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC04-DE004-P03",
+        "target_stage_id": "BATCH04-DOC04-DE004-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC04-S0037",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

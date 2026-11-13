@@ -1,0 +1,148 @@
+{
+  "run_time": "2026-11-12T21:24:09",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC02-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC02-DE006",
+  "usage": {
+    "prompt_tokens": 1789,
+    "total_tokens": 12745,
+    "completion_tokens": 10956,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8991
+    },
+    "tokens_per_second": 10955000,
+    "time_to_first_token_ms": 159659,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC02-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"按连队要求形成日常管理流程：班内分工明确，早晨起床跑步，列队吃饭并限时用餐，饭后列队休息上课，并到后方医院实习。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"边界覆盖 S0101 至 S0111，从班内管理分工与严密管理原则，到早晨跑步、列队吃饭、限时用餐、饭后列队休息上课，再到后方医院实习。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"明确班内管理分工与严密管理原则\",\n      \"process_text\": \"班长管全面，副班长管学习，学习组长管学习，管理有一套经验，比较严密。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0101\",\n        \"BATCH04-DOC02-S0103\",\n        \"BATCH04-DOC02-S0104\"\n      ],\n      \"evidence_quote\": \"学习是学习组长，这两个是这样分工的。所以管理呢，他有一套经验，这个比较严密。完全按部队连队的要求来管理这个部队，吃饭一定要列队，早上有号兵吹号，一起床就跑步，每天早晨要跑半个小时步。那么跑完以后呢，吃饭。吃早饭了以后，值班。每一个班有值班，把一碗一碗的稀饭都盛好。伙食好一点，有一个馒头，那个时候南方不吃窝窝头。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"早晨起床跑步\",\n      \"process_text\": \"完全按部队连队的要求来管理这个部队，吃饭一定要列队，早上有号兵吹号，一起床就跑步，每天早晨要跑半个小时步。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0104\"\n      ],\n      \"evidence_quote\": \"学习是学习组长，这两个是这样分工的。所以管理呢，他有一套经验，这个比较严密。完全按部队连队的要求来管理这个部队，吃饭一定要列队，早上有号兵吹号，一起床就跑步，每天早晨要跑半个小时步。那么跑完以后呢，吃饭。吃早饭了以后，值班。每一个班有值班，把一碗一碗的稀饭都盛好。伙食好一点，有一个馒头，那个时候南方不吃窝窝头。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"跑完吃饭并由值班准备早饭\",\n      \"process_text\": \"跑完以后吃饭，吃早饭以后值班，每一个班有值班，把一碗一碗的稀饭都盛好。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0104\",\n        \"BATCH04-DOC02-S0106\",\n        \"BATCH04-DOC02-S0107\"\n      ],\n      \"evidence_quote\": \"学习是学习组长，这两个是这样分工的。所以管理呢，他有一套经验，这个比较严密。完全按部队连队的要求来管理这个部队，吃饭一定要列队，早上有号兵吹号，一起床就跑步，每天早晨要跑半个小时步。那么跑完以后呢，吃饭。吃早饭了以后，值班。每一个班有值班，把一碗一碗的稀饭都盛好。伙食好一点，有一个馒头，那个时候南方不吃窝窝头。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"列队唱歌点名并限时吃饭\",\n      \"process_text\": \"值班放好后列队唱抗战歌曲、点名，点名完了吃饭，早饭15分钟要吃完，午饭10分钟要吃完。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0107\"\n      ],\n      \"evidence_quote\": \"杂粮疙瘩加在那个稀饭里头，这样子，不然受不了啊。值班呢，都把这个放好以后，那边列队唱抗战歌曲，点名。点名完了吃饭，早饭15分钟要吃完，午饭10分钟要吃完。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE006-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"饭后列队休息并上课\",\n      \"process_text\": \"吃完再列队，休息15分钟到20分钟，就开始上课了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0108\",\n        \"BATCH04-DOC02-S0109\"\n      ],\n      \"evidence_quote\": \"休息15分钟到20分钟，就开始上课了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE006-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"到后方医院实习\",\n      \"process_text\": \"要实习到医院去实习，后方医院在旁边。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0111\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那么要实习到医院去实习，后方医院在旁边。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE006-P01\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0104\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE006-P02\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE006-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0104\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE006-P03\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE006-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0107\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE006-P04\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE006-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0108\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE006-P05\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE006-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0111\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC02-DE006",
+    "event_enrichment": {
+      "result_state": "按连队要求形成日常管理流程：班内分工明确，早晨起床跑步，列队吃饭并限时用餐，饭后列队休息上课，并到后方医院实习。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "边界覆盖 S0101 至 S0111，从班内管理分工与严密管理原则，到早晨跑步、列队吃饭、限时用餐、饭后列队休息上课，再到后方医院实习。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC02-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "明确班内管理分工与严密管理原则",
+        "process_text": "班长管全面，副班长管学习，学习组长管学习，管理有一套经验，比较严密。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0101",
+          "BATCH04-DOC02-S0103",
+          "BATCH04-DOC02-S0104"
+        ],
+        "evidence_quote": "学习是学习组长，这两个是这样分工的。所以管理呢，他有一套经验，这个比较严密。完全按部队连队的要求来管理这个部队，吃饭一定要列队，早上有号兵吹号，一起床就跑步，每天早晨要跑半个小时步。那么跑完以后呢，吃饭。吃早饭了以后，值班。每一个班有值班，把一碗一碗的稀饭都盛好。伙食好一点，有一个馒头，那个时候南方不吃窝窝头。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "早晨起床跑步",
+        "process_text": "完全按部队连队的要求来管理这个部队，吃饭一定要列队，早上有号兵吹号，一起床就跑步，每天早晨要跑半个小时步。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0104"
+        ],
+        "evidence_quote": "学习是学习组长，这两个是这样分工的。所以管理呢，他有一套经验，这个比较严密。完全按部队连队的要求来管理这个部队，吃饭一定要列队，早上有号兵吹号，一起床就跑步，每天早晨要跑半个小时步。那么跑完以后呢，吃饭。吃早饭了以后，值班。每一个班有值班，把一碗一碗的稀饭都盛好。伙食好一点，有一个馒头，那个时候南方不吃窝窝头。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "跑完吃饭并由值班准备早饭",
+        "process_text": "跑完以后吃饭，吃早饭以后值班，每一个班有值班，把一碗一碗的稀饭都盛好。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0104",
+          "BATCH04-DOC02-S0106",
+          "BATCH04-DOC02-S0107"
+        ],
+        "evidence_quote": "学习是学习组长，这两个是这样分工的。所以管理呢，他有一套经验，这个比较严密。完全按部队连队的要求来管理这个部队，吃饭一定要列队，早上有号兵吹号，一起床就跑步，每天早晨要跑半个小时步。那么跑完以后呢，吃饭。吃早饭了以后，值班。每一个班有值班，把一碗一碗的稀饭都盛好。伙食好一点，有一个馒头，那个时候南方不吃窝窝头。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "列队唱歌点名并限时吃饭",
+        "process_text": "值班放好后列队唱抗战歌曲、点名，点名完了吃饭，早饭15分钟要吃完，午饭10分钟要吃完。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0107"
+        ],
+        "evidence_quote": "杂粮疙瘩加在那个稀饭里头，这样子，不然受不了啊。值班呢，都把这个放好以后，那边列队唱抗战歌曲，点名。点名完了吃饭，早饭15分钟要吃完，午饭10分钟要吃完。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE006-P05",
+        "stage_order": 5,
+        "stage_summary": "饭后列队休息并上课",
+        "process_text": "吃完再列队，休息15分钟到20分钟，就开始上课了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0108",
+          "BATCH04-DOC02-S0109"
+        ],
+        "evidence_quote": "休息15分钟到20分钟，就开始上课了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE006-P06",
+        "stage_order": 6,
+        "stage_summary": "到后方医院实习",
+        "process_text": "要实习到医院去实习，后方医院在旁边。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0111"
+        ],
+        "evidence_quote": "    陈海峰：那么要实习到医院去实习，后方医院在旁边。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC02-DE006-P01",
+        "target_stage_id": "BATCH04-DOC02-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0104",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE006-P02",
+        "target_stage_id": "BATCH04-DOC02-DE006-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0104",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE006-P03",
+        "target_stage_id": "BATCH04-DOC02-DE006-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0107",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE006-P04",
+        "target_stage_id": "BATCH04-DOC02-DE006-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0108",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE006-P05",
+        "target_stage_id": "BATCH04-DOC02-DE006-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0111",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

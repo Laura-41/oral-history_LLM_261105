@@ -1,0 +1,92 @@
+{
+  "run_time": "2026-11-12T23:18:38",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC08-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC08-DE008",
+  "usage": {
+    "prompt_tokens": 1437,
+    "total_tokens": 9113,
+    "completion_tokens": 7676,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6648
+    },
+    "time_to_first_token_ms": 113329,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7675000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC08-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"鲁南停战，执行部成立，陈老总回到临沂后赴济南、徐州与国民党谈判。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于S0018中1月13号国民党与我们停战协定，经S0018执行部成立，止于S0020中陈老总到济南、徐州与国民党谈判；S0020后半美国代表到临沂及演出未纳入本事件阶段。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"1月13号国民党与我们停战，鲁南停战。\",\n      \"process_text\": \"1月13号国民党跟我们（签了）停战协定\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0018\",\n        \"BATCH04-DOC08-S0020\"\n      ],\n      \"evidence_quote\": \"1月13号国民党跟我们（签了）停战协定\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"执行部成立，涉及宋时轮、陈士榘、王德及山东省党委书记等人员，饶漱石调去执行部工作。\",\n      \"process_text\": \"不久以后执行部成立了，把两个参谋长——野战军的参谋长是宋时轮，山东军区的参谋长就是陈士榘，还有一个参谋处的副处长，（属于）野战军的，叫王德，还有山东省的党委书记\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0018\",\n        \"BATCH04-DOC08-S0020\"\n      ],\n      \"evidence_quote\": \"不久以后执行部成立了，把两个参谋长——野战军的参谋长是宋时轮，山东军区的参谋长就是陈士榘，还有一个参谋处的副处长，（属于）野战军的，叫王德，还有山东省的党委书记\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈老总从前线回到临沂，随后到济南、徐州与国民党谈判。\",\n      \"process_text\": \"1月13号以后，陈老总也从前线回到临沂了。接着他又到济南、徐州，去跟国民党谈判\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0020\"\n      ],\n      \"evidence_quote\": \"1月13号以后，陈老总也从前线回到临沂了。接着他又到济南、徐州，去跟国民党谈判\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE008-P01\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0018\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE008-P02\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0020\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC08-DE008",
+    "event_enrichment": {
+      "result_state": "鲁南停战，执行部成立，陈老总回到临沂后赴济南、徐州与国民党谈判。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于S0018中1月13号国民党与我们停战协定，经S0018执行部成立，止于S0020中陈老总到济南、徐州与国民党谈判；S0020后半美国代表到临沂及演出未纳入本事件阶段。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC08-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "1月13号国民党与我们停战，鲁南停战。",
+        "process_text": "1月13号国民党跟我们（签了）停战协定",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0018",
+          "BATCH04-DOC08-S0020"
+        ],
+        "evidence_quote": "1月13号国民党跟我们（签了）停战协定",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "执行部成立，涉及宋时轮、陈士榘、王德及山东省党委书记等人员，饶漱石调去执行部工作。",
+        "process_text": "不久以后执行部成立了，把两个参谋长——野战军的参谋长是宋时轮，山东军区的参谋长就是陈士榘，还有一个参谋处的副处长，（属于）野战军的，叫王德，还有山东省的党委书记",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0018",
+          "BATCH04-DOC08-S0020"
+        ],
+        "evidence_quote": "不久以后执行部成立了，把两个参谋长——野战军的参谋长是宋时轮，山东军区的参谋长就是陈士榘，还有一个参谋处的副处长，（属于）野战军的，叫王德，还有山东省的党委书记",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "陈老总从前线回到临沂，随后到济南、徐州与国民党谈判。",
+        "process_text": "1月13号以后，陈老总也从前线回到临沂了。接着他又到济南、徐州，去跟国民党谈判",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0020"
+        ],
+        "evidence_quote": "1月13号以后，陈老总也从前线回到临沂了。接着他又到济南、徐州，去跟国民党谈判",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC08-DE008-P01",
+        "target_stage_id": "BATCH04-DOC08-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC08-S0018",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC08-DE008-P02",
+        "target_stage_id": "BATCH04-DOC08-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC08-S0020",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

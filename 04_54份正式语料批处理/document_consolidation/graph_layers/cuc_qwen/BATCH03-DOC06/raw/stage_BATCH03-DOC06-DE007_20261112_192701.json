@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-12T19:27:01",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE007",
+  "usage": {
+    "prompt_tokens": 1291,
+    "total_tokens": 6697,
+    "completion_tokens": 5406,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4696
+    },
+    "time_to_first_token_ms": 174309,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5405000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"我方以打日本为由回应，并拖延处理，取枪质问被搁置。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于S0039阎锡山部队得知取枪后回到山西质问“你们为什么拿我们的武器？”，止于S0041我方回应“就跟他拖了，就不管他了”。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"阎锡山部队得知取枪后回到山西质问\",\n      \"process_text\": \"这事找麻烦了，阎锡山那边知道了，我们到了汾阳、孝义以后，他们的部队从河那边又回到山西来了，他就来（问），你们为什么拿我们的武器？\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0039\"\n      ],\n      \"evidence_quote\": \"    杨永松：不一样了。可是过了时间不长，这事找麻烦了，阎锡山那边知道了，我们到了汾阳、孝义以后，他们的部队从河那边又回到山西来了，他就来（问），你们为什么拿我们的武器？\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"我方以打日本为由回应并拖延处理\",\n      \"process_text\": \"我们一说，你们放到那儿的日本枪，还不被日本人拿走了，我们拿你们的武器那么多，我们去打日本有什么不可以呀，就跟他拖了，就不管他了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0041\"\n      ],\n      \"evidence_quote\": \"    杨永松：我们一说，你们放到那儿的日本枪，还不被日本人拿走了，我们拿你们的武器那么多，我们去打日本有什么不可以呀，就跟他拖了，就不管他了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE007-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0041\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE007",
+    "event_enrichment": {
+      "result_state": "我方以打日本为由回应，并拖延处理，取枪质问被搁置。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于S0039阎锡山部队得知取枪后回到山西质问“你们为什么拿我们的武器？”，止于S0041我方回应“就跟他拖了，就不管他了”。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "阎锡山部队得知取枪后回到山西质问",
+        "process_text": "这事找麻烦了，阎锡山那边知道了，我们到了汾阳、孝义以后，他们的部队从河那边又回到山西来了，他就来（问），你们为什么拿我们的武器？",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0039"
+        ],
+        "evidence_quote": "    杨永松：不一样了。可是过了时间不长，这事找麻烦了，阎锡山那边知道了，我们到了汾阳、孝义以后，他们的部队从河那边又回到山西来了，他就来（问），你们为什么拿我们的武器？",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "我方以打日本为由回应并拖延处理",
+        "process_text": "我们一说，你们放到那儿的日本枪，还不被日本人拿走了，我们拿你们的武器那么多，我们去打日本有什么不可以呀，就跟他拖了，就不管他了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0041"
+        ],
+        "evidence_quote": "    杨永松：我们一说，你们放到那儿的日本枪，还不被日本人拿走了，我们拿你们的武器那么多，我们去打日本有什么不可以呀，就跟他拖了，就不管他了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE007-P01",
+        "target_stage_id": "BATCH03-DOC06-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0041",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T21:44:59",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC06-DE007",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC06-DE007",
+  "usage": {
+    "prompt_tokens": 1313,
+    "total_tokens": 4375,
+    "completion_tokens": 3062,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2340
+    },
+    "time_to_first_token_ms": 27258,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC06-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆在天安门城楼与李默庵见面，事件以这次见面结束。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以李默庵1984年回国为背景起点，以陈锐霆在天安门城楼与李默庵见面为核心和终点；不纳入其后李默庵经历及对蒋介石态度等延伸叙述。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"李默庵于1984年回国，成为后续见面的背景。\",\n      \"process_text\": \"（19）84年，他也回来了\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0046\"\n      ],\n      \"evidence_quote\": \"（19）84年，他也回来了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"建国35周年阅兵时，李默庵被请上天安门城楼观礼。\",\n      \"process_text\": \"就35周年那个阅兵，在天安门城楼上，他也被请上去观礼嘛。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0048\"\n      ],\n      \"evidence_quote\": \"就35周年那个阅兵，在天安门城楼上，他也被请上去观礼嘛。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆在天安门城楼上与李默庵见面。\",\n      \"process_text\": \"我在天安门上也跟李默庵见了面\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0048\"\n      ],\n      \"evidence_quote\": \"我在天安门上也跟李默庵见了面\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE007-P01\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE007-P02\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE007-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0048\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC06-DE007",
+    "event_enrichment": {
+      "result_state": "陈锐霆在天安门城楼与李默庵见面，事件以这次见面结束。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以李默庵1984年回国为背景起点，以陈锐霆在天安门城楼与李默庵见面为核心和终点；不纳入其后李默庵经历及对蒋介石态度等延伸叙述。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC06-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "李默庵于1984年回国，成为后续见面的背景。",
+        "process_text": "（19）84年，他也回来了",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0046"
+        ],
+        "evidence_quote": "（19）84年，他也回来了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "建国35周年阅兵时，李默庵被请上天安门城楼观礼。",
+        "process_text": "就35周年那个阅兵，在天安门城楼上，他也被请上去观礼嘛。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0048"
+        ],
+        "evidence_quote": "就35周年那个阅兵，在天安门城楼上，他也被请上去观礼嘛。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆在天安门城楼上与李默庵见面。",
+        "process_text": "我在天安门上也跟李默庵见了面",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0048"
+        ],
+        "evidence_quote": "我在天安门上也跟李默庵见了面",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC06-DE007-P01",
+        "target_stage_id": "BATCH02-DOC06-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC06-DE007-P02",
+        "target_stage_id": "BATCH02-DOC06-DE007-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC06-S0048",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

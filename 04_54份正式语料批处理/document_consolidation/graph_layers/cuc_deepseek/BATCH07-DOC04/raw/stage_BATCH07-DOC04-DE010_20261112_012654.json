@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T01:26:54",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC04-DE010",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC04-DE010",
+  "usage": {
+    "prompt_tokens": 1855,
+    "total_tokens": 7829,
+    "completion_tokens": 5974,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4651
+    },
+    "time_to_first_token_ms": 47874,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5973000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC04-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"人员化装分散，经铁路线多个口子通过；少数人爬铁路涵洞，多数从地面走，部分干部化装成商人从常州城通过。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为皖南事变14号以后离开建昌圩；终点为分散从铁路线各口子通过，后续口子关系与情报站内容作为补充说明。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"皖南事变后离开建昌圩，进入转移过线过程。\",\n      \"process_text\": \"皖南事变14号以后，我们离开建昌圩。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0118\"\n      ],\n      \"evidence_quote\": \"后来我们离开建昌圩，就是皖南事变14号以后。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"约十七八号至二十号，化装经地下交通站分散，从铁路线五六个口子分组通过。\",\n      \"process_text\": \"大概十七八号二十号左右，我们化装走地下交通站，分散；地下交通站在铁路线，铁路线大概有五六个口子，按三个五个、七个八个、一个两个分组通过。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0120\"\n      ],\n      \"evidence_quote\": \"大概是十七八号二十号左右，我们就化装走地下交通站，分散。地下交通站在铁路线，铁路线大概有五六个口子，分散了，三个五个、七个八个、一个两个，这样通过。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"过线方式分化：少数爬铁路涵洞，多数走地面，部分干部化装商人经常州城。\",\n      \"process_text\": \"少数人从铁路涵洞爬过去，多数从地面走；有些干部化装成商人从常州城里走，军医院院长李振湘带几个人化装成做买卖的商人从常州城走。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0120\"\n      ],\n      \"evidence_quote\": \"少数的人从铁路的涵洞爬过去的，多数从地面走。有些干部化装成商人，从常州城里面走。像我们的军医院院长李振湘啊，就带了几个人，就从常州城里走的，化装成做买卖的商人。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE010-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"经常州东戚使堰、横林，常州城，西奔牛叶家码头，丹阳方向吕城、陵口及新丰等口子通过，并利用伪军关系。\",\n      \"process_text\": \"从常州东面的戚使堰、横林口子走，常州城里走，常州西面奔牛一带的叶家码头口子走；叶家码头往丹阳方向是吕城、陵口，有两个口子，我们从那两个口子走；新丰有伪军关系，吕城、陵口也有伪军关系。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0122\"\n      ],\n      \"evidence_quote\": \"走城里的交通站。从常州东面的戚使堰、横林这个口子走，常州城里走，常州西面的奔牛这一带（也）有一个口子，奔牛旁边有个叶家码头，叶家码头是我们经常走的一个口子。叶家码头再往丹阳方向走呢，（就）是吕城、陵口。就是上次我们讲到抓住个鬼子的吕城、陵口，那个地方有两个口子，我们就从那两个口子走的。吕城、陵口的口子再向镇江那里（是）新丰车站，新丰就到镇江了。我们能过的地方，新丰有我们伪军的关系，吕城、陵口那里有伪军的关系。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE010-P01\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0120\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE010-P02\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE010-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0120\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE010-P03\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE010-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0122\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC04-DE010",
+    "event_enrichment": {
+      "result_state": "人员化装分散，经铁路线多个口子通过；少数人爬铁路涵洞，多数从地面走，部分干部化装成商人从常州城通过。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起点为皖南事变14号以后离开建昌圩；终点为分散从铁路线各口子通过，后续口子关系与情报站内容作为补充说明。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC04-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "皖南事变后离开建昌圩，进入转移过线过程。",
+        "process_text": "皖南事变14号以后，我们离开建昌圩。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0118"
+        ],
+        "evidence_quote": "后来我们离开建昌圩，就是皖南事变14号以后。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "约十七八号至二十号，化装经地下交通站分散，从铁路线五六个口子分组通过。",
+        "process_text": "大概十七八号二十号左右，我们化装走地下交通站，分散；地下交通站在铁路线，铁路线大概有五六个口子，按三个五个、七个八个、一个两个分组通过。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0120"
+        ],
+        "evidence_quote": "大概是十七八号二十号左右，我们就化装走地下交通站，分散。地下交通站在铁路线，铁路线大概有五六个口子，分散了，三个五个、七个八个、一个两个，这样通过。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "过线方式分化：少数爬铁路涵洞，多数走地面，部分干部化装商人经常州城。",
+        "process_text": "少数人从铁路涵洞爬过去，多数从地面走；有些干部化装成商人从常州城里走，军医院院长李振湘带几个人化装成做买卖的商人从常州城走。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0120"
+        ],
+        "evidence_quote": "少数的人从铁路的涵洞爬过去的，多数从地面走。有些干部化装成商人，从常州城里面走。像我们的军医院院长李振湘啊，就带了几个人，就从常州城里走的，化装成做买卖的商人。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE010-P04",
+        "stage_order": 4,
+        "stage_summary": "经常州东戚使堰、横林，常州城，西奔牛叶家码头，丹阳方向吕城、陵口及新丰等口子通过，并利用伪军关系。",
+        "process_text": "从常州东面的戚使堰、横林口子走，常州城里走，常州西面奔牛一带的叶家码头口子走；叶家码头往丹阳方向是吕城、陵口，有两个口子，我们从那两个口子走；新丰有伪军关系，吕城、陵口也有伪军关系。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0122"
+        ],
+        "evidence_quote": "走城里的交通站。从常州东面的戚使堰、横林这个口子走，常州城里走，常州西面的奔牛这一带（也）有一个口子，奔牛旁边有个叶家码头，叶家码头是我们经常走的一个口子。叶家码头再往丹阳方向走呢，（就）是吕城、陵口。就是上次我们讲到抓住个鬼子的吕城、陵口，那个地方有两个口子，我们就从那两个口子走的。吕城、陵口的口子再向镇江那里（是）新丰车站，新丰就到镇江了。我们能过的地方，新丰有我们伪军的关系，吕城、陵口那里有伪军的关系。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC04-DE010-P01",
+        "target_stage_id": "BATCH07-DOC04-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC04-S0120",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE010-P02",
+        "target_stage_id": "BATCH07-DOC04-DE010-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH07-DOC04-S0120",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE010-P03",
+        "target_stage_id": "BATCH07-DOC04-DE010-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH07-DOC04-S0122",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

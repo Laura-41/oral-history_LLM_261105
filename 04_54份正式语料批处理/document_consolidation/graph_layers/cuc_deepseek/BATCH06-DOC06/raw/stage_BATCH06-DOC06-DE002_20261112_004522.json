@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T00:45:22",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC06-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC06-DE002",
+  "usage": {
+    "prompt_tokens": 1376,
+    "total_tokens": 6736,
+    "completion_tokens": 5360,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4279
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 41323,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC06-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"被围国民党军因缺粮，在解放军炮击和喊话宣传后出现成批投降；五天内约三千人跑到解放军方面投降。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以被围国民党军缺粮、空投不足为背景，包含解放军打五发炮弹并口头宣传、喊话，至五天内三千人投降为止。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"被围国民党军缺粮，空投有限且物资被争抢、部分飘落我方，形成投降背景。\",\n      \"process_text\": \"国民党部队被围几天后没粮食吃，靠空投；空投有限，十几万人不够用，物资被抢，有些投不准飘到我方地区。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0005\"\n      ],\n      \"evidence_quote\": \"这个时候国民党的部队被围起来，几天以后没粮食吃了，都是靠空投。空投有限，他十几万人在那个地方，上面空投的东西不够用的，都抢了，一下来就抢，有些东西他投得不准，都飘到我们地区里面，我们收到了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"解放军以每门炮五发炮弹向被围国民党军实施炮击，作为“新年献礼”。\",\n      \"process_text\": \"一个炮五发弹，给被围国民党部队新年献礼，一门炮放了五发。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0003\"\n      ],\n      \"evidence_quote\": \"所以一个炮五发弹，我们给国民党被围的部队新年献礼（陈锐霆笑），给他礼炮，一门炮放了五发。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"配合口头宣传、喊话，敌军因缺粮开始三三两两、成班成排前来投降。\",\n      \"process_text\": \"加上口头宣传、喊话，敌人三三两两、一个班一个排向解放军方面来投降，因为没东西吃。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0005\"\n      ],\n      \"evidence_quote\": \"加上我们口头的宣传、喊话，敌人三三两两，一个班，一个排，都向我们这个地方来投降，因为没东西吃嘛。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"投降规模扩大，五天内约三千国民党军跑到解放军方面投降。\",\n      \"process_text\": \"国民党五天里面有三千人跑到我们这边来投降。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0005\"\n      ],\n      \"evidence_quote\": \"国民党五天里面有三千人跑到我们这边来投降。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE002-P01\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE002-P02\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0005\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE002-P03\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE002-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0005\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC06-DE002",
+    "event_enrichment": {
+      "result_state": "被围国民党军因缺粮，在解放军炮击和喊话宣传后出现成批投降；五天内约三千人跑到解放军方面投降。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以被围国民党军缺粮、空投不足为背景，包含解放军打五发炮弹并口头宣传、喊话，至五天内三千人投降为止。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC06-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "被围国民党军缺粮，空投有限且物资被争抢、部分飘落我方，形成投降背景。",
+        "process_text": "国民党部队被围几天后没粮食吃，靠空投；空投有限，十几万人不够用，物资被抢，有些投不准飘到我方地区。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0005"
+        ],
+        "evidence_quote": "这个时候国民党的部队被围起来，几天以后没粮食吃了，都是靠空投。空投有限，他十几万人在那个地方，上面空投的东西不够用的，都抢了，一下来就抢，有些东西他投得不准，都飘到我们地区里面，我们收到了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "解放军以每门炮五发炮弹向被围国民党军实施炮击，作为“新年献礼”。",
+        "process_text": "一个炮五发弹，给被围国民党部队新年献礼，一门炮放了五发。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0003"
+        ],
+        "evidence_quote": "所以一个炮五发弹，我们给国民党被围的部队新年献礼（陈锐霆笑），给他礼炮，一门炮放了五发。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "配合口头宣传、喊话，敌军因缺粮开始三三两两、成班成排前来投降。",
+        "process_text": "加上口头宣传、喊话，敌人三三两两、一个班一个排向解放军方面来投降，因为没东西吃。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0005"
+        ],
+        "evidence_quote": "加上我们口头的宣传、喊话，敌人三三两两，一个班，一个排，都向我们这个地方来投降，因为没东西吃嘛。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "投降规模扩大，五天内约三千国民党军跑到解放军方面投降。",
+        "process_text": "国民党五天里面有三千人跑到我们这边来投降。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0005"
+        ],
+        "evidence_quote": "国民党五天里面有三千人跑到我们这边来投降。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC06-DE002-P01",
+        "target_stage_id": "BATCH06-DOC06-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE002-P02",
+        "target_stage_id": "BATCH06-DOC06-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0005",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE002-P03",
+        "target_stage_id": "BATCH06-DOC06-DE002-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC06-S0005",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

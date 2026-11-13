@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-11T22:28:03",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC05-DE007",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC05-DE007",
+  "usage": {
+    "prompt_tokens": 1367,
+    "total_tokens": 6401,
+    "completion_tokens": 5034,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4006
+    },
+    "time_to_first_token_ms": 39740,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-07\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC05-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"张爱萍在会议上向干部发出警惕坏人破坏起义的警示；原文未说明会后执行或效果。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据S0036、S0040，事件以部队供给经费困难和干部情绪急躁为背景，起于张爱萍第二天召开会议，止于其发出警惕坏人破坏起义的讲话；不延伸至会后行动。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"部队供给与经费困难，粮食缺乏\",\n      \"process_text\": \"国民党扣留新四军款项、军费，部队非常困难，缺粮，只能买地瓜干、红薯等充饥。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0036\"\n      ],\n      \"evidence_quote\": \"这个时候国民党已经把新四军的款项、军费扣留不发了，所以部队非常地困难，吃没有吃的，粮食也没有，就在地方上买一些地瓜干、红薯，红薯面饼子，也很差。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"经费断绝、家属通信困难，干部情绪急躁\",\n      \"process_text\": \"没有经费、不发钱，家属在湖南全县也无法通信寄钱，有些干部非常急躁。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0040\"\n      ],\n      \"evidence_quote\": \"另外没有经费，不发钱了，连个抽烟的钱都没有；自己家属在湖南全县（音），也都没有通信，没有经费了，没有钱了嘛，怎么样往回寄？哎呀，有些干部就非常地急躁。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"张爱萍第二天召开会议，察觉干部情绪不佳\",\n      \"process_text\": \"张爱萍第二天来召开会议，凭经验看出干部不高兴、愁眉苦脸。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0040\"\n      ],\n      \"evidence_quote\": \"这个时候张爱萍第二天来召开了一个会议，他有经验，他一看这干部好像不是很高兴，（不是）非常快乐的样子，还愁眉苦脸的\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"张爱萍讲话提醒注意警惕坏人破坏起义\",\n      \"process_text\": \"张爱萍对与会者讲话，要求注意、警惕坏人破坏起义。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0040\"\n      ],\n      \"evidence_quote\": \"他就跟我们讲，说要注意，警惕（坏人破坏起义）。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE007-P01\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0040\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE007-P02\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0040\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE007-P03\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE007-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0040\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-07",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC05-DE007",
+    "event_enrichment": {
+      "result_state": "张爱萍在会议上向干部发出警惕坏人破坏起义的警示；原文未说明会后执行或效果。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "依据S0036、S0040，事件以部队供给经费困难和干部情绪急躁为背景，起于张爱萍第二天召开会议，止于其发出警惕坏人破坏起义的讲话；不延伸至会后行动。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC05-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "部队供给与经费困难，粮食缺乏",
+        "process_text": "国民党扣留新四军款项、军费，部队非常困难，缺粮，只能买地瓜干、红薯等充饥。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0036"
+        ],
+        "evidence_quote": "这个时候国民党已经把新四军的款项、军费扣留不发了，所以部队非常地困难，吃没有吃的，粮食也没有，就在地方上买一些地瓜干、红薯，红薯面饼子，也很差。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "经费断绝、家属通信困难，干部情绪急躁",
+        "process_text": "没有经费、不发钱，家属在湖南全县也无法通信寄钱，有些干部非常急躁。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0040"
+        ],
+        "evidence_quote": "另外没有经费，不发钱了，连个抽烟的钱都没有；自己家属在湖南全县（音），也都没有通信，没有经费了，没有钱了嘛，怎么样往回寄？哎呀，有些干部就非常地急躁。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "张爱萍第二天召开会议，察觉干部情绪不佳",
+        "process_text": "张爱萍第二天来召开会议，凭经验看出干部不高兴、愁眉苦脸。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0040"
+        ],
+        "evidence_quote": "这个时候张爱萍第二天来召开了一个会议，他有经验，他一看这干部好像不是很高兴，（不是）非常快乐的样子，还愁眉苦脸的",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "张爱萍讲话提醒注意警惕坏人破坏起义",
+        "process_text": "张爱萍对与会者讲话，要求注意、警惕坏人破坏起义。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0040"
+        ],
+        "evidence_quote": "他就跟我们讲，说要注意，警惕（坏人破坏起义）。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC05-DE007-P01",
+        "target_stage_id": "BATCH03-DOC05-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC05-S0040",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC05-DE007-P02",
+        "target_stage_id": "BATCH03-DOC05-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC05-S0040",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC05-DE007-P03",
+        "target_stage_id": "BATCH03-DOC05-DE007-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC05-S0040",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

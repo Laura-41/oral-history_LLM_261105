@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T22:14:19",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC03-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC03-DE003",
+  "usage": {
+    "prompt_tokens": 1839,
+    "total_tokens": 4479,
+    "completion_tokens": 2640,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1458
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 22886,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC03-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"三支队分散转入游击战并渗入日军后方，在长江边一带以打日军后方为主，造成日军前线接济不上、慌乱，迫使其寻求早点结束。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以日军大扫荡、部队分散进入深山密林为起点，以三支队渗入后方打击日军后方并造成其前线接济不上、慌乱为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"日军大扫荡占领城镇村庄，三支队部队分散进入深山密林。\",\n      \"process_text\": \"日军大扫荡占领城市、镇和大的村庄，反复扫荡；三支队部队进入深山密林并分散。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0015\"\n      ],\n      \"evidence_quote\": \"差不多城市和镇、大的村庄都占领了，那蓖来蓖去扫荡呀，拦下无搜（音）啊。我们都到深山密林里去了，都分散了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"因敌众我寡，三支队由防御转为游击战，以牵制敌人为主并袭击其增援、运输、薄弱环节和掉队人员。\",\n      \"process_text\": \"三支队主要牵制敌人，变成游击战，不能打防御战；因敌人太多、部队少，以牵制敌人为主，打其增援部队、运输部队、薄弱环节、散兵和掉队人员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0017\"\n      ],\n      \"evidence_quote\": \"我们这个三支队的部队主要牵制了，变成游击战，不能打防御战了。一个是敌人太多，二一个我们的部队少，我们就要（以）牵制敌人为主，打他的增援部队，打他的运输部队，打他的薄弱环节、散兵，打他掉队的，是不是。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"三支队趁日军后方空虚渗入后方，进至三山、峨桥、横山、沙滩和长江边一带，以打日军后方为主。\",\n      \"process_text\": \"部队趁后面空虚地方渗到后边去，到三山、峨桥、横山、沙滩那边，到长江边上，以打日军后方为主。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0017\"\n      ],\n      \"evidence_quote\": \"后面空虚地方，我们就渗到后边去了，我们这个部队到那个三山、峨桥呀，就是这个横山呀，沙滩那边去了，到那个长江边上，打他后方为主了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"打击日军后方后，日军前线接济不上并慌乱，被迫寻求早点结束。\",\n      \"process_text\": \"打日军后方以后，日军前面接济不上，就慌了，使其早点结束。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0019\"\n      ],\n      \"evidence_quote\": \"打后方了以后，他这个前面他就接济不上了，他就慌了。使它早点结束这样子。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE003-P01\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0017\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE003-P02\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0017\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE003-P03\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE003-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0019\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC03-DE003",
+    "event_enrichment": {
+      "result_state": "三支队分散转入游击战并渗入日军后方，在长江边一带以打日军后方为主，造成日军前线接济不上、慌乱，迫使其寻求早点结束。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以日军大扫荡、部队分散进入深山密林为起点，以三支队渗入后方打击日军后方并造成其前线接济不上、慌乱为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC03-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "日军大扫荡占领城镇村庄，三支队部队分散进入深山密林。",
+        "process_text": "日军大扫荡占领城市、镇和大的村庄，反复扫荡；三支队部队进入深山密林并分散。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0015"
+        ],
+        "evidence_quote": "差不多城市和镇、大的村庄都占领了，那蓖来蓖去扫荡呀，拦下无搜（音）啊。我们都到深山密林里去了，都分散了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "因敌众我寡，三支队由防御转为游击战，以牵制敌人为主并袭击其增援、运输、薄弱环节和掉队人员。",
+        "process_text": "三支队主要牵制敌人，变成游击战，不能打防御战；因敌人太多、部队少，以牵制敌人为主，打其增援部队、运输部队、薄弱环节、散兵和掉队人员。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0017"
+        ],
+        "evidence_quote": "我们这个三支队的部队主要牵制了，变成游击战，不能打防御战了。一个是敌人太多，二一个我们的部队少，我们就要（以）牵制敌人为主，打他的增援部队，打他的运输部队，打他的薄弱环节、散兵，打他掉队的，是不是。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "三支队趁日军后方空虚渗入后方，进至三山、峨桥、横山、沙滩和长江边一带，以打日军后方为主。",
+        "process_text": "部队趁后面空虚地方渗到后边去，到三山、峨桥、横山、沙滩那边，到长江边上，以打日军后方为主。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0017"
+        ],
+        "evidence_quote": "后面空虚地方，我们就渗到后边去了，我们这个部队到那个三山、峨桥呀，就是这个横山呀，沙滩那边去了，到那个长江边上，打他后方为主了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "打击日军后方后，日军前线接济不上并慌乱，被迫寻求早点结束。",
+        "process_text": "打日军后方以后，日军前面接济不上，就慌了，使其早点结束。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0019"
+        ],
+        "evidence_quote": "打后方了以后，他这个前面他就接济不上了，他就慌了。使它早点结束这样子。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC03-DE003-P01",
+        "target_stage_id": "BATCH03-DOC03-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC03-S0017",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC03-DE003-P02",
+        "target_stage_id": "BATCH03-DOC03-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC03-S0017",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC03-DE003-P03",
+        "target_stage_id": "BATCH03-DOC03-DE003-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH03-DOC03-S0019",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

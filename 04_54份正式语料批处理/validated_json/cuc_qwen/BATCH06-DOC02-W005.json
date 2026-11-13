@@ -1,0 +1,199 @@
+{
+  "validated_at": "2026-11-11T18:02:51",
+  "source_raw_response": "04_54份正式语料批处理/raw_responses/cuc_qwen/20261111_175521_BATCH06-DOC02-W005.json",
+  "model_id": "cuc/qwen",
+  "window_id": "BATCH06-DOC02-W005",
+  "technical_document_id": "BATCH06-DOC02",
+  "document_id": "18.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 3,
+    "assigned_segment_count": 11,
+    "unassigned_segment_count": 11,
+    "input_segment_count": 22,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "postprocessed_output": {
+    "window_id": "BATCH06-DOC02-W005",
+    "events": [
+      {
+        "candidate_id": "BATCH06-DOC02-W005-E01",
+        "source_segment_ids": [
+          "BATCH06-DOC02-S0085",
+          "BATCH06-DOC02-S0088",
+          "BATCH06-DOC02-S0090",
+          "BATCH06-DOC02-S0092",
+          "BATCH06-DOC02-S0094",
+          "BATCH06-DOC02-S0095",
+          "BATCH06-DOC02-S0096",
+          "BATCH06-DOC02-S0098",
+          "BATCH06-DOC02-S0099"
+        ],
+        "event": {
+          "event_name": "陈海峰等人在吴家道指挥所给粟司令打针",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "给粟司令打针",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "粟司令",
+              "normalized_entity": "粟司令",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "小木棚子里头，那吴家道那个指挥所",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "打摆子",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "马上就给粟司令打针。",
+          "type_basis": "核心过程是“给粟司令打针”，可用 What did X do? 测试；Actor=我们，Goal=粟司令，属于物质过程。后续问答说明发病时医生不在、奎宁针没有等背景，不改变主导类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC02-W005-E02",
+        "source_segment_ids": [
+          "BATCH06-DOC02-S0103"
+        ],
+        "event": {
+          "event_name": "解放后军队到陈海峰家抄家并拿走88件物品",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "军队搜家并拿走88件",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "军队",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "我家里",
+              "normalized_entity": "陈海峰家",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "解放以后没有多久",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "北京",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "第一次卫生会议展览",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "军队到我家里来搜……“抄家”，拿走了88件。",
+          "type_basis": "核心过程是军队搜家并拿走88件，属于物质行动，改变物品位置或归属；展览是结果，不改变主导类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC02-W005-E03",
+        "source_segment_ids": [
+          "BATCH06-DOC02-S0101",
+          "BATCH06-DOC02-S0103"
+        ],
+        "event": {
+          "event_name": "陈海峰保存保健盒和小卫生包并准备捐赠",
+          "event_type": "RELATIONAL",
+          "event_type_zh": "关系",
+          "core_process": "保存战争环境物品",
+          "participants": [
+            {
+              "role": "Carrier",
+              "mention": "那个盒子",
+              "normalized_entity": "保健盒",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Carrier",
+              "mention": "小卫生包",
+              "normalized_entity": "小卫生包",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Attribute",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "家里",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "捐给军事医科院",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那个盒子还在（家里）这儿呢，我准备捐给军事医科院",
+          "type_basis": "核心是“我保存的战争环境的东西”，属有或保管关系，按本项目统一标为 Carrier+Attribute；“准备捐给军事医科院”作为目的环境，不单独构成言语或物质事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH06-DOC02-S0084",
+      "BATCH06-DOC02-S0086",
+      "BATCH06-DOC02-S0087",
+      "BATCH06-DOC02-S0089",
+      "BATCH06-DOC02-S0091",
+      "BATCH06-DOC02-S0093",
+      "BATCH06-DOC02-S0097",
+      "BATCH06-DOC02-S0100",
+      "BATCH06-DOC02-S0102",
+      "BATCH06-DOC02-S0104",
+      "BATCH06-DOC02-S0105"
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 5382,
+    "total_tokens": 20245,
+    "completion_tokens": 14863,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 13189
+    },
+    "time_to_first_token_ms": 450264,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 14862000
+  }
+}

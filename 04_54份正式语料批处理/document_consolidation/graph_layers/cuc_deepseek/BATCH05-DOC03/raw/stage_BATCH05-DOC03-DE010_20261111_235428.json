@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T23:54:28",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC03-DE010",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC03-DE010",
+  "usage": {
+    "prompt_tokens": 1347,
+    "total_tokens": 4098,
+    "completion_tokens": 2751,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1707
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2750000,
+    "time_to_first_token_ms": 21253
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC03-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"华东野战军决定成立一个纵队，陈锐霆由参谋处长提升到纵队一级并任纵队司令。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于鲁南战役后华东整编及缴获装备、陈毅提出搞炮兵，止于陈毅、粟裕、陈士榘决定成立纵队并任命陈锐霆为纵队司令。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"鲁南战役后华东部队整编，为后续炮兵建设提供组织背景。\",\n      \"process_text\": \"鲁南战役以后，华东整编部队，华中野战军与山东野战军合并；1947年1月鲁南战役后召开大会，陈老总任整编后的华东野战军司令员兼政委。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0058\"\n      ],\n      \"evidence_quote\": \"陈锐霆：鲁南战役以后，华东就整编部队，就是华中野战军跟山东野战军合在一起了。1947年1月，在鲁南战役后就开了一个大会，陈老总是整编的华东野战军的司令员兼政委。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"缴获大量火炮坦克后，陈毅提出陈锐霆可搞炮兵并回去研究。\",\n      \"process_text\": \"此时缴获大量美国榴弹炮和坦克，陈老总对陈锐霆说其懂炮兵，有用武之地，可以搞炮兵，并提出回去研究。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0060\"\n      ],\n      \"evidence_quote\": \"陈锐霆：这个时候我们缴获了那么多的美国榴弹炮，还有那么多的坦克，陈老总见了我也跟我讲，说这一下子你可有用武之地了。他对我懂炮兵的情况（很了解），他第一次见面不是就叫我不要丢掉嘛。他说这一下子你有用武之地了，你可以搞炮兵去了，他说我们回去研究一下子。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈毅、粟裕、陈士榘积极推动成立一个纵队，陈锐霆被提升到纵队一级并成为纵队司令。\",\n      \"process_text\": \"回去后，陈毅、粟裕、陈士榘三人积极推动成立一个纵队；虽兵力、炮、人不多，但继续打胜仗并缴获敌人火炮坦克，于是决定成立纵队，将陈锐霆从参谋处长提升到纵队一级，成为纵队司令。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0062\"\n      ],\n      \"evidence_quote\": \"陈锐霆：回去后，他、粟裕同志、陈士榘同志，三个人非常积极的，说要一下子搞一个纵队。现在虽然兵力不多，炮不多，人不多，但是我们继续还要打胜仗，继续还要缴获敌人的火炮、坦克，所以就一下子要成一个纵队，把我从参谋处长一下子提高到纵队的一级。纵队一级那个时候相当于军这一级的，像许世友、韦国清、宋时轮啊，他们都是纵队司令，我也是纵队司令了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE010-P01\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0060\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE010-P02\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE010-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0062\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC03-DE010",
+    "event_enrichment": {
+      "result_state": "华东野战军决定成立一个纵队，陈锐霆由参谋处长提升到纵队一级并任纵队司令。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于鲁南战役后华东整编及缴获装备、陈毅提出搞炮兵，止于陈毅、粟裕、陈士榘决定成立纵队并任命陈锐霆为纵队司令。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC03-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "鲁南战役后华东部队整编，为后续炮兵建设提供组织背景。",
+        "process_text": "鲁南战役以后，华东整编部队，华中野战军与山东野战军合并；1947年1月鲁南战役后召开大会，陈老总任整编后的华东野战军司令员兼政委。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0058"
+        ],
+        "evidence_quote": "陈锐霆：鲁南战役以后，华东就整编部队，就是华中野战军跟山东野战军合在一起了。1947年1月，在鲁南战役后就开了一个大会，陈老总是整编的华东野战军的司令员兼政委。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "缴获大量火炮坦克后，陈毅提出陈锐霆可搞炮兵并回去研究。",
+        "process_text": "此时缴获大量美国榴弹炮和坦克，陈老总对陈锐霆说其懂炮兵，有用武之地，可以搞炮兵，并提出回去研究。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0060"
+        ],
+        "evidence_quote": "陈锐霆：这个时候我们缴获了那么多的美国榴弹炮，还有那么多的坦克，陈老总见了我也跟我讲，说这一下子你可有用武之地了。他对我懂炮兵的情况（很了解），他第一次见面不是就叫我不要丢掉嘛。他说这一下子你有用武之地了，你可以搞炮兵去了，他说我们回去研究一下子。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "陈毅、粟裕、陈士榘积极推动成立一个纵队，陈锐霆被提升到纵队一级并成为纵队司令。",
+        "process_text": "回去后，陈毅、粟裕、陈士榘三人积极推动成立一个纵队；虽兵力、炮、人不多，但继续打胜仗并缴获敌人火炮坦克，于是决定成立纵队，将陈锐霆从参谋处长提升到纵队一级，成为纵队司令。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0062"
+        ],
+        "evidence_quote": "陈锐霆：回去后，他、粟裕同志、陈士榘同志，三个人非常积极的，说要一下子搞一个纵队。现在虽然兵力不多，炮不多，人不多，但是我们继续还要打胜仗，继续还要缴获敌人的火炮、坦克，所以就一下子要成一个纵队，把我从参谋处长一下子提高到纵队的一级。纵队一级那个时候相当于军这一级的，像许世友、韦国清、宋时轮啊，他们都是纵队司令，我也是纵队司令了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC03-DE010-P01",
+        "target_stage_id": "BATCH05-DOC03-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC03-S0060",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC03-DE010-P02",
+        "target_stage_id": "BATCH05-DOC03-DE010-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC03-S0062",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

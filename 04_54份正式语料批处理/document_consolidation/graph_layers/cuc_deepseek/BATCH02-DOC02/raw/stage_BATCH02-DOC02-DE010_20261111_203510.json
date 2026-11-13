@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T20:35:10",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC02-DE010",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC02-DE010",
+  "usage": {
+    "prompt_tokens": 1248,
+    "total_tokens": 4130,
+    "completion_tokens": 2882,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2013
+    },
+    "time_to_first_token_ms": 26852,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2881000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC02-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆部参加万家岭会战；原文未交代该部具体作战经过与战后结果。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以1938年9月赣北战前态势为背景，至“我们就参加这个战役”的参战陈述为止；不扩展到战役具体过程与战果。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"战前态势：1938年9月日军占九江后南攻南昌，德安守军由王启明任团长。\",\n      \"process_text\": \"1938年9月敌人占九江后南攻，德安守军由王启明任团长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0049\"\n      ],\n      \"evidence_quote\": \"陈锐霆：这个时候是1938年的七八月吧，就在南昌这一带，以后9月的时候敌人已经占了九江。接着（敌人）又南攻，想着进攻南昌，但是到德安的（时候），我们的守军，就是我刚才讲王启明当团长的这个时候，就是正定那个受重伤的营长，（现在）就当了团长了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"王启明部坚守德安，敌人久攻不下。\",\n      \"process_text\": \"王启明守德安，守得很坚固，敌人久攻不下。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0051\"\n      ],\n      \"evidence_quote\": \"王启明守德安，守得很坚固，敌人久攻不下啊\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"部队准备在赣北进行大会战，后称万家岭会战，陈锐霆部参加该战役。\",\n      \"process_text\": \"部队准备在赣北搞大会战，后称“万家岭会战”，规模与胜利均大于台儿庄，陈锐霆部参加。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0051\"\n      ],\n      \"evidence_quote\": \"这个时候部队就准备在赣北这一带搞一个大的会战，以后我们党就叫“万家岭会战”，规模比台儿庄还大，胜利比那个规模也大，我们就参加这个战役。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE010-P01\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0051\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE010-P02\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE010-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0051\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC02-DE010",
+    "event_enrichment": {
+      "result_state": "陈锐霆部参加万家岭会战；原文未交代该部具体作战经过与战后结果。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以1938年9月赣北战前态势为背景，至“我们就参加这个战役”的参战陈述为止；不扩展到战役具体过程与战果。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC02-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "战前态势：1938年9月日军占九江后南攻南昌，德安守军由王启明任团长。",
+        "process_text": "1938年9月敌人占九江后南攻，德安守军由王启明任团长。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0049"
+        ],
+        "evidence_quote": "陈锐霆：这个时候是1938年的七八月吧，就在南昌这一带，以后9月的时候敌人已经占了九江。接着（敌人）又南攻，想着进攻南昌，但是到德安的（时候），我们的守军，就是我刚才讲王启明当团长的这个时候，就是正定那个受重伤的营长，（现在）就当了团长了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "王启明部坚守德安，敌人久攻不下。",
+        "process_text": "王启明守德安，守得很坚固，敌人久攻不下。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0051"
+        ],
+        "evidence_quote": "王启明守德安，守得很坚固，敌人久攻不下啊",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "部队准备在赣北进行大会战，后称万家岭会战，陈锐霆部参加该战役。",
+        "process_text": "部队准备在赣北搞大会战，后称“万家岭会战”，规模与胜利均大于台儿庄，陈锐霆部参加。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0051"
+        ],
+        "evidence_quote": "这个时候部队就准备在赣北这一带搞一个大的会战，以后我们党就叫“万家岭会战”，规模比台儿庄还大，胜利比那个规模也大，我们就参加这个战役。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC02-DE010-P01",
+        "target_stage_id": "BATCH02-DOC02-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC02-S0051",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC02-DE010-P02",
+        "target_stage_id": "BATCH02-DOC02-DE010-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC02-S0051",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

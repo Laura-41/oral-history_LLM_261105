@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T00:39:19",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC04-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC04-DE003",
+  "usage": {
+    "prompt_tokens": 1287,
+    "total_tokens": 3910,
+    "completion_tokens": 2623,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1703
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 23346,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-19\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC04-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"野战医院在太华乡恢复正规治疗，轮训队正常讲课，医务职业学校系统补课，上下班、治疗和讲课均趋于正规化。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据S0038至S0040，从安全转移起，到到达该地区后恢复治疗、讲课和补课并趋于正规化止；S0036为院长日常手术工作的背景说明，未单列为阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"野战医院安全转移，未丢一人\",\n      \"process_text\": \"安全转移了，没有丢一个\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0038\"\n      ],\n      \"evidence_quote\": \"安全转移了，没有丢一个，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"到达该地区后进行正常治疗\",\n      \"process_text\": \"都到这个地区，就是进行正常治疗了\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0039\"\n      ],\n      \"evidence_quote\": \"都到这个地区。就是进行正常治疗了，那这个轮训队就集中正常讲课，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"轮训队集中正常讲课\",\n      \"process_text\": \"轮训队集中正常讲课\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0039\"\n      ],\n      \"evidence_quote\": \"那这个轮训队就集中正常讲课，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"医务职业学校系统补课，工作、治疗和讲课正规化\",\n      \"process_text\": \"医务职业学校系统地补课，上下班时间正常，治疗正规化，讲课正常化\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0040\"\n      ],\n      \"evidence_quote\": \"医务职业学校（也）系统地补课。这个都比较正规了，上下班时间也正常了，治疗也正规化了，讲课也正常了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC04-DE003-P01\",\n      \"target_stage_id\": \"BATCH06-DOC04-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC04-S0039\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC04-DE003-P02\",\n      \"target_stage_id\": \"BATCH06-DOC04-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC04-S0039\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC04-DE003-P03\",\n      \"target_stage_id\": \"BATCH06-DOC04-DE003-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC04-S0040\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-19",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC04-DE003",
+    "event_enrichment": {
+      "result_state": "野战医院在太华乡恢复正规治疗，轮训队正常讲课，医务职业学校系统补课，上下班、治疗和讲课均趋于正规化。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "依据S0038至S0040，从安全转移起，到到达该地区后恢复治疗、讲课和补课并趋于正规化止；S0036为院长日常手术工作的背景说明，未单列为阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC04-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "野战医院安全转移，未丢一人",
+        "process_text": "安全转移了，没有丢一个",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0038"
+        ],
+        "evidence_quote": "安全转移了，没有丢一个，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC04-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "到达该地区后进行正常治疗",
+        "process_text": "都到这个地区，就是进行正常治疗了",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0039"
+        ],
+        "evidence_quote": "都到这个地区。就是进行正常治疗了，那这个轮训队就集中正常讲课，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC04-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "轮训队集中正常讲课",
+        "process_text": "轮训队集中正常讲课",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0039"
+        ],
+        "evidence_quote": "那这个轮训队就集中正常讲课，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC04-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "医务职业学校系统补课，工作、治疗和讲课正规化",
+        "process_text": "医务职业学校系统地补课，上下班时间正常，治疗正规化，讲课正常化",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0040"
+        ],
+        "evidence_quote": "医务职业学校（也）系统地补课。这个都比较正规了，上下班时间也正常了，治疗也正规化了，讲课也正常了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC04-DE003-P01",
+        "target_stage_id": "BATCH06-DOC04-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC04-S0039",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC04-DE003-P02",
+        "target_stage_id": "BATCH06-DOC04-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC04-S0039",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC04-DE003-P03",
+        "target_stage_id": "BATCH06-DOC04-DE003-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC04-S0040",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

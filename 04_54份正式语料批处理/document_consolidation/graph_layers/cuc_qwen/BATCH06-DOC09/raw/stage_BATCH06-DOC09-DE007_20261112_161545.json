@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T16:15:45",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC09-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC09-DE007",
+  "usage": {
+    "prompt_tokens": 1607,
+    "total_tokens": 7637,
+    "completion_tokens": 6030,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4536
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 6029000,
+    "time_to_first_token_ms": 102159
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-22\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC09-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"西尔茨（音）关于陈海峰由工人培养为外科医生的惊奇、生活照顾与环境、医院管理评价，已通过日记记载、寄信给美国女儿以及翻译汇报形成可转述内容。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为 S0097 中“他后来得知我是一个（排字工人出身）”并惊奇新四军八路军培养效果；终点为 S0102 中“对这个医院做出评价”。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"西尔茨（音）得知陈海峰工人出身并惊奇其培养效果\",\n      \"process_text\": \"他后来得知我是一个（排字工人出身），说新四军八路军能够把一个工人培养成这么个正规训练的，技术熟练的，处理外科战伤这么好的一个外科医生，他非常惊奇。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0097\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那个医生开完刀，他就走了，整个的病房管理都由我来管了，实际上我是院长。内部呢，我是院长，我要管7个医疗队，是不是。我要绝大部分时间陪着这个医生，个别的讨教，取他的经验，取他的思路，也接受了不少影响。所以他对我们的影响啊，非常好，他后来得知我是一个（排字工人出身），我这个书上面写了，没有明确讲我自己了。说新四军八路军能够把一个工人培养成这么个正规训练的，技术熟练的，处理外科战伤这么好的一个外科医生，他非常惊奇。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"西尔茨（音）在日记记载培养效果并每月寄信给美国女儿\",\n      \"process_text\": \"他说把一个工人能训练成这样子，在他的日记里面（有）记载。大致每个月寄好几封信寄给他美国的女儿。他写好信也给我们翻译看。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0099\"\n      ],\n      \"evidence_quote\": \"    陈海峰：他说把一个工人能训练成这样子，在他的日记里面（有）记载。大致每个月寄好几封信寄给他美国的女儿。他写好信也给我们翻译看，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"翻译汇报西尔茨（音）思想并转述其向爱人、女儿讲述生活与环境\",\n      \"process_text\": \"我们翻译汇报给我，他有什么思想。给他的爱人讲，给他女儿讲，他说我这里环境非常优美，鸟语花香，流水悠悠，桃红柳绿，是不是，一片竹林。他说我经常散步，他说他们招待我也很好，生活照顾很好，他说生活上没有问题。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0100\"\n      ],\n      \"evidence_quote\": \"我们翻译汇报给我，他有什么思想。给他的爱人讲，给他女儿讲，他说我这里环境非常优美，鸟语花香，流水悠悠，桃红柳绿，是不是，一片竹林。他说我经常散步，他说他们招待我也很好，生活照顾很好，他说生活上没有问题。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC09-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"西尔茨（音）评价医院管理、条件与要求落实\",\n      \"process_text\": \"医院的管理井井有条，我所看到的其他地方的国家医院中间，这样子一个条件的医院还是并不多见（的），他说。能够管理得这么好，他说我们都觉得很惊奇。他说我所有的想法，在这里都能落实，我的要求什么都能满足，对这个医院做出评价。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC09-S0102\"\n      ],\n      \"evidence_quote\": \"    陈海峰：医院的管理井井有条，我所看到的其他地方的国家医院中间，这样子一个条件的医院还是并不多见（的），他说。能够管理得这么好，他说我们都觉得很惊奇。他说我所有的想法，在这里都能落实，我的要求什么都能满足，对这个医院做出评价。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE007-P01\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0099\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE007-P02\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE007-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0100\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC09-DE007-P03\",\n      \"target_stage_id\": \"BATCH06-DOC09-DE007-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC09-S0102\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-22",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC09-DE007",
+    "event_enrichment": {
+      "result_state": "西尔茨（音）关于陈海峰由工人培养为外科医生的惊奇、生活照顾与环境、医院管理评价，已通过日记记载、寄信给美国女儿以及翻译汇报形成可转述内容。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为 S0097 中“他后来得知我是一个（排字工人出身）”并惊奇新四军八路军培养效果；终点为 S0102 中“对这个医院做出评价”。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC09-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "西尔茨（音）得知陈海峰工人出身并惊奇其培养效果",
+        "process_text": "他后来得知我是一个（排字工人出身），说新四军八路军能够把一个工人培养成这么个正规训练的，技术熟练的，处理外科战伤这么好的一个外科医生，他非常惊奇。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0097"
+        ],
+        "evidence_quote": "    陈海峰：那个医生开完刀，他就走了，整个的病房管理都由我来管了，实际上我是院长。内部呢，我是院长，我要管7个医疗队，是不是。我要绝大部分时间陪着这个医生，个别的讨教，取他的经验，取他的思路，也接受了不少影响。所以他对我们的影响啊，非常好，他后来得知我是一个（排字工人出身），我这个书上面写了，没有明确讲我自己了。说新四军八路军能够把一个工人培养成这么个正规训练的，技术熟练的，处理外科战伤这么好的一个外科医生，他非常惊奇。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "西尔茨（音）在日记记载培养效果并每月寄信给美国女儿",
+        "process_text": "他说把一个工人能训练成这样子，在他的日记里面（有）记载。大致每个月寄好几封信寄给他美国的女儿。他写好信也给我们翻译看。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0099"
+        ],
+        "evidence_quote": "    陈海峰：他说把一个工人能训练成这样子，在他的日记里面（有）记载。大致每个月寄好几封信寄给他美国的女儿。他写好信也给我们翻译看，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "翻译汇报西尔茨（音）思想并转述其向爱人、女儿讲述生活与环境",
+        "process_text": "我们翻译汇报给我，他有什么思想。给他的爱人讲，给他女儿讲，他说我这里环境非常优美，鸟语花香，流水悠悠，桃红柳绿，是不是，一片竹林。他说我经常散步，他说他们招待我也很好，生活照顾很好，他说生活上没有问题。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0100"
+        ],
+        "evidence_quote": "我们翻译汇报给我，他有什么思想。给他的爱人讲，给他女儿讲，他说我这里环境非常优美，鸟语花香，流水悠悠，桃红柳绿，是不是，一片竹林。他说我经常散步，他说他们招待我也很好，生活照顾很好，他说生活上没有问题。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC09-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "西尔茨（音）评价医院管理、条件与要求落实",
+        "process_text": "医院的管理井井有条，我所看到的其他地方的国家医院中间，这样子一个条件的医院还是并不多见（的），他说。能够管理得这么好，他说我们都觉得很惊奇。他说我所有的想法，在这里都能落实，我的要求什么都能满足，对这个医院做出评价。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC09-S0102"
+        ],
+        "evidence_quote": "    陈海峰：医院的管理井井有条，我所看到的其他地方的国家医院中间，这样子一个条件的医院还是并不多见（的），他说。能够管理得这么好，他说我们都觉得很惊奇。他说我所有的想法，在这里都能落实，我的要求什么都能满足，对这个医院做出评价。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC09-DE007-P01",
+        "target_stage_id": "BATCH06-DOC09-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0099",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE007-P02",
+        "target_stage_id": "BATCH06-DOC09-DE007-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH06-DOC09-S0100",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC09-DE007-P03",
+        "target_stage_id": "BATCH06-DOC09-DE007-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC09-S0102",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

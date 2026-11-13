@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T00:02:39",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC06-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC06-DE001",
+  "usage": {
+    "prompt_tokens": 1224,
+    "total_tokens": 5491,
+    "completion_tokens": 4267,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3397
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 33268,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC06-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"师部确定分兵方案：师长、政委率部分司令部和警卫营及686团留原地；司令、政治、供给、后勤机关以王秉璋、黄励为首组成东进支队，分别负责军事和政治。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以‘从那商量了以后’确定分兵为起点，至‘黄励负责政治’明确东进支队组建与分工为终点；此前罗荣桓与师长谈话及情绪、此后休整待机不计入本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"商量后确定师部在此不利，按建设鲁南根据地原计划实行分兵。\",\n      \"process_text\": \"商量后确定师部在此不行，按原计划建设鲁南根据地，确定把部队分开。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0003\"\n      ],\n      \"evidence_quote\": \"从那商量了以后，就确定师部现在看来在这还是不行，就按照原来计划要建设鲁南根据地这个思想，就确定要把它分开。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"师长、政委率司令部和警卫营各一部分，686团留原地。\",\n      \"process_text\": \"师长、政委带司令部一部分、警卫营一部分，686团留到那里。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0003\"\n      ],\n      \"evidence_quote\": \"师长、政委带司令部一部分，警卫营的一部分，686团也留到那里，他就两个营嘛。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"司令、政治、供给、后勤机关以王秉璋、黄励为首组成东进支队，分别负责军事和政治。\",\n      \"process_text\": \"司令部、政治部、供给部、后勤部机关由王秉璋、黄励以东进支队名义，王秉璋负责军事，黄励负责政治。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0003\"\n      ],\n      \"evidence_quote\": \"司令部、政治部、供给部、后勤部机关由王秉璋、黄励，还是以东进支队的名义，王秉璋负责军事，黄励负责政治，一个军事指挥员，一个政治指挥员\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC06-DE001-P01\",\n      \"target_stage_id\": \"BATCH05-DOC06-DE001-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH05-DOC06-S0003\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC06-DE001-P02\",\n      \"target_stage_id\": \"BATCH05-DOC06-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC06-S0003\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC06-DE001",
+    "event_enrichment": {
+      "result_state": "师部确定分兵方案：师长、政委率部分司令部和警卫营及686团留原地；司令、政治、供给、后勤机关以王秉璋、黄励为首组成东进支队，分别负责军事和政治。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以‘从那商量了以后’确定分兵为起点，至‘黄励负责政治’明确东进支队组建与分工为终点；此前罗荣桓与师长谈话及情绪、此后休整待机不计入本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC06-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "商量后确定师部在此不利，按建设鲁南根据地原计划实行分兵。",
+        "process_text": "商量后确定师部在此不行，按原计划建设鲁南根据地，确定把部队分开。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0003"
+        ],
+        "evidence_quote": "从那商量了以后，就确定师部现在看来在这还是不行，就按照原来计划要建设鲁南根据地这个思想，就确定要把它分开。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC06-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "师长、政委率司令部和警卫营各一部分，686团留原地。",
+        "process_text": "师长、政委带司令部一部分、警卫营一部分，686团留到那里。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0003"
+        ],
+        "evidence_quote": "师长、政委带司令部一部分，警卫营的一部分，686团也留到那里，他就两个营嘛。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC06-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "司令、政治、供给、后勤机关以王秉璋、黄励为首组成东进支队，分别负责军事和政治。",
+        "process_text": "司令部、政治部、供给部、后勤部机关由王秉璋、黄励以东进支队名义，王秉璋负责军事，黄励负责政治。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0003"
+        ],
+        "evidence_quote": "司令部、政治部、供给部、后勤部机关由王秉璋、黄励，还是以东进支队的名义，王秉璋负责军事，黄励负责政治，一个军事指挥员，一个政治指挥员",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC06-DE001-P01",
+        "target_stage_id": "BATCH05-DOC06-DE001-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH05-DOC06-S0003",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC06-DE001-P02",
+        "target_stage_id": "BATCH05-DOC06-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC06-S0003",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

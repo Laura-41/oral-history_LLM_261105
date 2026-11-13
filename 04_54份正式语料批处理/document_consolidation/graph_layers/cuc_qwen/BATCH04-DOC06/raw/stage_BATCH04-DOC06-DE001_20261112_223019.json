@@ -1,0 +1,150 @@
+{
+  "run_time": "2026-11-12T22:30:19",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC06-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC06-DE001",
+  "usage": {
+    "prompt_tokens": 2307,
+    "total_tokens": 12837,
+    "completion_tokens": 10530,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8495
+    },
+    "time_to_first_token_ms": 159421,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 10529000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC06-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"形成对学校教员兼课、课程分工、授课方式及前后方医院安排的口述说明。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"边界起于 S0003 开始讲教员兼职与主科授课人，止于 S0016 说明兼课人员及前后方医院安排；中间片段均围绕学校教员兼课、课程分工与授课方式展开。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"说明学校教员兼职较多，主科主要由卫生部长和李振湘讲授。\",\n      \"process_text\": \"    陈海峰：这个组织机构还没讲完呢，教员里面，各个专科的教员兼职的多。主科呢，主要是卫生部长来上，李振湘来上。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0003\"\n      ],\n      \"evidence_quote\": \"    陈海峰：这个组织机构还没讲完呢，教员里面，各个专科的教员兼职的多。主科呢，主要是卫生部长来上，李振湘来上。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"说明李振湘讲授战伤外科、内科诊断和物理诊断学，并交代当时缺乏X光、B超等诊断条件。\",\n      \"process_text\": \"李振湘就上那个战伤外科，内科诊断，就物理诊断学，各种病的异常的诊断。那个时候，我们部队还都没有X光，只有皖南军部有个X光。我们\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0004\",\n        \"BATCH04-DOC06-S0005\"\n      ],\n      \"evidence_quote\": \"李振湘就上那个战伤外科，内科诊断，就物理诊断学，各种病的异常的诊断。那个时候，我们部队还都没有X光，只有皖南军部有个X光。我们\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"说明诊断学中的微生物学和检验课由尹大本、朱群两人负责，并交代尹大本的检验科主任和教授身份。\",\n      \"process_text\": \"是上海洪恩医院的检验科主任，他是正式院校（的），也是小（有）名气的一个教授。那么他负责教微生物学，就是细菌学。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0007\",\n        \"BATCH04-DOC06-S0008\",\n        \"BATCH04-DOC06-S0010\",\n        \"BATCH04-DOC06-S0011\"\n      ],\n      \"evidence_quote\": \"是上海洪恩医院的检验科主任，他是正式院校（的），也是小（有）名气的一个教授。那么他负责教微生物学，就是细菌学。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"说明政治课由指导员教，业务课大课由卫生部长讲。\",\n      \"process_text\": \"这两门课是他们两个人教。那么政治课是指导员教。业务课呢，大课都是卫生部长来讲。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0011\"\n      ],\n      \"evidence_quote\": \"这两门课是他们两个人教。那么政治课是指导员教。业务课呢，大课都是卫生部长来讲。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"说明卫生部长采用集中住一个礼拜、讲一个礼拜、再到前方两个礼拜的分段授课方式，并在来院时做大手术和诊断。\",\n      \"process_text\": \"这样子，他是分段讲。他来了以后呢，就做些大的手术，我们做不了的，他做。有些重伤病人或者高级干部来了，有些军区的领导啊，重要的团以上干部啊，旅以上干部啊，那么他就来诊断。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0012\",\n        \"BATCH04-DOC06-S0013\"\n      ],\n      \"evidence_quote\": \"这样子，他是分段讲。他来了以后呢，就做些大的手术，我们做不了的，他做。有些重伤病人或者高级干部来了，有些军区的领导啊，重要的团以上干部啊，旅以上干部啊，那么他就来诊断。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE001-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"总结学校教育班子和各科情况，并说明医院院长、医疗队队长、医务主任等兼课，以及前后方医院和休养所的分工。\",\n      \"process_text\": \"    陈海峰：这是我们学校的教育班子和各科的情况。兼课呢，医院的院长，医疗队的队长，医院里的医务主任也来兼课。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0015\",\n        \"BATCH04-DOC06-S0016\"\n      ],\n      \"evidence_quote\": \"    陈海峰：这是我们学校的教育班子和各科的情况。兼课呢，医院的院长，医疗队的队长，医院里的医务主任也来兼课。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE001-P01\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0004\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE001-P02\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0007\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE001-P03\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0011\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE001-P04\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE001-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0012\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE001-P05\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE001-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0015\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC06-DE001",
+    "event_enrichment": {
+      "result_state": "形成对学校教员兼课、课程分工、授课方式及前后方医院安排的口述说明。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "边界起于 S0003 开始讲教员兼职与主科授课人，止于 S0016 说明兼课人员及前后方医院安排；中间片段均围绕学校教员兼课、课程分工与授课方式展开。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC06-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "说明学校教员兼职较多，主科主要由卫生部长和李振湘讲授。",
+        "process_text": "    陈海峰：这个组织机构还没讲完呢，教员里面，各个专科的教员兼职的多。主科呢，主要是卫生部长来上，李振湘来上。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0003"
+        ],
+        "evidence_quote": "    陈海峰：这个组织机构还没讲完呢，教员里面，各个专科的教员兼职的多。主科呢，主要是卫生部长来上，李振湘来上。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "说明李振湘讲授战伤外科、内科诊断和物理诊断学，并交代当时缺乏X光、B超等诊断条件。",
+        "process_text": "李振湘就上那个战伤外科，内科诊断，就物理诊断学，各种病的异常的诊断。那个时候，我们部队还都没有X光，只有皖南军部有个X光。我们",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0004",
+          "BATCH04-DOC06-S0005"
+        ],
+        "evidence_quote": "李振湘就上那个战伤外科，内科诊断，就物理诊断学，各种病的异常的诊断。那个时候，我们部队还都没有X光，只有皖南军部有个X光。我们",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "说明诊断学中的微生物学和检验课由尹大本、朱群两人负责，并交代尹大本的检验科主任和教授身份。",
+        "process_text": "是上海洪恩医院的检验科主任，他是正式院校（的），也是小（有）名气的一个教授。那么他负责教微生物学，就是细菌学。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0007",
+          "BATCH04-DOC06-S0008",
+          "BATCH04-DOC06-S0010",
+          "BATCH04-DOC06-S0011"
+        ],
+        "evidence_quote": "是上海洪恩医院的检验科主任，他是正式院校（的），也是小（有）名气的一个教授。那么他负责教微生物学，就是细菌学。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "说明政治课由指导员教，业务课大课由卫生部长讲。",
+        "process_text": "这两门课是他们两个人教。那么政治课是指导员教。业务课呢，大课都是卫生部长来讲。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0011"
+        ],
+        "evidence_quote": "这两门课是他们两个人教。那么政治课是指导员教。业务课呢，大课都是卫生部长来讲。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "说明卫生部长采用集中住一个礼拜、讲一个礼拜、再到前方两个礼拜的分段授课方式，并在来院时做大手术和诊断。",
+        "process_text": "这样子，他是分段讲。他来了以后呢，就做些大的手术，我们做不了的，他做。有些重伤病人或者高级干部来了，有些军区的领导啊，重要的团以上干部啊，旅以上干部啊，那么他就来诊断。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0012",
+          "BATCH04-DOC06-S0013"
+        ],
+        "evidence_quote": "这样子，他是分段讲。他来了以后呢，就做些大的手术，我们做不了的，他做。有些重伤病人或者高级干部来了，有些军区的领导啊，重要的团以上干部啊，旅以上干部啊，那么他就来诊断。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE001-P06",
+        "stage_order": 6,
+        "stage_summary": "总结学校教育班子和各科情况，并说明医院院长、医疗队队长、医务主任等兼课，以及前后方医院和休养所的分工。",
+        "process_text": "    陈海峰：这是我们学校的教育班子和各科的情况。兼课呢，医院的院长，医疗队的队长，医院里的医务主任也来兼课。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0015",
+          "BATCH04-DOC06-S0016"
+        ],
+        "evidence_quote": "    陈海峰：这是我们学校的教育班子和各科的情况。兼课呢，医院的院长，医疗队的队长，医院里的医务主任也来兼课。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC06-DE001-P01",
+        "target_stage_id": "BATCH04-DOC06-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC06-S0004",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE001-P02",
+        "target_stage_id": "BATCH04-DOC06-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC06-S0007",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE001-P03",
+        "target_stage_id": "BATCH04-DOC06-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC06-S0011",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE001-P04",
+        "target_stage_id": "BATCH04-DOC06-DE001-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC06-S0012",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE001-P05",
+        "target_stage_id": "BATCH04-DOC06-DE001-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC06-S0015",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

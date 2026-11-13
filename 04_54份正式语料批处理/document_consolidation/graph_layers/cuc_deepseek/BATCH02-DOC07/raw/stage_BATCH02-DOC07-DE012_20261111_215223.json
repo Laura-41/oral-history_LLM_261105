@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T21:52:23",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC07-DE012",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC07-DE012",
+  "usage": {
+    "prompt_tokens": 1130,
+    "total_tokens": 3676,
+    "completion_tokens": 2546,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2030
+    },
+    "time_to_first_token_ms": 19689,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC07-DE012\",\n  \"event_enrichment\": {\n    \"result_state\": \"所有随身物品（包括纸张类物品）均被丢弃，不再携带。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“因为过铁路，到皖南事变以后”为起因起点，以“所以都丢掉了”为丢弃结果终点；S0054“没有了”作为物品已不存在的补充。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE012-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"过铁路及皖南事变后的携带限制：任何东西、甚至一张纸都不能带。\",\n      \"process_text\": \"因过铁路，到皖南事变以后，什么东西都不能带，一张纸都不能带。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0056\"\n      ],\n      \"evidence_quote\": \"因为过铁路，到皖南事变以后，我们什么东西都不能带，一张纸都不能带\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE012-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"将随身物品全部丢弃。\",\n      \"process_text\": \"所以都丢掉了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0056\"\n      ],\n      \"evidence_quote\": \"所以都丢掉了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE012-P01\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE012-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0056\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC07-DE012",
+    "event_enrichment": {
+      "result_state": "所有随身物品（包括纸张类物品）均被丢弃，不再携带。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以“因为过铁路，到皖南事变以后”为起因起点，以“所以都丢掉了”为丢弃结果终点；S0054“没有了”作为物品已不存在的补充。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC07-DE012-P01",
+        "stage_order": 1,
+        "stage_summary": "过铁路及皖南事变后的携带限制：任何东西、甚至一张纸都不能带。",
+        "process_text": "因过铁路，到皖南事变以后，什么东西都不能带，一张纸都不能带。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0056"
+        ],
+        "evidence_quote": "因为过铁路，到皖南事变以后，我们什么东西都不能带，一张纸都不能带",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE012-P02",
+        "stage_order": 2,
+        "stage_summary": "将随身物品全部丢弃。",
+        "process_text": "所以都丢掉了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0056"
+        ],
+        "evidence_quote": "所以都丢掉了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC07-DE012-P01",
+        "target_stage_id": "BATCH02-DOC07-DE012-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH02-DOC07-S0056",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

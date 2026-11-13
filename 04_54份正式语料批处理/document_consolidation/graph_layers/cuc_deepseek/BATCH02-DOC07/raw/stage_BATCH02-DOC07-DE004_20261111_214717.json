@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T21:47:17",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC07-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC07-DE004",
+  "usage": {
+    "prompt_tokens": 1510,
+    "total_tokens": 5752,
+    "completion_tokens": 4242,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3718
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 34768
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC07-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"学生进入小河口后方医院实习\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以S0020-S0026中对小河口后方医院正规管理与条件的说明为背景，至S0026末句“我们学生就到这个医院去实习”结束；不延伸实习期间的具体活动。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"后方医院内部管理正规，管理制度与大城市医院相同。\",\n      \"process_text\": \"后方医院内部管理非常正规，完全采用和大城市医院一样的管理制度。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0020\"\n      ],\n      \"evidence_quote\": \"内部管理非常正规，我们的前方医院，南堡村医院，军医处直接管了，没有院长。后方医院完全和大城市医院内部管理制度一样的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"学生进入小河口后方医院实习。\",\n      \"process_text\": \"我们学生就到这个医院去实习。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0026\"\n      ],\n      \"evidence_quote\": \"我们学生就到这个医院去实习。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE004-P01\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0026\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC07-DE004",
+    "event_enrichment": {
+      "result_state": "学生进入小河口后方医院实习",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以S0020-S0026中对小河口后方医院正规管理与条件的说明为背景，至S0026末句“我们学生就到这个医院去实习”结束；不延伸实习期间的具体活动。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC07-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "后方医院内部管理正规，管理制度与大城市医院相同。",
+        "process_text": "后方医院内部管理非常正规，完全采用和大城市医院一样的管理制度。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0020"
+        ],
+        "evidence_quote": "内部管理非常正规，我们的前方医院，南堡村医院，军医处直接管了，没有院长。后方医院完全和大城市医院内部管理制度一样的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "学生进入小河口后方医院实习。",
+        "process_text": "我们学生就到这个医院去实习。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0026"
+        ],
+        "evidence_quote": "我们学生就到这个医院去实习。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC07-DE004-P01",
+        "target_stage_id": "BATCH02-DOC07-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0026",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

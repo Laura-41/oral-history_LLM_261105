@@ -1,0 +1,182 @@
+{
+  "run_time": "2026-11-10T22:08:40",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC08-W001",
+  "technical_document_id": "BATCH03-DOC08",
+  "document_id": "06.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC08-S0002",
+    "BATCH03-DOC08-S0003",
+    "BATCH03-DOC08-S0004",
+    "BATCH03-DOC08-S0005",
+    "BATCH03-DOC08-S0006",
+    "BATCH03-DOC08-S0007",
+    "BATCH03-DOC08-S0008",
+    "BATCH03-DOC08-S0009",
+    "BATCH03-DOC08-S0010",
+    "BATCH03-DOC08-S0011",
+    "BATCH03-DOC08-S0012",
+    "BATCH03-DOC08-S0013",
+    "BATCH03-DOC08-S0014",
+    "BATCH03-DOC08-S0015",
+    "BATCH03-DOC08-S0016",
+    "BATCH03-DOC08-S0017",
+    "BATCH03-DOC08-S0018",
+    "BATCH03-DOC08-S0019",
+    "BATCH03-DOC08-S0020",
+    "BATCH03-DOC08-S0021",
+    "BATCH03-DOC08-S0022",
+    "BATCH03-DOC08-S0023",
+    "BATCH03-DOC08-S0024",
+    "BATCH03-DOC08-S0025",
+    "BATCH03-DOC08-S0026",
+    "BATCH03-DOC08-S0027",
+    "BATCH03-DOC08-S0028",
+    "BATCH03-DOC08-S0029",
+    "BATCH03-DOC08-S0030",
+    "BATCH03-DOC08-S0031",
+    "BATCH03-DOC08-S0032",
+    "BATCH03-DOC08-S0033",
+    "BATCH03-DOC08-S0034",
+    "BATCH03-DOC08-S0035",
+    "BATCH03-DOC08-S0036",
+    "BATCH03-DOC08-S0037",
+    "BATCH03-DOC08-S0038",
+    "BATCH03-DOC08-S0039",
+    "BATCH03-DOC08-S0040"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 9,
+    "unassigned_segment_count": 30,
+    "input_segment_count": 39,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC08-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC08-W001-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC08-S0003",
+          "BATCH03-DOC08-S0004",
+          "BATCH03-DOC08-S0006",
+          "BATCH03-DOC08-S0020",
+          "BATCH03-DOC08-S0022",
+          "BATCH03-DOC08-S0024",
+          "BATCH03-DOC08-S0026",
+          "BATCH03-DOC08-S0027",
+          "BATCH03-DOC08-S0028"
+        ],
+        "event": {
+          "event_name": "陈海峰到5团报到并接任卫生队长",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "到5团团部报到、接任卫生队长、接上卫生队工作、给卫生员训练班讲课、换军衣",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "2月初",
+              "normalized_value": "2月初"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "东台县城",
+              "normalized_value": "东台县城"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "5团团部",
+              "normalized_value": "5团团部"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "5团卫生队长被炸死，没有指挥人员",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "接任5团卫生队长，接上卫生队工作",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "穿便衣、戴西瓜皮帽、穿长衫",
+              "normalized_value": null
+            },
+            {
+              "kind": "CONTENT",
+              "value": "皖南卫生工作的基本情况",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他说你先到卫生队把工作接上。刚好，这时候派了一个训练班，整个团的卫生员在这儿学习。我就趁这学习班呢，讲第一堂课，讲皖南卫生工作的基本情况。皖南一路（过来）我们所知道的一些情况，他们很关心哪。讲了以后，下面用很惊奇的眼光看着新来的领导，穿了个便衣，还是一条一条的，还是讲得津津有味的啊。大家（用）很惊异的眼光看着。",
+          "type_basis": "核心过程为到5团团部报到、接任卫生队长、接上卫生队工作、给卫生员训练班讲课和换军衣，属于职业劳动、组织行动和执行任务，可用“What did X do?”测试；主要参与者配置为Actor=陈海峰。讲课虽含言语成分，但服务于接任和接手卫生队工作的阶段性结果，故整体标MATERIAL；不标RELATIONAL，因为不是建立身份、属性或所属关系；不标VERBAL，因为言语不是独立象征交换；不标MENTAL、BEHAVIORAL或EXISTENTIAL。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC08-S0002",
+      "BATCH03-DOC08-S0005",
+      "BATCH03-DOC08-S0007",
+      "BATCH03-DOC08-S0008",
+      "BATCH03-DOC08-S0009",
+      "BATCH03-DOC08-S0010",
+      "BATCH03-DOC08-S0011",
+      "BATCH03-DOC08-S0012",
+      "BATCH03-DOC08-S0013",
+      "BATCH03-DOC08-S0014",
+      "BATCH03-DOC08-S0015",
+      "BATCH03-DOC08-S0016",
+      "BATCH03-DOC08-S0017",
+      "BATCH03-DOC08-S0018",
+      "BATCH03-DOC08-S0019",
+      "BATCH03-DOC08-S0021",
+      "BATCH03-DOC08-S0023",
+      "BATCH03-DOC08-S0025",
+      "BATCH03-DOC08-S0029",
+      "BATCH03-DOC08-S0030",
+      "BATCH03-DOC08-S0031",
+      "BATCH03-DOC08-S0032",
+      "BATCH03-DOC08-S0033",
+      "BATCH03-DOC08-S0034",
+      "BATCH03-DOC08-S0035",
+      "BATCH03-DOC08-S0036",
+      "BATCH03-DOC08-S0037",
+      "BATCH03-DOC08-S0038",
+      "BATCH03-DOC08-S0039",
+      "BATCH03-DOC08-S0040"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH03-DOC08-W001\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC08-W001-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC08-S0003\",\n        \"BATCH03-DOC08-S0004\",\n        \"BATCH03-DOC08-S0006\",\n        \"BATCH03-DOC08-S0020\",\n        \"BATCH03-DOC08-S0022\",\n        \"BATCH03-DOC08-S0024\",\n        \"BATCH03-DOC08-S0026\",\n        \"BATCH03-DOC08-S0027\",\n        \"BATCH03-DOC08-S0028\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰到5团报到并接任卫生队长\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"到5团团部报到、接任卫生队长、接上卫生队工作、给卫生员训练班讲课、换军衣\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"2月初\",\n            \"normalized_value\": \"2月初\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"东台县城\",\n            \"normalized_value\": \"东台县城\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"5团团部\",\n            \"normalized_value\": \"5团团部\"\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"5团卫生队长被炸死，没有指挥人员\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"接任5团卫生队长，接上卫生队工作\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"穿便衣、戴西瓜皮帽、穿长衫\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CONTENT\",\n            \"value\": \"皖南卫生工作的基本情况\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"他说你先到卫生队把工作接上。刚好，这时候派了一个训练班，整个团的卫生员在这儿学习。我就趁这学习班呢，讲第一堂课，讲皖南卫生工作的基本情况。皖南一路（过来）我们所知道的一些情况，他们很关心哪。讲了以后，下面用很惊奇的眼光看着新来的领导，穿了个便衣，还是一条一条的，还是讲得津津有味的啊。大家（用）很惊异的眼光看着。\",\n        \"type_basis\": \"核心过程为到5团团部报到、接任卫生队长、接上卫生队工作、给卫生员训练班讲课和换军衣，属于职业劳动、组织行动和执行任务，可用“What did X do?”测试；主要参与者配置为Actor=陈海峰。讲课虽含言语成分，但服务于接任和接手卫生队工作的阶段性结果，故整体标MATERIAL；不标RELATIONAL，因为不是建立身份、属性或所属关系；不标VERBAL，因为言语不是独立象征交换；不标MENTAL、BEHAVIORAL或EXISTENTIAL。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC08-S0002\",\n    \"BATCH03-DOC08-S0005\",\n    \"BATCH03-DOC08-S0007\",\n    \"BATCH03-DOC08-S0008\",\n    \"BATCH03-DOC08-S0009\",\n    \"BATCH03-DOC08-S0010\",\n    \"BATCH03-DOC08-S0011\",\n    \"BATCH03-DOC08-S0012\",\n    \"BATCH03-DOC08-S0013\",\n    \"BATCH03-DOC08-S0014\",\n    \"BATCH03-DOC08-S0015\",\n    \"BATCH03-DOC08-S0016\",\n    \"BATCH03-DOC08-S0017\",\n    \"BATCH03-DOC08-S0018\",\n    \"BATCH03-DOC08-S0019\",\n    \"BATCH03-DOC08-S0021\",\n    \"BATCH03-DOC08-S0023\",\n    \"BATCH03-DOC08-S0025\",\n    \"BATCH03-DOC08-S0029\",\n    \"BATCH03-DOC08-S0030\",\n    \"BATCH03-DOC08-S0031\",\n    \"BATCH03-DOC08-S0032\",\n    \"BATCH03-DOC08-S0033\",\n    \"BATCH03-DOC08-S0034\",\n    \"BATCH03-DOC08-S0035\",\n    \"BATCH03-DOC08-S0036\",\n    \"BATCH03-DOC08-S0037\",\n    \"BATCH03-DOC08-S0038\",\n    \"BATCH03-DOC08-S0039\",\n    \"BATCH03-DOC08-S0040\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 6379,
+    "total_tokens": 20245,
+    "completion_tokens": 13866,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12436
+    },
+    "time_to_first_token_ms": 230656,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13865000
+  }
+}

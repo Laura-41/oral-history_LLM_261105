@@ -1,0 +1,2026 @@
+{
+  "run_time": "2026-11-10T21:22:06",
+  "run_stage": "DOCUMENT_CONSOLIDATION_AND_SCOPE",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+document-consolidation-v0.1+output-contract-v0.3",
+  "technical_document_id": "BATCH03-DOC06",
+  "document_id": "05.杨永松100506（二校后 阅读版）.docx",
+  "input_candidate_ids": [
+    "BATCH03-DOC06-W001-E01",
+    "BATCH03-DOC06-W001-E02",
+    "BATCH03-DOC06-W001-E03",
+    "BATCH03-DOC06-W001-E04",
+    "BATCH03-DOC06-W001-E05",
+    "BATCH03-DOC06-W002-E01",
+    "BATCH03-DOC06-W002-E02",
+    "BATCH03-DOC06-W002-E03",
+    "BATCH03-DOC06-W003-E01",
+    "BATCH03-DOC06-W003-E02",
+    "BATCH03-DOC06-W003-E03",
+    "BATCH03-DOC06-W003-E04",
+    "BATCH03-DOC06-W003-E05",
+    "BATCH03-DOC06-W003-E06",
+    "BATCH03-DOC06-W004-E01",
+    "BATCH03-DOC06-W004-E02",
+    "BATCH03-DOC06-W004-E03"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "input_candidate_count": 17,
+    "document_event_count": 14,
+    "candidate_decision_count": 17,
+    "personal_event_count": 9,
+    "context_event_count": 5,
+    "uncertain_event_count": 0,
+    "needs_review_count": 2
+  },
+  "normalization_applied": false,
+  "normalization_error": null,
+  "parsed_output": {
+    "schema_version": "document-consolidation-v1.0",
+    "technical_document_id": "BATCH03-DOC06",
+    "document_id": "05.杨永松100506（二校后 阅读版）.docx",
+    "interviewee": "杨永松",
+    "document_events": [
+      {
+        "document_event_id": "BATCH03-DOC06-DE001",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W001-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0005",
+          "BATCH03-DOC06-S0007",
+          "BATCH03-DOC06-S0009"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0005"
+        ],
+        "scope_evidence_quote": "我们就在山上，我们看他来以后，部队都隐蔽了，准备打了。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "在川口附近隐蔽待机，日军转向撤退",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "隐蔽待机",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "川口附近山上",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们就在山上，我们看他来以后，部队都隐蔽了，准备打了。",
+          "type_basis": "核心过程为部队在川口附近隐蔽并准备战斗，属于有组织的军事物质行动；参与者为Actor，符合MATERIAL角色词表。未将日军行动另立事件，因其主要作为触发和背景。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE002",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W001-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0011"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0011"
+        ],
+        "scope_evidence_quote": "我们这个团又到了吉县附近，任务呢，去收容那些临汾撤退的学生，有什么山西大学，不是，那时叫什么大学……结果我们去了也晚了，他们都已经过了河了，我们又返回来。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "赴吉县收容临汾撤退学生未果",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "赴吉县收容撤退学生",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们这个团",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "临汾撤退的学生",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "吉县附近",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们这个团又到了吉县附近，任务呢，去收容那些临汾撤退的学生，有什么山西大学，不是，那时叫什么大学……结果我们去了也晚了，他们都已经过了河了，我们又返回来。",
+          "type_basis": "核心过程为部队前往吉县执行收容任务，属于有组织的军事物质行动；Actor和Goal均符合MATERIAL角色词表。未标为言语或心理过程，因主要过程是移动和收容行动。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE003",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W001-E03",
+          "BATCH03-DOC06-W002-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0011",
+          "BATCH03-DOC06-S0013",
+          "BATCH03-DOC06-S0028",
+          "BATCH03-DOC06-S0030"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0011"
+        ],
+        "scope_evidence_quote": "我们就侧击他，686团也侧击他，就在那午城镇和井沟的中间。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "午城镇井沟侧击并追击日军",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "侧击并追击日军",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "686团",
+              "normalized_entity": "686团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "敌人",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "午城镇、井沟及午城附近",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "弹药很少，国民党没给我们补充子弹",
+              "normalized_value": "弹药不足"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们就侧击他，686团也侧击他，就在那午城镇和井沟的中间。",
+          "type_basis": "核心过程为我军与686团对日军实施侧击，后续追击至午城附近并因弹药不足撤至山上，属于同一战斗的连续阶段；两个Actor和一个Goal均符合MATERIAL角色词表。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE004",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W001-E04"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0015",
+          "BATCH03-DOC06-S0017",
+          "BATCH03-DOC06-S0019",
+          "BATCH03-DOC06-S0021",
+          "BATCH03-DOC06-S0023"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0019"
+        ],
+        "scope_evidence_quote": "结果肺给打穿了，林彪打这么多仗他都没受伤，结果被阎锡山打了一枪。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "林彪负伤及后续指挥交接",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "被阎锡山部队打伤",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "阎锡山部队",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "林彪",
+              "normalized_entity": "林彪",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "结果肺给打穿了，林彪打这么多仗他都没受伤，结果被阎锡山打了一枪。",
+          "type_basis": "核心过程为林彪被阎锡山部队枪伤，属于造成身体损伤的物质过程；Actor和Goal符合MATERIAL角色词表。后续电报、送延安和代理师长任命作为同一突发遭遇的应对与结果，不另立一级事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": "事件包含负伤与后续指挥交接两个阶段，主导类型按物质过程处理，是否拆分需人工确认。",
+          "review_status": "NEEDS_REVIEW"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "事件包含林彪负伤与后续指挥交接两个阶段，主导类型按物质过程处理，是否拆分需人工确认。"
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE005",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W001-E05",
+          "BATCH03-DOC06-W002-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0025",
+          "BATCH03-DOC06-S0030",
+          "BATCH03-DOC06-S0032"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0032"
+        ],
+        "scope_evidence_quote": "我们到了汾阳、孝义以后，主要是一方面部队训练，因为我们不是新兵多嘛，另一个方面就是群众有武器，有的时候收些武器来补充自己，另外跟当地党委在一起，组织了一个汾孝游击队。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "返回汾阳孝义整训、收集武器并组织汾孝游击队",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "整训、收集武器并组织汾孝游击队",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "杨永松所在部队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "武器",
+              "normalized_entity": "武器",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "汾孝游击队",
+              "normalized_entity": "汾孝游击队",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "汾阳、孝义附近",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们到了汾阳、孝义以后，主要是一方面部队训练，因为我们不是新兵多嘛，另一个方面就是群众有武器，有的时候收些武器来补充自己，另外跟当地党委在一起，组织了一个汾孝游击队。",
+          "type_basis": "核心过程为部队训练、收集武器、组织游击队等组织性物质行动，Actor为部队，Goal包括武器和汾孝游击队；非单纯关系或言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE006",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W002-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0036",
+          "BATCH03-DOC06-S0037",
+          "BATCH03-DOC06-S0039",
+          "BATCH03-DOC06-S0041"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0041"
+        ],
+        "scope_evidence_quote": "我们一说，你们放到那儿的日本枪，还不被日本人拿走了，我们拿你们的武器那么多，我们去打日本有什么不可以呀，就跟他拖了，就不管他了。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "新兵营获取阎锡山仓库武器并拒绝归还",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "弄开仓库拿取武器并拒绝归还",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他这个营",
+              "normalized_entity": "新兵营",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "枪",
+              "normalized_entity": "武器",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "有一天",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他就把他弄开，每一个人该拿枪的拿一支枪，该拿机枪的拿机枪，该拿重机枪的拿重机枪。",
+          "type_basis": "核心过程为弄开仓库、拿取枪械、装备子弹等可观察物质行动，Actor为新兵营，Goal为武器；后续质问和拖延是同一事件的结果，不改变物质类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": "主要取枪行动由营长、教导员实施，受访者以『我们那个营』『我们一说』出现，个人参与范围需人工确认。",
+          "review_status": "NEEDS_REVIEW"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "主要取枪行动由营长、教导员实施，受访者以『我们那个营』『我们一说』出现，个人参与范围需人工确认。"
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE007",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W003-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0045",
+          "BATCH03-DOC06-S0047"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0045"
+        ],
+        "scope_evidence_quote": "也命令肖华带着他刚组织起来七八个月的政治部和旅部的一部分人东进。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "肖华、曾国华率部东进冀鲁边并组建冀鲁边纵队",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "东进冀鲁边并组建纵队",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "肖华",
+              "normalized_entity": "肖华",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "曾国华",
+              "normalized_entity": "曾国华",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "政治部和旅部的一部分人",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "冀鲁边纵队",
+              "normalized_entity": "冀鲁边纵队",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "冀鲁边",
+              "normalized_value": "冀鲁边"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "东",
+              "normalized_value": "东"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "也命令肖华带着他刚组织起来七八个月的政治部和旅部的一部分人东进。",
+          "type_basis": "核心过程为率部东进、组织部队，属物质过程；参与者为行动者肖华、曾国华及被带领人员/新编纵队，符合MATERIAL角色词表；非言语、心理或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE008",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W003-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0050"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0050"
+        ],
+        "scope_evidence_quote": "结果肖华是带着曾国华那个支队，一步到了鲁西。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "肖华率曾国华支队从冀鲁边转移鲁西",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "率支队转移鲁西",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "肖华",
+              "normalized_entity": "肖华",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "曾国华那个支队",
+              "normalized_entity": "曾国华支队",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "鲁西",
+              "normalized_value": "鲁西"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "敌人扫荡挺厉害，兵多了粮食也困难",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "结果肖华是带着曾国华那个支队，一步到了鲁西。",
+          "type_basis": "核心过程为率部转移，属物质空间移动；参与者为Actor肖华和Goal支队，符合MATERIAL词表；原因环境说明转移缘由，非心理或言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE009",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W003-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0054",
+          "BATCH03-DOC06-S0057"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0057"
+        ],
+        "scope_evidence_quote": "我们就在那里继续打小仗，就不打大的了，就偷偷摸摸地打它一下，铁路上破坏一下，搞这个。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "115师在晋西坚持小规模袭扰作战",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "坚持打小仗、破坏铁路",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "115师",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "铁路",
+              "normalized_entity": "铁路",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "那里",
+              "normalized_value": "晋西"
+            },
+            {
+              "kind": "MANNER",
+              "value": "偷偷摸摸地",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们就在那里继续打小仗，就不打大的了，就偷偷摸摸地打它一下，铁路上破坏一下，搞这个。",
+          "type_basis": "核心过程为打小仗、破坏铁路等物质行动；Actor为‘我们’（据上下文指115师），Goal为铁路；符合MATERIAL角色词表；非心理、言语或行为过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE010",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W003-E05"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0059"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0059"
+        ],
+        "scope_evidence_quote": "685团就到了微山湖西——以后叫苏鲁边，就到那里去了。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "685团等部先期东进苏鲁边",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "先期东进苏鲁边",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "685团",
+              "normalized_entity": "685团",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "8月份",
+              "normalized_value": "1938年8月"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "微山湖西——以后叫苏鲁边",
+              "normalized_value": "苏鲁边"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "东",
+              "normalized_value": "东"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "685团就到了微山湖西——以后叫苏鲁边，就到那里去了。",
+          "type_basis": "核心过程为部队先期东进并到达苏鲁边，属物质空间移动；Actor为685团，符合MATERIAL词表；途中作战、休整为同一移动经历的阶段。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE011",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W003-E04",
+          "BATCH03-DOC06-W004-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0059",
+          "BATCH03-DOC06-S0061",
+          "BATCH03-DOC06-S0072"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0072"
+        ],
+        "scope_evidence_quote": "我们1938年12月份晚上过的同蒲路，到了襄垣、沁县附近，就在那里集结，首长们去总部会见朱、彭首长，就让我们准备一下，就准备东进了。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "115师主力过同蒲路到太行并准备东进",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "过同蒲路到太行并集结准备东进",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "115师主力",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1938年12月份晚上",
+              "normalized_value": "1938年12月夜间"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "襄垣、沁县附近",
+              "normalized_value": "襄垣、沁县附近"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "东",
+              "normalized_value": "东"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们1938年12月份晚上过的同蒲路，到了襄垣、沁县附近，就在那里集结，首长们去总部会见朱、彭首长，就让我们准备一下，就准备东进了。",
+          "type_basis": "核心过程为夜间越过同蒲路、到达襄垣沁县附近集结并准备东进，属于空间移动和组织行动；参与者为行动主体，符合MATERIAL的Actor配置。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE012",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W003-E06"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0064",
+          "BATCH03-DOC06-S0066",
+          "BATCH03-DOC06-S0068",
+          "BATCH03-DOC06-S0070"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0070"
+        ],
+        "scope_evidence_quote": "打了好几阵子，这整个的晋西坚持不住了，坚持不住他就汾离公路以北靠到120师贺龙那个地方去了。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "阎锡山12月政变后陈士榘支队收容新军余部并转移",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "收容新军余部并转移靠拢120师",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "陈士榘支队",
+              "normalized_entity": "陈士榘支队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "新军中的共产党，决死队的共产党领导的部队",
+              "normalized_entity": "新军余部",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "12月",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "晋西",
+              "normalized_value": "晋西"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "汾离公路以北",
+              "normalized_value": "汾离公路以北"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "120师贺龙那个地方",
+              "normalized_value": "120师/贺龙部地区"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "阎锡山执行反共政策，搞12月政变",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "打了好几阵子，这整个的晋西坚持不住了，坚持不住他就汾离公路以北靠到120师贺龙那个地方去了。",
+          "type_basis": "核心过程包括陈士榘支队收容新军余部并转移靠拢120师，属物质性军事政治行动与空间移动；阎锡山反共政变为原因环境；参与者为Actor陈士榘支队及Goal新军余部，符合MATERIAL词表。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE013",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W004-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0074",
+          "BATCH03-DOC06-S0076",
+          "BATCH03-DOC06-S0078",
+          "BATCH03-DOC06-S0080"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0078"
+        ],
+        "scope_evidence_quote": "敌人就占领辽县了，我们就赶快移到辽县以南山上布置防务。就是两三天时间在那边，敌人就往南来，攻我们686团的阵地。686团就跟他对阵打起来了， 打得很激烈。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "115师参加太行反扫荡并在辽县以南抗击日军",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "参加反扫荡并抗击日军",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "115师",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "686团",
+              "normalized_entity": "686团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "敌人",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "辽县以南山上",
+              "normalized_value": "辽县以南山地"
+            },
+            {
+              "kind": "TIME",
+              "value": "两三天时间",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "敌人就占领辽县了，我们就赶快移到辽县以南山上布置防务。就是两三天时间在那边，敌人就往南来，攻我们686团的阵地。686团就跟他对阵打起来了， 打得很激烈。",
+          "type_basis": "核心过程为参加太行反扫荡、转移布防和抗击日军，属于军事行动和空间移动；参与者为行动主体、作战单位及被抗击对象，符合MATERIAL的Actor与Goal配置。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE014",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W004-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0080",
+          "BATCH03-DOC06-S0081"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0081"
+        ],
+        "scope_evidence_quote": "所以我们夜过平汉，再过卫河，从武林镇（音）过的卫河，就到了鲁西地区，在那里。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "115师反扫荡后继续东进至鲁西",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "继续东进并夜过平汉路、卫河到达鲁西",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "115师",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "鲁西地区",
+              "normalized_value": "鲁西地区"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "往东",
+              "normalized_value": "向东"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "所以我们夜过平汉，再过卫河，从武林镇（音）过的卫河，就到了鲁西地区，在那里。",
+          "type_basis": "核心过程为经批准后继续东进、夜间越过平汉路和卫河并到达鲁西，属于空间移动和组织行动；参与者为行动主体，符合MATERIAL的Actor配置。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "candidate_id": "BATCH03-DOC06-W001-E01",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE001"
+        ],
+        "reason": "单独保留为受访者所在部队在川口附近隐蔽待机的个人经历事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W001-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE002"
+        ],
+        "reason": "单独保留为受访者所在团赴吉县收容撤退学生的个人经历事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W001-E03",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE003"
+        ],
+        "reason": "与W002-E01同指午城战斗，侧击、追击和撤退为同一战斗的连续阶段，归并为一个文档级事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W001-E04",
+        "action": "CONTEXT_ONLY",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE004"
+        ],
+        "reason": "林彪负伤及后续指挥交接为受访者讲述的他人和上级行动，保留为讲述背景，不进入个人经历链。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W001-E05",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE005"
+        ],
+        "reason": "与W002-E02共享S0025，均叙述返回汾阳、孝义后的整训、收集武器和组织汾孝游击队，归并为一个事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W002-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE003"
+        ],
+        "reason": "与W001-E03同指午城战斗，追击至城附近并撤至山上为同一战斗的后续阶段，归并为一个文档级事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W002-E02",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE005"
+        ],
+        "reason": "与W001-E05共享S0025，内容为同一返回汾阳、孝义后的整训与组织游击队事件，归并为一个事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W002-E03",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE006"
+        ],
+        "reason": "单独保留为新兵营获取阎锡山仓库武器并拒绝归还的事件；个人参与范围需复核。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W003-E01",
+        "action": "CONTEXT_ONLY",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE007"
+        ],
+        "reason": "肖华、曾国华东进冀鲁边并组建纵队为受访者讲述的他人和部队沿革，保留为讲述背景。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W003-E02",
+        "action": "CONTEXT_ONLY",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE008"
+        ],
+        "reason": "肖华率曾国华支队转移鲁西为他人行动，保留为讲述背景。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W003-E03",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE009"
+        ],
+        "reason": "单独保留为受访者所在115师在晋西坚持小规模袭扰作战的个人经历事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W003-E04",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE011"
+        ],
+        "reason": "与W004-E01共享S0072，均叙述115师主力过同蒲路到太行并准备东进，归并为一个事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W003-E05",
+        "action": "CONTEXT_ONLY",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE010"
+        ],
+        "reason": "685团先期东进苏鲁边为受访者讲述的其他部队行动，保留为讲述背景。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W003-E06",
+        "action": "CONTEXT_ONLY",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE012"
+        ],
+        "reason": "阎锡山12月政变后陈士榘支队收容新军余部并转移为受访者讲述的晋西留守部队和他人行动，保留为讲述背景。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W004-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE011"
+        ],
+        "reason": "与W003-E04共享S0072，内容为同一115师主力过同蒲路到太行并准备东进事件，归并为一个事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W004-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE013"
+        ],
+        "reason": "单独保留为受访者所在115师参加太行反扫荡并在辽县以南抗击日军的个人经历事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W004-E03",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE014"
+        ],
+        "reason": "单独保留为受访者所在115师反扫荡后继续东进至鲁西的个人经历事件。"
+      }
+    ]
+  },
+  "normalized_output": {
+    "schema_version": "document-consolidation-v1.0",
+    "technical_document_id": "BATCH03-DOC06",
+    "document_id": "05.杨永松100506（二校后 阅读版）.docx",
+    "interviewee": "杨永松",
+    "document_events": [
+      {
+        "document_event_id": "BATCH03-DOC06-DE001",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W001-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0005",
+          "BATCH03-DOC06-S0007",
+          "BATCH03-DOC06-S0009"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0005"
+        ],
+        "scope_evidence_quote": "我们就在山上，我们看他来以后，部队都隐蔽了，准备打了。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "在川口附近隐蔽待机，日军转向撤退",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "隐蔽待机",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "川口附近山上",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们就在山上，我们看他来以后，部队都隐蔽了，准备打了。",
+          "type_basis": "核心过程为部队在川口附近隐蔽并准备战斗，属于有组织的军事物质行动；参与者为Actor，符合MATERIAL角色词表。未将日军行动另立事件，因其主要作为触发和背景。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE002",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W001-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0011"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0011"
+        ],
+        "scope_evidence_quote": "我们这个团又到了吉县附近，任务呢，去收容那些临汾撤退的学生，有什么山西大学，不是，那时叫什么大学……结果我们去了也晚了，他们都已经过了河了，我们又返回来。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "赴吉县收容临汾撤退学生未果",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "赴吉县收容撤退学生",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们这个团",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "临汾撤退的学生",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "吉县附近",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们这个团又到了吉县附近，任务呢，去收容那些临汾撤退的学生，有什么山西大学，不是，那时叫什么大学……结果我们去了也晚了，他们都已经过了河了，我们又返回来。",
+          "type_basis": "核心过程为部队前往吉县执行收容任务，属于有组织的军事物质行动；Actor和Goal均符合MATERIAL角色词表。未标为言语或心理过程，因主要过程是移动和收容行动。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE003",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W001-E03",
+          "BATCH03-DOC06-W002-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0011",
+          "BATCH03-DOC06-S0013",
+          "BATCH03-DOC06-S0028",
+          "BATCH03-DOC06-S0030"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0011"
+        ],
+        "scope_evidence_quote": "我们就侧击他，686团也侧击他，就在那午城镇和井沟的中间。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "午城镇井沟侧击并追击日军",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "侧击并追击日军",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "686团",
+              "normalized_entity": "686团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "敌人",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "午城镇、井沟及午城附近",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "弹药很少，国民党没给我们补充子弹",
+              "normalized_value": "弹药不足"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们就侧击他，686团也侧击他，就在那午城镇和井沟的中间。",
+          "type_basis": "核心过程为我军与686团对日军实施侧击，后续追击至午城附近并因弹药不足撤至山上，属于同一战斗的连续阶段；两个Actor和一个Goal均符合MATERIAL角色词表。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE004",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W001-E04"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0015",
+          "BATCH03-DOC06-S0017",
+          "BATCH03-DOC06-S0019",
+          "BATCH03-DOC06-S0021",
+          "BATCH03-DOC06-S0023"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0019"
+        ],
+        "scope_evidence_quote": "结果肺给打穿了，林彪打这么多仗他都没受伤，结果被阎锡山打了一枪。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "林彪负伤及后续指挥交接",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "被阎锡山部队打伤",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "阎锡山部队",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "林彪",
+              "normalized_entity": "林彪",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "结果肺给打穿了，林彪打这么多仗他都没受伤，结果被阎锡山打了一枪。",
+          "type_basis": "核心过程为林彪被阎锡山部队枪伤，属于造成身体损伤的物质过程；Actor和Goal符合MATERIAL角色词表。后续电报、送延安和代理师长任命作为同一突发遭遇的应对与结果，不另立一级事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": "事件包含负伤与后续指挥交接两个阶段，主导类型按物质过程处理，是否拆分需人工确认。",
+          "review_status": "NEEDS_REVIEW"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "事件包含林彪负伤与后续指挥交接两个阶段，主导类型按物质过程处理，是否拆分需人工确认。"
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE005",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W001-E05",
+          "BATCH03-DOC06-W002-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0025",
+          "BATCH03-DOC06-S0030",
+          "BATCH03-DOC06-S0032"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0032"
+        ],
+        "scope_evidence_quote": "我们到了汾阳、孝义以后，主要是一方面部队训练，因为我们不是新兵多嘛，另一个方面就是群众有武器，有的时候收些武器来补充自己，另外跟当地党委在一起，组织了一个汾孝游击队。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "返回汾阳孝义整训、收集武器并组织汾孝游击队",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "整训、收集武器并组织汾孝游击队",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "杨永松所在部队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "武器",
+              "normalized_entity": "武器",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "汾孝游击队",
+              "normalized_entity": "汾孝游击队",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "汾阳、孝义附近",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们到了汾阳、孝义以后，主要是一方面部队训练，因为我们不是新兵多嘛，另一个方面就是群众有武器，有的时候收些武器来补充自己，另外跟当地党委在一起，组织了一个汾孝游击队。",
+          "type_basis": "核心过程为部队训练、收集武器、组织游击队等组织性物质行动，Actor为部队，Goal包括武器和汾孝游击队；非单纯关系或言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE006",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W002-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0036",
+          "BATCH03-DOC06-S0037",
+          "BATCH03-DOC06-S0039",
+          "BATCH03-DOC06-S0041"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0041"
+        ],
+        "scope_evidence_quote": "我们一说，你们放到那儿的日本枪，还不被日本人拿走了，我们拿你们的武器那么多，我们去打日本有什么不可以呀，就跟他拖了，就不管他了。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "新兵营获取阎锡山仓库武器并拒绝归还",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "弄开仓库拿取武器并拒绝归还",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他这个营",
+              "normalized_entity": "新兵营",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "枪",
+              "normalized_entity": "武器",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "有一天",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他就把他弄开，每一个人该拿枪的拿一支枪，该拿机枪的拿机枪，该拿重机枪的拿重机枪。",
+          "type_basis": "核心过程为弄开仓库、拿取枪械、装备子弹等可观察物质行动，Actor为新兵营，Goal为武器；后续质问和拖延是同一事件的结果，不改变物质类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": "主要取枪行动由营长、教导员实施，受访者以『我们那个营』『我们一说』出现，个人参与范围需人工确认。",
+          "review_status": "NEEDS_REVIEW"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "主要取枪行动由营长、教导员实施，受访者以『我们那个营』『我们一说』出现，个人参与范围需人工确认。"
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE007",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W003-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0045",
+          "BATCH03-DOC06-S0047"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0045"
+        ],
+        "scope_evidence_quote": "也命令肖华带着他刚组织起来七八个月的政治部和旅部的一部分人东进。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "肖华、曾国华率部东进冀鲁边并组建冀鲁边纵队",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "东进冀鲁边并组建纵队",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "肖华",
+              "normalized_entity": "肖华",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "曾国华",
+              "normalized_entity": "曾国华",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "政治部和旅部的一部分人",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "冀鲁边纵队",
+              "normalized_entity": "冀鲁边纵队",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "冀鲁边",
+              "normalized_value": "冀鲁边"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "东",
+              "normalized_value": "东"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "也命令肖华带着他刚组织起来七八个月的政治部和旅部的一部分人东进。",
+          "type_basis": "核心过程为率部东进、组织部队，属物质过程；参与者为行动者肖华、曾国华及被带领人员/新编纵队，符合MATERIAL角色词表；非言语、心理或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE008",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W003-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0050"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0050"
+        ],
+        "scope_evidence_quote": "结果肖华是带着曾国华那个支队，一步到了鲁西。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "肖华率曾国华支队从冀鲁边转移鲁西",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "率支队转移鲁西",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "肖华",
+              "normalized_entity": "肖华",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "曾国华那个支队",
+              "normalized_entity": "曾国华支队",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "鲁西",
+              "normalized_value": "鲁西"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "敌人扫荡挺厉害，兵多了粮食也困难",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "结果肖华是带着曾国华那个支队，一步到了鲁西。",
+          "type_basis": "核心过程为率部转移，属物质空间移动；参与者为Actor肖华和Goal支队，符合MATERIAL词表；原因环境说明转移缘由，非心理或言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE009",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W003-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0054",
+          "BATCH03-DOC06-S0057"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0057"
+        ],
+        "scope_evidence_quote": "我们就在那里继续打小仗，就不打大的了，就偷偷摸摸地打它一下，铁路上破坏一下，搞这个。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "115师在晋西坚持小规模袭扰作战",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "坚持打小仗、破坏铁路",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "115师",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "铁路",
+              "normalized_entity": "铁路",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "那里",
+              "normalized_value": "晋西"
+            },
+            {
+              "kind": "MANNER",
+              "value": "偷偷摸摸地",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们就在那里继续打小仗，就不打大的了，就偷偷摸摸地打它一下，铁路上破坏一下，搞这个。",
+          "type_basis": "核心过程为打小仗、破坏铁路等物质行动；Actor为‘我们’（据上下文指115师），Goal为铁路；符合MATERIAL角色词表；非心理、言语或行为过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE010",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W003-E05"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0059"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0059"
+        ],
+        "scope_evidence_quote": "685团就到了微山湖西——以后叫苏鲁边，就到那里去了。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "685团等部先期东进苏鲁边",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "先期东进苏鲁边",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "685团",
+              "normalized_entity": "685团",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "8月份",
+              "normalized_value": "1938年8月"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "微山湖西——以后叫苏鲁边",
+              "normalized_value": "苏鲁边"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "东",
+              "normalized_value": "东"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "685团就到了微山湖西——以后叫苏鲁边，就到那里去了。",
+          "type_basis": "核心过程为部队先期东进并到达苏鲁边，属物质空间移动；Actor为685团，符合MATERIAL词表；途中作战、休整为同一移动经历的阶段。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE011",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W003-E04",
+          "BATCH03-DOC06-W004-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0059",
+          "BATCH03-DOC06-S0061",
+          "BATCH03-DOC06-S0072"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0072"
+        ],
+        "scope_evidence_quote": "我们1938年12月份晚上过的同蒲路，到了襄垣、沁县附近，就在那里集结，首长们去总部会见朱、彭首长，就让我们准备一下，就准备东进了。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "115师主力过同蒲路到太行并准备东进",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "过同蒲路到太行并集结准备东进",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "115师主力",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1938年12月份晚上",
+              "normalized_value": "1938年12月夜间"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "襄垣、沁县附近",
+              "normalized_value": "襄垣、沁县附近"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "东",
+              "normalized_value": "东"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们1938年12月份晚上过的同蒲路，到了襄垣、沁县附近，就在那里集结，首长们去总部会见朱、彭首长，就让我们准备一下，就准备东进了。",
+          "type_basis": "核心过程为夜间越过同蒲路、到达襄垣沁县附近集结并准备东进，属于空间移动和组织行动；参与者为行动主体，符合MATERIAL的Actor配置。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE012",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W003-E06"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0064",
+          "BATCH03-DOC06-S0066",
+          "BATCH03-DOC06-S0068",
+          "BATCH03-DOC06-S0070"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0070"
+        ],
+        "scope_evidence_quote": "打了好几阵子，这整个的晋西坚持不住了，坚持不住他就汾离公路以北靠到120师贺龙那个地方去了。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "阎锡山12月政变后陈士榘支队收容新军余部并转移",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "收容新军余部并转移靠拢120师",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "陈士榘支队",
+              "normalized_entity": "陈士榘支队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "新军中的共产党，决死队的共产党领导的部队",
+              "normalized_entity": "新军余部",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "12月",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "晋西",
+              "normalized_value": "晋西"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "汾离公路以北",
+              "normalized_value": "汾离公路以北"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "120师贺龙那个地方",
+              "normalized_value": "120师/贺龙部地区"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "阎锡山执行反共政策，搞12月政变",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "打了好几阵子，这整个的晋西坚持不住了，坚持不住他就汾离公路以北靠到120师贺龙那个地方去了。",
+          "type_basis": "核心过程包括陈士榘支队收容新军余部并转移靠拢120师，属物质性军事政治行动与空间移动；阎锡山反共政变为原因环境；参与者为Actor陈士榘支队及Goal新军余部，符合MATERIAL词表。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE013",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W004-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0074",
+          "BATCH03-DOC06-S0076",
+          "BATCH03-DOC06-S0078",
+          "BATCH03-DOC06-S0080"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0078"
+        ],
+        "scope_evidence_quote": "敌人就占领辽县了，我们就赶快移到辽县以南山上布置防务。就是两三天时间在那边，敌人就往南来，攻我们686团的阵地。686团就跟他对阵打起来了， 打得很激烈。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "115师参加太行反扫荡并在辽县以南抗击日军",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "参加反扫荡并抗击日军",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "115师",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "686团",
+              "normalized_entity": "686团",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "敌人",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "辽县以南山上",
+              "normalized_value": "辽县以南山地"
+            },
+            {
+              "kind": "TIME",
+              "value": "两三天时间",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "敌人就占领辽县了，我们就赶快移到辽县以南山上布置防务。就是两三天时间在那边，敌人就往南来，攻我们686团的阵地。686团就跟他对阵打起来了， 打得很激烈。",
+          "type_basis": "核心过程为参加太行反扫荡、转移布防和抗击日军，属于军事行动和空间移动；参与者为行动主体、作战单位及被抗击对象，符合MATERIAL的Actor与Goal配置。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH03-DOC06-DE014",
+        "source_candidate_ids": [
+          "BATCH03-DOC06-W004-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0080",
+          "BATCH03-DOC06-S0081"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH03-DOC06-S0081"
+        ],
+        "scope_evidence_quote": "所以我们夜过平汉，再过卫河，从武林镇（音）过的卫河，就到了鲁西地区，在那里。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "115师反扫荡后继续东进至鲁西",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "继续东进并夜过平汉路、卫河到达鲁西",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "115师",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "鲁西地区",
+              "normalized_value": "鲁西地区"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "往东",
+              "normalized_value": "向东"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "所以我们夜过平汉，再过卫河，从武林镇（音）过的卫河，就到了鲁西地区，在那里。",
+          "type_basis": "核心过程为经批准后继续东进、夜间越过平汉路和卫河并到达鲁西，属于空间移动和组织行动；参与者为行动主体，符合MATERIAL的Actor配置。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "candidate_id": "BATCH03-DOC06-W001-E01",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE001"
+        ],
+        "reason": "单独保留为受访者所在部队在川口附近隐蔽待机的个人经历事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W001-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE002"
+        ],
+        "reason": "单独保留为受访者所在团赴吉县收容撤退学生的个人经历事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W001-E03",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE003"
+        ],
+        "reason": "与W002-E01同指午城战斗，侧击、追击和撤退为同一战斗的连续阶段，归并为一个文档级事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W001-E04",
+        "action": "CONTEXT_ONLY",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE004"
+        ],
+        "reason": "林彪负伤及后续指挥交接为受访者讲述的他人和上级行动，保留为讲述背景，不进入个人经历链。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W001-E05",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE005"
+        ],
+        "reason": "与W002-E02共享S0025，均叙述返回汾阳、孝义后的整训、收集武器和组织汾孝游击队，归并为一个事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W002-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE003"
+        ],
+        "reason": "与W001-E03同指午城战斗，追击至城附近并撤至山上为同一战斗的后续阶段，归并为一个文档级事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W002-E02",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE005"
+        ],
+        "reason": "与W001-E05共享S0025，内容为同一返回汾阳、孝义后的整训与组织游击队事件，归并为一个事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W002-E03",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE006"
+        ],
+        "reason": "单独保留为新兵营获取阎锡山仓库武器并拒绝归还的事件；个人参与范围需复核。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W003-E01",
+        "action": "CONTEXT_ONLY",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE007"
+        ],
+        "reason": "肖华、曾国华东进冀鲁边并组建纵队为受访者讲述的他人和部队沿革，保留为讲述背景。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W003-E02",
+        "action": "CONTEXT_ONLY",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE008"
+        ],
+        "reason": "肖华率曾国华支队转移鲁西为他人行动，保留为讲述背景。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W003-E03",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE009"
+        ],
+        "reason": "单独保留为受访者所在115师在晋西坚持小规模袭扰作战的个人经历事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W003-E04",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE011"
+        ],
+        "reason": "与W004-E01共享S0072，均叙述115师主力过同蒲路到太行并准备东进，归并为一个事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W003-E05",
+        "action": "CONTEXT_ONLY",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE010"
+        ],
+        "reason": "685团先期东进苏鲁边为受访者讲述的其他部队行动，保留为讲述背景。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W003-E06",
+        "action": "CONTEXT_ONLY",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE012"
+        ],
+        "reason": "阎锡山12月政变后陈士榘支队收容新军余部并转移为受访者讲述的晋西留守部队和他人行动，保留为讲述背景。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W004-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE011"
+        ],
+        "reason": "与W003-E04共享S0072，内容为同一115师主力过同蒲路到太行并准备东进事件，归并为一个事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W004-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE013"
+        ],
+        "reason": "单独保留为受访者所在115师参加太行反扫荡并在辽县以南抗击日军的个人经历事件。"
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W004-E03",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH03-DOC06-DE014"
+        ],
+        "reason": "单独保留为受访者所在115师反扫荡后继续东进至鲁西的个人经历事件。"
+      }
+    ]
+  },
+  "raw_content": "{\n  \"schema_version\": \"document-consolidation-v1.0\",\n  \"technical_document_id\": \"BATCH03-DOC06\",\n  \"document_id\": \"05.杨永松100506（二校后 阅读版）.docx\",\n  \"interviewee\": \"杨永松\",\n  \"document_events\": [\n    {\n      \"document_event_id\": \"BATCH03-DOC06-DE001\",\n      \"source_candidate_ids\": [\n        \"BATCH03-DOC06-W001-E01\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0005\",\n        \"BATCH03-DOC06-S0007\",\n        \"BATCH03-DOC06-S0009\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0005\"\n      ],\n      \"scope_evidence_quote\": \"我们就在山上，我们看他来以后，部队都隐蔽了，准备打了。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"在川口附近隐蔽待机，日军转向撤退\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"隐蔽待机\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"川口附近山上\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们就在山上，我们看他来以后，部队都隐蔽了，准备打了。\",\n        \"type_basis\": \"核心过程为部队在川口附近隐蔽并准备战斗，属于有组织的军事物质行动；参与者为Actor，符合MATERIAL角色词表。未将日军行动另立事件，因其主要作为触发和背景。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH03-DOC06-DE002\",\n      \"source_candidate_ids\": [\n        \"BATCH03-DOC06-W001-E02\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0011\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0011\"\n      ],\n      \"scope_evidence_quote\": \"我们这个团又到了吉县附近，任务呢，去收容那些临汾撤退的学生，有什么山西大学，不是，那时叫什么大学……结果我们去了也晚了，他们都已经过了河了，我们又返回来。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"赴吉县收容临汾撤退学生未果\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"赴吉县收容撤退学生\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们这个团\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"临汾撤退的学生\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"吉县附近\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们这个团又到了吉县附近，任务呢，去收容那些临汾撤退的学生，有什么山西大学，不是，那时叫什么大学……结果我们去了也晚了，他们都已经过了河了，我们又返回来。\",\n        \"type_basis\": \"核心过程为部队前往吉县执行收容任务，属于有组织的军事物质行动；Actor和Goal均符合MATERIAL角色词表。未标为言语或心理过程，因主要过程是移动和收容行动。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH03-DOC06-DE003\",\n      \"source_candidate_ids\": [\n        \"BATCH03-DOC06-W001-E03\",\n        \"BATCH03-DOC06-W002-E01\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0011\",\n        \"BATCH03-DOC06-S0013\",\n        \"BATCH03-DOC06-S0028\",\n        \"BATCH03-DOC06-S0030\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0011\"\n      ],\n      \"scope_evidence_quote\": \"我们就侧击他，686团也侧击他，就在那午城镇和井沟的中间。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"午城镇井沟侧击并追击日军\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"侧击并追击日军\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"686团\",\n            \"normalized_entity\": \"686团\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"敌人\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"午城镇、井沟及午城附近\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"弹药很少，国民党没给我们补充子弹\",\n            \"normalized_value\": \"弹药不足\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们就侧击他，686团也侧击他，就在那午城镇和井沟的中间。\",\n        \"type_basis\": \"核心过程为我军与686团对日军实施侧击，后续追击至午城附近并因弹药不足撤至山上，属于同一战斗的连续阶段；两个Actor和一个Goal均符合MATERIAL角色词表。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH03-DOC06-DE004\",\n      \"source_candidate_ids\": [\n        \"BATCH03-DOC06-W001-E04\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0015\",\n        \"BATCH03-DOC06-S0017\",\n        \"BATCH03-DOC06-S0019\",\n        \"BATCH03-DOC06-S0021\",\n        \"BATCH03-DOC06-S0023\"\n      ],\n      \"experience_scope\": \"NARRATED_CONTEXT\",\n      \"participation_bases\": [\n        \"THIRD_PARTY_ONLY\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0019\"\n      ],\n      \"scope_evidence_quote\": \"结果肺给打穿了，林彪打这么多仗他都没受伤，结果被阎锡山打了一枪。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"林彪负伤及后续指挥交接\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"被阎锡山部队打伤\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"阎锡山部队\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"林彪\",\n            \"normalized_entity\": \"林彪\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": null,\n        \"evidence_quote\": \"结果肺给打穿了，林彪打这么多仗他都没受伤，结果被阎锡山打了一枪。\",\n        \"type_basis\": \"核心过程为林彪被阎锡山部队枪伤，属于造成身体损伤的物质过程；Actor和Goal符合MATERIAL角色词表。后续电报、送延安和代理师长任命作为同一突发遭遇的应对与结果，不另立一级事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": \"事件包含负伤与后续指挥交接两个阶段，主导类型按物质过程处理，是否拆分需人工确认。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      },\n      \"review_status\": \"NEEDS_REVIEW\",\n      \"review_reason\": \"事件包含林彪负伤与后续指挥交接两个阶段，主导类型按物质过程处理，是否拆分需人工确认。\"\n    },\n    {\n      \"document_event_id\": \"BATCH03-DOC06-DE005\",\n      \"source_candidate_ids\": [\n        \"BATCH03-DOC06-W001-E05\",\n        \"BATCH03-DOC06-W002-E02\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0025\",\n        \"BATCH03-DOC06-S0030\",\n        \"BATCH03-DOC06-S0032\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0032\"\n      ],\n      \"scope_evidence_quote\": \"我们到了汾阳、孝义以后，主要是一方面部队训练，因为我们不是新兵多嘛，另一个方面就是群众有武器，有的时候收些武器来补充自己，另外跟当地党委在一起，组织了一个汾孝游击队。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"返回汾阳孝义整训、收集武器并组织汾孝游击队\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"整训、收集武器并组织汾孝游击队\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"杨永松所在部队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"武器\",\n            \"normalized_entity\": \"武器\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"汾孝游击队\",\n            \"normalized_entity\": \"汾孝游击队\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"汾阳、孝义附近\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们到了汾阳、孝义以后，主要是一方面部队训练，因为我们不是新兵多嘛，另一个方面就是群众有武器，有的时候收些武器来补充自己，另外跟当地党委在一起，组织了一个汾孝游击队。\",\n        \"type_basis\": \"核心过程为部队训练、收集武器、组织游击队等组织性物质行动，Actor为部队，Goal包括武器和汾孝游击队；非单纯关系或言语过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH03-DOC06-DE006\",\n      \"source_candidate_ids\": [\n        \"BATCH03-DOC06-W002-E03\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0036\",\n        \"BATCH03-DOC06-S0037\",\n        \"BATCH03-DOC06-S0039\",\n        \"BATCH03-DOC06-S0041\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0041\"\n      ],\n      \"scope_evidence_quote\": \"我们一说，你们放到那儿的日本枪，还不被日本人拿走了，我们拿你们的武器那么多，我们去打日本有什么不可以呀，就跟他拖了，就不管他了。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"新兵营获取阎锡山仓库武器并拒绝归还\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"弄开仓库拿取武器并拒绝归还\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"他这个营\",\n            \"normalized_entity\": \"新兵营\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"枪\",\n            \"normalized_entity\": \"武器\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"有一天\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"他就把他弄开，每一个人该拿枪的拿一支枪，该拿机枪的拿机枪，该拿重机枪的拿重机枪。\",\n        \"type_basis\": \"核心过程为弄开仓库、拿取枪械、装备子弹等可观察物质行动，Actor为新兵营，Goal为武器；后续质问和拖延是同一事件的结果，不改变物质类型。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": \"主要取枪行动由营长、教导员实施，受访者以『我们那个营』『我们一说』出现，个人参与范围需人工确认。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      },\n      \"review_status\": \"NEEDS_REVIEW\",\n      \"review_reason\": \"主要取枪行动由营长、教导员实施，受访者以『我们那个营』『我们一说』出现，个人参与范围需人工确认。\"\n    },\n    {\n      \"document_event_id\": \"BATCH03-DOC06-DE007\",\n      \"source_candidate_ids\": [\n        \"BATCH03-DOC06-W003-E01\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0045\",\n        \"BATCH03-DOC06-S0047\"\n      ],\n      \"experience_scope\": \"NARRATED_CONTEXT\",\n      \"participation_bases\": [\n        \"THIRD_PARTY_ONLY\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0045\"\n      ],\n      \"scope_evidence_quote\": \"也命令肖华带着他刚组织起来七八个月的政治部和旅部的一部分人东进。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"肖华、曾国华率部东进冀鲁边并组建冀鲁边纵队\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"东进冀鲁边并组建纵队\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"肖华\",\n            \"normalized_entity\": \"肖华\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"曾国华\",\n            \"normalized_entity\": \"曾国华\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"政治部和旅部的一部分人\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"冀鲁边纵队\",\n            \"normalized_entity\": \"冀鲁边纵队\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"冀鲁边\",\n            \"normalized_value\": \"冀鲁边\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"东\",\n            \"normalized_value\": \"东\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"也命令肖华带着他刚组织起来七八个月的政治部和旅部的一部分人东进。\",\n        \"type_basis\": \"核心过程为率部东进、组织部队，属物质过程；参与者为行动者肖华、曾国华及被带领人员/新编纵队，符合MATERIAL角色词表；非言语、心理或关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH03-DOC06-DE008\",\n      \"source_candidate_ids\": [\n        \"BATCH03-DOC06-W003-E02\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0050\"\n      ],\n      \"experience_scope\": \"NARRATED_CONTEXT\",\n      \"participation_bases\": [\n        \"THIRD_PARTY_ONLY\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0050\"\n      ],\n      \"scope_evidence_quote\": \"结果肖华是带着曾国华那个支队，一步到了鲁西。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"肖华率曾国华支队从冀鲁边转移鲁西\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"率支队转移鲁西\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"肖华\",\n            \"normalized_entity\": \"肖华\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"曾国华那个支队\",\n            \"normalized_entity\": \"曾国华支队\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"鲁西\",\n            \"normalized_value\": \"鲁西\"\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"敌人扫荡挺厉害，兵多了粮食也困难\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"结果肖华是带着曾国华那个支队，一步到了鲁西。\",\n        \"type_basis\": \"核心过程为率部转移，属物质空间移动；参与者为Actor肖华和Goal支队，符合MATERIAL词表；原因环境说明转移缘由，非心理或言语过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH03-DOC06-DE009\",\n      \"source_candidate_ids\": [\n        \"BATCH03-DOC06-W003-E03\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0054\",\n        \"BATCH03-DOC06-S0057\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0057\"\n      ],\n      \"scope_evidence_quote\": \"我们就在那里继续打小仗，就不打大的了，就偷偷摸摸地打它一下，铁路上破坏一下，搞这个。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"115师在晋西坚持小规模袭扰作战\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"坚持打小仗、破坏铁路\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"115师\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"铁路\",\n            \"normalized_entity\": \"铁路\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"那里\",\n            \"normalized_value\": \"晋西\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"偷偷摸摸地\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们就在那里继续打小仗，就不打大的了，就偷偷摸摸地打它一下，铁路上破坏一下，搞这个。\",\n        \"type_basis\": \"核心过程为打小仗、破坏铁路等物质行动；Actor为‘我们’（据上下文指115师），Goal为铁路；符合MATERIAL角色词表；非心理、言语或行为过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH03-DOC06-DE010\",\n      \"source_candidate_ids\": [\n        \"BATCH03-DOC06-W003-E05\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0059\"\n      ],\n      \"experience_scope\": \"NARRATED_CONTEXT\",\n      \"participation_bases\": [\n        \"THIRD_PARTY_ONLY\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0059\"\n      ],\n      \"scope_evidence_quote\": \"685团就到了微山湖西——以后叫苏鲁边，就到那里去了。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"685团等部先期东进苏鲁边\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"先期东进苏鲁边\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"685团\",\n            \"normalized_entity\": \"685团\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"8月份\",\n            \"normalized_value\": \"1938年8月\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"微山湖西——以后叫苏鲁边\",\n            \"normalized_value\": \"苏鲁边\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"东\",\n            \"normalized_value\": \"东\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"685团就到了微山湖西——以后叫苏鲁边，就到那里去了。\",\n        \"type_basis\": \"核心过程为部队先期东进并到达苏鲁边，属物质空间移动；Actor为685团，符合MATERIAL词表；途中作战、休整为同一移动经历的阶段。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH03-DOC06-DE011\",\n      \"source_candidate_ids\": [\n        \"BATCH03-DOC06-W003-E04\",\n        \"BATCH03-DOC06-W004-E01\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0059\",\n        \"BATCH03-DOC06-S0061\",\n        \"BATCH03-DOC06-S0072\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0072\"\n      ],\n      \"scope_evidence_quote\": \"我们1938年12月份晚上过的同蒲路，到了襄垣、沁县附近，就在那里集结，首长们去总部会见朱、彭首长，就让我们准备一下，就准备东进了。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"115师主力过同蒲路到太行并准备东进\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"过同蒲路到太行并集结准备东进\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"115师主力\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"1938年12月份晚上\",\n            \"normalized_value\": \"1938年12月夜间\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"襄垣、沁县附近\",\n            \"normalized_value\": \"襄垣、沁县附近\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"东\",\n            \"normalized_value\": \"东\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们1938年12月份晚上过的同蒲路，到了襄垣、沁县附近，就在那里集结，首长们去总部会见朱、彭首长，就让我们准备一下，就准备东进了。\",\n        \"type_basis\": \"核心过程为夜间越过同蒲路、到达襄垣沁县附近集结并准备东进，属于空间移动和组织行动；参与者为行动主体，符合MATERIAL的Actor配置。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH03-DOC06-DE012\",\n      \"source_candidate_ids\": [\n        \"BATCH03-DOC06-W003-E06\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0064\",\n        \"BATCH03-DOC06-S0066\",\n        \"BATCH03-DOC06-S0068\",\n        \"BATCH03-DOC06-S0070\"\n      ],\n      \"experience_scope\": \"NARRATED_CONTEXT\",\n      \"participation_bases\": [\n        \"THIRD_PARTY_ONLY\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0070\"\n      ],\n      \"scope_evidence_quote\": \"打了好几阵子，这整个的晋西坚持不住了，坚持不住他就汾离公路以北靠到120师贺龙那个地方去了。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"阎锡山12月政变后陈士榘支队收容新军余部并转移\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"收容新军余部并转移靠拢120师\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"陈士榘支队\",\n            \"normalized_entity\": \"陈士榘支队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"新军中的共产党，决死队的共产党领导的部队\",\n            \"normalized_entity\": \"新军余部\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"12月\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"晋西\",\n            \"normalized_value\": \"晋西\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"汾离公路以北\",\n            \"normalized_value\": \"汾离公路以北\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"120师贺龙那个地方\",\n            \"normalized_value\": \"120师/贺龙部地区\"\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"阎锡山执行反共政策，搞12月政变\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"打了好几阵子，这整个的晋西坚持不住了，坚持不住他就汾离公路以北靠到120师贺龙那个地方去了。\",\n        \"type_basis\": \"核心过程包括陈士榘支队收容新军余部并转移靠拢120师，属物质性军事政治行动与空间移动；阎锡山反共政变为原因环境；参与者为Actor陈士榘支队及Goal新军余部，符合MATERIAL词表。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH03-DOC06-DE013\",\n      \"source_candidate_ids\": [\n        \"BATCH03-DOC06-W004-E02\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0074\",\n        \"BATCH03-DOC06-S0076\",\n        \"BATCH03-DOC06-S0078\",\n        \"BATCH03-DOC06-S0080\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0078\"\n      ],\n      \"scope_evidence_quote\": \"敌人就占领辽县了，我们就赶快移到辽县以南山上布置防务。就是两三天时间在那边，敌人就往南来，攻我们686团的阵地。686团就跟他对阵打起来了， 打得很激烈。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"115师参加太行反扫荡并在辽县以南抗击日军\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"参加反扫荡并抗击日军\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"115师\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"686团\",\n            \"normalized_entity\": \"686团\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"敌人\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"辽县以南山上\",\n            \"normalized_value\": \"辽县以南山地\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"两三天时间\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"敌人就占领辽县了，我们就赶快移到辽县以南山上布置防务。就是两三天时间在那边，敌人就往南来，攻我们686团的阵地。686团就跟他对阵打起来了， 打得很激烈。\",\n        \"type_basis\": \"核心过程为参加太行反扫荡、转移布防和抗击日军，属于军事行动和空间移动；参与者为行动主体、作战单位及被抗击对象，符合MATERIAL的Actor与Goal配置。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH03-DOC06-DE014\",\n      \"source_candidate_ids\": [\n        \"BATCH03-DOC06-W004-E03\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0080\",\n        \"BATCH03-DOC06-S0081\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0081\"\n      ],\n      \"scope_evidence_quote\": \"所以我们夜过平汉，再过卫河，从武林镇（音）过的卫河，就到了鲁西地区，在那里。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"115师反扫荡后继续东进至鲁西\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"继续东进并夜过平汉路、卫河到达鲁西\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"115师\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"鲁西地区\",\n            \"normalized_value\": \"鲁西地区\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"往东\",\n            \"normalized_value\": \"向东\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"所以我们夜过平汉，再过卫河，从武林镇（音）过的卫河，就到了鲁西地区，在那里。\",\n        \"type_basis\": \"核心过程为经批准后继续东进、夜间越过平汉路和卫河并到达鲁西，属于空间移动和组织行动；参与者为行动主体，符合MATERIAL的Actor配置。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    }\n  ],\n  \"candidate_decisions\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W001-E01\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH03-DOC06-DE001\"\n      ],\n      \"reason\": \"单独保留为受访者所在部队在川口附近隐蔽待机的个人经历事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W001-E02\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH03-DOC06-DE002\"\n      ],\n      \"reason\": \"单独保留为受访者所在团赴吉县收容撤退学生的个人经历事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W001-E03\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH03-DOC06-DE003\"\n      ],\n      \"reason\": \"与W002-E01同指午城战斗，侧击、追击和撤退为同一战斗的连续阶段，归并为一个文档级事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W001-E04\",\n      \"action\": \"CONTEXT_ONLY\",\n      \"document_event_ids\": [\n        \"BATCH03-DOC06-DE004\"\n      ],\n      \"reason\": \"林彪负伤及后续指挥交接为受访者讲述的他人和上级行动，保留为讲述背景，不进入个人经历链。\"\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W001-E05\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH03-DOC06-DE005\"\n      ],\n      \"reason\": \"与W002-E02共享S0025，均叙述返回汾阳、孝义后的整训、收集武器和组织汾孝游击队，归并为一个事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W002-E01\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH03-DOC06-DE003\"\n      ],\n      \"reason\": \"与W001-E03同指午城战斗，追击至城附近并撤至山上为同一战斗的后续阶段，归并为一个文档级事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W002-E02\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH03-DOC06-DE005\"\n      ],\n      \"reason\": \"与W001-E05共享S0025，内容为同一返回汾阳、孝义后的整训与组织游击队事件，归并为一个事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W002-E03\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH03-DOC06-DE006\"\n      ],\n      \"reason\": \"单独保留为新兵营获取阎锡山仓库武器并拒绝归还的事件；个人参与范围需复核。\"\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W003-E01\",\n      \"action\": \"CONTEXT_ONLY\",\n      \"document_event_ids\": [\n        \"BATCH03-DOC06-DE007\"\n      ],\n      \"reason\": \"肖华、曾国华东进冀鲁边并组建纵队为受访者讲述的他人和部队沿革，保留为讲述背景。\"\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W003-E02\",\n      \"action\": \"CONTEXT_ONLY\",\n      \"document_event_ids\": [\n        \"BATCH03-DOC06-DE008\"\n      ],\n      \"reason\": \"肖华率曾国华支队转移鲁西为他人行动，保留为讲述背景。\"\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W003-E03\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH03-DOC06-DE009\"\n      ],\n      \"reason\": \"单独保留为受访者所在115师在晋西坚持小规模袭扰作战的个人经历事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W003-E04\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH03-DOC06-DE011\"\n      ],\n      \"reason\": \"与W004-E01共享S0072，均叙述115师主力过同蒲路到太行并准备东进，归并为一个事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W003-E05\",\n      \"action\": \"CONTEXT_ONLY\",\n      \"document_event_ids\": [\n        \"BATCH03-DOC06-DE010\"\n      ],\n      \"reason\": \"685团先期东进苏鲁边为受访者讲述的其他部队行动，保留为讲述背景。\"\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W003-E06\",\n      \"action\": \"CONTEXT_ONLY\",\n      \"document_event_ids\": [\n        \"BATCH03-DOC06-DE012\"\n      ],\n      \"reason\": \"阎锡山12月政变后陈士榘支队收容新军余部并转移为受访者讲述的晋西留守部队和他人行动，保留为讲述背景。\"\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W004-E01\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH03-DOC06-DE011\"\n      ],\n      \"reason\": \"与W003-E04共享S0072，内容为同一115师主力过同蒲路到太行并准备东进事件，归并为一个事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W004-E02\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH03-DOC06-DE013\"\n      ],\n      \"reason\": \"单独保留为受访者所在115师参加太行反扫荡并在辽县以南抗击日军的个人经历事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W004-E03\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH03-DOC06-DE014\"\n      ],\n      \"reason\": \"单独保留为受访者所在115师反扫荡后继续东进至鲁西的个人经历事件。\"\n    }\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 16334,
+    "total_tokens": 57621,
+    "completion_tokens": 41287,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 31618
+    },
+    "tokens_per_second": 13762000,
+    "time_to_first_token_ms": 390933,
+    "time_per_output_token_ms": 0
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T22:29:12",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE001",
+  "usage": {
+    "prompt_tokens": 1357,
+    "total_tokens": 4232,
+    "completion_tokens": 2875,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1901
+    },
+    "time_to_first_token_ms": 22182,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2874000
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"日军未继续向川口方向前进，发动汽车向后转走；我方部队仍在川口附近山上隐蔽待机。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以我方在川口附近山上发现日军车队并隐蔽准备战斗为起点，以日军下午发动汽车向后转走、不去川口为终点；同段后续关于川口被突破后占领隰县、午城镇等为后续战局，不纳入本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"日军突破川口防线后增兵沿河开来，我方在附近山上观察并隐蔽准备战斗，发现日军越来越多。\",\n      \"process_text\": \"日军突破川口防线后又增加兵力，沿河开着汽车向川口附近开来；我方在山上观察，部队隐蔽准备战斗，结果看到日军越来越多。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0005\"\n      ],\n      \"evidence_quote\": \"我们就在山上，我们看他来以后，部队都隐蔽了，准备打了。结果一看越来越多，越来越多。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"日军到靠近山较高处的河边后因再上山不顺利而停在村边，我方距其几百米隐蔽；日军不放哨并拆百姓柴火、门窗做饭。\",\n      \"process_text\": \"日军到了靠近山较高处的河边，看看比较高，再上不那么顺利，就不上了，停在下面村子边上；我方部队离那里几百米隐蔽，日军不放哨，把老百姓的柴火、门、窗弄下来做饭吃。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0007\"\n      ],\n      \"evidence_quote\": \"他到了靠近山比较高的地方那个河呀，看看比较高，再上不那么顺利，他不上了，他看上不去了，他就在下面那里有个村子边上，就停在那里。他也不放哨，我们部队离那里几百米，隐蔽在那地方，他就把老百姓的柴火，门、窗弄下来做饭吃。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"日军发电报称汽车走不了，下午飞机来投下东西后，日军发动汽车向后转走，不再去川口。\",\n      \"process_text\": \"日军大概有电报向上级说汽车走不了了；下午来了一个飞机，丢了一个东西下来，之后听到日军发动汽车“轰轰”响，就向后转走了，不去川口了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0009\"\n      ],\n      \"evidence_quote\": \"他大概有电报跟上面说我这里汽车走不了了，以后下午来了一个飞机，看他丢了一个东西下来，以后听他发动汽车“轰轰”响，就向后转走了，他不去川口了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE001-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0007\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE001-P02\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0009\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE001",
+    "event_enrichment": {
+      "result_state": "日军未继续向川口方向前进，发动汽车向后转走；我方部队仍在川口附近山上隐蔽待机。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以我方在川口附近山上发现日军车队并隐蔽准备战斗为起点，以日军下午发动汽车向后转走、不去川口为终点；同段后续关于川口被突破后占领隰县、午城镇等为后续战局，不纳入本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "日军突破川口防线后增兵沿河开来，我方在附近山上观察并隐蔽准备战斗，发现日军越来越多。",
+        "process_text": "日军突破川口防线后又增加兵力，沿河开着汽车向川口附近开来；我方在山上观察，部队隐蔽准备战斗，结果看到日军越来越多。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0005"
+        ],
+        "evidence_quote": "我们就在山上，我们看他来以后，部队都隐蔽了，准备打了。结果一看越来越多，越来越多。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "日军到靠近山较高处的河边后因再上山不顺利而停在村边，我方距其几百米隐蔽；日军不放哨并拆百姓柴火、门窗做饭。",
+        "process_text": "日军到了靠近山较高处的河边，看看比较高，再上不那么顺利，就不上了，停在下面村子边上；我方部队离那里几百米隐蔽，日军不放哨，把老百姓的柴火、门、窗弄下来做饭吃。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0007"
+        ],
+        "evidence_quote": "他到了靠近山比较高的地方那个河呀，看看比较高，再上不那么顺利，他不上了，他看上不去了，他就在下面那里有个村子边上，就停在那里。他也不放哨，我们部队离那里几百米，隐蔽在那地方，他就把老百姓的柴火，门、窗弄下来做饭吃。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "日军发电报称汽车走不了，下午飞机来投下东西后，日军发动汽车向后转走，不再去川口。",
+        "process_text": "日军大概有电报向上级说汽车走不了了；下午来了一个飞机，丢了一个东西下来，之后听到日军发动汽车“轰轰”响，就向后转走了，不去川口了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0009"
+        ],
+        "evidence_quote": "他大概有电报跟上面说我这里汽车走不了了，以后下午来了一个飞机，看他丢了一个东西下来，以后听他发动汽车“轰轰”响，就向后转走了，他不去川口了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE001-P01",
+        "target_stage_id": "BATCH03-DOC06-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0007",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE001-P02",
+        "target_stage_id": "BATCH03-DOC06-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0009",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

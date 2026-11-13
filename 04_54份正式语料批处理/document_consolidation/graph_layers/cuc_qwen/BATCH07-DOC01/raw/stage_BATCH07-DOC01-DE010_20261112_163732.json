@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T16:37:32",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC01-DE010",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC01-DE010",
+  "usage": {
+    "prompt_tokens": 1499,
+    "total_tokens": 8971,
+    "completion_tokens": 7472,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5911
+    },
+    "time_to_first_token_ms": 156469,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-15\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC01-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"打外国兵舰后，英国丢丑并出现报复言论，我们对外国外交的事情比较简单，租界未谈判收回，人民志气高涨，对渡江产生军事影响，外国兵不敢打。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件从 S0047 开始说明打外国兵舰的意义与百年屈辱背景，经 S0049 叙述打舰震动和英国反应，S0051 叙述外交、租界、渡江影响，至 S0053 “外国的兵不敢打嘛”结束。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"叙述鸦片战争后英国强大、侵略、租界与不平等条约造成的百年屈辱背景。\",\n      \"process_text\": \"陈锐霆：那个意义很大了。因为鸦片战争以后，英国在世界是个霸主，海军也很强大，到处（侵犯），以后又打南京啊，打万县啊，内河通行权都有，另外在各地方，八国联军以后，租界呀，不平等条约，一个挨着一个，割地赔款更大了，一弄多少亿银两。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0047\"\n      ],\n      \"evidence_quote\": \"陈锐霆：那个意义很大了。因为鸦片战争以后，英国在世界是个霸主，海军也很强大，到处（侵犯），以后又打南京啊，打万县啊，内河通行权都有，另外在各地方，八国联军以后，租界呀，不平等条约，一个挨着一个，割地赔款更大了，一弄多少亿银两。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"叙述此次打外国兵舰使全世界震动，并引发英国丢丑、议会争吵和丘吉尔报复大话。\",\n      \"process_text\": \"陈锐霆：所以外国人那个时候对中国人的欺负是到了家了，清朝慈禧太后根本上没什么外交，外国人要求什么就给什么。所以这一百多年以来受尽欺负了。我们这一次打了外国兵舰，全世界都震动。英国因为都丢了丑了，英国上院下院争吵得厉害，丘吉尔这小子说要派航空母舰到东方来报复，结果变成说大话了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0049\"\n      ],\n      \"evidence_quote\": \"陈锐霆：所以外国人那个时候对中国人的欺负是到了家了，清朝慈禧太后根本上没什么外交，外国人要求什么就给什么。所以这一百多年以来受尽欺负了。我们这一次打了外国兵舰，全世界都震动。英国因为都丢了丑了，英国上院下院争吵得厉害，丘吉尔这小子说要派航空母舰到东方来报复，结果变成说大话了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"叙述打舰后对外国外交、租界收回、人民志气和渡江产生的影响。\",\n      \"process_text\": \"陈锐霆：打这次以后，我们对外国外交的事情就比较简单了，好多事情都没有谈判，比如上海南京路、淮海路，这一些租界都是没谈判就收回来了嘛。所以（洗刷了）这一百年的耻辱，人民的志气非常地高涨，敢于向外国人打。跟外国人打，对渡江也很受影响，（国民党军就说）英国的军舰他们都敢打，对我们就更不要说了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0051\"\n      ],\n      \"evidence_quote\": \"陈锐霆：打这次以后，我们对外国外交的事情就比较简单了，好多事情都没有谈判，比如上海南京路、淮海路，这一些租界都是没谈判就收回来了嘛。所以（洗刷了）这一百年的耻辱，人民的志气非常地高涨，敢于向外国人打。跟外国人打，对渡江也很受影响，（国民党军就说）英国的军舰他们都敢打，对我们就更不要说了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE010-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"总结外国兵不敢打的结果状态。\",\n      \"process_text\": \"陈锐霆：外国的兵不敢打嘛。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0053\"\n      ],\n      \"evidence_quote\": \"陈锐霆：外国的兵不敢打嘛。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE010-P01\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE010-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0049\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE010-P02\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE010-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0051\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE010-P03\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE010-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0053\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-15",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC01-DE010",
+    "event_enrichment": {
+      "result_state": "打外国兵舰后，英国丢丑并出现报复言论，我们对外国外交的事情比较简单，租界未谈判收回，人民志气高涨，对渡江产生军事影响，外国兵不敢打。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "事件从 S0047 开始说明打外国兵舰的意义与百年屈辱背景，经 S0049 叙述打舰震动和英国反应，S0051 叙述外交、租界、渡江影响，至 S0053 “外国的兵不敢打嘛”结束。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC01-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "叙述鸦片战争后英国强大、侵略、租界与不平等条约造成的百年屈辱背景。",
+        "process_text": "陈锐霆：那个意义很大了。因为鸦片战争以后，英国在世界是个霸主，海军也很强大，到处（侵犯），以后又打南京啊，打万县啊，内河通行权都有，另外在各地方，八国联军以后，租界呀，不平等条约，一个挨着一个，割地赔款更大了，一弄多少亿银两。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0047"
+        ],
+        "evidence_quote": "陈锐霆：那个意义很大了。因为鸦片战争以后，英国在世界是个霸主，海军也很强大，到处（侵犯），以后又打南京啊，打万县啊，内河通行权都有，另外在各地方，八国联军以后，租界呀，不平等条约，一个挨着一个，割地赔款更大了，一弄多少亿银两。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "叙述此次打外国兵舰使全世界震动，并引发英国丢丑、议会争吵和丘吉尔报复大话。",
+        "process_text": "陈锐霆：所以外国人那个时候对中国人的欺负是到了家了，清朝慈禧太后根本上没什么外交，外国人要求什么就给什么。所以这一百多年以来受尽欺负了。我们这一次打了外国兵舰，全世界都震动。英国因为都丢了丑了，英国上院下院争吵得厉害，丘吉尔这小子说要派航空母舰到东方来报复，结果变成说大话了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0049"
+        ],
+        "evidence_quote": "陈锐霆：所以外国人那个时候对中国人的欺负是到了家了，清朝慈禧太后根本上没什么外交，外国人要求什么就给什么。所以这一百多年以来受尽欺负了。我们这一次打了外国兵舰，全世界都震动。英国因为都丢了丑了，英国上院下院争吵得厉害，丘吉尔这小子说要派航空母舰到东方来报复，结果变成说大话了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "叙述打舰后对外国外交、租界收回、人民志气和渡江产生的影响。",
+        "process_text": "陈锐霆：打这次以后，我们对外国外交的事情就比较简单了，好多事情都没有谈判，比如上海南京路、淮海路，这一些租界都是没谈判就收回来了嘛。所以（洗刷了）这一百年的耻辱，人民的志气非常地高涨，敢于向外国人打。跟外国人打，对渡江也很受影响，（国民党军就说）英国的军舰他们都敢打，对我们就更不要说了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0051"
+        ],
+        "evidence_quote": "陈锐霆：打这次以后，我们对外国外交的事情就比较简单了，好多事情都没有谈判，比如上海南京路、淮海路，这一些租界都是没谈判就收回来了嘛。所以（洗刷了）这一百年的耻辱，人民的志气非常地高涨，敢于向外国人打。跟外国人打，对渡江也很受影响，（国民党军就说）英国的军舰他们都敢打，对我们就更不要说了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE010-P04",
+        "stage_order": 4,
+        "stage_summary": "总结外国兵不敢打的结果状态。",
+        "process_text": "陈锐霆：外国的兵不敢打嘛。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0053"
+        ],
+        "evidence_quote": "陈锐霆：外国的兵不敢打嘛。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC01-DE010-P01",
+        "target_stage_id": "BATCH07-DOC01-DE010-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH07-DOC01-S0049",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC01-DE010-P02",
+        "target_stage_id": "BATCH07-DOC01-DE010-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH07-DOC01-S0051",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC01-DE010-P03",
+        "target_stage_id": "BATCH07-DOC01-DE010-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH07-DOC01-S0053",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

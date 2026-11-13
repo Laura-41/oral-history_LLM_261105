@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T22:23:29",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC04-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC04-DE005",
+  "usage": {
+    "prompt_tokens": 1683,
+    "total_tokens": 6340,
+    "completion_tokens": 4657,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3454
+    },
+    "time_to_first_token_ms": 36571,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4656000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-07\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC04-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"中心碉堡被三发山炮弹击垮，突击排随即上去解决碉堡。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于中心碉堡作为最后难点久攻未下，止于三发炮弹后突击排解决碉堡；不扩展到此前52个碉堡及车桥战役全局。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC04-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"中心碉堡成为最后难点，久攻未下。\",\n      \"process_text\": \"此前52个碉堡已打下，鬼子中心碉堡较难打，最后一个碉堡打了好久。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC04-S0058\"\n      ],\n      \"evidence_quote\": \"那么53个碉堡，鬼子那个碉堡很厉害，鬼子那个碉堡比较难打，叫中心碉堡。我们把他52个碉堡打下来了，最后一个碉堡很难打，打了好久。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC04-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"粟司令命令山炮连只准用三发炮弹攻下中心碉堡。\",\n      \"process_text\": \"粟司令向山炮连连长下令，只准打三发，必须把中心碉堡打下来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC04-S0060\"\n      ],\n      \"evidence_quote\": \"打这个“车桥战役” 粟司令命令山炮连连长，你只准打三发，必须把这个中心碉堡打下来。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC04-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"山炮连改造射击阵地，曲射炮改平射并准备突击梯队。\",\n      \"process_text\": \"山炮连把曲射炮改成平射，从土房挖洞接近河岸，设置炮位和观察洞，对准碉堡，突击排等梯队做好准备。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC04-S0062\"\n      ],\n      \"evidence_quote\": \"这个山炮是曲射炮，曲射炮都改成平射，是不是。那么从老百姓这个房子呢，一个洞一个洞一个洞挖，老百姓都是土房子多，那个很容易，挖到靠近那个碉堡对面那个河岸边上，挖了一个洞。就是这个炮筒子可以伸出去的一个地方，上面开了一个观察洞。这样子呢就是说，对准这个碉堡，后面突击排、第二排、第三排准备好，一排上去不行，第二排再上去。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC04-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"三发炮弹击垮碉堡，突击排上去解决。\",\n      \"process_text\": \"第一发炮弹打出大缺口，第二发使碉堡垮下来，第三发基本打完，突击排马上上去解决碉堡。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC04-S0062\"\n      ],\n      \"evidence_quote\": \"一发炮弹“砰”，就打了一个大缺口，第二个炮弹上上去，那个碉堡就垮下来了，第三个炮弹就基本完了。曲射变平射，三发炮弹就按照粟司令的要求，三发炮弹并坏了（音），突击排马上上去，就解决了这个碉堡。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC04-DE005-P01\",\n      \"target_stage_id\": \"BATCH03-DOC04-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC04-S0060\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC04-DE005-P02\",\n      \"target_stage_id\": \"BATCH03-DOC04-DE005-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH03-DOC04-S0062\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC04-DE005-P03\",\n      \"target_stage_id\": \"BATCH03-DOC04-DE005-P04\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH03-DOC04-S0062\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-07",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC04-DE005",
+    "event_enrichment": {
+      "result_state": "中心碉堡被三发山炮弹击垮，突击排随即上去解决碉堡。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于中心碉堡作为最后难点久攻未下，止于三发炮弹后突击排解决碉堡；不扩展到此前52个碉堡及车桥战役全局。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC04-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "中心碉堡成为最后难点，久攻未下。",
+        "process_text": "此前52个碉堡已打下，鬼子中心碉堡较难打，最后一个碉堡打了好久。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC04-S0058"
+        ],
+        "evidence_quote": "那么53个碉堡，鬼子那个碉堡很厉害，鬼子那个碉堡比较难打，叫中心碉堡。我们把他52个碉堡打下来了，最后一个碉堡很难打，打了好久。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC04-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "粟司令命令山炮连只准用三发炮弹攻下中心碉堡。",
+        "process_text": "粟司令向山炮连连长下令，只准打三发，必须把中心碉堡打下来。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC04-S0060"
+        ],
+        "evidence_quote": "打这个“车桥战役” 粟司令命令山炮连连长，你只准打三发，必须把这个中心碉堡打下来。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC04-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "山炮连改造射击阵地，曲射炮改平射并准备突击梯队。",
+        "process_text": "山炮连把曲射炮改成平射，从土房挖洞接近河岸，设置炮位和观察洞，对准碉堡，突击排等梯队做好准备。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC04-S0062"
+        ],
+        "evidence_quote": "这个山炮是曲射炮，曲射炮都改成平射，是不是。那么从老百姓这个房子呢，一个洞一个洞一个洞挖，老百姓都是土房子多，那个很容易，挖到靠近那个碉堡对面那个河岸边上，挖了一个洞。就是这个炮筒子可以伸出去的一个地方，上面开了一个观察洞。这样子呢就是说，对准这个碉堡，后面突击排、第二排、第三排准备好，一排上去不行，第二排再上去。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC04-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "三发炮弹击垮碉堡，突击排上去解决。",
+        "process_text": "第一发炮弹打出大缺口，第二发使碉堡垮下来，第三发基本打完，突击排马上上去解决碉堡。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC04-S0062"
+        ],
+        "evidence_quote": "一发炮弹“砰”，就打了一个大缺口，第二个炮弹上上去，那个碉堡就垮下来了，第三个炮弹就基本完了。曲射变平射，三发炮弹就按照粟司令的要求，三发炮弹并坏了（音），突击排马上上去，就解决了这个碉堡。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC04-DE005-P01",
+        "target_stage_id": "BATCH03-DOC04-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC04-S0060",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC04-DE005-P02",
+        "target_stage_id": "BATCH03-DOC04-DE005-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH03-DOC04-S0062",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC04-DE005-P03",
+        "target_stage_id": "BATCH03-DOC04-DE005-P04",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH03-DOC04-S0062",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

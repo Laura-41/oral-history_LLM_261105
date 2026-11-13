@@ -1,0 +1,41 @@
+{
+  "run_time": "2026-11-12T22:25:29",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC05-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC05-DE008",
+  "usage": {
+    "prompt_tokens": 1113,
+    "total_tokens": 2947,
+    "completion_tokens": 1834,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1582
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 27681
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC05-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰在陈仁洪所在营中担任卫生指导员，陈仁洪为营长。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以片段中“我在他营里当卫生指导员，他是营长啊。”为核心边界；前文“陈仁洪，也是我的领导啊”仅提供人物关系背景，未形成新的推进步骤。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [],\n  \"stage_next\": [],\n  \"no_stage_reason\": \"该一级事件仅为单一任职关系陈述，原文未呈现触发、行动、遭遇、应对或结果等内部推进步骤，故不拆分二级阶段。\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC05-DE008",
+    "event_enrichment": {
+      "result_state": "陈海峰在陈仁洪所在营中担任卫生指导员，陈仁洪为营长。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "以片段中“我在他营里当卫生指导员，他是营长啊。”为核心边界；前文“陈仁洪，也是我的领导啊”仅提供人物关系背景，未形成新的推进步骤。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [],
+    "stage_next": [],
+    "no_stage_reason": "该一级事件仅为单一任职关系陈述，原文未呈现触发、行动、遭遇、应对或结果等内部推进步骤，故不拆分二级阶段。"
+  },
+  "request_error": null
+}

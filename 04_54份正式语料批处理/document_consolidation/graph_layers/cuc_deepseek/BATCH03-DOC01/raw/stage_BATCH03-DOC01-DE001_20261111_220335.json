@@ -1,0 +1,162 @@
+{
+  "run_time": "2026-11-11T22:03:35",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC01-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC01-DE001",
+  "usage": {
+    "prompt_tokens": 2623,
+    "total_tokens": 11720,
+    "completion_tokens": 9097,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6915
+    },
+    "time_to_first_token_ms": 71003,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9096000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC01-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"包扎所承担检伤、急救包扎和转运任务；第一次繁昌战斗收治十几名伤员，能处理的处理，处理不了的马上转送，基本不留病人。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以S0006陈海峰受军医处派出并带人、担架、药品到中分村设置包扎所为起点；以S0028第一次繁昌战斗收治十几名伤员、能处理则处理、处理不了后送、基本不留病人为终点。S0012、S0021中淮海战役等后续对比内容不纳入本事件阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰受军医处派出，带卫生员、担架和药品抵达中分村，设置急救包扎所。\",\n      \"process_text\": \"陈海峰以军医处卫生巡视员身份，带两名卫生员、几副担架和两担药到中分村，包扎所由军医处直接派出。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0006\"\n      ],\n      \"evidence_quote\": \"那么这个包扎所呢，等于（是）我们军医处派出的。第一次“繁昌战斗”和第二次“繁昌战斗”，都是军医处直接派。那个时候，我还在军医处当卫生巡视员，就带了两个卫生员，带了几副担架，带了两担药，那么就到中分村。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"接收前方下来的伤员，首先检查出血情况并实施止血。\",\n      \"process_text\": \"前方伤员一到包扎所，先检查有无流血，第一项任务是止血，防止大血管出血致死；对临时止血带要解开重新处理。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0008\"\n      ],\n      \"evidence_quote\": \"前方一到我们那里，首先检查有没有流血的，第一就止血。我们第一个任务就是止血，因为（不）止血嘛，那要死人的，那个大血管坏了以后，你股动脉还有那肱动脉流血。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"对骨折伤员重新固定，更换为竹木夹板后后送。\",\n      \"process_text\": \"前方对骨折多用树杆等临时固定，到包扎所后换夹板，使用竹子或木头做的夹板固定后再后送。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0010\"\n      ],\n      \"evidence_quote\": \"固定，固定是骨折，骨折了，前方一下来，都是临时用一个树杆一弄，哪里找到一个什么东西，把它向下一绑，把它固定。下来以后要给他换夹板，那个夹板呢，也不是最好的固定夹板，最好的固定夹板都贴在那儿，叫脱帮子（音）夹板。那要到医院里去了，那个比较沉一点，我们这个还是比较简单，但是比前方下来的要好一点儿了，就是竹子做的了，木头做的了这种夹板。我们带了好多夹板的，都是包扎好的，夹上去一固定就可以走。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"检伤分类，在担架上系红白布条标记伤情轻重。\",\n      \"process_text\": \"对伤员做分类标记：重伤出血、有生命危险的系红布条，以便到后方医院优先进手术室；已处理过的系白布条。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0012\"\n      ],\n      \"evidence_quote\": \"第四呢，这个担架上面，我们是要做一个记号。当时那个记号比较简单，到后来就复杂了。那个时候就是简单地系一个布条，这是一个出血伤员，我们系一个红布条。一进后方医院，看到红布条，知道这个快点进手术室，这个是要做手术的。红布条是重伤流血的，就有生命危险的，我们是扎红布条。那个白布条，我们都处理过了，你稍微放一下没关系。有一个简单的区别。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"按分类调度后送，并对剧痛等伤员做止痛、输液等紧急救助。\",\n      \"process_text\": \"包扎所承担调度、分类、后送；对痛得厉害的伤员打止痛针，有的输液，但当地输液条件差，来不及输的就尽快后送。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0021\"\n      ],\n      \"evidence_quote\": \"调度、分类、后送。当时急救，痛得太厉害的，要止痛，打止痛针啦，有的要输点液啦 。当时输液条件很差，那个地方还来不及输，快点后送。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE001-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"妇女会、儿童团等群众组织协助生活照护和放哨警戒。\",\n      \"process_text\": \"妇女会帮助弄水、喂饭、喂水、送吃喝和照料大小便，儿童团在外面放哨，保障包扎所运转。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0023\"\n      ],\n      \"evidence_quote\": \"那个妇女会帮我们弄水了，喂饭了，喂水了，送吃的喝的了什么东西，拉屎拉尿啦，都是训练她们搞。儿童团就在外面放哨。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE001-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"第一次繁昌战斗收治十几名伤员，能处理则处理，处理不了则转送，基本不留病人。\",\n      \"process_text\": \"第一次繁昌战斗只收十几个伤员，轻伤留在连里包扎后继续战斗，重伤员下来后，包扎所能处理的处理，处理不了的往后送，基本不留病人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0028\"\n      ],\n      \"evidence_quote\": \"那么第一次“繁昌战斗”只收了十几个伤员，不多，最轻（的）留在连里包扎一下，就不下来了，轻伤不下火线，还继续战斗。重伤员下来，他是看到他处理不了的，再下来。那么我们呢，能处理的处理，处理不了的，我们往后送，基本上我们这个地方不留病人，马上转送。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE001-P01\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0008\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE001-P02\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0010\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE001-P03\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0012\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE001-P04\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE001-P05\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0021\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE001-P05\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE001-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0023\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE001-P06\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE001-P07\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0028\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC01-DE001",
+    "event_enrichment": {
+      "result_state": "包扎所承担检伤、急救包扎和转运任务；第一次繁昌战斗收治十几名伤员，能处理的处理，处理不了的马上转送，基本不留病人。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以S0006陈海峰受军医处派出并带人、担架、药品到中分村设置包扎所为起点；以S0028第一次繁昌战斗收治十几名伤员、能处理则处理、处理不了后送、基本不留病人为终点。S0012、S0021中淮海战役等后续对比内容不纳入本事件阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC01-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰受军医处派出，带卫生员、担架和药品抵达中分村，设置急救包扎所。",
+        "process_text": "陈海峰以军医处卫生巡视员身份，带两名卫生员、几副担架和两担药到中分村，包扎所由军医处直接派出。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0006"
+        ],
+        "evidence_quote": "那么这个包扎所呢，等于（是）我们军医处派出的。第一次“繁昌战斗”和第二次“繁昌战斗”，都是军医处直接派。那个时候，我还在军医处当卫生巡视员，就带了两个卫生员，带了几副担架，带了两担药，那么就到中分村。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "接收前方下来的伤员，首先检查出血情况并实施止血。",
+        "process_text": "前方伤员一到包扎所，先检查有无流血，第一项任务是止血，防止大血管出血致死；对临时止血带要解开重新处理。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0008"
+        ],
+        "evidence_quote": "前方一到我们那里，首先检查有没有流血的，第一就止血。我们第一个任务就是止血，因为（不）止血嘛，那要死人的，那个大血管坏了以后，你股动脉还有那肱动脉流血。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "对骨折伤员重新固定，更换为竹木夹板后后送。",
+        "process_text": "前方对骨折多用树杆等临时固定，到包扎所后换夹板，使用竹子或木头做的夹板固定后再后送。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0010"
+        ],
+        "evidence_quote": "固定，固定是骨折，骨折了，前方一下来，都是临时用一个树杆一弄，哪里找到一个什么东西，把它向下一绑，把它固定。下来以后要给他换夹板，那个夹板呢，也不是最好的固定夹板，最好的固定夹板都贴在那儿，叫脱帮子（音）夹板。那要到医院里去了，那个比较沉一点，我们这个还是比较简单，但是比前方下来的要好一点儿了，就是竹子做的了，木头做的了这种夹板。我们带了好多夹板的，都是包扎好的，夹上去一固定就可以走。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "检伤分类，在担架上系红白布条标记伤情轻重。",
+        "process_text": "对伤员做分类标记：重伤出血、有生命危险的系红布条，以便到后方医院优先进手术室；已处理过的系白布条。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0012"
+        ],
+        "evidence_quote": "第四呢，这个担架上面，我们是要做一个记号。当时那个记号比较简单，到后来就复杂了。那个时候就是简单地系一个布条，这是一个出血伤员，我们系一个红布条。一进后方医院，看到红布条，知道这个快点进手术室，这个是要做手术的。红布条是重伤流血的，就有生命危险的，我们是扎红布条。那个白布条，我们都处理过了，你稍微放一下没关系。有一个简单的区别。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "按分类调度后送，并对剧痛等伤员做止痛、输液等紧急救助。",
+        "process_text": "包扎所承担调度、分类、后送；对痛得厉害的伤员打止痛针，有的输液，但当地输液条件差，来不及输的就尽快后送。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0021"
+        ],
+        "evidence_quote": "调度、分类、后送。当时急救，痛得太厉害的，要止痛，打止痛针啦，有的要输点液啦 。当时输液条件很差，那个地方还来不及输，快点后送。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE001-P06",
+        "stage_order": 6,
+        "stage_summary": "妇女会、儿童团等群众组织协助生活照护和放哨警戒。",
+        "process_text": "妇女会帮助弄水、喂饭、喂水、送吃喝和照料大小便，儿童团在外面放哨，保障包扎所运转。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0023"
+        ],
+        "evidence_quote": "那个妇女会帮我们弄水了，喂饭了，喂水了，送吃的喝的了什么东西，拉屎拉尿啦，都是训练她们搞。儿童团就在外面放哨。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE001-P07",
+        "stage_order": 7,
+        "stage_summary": "第一次繁昌战斗收治十几名伤员，能处理则处理，处理不了则转送，基本不留病人。",
+        "process_text": "第一次繁昌战斗只收十几个伤员，轻伤留在连里包扎后继续战斗，重伤员下来后，包扎所能处理的处理，处理不了的往后送，基本不留病人。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0028"
+        ],
+        "evidence_quote": "那么第一次“繁昌战斗”只收了十几个伤员，不多，最轻（的）留在连里包扎一下，就不下来了，轻伤不下火线，还继续战斗。重伤员下来，他是看到他处理不了的，再下来。那么我们呢，能处理的处理，处理不了的，我们往后送，基本上我们这个地方不留病人，马上转送。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC01-DE001-P01",
+        "target_stage_id": "BATCH03-DOC01-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0008",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC01-DE001-P02",
+        "target_stage_id": "BATCH03-DOC01-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0010",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC01-DE001-P03",
+        "target_stage_id": "BATCH03-DOC01-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0012",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC01-DE001-P04",
+        "target_stage_id": "BATCH03-DOC01-DE001-P05",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH03-DOC01-S0021",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC01-DE001-P05",
+        "target_stage_id": "BATCH03-DOC01-DE001-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0023",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC01-DE001-P06",
+        "target_stage_id": "BATCH03-DOC01-DE001-P07",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0028",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

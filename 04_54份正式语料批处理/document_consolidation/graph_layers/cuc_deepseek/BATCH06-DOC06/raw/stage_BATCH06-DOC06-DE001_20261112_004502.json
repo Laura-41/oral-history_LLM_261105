@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T00:45:02",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC06-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC06-DE001",
+  "usage": {
+    "prompt_tokens": 1239,
+    "total_tokens": 3751,
+    "completion_tokens": 2512,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1739
+    },
+    "time_to_first_token_ms": 19714,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC06-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"突围敌军坦克的油料耗尽、车辆停止，人员与车辆被俘；骑兵追坦克和坦克追坦克两次均以俘获告终。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈官庄合围后敌人坦克两次出动逃跑为起点，以两次追击均油尽被俘为终点；不含随后停战、新年献礼等内容。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈官庄合围后，敌军坦克两次出动逃跑，成为追击俘获的背景。\",\n      \"process_text\": \"陈官庄合围以后，敌人坦克有两次出动逃跑。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0003\"\n      ],\n      \"evidence_quote\": \"陈官庄合围以后，敌人坦克有两次出动逃跑。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"骑兵追击敌军坦克，耗尽其油料，车辆停止，人员与车辆被俘。\",\n      \"process_text\": \"我们骑兵追坦克，最后把油烧完，车停，人、车被俘。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0003\"\n      ],\n      \"evidence_quote\": \"一个是我们骑兵追坦克，最后把他的油烧完了，车也停了，人、车都俘虏了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"我方坦克追击敌军坦克，同样耗尽其油料并完成俘获。\",\n      \"process_text\": \"我们的坦克追他的坦克，油烧完，也把他俘虏了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0003\"\n      ],\n      \"evidence_quote\": \"另外一个就是我们的坦克追他的坦克，以后都也是油烧完了，也把他俘虏了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE001-P01\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE001-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0003\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE001-P02\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0003\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC06-DE001",
+    "event_enrichment": {
+      "result_state": "突围敌军坦克的油料耗尽、车辆停止，人员与车辆被俘；骑兵追坦克和坦克追坦克两次均以俘获告终。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以陈官庄合围后敌人坦克两次出动逃跑为起点，以两次追击均油尽被俘为终点；不含随后停战、新年献礼等内容。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC06-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "陈官庄合围后，敌军坦克两次出动逃跑，成为追击俘获的背景。",
+        "process_text": "陈官庄合围以后，敌人坦克有两次出动逃跑。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0003"
+        ],
+        "evidence_quote": "陈官庄合围以后，敌人坦克有两次出动逃跑。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "骑兵追击敌军坦克，耗尽其油料，车辆停止，人员与车辆被俘。",
+        "process_text": "我们骑兵追坦克，最后把油烧完，车停，人、车被俘。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0003"
+        ],
+        "evidence_quote": "一个是我们骑兵追坦克，最后把他的油烧完了，车也停了，人、车都俘虏了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "我方坦克追击敌军坦克，同样耗尽其油料并完成俘获。",
+        "process_text": "我们的坦克追他的坦克，油烧完，也把他俘虏了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0003"
+        ],
+        "evidence_quote": "另外一个就是我们的坦克追他的坦克，以后都也是油烧完了，也把他俘虏了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC06-DE001-P01",
+        "target_stage_id": "BATCH06-DOC06-DE001-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC06-S0003",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE001-P02",
+        "target_stage_id": "BATCH06-DOC06-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0003",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

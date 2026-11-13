@@ -1,0 +1,208 @@
+{
+  "run_time": "2026-11-12T00:17:19",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC09-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC09-DE001",
+  "usage": {
+    "prompt_tokens": 3822,
+    "total_tokens": 17156,
+    "completion_tokens": 13334,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10706
+    },
+    "time_to_first_token_ms": 112301,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13333000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-17\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC09-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"梅村收治了第一、第二次战役送来的重伤员，合计约二百名重伤在此开刀治疗；医疗队以骨干带学员、边做边教的方式完成手术与培训，学员逐步能独立处理类似手术，目标是减少残废、减少死亡并争取伤员归队。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于第一次战役后医疗队到梅村接收伤员，止于对伤员分批到达后即时手术及麻醉风险等战地医疗过程的叙述；涵盖收治、手术、培训与结果目标。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"第一次战役后，医疗队在梅村接收伤员；自身伤员235名，送到梅村的几十名为重伤，轻伤留在前方。\",\n      \"process_text\": \"在梅村边收伤员，第一次战役去时伤员已经下来；自身伤员235个，送到这里的几十个是重伤，轻伤都在前方，不下来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0003\",\n        \"BATCH05-DOC09-S0004\"\n      ],\n      \"evidence_quote\": \"那么我们自己（的）伤员是235个，送到我们这里的（有）几十个，重伤，轻伤都在前方了，就不下来了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"第二次战役后继续收治重伤员，梅村收治一百六十多名重伤，合计约二百名重伤在此开刀治疗。\",\n      \"process_text\": \"第二次战役伤员共四百五十多个；梅村边收了一百六十多个重伤，加起来大概二百个重伤在这里开刀治疗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0008\",\n        \"BATCH05-DOC09-S0009\",\n        \"BATCH05-DOC09-S0010\"\n      ],\n      \"evidence_quote\": \"我们加起来呢，大概有二百个重伤，在我们这里开刀进行治疗。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"以队长、副队长和20名学员为骨干，22人分3组；医务职业学校学员和当地群众承担护理等工作。\",\n      \"process_text\": \"工作人员是队长、副队长加20个学员，作为骨干；22人分成3个组。医务职业学校的人担任基层护理、卫生员工作，当地老百姓、学生和积极分子也参加。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0012\",\n        \"BATCH05-DOC09-S0013\",\n        \"BATCH05-DOC09-S0014\",\n        \"BATCH05-DOC09-S0016\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那么工作人员（是）谁呢？就是队长、副队长加上20个学员，这是骨干。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"利用老百姓大房子和祠堂，以布棚搭建手术室，并用竹席、硫黄熏蒸、日晒、蒸煮等方法消毒，创造无菌条件。\",\n      \"process_text\": \"手术室设在老百姓的大房子和祠堂，用布做成布棚；底下铺竹席、竹篾，先日晒，再用硫黄熏蒸，洗后在锅里蒸，用的时候再消毒一次。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0017\",\n        \"BATCH05-DOC09-S0019\",\n        \"BATCH05-DOC09-S0020\",\n        \"BATCH05-DOC09-S0022\",\n        \"BATCH05-DOC09-S0024\"\n      ],\n      \"evidence_quote\": \"    陈海峰：他那竹子多啊，竹席、竹篾，底下铺上那个竹篾做的席子，消毒。一个是用喷洒消毒，不是现在那个喷洒消毒啊。我们那个时候就是硫黄啊，喷一喷，烧成烟，熏蒸，熏蒸消毒。这个太阳先晒，晒了消毒。战斗结束了，把这个都洗（了），太阳暴晒，晒了以后，再（在）锅里面蒸。用的时候，再消毒一次。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"手术全面展开，简单手术由学员在两个队长指导下完成，大手术由部长做。\",\n      \"process_text\": \"手术大家做了，简单的学员就在两个队长指导下做；大手术由部长做。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0026\",\n        \"BATCH05-DOC09-S0033\"\n      ],\n      \"evidence_quote\": \"    陈海峰：手术大家做了，那个简单的，学员就做了，学员就在我们两个队长指导之下。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE001-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"在手术和换药过程中边指导边讲课，利用晚上上辅导课，讲创伤治疗十大原则、各种伤处理原则及扩创、止血、夹板、牵引等注意事项，目标是减少残废、减少死亡、争取归队。\",\n      \"process_text\": \"边指导边讲，上辅导课；主课由部长讲，利用晚上讲课，讲当天伤员特点和创伤治疗十大原则，讲各种伤的处理原则、注意事项，以及扩创、止血、上夹板、牵引等，减少残废、减少死亡，争取更多地归队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0027\",\n        \"BATCH05-DOC09-S0028\",\n        \"BATCH05-DOC09-S0030\",\n        \"BATCH05-DOC09-S0031\",\n        \"BATCH05-DOC09-S0032\",\n        \"BATCH05-DOC09-S0033\"\n      ],\n      \"evidence_quote\": \"今天白天，我们看到来的伤员（有）什么特点，哪个伤伤员多，这个伤员要注意哪些问题，那么要讲创伤治疗的十大原则。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE001-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"学生轮流当助手，小手术由学员自己开、队长在旁纠正；经过多次类似手术训练后，学员胆子变大，可以独立处理，形成现教现学、互教互学。\",\n      \"process_text\": \"学生轮流当助手，有更大的手术我们去当助手；小手术他们自己开，我们在旁边看并纠正。先当助手，以后自己开，再指出注意事项，以后独立开，类似手术做过几次后就没有问题，一有情况可以独立处理。现教现学，互教互学。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0035\",\n        \"BATCH05-DOC09-S0036\",\n        \"BATCH05-DOC09-S0037\",\n        \"BATCH05-DOC09-S0040\",\n        \"BATCH05-DOC09-S0041\",\n        \"BATCH05-DOC09-S0042\",\n        \"BATCH05-DOC09-S0064\",\n        \"BATCH05-DOC09-S0065\",\n        \"BATCH05-DOC09-S0066\",\n        \"BATCH05-DOC09-S0067\"\n      ],\n      \"evidence_quote\": \"先来当助手，以后他再来自己开，再指出他的注意事项，以后他再独立开，类似的手术他做过几次以后，他就没有问题了。一有情况，他就可以独立处理了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE001-P08\",\n      \"stage_order\": 8,\n      \"stage_summary\": \"战斗结束后伤员分批下来，到达后即安排手术；手术中注意防止麻醉事故，当时主要使用哥罗仿和乙醚，存在麻醉过敏反应风险。\",\n      \"process_text\": \"一打完仗，伤员就分批下来；分批下来以后，来就做手术，因为手术里面怕麻醉出事故。当时主要靠哥罗仿，还有乙醚，最好的麻醉药有时也出麻醉事故。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0073\",\n        \"BATCH05-DOC09-S0074\",\n        \"BATCH05-DOC09-S0076\",\n        \"BATCH05-DOC09-S0080\"\n      ],\n      \"evidence_quote\": \"那分批下来以后，就是来就做手术来就做手术。因为这个手术里面怕……防止出什么？麻醉要出事故。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE001-P01\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE001-P02\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE001-P03\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE001-P04\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE001-P05\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE001-P05\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE001-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE001-P06\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE001-P07\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE001-P07\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE001-P08\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-17",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC09-DE001",
+    "event_enrichment": {
+      "result_state": "梅村收治了第一、第二次战役送来的重伤员，合计约二百名重伤在此开刀治疗；医疗队以骨干带学员、边做边教的方式完成手术与培训，学员逐步能独立处理类似手术，目标是减少残废、减少死亡并争取伤员归队。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于第一次战役后医疗队到梅村接收伤员，止于对伤员分批到达后即时手术及麻醉风险等战地医疗过程的叙述；涵盖收治、手术、培训与结果目标。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC09-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "第一次战役后，医疗队在梅村接收伤员；自身伤员235名，送到梅村的几十名为重伤，轻伤留在前方。",
+        "process_text": "在梅村边收伤员，第一次战役去时伤员已经下来；自身伤员235个，送到这里的几十个是重伤，轻伤都在前方，不下来。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0003",
+          "BATCH05-DOC09-S0004"
+        ],
+        "evidence_quote": "那么我们自己（的）伤员是235个，送到我们这里的（有）几十个，重伤，轻伤都在前方了，就不下来了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "第二次战役后继续收治重伤员，梅村收治一百六十多名重伤，合计约二百名重伤在此开刀治疗。",
+        "process_text": "第二次战役伤员共四百五十多个；梅村边收了一百六十多个重伤，加起来大概二百个重伤在这里开刀治疗。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0008",
+          "BATCH05-DOC09-S0009",
+          "BATCH05-DOC09-S0010"
+        ],
+        "evidence_quote": "我们加起来呢，大概有二百个重伤，在我们这里开刀进行治疗。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "以队长、副队长和20名学员为骨干，22人分3组；医务职业学校学员和当地群众承担护理等工作。",
+        "process_text": "工作人员是队长、副队长加20个学员，作为骨干；22人分成3个组。医务职业学校的人担任基层护理、卫生员工作，当地老百姓、学生和积极分子也参加。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0012",
+          "BATCH05-DOC09-S0013",
+          "BATCH05-DOC09-S0014",
+          "BATCH05-DOC09-S0016"
+        ],
+        "evidence_quote": "    陈海峰：那么工作人员（是）谁呢？就是队长、副队长加上20个学员，这是骨干。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "利用老百姓大房子和祠堂，以布棚搭建手术室，并用竹席、硫黄熏蒸、日晒、蒸煮等方法消毒，创造无菌条件。",
+        "process_text": "手术室设在老百姓的大房子和祠堂，用布做成布棚；底下铺竹席、竹篾，先日晒，再用硫黄熏蒸，洗后在锅里蒸，用的时候再消毒一次。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0017",
+          "BATCH05-DOC09-S0019",
+          "BATCH05-DOC09-S0020",
+          "BATCH05-DOC09-S0022",
+          "BATCH05-DOC09-S0024"
+        ],
+        "evidence_quote": "    陈海峰：他那竹子多啊，竹席、竹篾，底下铺上那个竹篾做的席子，消毒。一个是用喷洒消毒，不是现在那个喷洒消毒啊。我们那个时候就是硫黄啊，喷一喷，烧成烟，熏蒸，熏蒸消毒。这个太阳先晒，晒了消毒。战斗结束了，把这个都洗（了），太阳暴晒，晒了以后，再（在）锅里面蒸。用的时候，再消毒一次。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "手术全面展开，简单手术由学员在两个队长指导下完成，大手术由部长做。",
+        "process_text": "手术大家做了，简单的学员就在两个队长指导下做；大手术由部长做。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0026",
+          "BATCH05-DOC09-S0033"
+        ],
+        "evidence_quote": "    陈海峰：手术大家做了，那个简单的，学员就做了，学员就在我们两个队长指导之下。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE001-P06",
+        "stage_order": 6,
+        "stage_summary": "在手术和换药过程中边指导边讲课，利用晚上上辅导课，讲创伤治疗十大原则、各种伤处理原则及扩创、止血、夹板、牵引等注意事项，目标是减少残废、减少死亡、争取归队。",
+        "process_text": "边指导边讲，上辅导课；主课由部长讲，利用晚上讲课，讲当天伤员特点和创伤治疗十大原则，讲各种伤的处理原则、注意事项，以及扩创、止血、上夹板、牵引等，减少残废、减少死亡，争取更多地归队。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0027",
+          "BATCH05-DOC09-S0028",
+          "BATCH05-DOC09-S0030",
+          "BATCH05-DOC09-S0031",
+          "BATCH05-DOC09-S0032",
+          "BATCH05-DOC09-S0033"
+        ],
+        "evidence_quote": "今天白天，我们看到来的伤员（有）什么特点，哪个伤伤员多，这个伤员要注意哪些问题，那么要讲创伤治疗的十大原则。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE001-P07",
+        "stage_order": 7,
+        "stage_summary": "学生轮流当助手，小手术由学员自己开、队长在旁纠正；经过多次类似手术训练后，学员胆子变大，可以独立处理，形成现教现学、互教互学。",
+        "process_text": "学生轮流当助手，有更大的手术我们去当助手；小手术他们自己开，我们在旁边看并纠正。先当助手，以后自己开，再指出注意事项，以后独立开，类似手术做过几次后就没有问题，一有情况可以独立处理。现教现学，互教互学。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0035",
+          "BATCH05-DOC09-S0036",
+          "BATCH05-DOC09-S0037",
+          "BATCH05-DOC09-S0040",
+          "BATCH05-DOC09-S0041",
+          "BATCH05-DOC09-S0042",
+          "BATCH05-DOC09-S0064",
+          "BATCH05-DOC09-S0065",
+          "BATCH05-DOC09-S0066",
+          "BATCH05-DOC09-S0067"
+        ],
+        "evidence_quote": "先来当助手，以后他再来自己开，再指出他的注意事项，以后他再独立开，类似的手术他做过几次以后，他就没有问题了。一有情况，他就可以独立处理了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE001-P08",
+        "stage_order": 8,
+        "stage_summary": "战斗结束后伤员分批下来，到达后即安排手术；手术中注意防止麻醉事故，当时主要使用哥罗仿和乙醚，存在麻醉过敏反应风险。",
+        "process_text": "一打完仗，伤员就分批下来；分批下来以后，来就做手术，因为手术里面怕麻醉出事故。当时主要靠哥罗仿，还有乙醚，最好的麻醉药有时也出麻醉事故。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0073",
+          "BATCH05-DOC09-S0074",
+          "BATCH05-DOC09-S0076",
+          "BATCH05-DOC09-S0080"
+        ],
+        "evidence_quote": "那分批下来以后，就是来就做手术来就做手术。因为这个手术里面怕……防止出什么？麻醉要出事故。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC09-DE001-P01",
+        "target_stage_id": "BATCH05-DOC09-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC09-DE001-P02",
+        "target_stage_id": "BATCH05-DOC09-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC09-DE001-P03",
+        "target_stage_id": "BATCH05-DOC09-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC09-DE001-P04",
+        "target_stage_id": "BATCH05-DOC09-DE001-P05",
+        "logic": "ENABLES",
+        "evidence_segment_id": "",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC09-DE001-P05",
+        "target_stage_id": "BATCH05-DOC09-DE001-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC09-DE001-P06",
+        "target_stage_id": "BATCH05-DOC09-DE001-P07",
+        "logic": "ENABLES",
+        "evidence_segment_id": "",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC09-DE001-P07",
+        "target_stage_id": "BATCH05-DOC09-DE001-P08",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

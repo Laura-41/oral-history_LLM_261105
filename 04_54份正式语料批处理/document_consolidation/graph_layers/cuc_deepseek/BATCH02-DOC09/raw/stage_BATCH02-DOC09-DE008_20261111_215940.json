@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-11T21:59:40",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC09-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC09-DE008",
+  "usage": {
+    "prompt_tokens": 1287,
+    "total_tokens": 5278,
+    "completion_tokens": 3991,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2983
+    },
+    "time_to_first_token_ms": 33926,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC09-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"685团、686团完成就地扩军，686团补充自身，剩余兵员共同组建补充团，并配齐干部骨干形成正式连队。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以S0054所述就地扩军、补充自身和组建补充团，及S0056所述配齐骨干交给补充团为界；S0056后段部队北上整训不属于本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"集结并就地扩军、接收兵员\",\n      \"process_text\": \"部队在洪洞附近集结；685团、686团就地宣传群众参军，并接收送回的兵员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0054\"\n      ],\n      \"evidence_quote\": \"我们回到部队的时候呢，部队就在洪洞附近集结。我们回去以后就知道，685团、686团就地宣传群众参军，加上我们送回去的兵员——\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"686团补充自身并共同组建补充团\",\n      \"process_text\": \"686团先补充自身，685、686团扩军后共同剩余兵员组织一个补充团。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0054\"\n      ],\n      \"evidence_quote\": \"686团他们也很有能力的了，他们除了补充自己以外，从685、686（团扩军后）共同剩下来的（兵员），也组织了一个补充团。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"按组织单位派干部带成正式连队\",\n      \"process_text\": \"补充团干部由原组织部队派出带领，编成正式连队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0054\"\n      ],\n      \"evidence_quote\": \"这个补充团的干部，你哪个部队组织的，你就派干部带着他，这就是个正式连队了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"配齐连排班骨干并移交补充团\",\n      \"process_text\": \"按连长、指导员、班长、排长等层级配齐骨干，交给补充团。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0056\"\n      ],\n      \"evidence_quote\": \"从连长、指导员、班长、排长，你都得组织好，交给补充团。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE008-P01\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0054\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE008-P02\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0054\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE008-P03\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE008-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0056\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC09-DE008",
+    "event_enrichment": {
+      "result_state": "685团、686团完成就地扩军，686团补充自身，剩余兵员共同组建补充团，并配齐干部骨干形成正式连队。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以S0054所述就地扩军、补充自身和组建补充团，及S0056所述配齐骨干交给补充团为界；S0056后段部队北上整训不属于本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC09-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "集结并就地扩军、接收兵员",
+        "process_text": "部队在洪洞附近集结；685团、686团就地宣传群众参军，并接收送回的兵员。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0054"
+        ],
+        "evidence_quote": "我们回到部队的时候呢，部队就在洪洞附近集结。我们回去以后就知道，685团、686团就地宣传群众参军，加上我们送回去的兵员——",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "686团补充自身并共同组建补充团",
+        "process_text": "686团先补充自身，685、686团扩军后共同剩余兵员组织一个补充团。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0054"
+        ],
+        "evidence_quote": "686团他们也很有能力的了，他们除了补充自己以外，从685、686（团扩军后）共同剩下来的（兵员），也组织了一个补充团。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "按组织单位派干部带成正式连队",
+        "process_text": "补充团干部由原组织部队派出带领，编成正式连队。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0054"
+        ],
+        "evidence_quote": "这个补充团的干部，你哪个部队组织的，你就派干部带着他，这就是个正式连队了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "配齐连排班骨干并移交补充团",
+        "process_text": "按连长、指导员、班长、排长等层级配齐骨干，交给补充团。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0056"
+        ],
+        "evidence_quote": "从连长、指导员、班长、排长，你都得组织好，交给补充团。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC09-DE008-P01",
+        "target_stage_id": "BATCH02-DOC09-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0054",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE008-P02",
+        "target_stage_id": "BATCH02-DOC09-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0054",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE008-P03",
+        "target_stage_id": "BATCH02-DOC09-DE008-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC09-S0056",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

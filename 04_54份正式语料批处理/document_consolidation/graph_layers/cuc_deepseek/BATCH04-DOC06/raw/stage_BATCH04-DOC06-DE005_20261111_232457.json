@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T23:24:57",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC06-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC06-DE005",
+  "usage": {
+    "prompt_tokens": 1286,
+    "total_tokens": 9433,
+    "completion_tokens": 8147,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7194
+    },
+    "time_to_first_token_ms": 64126,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8146000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC06-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"后方医院完成分散布置，陈海峰随后随材料科下海；材料科的药品、器材等物资从海上转移。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于指定陈海峰协助后方医院迁移，止于布置好后随材料科下海；海上航行及后续归队细节不在本事件内。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰带一部分人，因战斗经验较丰富，被指定协助后方医院迁移。\",\n      \"process_text\": \"陈海峰带一部分人，因战斗经验较丰富，被指定协助后方医院迁移。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0089\"\n      ],\n      \"evidence_quote\": \"我呢，带了一部分人呢，因为我们这个战斗经验比较丰富一点，在前方哪，就指定我协助后方医院（迁移）。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"明确后方医院情况复杂、人员没有战斗经验，需协助其分散打埋伏。\",\n      \"process_text\": \"确认医院没有战斗经验、情况复杂，需要协助医院分散打埋伏。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0091\"\n      ],\n      \"evidence_quote\": \"他没有战斗经验。这个医院比较复杂了，要协助这个医院来分散打埋伏。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈海峰带少数人支援后方医院分散。\",\n      \"process_text\": \"陈海峰带少数人支援后方医院分散。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0103\"\n      ],\n      \"evidence_quote\": \"我当时带着少数人就支援这个医院分散\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"布置好后，陈海峰随材料科下海。\",\n      \"process_text\": \"布置好以后，跟着材料科一块下海。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0103\"\n      ],\n      \"evidence_quote\": \"布置好以后，就跟着材料科一块下海。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE005-P01\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE005-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0091\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE005-P02\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0103\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE005-P03\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE005-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0103\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC06-DE005",
+    "event_enrichment": {
+      "result_state": "后方医院完成分散布置，陈海峰随后随材料科下海；材料科的药品、器材等物资从海上转移。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于指定陈海峰协助后方医院迁移，止于布置好后随材料科下海；海上航行及后续归队细节不在本事件内。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC06-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰带一部分人，因战斗经验较丰富，被指定协助后方医院迁移。",
+        "process_text": "陈海峰带一部分人，因战斗经验较丰富，被指定协助后方医院迁移。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0089"
+        ],
+        "evidence_quote": "我呢，带了一部分人呢，因为我们这个战斗经验比较丰富一点，在前方哪，就指定我协助后方医院（迁移）。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "明确后方医院情况复杂、人员没有战斗经验，需协助其分散打埋伏。",
+        "process_text": "确认医院没有战斗经验、情况复杂，需要协助医院分散打埋伏。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0091"
+        ],
+        "evidence_quote": "他没有战斗经验。这个医院比较复杂了，要协助这个医院来分散打埋伏。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "陈海峰带少数人支援后方医院分散。",
+        "process_text": "陈海峰带少数人支援后方医院分散。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0103"
+        ],
+        "evidence_quote": "我当时带着少数人就支援这个医院分散",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "布置好后，陈海峰随材料科下海。",
+        "process_text": "布置好以后，跟着材料科一块下海。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0103"
+        ],
+        "evidence_quote": "布置好以后，就跟着材料科一块下海。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC06-DE005-P01",
+        "target_stage_id": "BATCH04-DOC06-DE005-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC06-S0091",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE005-P02",
+        "target_stage_id": "BATCH04-DOC06-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC06-S0103",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE005-P03",
+        "target_stage_id": "BATCH04-DOC06-DE005-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC06-S0103",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

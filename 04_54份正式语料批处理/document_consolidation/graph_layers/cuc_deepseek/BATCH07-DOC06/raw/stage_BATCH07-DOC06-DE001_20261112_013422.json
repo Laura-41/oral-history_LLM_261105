@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T01:34:22",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC06-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC06-DE001",
+  "usage": {
+    "prompt_tokens": 1384,
+    "total_tokens": 5844,
+    "completion_tokens": 4460,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3646
+    },
+    "time_to_first_token_ms": 40111,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC06-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"叶挺已回到军部，中央关于新四军东进发展战略的决策意见已由周恩来传达，叶项矛盾进入解决过程。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以1939年2月23日周恩来送叶挺回军部为事件起点，以传达中央东进发展战略决策意见并指向解决叶项矛盾为终点；前文叶挺多次要离开军部作为背景，S0027关于报告篇幅的补充不单独拆为阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"叶挺因与项英矛盾有意见，多次要离开军部去后方，去了不想回来。\",\n      \"process_text\": \"叶挺有意见，多次要离开军部到后方去，去了不想回来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0025\"\n      ],\n      \"evidence_quote\": \"他利用他的权力，这样子叶挺有意见，多次要离开军部到后方去。所以这样子呢，去了不想回来。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"1939年2月23日，周恩来将叶挺送回新四军军部。\",\n      \"process_text\": \"1939年2月23号，周恩来总理把他送回来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0025\"\n      ],\n      \"evidence_quote\": \"最后是1939年2月23号，周恩来总理把他送回来的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"周恩来传达中央关于新四军东进发展战略决策的意见，以解决叶挺与项英之间的矛盾。\",\n      \"process_text\": \"把中央对新四军东进发展战略决策的意见进行传达，解决叶项之间的矛盾。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0025\"\n      ],\n      \"evidence_quote\": \"（同时）把中央对新四军东进发展战略决策的意见（进行）传达，解决叶项之间的矛盾。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P01\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH07-DOC06-S0025\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE001-P02\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC06-S0025\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC06-DE001",
+    "event_enrichment": {
+      "result_state": "叶挺已回到军部，中央关于新四军东进发展战略的决策意见已由周恩来传达，叶项矛盾进入解决过程。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以1939年2月23日周恩来送叶挺回军部为事件起点，以传达中央东进发展战略决策意见并指向解决叶项矛盾为终点；前文叶挺多次要离开军部作为背景，S0027关于报告篇幅的补充不单独拆为阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "叶挺因与项英矛盾有意见，多次要离开军部去后方，去了不想回来。",
+        "process_text": "叶挺有意见，多次要离开军部到后方去，去了不想回来。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0025"
+        ],
+        "evidence_quote": "他利用他的权力，这样子叶挺有意见，多次要离开军部到后方去。所以这样子呢，去了不想回来。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "1939年2月23日，周恩来将叶挺送回新四军军部。",
+        "process_text": "1939年2月23号，周恩来总理把他送回来。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0025"
+        ],
+        "evidence_quote": "最后是1939年2月23号，周恩来总理把他送回来的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "周恩来传达中央关于新四军东进发展战略决策的意见，以解决叶挺与项英之间的矛盾。",
+        "process_text": "把中央对新四军东进发展战略决策的意见进行传达，解决叶项之间的矛盾。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0025"
+        ],
+        "evidence_quote": "（同时）把中央对新四军东进发展战略决策的意见（进行）传达，解决叶项之间的矛盾。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P01",
+        "target_stage_id": "BATCH07-DOC06-DE001-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH07-DOC06-S0025",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE001-P02",
+        "target_stage_id": "BATCH07-DOC06-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC06-S0025",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

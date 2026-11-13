@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T15:38:10",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC08-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC08-DE001",
+  "usage": {
+    "prompt_tokens": 1172,
+    "total_tokens": 7387,
+    "completion_tokens": 6215,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5400
+    },
+    "time_to_first_token_ms": 107748,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC08-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"白彦还在，他不敢去了，就活了。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于 S0005 的“到我离开上延安去，白彦还在呢”，经 S0006 的“他害怕了，都不敢去了”，止于 S0008 的“就活了”。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC08-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"叙述者离开上延安去时，白彦还在。\",\n      \"process_text\": \"到我离开上延安去，白彦还在呢。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC08-S0005\"\n      ],\n      \"evidence_quote\": \"    杨永松：到我离开上延安去，白彦还在呢，他不敢去了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC08-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"“他”害怕，不敢去了。\",\n      \"process_text\": \"他害怕了，都不敢去了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC08-S0006\"\n      ],\n      \"evidence_quote\": \"他害怕了，都不敢去了。（杨永松笑）\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC08-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"杨永松说“就活了”。\",\n      \"process_text\": \"就活了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC08-S0008\"\n      ],\n      \"evidence_quote\": \"    杨永松：就活了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC08-DE001-P01\",\n      \"target_stage_id\": \"BATCH06-DOC08-DE001-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC08-S0006\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC08-DE001-P02\",\n      \"target_stage_id\": \"BATCH06-DOC08-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC08-S0008\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC08-DE001",
+    "event_enrichment": {
+      "result_state": "白彦还在，他不敢去了，就活了。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于 S0005 的“到我离开上延安去，白彦还在呢”，经 S0006 的“他害怕了，都不敢去了”，止于 S0008 的“就活了”。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC08-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "叙述者离开上延安去时，白彦还在。",
+        "process_text": "到我离开上延安去，白彦还在呢。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC08-S0005"
+        ],
+        "evidence_quote": "    杨永松：到我离开上延安去，白彦还在呢，他不敢去了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC08-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "“他”害怕，不敢去了。",
+        "process_text": "他害怕了，都不敢去了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC08-S0006"
+        ],
+        "evidence_quote": "他害怕了，都不敢去了。（杨永松笑）",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC08-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "杨永松说“就活了”。",
+        "process_text": "就活了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC08-S0008"
+        ],
+        "evidence_quote": "    杨永松：就活了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC08-DE001-P01",
+        "target_stage_id": "BATCH06-DOC08-DE001-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC08-S0006",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC08-DE001-P02",
+        "target_stage_id": "BATCH06-DOC08-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC08-S0008",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

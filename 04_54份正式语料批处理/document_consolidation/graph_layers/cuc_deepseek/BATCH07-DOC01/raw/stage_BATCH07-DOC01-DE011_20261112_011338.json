@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T01:13:38",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC01-DE011",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC01-DE011",
+  "usage": {
+    "prompt_tokens": 1242,
+    "total_tokens": 6255,
+    "completion_tokens": 5013,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3853
+    },
+    "time_to_first_token_ms": 38876,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5012000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-15\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC01-DE011\",\n  \"event_enrichment\": {\n    \"result_state\": \"英国军舰被炮击后，英国丢丑并发生议会争吵，丘吉尔的报复威胁落空；叙述者称此后对外交涉变简单、部分租界未谈判收回、民众志气高涨。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以S0049中百余年受欺负为背景，核心句为“我们这一次打了外国兵舰”，并延伸至S0051所述外交、租界、士气与渡江影响；未展开炮击的具体时间、地点和战斗过程。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE011-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"交代百余年受外国人欺负的背景。\",\n      \"process_text\": \"外国人长期欺负中国，百余年受尽欺负。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0049\"\n      ],\n      \"evidence_quote\": \"所以外国人那个时候对中国人的欺负是到了家了，清朝慈禧太后根本上没什么外交，外国人要求什么就给什么。所以这一百多年以来受尽欺负了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE011-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"叙述者一方这一次炮击外国兵舰，引起全世界震动。\",\n      \"process_text\": \"我们这一次打了外国兵舰，全世界都震动。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0049\"\n      ],\n      \"evidence_quote\": \"我们这一次打了外国兵舰，全世界都震动。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE011-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"英国因丢丑而议会争吵，丘吉尔扬言派航空母舰报复，但成为大话。\",\n      \"process_text\": \"英国丢丑，上院下院争吵；丘吉尔声称派航空母舰到东方报复，结果变成说大话。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0049\"\n      ],\n      \"evidence_quote\": \"英国因为都丢了丑了，英国上院下院争吵得厉害，丘吉尔这小子说要派航空母舰到东方来报复，结果变成说大话了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE011-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"此后对外交涉变简单，部分租界未谈判收回，百年耻辱被洗刷，民众志气高涨，并影响渡江作战心理。\",\n      \"process_text\": \"打这次以后，对外国外交的事情比较简单，上海南京路、淮海路等租界没谈判就收回；洗刷百年耻辱，人民志气高涨，敢于向外国人打；对渡江也很有影响，国民党军认为英国军舰都敢打，对解放军更不要说了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0051\"\n      ],\n      \"evidence_quote\": \"打这次以后，我们对外国外交的事情就比较简单了，好多事情都没有谈判，比如上海南京路、淮海路，这一些租界都是没谈判就收回来了嘛。所以（洗刷了）这一百年的耻辱，人民的志气非常地高涨，敢于向外国人打。跟外国人打，对渡江也很受影响，（国民党军就说）英国的军舰他们都敢打，对我们就更不要说了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE011-P01\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE011-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0049\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE011-P02\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE011-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0049\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE011-P03\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE011-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0051\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-15",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC01-DE011",
+    "event_enrichment": {
+      "result_state": "英国军舰被炮击后，英国丢丑并发生议会争吵，丘吉尔的报复威胁落空；叙述者称此后对外交涉变简单、部分租界未谈判收回、民众志气高涨。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以S0049中百余年受欺负为背景，核心句为“我们这一次打了外国兵舰”，并延伸至S0051所述外交、租界、士气与渡江影响；未展开炮击的具体时间、地点和战斗过程。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC01-DE011-P01",
+        "stage_order": 1,
+        "stage_summary": "交代百余年受外国人欺负的背景。",
+        "process_text": "外国人长期欺负中国，百余年受尽欺负。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0049"
+        ],
+        "evidence_quote": "所以外国人那个时候对中国人的欺负是到了家了，清朝慈禧太后根本上没什么外交，外国人要求什么就给什么。所以这一百多年以来受尽欺负了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE011-P02",
+        "stage_order": 2,
+        "stage_summary": "叙述者一方这一次炮击外国兵舰，引起全世界震动。",
+        "process_text": "我们这一次打了外国兵舰，全世界都震动。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0049"
+        ],
+        "evidence_quote": "我们这一次打了外国兵舰，全世界都震动。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE011-P03",
+        "stage_order": 3,
+        "stage_summary": "英国因丢丑而议会争吵，丘吉尔扬言派航空母舰报复，但成为大话。",
+        "process_text": "英国丢丑，上院下院争吵；丘吉尔声称派航空母舰到东方报复，结果变成说大话。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0049"
+        ],
+        "evidence_quote": "英国因为都丢了丑了，英国上院下院争吵得厉害，丘吉尔这小子说要派航空母舰到东方来报复，结果变成说大话了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE011-P04",
+        "stage_order": 4,
+        "stage_summary": "此后对外交涉变简单，部分租界未谈判收回，百年耻辱被洗刷，民众志气高涨，并影响渡江作战心理。",
+        "process_text": "打这次以后，对外国外交的事情比较简单，上海南京路、淮海路等租界没谈判就收回；洗刷百年耻辱，人民志气高涨，敢于向外国人打；对渡江也很有影响，国民党军认为英国军舰都敢打，对解放军更不要说了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0051"
+        ],
+        "evidence_quote": "打这次以后，我们对外国外交的事情就比较简单了，好多事情都没有谈判，比如上海南京路、淮海路，这一些租界都是没谈判就收回来了嘛。所以（洗刷了）这一百年的耻辱，人民的志气非常地高涨，敢于向外国人打。跟外国人打，对渡江也很受影响，（国民党军就说）英国的军舰他们都敢打，对我们就更不要说了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC01-DE011-P01",
+        "target_stage_id": "BATCH07-DOC01-DE011-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC01-S0049",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC01-DE011-P02",
+        "target_stage_id": "BATCH07-DOC01-DE011-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH07-DOC01-S0049",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC01-DE011-P03",
+        "target_stage_id": "BATCH07-DOC01-DE011-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC01-S0051",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

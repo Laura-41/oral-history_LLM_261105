@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T00:57:55",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE012",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE012",
+  "usage": {
+    "prompt_tokens": 1162,
+    "total_tokens": 5150,
+    "completion_tokens": 3988,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3006
+    },
+    "time_to_first_token_ms": 30799,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE012\",\n  \"event_enrichment\": {\n    \"result_state\": \"党中央已秘密告知迁驻意向并提出保密要求；迁驻能否实施取决于上级是否执行，相关后续安排仍属设想。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于党中央看房并秘密通知，止于保密要求及迁驻后计划设想的提及；不纳入前文伤病员等无关内容。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE012-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"党中央先来看房子，为迁驻计划作前期准备。\",\n      \"process_text\": \"党中央来看了房子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0186\"\n      ],\n      \"evidence_quote\": \"党中央来看了房子\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE012-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"党中央秘密向听者传达：若上级执行，将迁到听者所在地。\",\n      \"process_text\": \"偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0186\"\n      ],\n      \"evidence_quote\": \"而且偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE012-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"通知附带保密要求：对外保密，对领导人员也不得提，下面不知情。\",\n      \"process_text\": \"要求现在对外保密，对领导人员讲不得提，下面不知道。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0186\"\n      ],\n      \"evidence_quote\": \"你们现在对外保密，对我们领导人员讲，不得提，下面不知道。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE012-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"进一步谈及迁驻实现后的安排设想，包括讨论将淮安改称江淮市。\",\n      \"process_text\": \"如果实现的话，怎么搞法；如果中央搬来以后，内部有计划，讨论中提及（淮安）要变成叫江淮市。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0188\"\n      ],\n      \"evidence_quote\": \"已经来看地形了，如果实现的话，怎么搞法。第二个，如果中央搬来以后，而且里面有一个计划，那个时候讨论中间，大家都知道的，（淮安）要变成叫江淮市。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE012-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE012-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0186\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE012-P02\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE012-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0186\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE012-P03\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE012-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0188\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE012",
+    "event_enrichment": {
+      "result_state": "党中央已秘密告知迁驻意向并提出保密要求；迁驻能否实施取决于上级是否执行，相关后续安排仍属设想。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于党中央看房并秘密通知，止于保密要求及迁驻后计划设想的提及；不纳入前文伤病员等无关内容。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE012-P01",
+        "stage_order": 1,
+        "stage_summary": "党中央先来看房子，为迁驻计划作前期准备。",
+        "process_text": "党中央来看了房子。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0186"
+        ],
+        "evidence_quote": "党中央来看了房子",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE012-P02",
+        "stage_order": 2,
+        "stage_summary": "党中央秘密向听者传达：若上级执行，将迁到听者所在地。",
+        "process_text": "偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0186"
+        ],
+        "evidence_quote": "而且偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE012-P03",
+        "stage_order": 3,
+        "stage_summary": "通知附带保密要求：对外保密，对领导人员也不得提，下面不知情。",
+        "process_text": "要求现在对外保密，对领导人员讲不得提，下面不知道。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0186"
+        ],
+        "evidence_quote": "你们现在对外保密，对我们领导人员讲，不得提，下面不知道。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE012-P04",
+        "stage_order": 4,
+        "stage_summary": "进一步谈及迁驻实现后的安排设想，包括讨论将淮安改称江淮市。",
+        "process_text": "如果实现的话，怎么搞法；如果中央搬来以后，内部有计划，讨论中提及（淮安）要变成叫江淮市。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0188"
+        ],
+        "evidence_quote": "已经来看地形了，如果实现的话，怎么搞法。第二个，如果中央搬来以后，而且里面有一个计划，那个时候讨论中间，大家都知道的，（淮安）要变成叫江淮市。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE012-P01",
+        "target_stage_id": "BATCH06-DOC07-DE012-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH06-DOC07-S0186",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE012-P02",
+        "target_stage_id": "BATCH06-DOC07-DE012-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0186",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE012-P03",
+        "target_stage_id": "BATCH06-DOC07-DE012-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0188",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

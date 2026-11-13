@@ -1,0 +1,297 @@
+{
+  "run_time": "2026-11-12T00:27:39",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH06-DOC09-W004",
+  "technical_document_id": "BATCH06-DOC09",
+  "document_id": "22.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH06-DOC09-S0071",
+    "BATCH06-DOC09-S0072",
+    "BATCH06-DOC09-S0073",
+    "BATCH06-DOC09-S0074",
+    "BATCH06-DOC09-S0075",
+    "BATCH06-DOC09-S0076",
+    "BATCH06-DOC09-S0077",
+    "BATCH06-DOC09-S0078",
+    "BATCH06-DOC09-S0079",
+    "BATCH06-DOC09-S0080",
+    "BATCH06-DOC09-S0081",
+    "BATCH06-DOC09-S0082",
+    "BATCH06-DOC09-S0083",
+    "BATCH06-DOC09-S0084",
+    "BATCH06-DOC09-S0085",
+    "BATCH06-DOC09-S0086",
+    "BATCH06-DOC09-S0087",
+    "BATCH06-DOC09-S0088",
+    "BATCH06-DOC09-S0089",
+    "BATCH06-DOC09-S0090",
+    "BATCH06-DOC09-S0091",
+    "BATCH06-DOC09-S0092",
+    "BATCH06-DOC09-S0093",
+    "BATCH06-DOC09-S0094",
+    "BATCH06-DOC09-S0095"
+  ],
+  "json_valid": true,
+  "validation_errors": [
+    "events[2].event：RELATIONAL必须且只能使用Carrier＋Attribute或Token＋Value中的一组"
+  ],
+  "technical_passed": false,
+  "metrics": {
+    "event_count": 3,
+    "assigned_segment_count": 15,
+    "unassigned_segment_count": 10,
+    "input_segment_count": 25,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH06-DOC09-W004",
+    "events": [
+      {
+        "candidate_id": "BATCH06-DOC09-W004-E01",
+        "source_segment_ids": [
+          "BATCH06-DOC09-S0072",
+          "BATCH06-DOC09-S0075",
+          "BATCH06-DOC09-S0076",
+          "BATCH06-DOC09-S0077",
+          "BATCH06-DOC09-S0078",
+          "BATCH06-DOC09-S0079",
+          "BATCH06-DOC09-S0081",
+          "BATCH06-DOC09-S0082",
+          "BATCH06-DOC09-S0084",
+          "BATCH06-DOC09-S0086"
+        ],
+        "event": {
+          "event_name": "接受二战医疗经验并提高医疗技术",
+          "event_type": "MENTAL",
+          "event_type_zh": "心理",
+          "core_process": "接受二战医疗经验",
+          "participants": [
+            {
+              "role": "Senser",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Phenomenon",
+              "mention": "第二次世界大战的一些基本经验",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "5月底6月初来，6月、7月、8月，到9月他就走了，只有4个月不到",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "延期缝合，这个所有创口都是污染的",
+          "evidence_quote": "我们接受了第二次世界大战的一些基本经验",
+          "type_basis": "核心是“我们”对二战医疗经验、新观点新技术的认知接受，并伴随思想改变和训练提高；Senser为“我们”，Phenomenon为二战经验。“他告诉我/交代给我们”是言语传授阶段，具体技术是经验内容，不单独主导。",
+          "alternative_event_type": "VERBAL",
+          "ambiguity_reason": "窗口同时包含间接言说传授和认知接受结果，主导类型在言语与心理之间需复核。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC09-W004-E02",
+        "source_segment_ids": [
+          "BATCH06-DOC09-S0086",
+          "BATCH06-DOC09-S0088",
+          "BATCH06-DOC09-S0090"
+        ],
+        "event": {
+          "event_name": "湖心寺医院遭国民党飞机轰炸扫射及司机被追打",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "轰炸扫射湖心寺医院和吉普车",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "国民党飞机",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "湖心寺",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "伤员",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "吉普车",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "到“七战七捷”中间",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "低空扫射",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "你们不执行协议，是宋庆龄女士请我来的，我差点被你们打死了。你们的机枪对着我们的红十字打，讲好不对红十字打的",
+          "evidence_quote": "国民党轰炸我们湖心寺，隔了一两天来扫射",
+          "type_basis": "核心是国民党飞机对湖心寺医院、伤员和吉普车实施轰炸扫射，造成二次负伤和司机险遭袭击等可观察结果；Actor为国民党飞机，Goal为医院、伤员、吉普车。医生抗议和派车是应对阶段，不改变主导物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC09-W004-E03",
+        "source_segment_ids": [
+          "BATCH06-DOC09-S0090",
+          "BATCH06-DOC09-S0092",
+          "BATCH06-DOC09-S0094",
+          "BATCH06-DOC09-S0095"
+        ],
+        "event": {
+          "event_name": "苏北国际和平医院挂牌并明确名称职务",
+          "event_type": "RELATIONAL",
+          "event_type_zh": "关系",
+          "core_process": "明确医院名称和职务",
+          "participants": [
+            {
+              "role": "Token",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Value",
+              "mention": "苏北国际和平医院",
+              "normalized_entity": "苏北国际和平医院",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Token",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Value",
+              "mention": "华中军区第一后方医院",
+              "normalized_entity": "华中军区第一后方医院",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Token",
+              "mention": "院长",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Value",
+              "mention": "华中军区卫生部长齐仲桓",
+              "normalized_entity": "齐仲桓",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Token",
+              "mention": "副院长",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Value",
+              "mention": "副部长李振湘",
+              "normalized_entity": "李振湘",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Carrier",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Attribute",
+              "mention": "驻院总医师",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Carrier",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Attribute",
+              "mention": "统管一切",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "8月13号",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "我们这个庙的门口",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "举行一个挂牌仪式",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "对外，我们叫苏北国际和平医院，对内，我们是华中军区第一后方医院。",
+          "type_basis": "核心是建立医院对外对内名称、院长副院长及陈海峰驻院总医师等身份职务关系；挂牌仪式是确认这些关系的行动阶段。参与者使用Token/Value和Carrier/Attribute，符合关系过程；不是单纯物质行动。",
+          "alternative_event_type": "MATERIAL",
+          "ambiguity_reason": "“举行挂牌仪式”具有组织行动意义，但窗口主要结果是名称和职务身份的确立，因此候选关系过程。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH06-DOC09-S0071",
+      "BATCH06-DOC09-S0073",
+      "BATCH06-DOC09-S0074",
+      "BATCH06-DOC09-S0080",
+      "BATCH06-DOC09-S0083",
+      "BATCH06-DOC09-S0085",
+      "BATCH06-DOC09-S0087",
+      "BATCH06-DOC09-S0089",
+      "BATCH06-DOC09-S0091",
+      "BATCH06-DOC09-S0093"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH06-DOC09-W004\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH06-DOC09-W004-E01\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC09-S0072\",\n        \"BATCH06-DOC09-S0075\",\n        \"BATCH06-DOC09-S0076\",\n        \"BATCH06-DOC09-S0077\",\n        \"BATCH06-DOC09-S0078\",\n        \"BATCH06-DOC09-S0079\",\n        \"BATCH06-DOC09-S0081\",\n        \"BATCH06-DOC09-S0082\",\n        \"BATCH06-DOC09-S0084\",\n        \"BATCH06-DOC09-S0086\"\n      ],\n      \"event\": {\n        \"event_name\": \"接受二战医疗经验并提高医疗技术\",\n        \"event_type\": \"MENTAL\",\n        \"event_type_zh\": \"心理\",\n        \"core_process\": \"接受二战医疗经验\",\n        \"participants\": [\n          {\n            \"role\": \"Senser\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Phenomenon\",\n            \"mention\": \"第二次世界大战的一些基本经验\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"5月底6月初来，6月、7月、8月，到9月他就走了，只有4个月不到\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"延期缝合，这个所有创口都是污染的\",\n        \"evidence_quote\": \"我们接受了第二次世界大战的一些基本经验\",\n        \"type_basis\": \"核心是“我们”对二战医疗经验、新观点新技术的认知接受，并伴随思想改变和训练提高；Senser为“我们”，Phenomenon为二战经验。“他告诉我/交代给我们”是言语传授阶段，具体技术是经验内容，不单独主导。\",\n        \"alternative_event_type\": \"VERBAL\",\n        \"ambiguity_reason\": \"窗口同时包含间接言说传授和认知接受结果，主导类型在言语与心理之间需复核。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC09-W004-E02\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC09-S0086\",\n        \"BATCH06-DOC09-S0088\",\n        \"BATCH06-DOC09-S0090\"\n      ],\n      \"event\": {\n        \"event_name\": \"湖心寺医院遭国民党飞机轰炸扫射及司机被追打\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"轰炸扫射湖心寺医院和吉普车\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"国民党飞机\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"湖心寺\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"伤员\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"吉普车\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"到“七战七捷”中间\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"低空扫射\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"你们不执行协议，是宋庆龄女士请我来的，我差点被你们打死了。你们的机枪对着我们的红十字打，讲好不对红十字打的\",\n        \"evidence_quote\": \"国民党轰炸我们湖心寺，隔了一两天来扫射\",\n        \"type_basis\": \"核心是国民党飞机对湖心寺医院、伤员和吉普车实施轰炸扫射，造成二次负伤和司机险遭袭击等可观察结果；Actor为国民党飞机，Goal为医院、伤员、吉普车。医生抗议和派车是应对阶段，不改变主导物质过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC09-W004-E03\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC09-S0090\",\n        \"BATCH06-DOC09-S0092\",\n        \"BATCH06-DOC09-S0094\",\n        \"BATCH06-DOC09-S0095\"\n      ],\n      \"event\": {\n        \"event_name\": \"苏北国际和平医院挂牌并明确名称职务\",\n        \"event_type\": \"RELATIONAL\",\n        \"event_type_zh\": \"关系\",\n        \"core_process\": \"明确医院名称和职务\",\n        \"participants\": [\n          {\n            \"role\": \"Token\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Value\",\n            \"mention\": \"苏北国际和平医院\",\n            \"normalized_entity\": \"苏北国际和平医院\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Token\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Value\",\n            \"mention\": \"华中军区第一后方医院\",\n            \"normalized_entity\": \"华中军区第一后方医院\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Token\",\n            \"mention\": \"院长\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Value\",\n            \"mention\": \"华中军区卫生部长齐仲桓\",\n            \"normalized_entity\": \"齐仲桓\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Token\",\n            \"mention\": \"副院长\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Value\",\n            \"mention\": \"副部长李振湘\",\n            \"normalized_entity\": \"李振湘\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"驻院总医师\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"统管一切\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"8月13号\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"我们这个庙的门口\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"举行一个挂牌仪式\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"对外，我们叫苏北国际和平医院，对内，我们是华中军区第一后方医院。\",\n        \"type_basis\": \"核心是建立医院对外对内名称、院长副院长及陈海峰驻院总医师等身份职务关系；挂牌仪式是确认这些关系的行动阶段。参与者使用Token/Value和Carrier/Attribute，符合关系过程；不是单纯物质行动。\",\n        \"alternative_event_type\": \"MATERIAL\",\n        \"ambiguity_reason\": \"“举行挂牌仪式”具有组织行动意义，但窗口主要结果是名称和职务身份的确立，因此候选关系过程。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH06-DOC09-S0071\",\n    \"BATCH06-DOC09-S0073\",\n    \"BATCH06-DOC09-S0074\",\n    \"BATCH06-DOC09-S0080\",\n    \"BATCH06-DOC09-S0083\",\n    \"BATCH06-DOC09-S0085\",\n    \"BATCH06-DOC09-S0087\",\n    \"BATCH06-DOC09-S0089\",\n    \"BATCH06-DOC09-S0091\",\n    \"BATCH06-DOC09-S0093\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5950,
+    "total_tokens": 27318,
+    "completion_tokens": 21368,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 19029
+    },
+    "time_to_first_token_ms": 520915,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 10683500
+  }
+}

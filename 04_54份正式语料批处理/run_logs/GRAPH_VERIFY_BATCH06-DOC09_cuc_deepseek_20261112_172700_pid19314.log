@@ -1,0 +1,110 @@
+单文档验证：BATCH06-DOC09 / cuc/deepseek
+日志：04_54份正式语料批处理/run_logs/GRAPH_VERIFY_BATCH06-DOC09_cuc_deepseek_20261112_172700_pid19314.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+
+===== L0 零 API 底座表 =====
+[落盘] BATCH06-DOC09 / cuc/deepseek
+  原文片段 104｜一级事件 9｜覆盖率 1.0000
+  人工视图：无
+    documents                  1 行
+    source_segments          104 行
+    source_attachments       107 行
+    coverage_audit             1 行
+    document_annotations      34 行
+    event_nodes                9 行
+    event_processes            9 行
+    event_participants        30 行
+    event_circumstances       15 行
+    event_next                 8 行
+  警告 1 条（详见 L0_report.json）
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH06-DOC09
+
+===== L1/L2 模型任务（真实 API 调用） =====
+[真实调用] BATCH06-DOC09 / cuc/deepseek / tasks=stage,entity_time
+  一级事件 9｜原文片段 104｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH06-DOC09/raw
+
+== stage：9 次调用 ==
+  [1/9] stage_BATCH06-DOC09-DE001 已有成功响应，跳过（断点续跑）
+  [2/9] stage_BATCH06-DOC09-DE002 已有成功响应，跳过（断点续跑）
+  [3/9] stage_BATCH06-DOC09-DE003 已有成功响应，跳过（断点续跑）
+  [4/9] stage_BATCH06-DOC09-DE004 已有成功响应，跳过（断点续跑）
+  [5/9] stage_BATCH06-DOC09-DE005 已有成功响应，跳过（断点续跑）
+  [6/9] stage_BATCH06-DOC09-DE006 已有成功响应，跳过（断点续跑）
+  [7/9] stage_BATCH06-DOC09-DE007 已有成功响应，跳过（断点续跑）
+  [8/9] stage_BATCH06-DOC09-DE008 已有成功响应，跳过（断点续跑）
+  [9/9] stage_BATCH06-DOC09-DE009 已有成功响应，跳过（断点续跑）
+
+== entity_time：1 次调用 ==
+  [1/1] 请求 entity_time/CHF-V3-22，输入 31,568 字符，最长等待 1200s……
+  完成：total_tokens=67709
+
+全部完成：10 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH06-DOC09 --model cuc/deepseek --write
+
+===== 后处理：校验、算偏移、生成 18 张 CSV =====
+  环境成分待人工复核 6 条（就近归类／规范值待补，另出清单）
+[落盘] BATCH06-DOC09 / cuc/deepseek
+  stage 响应 9｜entity_time 响应 1｜覆盖率 1.0000
+    documents                  1 行
+    source_segments          104 行
+    source_attachments       161 行
+    coverage_audit             1 行
+    document_annotations      34 行
+    event_nodes                9 行
+    event_processes            9 行
+    event_participants        30 行
+    event_circumstances       15 行
+    event_next                 8 行
+    process_stages            37 行
+    stage_next                29 行
+    event_times                9 行
+    time_expressions          26 行
+    entities                  97 行
+    entity_mentions           72 行
+    entity_aliases            12 行
+    entity_relations          65 行
+  校验问题 1 条｜偏移待核 13 条
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH06-DOC09
+
+===== 18 表完整性验收 =====
+[通过] BATCH06-DOC09 / cuc/deepseek
+  片段 104｜事件 9｜阶段 37｜实体 97｜提及 72｜时间表达 26｜覆盖率 1.0000
+  报告：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH06-DOC09/VALIDATION_report.json
+
+===== L3/L4 导出 24 张 import CSV =====
+[落盘] 模型线 cuc/deepseek｜已验收文档 28 份
+  生平叠加视图：疑似同一经历 0 组（只标 NEEDS_REVIEW，交人工）；人工 MERGE 生效 0 组，KEEP_SEPARATE 0 组
+
+== 24 张 import CSV 规模 ==
+  documents                    28 行
+  source_segments            2797 行
+  source_attachments         3894 行
+  event_nodes                 237 行
+  event_processes             237 行
+  event_participants          547 行
+  event_circumstances         475 行
+  process_stages              918 行
+  stage_next                  701 行
+  event_next                  209 行
+  entities                    721 行
+  entity_mentions             425 行
+  entity_aliases               58 行
+  entity_relations            153 行
+  event_times                 237 行
+  time_expressions            774 行
+  document_annotations        889 行
+  coverage_audit               28 行
+  person_subjects               3 行
+  document_persons             28 行
+  life_episodes               188 行
+  life_episode_sources        188 行
+  life_episode_next           185 行
+  narrated_contexts            44 行
+
+  警告 6225 条（详见报告）
+
+  已写入：05_合并与Neo4j/import_cuc_deepseek
+
+===== 完成 =====
+结果：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH06-DOC09/
+图谱导入：05_合并与Neo4j/import_cuc_deepseek/
+请把 VALIDATION_report.json 与 prepare_summary.json 交助手复核，再决定是否放行 BATCH03。

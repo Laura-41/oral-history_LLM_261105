@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T23:02:36",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC02-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC02-DE004",
+  "usage": {
+    "prompt_tokens": 1579,
+    "total_tokens": 7446,
+    "completion_tokens": 5867,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4712
+    },
+    "tokens_per_second": 5866000,
+    "time_to_first_token_ms": 48359,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC02-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"汇报完成，罗生特对部队情况感兴趣并提问；陈海峰在军部留宿一晚，次日晨见罗生特带小警卫员锻炼。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以S0019受命带报告赴军部为起点，包含S0026到达海神庙汇报、S0029汇报后吃饭交流、S0030留宿至次日晨；不扩展到3师考察本身。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"受命带报告赴军部\",\n      \"process_text\": \"陈海峰被指定带着报告到军部，向军卫生部汇报。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0019\"\n      ],\n      \"evidence_quote\": \"    陈海峰：指定我带着这个报告到军部，向军卫生部汇报。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"到达海神庙向崔义田、罗生特汇报\",\n      \"process_text\": \"到达海神庙军部卫生部，向崔义田部长和罗生特顾问做汇报。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0026\"\n      ],\n      \"evidence_quote\": \"    陈海峰：向军的卫生（部）领导崔义田崔部长，军的顾问罗生特，做汇报。因为我们到军部很近啊，我们2旅那个时候就在建阳，离开只有四五十里地啊，我就到了海神庙。现在海神庙已经没有了，那个时候就（是）军部的一个医院，在盐城的一个串场河边上。现在就是一个粮库了，在那里。那么这个卫生部呢，就在这个海神庙的边上。这个罗生特呢，就是奥地利那个医生，你采访那个李磊啊，他一定会详细介绍这个情况。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"汇报后共同吃饭并回答罗生特提问\",\n      \"process_text\": \"汇报后与崔义田、罗生特共同吃饭；罗生特很高兴，询问部队情况，听得很有兴趣。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0029\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我汇报以后呢，和我共同吃饭。那卫生部住的是个野灶，住在毛棚子里头，现在盐城都是高楼大厦了。罗生特呢，很高兴，问了我很多问题，我那部队里的情况，因为他不了解这个部队情况，他没到过新四军的部队，听得很有兴趣。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"留宿军部，次日晨见罗生特锻炼\",\n      \"process_text\": \"在军部住了一个晚上；次日早晨罗生特起来锻炼身体，带着他的小警卫员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0030\"\n      ],\n      \"evidence_quote\": \"在那里住了一个晚上，罗生特很注意，一早上起来就锻炼身体，带着他的小警卫员。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE004-P01\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE004-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE004-P02\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0029\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE004-P03\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE004-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0030\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC02-DE004",
+    "event_enrichment": {
+      "result_state": "汇报完成，罗生特对部队情况感兴趣并提问；陈海峰在军部留宿一晚，次日晨见罗生特带小警卫员锻炼。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以S0019受命带报告赴军部为起点，包含S0026到达海神庙汇报、S0029汇报后吃饭交流、S0030留宿至次日晨；不扩展到3师考察本身。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC02-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "受命带报告赴军部",
+        "process_text": "陈海峰被指定带着报告到军部，向军卫生部汇报。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0019"
+        ],
+        "evidence_quote": "    陈海峰：指定我带着这个报告到军部，向军卫生部汇报。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "到达海神庙向崔义田、罗生特汇报",
+        "process_text": "到达海神庙军部卫生部，向崔义田部长和罗生特顾问做汇报。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0026"
+        ],
+        "evidence_quote": "    陈海峰：向军的卫生（部）领导崔义田崔部长，军的顾问罗生特，做汇报。因为我们到军部很近啊，我们2旅那个时候就在建阳，离开只有四五十里地啊，我就到了海神庙。现在海神庙已经没有了，那个时候就（是）军部的一个医院，在盐城的一个串场河边上。现在就是一个粮库了，在那里。那么这个卫生部呢，就在这个海神庙的边上。这个罗生特呢，就是奥地利那个医生，你采访那个李磊啊，他一定会详细介绍这个情况。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "汇报后共同吃饭并回答罗生特提问",
+        "process_text": "汇报后与崔义田、罗生特共同吃饭；罗生特很高兴，询问部队情况，听得很有兴趣。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0029"
+        ],
+        "evidence_quote": "    陈海峰：我汇报以后呢，和我共同吃饭。那卫生部住的是个野灶，住在毛棚子里头，现在盐城都是高楼大厦了。罗生特呢，很高兴，问了我很多问题，我那部队里的情况，因为他不了解这个部队情况，他没到过新四军的部队，听得很有兴趣。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "留宿军部，次日晨见罗生特锻炼",
+        "process_text": "在军部住了一个晚上；次日早晨罗生特起来锻炼身体，带着他的小警卫员。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0030"
+        ],
+        "evidence_quote": "在那里住了一个晚上，罗生特很注意，一早上起来就锻炼身体，带着他的小警卫员。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC02-DE004-P01",
+        "target_stage_id": "BATCH04-DOC02-DE004-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC02-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE004-P02",
+        "target_stage_id": "BATCH04-DOC02-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0029",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE004-P03",
+        "target_stage_id": "BATCH04-DOC02-DE004-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0030",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

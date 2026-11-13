@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-13T01:40:17",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC07-DE010",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC07-DE010",
+  "usage": {
+    "prompt_tokens": 1214,
+    "total_tokens": 7077,
+    "completion_tokens": 5863,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4503
+    },
+    "time_to_first_token_ms": 86579,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5862000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC07-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"一个连的炮被取回，对方非常高兴\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"从华北军大无炮、要成立炮兵部队训练炮兵并向陈锐霆讲情况开始，到陈锐霆回来时把炮取回去、对方非常高兴结束。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"华北军大缺炮并需训练炮兵，向陈锐霆说明情况\",\n      \"process_text\": \"那个时候他搞一个华北军大，他当校长，他一门炮也没有，他要成立炮兵部队训练炮兵。他给我讲这个情况，\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0043\"\n      ],\n      \"evidence_quote\": \"那个时候他搞一个华北军大，他当校长，他一门炮也没有，他要成立炮兵部队训练炮兵。他给我讲这个情况，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈锐霆表示可拨一个连的炮，并说明炮归其管、炮多弹少\",\n      \"process_text\": \"我说我弄一个连来，他说你要请示一下粟裕同志看他同意不。我说没问题，我们这个地方这个炮就完全归我管。我说我们炮多弹少，用不着那么多的炮。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0043\"\n      ],\n      \"evidence_quote\": \"我说我弄一个连来，他说你要请示一下粟裕同志看他同意不。我说没问题，我们这个地方这个炮就完全归我管。我说我们炮多弹少，用不着那么多的炮。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆给华北军大一个连的炮\",\n      \"process_text\": \"我就给了他一个连的炮，\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0043\"\n      ],\n      \"evidence_quote\": \"我就给了他一个连的炮，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE010-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"陈锐霆回来时取回炮\",\n      \"process_text\": \"以后我回来的时候他跟着我一起，，就把炮取回去了，\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0043\"\n      ],\n      \"evidence_quote\": \"以后我回来的时候他跟着我一起，，就把炮取回去了，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE010-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"对方因此非常高兴\",\n      \"process_text\": \"所以他非常地高兴。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0043\"\n      ],\n      \"evidence_quote\": \"所以他非常地高兴。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE010-P01\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0043\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE010-P02\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE010-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0043\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE010-P03\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE010-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0043\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE010-P04\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE010-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0043\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC07-DE010",
+    "event_enrichment": {
+      "result_state": "一个连的炮被取回，对方非常高兴",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "从华北军大无炮、要成立炮兵部队训练炮兵并向陈锐霆讲情况开始，到陈锐霆回来时把炮取回去、对方非常高兴结束。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC07-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "华北军大缺炮并需训练炮兵，向陈锐霆说明情况",
+        "process_text": "那个时候他搞一个华北军大，他当校长，他一门炮也没有，他要成立炮兵部队训练炮兵。他给我讲这个情况，",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0043"
+        ],
+        "evidence_quote": "那个时候他搞一个华北军大，他当校长，他一门炮也没有，他要成立炮兵部队训练炮兵。他给我讲这个情况，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "陈锐霆表示可拨一个连的炮，并说明炮归其管、炮多弹少",
+        "process_text": "我说我弄一个连来，他说你要请示一下粟裕同志看他同意不。我说没问题，我们这个地方这个炮就完全归我管。我说我们炮多弹少，用不着那么多的炮。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0043"
+        ],
+        "evidence_quote": "我说我弄一个连来，他说你要请示一下粟裕同志看他同意不。我说没问题，我们这个地方这个炮就完全归我管。我说我们炮多弹少，用不着那么多的炮。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆给华北军大一个连的炮",
+        "process_text": "我就给了他一个连的炮，",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0043"
+        ],
+        "evidence_quote": "我就给了他一个连的炮，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE010-P04",
+        "stage_order": 4,
+        "stage_summary": "陈锐霆回来时取回炮",
+        "process_text": "以后我回来的时候他跟着我一起，，就把炮取回去了，",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0043"
+        ],
+        "evidence_quote": "以后我回来的时候他跟着我一起，，就把炮取回去了，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE010-P05",
+        "stage_order": 5,
+        "stage_summary": "对方因此非常高兴",
+        "process_text": "所以他非常地高兴。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0043"
+        ],
+        "evidence_quote": "所以他非常地高兴。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC07-DE010-P01",
+        "target_stage_id": "BATCH05-DOC07-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0043",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC07-DE010-P02",
+        "target_stage_id": "BATCH05-DOC07-DE010-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0043",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC07-DE010-P03",
+        "target_stage_id": "BATCH05-DOC07-DE010-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0043",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC07-DE010-P04",
+        "target_stage_id": "BATCH05-DOC07-DE010-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC07-S0043",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-13T00:57:51",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC05-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC05-DE002",
+  "usage": {
+    "prompt_tokens": 2998,
+    "total_tokens": 18076,
+    "completion_tokens": 15078,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 13731
+    },
+    "time_to_first_token_ms": 224077,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 15077000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-15\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC05-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"老一团在固井休整，老1团底子改编为教导旅，并形成南下开辟苏浙地区、准备反攻的受命部署。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以口述中“回到固井（音）以后”“陈泰运打完了，我们老1团到固井（音）休整”为起点，以“中央批准华中的这个计划，粟裕亲自带，任命叶飞……带4纵队做后续部队下去”为终点。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"老一团回到固井休整\",\n      \"process_text\": \"陈泰运打完后，老1团到固井（音）休整。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0102\"\n      ],\n      \"evidence_quote\": \"9、10月不是打陈泰运嘛，陈泰运打完了，我们老1团到固井（音）休整。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"休整期间确定改编教导旅\",\n      \"process_text\": \"休整要改编教导旅，内部已经定了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0103\"\n      ],\n      \"evidence_quote\": \"休整要改编教导旅，内部已经定了。那么决定南下，中央命令啊，第一次命令啊，要叶飞带两个团，开辟苏浙地区，要准备反攻，要迎接盟军登陆。日本鬼子呢，占领了温州。要苏南部队呢，极力地发展沿海地区。中间沿海地区是空白，都是国民党占领的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"中央命令南下并研究调整部署\",\n      \"process_text\": \"中央第一次命令是要叶飞带两个团下去，后来经过华中局跟1师研究，粟裕决定自己带两个主力团下去，并准备后续部队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0106\"\n      ],\n      \"evidence_quote\": \"要建立根据地，要准备反攻。这个地方呢，就叫苏浙地区。中央第一次命令是要叶飞带两个团下去，后来经过华中局跟1师研究呢，粟裕决定自己带两个主力团下去。而且建议呢，带两个团是不够的，那么多地区要去解放啊，还需要抽调部队，要准备后续部队。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC05-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"中央批准华中计划并任命叶飞带后续部队\",\n      \"process_text\": \"中央批准华中的计划，粟裕亲自带，任命叶飞当苏浙军区副司令，带4纵队做后续部队下去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC05-S0108\"\n      ],\n      \"evidence_quote\": \"    陈海峰：先头部队带两个主力团下去，那么这样子中央批准华中的这个计划，粟裕亲自带。那么任命叶飞呢，当苏浙军区副司令，带4纵队做后续部队下去，做些准备工作（再去）。那么江南的16旅改成1纵队，四明山的浙东纵队改成2纵队，3纵队有陶勇的\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC05-DE002-P01\",\n      \"target_stage_id\": \"BATCH05-DOC05-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC05-S0103\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC05-DE002-P02\",\n      \"target_stage_id\": \"BATCH05-DOC05-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC05-S0103\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC05-DE002-P03\",\n      \"target_stage_id\": \"BATCH05-DOC05-DE002-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH05-DOC05-S0108\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-15",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC05-DE002",
+    "event_enrichment": {
+      "result_state": "老一团在固井休整，老1团底子改编为教导旅，并形成南下开辟苏浙地区、准备反攻的受命部署。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "以口述中“回到固井（音）以后”“陈泰运打完了，我们老1团到固井（音）休整”为起点，以“中央批准华中的这个计划，粟裕亲自带，任命叶飞……带4纵队做后续部队下去”为终点。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC05-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "老一团回到固井休整",
+        "process_text": "陈泰运打完后，老1团到固井（音）休整。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0102"
+        ],
+        "evidence_quote": "9、10月不是打陈泰运嘛，陈泰运打完了，我们老1团到固井（音）休整。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC05-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "休整期间确定改编教导旅",
+        "process_text": "休整要改编教导旅，内部已经定了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0103"
+        ],
+        "evidence_quote": "休整要改编教导旅，内部已经定了。那么决定南下，中央命令啊，第一次命令啊，要叶飞带两个团，开辟苏浙地区，要准备反攻，要迎接盟军登陆。日本鬼子呢，占领了温州。要苏南部队呢，极力地发展沿海地区。中间沿海地区是空白，都是国民党占领的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC05-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "中央命令南下并研究调整部署",
+        "process_text": "中央第一次命令是要叶飞带两个团下去，后来经过华中局跟1师研究，粟裕决定自己带两个主力团下去，并准备后续部队。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0106"
+        ],
+        "evidence_quote": "要建立根据地，要准备反攻。这个地方呢，就叫苏浙地区。中央第一次命令是要叶飞带两个团下去，后来经过华中局跟1师研究呢，粟裕决定自己带两个主力团下去。而且建议呢，带两个团是不够的，那么多地区要去解放啊，还需要抽调部队，要准备后续部队。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC05-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "中央批准华中计划并任命叶飞带后续部队",
+        "process_text": "中央批准华中的计划，粟裕亲自带，任命叶飞当苏浙军区副司令，带4纵队做后续部队下去。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC05-S0108"
+        ],
+        "evidence_quote": "    陈海峰：先头部队带两个主力团下去，那么这样子中央批准华中的这个计划，粟裕亲自带。那么任命叶飞呢，当苏浙军区副司令，带4纵队做后续部队下去，做些准备工作（再去）。那么江南的16旅改成1纵队，四明山的浙东纵队改成2纵队，3纵队有陶勇的",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC05-DE002-P01",
+        "target_stage_id": "BATCH05-DOC05-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC05-S0103",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC05-DE002-P02",
+        "target_stage_id": "BATCH05-DOC05-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC05-S0103",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC05-DE002-P03",
+        "target_stage_id": "BATCH05-DOC05-DE002-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH05-DOC05-S0108",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

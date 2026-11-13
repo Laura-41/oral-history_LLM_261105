@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T17:40:18",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC04-DE009",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC04-DE009",
+  "usage": {
+    "prompt_tokens": 1307,
+    "total_tokens": 8074,
+    "completion_tokens": 6767,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5601
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 167349
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC04-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"林明永向「我们」透露了情况不好、非打一仗不可、要准备打仗，并说明撤不出来、52师压过来、真枪压来了、不让人走。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"从林明永带领十几个伤员过来后开始，到说明52师压过来、真枪压来了、不让人走结束；依据S0090、S0092、S0096。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"林明永带领十几个伤员到来，构成透露消息的起点。\",\n      \"process_text\": \"林明永带了十几个伤员，一拐一拐，还拄着个拐杖。这是我们皖南撤退出来的最后一批伤员。他带领那十几个伤员过来以后\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0090\"\n      ],\n      \"evidence_quote\": \"林明永带了十几个伤员，一拐一拐，还拄着个拐杖。这是我们皖南撤退出来的最后一批伤员。他带领那十几个伤员过来以后\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"林明永表示情况不好、非打一仗不可，并向「我们」透露各种消息不好。\",\n      \"process_text\": \"他说看来这个情况不好，非打一仗不可。他说各种消息都不好，他透露给我们。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0090\"\n      ],\n      \"evidence_quote\": \"他说看来这个情况不好，非打一仗不可。他说各种消息都不好，他透露给我们。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"明确透露要准备打仗。\",\n      \"process_text\": \"要准备打仗了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0092\"\n      ],\n      \"evidence_quote\": \"要准备打仗了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE009-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"说明撤不出来，52师压过来、真枪压来了，不让人走。\",\n      \"process_text\": \"撤不出来了。那个52师就压（过来）了，真枪压来了，他不让你走了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0096\"\n      ],\n      \"evidence_quote\": \"撤不出来了。那个52师就压（过来）了，真枪压来了，他不让你走了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE009-P01\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0090\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE009-P02\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE009-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0092\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE009-P03\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE009-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0096\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC04-DE009",
+    "event_enrichment": {
+      "result_state": "林明永向「我们」透露了情况不好、非打一仗不可、要准备打仗，并说明撤不出来、52师压过来、真枪压来了、不让人走。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "从林明永带领十几个伤员过来后开始，到说明52师压过来、真枪压来了、不让人走结束；依据S0090、S0092、S0096。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC04-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "林明永带领十几个伤员到来，构成透露消息的起点。",
+        "process_text": "林明永带了十几个伤员，一拐一拐，还拄着个拐杖。这是我们皖南撤退出来的最后一批伤员。他带领那十几个伤员过来以后",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0090"
+        ],
+        "evidence_quote": "林明永带了十几个伤员，一拐一拐，还拄着个拐杖。这是我们皖南撤退出来的最后一批伤员。他带领那十几个伤员过来以后",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "林明永表示情况不好、非打一仗不可，并向「我们」透露各种消息不好。",
+        "process_text": "他说看来这个情况不好，非打一仗不可。他说各种消息都不好，他透露给我们。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0090"
+        ],
+        "evidence_quote": "他说看来这个情况不好，非打一仗不可。他说各种消息都不好，他透露给我们。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "明确透露要准备打仗。",
+        "process_text": "要准备打仗了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0092"
+        ],
+        "evidence_quote": "要准备打仗了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE009-P04",
+        "stage_order": 4,
+        "stage_summary": "说明撤不出来，52师压过来、真枪压来了，不让人走。",
+        "process_text": "撤不出来了。那个52师就压（过来）了，真枪压来了，他不让你走了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0096"
+        ],
+        "evidence_quote": "撤不出来了。那个52师就压（过来）了，真枪压来了，他不让你走了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC04-DE009-P01",
+        "target_stage_id": "BATCH07-DOC04-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC04-S0090",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE009-P02",
+        "target_stage_id": "BATCH07-DOC04-DE009-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH07-DOC04-S0092",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE009-P03",
+        "target_stage_id": "BATCH07-DOC04-DE009-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH07-DOC04-S0096",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

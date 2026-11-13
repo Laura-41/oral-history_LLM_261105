@@ -1,0 +1,322 @@
+{
+  "run_time": "2026-11-12T06:49:39",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH01-DOC01-W001",
+  "technical_document_id": "BATCH01-DOC01",
+  "document_id": "02.陈海峰（一访）（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH01-DOC01-S0002",
+    "BATCH01-DOC01-S0003",
+    "BATCH01-DOC01-S0004",
+    "BATCH01-DOC01-S0005",
+    "BATCH01-DOC01-S0006",
+    "BATCH01-DOC01-S0007",
+    "BATCH01-DOC01-S0008",
+    "BATCH01-DOC01-S0009",
+    "BATCH01-DOC01-S0010",
+    "BATCH01-DOC01-S0011",
+    "BATCH01-DOC01-S0012",
+    "BATCH01-DOC01-S0013",
+    "BATCH01-DOC01-S0014",
+    "BATCH01-DOC01-S0015",
+    "BATCH01-DOC01-S0016",
+    "BATCH01-DOC01-S0017",
+    "BATCH01-DOC01-S0018",
+    "BATCH01-DOC01-S0019",
+    "BATCH01-DOC01-S0020"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 4,
+    "assigned_segment_count": 9,
+    "unassigned_segment_count": 10,
+    "input_segment_count": 19,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH01-DOC01-W001-E03",
+    "BATCH01-DOC01-W001-E04"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH01-DOC01-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH01-DOC01-W001-E01",
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0003",
+          "BATCH01-DOC01-S0005",
+          "BATCH01-DOC01-S0007",
+          "BATCH01-DOC01-S0010"
+        ],
+        "event": {
+          "event_name": "陈海峰等八人带枪进入并控制地下党领导的当地武装",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "带枪进入并控制武装",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰等八人",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "哥哥",
+              "normalized_entity": "陈海峰之兄",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "一个武装",
+              "normalized_entity": "地下党领导的当地武装",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "这个部队",
+              "normalized_entity": "地下党领导的当地武装",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "国民党溃退的时候",
+              "normalized_value": "国民党溃退时"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "离开我们家里九里路",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "慢慢地",
+              "normalized_value": "慢慢地"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "等于是表面武装而过（音）了，实际上是进去了，慢慢地控制这个部队。",
+          "type_basis": "核心为获得枪支、选派八人进入武装并控制部队，属组织行动/物质过程；Actor=我们/哥哥，Goal=武装/部队，角色均在MATERIAL允许词表内；非言语、心理、关系、存在或行为。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W001-E02",
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0012",
+          "BATCH01-DOC01-S0014"
+        ],
+        "event": {
+          "event_name": "当地武装与新四军接上头并改编为江南抗日义勇军第三路",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "接上头并改编部队",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰等当地武装成员",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "新四军",
+              "normalized_entity": "新四军",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "陈毅元帅",
+              "normalized_entity": "陈毅",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "我们这个部队",
+              "normalized_entity": "江南抗日义勇军第三路前身部队",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1938年的5月份左右",
+              "normalized_value": "1938年5月左右"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "我们家乡",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "以后并到那里去，就和陈毅元帅见面了。陈毅元帅把我们这个部队改成“江南抗日义勇军第三路”，没有第一路，也没有第二路，也没有第四路，也没有第五路，就是第三路。叫江南抗日义勇军第三路司令部。",
+          "type_basis": "核心为新四军到家乡、双方接上头及陈毅改编部队，属组织行动/物质过程；Actor=我们/陈毅元帅，Goal=新四军/我们部队；改名作为改编行动的结果阶段，不单独标为关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W001-E03",
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0016",
+          "BATCH01-DOC01-S0018",
+          "BATCH01-DOC01-S0020"
+        ],
+        "event": {
+          "event_name": "江抗三路发展改编为江抗二团、一师二旅六团并延续为第24集团军",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "发展改编并延续编制",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "这个部队",
+              "normalized_entity": "江抗三路/江抗二团/一师二旅六团",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "正规军",
+              "normalized_entity": "正规军",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "第24集团军",
+              "normalized_entity": "第24集团军",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "警卫三师",
+              "normalized_entity": "警卫三师",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1941年“皖南事变”以后",
+              "normalized_value": "1941年皖南事变以后"
+            },
+            {
+              "kind": "TIME",
+              "value": "1941年",
+              "normalized_value": "1941年"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "北京军区（的），（驻）承德",
+              "normalized_value": "北京军区驻承德"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "顺义",
+              "normalized_value": "顺义"
+            },
+            {
+              "kind": "TIME",
+              "value": "每年春节以前",
+              "normalized_value": "每年春节以前"
+            },
+            {
+              "kind": "OTHER",
+              "value": "北京天安门城楼那个阅兵",
+              "normalized_value": "北京天安门城楼阅兵"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "到1941年“皖南事变”以后，就并到粟裕的一师，就变成一师二旅六团，变成正规军了。一师二旅这个部队呢，以后发展到什么呢？以后就发展到现在北京军区（的），（驻）承德的第24集团军。",
+          "type_basis": "核心为部队规模发展、编制改编和延续，属组织行动/物质过程；Actor=部队，Goal=正规军/第24集团军/警卫三师；非存在引入，因有持续发展和改编变化。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH01-DOC01-W001-E04",
+        "source_segment_ids": [
+          "BATCH01-DOC01-S0020"
+        ],
+        "event": {
+          "event_name": "老部队在孟良崮战役垛庄主攻消灭国民党第74师",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "主攻消灭74师",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们老家的老部队",
+              "normalized_entity": "第24集团军/原一师二旅六团部队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "（国民党）74师",
+              "normalized_entity": "国民党第74师",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "垛庄",
+              "normalized_value": "垛庄"
+            },
+            {
+              "kind": "MANNER",
+              "value": "主攻",
+              "normalized_value": "主攻"
+            },
+            {
+              "kind": "OTHER",
+              "value": "孟良崮",
+              "normalized_value": "孟良崮战役"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "在垛庄消灭（国民党）74师，主攻的，就是我们老家的老部队。",
+          "type_basis": "核心为作战行动消灭敌方部队，属物质过程；Actor=老部队，Goal=国民党74师；垛庄为作战地点，主攻为方式，孟良崮为战役背景；非关系或存在。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH01-DOC01-S0002",
+      "BATCH01-DOC01-S0004",
+      "BATCH01-DOC01-S0006",
+      "BATCH01-DOC01-S0008",
+      "BATCH01-DOC01-S0009",
+      "BATCH01-DOC01-S0011",
+      "BATCH01-DOC01-S0013",
+      "BATCH01-DOC01-S0015",
+      "BATCH01-DOC01-S0017",
+      "BATCH01-DOC01-S0019"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH01-DOC01-W001\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W001-E01\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0003\",\n        \"BATCH01-DOC01-S0005\",\n        \"BATCH01-DOC01-S0007\",\n        \"BATCH01-DOC01-S0010\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰等八人带枪进入并控制地下党领导的当地武装\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"带枪进入并控制武装\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰等八人\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"哥哥\",\n            \"normalized_entity\": \"陈海峰之兄\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"一个武装\",\n            \"normalized_entity\": \"地下党领导的当地武装\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"这个部队\",\n            \"normalized_entity\": \"地下党领导的当地武装\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"国民党溃退的时候\",\n            \"normalized_value\": \"国民党溃退时\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"离开我们家里九里路\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"慢慢地\",\n            \"normalized_value\": \"慢慢地\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"等于是表面武装而过（音）了，实际上是进去了，慢慢地控制这个部队。\",\n        \"type_basis\": \"核心为获得枪支、选派八人进入武装并控制部队，属组织行动/物质过程；Actor=我们/哥哥，Goal=武装/部队，角色均在MATERIAL允许词表内；非言语、心理、关系、存在或行为。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W001-E02\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0012\",\n        \"BATCH01-DOC01-S0014\"\n      ],\n      \"event\": {\n        \"event_name\": \"当地武装与新四军接上头并改编为江南抗日义勇军第三路\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"接上头并改编部队\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰等当地武装成员\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"新四军\",\n            \"normalized_entity\": \"新四军\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"陈毅元帅\",\n            \"normalized_entity\": \"陈毅\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"我们这个部队\",\n            \"normalized_entity\": \"江南抗日义勇军第三路前身部队\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"1938年的5月份左右\",\n            \"normalized_value\": \"1938年5月左右\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"我们家乡\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"以后并到那里去，就和陈毅元帅见面了。陈毅元帅把我们这个部队改成“江南抗日义勇军第三路”，没有第一路，也没有第二路，也没有第四路，也没有第五路，就是第三路。叫江南抗日义勇军第三路司令部。\",\n        \"type_basis\": \"核心为新四军到家乡、双方接上头及陈毅改编部队，属组织行动/物质过程；Actor=我们/陈毅元帅，Goal=新四军/我们部队；改名作为改编行动的结果阶段，不单独标为关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W001-E03\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0016\",\n        \"BATCH01-DOC01-S0018\",\n        \"BATCH01-DOC01-S0020\"\n      ],\n      \"event\": {\n        \"event_name\": \"江抗三路发展改编为江抗二团、一师二旅六团并延续为第24集团军\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"发展改编并延续编制\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"这个部队\",\n            \"normalized_entity\": \"江抗三路/江抗二团/一师二旅六团\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"正规军\",\n            \"normalized_entity\": \"正规军\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"第24集团军\",\n            \"normalized_entity\": \"第24集团军\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"警卫三师\",\n            \"normalized_entity\": \"警卫三师\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"1941年“皖南事变”以后\",\n            \"normalized_value\": \"1941年皖南事变以后\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"1941年\",\n            \"normalized_value\": \"1941年\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"北京军区（的），（驻）承德\",\n            \"normalized_value\": \"北京军区驻承德\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"顺义\",\n            \"normalized_value\": \"顺义\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"每年春节以前\",\n            \"normalized_value\": \"每年春节以前\"\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"北京天安门城楼那个阅兵\",\n            \"normalized_value\": \"北京天安门城楼阅兵\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"到1941年“皖南事变”以后，就并到粟裕的一师，就变成一师二旅六团，变成正规军了。一师二旅这个部队呢，以后发展到什么呢？以后就发展到现在北京军区（的），（驻）承德的第24集团军。\",\n        \"type_basis\": \"核心为部队规模发展、编制改编和延续，属组织行动/物质过程；Actor=部队，Goal=正规军/第24集团军/警卫三师；非存在引入，因有持续发展和改编变化。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH01-DOC01-W001-E04\",\n      \"source_segment_ids\": [\n        \"BATCH01-DOC01-S0020\"\n      ],\n      \"event\": {\n        \"event_name\": \"老部队在孟良崮战役垛庄主攻消灭国民党第74师\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"主攻消灭74师\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们老家的老部队\",\n            \"normalized_entity\": \"第24集团军/原一师二旅六团部队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"（国民党）74师\",\n            \"normalized_entity\": \"国民党第74师\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"垛庄\",\n            \"normalized_value\": \"垛庄\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"主攻\",\n            \"normalized_value\": \"主攻\"\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"孟良崮\",\n            \"normalized_value\": \"孟良崮战役\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"在垛庄消灭（国民党）74师，主攻的，就是我们老家的老部队。\",\n        \"type_basis\": \"核心为作战行动消灭敌方部队，属物质过程；Actor=老部队，Goal=国民党74师；垛庄为作战地点，主攻为方式，孟良崮为战役背景；非关系或存在。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH01-DOC01-S0002\",\n    \"BATCH01-DOC01-S0004\",\n    \"BATCH01-DOC01-S0006\",\n    \"BATCH01-DOC01-S0008\",\n    \"BATCH01-DOC01-S0009\",\n    \"BATCH01-DOC01-S0011\",\n    \"BATCH01-DOC01-S0013\",\n    \"BATCH01-DOC01-S0015\",\n    \"BATCH01-DOC01-S0017\",\n    \"BATCH01-DOC01-S0019\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5772,
+    "total_tokens": 25611,
+    "completion_tokens": 19839,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 17155
+    },
+    "time_to_first_token_ms": 295169,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 19838000
+  }
+}

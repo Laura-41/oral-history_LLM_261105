@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T19:14:55",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE002",
+  "usage": {
+    "prompt_tokens": 1787,
+    "total_tokens": 12166,
+    "completion_tokens": 10379,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8877
+    },
+    "tokens_per_second": 5189000,
+    "time_to_first_token_ms": 153311,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"我方未专门攻城，追到城附近打了一下后看到进不去，撤到山上，战斗停止；敌人向东移动。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于 S0011 所述敌人从临汾派兵往西要占领大宁、我方与686团在午城镇和井沟中间侧击；止于 S0030 所述追到城附近打了一下、看到进不去后撤到山上。S0030 后半句师部和旅部回到汾阳、孝义一带为后续部署，不作为本事件核心止点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"敌人西进大宁，我方与686团在午城镇和井沟中间侧击\",\n      \"process_text\": \"返回来就在午城镇附近，结果敌人从临汾又派兵过来，往西要占领大宁，我们就侧击他，686团也侧击他，就在那午城镇和井沟的中间。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0011\"\n      ],\n      \"evidence_quote\": \"返回来就在午城镇附近，结果敌人从临汾又派兵过来，往西要占领大宁，我们就侧击他，686团也侧击他，就在那午城镇和井沟的中间。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"侧击战斗激烈，我方伤亡和弹药消耗大后停止主动攻击，敌我向东移动\",\n      \"process_text\": \"因为我们打的是敌人快进大宁了（的时候），我们从屁股一打他就进城收起来了，686团大概弄住敌人一个大队，相当于我们一个营，它就打得比较激烈，伤亡也比较大。这个战斗怎么解决的？我们伤亡比较大，我们弹药消耗也比较多，就停下来。停下来以后没有主动去攻击他了，他趁这个机会往东跑了。他这个大队往东跑了，我们还在靠西边那个山上，结果日本鬼子他也觉得我们威胁他，他也往东跑了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0013\"\n      ],\n      \"evidence_quote\": \"因为我们打的是敌人快进大宁了（的时候），我们从屁股一打他就进城收起来了，686团大概弄住敌人一个大队，相当于我们一个营，它就打得比较激烈，伤亡也比较大。这个战斗怎么解决的？我们伤亡比较大，我们弹药消耗也比较多，就停下来。停下来以后没有主动去攻击他了，他趁这个机会往东跑了。他这个大队往东跑了，我们还在靠西边那个山上，结果日本鬼子他也觉得我们威胁他，他也往东跑了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"追击至城附近但未专门攻城，因兵力少、弹药不足只打了一打\",\n      \"process_text\": \"没有认真地专门攻过，追到那里去的。他不是钻到城里去了吗？打了一打，因为我们那个部队只有两个营，弹药很少，国民党没给我们补充子弹。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0028\"\n      ],\n      \"evidence_quote\": \"没有认真地专门攻过，追到那里去的。他不是钻到城里去了吗？打了一打，因为我们那个部队只有两个营，弹药很少，国民党没给我们补充子弹。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"攻城困难，看到进不去后撤至山上\",\n      \"process_text\": \"没有啊，有重机枪我们，所以你要去攻城比较困难。就是追啊追，追到城附近打了一下，看到进不去，就撤到山上了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0030\"\n      ],\n      \"evidence_quote\": \"没有啊，有重机枪我们，所以你要去攻城比较困难。就是追啊追，追到城附近打了一下，看到进不去，就撤到山上了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE002-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0013\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE002-P02\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0028\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE002-P03\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE002-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0030\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE002",
+    "event_enrichment": {
+      "result_state": "我方未专门攻城，追到城附近打了一下后看到进不去，撤到山上，战斗停止；敌人向东移动。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于 S0011 所述敌人从临汾派兵往西要占领大宁、我方与686团在午城镇和井沟中间侧击；止于 S0030 所述追到城附近打了一下、看到进不去后撤到山上。S0030 后半句师部和旅部回到汾阳、孝义一带为后续部署，不作为本事件核心止点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "敌人西进大宁，我方与686团在午城镇和井沟中间侧击",
+        "process_text": "返回来就在午城镇附近，结果敌人从临汾又派兵过来，往西要占领大宁，我们就侧击他，686团也侧击他，就在那午城镇和井沟的中间。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0011"
+        ],
+        "evidence_quote": "返回来就在午城镇附近，结果敌人从临汾又派兵过来，往西要占领大宁，我们就侧击他，686团也侧击他，就在那午城镇和井沟的中间。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "侧击战斗激烈，我方伤亡和弹药消耗大后停止主动攻击，敌我向东移动",
+        "process_text": "因为我们打的是敌人快进大宁了（的时候），我们从屁股一打他就进城收起来了，686团大概弄住敌人一个大队，相当于我们一个营，它就打得比较激烈，伤亡也比较大。这个战斗怎么解决的？我们伤亡比较大，我们弹药消耗也比较多，就停下来。停下来以后没有主动去攻击他了，他趁这个机会往东跑了。他这个大队往东跑了，我们还在靠西边那个山上，结果日本鬼子他也觉得我们威胁他，他也往东跑了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0013"
+        ],
+        "evidence_quote": "因为我们打的是敌人快进大宁了（的时候），我们从屁股一打他就进城收起来了，686团大概弄住敌人一个大队，相当于我们一个营，它就打得比较激烈，伤亡也比较大。这个战斗怎么解决的？我们伤亡比较大，我们弹药消耗也比较多，就停下来。停下来以后没有主动去攻击他了，他趁这个机会往东跑了。他这个大队往东跑了，我们还在靠西边那个山上，结果日本鬼子他也觉得我们威胁他，他也往东跑了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "追击至城附近但未专门攻城，因兵力少、弹药不足只打了一打",
+        "process_text": "没有认真地专门攻过，追到那里去的。他不是钻到城里去了吗？打了一打，因为我们那个部队只有两个营，弹药很少，国民党没给我们补充子弹。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0028"
+        ],
+        "evidence_quote": "没有认真地专门攻过，追到那里去的。他不是钻到城里去了吗？打了一打，因为我们那个部队只有两个营，弹药很少，国民党没给我们补充子弹。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "攻城困难，看到进不去后撤至山上",
+        "process_text": "没有啊，有重机枪我们，所以你要去攻城比较困难。就是追啊追，追到城附近打了一下，看到进不去，就撤到山上了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0030"
+        ],
+        "evidence_quote": "没有啊，有重机枪我们，所以你要去攻城比较困难。就是追啊追，追到城附近打了一下，看到进不去，就撤到山上了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE002-P01",
+        "target_stage_id": "BATCH03-DOC06-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0013",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE002-P02",
+        "target_stage_id": "BATCH03-DOC06-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0028",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE002-P03",
+        "target_stage_id": "BATCH03-DOC06-DE002-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0030",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,130 @@
+{
+  "run_time": "2026-11-10T22:50:11",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH04-DOC04-W003",
+  "technical_document_id": "BATCH04-DOC04",
+  "document_id": "09.陈锐霆 090509（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH04-DOC04-S0051",
+    "BATCH04-DOC04-S0052",
+    "BATCH04-DOC04-S0053",
+    "BATCH04-DOC04-S0054",
+    "BATCH04-DOC04-S0055",
+    "BATCH04-DOC04-S0056",
+    "BATCH04-DOC04-S0057",
+    "BATCH04-DOC04-S0058",
+    "BATCH04-DOC04-S0059",
+    "BATCH04-DOC04-S0060",
+    "BATCH04-DOC04-S0061",
+    "BATCH04-DOC04-S0062"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 4,
+    "unassigned_segment_count": 8,
+    "input_segment_count": 12,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH04-DOC04-W003",
+    "events": [
+      {
+        "candidate_id": "BATCH04-DOC04-W003-E01",
+        "source_segment_ids": [
+          "BATCH04-DOC04-S0051",
+          "BATCH04-DOC04-S0053",
+          "BATCH04-DOC04-S0055"
+        ],
+        "event": {
+          "event_name": "陈锐霆调任新四军第四师副参谋长",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "调任副参谋长",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "师部",
+              "normalized_value": "新四军第四师师部"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "不久中央电报来了，上头（任命了）四个人，第一个是彭雪枫死了以后由张爱萍接替四师师长，还有韦国清当副师长，张震是参谋长，我是副参谋长。",
+          "type_basis": "核心过程为组织调动和任职，导致陈锐霆职务状态改变；Actor=陈锐霆，符合MATERIAL角色词表。虽含“我是副参谋长”的识别关系及邓子恢告知等言语阶段，但整体主线是调动和到师部工作，故不按RELATIONAL或VERBAL拆分。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC04-W003-E02",
+        "source_segment_ids": [
+          "BATCH04-DOC04-S0057"
+        ],
+        "event": {
+          "event_name": "陈锐霆调任新四军军部参谋处长兼对美军联络处处长",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "调任军部参谋处长兼对美军联络处处长",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "军部",
+              "normalized_value": "新四军军部"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "到司令部参谋处工作没有好久，军部又来了命令，调我到军部去当参谋处长，兼着对美军联络处的处长。",
+          "type_basis": "核心过程为军部命令调动并任职，属于组织行动和职务变化；Actor=陈锐霆，符合MATERIAL角色词表。虽含邓子恢劝说等言语内容，但整体为调动任职，不按VERBAL处理。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH04-DOC04-S0052",
+      "BATCH04-DOC04-S0054",
+      "BATCH04-DOC04-S0056",
+      "BATCH04-DOC04-S0058",
+      "BATCH04-DOC04-S0059",
+      "BATCH04-DOC04-S0060",
+      "BATCH04-DOC04-S0061",
+      "BATCH04-DOC04-S0062"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH04-DOC04-W003\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH04-DOC04-W003-E01\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC04-S0051\",\n        \"BATCH04-DOC04-S0053\",\n        \"BATCH04-DOC04-S0055\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆调任新四军第四师副参谋长\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"调任副参谋长\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"师部\",\n            \"normalized_value\": \"新四军第四师师部\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"不久中央电报来了，上头（任命了）四个人，第一个是彭雪枫死了以后由张爱萍接替四师师长，还有韦国清当副师长，张震是参谋长，我是副参谋长。\",\n        \"type_basis\": \"核心过程为组织调动和任职，导致陈锐霆职务状态改变；Actor=陈锐霆，符合MATERIAL角色词表。虽含“我是副参谋长”的识别关系及邓子恢告知等言语阶段，但整体主线是调动和到师部工作，故不按RELATIONAL或VERBAL拆分。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC04-W003-E02\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC04-S0057\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆调任新四军军部参谋处长兼对美军联络处处长\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"调任军部参谋处长兼对美军联络处处长\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"军部\",\n            \"normalized_value\": \"新四军军部\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"到司令部参谋处工作没有好久，军部又来了命令，调我到军部去当参谋处长，兼着对美军联络处的处长。\",\n        \"type_basis\": \"核心过程为军部命令调动并任职，属于组织行动和职务变化；Actor=陈锐霆，符合MATERIAL角色词表。虽含邓子恢劝说等言语内容，但整体为调动任职，不按VERBAL处理。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH04-DOC04-S0052\",\n    \"BATCH04-DOC04-S0054\",\n    \"BATCH04-DOC04-S0056\",\n    \"BATCH04-DOC04-S0058\",\n    \"BATCH04-DOC04-S0059\",\n    \"BATCH04-DOC04-S0060\",\n    \"BATCH04-DOC04-S0061\",\n    \"BATCH04-DOC04-S0062\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 4872,
+    "total_tokens": 22063,
+    "completion_tokens": 17191,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 16339
+    },
+    "time_to_first_token_ms": 185296,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 17190000
+  }
+}

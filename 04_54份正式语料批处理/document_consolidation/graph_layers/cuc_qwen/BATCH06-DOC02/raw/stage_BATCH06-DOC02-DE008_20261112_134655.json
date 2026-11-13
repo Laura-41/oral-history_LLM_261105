@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T13:46:55",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC02-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC02-DE008",
+  "usage": {
+    "prompt_tokens": 1177,
+    "total_tokens": 10557,
+    "completion_tokens": 9380,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8317
+    },
+    "time_to_first_token_ms": 141743,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9379000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-18\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC02-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"军队到陈海峰家搜家/抄家后，口述称拿走88件物品；随后口述说明相关物品，包括苏浙医务职业学校招生广告、竹制代替品、表扬信、小卫生包等，并提及展览与1951年收东西。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据S0103中“解放以后没有多久，到北京来，军队到我家里来搜……“抄家”，拿走了88件。”确定事件起点为解放后不久、到北京后军队搜家，终点为拿走88件及随后对物品、展览、1951年收东西的说明；不将说明中的展览或1951年收东西单独扩展为事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"背景：解放后不久，口述称到北京来。\",\n      \"process_text\": \"解放以后没有多久，到北京来，\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0103\"\n      ],\n      \"evidence_quote\": \"解放以后没有多久，到北京来，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"行动：军队到陈海峰家搜家，口述称“抄家”。\",\n      \"process_text\": \"军队到我家里来搜……“抄家”，\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0103\"\n      ],\n      \"evidence_quote\": \"军队到我家里来搜……“抄家”，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"结果与说明：拿走88件物品，口述继续说明相关物品及展览、1951年收东西等。\",\n      \"process_text\": \"拿走了88件。就是苏浙医务职业学校的招生广告，都拿去了。我竹子做的一些代替品啊，在天安门城楼上都展览哪，第一次卫生会议展览的，1951年，把我这个收了好多东西去。书里面还有表扬我的那个信啊。这个小的，带着看粟司令（病）那个小卫生包还有呢。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0103\"\n      ],\n      \"evidence_quote\": \"拿走了88件。就是苏浙医务职业学校的招生广告，都拿去了。我竹子做的一些代替品啊，在天安门城楼上都展览哪，第一次卫生会议展览的，1951年，把我这个收了好多东西去。书里面还有表扬我的那个信啊。这个小的，带着看粟司令（病）那个小卫生包还有呢。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE008-P01\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0103\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE008-P02\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE008-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0103\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-18",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC02-DE008",
+    "event_enrichment": {
+      "result_state": "军队到陈海峰家搜家/抄家后，口述称拿走88件物品；随后口述说明相关物品，包括苏浙医务职业学校招生广告、竹制代替品、表扬信、小卫生包等，并提及展览与1951年收东西。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "依据S0103中“解放以后没有多久，到北京来，军队到我家里来搜……“抄家”，拿走了88件。”确定事件起点为解放后不久、到北京后军队搜家，终点为拿走88件及随后对物品、展览、1951年收东西的说明；不将说明中的展览或1951年收东西单独扩展为事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC02-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "背景：解放后不久，口述称到北京来。",
+        "process_text": "解放以后没有多久，到北京来，",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0103"
+        ],
+        "evidence_quote": "解放以后没有多久，到北京来，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "行动：军队到陈海峰家搜家，口述称“抄家”。",
+        "process_text": "军队到我家里来搜……“抄家”，",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0103"
+        ],
+        "evidence_quote": "军队到我家里来搜……“抄家”，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "结果与说明：拿走88件物品，口述继续说明相关物品及展览、1951年收东西等。",
+        "process_text": "拿走了88件。就是苏浙医务职业学校的招生广告，都拿去了。我竹子做的一些代替品啊，在天安门城楼上都展览哪，第一次卫生会议展览的，1951年，把我这个收了好多东西去。书里面还有表扬我的那个信啊。这个小的，带着看粟司令（病）那个小卫生包还有呢。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0103"
+        ],
+        "evidence_quote": "拿走了88件。就是苏浙医务职业学校的招生广告，都拿去了。我竹子做的一些代替品啊，在天安门城楼上都展览哪，第一次卫生会议展览的，1951年，把我这个收了好多东西去。书里面还有表扬我的那个信啊。这个小的，带着看粟司令（病）那个小卫生包还有呢。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC02-DE008-P01",
+        "target_stage_id": "BATCH06-DOC02-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0103",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE008-P02",
+        "target_stage_id": "BATCH06-DOC02-DE008-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC02-S0103",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,91 @@
+{
+  "run_time": "2026-11-12T22:13:00",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC05-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC05-DE002",
+  "usage": {
+    "prompt_tokens": 1872,
+    "total_tokens": 14266,
+    "completion_tokens": 12394,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 11321
+    },
+    "time_to_first_token_ms": 183064,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 12393000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC05-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰自述每天早晚按摩迎香穴各40次，感冒很少且较轻，并主张出现感冒症状时早吃药、早治疗。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于 S0029-S0033 关于疾病、细菌、病毒及鼻中感冒病毒的背景，止于 S0038 关于鼻部按摩持之以恒后感冒少轻及早治的说明。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"说明感冒病毒常存在于鼻中，抵抗力降低时容易感冒\",\n      \"process_text\": \"经常在鼻子里面有十几种，不发病，就在你正常人的鼻子里待着。你随时都可以感冒，你抵抗力一降低，他就来劲了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0035\"\n      ],\n      \"evidence_quote\": \"经常在鼻子里面有十几种，不发病，就在你正常人的鼻子里待着。你随时都可以感冒，你抵抗力一降低，他就来劲了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈海峰每天早晚按摩迎香穴各40次\",\n      \"process_text\": \"你鼻子这样按摩（陈海峰以手揪擦鼻翼），我每天都按摩的，每天早上做，按摩40次。晚上睡觉之前，你（再）按摩40次。那么（鼻子）这两边两个穴，叫迎香穴。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0035\",\n        \"BATCH04-DOC05-S0036\"\n      ],\n      \"evidence_quote\": \"你鼻子这样按摩（陈海峰以手揪擦鼻翼），我每天都按摩的，我感冒都很少的，就是有感冒，比人家轻。你这样子，这个鼻部按摩啊，每天早上做，按摩也不浪费时间，按摩40次。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"自述持之以恒后感冒很少且较轻，并强调出现症状早治\",\n      \"process_text\": \"这两个动作假设持之以恒的话，你感冒可以很少，以后感冒比人家轻，一带而过。一有感冒症状，流清鼻涕了，打喷嚏了，你快点吃感冒药。你别等到发烧了再去看，那还得治一个礼拜、10天到两个礼拜才能好。预防为主，治疗早治，早发现，早诊断，早治疗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0038\"\n      ],\n      \"evidence_quote\": \"这两个动作假设持之以恒的话，你感冒可以很少，以后感冒比人家轻，一带而过。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE002-P01\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0035\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE002-P02\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE002-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0038\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC05-DE002",
+    "event_enrichment": {
+      "result_state": "陈海峰自述每天早晚按摩迎香穴各40次，感冒很少且较轻，并主张出现感冒症状时早吃药、早治疗。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于 S0029-S0033 关于疾病、细菌、病毒及鼻中感冒病毒的背景，止于 S0038 关于鼻部按摩持之以恒后感冒少轻及早治的说明。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC05-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "说明感冒病毒常存在于鼻中，抵抗力降低时容易感冒",
+        "process_text": "经常在鼻子里面有十几种，不发病，就在你正常人的鼻子里待着。你随时都可以感冒，你抵抗力一降低，他就来劲了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0035"
+        ],
+        "evidence_quote": "经常在鼻子里面有十几种，不发病，就在你正常人的鼻子里待着。你随时都可以感冒，你抵抗力一降低，他就来劲了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "陈海峰每天早晚按摩迎香穴各40次",
+        "process_text": "你鼻子这样按摩（陈海峰以手揪擦鼻翼），我每天都按摩的，每天早上做，按摩40次。晚上睡觉之前，你（再）按摩40次。那么（鼻子）这两边两个穴，叫迎香穴。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0035",
+          "BATCH04-DOC05-S0036"
+        ],
+        "evidence_quote": "你鼻子这样按摩（陈海峰以手揪擦鼻翼），我每天都按摩的，我感冒都很少的，就是有感冒，比人家轻。你这样子，这个鼻部按摩啊，每天早上做，按摩也不浪费时间，按摩40次。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "自述持之以恒后感冒很少且较轻，并强调出现症状早治",
+        "process_text": "这两个动作假设持之以恒的话，你感冒可以很少，以后感冒比人家轻，一带而过。一有感冒症状，流清鼻涕了，打喷嚏了，你快点吃感冒药。你别等到发烧了再去看，那还得治一个礼拜、10天到两个礼拜才能好。预防为主，治疗早治，早发现，早诊断，早治疗。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0038"
+        ],
+        "evidence_quote": "这两个动作假设持之以恒的话，你感冒可以很少，以后感冒比人家轻，一带而过。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC05-DE002-P01",
+        "target_stage_id": "BATCH04-DOC05-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC05-S0035",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC05-DE002-P02",
+        "target_stage_id": "BATCH04-DOC05-DE002-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC05-S0038",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

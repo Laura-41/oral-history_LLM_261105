@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T23:42:01",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC01-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC01-DE005",
+  "usage": {
+    "prompt_tokens": 1406,
+    "total_tokens": 5781,
+    "completion_tokens": 4375,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3507
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4374000,
+    "time_to_first_token_ms": 35201
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC01-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"主力部队已跳到外线；留在苏南内线的地方部队、地方干部和地下党基本被摧毁，损失很大、被杀者多；1942年敌人清乡进入政治清乡、建立政权阶段。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于敌人火力强、不能硬碰硬而选择跳到外线的叙述，止于内线地方力量被摧毁及敌人进入政治清乡、建立政权阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"因敌人战斗力强、火力猛，不能硬碰硬，选择跳到外线打游击。\",\n      \"process_text\": \"敌人战斗力强、火力猛，不能硬碰硬；只能跳到外线去，乘虚而入、后退打游击。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0106\"\n      ],\n      \"evidence_quote\": \"那不能够硬碰硬，那鸡蛋碰石头，是不是。那你只能跳到外线去，乘虚而入，后退呀，打游击呀。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"主力部队跳到外线，地方部队、地方干部和地下党留在内线。\",\n      \"process_text\": \"主力部队跳到外面去了，地方部队、地方干部、地下党留在里面。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0108\"\n      ],\n      \"evidence_quote\": \"主力部队跳到外面去了，所以地方部队在里面，地方干部在里面，地下党在里头\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"留在内线的地方力量后来基本被摧毁，损失很大、被杀者多；1942年敌人清乡进入政治清乡、建立政权阶段。\",\n      \"process_text\": \"地方部队、地方干部、地下党基本到后来都被摧毁，损失很大，被杀的人很多；1942年敌人清乡进入第二阶段，政治清乡、建立政权。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0108\"\n      ],\n      \"evidence_quote\": \"基本到后来都（被）摧毁了，那损失（是）很大的，被杀的人很多。在（19）42年，敌人（清乡）已经进入第二阶段了，政治清乡了，建立政权的时候。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE005-P01\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0108\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE005-P02\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE005-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0108\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC01-DE005",
+    "event_enrichment": {
+      "result_state": "主力部队已跳到外线；留在苏南内线的地方部队、地方干部和地下党基本被摧毁，损失很大、被杀者多；1942年敌人清乡进入政治清乡、建立政权阶段。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于敌人火力强、不能硬碰硬而选择跳到外线的叙述，止于内线地方力量被摧毁及敌人进入政治清乡、建立政权阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC01-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "因敌人战斗力强、火力猛，不能硬碰硬，选择跳到外线打游击。",
+        "process_text": "敌人战斗力强、火力猛，不能硬碰硬；只能跳到外线去，乘虚而入、后退打游击。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0106"
+        ],
+        "evidence_quote": "那不能够硬碰硬，那鸡蛋碰石头，是不是。那你只能跳到外线去，乘虚而入，后退呀，打游击呀。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "主力部队跳到外线，地方部队、地方干部和地下党留在内线。",
+        "process_text": "主力部队跳到外面去了，地方部队、地方干部、地下党留在里面。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0108"
+        ],
+        "evidence_quote": "主力部队跳到外面去了，所以地方部队在里面，地方干部在里面，地下党在里头",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "留在内线的地方力量后来基本被摧毁，损失很大、被杀者多；1942年敌人清乡进入政治清乡、建立政权阶段。",
+        "process_text": "地方部队、地方干部、地下党基本到后来都被摧毁，损失很大，被杀的人很多；1942年敌人清乡进入第二阶段，政治清乡、建立政权。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0108"
+        ],
+        "evidence_quote": "基本到后来都（被）摧毁了，那损失（是）很大的，被杀的人很多。在（19）42年，敌人（清乡）已经进入第二阶段了，政治清乡了，建立政权的时候。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC01-DE005-P01",
+        "target_stage_id": "BATCH05-DOC01-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC01-S0108",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC01-DE005-P02",
+        "target_stage_id": "BATCH05-DOC01-DE005-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH05-DOC01-S0108",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

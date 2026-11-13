@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-12T08:38:01",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC03-DE005",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC03-DE005",
+  "usage": {
+    "prompt_tokens": 1206,
+    "total_tokens": 6170,
+    "completion_tokens": 4964,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4136
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 73490,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC03-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"该团担架队原有50人，长征到雪山时还有30人。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据片段 BATCH01-DOC03-S0089 中从“担架，那时候是我们团里边啊”开始，到“就是原来的时候有五十个人”结束，内容均围绕团担架配置与雪山时担架队减员。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"团内担架配置与人员编制说明\",\n      \"process_text\": \"担架，那时候是我们团里边啊，卫生队多少不一，当时我们团里有10副，准备（给）自身的战士。我们长征的时候，一个团是10副担架，一副担架是5个人，两个人抬一次，要换班，还预备一个，哪一个实在不行再替上去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0089\"\n      ],\n      \"evidence_quote\": \"    杨永松：担架，那时候是我们团里边啊，卫生队多少不一，当时我们团里有10副，准备（给）自身的战士。我们长征的时候，一个团是10副担架，一副担架是5个人，两个人抬一次，要换班，还预备一个，哪一个实在不行再替上去。我们那个团的担架队到过雪山的时候还有三十个人，就是原来的时候有五十个人。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"长征到雪山时担架队减员\",\n      \"process_text\": \"我们那个团的担架队到过雪山的时候还有三十个人，就是原来的时候有五十个人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0089\"\n      ],\n      \"evidence_quote\": \"    杨永松：担架，那时候是我们团里边啊，卫生队多少不一，当时我们团里有10副，准备（给）自身的战士。我们长征的时候，一个团是10副担架，一副担架是5个人，两个人抬一次，要换班，还预备一个，哪一个实在不行再替上去。我们那个团的担架队到过雪山的时候还有三十个人，就是原来的时候有五十个人。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE005-P01\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0089\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC03-DE005",
+    "event_enrichment": {
+      "result_state": "该团担架队原有50人，长征到雪山时还有30人。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "依据片段 BATCH01-DOC03-S0089 中从“担架，那时候是我们团里边啊”开始，到“就是原来的时候有五十个人”结束，内容均围绕团担架配置与雪山时担架队减员。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC03-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "团内担架配置与人员编制说明",
+        "process_text": "担架，那时候是我们团里边啊，卫生队多少不一，当时我们团里有10副，准备（给）自身的战士。我们长征的时候，一个团是10副担架，一副担架是5个人，两个人抬一次，要换班，还预备一个，哪一个实在不行再替上去。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0089"
+        ],
+        "evidence_quote": "    杨永松：担架，那时候是我们团里边啊，卫生队多少不一，当时我们团里有10副，准备（给）自身的战士。我们长征的时候，一个团是10副担架，一副担架是5个人，两个人抬一次，要换班，还预备一个，哪一个实在不行再替上去。我们那个团的担架队到过雪山的时候还有三十个人，就是原来的时候有五十个人。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "长征到雪山时担架队减员",
+        "process_text": "我们那个团的担架队到过雪山的时候还有三十个人，就是原来的时候有五十个人。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0089"
+        ],
+        "evidence_quote": "    杨永松：担架，那时候是我们团里边啊，卫生队多少不一，当时我们团里有10副，准备（给）自身的战士。我们长征的时候，一个团是10副担架，一副担架是5个人，两个人抬一次，要换班，还预备一个，哪一个实在不行再替上去。我们那个团的担架队到过雪山的时候还有三十个人，就是原来的时候有五十个人。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC03-DE005-P01",
+        "target_stage_id": "BATCH01-DOC03-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC03-S0089",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

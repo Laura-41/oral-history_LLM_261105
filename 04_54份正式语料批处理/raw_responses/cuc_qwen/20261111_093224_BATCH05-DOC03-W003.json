@@ -1,0 +1,391 @@
+{
+  "run_time": "2026-11-11T09:32:24",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH05-DOC03-W003",
+  "technical_document_id": "BATCH05-DOC03",
+  "document_id": "11.陈锐霆 090509（二校完 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH05-DOC03-S0047",
+    "BATCH05-DOC03-S0048",
+    "BATCH05-DOC03-S0049",
+    "BATCH05-DOC03-S0050",
+    "BATCH05-DOC03-S0051",
+    "BATCH05-DOC03-S0052",
+    "BATCH05-DOC03-S0053",
+    "BATCH05-DOC03-S0054",
+    "BATCH05-DOC03-S0055",
+    "BATCH05-DOC03-S0056",
+    "BATCH05-DOC03-S0057",
+    "BATCH05-DOC03-S0058",
+    "BATCH05-DOC03-S0059",
+    "BATCH05-DOC03-S0060",
+    "BATCH05-DOC03-S0061",
+    "BATCH05-DOC03-S0062",
+    "BATCH05-DOC03-S0063"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 6,
+    "assigned_segment_count": 8,
+    "unassigned_segment_count": 9,
+    "input_segment_count": 17,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH05-DOC03-W003-E06"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH05-DOC03-W003",
+    "events": [
+      {
+        "candidate_id": "BATCH05-DOC03-W003-E01",
+        "source_segment_ids": [
+          "BATCH05-DOC03-S0048"
+        ],
+        "event": {
+          "event_name": "部队歼灭三个整编师和一个快速纵队并缴获日式美式装备",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "歼灭三个整编师和一个快速纵队并缴获日式美式装备",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们部队",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "三个整编师还有一个快速纵队",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "临沂",
+              "normalized_entity": "临沂",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "国民党的日式装备跟美式装备",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "一个军里边裁了五个团，剩下四个",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "领导英明的指挥",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "部队勇敢",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "打完了三个整编师还有一个快速纵队以后，就打临沂。",
+          "type_basis": "核心是部队作战和缴获装备，可用 What did X do? 测试；Actor 为部队，Goal 为敌方部队、临沂和装备，符合 MATERIAL 角色词表；不是身份关系或存在引入。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH05-DOC03-W003-E02",
+        "source_segment_ids": [
+          "BATCH05-DOC03-S0050"
+        ],
+        "event": {
+          "event_name": "莱芜战役歼灭王耀武两个军七个师",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "歼灭王耀武两个军七个师",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们部队",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "王耀武的那个部队，两个军七个师",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "临沂",
+              "normalized_value": "临沂"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "向北",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "很巧妙的办法",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "把王耀武的那个部队，两个军七个师又消灭了，叫“莱芜战役”。",
+          "type_basis": "核心是撤出诱敌和歼敌作战，Actor 为部队，Goal 为王耀武部队，临沂为 LOCATION、向北为 DIRECTION，符合 MATERIAL；不是心理或言语。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH05-DOC03-W003-E03",
+        "source_segment_ids": [
+          "BATCH05-DOC03-S0052",
+          "BATCH05-DOC03-S0054"
+        ],
+        "event": {
+          "event_name": "孟良崮战役歼灭张灵甫74师",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "歼灭张灵甫74师",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们部队",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "张灵甫74师",
+              "normalized_entity": "张灵甫74师",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "5月份",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "山区",
+              "normalized_value": "山区"
+            },
+            {
+              "kind": "MANNER",
+              "value": "引诱",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "炮兵布置在两翼的交通要道",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "把这个74师就消灭了。",
+          "type_basis": "核心是引诱并歼灭74师的作战行动，Actor 为部队，Goal 为张灵甫74师，山区为 LOCATION，符合 MATERIAL；74师自我感觉等心理内容不改变主导类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH05-DOC03-W003-E04",
+        "source_segment_ids": [
+          "BATCH05-DOC03-S0056"
+        ],
+        "event": {
+          "event_name": "南麻临朐战役后部队撤至黄河以北",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "南麻临朐作战后撤退",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们华东的部队",
+              "normalized_entity": "华东部队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Scope",
+              "mention": "南麻、临朐（战役）",
+              "normalized_entity": "南麻临朐战役",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "黄河以北",
+              "normalized_entity": "黄河以北",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "PURPOSE",
+              "value": "配合刘邓进大别山",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "兵力不够",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "训练也差",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "南麻、临朐（战役）以后我们就退出来，就到了黄河以北。",
+          "type_basis": "核心是外线作战后部队移动至黄河以北，Actor 为华东部队，Scope 为南麻临朐战役，Goal 为黄河以北，符合 MATERIAL；刘邓进大别山作为 PURPOSE，不单独建事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH05-DOC03-W003-E05",
+        "source_segment_ids": [
+          "BATCH05-DOC03-S0058"
+        ],
+        "event": {
+          "event_name": "鲁南战役后华中野战军与山东野战军合编为华东野战军",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "合编华东野战军",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "华东",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "华东野战军",
+              "normalized_entity": "华东野战军",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "华中野战军跟山东野战军",
+              "normalized_entity": "华中野战军、山东野战军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1947年1月",
+              "normalized_value": "1947-01"
+            },
+            {
+              "kind": "OTHER",
+              "value": "鲁南战役以后",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "鲁南战役以后，华东就整编部队，就是华中野战军跟山东野战军合在一起了。",
+          "type_basis": "核心是部队合编的组织行动，Actor 为华东，Goal 为华东野战军和华中山东野战军，符合 MATERIAL；陈毅职务身份是伴随关系过程，不改变主导类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH05-DOC03-W003-E06",
+        "source_segment_ids": [
+          "BATCH05-DOC03-S0060",
+          "BATCH05-DOC03-S0062"
+        ],
+        "event": {
+          "event_name": "组建炮兵纵队并任命陈锐霆为纵队司令",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "组建炮兵纵队并任命纵队司令",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他、粟裕同志、陈士榘同志",
+              "normalized_entity": "陈毅、粟裕、陈士榘",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "一个纵队",
+              "normalized_entity": "炮兵纵队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Recipient",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "缴获了那么多的美国榴弹炮，还有那么多的坦克",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "非常积极",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "把我从参谋处长一下子提高到纵队的一级。",
+          "type_basis": "核心是组建炮兵纵队并调整陈锐霆职务的组织行动，Actor 为陈毅、粟裕、陈士榘，Goal 为炮兵纵队，Recipient 为陈锐霆，符合 MATERIAL；陈老总讲话是触发性言语，不单独 VERBAL。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH05-DOC03-S0047",
+      "BATCH05-DOC03-S0049",
+      "BATCH05-DOC03-S0051",
+      "BATCH05-DOC03-S0053",
+      "BATCH05-DOC03-S0055",
+      "BATCH05-DOC03-S0057",
+      "BATCH05-DOC03-S0059",
+      "BATCH05-DOC03-S0061",
+      "BATCH05-DOC03-S0063"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH05-DOC03-W003\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH05-DOC03-W003-E01\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC03-S0048\"\n      ],\n      \"event\": {\n        \"event_name\": \"部队歼灭三个整编师和一个快速纵队并缴获日式美式装备\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"歼灭三个整编师和一个快速纵队并缴获日式美式装备\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们部队\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"三个整编师还有一个快速纵队\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"临沂\",\n            \"normalized_entity\": \"临沂\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"国民党的日式装备跟美式装备\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"一个军里边裁了五个团，剩下四个\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"领导英明的指挥\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"部队勇敢\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"打完了三个整编师还有一个快速纵队以后，就打临沂。\",\n        \"type_basis\": \"核心是部队作战和缴获装备，可用 What did X do? 测试；Actor 为部队，Goal 为敌方部队、临沂和装备，符合 MATERIAL 角色词表；不是身份关系或存在引入。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH05-DOC03-W003-E02\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC03-S0050\"\n      ],\n      \"event\": {\n        \"event_name\": \"莱芜战役歼灭王耀武两个军七个师\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"歼灭王耀武两个军七个师\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们部队\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"王耀武的那个部队，两个军七个师\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"临沂\",\n            \"normalized_value\": \"临沂\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"向北\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"很巧妙的办法\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"把王耀武的那个部队，两个军七个师又消灭了，叫“莱芜战役”。\",\n        \"type_basis\": \"核心是撤出诱敌和歼敌作战，Actor 为部队，Goal 为王耀武部队，临沂为 LOCATION、向北为 DIRECTION，符合 MATERIAL；不是心理或言语。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH05-DOC03-W003-E03\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC03-S0052\",\n        \"BATCH05-DOC03-S0054\"\n      ],\n      \"event\": {\n        \"event_name\": \"孟良崮战役歼灭张灵甫74师\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"歼灭张灵甫74师\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们部队\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"张灵甫74师\",\n            \"normalized_entity\": \"张灵甫74师\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"5月份\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"山区\",\n            \"normalized_value\": \"山区\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"引诱\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"炮兵布置在两翼的交通要道\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"把这个74师就消灭了。\",\n        \"type_basis\": \"核心是引诱并歼灭74师的作战行动，Actor 为部队，Goal 为张灵甫74师，山区为 LOCATION，符合 MATERIAL；74师自我感觉等心理内容不改变主导类型。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH05-DOC03-W003-E04\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC03-S0056\"\n      ],\n      \"event\": {\n        \"event_name\": \"南麻临朐战役后部队撤至黄河以北\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"南麻临朐作战后撤退\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们华东的部队\",\n            \"normalized_entity\": \"华东部队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"南麻、临朐（战役）\",\n            \"normalized_entity\": \"南麻临朐战役\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"黄河以北\",\n            \"normalized_entity\": \"黄河以北\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"配合刘邓进大别山\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"兵力不够\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"训练也差\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"南麻、临朐（战役）以后我们就退出来，就到了黄河以北。\",\n        \"type_basis\": \"核心是外线作战后部队移动至黄河以北，Actor 为华东部队，Scope 为南麻临朐战役，Goal 为黄河以北，符合 MATERIAL；刘邓进大别山作为 PURPOSE，不单独建事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH05-DOC03-W003-E05\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC03-S0058\"\n      ],\n      \"event\": {\n        \"event_name\": \"鲁南战役后华中野战军与山东野战军合编为华东野战军\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"合编华东野战军\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"华东\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"华东野战军\",\n            \"normalized_entity\": \"华东野战军\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"华中野战军跟山东野战军\",\n            \"normalized_entity\": \"华中野战军、山东野战军\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"1947年1月\",\n            \"normalized_value\": \"1947-01\"\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"鲁南战役以后\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"鲁南战役以后，华东就整编部队，就是华中野战军跟山东野战军合在一起了。\",\n        \"type_basis\": \"核心是部队合编的组织行动，Actor 为华东，Goal 为华东野战军和华中山东野战军，符合 MATERIAL；陈毅职务身份是伴随关系过程，不改变主导类型。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH05-DOC03-W003-E06\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC03-S0060\",\n        \"BATCH05-DOC03-S0062\"\n      ],\n      \"event\": {\n        \"event_name\": \"组建炮兵纵队并任命陈锐霆为纵队司令\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"组建炮兵纵队并任命纵队司令\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"他、粟裕同志、陈士榘同志\",\n            \"normalized_entity\": \"陈毅、粟裕、陈士榘\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"一个纵队\",\n            \"normalized_entity\": \"炮兵纵队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"缴获了那么多的美国榴弹炮，还有那么多的坦克\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"非常积极\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"把我从参谋处长一下子提高到纵队的一级。\",\n        \"type_basis\": \"核心是组建炮兵纵队并调整陈锐霆职务的组织行动，Actor 为陈毅、粟裕、陈士榘，Goal 为炮兵纵队，Recipient 为陈锐霆，符合 MATERIAL；陈老总讲话是触发性言语，不单独 VERBAL。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH05-DOC03-S0047\",\n    \"BATCH05-DOC03-S0049\",\n    \"BATCH05-DOC03-S0051\",\n    \"BATCH05-DOC03-S0053\",\n    \"BATCH05-DOC03-S0055\",\n    \"BATCH05-DOC03-S0057\",\n    \"BATCH05-DOC03-S0059\",\n    \"BATCH05-DOC03-S0061\",\n    \"BATCH05-DOC03-S0063\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5347,
+    "total_tokens": 27505,
+    "completion_tokens": 22158,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 18954
+    },
+    "time_to_first_token_ms": 330155,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11078500
+  }
+}

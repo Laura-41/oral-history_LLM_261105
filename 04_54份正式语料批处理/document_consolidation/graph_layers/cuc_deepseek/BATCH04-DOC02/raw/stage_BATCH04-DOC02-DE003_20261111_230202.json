@@ -1,0 +1,129 @@
+{
+  "run_time": "2026-11-11T23:02:02",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC02-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC02-DE003",
+  "usage": {
+    "prompt_tokens": 2408,
+    "total_tokens": 6775,
+    "completion_tokens": 4367,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2736
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 33852,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC02-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰在苏中卫生学校任教务主任并任队长，统管教学与行政；校内按军事建制编队，校部由正队长、行政副队长、指导员组成管理小组，正队长全面管理。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于师部命令将陈海峰调至苏中卫生学校任教务主任、队长，止于对校部管理分工与日常管理的说明；不包含此前军部汇报、罗生特手术等前序内容。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰到苏中卫生学校任教务主任，校长由部长兼任且不常驻。\",\n      \"process_text\": \"师部下令将陈海峰调到苏中卫生学校当教务主任；校长由部长兼任，因部长事务繁忙不能常离开，只有大手术或这边有课时才来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0055\"\n      ],\n      \"evidence_quote\": \"卫生学校当教务主任。那个校长呢，就是部长兼，他那部长忙得不得了了，又兼后方院长，又是部长啊，他跟着粟裕在一起啊。那这个行动啊，他也不自由的，不能离开那的。但是有大的手术，这边有课，他就来。那离开也不远，几十里路，骑着马很快就到了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"学校内部编成一个队，陈海峰任队长，名义上为教务主任并管整个教学。\",\n      \"process_text\": \"学校内部编了一个队，相当于一个大队，陈海峰当队长；他名义上是教务主任，整个教学都由他管。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0057\",\n        \"BATCH04-DOC02-S0058\"\n      ],\n      \"evidence_quote\": \"那编成一个队呢，等于一个大队一样的，就是我当队长，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"明确校部管理分工：行政副队长管后勤与学员生活，陈海峰侧重业务并兼公共卫生教员。\",\n      \"process_text\": \"陈海峰在那边统管，行政副队长管吃喝拉撒睡、后勤工作和学员生活管理；陈海峰侧重业务，并兼公共卫生教育课教员，要给新来的学生上两门课。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0061\"\n      ],\n      \"evidence_quote\": \"    陈海峰：实际上，我是那里统管，行政副队长管吃喝拉撒睡，后勤工作他管去，学员的生活管理，也是他管。我侧重于这个业务，我自己因为还兼公共卫生教育（课）教员，我要上两门课，一个要给新来的学生（上课）。新来的学生都是初中生、高中生招，都是启、海、通这一带的，就是通县、启东、海门，靠近崇明、上海郊区这一带的，有少数上海的。这些高中生、初中生来报考我们苏中卫校的，这个是基础训练。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"按部队连队要求实施日常管理，包括出操、列队、点名和限时吃饭等。\",\n      \"process_text\": \"管理比较严密，完全按部队连队的要求来管理；吃饭要列队，早上号兵吹号，起床后跑步半小时，然后吃饭，值班把稀饭盛好，列队唱抗战歌曲、点名，早饭十五分钟、午饭十分钟吃完，休息后开始上课。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0104\",\n        \"BATCH04-DOC02-S0107\",\n        \"BATCH04-DOC02-S0109\"\n      ],\n      \"evidence_quote\": \"学习是学习组长，这两个是这样分工的。所以管理呢，他有一套经验，这个比较严密。完全按部队连队的要求来管理这个部队，吃饭一定要列队，早上有号兵吹号，一起床就跑步，每天早晨要跑半个小时步。那么跑完以后呢，吃饭。吃早饭了以后，值班。每一个班有值班，把一碗一碗的稀饭都盛好。伙食好一点，有一个馒头，那个时候南方不吃窝窝头。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"校部形成正队长、行政副队长、指导员三人管理小组，正队长全面管理。\",\n      \"process_text\": \"校部由全面管理的队长、行政副队长、指导员组成管理小组；编成一个队后，陈海峰是正队长，全面管理，行政副队长管行政，指导员管政治思想。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0114\",\n        \"BATCH04-DOC02-S0115\"\n      ],\n      \"evidence_quote\": \"那么编成一个队，我是正队长，全面管理，行政管副队长、指导员就管政治思想。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE003-P01\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE003-P02\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE003-P03\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE003-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE003-P04\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE003-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC02-DE003",
+    "event_enrichment": {
+      "result_state": "陈海峰在苏中卫生学校任教务主任并任队长，统管教学与行政；校内按军事建制编队，校部由正队长、行政副队长、指导员组成管理小组，正队长全面管理。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于师部命令将陈海峰调至苏中卫生学校任教务主任、队长，止于对校部管理分工与日常管理的说明；不包含此前军部汇报、罗生特手术等前序内容。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC02-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰到苏中卫生学校任教务主任，校长由部长兼任且不常驻。",
+        "process_text": "师部下令将陈海峰调到苏中卫生学校当教务主任；校长由部长兼任，因部长事务繁忙不能常离开，只有大手术或这边有课时才来。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0055"
+        ],
+        "evidence_quote": "卫生学校当教务主任。那个校长呢，就是部长兼，他那部长忙得不得了了，又兼后方院长，又是部长啊，他跟着粟裕在一起啊。那这个行动啊，他也不自由的，不能离开那的。但是有大的手术，这边有课，他就来。那离开也不远，几十里路，骑着马很快就到了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "学校内部编成一个队，陈海峰任队长，名义上为教务主任并管整个教学。",
+        "process_text": "学校内部编了一个队，相当于一个大队，陈海峰当队长；他名义上是教务主任，整个教学都由他管。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0057",
+          "BATCH04-DOC02-S0058"
+        ],
+        "evidence_quote": "那编成一个队呢，等于一个大队一样的，就是我当队长，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "明确校部管理分工：行政副队长管后勤与学员生活，陈海峰侧重业务并兼公共卫生教员。",
+        "process_text": "陈海峰在那边统管，行政副队长管吃喝拉撒睡、后勤工作和学员生活管理；陈海峰侧重业务，并兼公共卫生教育课教员，要给新来的学生上两门课。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0061"
+        ],
+        "evidence_quote": "    陈海峰：实际上，我是那里统管，行政副队长管吃喝拉撒睡，后勤工作他管去，学员的生活管理，也是他管。我侧重于这个业务，我自己因为还兼公共卫生教育（课）教员，我要上两门课，一个要给新来的学生（上课）。新来的学生都是初中生、高中生招，都是启、海、通这一带的，就是通县、启东、海门，靠近崇明、上海郊区这一带的，有少数上海的。这些高中生、初中生来报考我们苏中卫校的，这个是基础训练。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "按部队连队要求实施日常管理，包括出操、列队、点名和限时吃饭等。",
+        "process_text": "管理比较严密，完全按部队连队的要求来管理；吃饭要列队，早上号兵吹号，起床后跑步半小时，然后吃饭，值班把稀饭盛好，列队唱抗战歌曲、点名，早饭十五分钟、午饭十分钟吃完，休息后开始上课。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0104",
+          "BATCH04-DOC02-S0107",
+          "BATCH04-DOC02-S0109"
+        ],
+        "evidence_quote": "学习是学习组长，这两个是这样分工的。所以管理呢，他有一套经验，这个比较严密。完全按部队连队的要求来管理这个部队，吃饭一定要列队，早上有号兵吹号，一起床就跑步，每天早晨要跑半个小时步。那么跑完以后呢，吃饭。吃早饭了以后，值班。每一个班有值班，把一碗一碗的稀饭都盛好。伙食好一点，有一个馒头，那个时候南方不吃窝窝头。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "校部形成正队长、行政副队长、指导员三人管理小组，正队长全面管理。",
+        "process_text": "校部由全面管理的队长、行政副队长、指导员组成管理小组；编成一个队后，陈海峰是正队长，全面管理，行政副队长管行政，指导员管政治思想。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0114",
+          "BATCH04-DOC02-S0115"
+        ],
+        "evidence_quote": "那么编成一个队，我是正队长，全面管理，行政管副队长、指导员就管政治思想。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC02-DE003-P01",
+        "target_stage_id": "BATCH04-DOC02-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE003-P02",
+        "target_stage_id": "BATCH04-DOC02-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE003-P03",
+        "target_stage_id": "BATCH04-DOC02-DE003-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE003-P04",
+        "target_stage_id": "BATCH04-DOC02-DE003-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

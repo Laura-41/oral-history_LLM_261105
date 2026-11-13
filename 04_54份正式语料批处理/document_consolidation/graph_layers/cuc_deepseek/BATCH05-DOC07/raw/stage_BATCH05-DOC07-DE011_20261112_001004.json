@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T00:10:04",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC07-DE011",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC07-DE011",
+  "usage": {
+    "prompt_tokens": 1245,
+    "total_tokens": 4638,
+    "completion_tokens": 3393,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2481
+    },
+    "time_to_first_token_ms": 26451,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC07-DE011\",\n  \"event_enrichment\": {\n    \"result_state\": \"炮兵在济南战役中形成东西线分头作战的态势，西线由特纵率榴弹炮团和野炮攻击车站、商埠一带，东线攻打东门时外线很快占领。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为S0055所述打济南时炮兵分两大坨及东线部署，终点为S0057所述西线车站、商埠与东线东门作战；不扩展到济南战役全局。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE011-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"炮兵在济南战役时分两大坨，东线由胶东留驻部队、以缴获武器成立的山东兵团炮团及部队炮兵担负作战。\",\n      \"process_text\": \"打济南时炮兵分两大坨，东线由胶东留驻部队、缴获武器成立的山东兵团炮团及部队炮兵担负东线作战。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0055\"\n      ],\n      \"evidence_quote\": \"打济南的时候炮兵分两大坨，原来在胶东那个地方我们留的部队，再加上以后（用）缴获的（武器）成立的一个山东兵团的炮团，再加上部队都有炮兵，就担负东线的作战。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE011-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"因电话线和其他通信手段缺乏、城池较大，炮兵各自作战。\",\n      \"process_text\": \"没有电话线通电话，其他通信手段也没有，城池又大，都是各自作战。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0055\"\n      ],\n      \"evidence_quote\": \"那个时候因为没有电话线通不了电话，其他的通信手段也没有，那个城池又比较大，都是各自作战嘛。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE011-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"西线由特纵率榴弹炮团、野炮攻击车站和商埠一带；东线攻打东门时外线很快占领。\",\n      \"process_text\": \"西线特纵带榴弹炮团、野炮打西线车站、商埠一带；打东线东门时外线很快占领。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0057\"\n      ],\n      \"evidence_quote\": \"西线就是我这个特纵带的榴弹炮团，野炮，打西线车站那一带，商埠那一带；打东线打东门的时候，外线很快地就占领了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE011-P01\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE011-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0055\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE011-P02\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE011-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0057\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC07-DE011",
+    "event_enrichment": {
+      "result_state": "炮兵在济南战役中形成东西线分头作战的态势，西线由特纵率榴弹炮团和野炮攻击车站、商埠一带，东线攻打东门时外线很快占领。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起点为S0055所述打济南时炮兵分两大坨及东线部署，终点为S0057所述西线车站、商埠与东线东门作战；不扩展到济南战役全局。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC07-DE011-P01",
+        "stage_order": 1,
+        "stage_summary": "炮兵在济南战役时分两大坨，东线由胶东留驻部队、以缴获武器成立的山东兵团炮团及部队炮兵担负作战。",
+        "process_text": "打济南时炮兵分两大坨，东线由胶东留驻部队、缴获武器成立的山东兵团炮团及部队炮兵担负东线作战。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0055"
+        ],
+        "evidence_quote": "打济南的时候炮兵分两大坨，原来在胶东那个地方我们留的部队，再加上以后（用）缴获的（武器）成立的一个山东兵团的炮团，再加上部队都有炮兵，就担负东线的作战。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE011-P02",
+        "stage_order": 2,
+        "stage_summary": "因电话线和其他通信手段缺乏、城池较大，炮兵各自作战。",
+        "process_text": "没有电话线通电话，其他通信手段也没有，城池又大，都是各自作战。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0055"
+        ],
+        "evidence_quote": "那个时候因为没有电话线通不了电话，其他的通信手段也没有，那个城池又比较大，都是各自作战嘛。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE011-P03",
+        "stage_order": 3,
+        "stage_summary": "西线由特纵率榴弹炮团、野炮攻击车站和商埠一带；东线攻打东门时外线很快占领。",
+        "process_text": "西线特纵带榴弹炮团、野炮打西线车站、商埠一带；打东线东门时外线很快占领。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0057"
+        ],
+        "evidence_quote": "西线就是我这个特纵带的榴弹炮团，野炮，打西线车站那一带，商埠那一带；打东线打东门的时候，外线很快地就占领了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC07-DE011-P01",
+        "target_stage_id": "BATCH05-DOC07-DE011-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC07-S0055",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC07-DE011-P02",
+        "target_stage_id": "BATCH05-DOC07-DE011-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0057",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T23:11:32",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC03-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC03-DE004",
+  "usage": {
+    "prompt_tokens": 1285,
+    "total_tokens": 5045,
+    "completion_tokens": 3760,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2626
+    },
+    "time_to_first_token_ms": 31936,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3759000
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC03-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"刘玉胜经罗荣桓谈话教育后被释放，当时未再去当汉奸；其长期后续不明。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为罗荣桓判断刘玉胜可争取并决定亲自谈话；终点为刘玉胜被释放后当时未再当汉奸、后续不明。依据S0024、S0027。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"罗荣桓判断刘玉胜是旧军人、可以争取，决定亲自找他谈话。\",\n      \"process_text\": \"罗帅认为刘玉胜是旧军人、可以争取，专门亲自找他谈话，杨永松在场。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0024\"\n      ],\n      \"evidence_quote\": \"以后罗帅认为，这样的人是一个旧军人，可以争取，就专门亲自找他谈一次话，我在跟前。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"罗荣桓向刘玉胜讲爱国爱民族道理，劝其做正直爱国的人，并希望释放后不再当汉奸。\",\n      \"process_text\": \"罗荣桓讲爱国家、爱民族的道理，要求做正直的人、爱国的人，并希望他放出去后不要再去当汉奸、给日本人做事。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0024\"\n      ],\n      \"evidence_quote\": \"跟他讲了一些爱国家、爱民族的道理，要做正直的人，爱国的人，跟他讲了很多道理，最后希望他，放他以后不要再去当汉奸，给日本人做事。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"刘玉胜受感动，感谢罗荣桓谈话，表态做爱国的人、不当汉奸。\",\n      \"process_text\": \"刘玉胜很受感动，佩服并感谢官长谈话，表示一定做爱国的人、不当汉奸。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0024\"\n      ],\n      \"evidence_quote\": \"他很受感动，这么大的官，戴着眼镜，胖胖的，很佩服，就是很感谢官长跟我谈话。他旧军队还不知道咱们叫首长是嘛，不叫这个（首长），也不叫同志，他就是很感谢，我一定呢要做一个爱国的（人），不当汉奸。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"刘玉胜被释放，当时未再去当汉奸；叙述者不知其后续。\",\n      \"process_text\": \"刘玉胜被释放后，当时没有再去当汉奸；此后情况叙述者不知道。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0027\"\n      ],\n      \"evidence_quote\": \"杨永松：当时表示是发自内心的，但把他放了以后啊，好像他以后是不是……后果我不知道，反正这个人当时没有再去当汉奸，以后就不知道了，时间长了我们离开那个地方了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE004-P01\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0024\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE004-P02\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE004-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0024\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE004-P03\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE004-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0027\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC03-DE004",
+    "event_enrichment": {
+      "result_state": "刘玉胜经罗荣桓谈话教育后被释放，当时未再去当汉奸；其长期后续不明。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起点为罗荣桓判断刘玉胜可争取并决定亲自谈话；终点为刘玉胜被释放后当时未再当汉奸、后续不明。依据S0024、S0027。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC03-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "罗荣桓判断刘玉胜是旧军人、可以争取，决定亲自找他谈话。",
+        "process_text": "罗帅认为刘玉胜是旧军人、可以争取，专门亲自找他谈话，杨永松在场。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0024"
+        ],
+        "evidence_quote": "以后罗帅认为，这样的人是一个旧军人，可以争取，就专门亲自找他谈一次话，我在跟前。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "罗荣桓向刘玉胜讲爱国爱民族道理，劝其做正直爱国的人，并希望释放后不再当汉奸。",
+        "process_text": "罗荣桓讲爱国家、爱民族的道理，要求做正直的人、爱国的人，并希望他放出去后不要再去当汉奸、给日本人做事。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0024"
+        ],
+        "evidence_quote": "跟他讲了一些爱国家、爱民族的道理，要做正直的人，爱国的人，跟他讲了很多道理，最后希望他，放他以后不要再去当汉奸，给日本人做事。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "刘玉胜受感动，感谢罗荣桓谈话，表态做爱国的人、不当汉奸。",
+        "process_text": "刘玉胜很受感动，佩服并感谢官长谈话，表示一定做爱国的人、不当汉奸。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0024"
+        ],
+        "evidence_quote": "他很受感动，这么大的官，戴着眼镜，胖胖的，很佩服，就是很感谢官长跟我谈话。他旧军队还不知道咱们叫首长是嘛，不叫这个（首长），也不叫同志，他就是很感谢，我一定呢要做一个爱国的（人），不当汉奸。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "刘玉胜被释放，当时未再去当汉奸；叙述者不知其后续。",
+        "process_text": "刘玉胜被释放后，当时没有再去当汉奸；此后情况叙述者不知道。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0027"
+        ],
+        "evidence_quote": "杨永松：当时表示是发自内心的，但把他放了以后啊，好像他以后是不是……后果我不知道，反正这个人当时没有再去当汉奸，以后就不知道了，时间长了我们离开那个地方了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC03-DE004-P01",
+        "target_stage_id": "BATCH04-DOC03-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0024",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE004-P02",
+        "target_stage_id": "BATCH04-DOC03-DE004-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH04-DOC03-S0024",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE004-P03",
+        "target_stage_id": "BATCH04-DOC03-DE004-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0027",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

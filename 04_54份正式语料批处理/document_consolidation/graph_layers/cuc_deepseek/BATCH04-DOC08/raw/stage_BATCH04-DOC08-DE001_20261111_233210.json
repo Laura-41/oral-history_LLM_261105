@@ -1,0 +1,41 @@
+{
+  "run_time": "2026-11-11T23:32:10",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC08-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC08-DE001",
+  "usage": {
+    "prompt_tokens": 1031,
+    "total_tokens": 1760,
+    "completion_tokens": 729,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 485
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 5753
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC08-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆自述在军部几个大单位整风、学习快要结束时领导整风，并称自己比较熟悉相关做法。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件起于军部几个大单位整风、学习将结束的背景，止于陈锐霆自述“我就领导整风，我也比较熟悉”；同段后续“鬼子投降”不属于本事件内部过程。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [],\n  \"stage_next\": [],\n  \"no_stage_reason\": \"该事件仅由单句自述构成，原文未展开整风的具体推进步骤；若拆分阶段会引入原文未表达的过程。\"\n}",
+  "parsed": {
+    "document_id": "CRT-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC08-DE001",
+    "event_enrichment": {
+      "result_state": "陈锐霆自述在军部几个大单位整风、学习快要结束时领导整风，并称自己比较熟悉相关做法。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件起于军部几个大单位整风、学习将结束的背景，止于陈锐霆自述“我就领导整风，我也比较熟悉”；同段后续“鬼子投降”不属于本事件内部过程。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [],
+    "stage_next": [],
+    "no_stage_reason": "该事件仅由单句自述构成，原文未展开整风的具体推进步骤；若拆分阶段会引入原文未表达的过程。"
+  },
+  "request_error": null
+}

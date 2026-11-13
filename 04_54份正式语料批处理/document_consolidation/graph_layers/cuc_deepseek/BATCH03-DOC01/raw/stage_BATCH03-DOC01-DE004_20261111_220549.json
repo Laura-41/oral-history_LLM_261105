@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T22:05:49",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC01-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC01-DE004",
+  "usage": {
+    "prompt_tokens": 1101,
+    "total_tokens": 2887,
+    "completion_tokens": 1786,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1194
+    },
+    "time_to_first_token_ms": 15722,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 1785000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC01-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"到淮海战役时，新四军卫生系统已明确战伤手术应争取六小时、最迟不超过八小时，截肢、大手术和缝合均须进行。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈海峰口述中从“原来那个还不明确”到“缝合都要做”为界，涵盖抗战初期认识不明确到淮海战役明确六小时、最迟八小时时限的表述。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"此前对战伤手术时限认识不明确\",\n      \"process_text\": \"原来不明确，抗战开始还没有这个知识；要求快、要求及时手术也不那么明确。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0041\"\n      ],\n      \"evidence_quote\": \"原来那个还不明确，抗战开始还没有这个知识。要求快，要求及时手术，还不那么明确。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"淮海战役时明确六小时、最迟八小时时限及手术范围\",\n      \"process_text\": \"到淮海战役明确：要争取六小时，最迟不超过八小时，截肢、大的手术、缝合都要做。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0041\"\n      ],\n      \"evidence_quote\": \"到淮海战役这就明确了，要争取六小时，最迟不超过八小时，截肢啊，大的手术啊，缝合都要做。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE004-P01\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0041\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC01-DE004",
+    "event_enrichment": {
+      "result_state": "到淮海战役时，新四军卫生系统已明确战伤手术应争取六小时、最迟不超过八小时，截肢、大手术和缝合均须进行。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "以陈海峰口述中从“原来那个还不明确”到“缝合都要做”为界，涵盖抗战初期认识不明确到淮海战役明确六小时、最迟八小时时限的表述。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC01-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "此前对战伤手术时限认识不明确",
+        "process_text": "原来不明确，抗战开始还没有这个知识；要求快、要求及时手术也不那么明确。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0041"
+        ],
+        "evidence_quote": "原来那个还不明确，抗战开始还没有这个知识。要求快，要求及时手术，还不那么明确。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "淮海战役时明确六小时、最迟八小时时限及手术范围",
+        "process_text": "到淮海战役明确：要争取六小时，最迟不超过八小时，截肢、大的手术、缝合都要做。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0041"
+        ],
+        "evidence_quote": "到淮海战役这就明确了，要争取六小时，最迟不超过八小时，截肢啊，大的手术啊，缝合都要做。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC01-DE004-P01",
+        "target_stage_id": "BATCH03-DOC01-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0041",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

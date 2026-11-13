@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T00:31:37",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC02-DE010",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC02-DE010",
+  "usage": {
+    "prompt_tokens": 1701,
+    "total_tokens": 6092,
+    "completion_tokens": 4391,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3099
+    },
+    "time_to_first_token_ms": 34048,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4390000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-18\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC02-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"医院在五云里缺吃少穿、忍饥挨饿的条件下继续收治伤员，并通过唱歌、做小动作等方式安慰伤员，使伤员在精神和心理上得到安慰，共渡难关。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以医院迁至五云里、收治伤员任务最重为背景，至工作人员忍饥挨饿并唱歌、做小动作安慰伤员、共渡难关为止；不扩展到后续决战和部队撤退。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"医院迁至五云里，正值收治伤员任务最重时期\",\n      \"process_text\": \"医院离开原驻地后，在五云里落脚；五月里到达五云里，当时也是收伤员任务最重的时候。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0070\"\n      ],\n      \"evidence_quote\": \"这港口是进山的一个重要地方。我们医院离开刚走5华里，在背后那个山洼洼里头，那个名称叫做五云里。“一二三四五”的“五”，“天上云”的“云”，这个“里程碑”的“里”。所以我们那的老百姓叫五云里，五月里到的五云里，五云里是红五月。我们革命是红五月的时候，也是最艰苦的时候，也（是）收伤员任务最重的时候。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"在缺吃少穿、忍饥挨饿中坚持工作并保持镇静乐观\",\n      \"process_text\": \"没有吃、没有穿，几乎天天饿肠辘辘，但仍要干事、要镇静、要乐观，还要给伤兵唱歌、安慰伤员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0072\"\n      ],\n      \"evidence_quote\": \"没有吃（陈海峰大笑）没有穿，敌人给我们……敌人啊，那里能弄到一点，还不够，狼狈不堪，真是叫狼狈不堪。那个不能叫饥饿交加，几乎天天饿肠辘辘，还要干事，还要镇静，还要乐观，还要给伤兵唱歌，还要安慰伤员。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"止痛药不足，伤员疼痛反复，工作人员持续安慰\",\n      \"process_text\": \"伤员疼痛时止痛药不够，吗啡、鸦片汀很少；药效只能维持约3小时，过后又疼又叫，工作人员就要安慰他。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0072\"\n      ],\n      \"evidence_quote\": \"伤员有的时候疼了，止痛药不够，哪有那么多吗啡，哪有那么多鸦片汀啊？吃鸦片汀，他就不疼了。吃一吃维持3个小时，3个小时（以后）又疼了，他又叫了，那要安慰他。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE010-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"唱抗战歌曲、做小动作慰问伤员，使伤员精神心理得到安慰\",\n      \"process_text\": \"工作人员忍饥挨饿仍保持乐观，唱抗战歌曲给伤员听，做小手势、学小口技等慰问伤员，使伤员精神上、心理上得到安慰，共渡难关。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0074\"\n      ],\n      \"evidence_quote\": \"要忍饥挨饿，自己还要乐观，还要唱抗战歌曲给伤员听，还要做些小的动作。有的人做些小手势，小（听不清）的，有的人学点小口技的，弄点这个慰问伤员。工作人员里面什么人员都有啊，是不是。那么这样子呢，使伤员精神上得到安慰，心理上得到安慰，共渡难关。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE010-P01\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0072\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE010-P02\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE010-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0072\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE010-P03\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE010-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0074\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-18",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC02-DE010",
+    "event_enrichment": {
+      "result_state": "医院在五云里缺吃少穿、忍饥挨饿的条件下继续收治伤员，并通过唱歌、做小动作等方式安慰伤员，使伤员在精神和心理上得到安慰，共渡难关。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以医院迁至五云里、收治伤员任务最重为背景，至工作人员忍饥挨饿并唱歌、做小动作安慰伤员、共渡难关为止；不扩展到后续决战和部队撤退。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC02-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "医院迁至五云里，正值收治伤员任务最重时期",
+        "process_text": "医院离开原驻地后，在五云里落脚；五月里到达五云里，当时也是收伤员任务最重的时候。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0070"
+        ],
+        "evidence_quote": "这港口是进山的一个重要地方。我们医院离开刚走5华里，在背后那个山洼洼里头，那个名称叫做五云里。“一二三四五”的“五”，“天上云”的“云”，这个“里程碑”的“里”。所以我们那的老百姓叫五云里，五月里到的五云里，五云里是红五月。我们革命是红五月的时候，也是最艰苦的时候，也（是）收伤员任务最重的时候。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "在缺吃少穿、忍饥挨饿中坚持工作并保持镇静乐观",
+        "process_text": "没有吃、没有穿，几乎天天饿肠辘辘，但仍要干事、要镇静、要乐观，还要给伤兵唱歌、安慰伤员。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0072"
+        ],
+        "evidence_quote": "没有吃（陈海峰大笑）没有穿，敌人给我们……敌人啊，那里能弄到一点，还不够，狼狈不堪，真是叫狼狈不堪。那个不能叫饥饿交加，几乎天天饿肠辘辘，还要干事，还要镇静，还要乐观，还要给伤兵唱歌，还要安慰伤员。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "止痛药不足，伤员疼痛反复，工作人员持续安慰",
+        "process_text": "伤员疼痛时止痛药不够，吗啡、鸦片汀很少；药效只能维持约3小时，过后又疼又叫，工作人员就要安慰他。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0072"
+        ],
+        "evidence_quote": "伤员有的时候疼了，止痛药不够，哪有那么多吗啡，哪有那么多鸦片汀啊？吃鸦片汀，他就不疼了。吃一吃维持3个小时，3个小时（以后）又疼了，他又叫了，那要安慰他。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE010-P04",
+        "stage_order": 4,
+        "stage_summary": "唱抗战歌曲、做小动作慰问伤员，使伤员精神心理得到安慰",
+        "process_text": "工作人员忍饥挨饿仍保持乐观，唱抗战歌曲给伤员听，做小手势、学小口技等慰问伤员，使伤员精神上、心理上得到安慰，共渡难关。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0074"
+        ],
+        "evidence_quote": "要忍饥挨饿，自己还要乐观，还要唱抗战歌曲给伤员听，还要做些小的动作。有的人做些小手势，小（听不清）的，有的人学点小口技的，弄点这个慰问伤员。工作人员里面什么人员都有啊，是不是。那么这样子呢，使伤员精神上得到安慰，心理上得到安慰，共渡难关。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC02-DE010-P01",
+        "target_stage_id": "BATCH06-DOC02-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0072",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE010-P02",
+        "target_stage_id": "BATCH06-DOC02-DE010-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0072",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE010-P03",
+        "target_stage_id": "BATCH06-DOC02-DE010-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0074",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

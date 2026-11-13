@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T08:58:19",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC03-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC03-DE002",
+  "usage": {
+    "prompt_tokens": 1266,
+    "total_tokens": 7973,
+    "completion_tokens": 6707,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5691
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 6706000,
+    "time_to_first_token_ms": 97694
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V1-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC03-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"后藤勇在抗战胜利遣送回国时变成日本共产党的骨干之一。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件从后藤勇被俘后到新四军军部开始，到抗战胜利遣送回国时其变成日本共产党骨干之一结束；依据 S0007 与 S0009 的叙述顺序。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"后藤勇到新四军军部\",\n      \"process_text\": \"后藤勇被俘后到了新四军军部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0007\"\n      ],\n      \"evidence_quote\": \"后来后藤勇到了新四军军部\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"参加演出\",\n      \"process_text\": \"到了军部以后，还参加演出。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0009\"\n      ],\n      \"evidence_quote\": \"到了军部以后，还参加演出\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"参加反战同盟\",\n      \"process_text\": \"以后又参加反战同盟。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0009\"\n      ],\n      \"evidence_quote\": \"以后又参加反战同盟\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"遣送回国时成为日本共产党骨干之一\",\n      \"process_text\": \"抗战胜利遣送回国的时候，他变成日本共产党的骨干之一。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0009\"\n      ],\n      \"evidence_quote\": \"抗战胜利遣送回国的时候，他变成日本共产党的骨干之一\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE002-P01\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0009\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE002-P02\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0009\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE002-P03\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE002-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0009\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V1-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC03-DE002",
+    "event_enrichment": {
+      "result_state": "后藤勇在抗战胜利遣送回国时变成日本共产党的骨干之一。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件从后藤勇被俘后到新四军军部开始，到抗战胜利遣送回国时其变成日本共产党骨干之一结束；依据 S0007 与 S0009 的叙述顺序。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC03-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "后藤勇到新四军军部",
+        "process_text": "后藤勇被俘后到了新四军军部。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0007"
+        ],
+        "evidence_quote": "后来后藤勇到了新四军军部",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "参加演出",
+        "process_text": "到了军部以后，还参加演出。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0009"
+        ],
+        "evidence_quote": "到了军部以后，还参加演出",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "参加反战同盟",
+        "process_text": "以后又参加反战同盟。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0009"
+        ],
+        "evidence_quote": "以后又参加反战同盟",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "遣送回国时成为日本共产党骨干之一",
+        "process_text": "抗战胜利遣送回国的时候，他变成日本共产党的骨干之一。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0009"
+        ],
+        "evidence_quote": "抗战胜利遣送回国的时候，他变成日本共产党的骨干之一",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC03-DE002-P01",
+        "target_stage_id": "BATCH02-DOC03-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0009",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE002-P02",
+        "target_stage_id": "BATCH02-DOC03-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0009",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE002-P03",
+        "target_stage_id": "BATCH02-DOC03-DE002-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC03-S0009",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

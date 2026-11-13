@@ -1,0 +1,224 @@
+{
+  "run_time": "2026-11-10T20:13:18",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC06-W002",
+  "technical_document_id": "BATCH03-DOC06",
+  "document_id": "05.杨永松100506（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC06-S0022",
+    "BATCH03-DOC06-S0023",
+    "BATCH03-DOC06-S0024",
+    "BATCH03-DOC06-S0025",
+    "BATCH03-DOC06-S0026",
+    "BATCH03-DOC06-S0027",
+    "BATCH03-DOC06-S0028",
+    "BATCH03-DOC06-S0029",
+    "BATCH03-DOC06-S0030",
+    "BATCH03-DOC06-S0031",
+    "BATCH03-DOC06-S0032",
+    "BATCH03-DOC06-S0033",
+    "BATCH03-DOC06-S0034",
+    "BATCH03-DOC06-S0035",
+    "BATCH03-DOC06-S0036",
+    "BATCH03-DOC06-S0037",
+    "BATCH03-DOC06-S0038",
+    "BATCH03-DOC06-S0039",
+    "BATCH03-DOC06-S0040",
+    "BATCH03-DOC06-S0041",
+    "BATCH03-DOC06-S0042",
+    "BATCH03-DOC06-S0043",
+    "BATCH03-DOC06-S0044",
+    "BATCH03-DOC06-S0045",
+    "BATCH03-DOC06-S0046",
+    "BATCH03-DOC06-S0047",
+    "BATCH03-DOC06-S0048",
+    "BATCH03-DOC06-S0049"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 3,
+    "assigned_segment_count": 8,
+    "unassigned_segment_count": 20,
+    "input_segment_count": 28,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC06-W002",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC06-W002-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0028",
+          "BATCH03-DOC06-S0030"
+        ],
+        "event": {
+          "event_name": "午城追击战斗后撤至山上",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "追击日军至城附近并交火后撤退",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们那个部队",
+              "normalized_entity": "685团（两个营）",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "他",
+              "normalized_entity": "日军",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "城附近",
+              "normalized_value": "午城附近"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "弹药很少，国民党没给我们补充子弹",
+              "normalized_value": "弹药不足"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "没有认真地专门攻过，追到那里去的。他不是钻到城里去了吗？打了一打，因为我们那个部队只有两个营，弹药很少，国民党没给我们补充子弹。",
+          "type_basis": "核心过程为追击、交火、撤退等可观察行动，Actor为部队，Goal为日军，符合物质过程；非言语、心理或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W002-E02",
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0025",
+          "BATCH03-DOC06-S0030",
+          "BATCH03-DOC06-S0032"
+        ],
+        "event": {
+          "event_name": "到汾阳孝义后整训、收集武器并组织汾孝游击队",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "整训、收集武器并组织汾孝游击队",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "杨永松所在部队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "武器",
+              "normalized_entity": "武器",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "汾孝游击队",
+              "normalized_entity": "汾孝游击队",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "汾阳、孝义",
+              "normalized_value": "汾阳、孝义"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们到了汾阳、孝义以后，主要是一方面部队训练，因为我们不是新兵多嘛，另一个方面就是群众有武器，有的时候收些武器来补充自己，另外跟当地党委在一起，组织了一个汾孝游击队。",
+          "type_basis": "核心过程为部队训练、收集武器、组织游击队等组织性物质行动，Actor为部队，Goal包括武器和汾孝游击队；非单纯关系或言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC06-W002-E03",
+        "source_segment_ids": [
+          "BATCH03-DOC06-S0036",
+          "BATCH03-DOC06-S0037",
+          "BATCH03-DOC06-S0039",
+          "BATCH03-DOC06-S0041"
+        ],
+        "event": {
+          "event_name": "新兵营获取阎锡山仓库武器并拒绝归还",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "弄开仓库拿取武器并拒绝归还",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他这个营",
+              "normalized_entity": "新兵营",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "枪",
+              "normalized_entity": "武器",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "有一天",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "有一天在一个山洞里边，老百姓告诉他，你们怎么没有枪啊？他说那个地方有，阎锡山存的武器。所以这个营长和教导员管他妈的，你日本人来你不是丢掉了就丢掉了，他那个（仓库）没（人）看，仓库的人也跑了。他就把他弄开，每一个人该拿枪的拿一支枪，该拿机枪的拿机枪，该拿重机枪的拿重机枪。",
+          "type_basis": "核心过程为弄开仓库、拿取枪械、装备子弹等可观察物质行动，Actor为新兵营，Goal为武器；后续质问和拖延是同一事件的结果，不改变物质类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC06-S0022",
+      "BATCH03-DOC06-S0023",
+      "BATCH03-DOC06-S0024",
+      "BATCH03-DOC06-S0026",
+      "BATCH03-DOC06-S0027",
+      "BATCH03-DOC06-S0029",
+      "BATCH03-DOC06-S0031",
+      "BATCH03-DOC06-S0033",
+      "BATCH03-DOC06-S0034",
+      "BATCH03-DOC06-S0035",
+      "BATCH03-DOC06-S0038",
+      "BATCH03-DOC06-S0040",
+      "BATCH03-DOC06-S0042",
+      "BATCH03-DOC06-S0043",
+      "BATCH03-DOC06-S0044",
+      "BATCH03-DOC06-S0045",
+      "BATCH03-DOC06-S0046",
+      "BATCH03-DOC06-S0047",
+      "BATCH03-DOC06-S0048",
+      "BATCH03-DOC06-S0049"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH03-DOC06-W002\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W002-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0028\",\n        \"BATCH03-DOC06-S0030\"\n      ],\n      \"event\": {\n        \"event_name\": \"午城追击战斗后撤至山上\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"追击日军至城附近并交火后撤退\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们那个部队\",\n            \"normalized_entity\": \"685团（两个营）\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"他\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"城附近\",\n            \"normalized_value\": \"午城附近\"\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"弹药很少，国民党没给我们补充子弹\",\n            \"normalized_value\": \"弹药不足\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"没有认真地专门攻过，追到那里去的。他不是钻到城里去了吗？打了一打，因为我们那个部队只有两个营，弹药很少，国民党没给我们补充子弹。\",\n        \"type_basis\": \"核心过程为追击、交火、撤退等可观察行动，Actor为部队，Goal为日军，符合物质过程；非言语、心理或关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W002-E02\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0025\",\n        \"BATCH03-DOC06-S0030\",\n        \"BATCH03-DOC06-S0032\"\n      ],\n      \"event\": {\n        \"event_name\": \"到汾阳孝义后整训、收集武器并组织汾孝游击队\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"整训、收集武器并组织汾孝游击队\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"杨永松所在部队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"武器\",\n            \"normalized_entity\": \"武器\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"汾孝游击队\",\n            \"normalized_entity\": \"汾孝游击队\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"汾阳、孝义\",\n            \"normalized_value\": \"汾阳、孝义\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们到了汾阳、孝义以后，主要是一方面部队训练，因为我们不是新兵多嘛，另一个方面就是群众有武器，有的时候收些武器来补充自己，另外跟当地党委在一起，组织了一个汾孝游击队。\",\n        \"type_basis\": \"核心过程为部队训练、收集武器、组织游击队等组织性物质行动，Actor为部队，Goal包括武器和汾孝游击队；非单纯关系或言语过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC06-W002-E03\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC06-S0036\",\n        \"BATCH03-DOC06-S0037\",\n        \"BATCH03-DOC06-S0039\",\n        \"BATCH03-DOC06-S0041\"\n      ],\n      \"event\": {\n        \"event_name\": \"新兵营获取阎锡山仓库武器并拒绝归还\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"弄开仓库拿取武器并拒绝归还\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"他这个营\",\n            \"normalized_entity\": \"新兵营\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"枪\",\n            \"normalized_entity\": \"武器\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"有一天\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"有一天在一个山洞里边，老百姓告诉他，你们怎么没有枪啊？他说那个地方有，阎锡山存的武器。所以这个营长和教导员管他妈的，你日本人来你不是丢掉了就丢掉了，他那个（仓库）没（人）看，仓库的人也跑了。他就把他弄开，每一个人该拿枪的拿一支枪，该拿机枪的拿机枪，该拿重机枪的拿重机枪。\",\n        \"type_basis\": \"核心过程为弄开仓库、拿取枪械、装备子弹等可观察物质行动，Actor为新兵营，Goal为武器；后续质问和拖延是同一事件的结果，不改变物质类型。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC06-S0022\",\n    \"BATCH03-DOC06-S0023\",\n    \"BATCH03-DOC06-S0024\",\n    \"BATCH03-DOC06-S0026\",\n    \"BATCH03-DOC06-S0027\",\n    \"BATCH03-DOC06-S0029\",\n    \"BATCH03-DOC06-S0031\",\n    \"BATCH03-DOC06-S0033\",\n    \"BATCH03-DOC06-S0034\",\n    \"BATCH03-DOC06-S0035\",\n    \"BATCH03-DOC06-S0038\",\n    \"BATCH03-DOC06-S0040\",\n    \"BATCH03-DOC06-S0042\",\n    \"BATCH03-DOC06-S0043\",\n    \"BATCH03-DOC06-S0044\",\n    \"BATCH03-DOC06-S0045\",\n    \"BATCH03-DOC06-S0046\",\n    \"BATCH03-DOC06-S0047\",\n    \"BATCH03-DOC06-S0048\",\n    \"BATCH03-DOC06-S0049\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5738,
+    "total_tokens": 28621,
+    "completion_tokens": 22883,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 21309
+    },
+    "tokens_per_second": 11441000,
+    "time_to_first_token_ms": 207561,
+    "time_per_output_token_ms": 0
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "validated_at": "2026-11-11T05:22:18",
+  "source_raw_response": "04_54份正式语料批处理/raw_responses/cuc_qwen/20261111_051354_BATCH04-DOC08-W001.json",
+  "model_id": "cuc/qwen",
+  "window_id": "BATCH04-DOC08-W001",
+  "technical_document_id": "BATCH04-DOC08",
+  "document_id": "10.陈锐霆 090509（三校后 阅读版）.docx",
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 6,
+    "assigned_segment_count": 11,
+    "unassigned_segment_count": 12,
+    "input_segment_count": 23,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH04-DOC08-W001-E06"
+  ],
+  "postprocessed_output": {
+    "window_id": "BATCH04-DOC08-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E01",
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0003"
+        ],
+        "event": {
+          "event_name": "陈锐霆因起义负伤获得老同志尊重并与各部门关系良好",
+          "event_type": "MENTAL",
+          "event_type_zh": "心理",
+          "core_process": "受到尊重",
+          "participants": [
+            {
+              "role": "Senser",
+              "mention": "底下的老同志",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Phenomenon",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "底下的老同志他们都对我还是很尊重的。",
+          "type_basis": "核心是老同志对陈锐霆的尊重，属心理过程；Senser=底下的老同志，Phenomenon=陈锐霆。与各部门相处好涉及关系状态，故保留RELATIONAL候选。",
+          "alternative_event_type": "RELATIONAL",
+          "ambiguity_reason": "事件同时包含心理尊重与关系状态，主导类型需复核。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E02",
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0005"
+        ],
+        "event": {
+          "event_name": "陈锐霆领导整风",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "领导整风",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Scope",
+              "mention": "整风",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "学习快要结束了",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我就领导整风",
+          "type_basis": "领导整风是组织行动和职业劳动，可用What did X do?测试；Actor=陈锐霆，Scope=整风，排除心理和关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E03",
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0005",
+          "BATCH04-DOC08-S0008",
+          "BATCH04-DOC08-S0010"
+        ],
+        "event": {
+          "event_name": "陈锐霆等庆祝日本投降胜利",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "开大会庆祝胜利",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "人们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "胜利",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "那个时候",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "狂欢",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "给地方上也做宣传",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "开大会，庆祝胜利，人们都流泪了！",
+          "type_basis": "集体开大会庆祝是可观察组织行动，Actor=人们，Goal=胜利；日本投降消息和广播作为触发阶段，不单独主导事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E04",
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "event": {
+          "event_name": "三师打下淮阴后陈锐霆接任淮阴警备司令",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "打下淮阴并任命警备司令",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "三师",
+              "normalized_entity": "新四军三师",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "淮阴",
+              "normalized_entity": "淮阴",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "中央",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "鬼子投降以后",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他的警备司令（一职）由我来担任。",
+          "type_basis": "军事行动和组织调动构成物质过程；三师打下淮阴、中央命令和军部转移推动陈锐霆接任警备司令。任命身份变化具有关系过程特征，故需复核。",
+          "alternative_event_type": "RELATIONAL",
+          "ambiguity_reason": "“由我来担任”建立职务身份，可视为关系识别；但前因是军事行动和组织调动，主导类型不确定。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E05",
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0012",
+          "BATCH04-DOC08-S0014",
+          "BATCH04-DOC08-S0016"
+        ],
+        "event": {
+          "event_name": "陈锐霆作为先遣代表赴山东汇报并驻临沂",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "先遣赴山东汇报并安排驻地",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "山东",
+              "normalized_entity": "山东",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "黎玉",
+              "normalized_entity": "黎玉",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "临沂的西关，里头有个天主教堂",
+              "normalized_value": "临沂西关天主教堂"
+            },
+            {
+              "kind": "MANNER",
+              "value": "作为一个先遣的代表",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "帮助搞驻地",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "现在你们军部没有人，副军长年纪也大了，现在参谋长也还没有到任。",
+          "evidence_quote": "就向他汇报新四军军部的情况，另外部队上来的情况，主要是讲军部的情况，请他帮助搞驻地。",
+          "type_basis": "陈锐霆执行先遣汇报和安排驻地任务，属组织行动和执行任务；Actor=陈锐霆，Goal=山东，Recipient=黎玉。汇报和打电报为言语阶段，不改变主导物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E06",
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0018",
+          "BATCH04-DOC08-S0020",
+          "BATCH04-DOC08-S0022",
+          "BATCH04-DOC08-S0024"
+        ],
+        "event": {
+          "event_name": "陈锐霆等接待美国代表并举行欢迎讲话",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "欢迎讲话交锋",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "陈老总",
+              "normalized_entity": "陈毅",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Receiver",
+              "mention": "他们",
+              "normalized_entity": "美国代表",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Sayer",
+              "mention": "他们",
+              "normalized_entity": "美国代表",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Receiver",
+              "mention": "陈锐霆",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "临沂",
+              "normalized_value": "临沂"
+            },
+            {
+              "kind": "TIME",
+              "value": "晚上",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "好好接待",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "演《兄妹开荒》的小段",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "无论如何不能够忘记过去啊，现在我们从战争中（走出来），现在停战了，但是不要忘了过去。",
+          "evidence_quote": "最后陈老总接着又讲话，他说无论如何不能够忘记过去啊，他说现在我们从战争中（走出来），现在停战了，但是不要忘了过去。",
+          "type_basis": "欢迎会上美国代表批评与陈老总回应构成明确象征交换；Sayer=美国代表/陈老总，Receiver=陈锐霆/美国代表。接待和演出为物质背景，故保留MATERIAL候选。",
+          "alternative_event_type": "MATERIAL",
+          "ambiguity_reason": "事件同时包含接待、演出等物质行动与欢迎讲话交锋，主导类型需复核。；候选触及非末窗口最后一个受访者片段，可能在下一窗口继续。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH04-DOC08-S0002",
+      "BATCH04-DOC08-S0004",
+      "BATCH04-DOC08-S0006",
+      "BATCH04-DOC08-S0007",
+      "BATCH04-DOC08-S0009",
+      "BATCH04-DOC08-S0011",
+      "BATCH04-DOC08-S0013",
+      "BATCH04-DOC08-S0015",
+      "BATCH04-DOC08-S0017",
+      "BATCH04-DOC08-S0019",
+      "BATCH04-DOC08-S0021",
+      "BATCH04-DOC08-S0023"
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 5899,
+    "total_tokens": 39072,
+    "completion_tokens": 33173,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 30083
+    },
+    "time_to_first_token_ms": 504096,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 16586000
+  }
+}

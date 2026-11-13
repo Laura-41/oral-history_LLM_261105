@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T00:46:03",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC06-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC06-DE003",
+  "usage": {
+    "prompt_tokens": 1245,
+    "total_tokens": 3259,
+    "completion_tokens": 2014,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1221
+    },
+    "time_to_first_token_ms": 17284,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC06-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"迫击炮送炸药试制发生爆炸，参谋长韩联生、工兵团副团长刘金山等共七人牺牲。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于大炮弹不够、自己搞迫击炮送炸药的背景与行动，止于爆炸后七人牺牲并被称为“付的代价”；不包含其后战地接收命令等内容。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"因大炮弹不足，决定自行搞迫击炮送炸药。\",\n      \"process_text\": \"大炮弹不够，自己搞迫击炮送炸药。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0007\"\n      ],\n      \"evidence_quote\": \"另外我们大炮弹不够，我们就自己搞那个迫击炮，送炸药。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"有经验的老工兵参谋长到后方领导试制，结果发生爆炸。\",\n      \"process_text\": \"参谋长是一个很有经验的老工兵，卸去领导到后方来搞这个东西，不行，搞爆炸了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0007\"\n      ],\n      \"evidence_quote\": \"我们那个参谋长是一个很有经验的老工兵，卸去领导到后方来搞这个东西，不行，搞爆炸了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"爆炸造成参谋长韩联生、副团长刘金山等共七人牺牲。\",\n      \"process_text\": \"爆炸后参谋长韩联生牺牲，工兵团副团长刘金山也牺牲，一共七个同志牺牲，是一个代价。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0007\"\n      ],\n      \"evidence_quote\": \"参谋长韩联生牺牲了，还有一个工兵团的副团长刘金山也牺牲了，一共七个同志吧，牺牲了。这是一个我们付的代价。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE003-P01\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0007\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE003-P02\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE003-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0007\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC06-DE003",
+    "event_enrichment": {
+      "result_state": "迫击炮送炸药试制发生爆炸，参谋长韩联生、工兵团副团长刘金山等共七人牺牲。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于大炮弹不够、自己搞迫击炮送炸药的背景与行动，止于爆炸后七人牺牲并被称为“付的代价”；不包含其后战地接收命令等内容。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC06-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "因大炮弹不足，决定自行搞迫击炮送炸药。",
+        "process_text": "大炮弹不够，自己搞迫击炮送炸药。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0007"
+        ],
+        "evidence_quote": "另外我们大炮弹不够，我们就自己搞那个迫击炮，送炸药。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "有经验的老工兵参谋长到后方领导试制，结果发生爆炸。",
+        "process_text": "参谋长是一个很有经验的老工兵，卸去领导到后方来搞这个东西，不行，搞爆炸了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0007"
+        ],
+        "evidence_quote": "我们那个参谋长是一个很有经验的老工兵，卸去领导到后方来搞这个东西，不行，搞爆炸了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "爆炸造成参谋长韩联生、副团长刘金山等共七人牺牲。",
+        "process_text": "爆炸后参谋长韩联生牺牲，工兵团副团长刘金山也牺牲，一共七个同志牺牲，是一个代价。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0007"
+        ],
+        "evidence_quote": "参谋长韩联生牺牲了，还有一个工兵团的副团长刘金山也牺牲了，一共七个同志吧，牺牲了。这是一个我们付的代价。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC06-DE003-P01",
+        "target_stage_id": "BATCH06-DOC06-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0007",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE003-P02",
+        "target_stage_id": "BATCH06-DOC06-DE003-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC06-S0007",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

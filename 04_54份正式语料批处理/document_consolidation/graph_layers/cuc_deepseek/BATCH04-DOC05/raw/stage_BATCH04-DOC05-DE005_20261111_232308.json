@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T23:23:08",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC05-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC05-DE005",
+  "usage": {
+    "prompt_tokens": 1064,
+    "total_tokens": 2682,
+    "completion_tokens": 1618,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1107
+    },
+    "time_to_first_token_ms": 13109,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC05-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰帮陈仁洪找医生专家来看病；原文未交代后续诊疗结果。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈仁洪回来后在301患血液病为背景，核心边界为陈海峰帮其找医生专家看病；“死的”属于后续/背景信息，未纳入阶段核心过程。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈仁洪回来后在301患血液病，成为后续找医生看病的背景。\",\n      \"process_text\": \"回来以后，在301生血液病\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0176\"\n      ],\n      \"evidence_quote\": \"回来以后，在301生血液病\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈海峰帮陈仁洪找医生专家来看病。\",\n      \"process_text\": \"我还帮他找医生专家来看病。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0177\"\n      ],\n      \"evidence_quote\": \"我还帮他找医生专家来看病。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE005-P01\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE005-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0176\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC05-DE005",
+    "event_enrichment": {
+      "result_state": "陈海峰帮陈仁洪找医生专家来看病；原文未交代后续诊疗结果。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以陈仁洪回来后在301患血液病为背景，核心边界为陈海峰帮其找医生专家看病；“死的”属于后续/背景信息，未纳入阶段核心过程。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC05-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "陈仁洪回来后在301患血液病，成为后续找医生看病的背景。",
+        "process_text": "回来以后，在301生血液病",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0176"
+        ],
+        "evidence_quote": "回来以后，在301生血液病",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "陈海峰帮陈仁洪找医生专家来看病。",
+        "process_text": "我还帮他找医生专家来看病。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0177"
+        ],
+        "evidence_quote": "我还帮他找医生专家来看病。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC05-DE005-P01",
+        "target_stage_id": "BATCH04-DOC05-DE005-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC05-S0176",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

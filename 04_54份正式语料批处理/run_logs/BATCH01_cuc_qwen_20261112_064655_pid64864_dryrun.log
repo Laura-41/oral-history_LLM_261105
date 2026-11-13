@@ -1,0 +1,9 @@
+BATCH01 / cuc/qwen：3份文档、12个窗口、7个步骤。
+dry-run：以下命令不会执行。
+  [窗口抽取 BATCH01-DOC01] /Users/yuqi/.workbuddy/binaries/python/versions/3.13.12/bin/python3 scripts/run_formal_batch.py --model cuc/qwen --batch BATCH01 --document BATCH01-DOC01 --timeout 1800
+  [窗口抽取 BATCH01-DOC02] /Users/yuqi/.workbuddy/binaries/python/versions/3.13.12/bin/python3 scripts/run_formal_batch.py --model cuc/qwen --batch BATCH01 --document BATCH01-DOC02 --timeout 1800
+  [窗口抽取 BATCH01-DOC03] /Users/yuqi/.workbuddy/binaries/python/versions/3.13.12/bin/python3 scripts/run_formal_batch.py --model cuc/qwen --batch BATCH01 --document BATCH01-DOC03 --timeout 1800
+  [准备文档级归并输入] /Users/yuqi/.workbuddy/binaries/python/versions/3.13.12/bin/python3 scripts/prepare_document_consolidation.py --model cuc/qwen --batch BATCH01 --all
+  [文档级归并 BATCH01-DOC01] /Users/yuqi/.workbuddy/binaries/python/versions/3.13.12/bin/python3 scripts/run_document_consolidation.py --model cuc/qwen --document BATCH01-DOC01 --timeout 2400
+  [文档级归并 BATCH01-DOC02] /Users/yuqi/.workbuddy/binaries/python/versions/3.13.12/bin/python3 scripts/run_document_consolidation.py --model cuc/qwen --document BATCH01-DOC02 --timeout 2400
+  [文档级归并 BATCH01-DOC03] /Users/yuqi/.workbuddy/binaries/python/versions/3.13.12/bin/python3 scripts/run_document_consolidation.py --model cuc/qwen --document BATCH01-DOC03 --timeout 2400

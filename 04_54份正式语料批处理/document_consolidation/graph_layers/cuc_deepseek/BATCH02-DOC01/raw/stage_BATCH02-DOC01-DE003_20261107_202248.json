@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-07T20:22:48",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC01-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC01-DE003",
+  "usage": {
+    "prompt_tokens": 1259,
+    "total_tokens": 5773,
+    "completion_tokens": 4514,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3775
+    },
+    "time_to_first_token_ms": 35135,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4513000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V1-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC01-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"地下交通站/机构已建立，军火和人员可经一站一站转运至江北江南\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件起于“建了地下交通站”，止于“到江北江南了”；后文关于张庆、山东等内容属于其他背景或事件，不纳入本事件阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"建立地下交通站\",\n      \"process_text\": \"建了地下交通站\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0032\"\n      ],\n      \"evidence_quote\": \"建了地下交通站\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"在江南各县利用地下交通机构，并借助青洪帮徒子徒孙开展联络\",\n      \"process_text\": \"江南每个县里面联络啊，都利用这个。先是建了地下交通机构，那么利用青洪帮的徒子徒孙。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0032\"\n      ],\n      \"evidence_quote\": \"江南每个县里面联络啊，都利用这个。先是建了地下交通机构，那么利用青洪帮的徒子徒孙。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC01-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"以一站一站接力方式向江北江南运送军火和人员\",\n      \"process_text\": \"一站一站送军火，送人啊，到江北江南了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC01-S0032\"\n      ],\n      \"evidence_quote\": \"一站一站送军火，送人啊，到江北江南了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC01-DE003-P01\",\n      \"target_stage_id\": \"BATCH02-DOC01-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC01-S0032\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC01-DE003-P02\",\n      \"target_stage_id\": \"BATCH02-DOC01-DE003-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC01-S0032\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC01-DE003",
+    "event_enrichment": {
+      "result_state": "地下交通站/机构已建立，军火和人员可经一站一站转运至江北江南",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件起于“建了地下交通站”，止于“到江北江南了”；后文关于张庆、山东等内容属于其他背景或事件，不纳入本事件阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC01-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "建立地下交通站",
+        "process_text": "建了地下交通站",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0032"
+        ],
+        "evidence_quote": "建了地下交通站",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC01-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "在江南各县利用地下交通机构，并借助青洪帮徒子徒孙开展联络",
+        "process_text": "江南每个县里面联络啊，都利用这个。先是建了地下交通机构，那么利用青洪帮的徒子徒孙。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0032"
+        ],
+        "evidence_quote": "江南每个县里面联络啊，都利用这个。先是建了地下交通机构，那么利用青洪帮的徒子徒孙。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC01-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "以一站一站接力方式向江北江南运送军火和人员",
+        "process_text": "一站一站送军火，送人啊，到江北江南了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC01-S0032"
+        ],
+        "evidence_quote": "一站一站送军火，送人啊，到江北江南了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC01-DE003-P01",
+        "target_stage_id": "BATCH02-DOC01-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC01-S0032",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC01-DE003-P02",
+        "target_stage_id": "BATCH02-DOC01-DE003-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC01-S0032",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

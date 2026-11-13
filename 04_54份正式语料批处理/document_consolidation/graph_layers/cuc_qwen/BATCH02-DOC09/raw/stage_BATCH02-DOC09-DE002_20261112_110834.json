@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T11:08:34",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC09-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC09-DE002",
+  "usage": {
+    "prompt_tokens": 1469,
+    "total_tokens": 9539,
+    "completion_tokens": 8070,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6796
+    },
+    "time_to_first_token_ms": 163043,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8069000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC09-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"政治处与11连奉命扩军并动员新兵，部队随后到沁源县附近休整，唐亮被派回685团当主任。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点依据S0026中师准备打仗并把政治处吴文玉带政治处和一个11连扩军去的叙述；终点依据S0028中到沁源县附近休息以及赶到以后唐亮被派回685团当主任的叙述。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"准备打仗背景下奉命扩军出发\",\n      \"process_text\": \"师里边准备配合129师侧击从娘子关西进的日军，在那边准备打仗时，吴文玉带着政治处和一个11连扩军去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0026\"\n      ],\n      \"evidence_quote\": \"就在这个时候，师里边准备配合129师，侧击从娘子关西进的日军。就在那边准备打仗，就把我们政治处的吴文玉，以后叫吴法宪，他带着我们政治处和一个11连扩军去。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"在榆社、武乡停留，部队下来\",\n      \"process_text\": \"部队在榆社、武乡停下，过了几天，他们打过了广阳沾尚镇以后部队下来了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0026\"\n      ],\n      \"evidence_quote\": \"我们在榆社、武乡停下，过了几天部队下来了，就是他们打过了广阳沾尚镇以后。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"他部队奉命到临汾动员新兵，我们随后到沁源休整\",\n      \"process_text\": \"他部队奉命赶快到临汾地区动员新兵来补充部队；我们接到通知他们先走、我们在后面跟，随后到沁源县，师部和旅在县附近住着休息。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0028\"\n      ],\n      \"evidence_quote\": \"他部队就奉命要赶快到临汾地区，去动员新兵来补充部队。我们呢，在那接到通知说他们先走，我们在后面跟。我们到沁源县，师部啊，我们这个旅呀，就在那里，县里的附近在那里住着休息。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"赶到沁源后唐亮被派回685团任主任\",\n      \"process_text\": \"我们赶到以后，政治处唐亮被师部派回685团当主任。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0028\"\n      ],\n      \"evidence_quote\": \"我们赶到以后呢，我们政治处唐亮，他就是师部又派回来到685团当主任。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE002-P01\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE002-P02\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0028\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE002-P03\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE002-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0028\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC09-DE002",
+    "event_enrichment": {
+      "result_state": "政治处与11连奉命扩军并动员新兵，部队随后到沁源县附近休整，唐亮被派回685团当主任。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点依据S0026中师准备打仗并把政治处吴文玉带政治处和一个11连扩军去的叙述；终点依据S0028中到沁源县附近休息以及赶到以后唐亮被派回685团当主任的叙述。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC09-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "准备打仗背景下奉命扩军出发",
+        "process_text": "师里边准备配合129师侧击从娘子关西进的日军，在那边准备打仗时，吴文玉带着政治处和一个11连扩军去。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0026"
+        ],
+        "evidence_quote": "就在这个时候，师里边准备配合129师，侧击从娘子关西进的日军。就在那边准备打仗，就把我们政治处的吴文玉，以后叫吴法宪，他带着我们政治处和一个11连扩军去。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "在榆社、武乡停留，部队下来",
+        "process_text": "部队在榆社、武乡停下，过了几天，他们打过了广阳沾尚镇以后部队下来了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0026"
+        ],
+        "evidence_quote": "我们在榆社、武乡停下，过了几天部队下来了，就是他们打过了广阳沾尚镇以后。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "他部队奉命到临汾动员新兵，我们随后到沁源休整",
+        "process_text": "他部队奉命赶快到临汾地区动员新兵来补充部队；我们接到通知他们先走、我们在后面跟，随后到沁源县，师部和旅在县附近住着休息。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0028"
+        ],
+        "evidence_quote": "他部队就奉命要赶快到临汾地区，去动员新兵来补充部队。我们呢，在那接到通知说他们先走，我们在后面跟。我们到沁源县，师部啊，我们这个旅呀，就在那里，县里的附近在那里住着休息。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "赶到沁源后唐亮被派回685团任主任",
+        "process_text": "我们赶到以后，政治处唐亮被师部派回685团当主任。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0028"
+        ],
+        "evidence_quote": "我们赶到以后呢，我们政治处唐亮，他就是师部又派回来到685团当主任。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC09-DE002-P01",
+        "target_stage_id": "BATCH02-DOC09-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE002-P02",
+        "target_stage_id": "BATCH02-DOC09-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0028",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE002-P03",
+        "target_stage_id": "BATCH02-DOC09-DE002-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0028",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

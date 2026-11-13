@@ -1,0 +1,403 @@
+{
+  "run_time": "2026-11-10T18:46:46",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC01-W003",
+  "technical_document_id": "BATCH03-DOC01",
+  "document_id": "05.陈海峰（二访）（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC01-S0046",
+    "BATCH03-DOC01-S0047",
+    "BATCH03-DOC01-S0048",
+    "BATCH03-DOC01-S0049",
+    "BATCH03-DOC01-S0050",
+    "BATCH03-DOC01-S0051",
+    "BATCH03-DOC01-S0052",
+    "BATCH03-DOC01-S0053",
+    "BATCH03-DOC01-S0054",
+    "BATCH03-DOC01-S0055",
+    "BATCH03-DOC01-S0056",
+    "BATCH03-DOC01-S0057",
+    "BATCH03-DOC01-S0058",
+    "BATCH03-DOC01-S0059",
+    "BATCH03-DOC01-S0060",
+    "BATCH03-DOC01-S0061",
+    "BATCH03-DOC01-S0062",
+    "BATCH03-DOC01-S0063",
+    "BATCH03-DOC01-S0064",
+    "BATCH03-DOC01-S0065",
+    "BATCH03-DOC01-S0066",
+    "BATCH03-DOC01-S0067",
+    "BATCH03-DOC01-S0068"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 5,
+    "assigned_segment_count": 10,
+    "unassigned_segment_count": 13,
+    "input_segment_count": 23,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH03-DOC01-W003-E05"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC01-W003",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC01-W003-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC01-S0047"
+        ],
+        "event": {
+          "event_name": "军部派医务人员到四支队并建立江北指挥部",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "派医务人员、建立江北指挥部",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们军部",
+              "normalized_entity": "新四军军部",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "宫乃泉",
+              "normalized_entity": "宫乃泉",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "大批医务人员",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "江北指挥部",
+              "normalized_entity": "江北指挥部",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "四支队",
+              "normalized_entity": "新四军第四支队",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "DIRECTION",
+              "value": "高敬亭那边",
+              "normalized_value": "高敬亭方面"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "后来我们军部派了大批医务人员到四支队，到高敬亭那边。建立了江北指挥部，宫乃泉就带来一大批人过去，过去以后，那边基本和皖南军部水平就持平了。",
+          "type_basis": "核心是军部和宫乃泉派出人员、建立指挥部的组织行动，可用 What did X do? 测试；参与者为 Actor/Goal/Recipient，不是单纯身份或属性关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC01-W003-E02",
+        "source_segment_ids": [
+          "BATCH03-DOC01-S0049"
+        ],
+        "event": {
+          "event_name": "史沫特莱评价新四军医院为最好",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "评价新四军医院",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "史沫特莱",
+              "normalized_entity": "史沫特莱",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "你们",
+              "normalized_entity": "新四军医院",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Target",
+              "mention": "医院",
+              "normalized_entity": "新四军医院",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": "我在看了那么多国民党的医院，你们这里是最好的，我在中国的战场上面，没有看到过你们这样的医院。条件很差，但是你们管理得很好，而且那个技术水平是最好的。",
+          "evidence_quote": "应该说是顶呱呱（陈海峰右手竖起大拇指），就是史沫特莱讲的，“我在看了那么多国民党的医院，你们这里是最好的，我在中国的战场上面，没有看到过你们这样的医院。”她说：“条件很差，但是你们管理得很好，而且那个技术水平是最好的。”",
+          "type_basis": "包含史沫特莱直接引语和评价性言说，核心是象征交换；Sayer/Receiver/Target 配置支持 VERBAL，引语写入 projected_content 不重复为 Verbiage。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC01-W003-E03",
+        "source_segment_ids": [
+          "BATCH03-DOC01-S0051",
+          "BATCH03-DOC01-S0053"
+        ],
+        "event": {
+          "event_name": "新四军获得上海、香港、国民党及红十字会医疗支援",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "支援药品、人员和医疗队",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "上海地下党",
+              "normalized_entity": "上海地下党",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "香港",
+              "normalized_entity": "香港",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "国民党",
+              "normalized_entity": "国民党",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "孙科",
+              "normalized_entity": "孙科",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "宋庆龄",
+              "normalized_entity": "宋庆龄",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "红十字会总会",
+              "normalized_entity": "红十字会总会",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "林可胜",
+              "normalized_entity": "林可胜",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "我们",
+              "normalized_entity": "新四军",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "药品",
+              "normalized_entity": "药品",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "人",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "两个医疗队",
+              "normalized_entity": "两个医疗队",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "我们得天独厚，靠上海，靠南京，靠大城市，那么上海地下党支援，香港支援，我们还有国民党支援。",
+          "type_basis": "核心是多方实际支援、要药品要人、派医疗队等物质/组织行动，Actor/Goal/Recipient 配置明确；不是仅陈述条件归属。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC01-W003-E04",
+        "source_segment_ids": [
+          "BATCH03-DOC01-S0055",
+          "BATCH03-DOC01-S0057",
+          "BATCH03-DOC01-S0059"
+        ],
+        "event": {
+          "event_name": "新四军通过军医处经费和地方党秘密买药",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "秘密买药",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "地方党",
+              "normalized_entity": "地方党",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "军医处",
+              "normalized_entity": "新四军军医处",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "药",
+              "normalized_entity": "药品",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "我们卫生部",
+              "normalized_entity": "新四军卫生部",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "MANNER",
+              "value": "秘密",
+              "normalized_value": "秘密"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "大城市",
+              "normalized_value": "大城市"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "所以我们买药呀，是一个很大的任务，秘密买药，地方党很重要，地方党起非常大的作用。",
+          "type_basis": "核心是买药、批钱、支援等实际任务行动，可用 What did X do? 测试；地方党/军医处为 Actor，药品为 Goal，不是单纯存在或关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC01-W003-E05",
+        "source_segment_ids": [
+          "BATCH03-DOC01-S0063",
+          "BATCH03-DOC01-S0065",
+          "BATCH03-DOC01-S0067"
+        ],
+        "event": {
+          "event_name": "第六次繁昌战斗中二营在铁门闩设伏",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "打埋伏、布置阵地",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "二营",
+              "normalized_entity": "新四军二营",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "陈仁洪",
+              "normalized_entity": "陈仁洪",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "团部",
+              "normalized_entity": "团部",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "一百多个鬼子",
+              "normalized_entity": "日军部队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "机炮连",
+              "normalized_entity": "机炮连",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "我们",
+              "normalized_entity": "二营",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "5月2号5月3号",
+              "normalized_value": "5月2日至5月3日"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "铁门闩",
+              "normalized_value": "铁门闩"
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "歼灭敌人",
+              "normalized_value": "歼灭敌人"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "第六次“繁昌战斗”，5月2号5月3号敌人占领了繁昌，他有一支部队得到一个情报，就是说敌人已经出发了，要经过中分村，要给敌人的部队运送弹药。那么我们就是打埋伏，打埋伏就是我们这个二营管，那个时候我还在二营。",
+          "type_basis": "核心是作战、设伏、进入阵地和布置火力等物质行动，Actor/Goal 配置明确；不是心理感知或存在事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC01-S0046",
+      "BATCH03-DOC01-S0048",
+      "BATCH03-DOC01-S0050",
+      "BATCH03-DOC01-S0052",
+      "BATCH03-DOC01-S0054",
+      "BATCH03-DOC01-S0056",
+      "BATCH03-DOC01-S0058",
+      "BATCH03-DOC01-S0060",
+      "BATCH03-DOC01-S0061",
+      "BATCH03-DOC01-S0062",
+      "BATCH03-DOC01-S0064",
+      "BATCH03-DOC01-S0066",
+      "BATCH03-DOC01-S0068"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH03-DOC01-W003\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC01-W003-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC01-S0047\"\n      ],\n      \"event\": {\n        \"event_name\": \"军部派医务人员到四支队并建立江北指挥部\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"派医务人员、建立江北指挥部\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们军部\",\n            \"normalized_entity\": \"新四军军部\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"宫乃泉\",\n            \"normalized_entity\": \"宫乃泉\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"大批医务人员\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"江北指挥部\",\n            \"normalized_entity\": \"江北指挥部\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"四支队\",\n            \"normalized_entity\": \"新四军第四支队\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"高敬亭那边\",\n            \"normalized_value\": \"高敬亭方面\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"后来我们军部派了大批医务人员到四支队，到高敬亭那边。建立了江北指挥部，宫乃泉就带来一大批人过去，过去以后，那边基本和皖南军部水平就持平了。\",\n        \"type_basis\": \"核心是军部和宫乃泉派出人员、建立指挥部的组织行动，可用 What did X do? 测试；参与者为 Actor/Goal/Recipient，不是单纯身份或属性关系。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC01-W003-E02\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC01-S0049\"\n      ],\n      \"event\": {\n        \"event_name\": \"史沫特莱评价新四军医院为最好\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"评价新四军医院\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"史沫特莱\",\n            \"normalized_entity\": \"史沫特莱\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"你们\",\n            \"normalized_entity\": \"新四军医院\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Target\",\n            \"mention\": \"医院\",\n            \"normalized_entity\": \"新四军医院\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": \"我在看了那么多国民党的医院，你们这里是最好的，我在中国的战场上面，没有看到过你们这样的医院。条件很差，但是你们管理得很好，而且那个技术水平是最好的。\",\n        \"evidence_quote\": \"应该说是顶呱呱（陈海峰右手竖起大拇指），就是史沫特莱讲的，“我在看了那么多国民党的医院，你们这里是最好的，我在中国的战场上面，没有看到过你们这样的医院。”她说：“条件很差，但是你们管理得很好，而且那个技术水平是最好的。”\",\n        \"type_basis\": \"包含史沫特莱直接引语和评价性言说，核心是象征交换；Sayer/Receiver/Target 配置支持 VERBAL，引语写入 projected_content 不重复为 Verbiage。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC01-W003-E03\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC01-S0051\",\n        \"BATCH03-DOC01-S0053\"\n      ],\n      \"event\": {\n        \"event_name\": \"新四军获得上海、香港、国民党及红十字会医疗支援\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"支援药品、人员和医疗队\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"上海地下党\",\n            \"normalized_entity\": \"上海地下党\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"香港\",\n            \"normalized_entity\": \"香港\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"国民党\",\n            \"normalized_entity\": \"国民党\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"孙科\",\n            \"normalized_entity\": \"孙科\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"宋庆龄\",\n            \"normalized_entity\": \"宋庆龄\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"红十字会总会\",\n            \"normalized_entity\": \"红十字会总会\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"林可胜\",\n            \"normalized_entity\": \"林可胜\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"新四军\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"药品\",\n            \"normalized_entity\": \"药品\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"人\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"两个医疗队\",\n            \"normalized_entity\": \"两个医疗队\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们得天独厚，靠上海，靠南京，靠大城市，那么上海地下党支援，香港支援，我们还有国民党支援。\",\n        \"type_basis\": \"核心是多方实际支援、要药品要人、派医疗队等物质/组织行动，Actor/Goal/Recipient 配置明确；不是仅陈述条件归属。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC01-W003-E04\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC01-S0055\",\n        \"BATCH03-DOC01-S0057\",\n        \"BATCH03-DOC01-S0059\"\n      ],\n      \"event\": {\n        \"event_name\": \"新四军通过军医处经费和地方党秘密买药\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"秘密买药\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"地方党\",\n            \"normalized_entity\": \"地方党\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"军医处\",\n            \"normalized_entity\": \"新四军军医处\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"药\",\n            \"normalized_entity\": \"药品\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"我们卫生部\",\n            \"normalized_entity\": \"新四军卫生部\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"秘密\",\n            \"normalized_value\": \"秘密\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"大城市\",\n            \"normalized_value\": \"大城市\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"所以我们买药呀，是一个很大的任务，秘密买药，地方党很重要，地方党起非常大的作用。\",\n        \"type_basis\": \"核心是买药、批钱、支援等实际任务行动，可用 What did X do? 测试；地方党/军医处为 Actor，药品为 Goal，不是单纯存在或关系。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC01-W003-E05\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC01-S0063\",\n        \"BATCH03-DOC01-S0065\",\n        \"BATCH03-DOC01-S0067\"\n      ],\n      \"event\": {\n        \"event_name\": \"第六次繁昌战斗中二营在铁门闩设伏\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"打埋伏、布置阵地\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"二营\",\n            \"normalized_entity\": \"新四军二营\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"陈仁洪\",\n            \"normalized_entity\": \"陈仁洪\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"团部\",\n            \"normalized_entity\": \"团部\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"一百多个鬼子\",\n            \"normalized_entity\": \"日军部队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"机炮连\",\n            \"normalized_entity\": \"机炮连\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"二营\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"5月2号5月3号\",\n            \"normalized_value\": \"5月2日至5月3日\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"铁门闩\",\n            \"normalized_value\": \"铁门闩\"\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"歼灭敌人\",\n            \"normalized_value\": \"歼灭敌人\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"第六次“繁昌战斗”，5月2号5月3号敌人占领了繁昌，他有一支部队得到一个情报，就是说敌人已经出发了，要经过中分村，要给敌人的部队运送弹药。那么我们就是打埋伏，打埋伏就是我们这个二营管，那个时候我还在二营。\",\n        \"type_basis\": \"核心是作战、设伏、进入阵地和布置火力等物质行动，Actor/Goal 配置明确；不是心理感知或存在事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC01-S0046\",\n    \"BATCH03-DOC01-S0048\",\n    \"BATCH03-DOC01-S0050\",\n    \"BATCH03-DOC01-S0052\",\n    \"BATCH03-DOC01-S0054\",\n    \"BATCH03-DOC01-S0056\",\n    \"BATCH03-DOC01-S0058\",\n    \"BATCH03-DOC01-S0060\",\n    \"BATCH03-DOC01-S0061\",\n    \"BATCH03-DOC01-S0062\",\n    \"BATCH03-DOC01-S0064\",\n    \"BATCH03-DOC01-S0066\",\n    \"BATCH03-DOC01-S0068\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5866,
+    "total_tokens": 21860,
+    "completion_tokens": 15994,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12706
+    },
+    "time_to_first_token_ms": 356007,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 15993000
+  }
+}

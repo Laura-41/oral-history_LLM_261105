@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T08:23:34",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC02-DE004",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC02-DE004",
+  "usage": {
+    "prompt_tokens": 1331,
+    "total_tokens": 6303,
+    "completion_tokens": 4972,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4049
+    },
+    "time_to_first_token_ms": 73180,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC02-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"营部驻襄城县练兵，一个连到黄河南岸做游动炮兵，游动炮兵沿河边来回侦察看敌人渡河。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以 S0061 中营部驻襄城县练兵、接命令派连到黄河南岸做游动炮兵为起点，以 S0063 中说明游动炮兵来回走、沿河边侦察看敌人渡河为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC02-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"营部驻襄城县练兵\",\n      \"process_text\": \"我这个营部就驻在河南襄城县，在这个地方练兵。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC02-S0061\"\n      ],\n      \"evidence_quote\": \"陈锐霆：我这个营部就驻在河南襄城县，在这个地方练兵。这个时候接命令派一个连到黄河南岸（做）游动炮兵。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC02-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"接命令派一个连到黄河南岸做游动炮兵\",\n      \"process_text\": \"这个时候接命令派一个连到黄河南岸（做）游动炮兵。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC02-S0061\"\n      ],\n      \"evidence_quote\": \"陈锐霆：我这个营部就驻在河南襄城县，在这个地方练兵。这个时候接命令派一个连到黄河南岸（做）游动炮兵。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC02-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"游动炮兵沿河边来回侦察敌人渡河\",\n      \"process_text\": \"游动就是来回走着，不在一个固定的地，就沿着河边侦察，哪个地方看看有没有敌人渡河。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC02-S0063\"\n      ],\n      \"evidence_quote\": \"陈锐霆：游动就是来回走着，不在一个固定的地，就沿着河边侦察，哪个地方看看有没有敌人渡河。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC02-DE004-P01\",\n      \"target_stage_id\": \"BATCH01-DOC02-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC02-S0061\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC02-DE004-P02\",\n      \"target_stage_id\": \"BATCH01-DOC02-DE004-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH01-DOC02-S0063\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC02-DE004",
+    "event_enrichment": {
+      "result_state": "营部驻襄城县练兵，一个连到黄河南岸做游动炮兵，游动炮兵沿河边来回侦察看敌人渡河。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "以 S0061 中营部驻襄城县练兵、接命令派连到黄河南岸做游动炮兵为起点，以 S0063 中说明游动炮兵来回走、沿河边侦察看敌人渡河为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC02-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "营部驻襄城县练兵",
+        "process_text": "我这个营部就驻在河南襄城县，在这个地方练兵。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC02-S0061"
+        ],
+        "evidence_quote": "陈锐霆：我这个营部就驻在河南襄城县，在这个地方练兵。这个时候接命令派一个连到黄河南岸（做）游动炮兵。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC02-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "接命令派一个连到黄河南岸做游动炮兵",
+        "process_text": "这个时候接命令派一个连到黄河南岸（做）游动炮兵。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC02-S0061"
+        ],
+        "evidence_quote": "陈锐霆：我这个营部就驻在河南襄城县，在这个地方练兵。这个时候接命令派一个连到黄河南岸（做）游动炮兵。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC02-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "游动炮兵沿河边来回侦察敌人渡河",
+        "process_text": "游动就是来回走着，不在一个固定的地，就沿着河边侦察，哪个地方看看有没有敌人渡河。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC02-S0063"
+        ],
+        "evidence_quote": "陈锐霆：游动就是来回走着，不在一个固定的地，就沿着河边侦察，哪个地方看看有没有敌人渡河。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC02-DE004-P01",
+        "target_stage_id": "BATCH01-DOC02-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC02-S0061",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC02-DE004-P02",
+        "target_stage_id": "BATCH01-DOC02-DE004-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH01-DOC02-S0063",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

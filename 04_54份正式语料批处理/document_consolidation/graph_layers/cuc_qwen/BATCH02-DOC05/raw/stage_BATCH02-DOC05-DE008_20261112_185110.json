@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-12T18:51:10",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC05-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC05-DE008",
+  "usage": {
+    "prompt_tokens": 1476,
+    "total_tokens": 10180,
+    "completion_tokens": 8704,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8044
+    },
+    "time_to_first_token_ms": 180927,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC05-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"军医处全班已出动去救老百姓，且军医处事先没有准备，只有几副担架。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为S0076所述7月1号日本飞机突然轰炸云岭；终点为S0078所述军医处全班马上出动去救老百姓并说明只有几副担架。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"日本飞机突然轰炸云岭\",\n      \"process_text\": \"7月1号日本鬼子13架飞机，突如其来，没情报，我们都不知道，这个时候就炸云岭。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0076\"\n      ],\n      \"evidence_quote\": \"7月1号日本鬼子13架飞机，突如其来，没情报，我们都不知道，这个时候就炸云岭。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"军医处全班马上出动救援老百姓，且事先无准备、仅有几副担架\",\n      \"process_text\": \"炸老百姓以后呢，我们全班马上就出动，就去救老百姓，因为事先没有准备啊，我们军医处也只是几副担架。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0078\"\n      ],\n      \"evidence_quote\": \"炸老百姓以后呢，我们全班马上就出动，就去救老百姓，因为事先没有准备啊，我们军医处也只是几副担架。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE008-P01\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0078\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC05-DE008",
+    "event_enrichment": {
+      "result_state": "军医处全班已出动去救老百姓，且军医处事先没有准备，只有几副担架。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起点为S0076所述7月1号日本飞机突然轰炸云岭；终点为S0078所述军医处全班马上出动去救老百姓并说明只有几副担架。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC05-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "日本飞机突然轰炸云岭",
+        "process_text": "7月1号日本鬼子13架飞机，突如其来，没情报，我们都不知道，这个时候就炸云岭。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0076"
+        ],
+        "evidence_quote": "7月1号日本鬼子13架飞机，突如其来，没情报，我们都不知道，这个时候就炸云岭。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "军医处全班马上出动救援老百姓，且事先无准备、仅有几副担架",
+        "process_text": "炸老百姓以后呢，我们全班马上就出动，就去救老百姓，因为事先没有准备啊，我们军医处也只是几副担架。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0078"
+        ],
+        "evidence_quote": "炸老百姓以后呢，我们全班马上就出动，就去救老百姓，因为事先没有准备啊，我们军医处也只是几副担架。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC05-DE008-P01",
+        "target_stage_id": "BATCH02-DOC05-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC05-S0078",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

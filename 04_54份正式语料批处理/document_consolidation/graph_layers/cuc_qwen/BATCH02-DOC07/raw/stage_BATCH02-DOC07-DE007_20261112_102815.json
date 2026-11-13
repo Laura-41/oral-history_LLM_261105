@@ -1,0 +1,109 @@
+{
+  "run_time": "2026-11-12T10:28:15",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC07-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC07-DE007",
+  "usage": {
+    "prompt_tokens": 1431,
+    "total_tokens": 13495,
+    "completion_tokens": 12064,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10738
+    },
+    "time_to_first_token_ms": 187384,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 12063000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC07-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"外来知识分子经太平县过滤后，在麻岭坑由姬鹏飞接应，政治工作从严，秘密审查繁重，并以争取尊重知识分子为主流，同时政治上保证。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 S0030 从外来知识分子经屯溪进入、太平县过滤，到麻岭坑姬鹏飞接应、秘密审查及政治保证；S0032 补充来去自由与夹杂情况不明，仍属同一过滤接应审查过程。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"外来知识分子经屯溪进入，来去自由且夹杂情况不明\",\n      \"process_text\": \"外面来的知识分子参（加）新四军，经过屯溪，国民党挡不住，地下党送过来，都要经过这个地方；里面夹杂了一些，你不知道，来去自由。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0030\",\n        \"BATCH02-DOC07-S0032\"\n      ],\n      \"evidence_quote\": \"外面来的知识分子参（加）新四军的，经过屯溪，国民党挡不住的，地下党送过来的，都要经过这个地方。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"在太平县对外来人员首先进行过滤\",\n      \"process_text\": \"首先过滤，就在太平县过滤，从屯溪过来到太平，太平过来过滤，老百姓都从那儿走。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0030\"\n      ],\n      \"evidence_quote\": \"首先过滤，就（在）太平县过滤，从屯溪过来到太平，太平过来过滤，老百姓都从那儿走。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"姬鹏飞在麻岭坑接应并从严开展秘密审查\",\n      \"process_text\": \"麻岭坑由姬鹏飞（当时叫吉洛）接应，他是主任，政治工作管得非常严；外来知识分子中是否夹杂不可靠的人不知道，秘密审查工作繁重，党又不公开。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0030\"\n      ],\n      \"evidence_quote\": \"那么麻岭坑呢，是姬鹏飞在那里，那个时候他名字叫吉洛，后来改成姬鹏飞。他到新四军一师还叫吉洛，叫吉政委，以后才叫姬鹏飞。那么他是主任，接应我们的，所以政治工作管得非常严。因为他都是知识分子，都是外来的，有没有夹杂不可靠的人，你还不知道，所以秘密的审查工作也比较繁重。党又不公开是不是。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"争取尊重知识分子为主流，同时政治上保证\",\n      \"process_text\": \"一方面要争取知识分子、尊重知识分子，这是主流；政治上还要保证，因为后面是国民党，经过国民党统战区来的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0030\"\n      ],\n      \"evidence_quote\": \"这个时候，一方面要争取知识分子，尊重知识分子，这是主流。政治上还要保证呀，那个时候后面是国民党呀，经过国民党统战区来的。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE007-P01\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0030\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE007-P02\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0030\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE007-P03\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE007-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0030\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC07-DE007",
+    "event_enrichment": {
+      "result_state": "外来知识分子经太平县过滤后，在麻岭坑由姬鹏飞接应，政治工作从严，秘密审查繁重，并以争取尊重知识分子为主流，同时政治上保证。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 S0030 从外来知识分子经屯溪进入、太平县过滤，到麻岭坑姬鹏飞接应、秘密审查及政治保证；S0032 补充来去自由与夹杂情况不明，仍属同一过滤接应审查过程。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC07-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "外来知识分子经屯溪进入，来去自由且夹杂情况不明",
+        "process_text": "外面来的知识分子参（加）新四军，经过屯溪，国民党挡不住，地下党送过来，都要经过这个地方；里面夹杂了一些，你不知道，来去自由。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0030",
+          "BATCH02-DOC07-S0032"
+        ],
+        "evidence_quote": "外面来的知识分子参（加）新四军的，经过屯溪，国民党挡不住的，地下党送过来的，都要经过这个地方。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "在太平县对外来人员首先进行过滤",
+        "process_text": "首先过滤，就在太平县过滤，从屯溪过来到太平，太平过来过滤，老百姓都从那儿走。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0030"
+        ],
+        "evidence_quote": "首先过滤，就（在）太平县过滤，从屯溪过来到太平，太平过来过滤，老百姓都从那儿走。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "姬鹏飞在麻岭坑接应并从严开展秘密审查",
+        "process_text": "麻岭坑由姬鹏飞（当时叫吉洛）接应，他是主任，政治工作管得非常严；外来知识分子中是否夹杂不可靠的人不知道，秘密审查工作繁重，党又不公开。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0030"
+        ],
+        "evidence_quote": "那么麻岭坑呢，是姬鹏飞在那里，那个时候他名字叫吉洛，后来改成姬鹏飞。他到新四军一师还叫吉洛，叫吉政委，以后才叫姬鹏飞。那么他是主任，接应我们的，所以政治工作管得非常严。因为他都是知识分子，都是外来的，有没有夹杂不可靠的人，你还不知道，所以秘密的审查工作也比较繁重。党又不公开是不是。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "争取尊重知识分子为主流，同时政治上保证",
+        "process_text": "一方面要争取知识分子、尊重知识分子，这是主流；政治上还要保证，因为后面是国民党，经过国民党统战区来的。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0030"
+        ],
+        "evidence_quote": "这个时候，一方面要争取知识分子，尊重知识分子，这是主流。政治上还要保证呀，那个时候后面是国民党呀，经过国民党统战区来的。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC07-DE007-P01",
+        "target_stage_id": "BATCH02-DOC07-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0030",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE007-P02",
+        "target_stage_id": "BATCH02-DOC07-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0030",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE007-P03",
+        "target_stage_id": "BATCH02-DOC07-DE007-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC07-S0030",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-13T00:30:14",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC03-DE009",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC03-DE009",
+  "usage": {
+    "prompt_tokens": 1237,
+    "total_tokens": 6789,
+    "completion_tokens": 5552,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4571
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5551000,
+    "time_to_first_token_ms": 86734
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC03-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"华东部队在南麻、临朐战役后撤出，到达黄河以北。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 BATCH05-DOC03-S0056 的连续叙述，起于刘邓进大别山、华东部队到外线河南配合的背景，止于南麻、临朐战役后退出来到黄河以北的结果。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"刘邓进大别山，华东部队到外线河南配合，外线分出五个军、五个纵队。\",\n      \"process_text\": \"那么接着我们刘邓就进大别山，要我们华东的部队要到外线要河南，来配合刘邓进大别山，外线就分出五个军，五个纵队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0056\"\n      ],\n      \"evidence_quote\": \"那么接着我们刘邓就进大别山，要我们华东的部队要到外线要河南，来配合刘邓进大别山，外线就分出五个军，五个纵队。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"敌人进攻南麻、临朐战役，部队兵力不够、训练差，敌人整编十一师都是几个主力打我们。\",\n      \"process_text\": \"敌人进攻的时候，就是南麻、临朐（战役），我们的兵力不够，敌人整编十一师都是几个主力打我们，部队那个时候训练也差，\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0056\"\n      ],\n      \"evidence_quote\": \"敌人进攻的时候，就是南麻、临朐（战役），我们的兵力不够，敌人整编十一师都是几个主力打我们，部队那个时候训练也差，\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"南麻、临朐战役后部队退出来，到达黄河以北。\",\n      \"process_text\": \"南麻、临朐（战役）以后我们就退出来，就到了黄河以北。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0056\"\n      ],\n      \"evidence_quote\": \"南麻、临朐（战役）以后我们就退出来，就到了黄河以北。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE009-P01\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0056\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE009-P02\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE009-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0056\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC03-DE009",
+    "event_enrichment": {
+      "result_state": "华东部队在南麻、临朐战役后撤出，到达黄河以北。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 BATCH05-DOC03-S0056 的连续叙述，起于刘邓进大别山、华东部队到外线河南配合的背景，止于南麻、临朐战役后退出来到黄河以北的结果。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC03-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "刘邓进大别山，华东部队到外线河南配合，外线分出五个军、五个纵队。",
+        "process_text": "那么接着我们刘邓就进大别山，要我们华东的部队要到外线要河南，来配合刘邓进大别山，外线就分出五个军，五个纵队。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0056"
+        ],
+        "evidence_quote": "那么接着我们刘邓就进大别山，要我们华东的部队要到外线要河南，来配合刘邓进大别山，外线就分出五个军，五个纵队。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "敌人进攻南麻、临朐战役，部队兵力不够、训练差，敌人整编十一师都是几个主力打我们。",
+        "process_text": "敌人进攻的时候，就是南麻、临朐（战役），我们的兵力不够，敌人整编十一师都是几个主力打我们，部队那个时候训练也差，",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0056"
+        ],
+        "evidence_quote": "敌人进攻的时候，就是南麻、临朐（战役），我们的兵力不够，敌人整编十一师都是几个主力打我们，部队那个时候训练也差，",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "南麻、临朐战役后部队退出来，到达黄河以北。",
+        "process_text": "南麻、临朐（战役）以后我们就退出来，就到了黄河以北。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0056"
+        ],
+        "evidence_quote": "南麻、临朐（战役）以后我们就退出来，就到了黄河以北。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC03-DE009-P01",
+        "target_stage_id": "BATCH05-DOC03-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC03-S0056",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC03-DE009-P02",
+        "target_stage_id": "BATCH05-DOC03-DE009-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC03-S0056",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

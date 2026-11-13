@@ -1,0 +1,195 @@
+{
+  "run_time": "2026-11-12T14:21:50",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC04-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC04-DE003",
+  "usage": {
+    "prompt_tokens": 3971,
+    "total_tokens": 20306,
+    "completion_tokens": 16335,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12654
+    },
+    "time_to_first_token_ms": 242154,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 16334000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-19\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC04-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"苏浙军区在天目山战役中通过诱敌深入、集中兵力歼灭敌人九团，消灭敌人九千多、俘虏几千，取得彻底胜利/伟大胜利，获中央表扬，并被总结为险胜、以少胜多、诱敌深入和大兵团运动战的成功战例，为解放战争大兵团作战打下基础。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为S0043所述后方安置下来、前方仗怎么打及敌我团数情报；终点为S0077所述诱敌深入组织最好一次、胜利最后得到，覆盖天目山战役从战前部署、总攻歼敌到战果与中央表扬总结。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"后方安置后，口述者说明前方作战态势：我方主力团9个，情报称敌方9个团中3个最强。\",\n      \"process_text\": \"    陈海峰：这样就把后方安置下来了。前方的仗怎么打呢？前方的仗呢，我们主力团是9个，开始得到的情报，敌人9个团里面有3个是最强的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0043\"\n      ],\n      \"evidence_quote\": \"    陈海峰：这样就把后方安置下来了。前方的仗怎么打呢？前方的仗呢，我们主力团是9个，开始得到的情报，敌人9个团里面有3个是最强的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"战斗一开始，我方缩小包围圈并发现敌番号增多，已包围敌人主力，决定消灭最强的突击纵队。\",\n      \"process_text\": \"    陈海峰：后来战斗一开始啊，我们缩小了包围圈，缩小一部分消灭一部分，这个番号越来越多。哎，怎么回事？有好多新番号出来了，知道情况越来越复杂。但是已经包围了敌人的主力，我们就（要）消灭这个突击纵队，他是最强的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0045\",\n        \"BATCH06-DOC04-S0046\"\n      ],\n      \"evidence_quote\": \"    陈海峰：后来战斗一开始啊，我们缩小了包围圈，缩小一部分消灭一部分，这个番号越来越多。哎，怎么回事？有好多新番号出来了，知道情况越来越复杂。但是已经包围了敌人的主力，我们就（要）消灭这个突击纵队，他是最强的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"依据“伤其九指不如断其一指”思想，确定歼灭战方针，放弃次要阵地，集中主力对付突击纵队，并指向从新登撤下的王必成部队。\",\n      \"process_text\": \"宁要集中部队剁他一个手指头，你不要（只让）他九个手指头受伤，是不是啊。那个不行，就是要歼灭战！那就放弃一部分敌人，次要的阵地就放弃。集中我们的所有的能够作战的主力，都集中到这里来，对付突击纵队。当时呢，（离突击纵队）最近（的）就是（从）新登撤下来的王必成的部队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0048\",\n        \"BATCH06-DOC04-S0049\",\n        \"BATCH06-DOC04-S0050\",\n        \"BATCH06-DOC04-S0051\"\n      ],\n      \"evidence_quote\": \"宁要集中部队剁他一个手指头，你不要（只让）他九个手指头受伤，是不是啊。那个不行，就是要歼灭战！那就放弃一部分敌人，次要的阵地就放弃。集中我们的所有的能够作战的主力，都集中到这里来，对付突击纵队。当时呢，（离突击纵队）最近（的）就是（从）新登撤下来的王必成的部队。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"战斗中又发现第2特种部队和52师，因52师与皖南事变相关，提出消灭52师、消灭皖南事变凶手，并指出敌人企图把天目山战役变成第二个皖南事变。\",\n      \"process_text\": \"韩德勤的兵，我们抓过好几次，皖南事变他最直接。那么我们趁这个机会啊，把52师一定要消灭掉，要把皖南事变（的凶手）消灭。敌人是想制造第二个皖南事变，要把天目山战役啊，变成第二个皖南事变，要消灭我们这个主力。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0053\",\n        \"BATCH06-DOC04-S0054\",\n        \"BATCH06-DOC04-S0055\"\n      ],\n      \"evidence_quote\": \"韩德勤的兵，我们抓过好几次，皖南事变他最直接。那么我们趁这个机会啊，把52师一定要消灭掉，要把皖南事变（的凶手）消灭。敌人是想制造第二个皖南事变，要把天目山战役啊，变成第二个皖南事变，要消灭我们这个主力。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"作战方针定下后，4纵队等部队撤回来作机动，第1纵队为主攻，集中堵截后路，包围圈越缩越小并开始总攻。\",\n      \"process_text\": \"机动部队。一部分部队呢，参战，堵住敌人后路，不让他退。另外都分散在天目山，分散在湖州、杭州附近啊，一直比较散。那么把他集中，杀他的后路，他的主力都到港口附近来了，过了临安了，这样子。那么我们包围（圈）越缩越小，开始总攻。总攻主要是王必成的部队，主要就是这刘别生的部队，就是过去的老2团，48团。那个团长是饶惠潭。这个饶惠潭呢，“饶恕”你的“饶”，“惠民政策”的“惠”，“积水潭”那个“潭”。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0057\",\n        \"BATCH06-DOC04-S0060\",\n        \"BATCH06-DOC04-S0061\",\n        \"BATCH06-DOC04-S0062\"\n      ],\n      \"evidence_quote\": \"机动部队。一部分部队呢，参战，堵住敌人后路，不让他退。另外都分散在天目山，分散在湖州、杭州附近啊，一直比较散。那么把他集中，杀他的后路，他的主力都到港口附近来了，过了临安了，这样子。那么我们包围（圈）越缩越小，开始总攻。总攻主要是王必成的部队，主要就是这刘别生的部队，就是过去的老2团，48团。那个团长是饶惠潭。这个饶惠潭呢，“饶恕”你的“饶”，“惠民政策”的“惠”，“积水潭”那个“潭”。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE003-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"王必成下死命令，48团集中轻重机枪排成一线，在梯田地形居高临下集中火力，与敌突击队殊死战斗，最后敌主力被消灭得差不多并出现俘虏。\",\n      \"process_text\": \"    陈海峰：进入轻重机枪、步枪最有效射程啊。那看着倒下去啊，这个轻机枪“嘎嘎嘎嘎嘎嘎”一打，一片倒下去了，那真叫血流成河啊。这个敌人啊，把尸体堆起来，尸体当作掩体，两三个尸体堆起来，他用那个自动步枪啊，对着我们打，是不是啊。他反抗，等后续部队来。第二批冲锋过来，“嘎嘎嘎嘎”一打，倒下去，又垒起来。那个梯田里头啊，都是敌人的尸体啊。我们居高临下占领有利地形啊，我们集中火力啊。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0064\",\n        \"BATCH06-DOC04-S0066\",\n        \"BATCH06-DOC04-S0068\",\n        \"BATCH06-DOC04-S0070\"\n      ],\n      \"evidence_quote\": \"    陈海峰：进入轻重机枪、步枪最有效射程啊。那看着倒下去啊，这个轻机枪“嘎嘎嘎嘎嘎嘎”一打，一片倒下去了，那真叫血流成河啊。这个敌人啊，把尸体堆起来，尸体当作掩体，两三个尸体堆起来，他用那个自动步枪啊，对着我们打，是不是啊。他反抗，等后续部队来。第二批冲锋过来，“嘎嘎嘎嘎”一打，倒下去，又垒起来。那个梯田里头啊，都是敌人的尸体啊。我们居高临下占领有利地形啊，我们集中火力啊。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE003-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"口述者强调诱敌深入和伪装溃退成功，最终消灭敌人九千多、俘虏几千、歼灭整整9个团。\",\n      \"process_text\": \"    陈海峰：如果他没有进到我们这个包围圈里面，没有我们诱敌深入，伪装得好，伪装得（像）真的一样，溃退的样子，那跌跌冲冲啊，丢背包啊，丢伤员，他看到那样子，那没有今天。最后消灭敌人九千多，\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0072\",\n        \"BATCH06-DOC04-S0073\"\n      ],\n      \"evidence_quote\": \"    陈海峰：如果他没有进到我们这个包围圈里面，没有我们诱敌深入，伪装得好，伪装得（像）真的一样，溃退的样子，那跌跌冲冲啊，丢背包啊，丢伤员，他看到那样子，那没有今天。最后消灭敌人九千多，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC04-DE003-P08\",\n      \"stage_order\": 8,\n      \"stage_summary\": \"战役取得伟大/彻底胜利并获中央表扬，被总结为险胜、以少胜多、诱敌深入和大兵团运动战典范，为解放战争大兵团作战打下基础。\",\n      \"process_text\": \"苏浙军区三次天目山自卫反击战取得彻底胜利，但是中央指出来，你们要认真总结经验教训。所以后来讲啊，这个战役一个是险胜，一个是以少胜多，是诱敌深入成功的一个战例，是大兵团作战的运动战，在运动中间消灭敌人有生力量（的）一个典范事例。那么也为今后解放战争中间，大兵团作战打下了良好基础。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC04-S0074\",\n        \"BATCH06-DOC04-S0075\",\n        \"BATCH06-DOC04-S0077\"\n      ],\n      \"evidence_quote\": \"苏浙军区三次天目山自卫反击战取得彻底胜利，但是中央指出来，你们要认真总结经验教训。所以后来讲啊，这个战役一个是险胜，一个是以少胜多，是诱敌深入成功的一个战例，是大兵团作战的运动战，在运动中间消灭敌人有生力量（的）一个典范事例。那么也为今后解放战争中间，大兵团作战打下了良好基础。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC04-DE003-P01\",\n      \"target_stage_id\": \"BATCH06-DOC04-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC04-S0045\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC04-DE003-P02\",\n      \"target_stage_id\": \"BATCH06-DOC04-DE003-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC04-S0049\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC04-DE003-P03\",\n      \"target_stage_id\": \"BATCH06-DOC04-DE003-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC04-S0053\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC04-DE003-P04\",\n      \"target_stage_id\": \"BATCH06-DOC04-DE003-P05\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH06-DOC04-S0057\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC04-DE003-P05\",\n      \"target_stage_id\": \"BATCH06-DOC04-DE003-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC04-S0064\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC04-DE003-P06\",\n      \"target_stage_id\": \"BATCH06-DOC04-DE003-P07\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC04-S0072\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC04-DE003-P07\",\n      \"target_stage_id\": \"BATCH06-DOC04-DE003-P08\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC04-S0074\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-19",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC04-DE003",
+    "event_enrichment": {
+      "result_state": "苏浙军区在天目山战役中通过诱敌深入、集中兵力歼灭敌人九团，消灭敌人九千多、俘虏几千，取得彻底胜利/伟大胜利，获中央表扬，并被总结为险胜、以少胜多、诱敌深入和大兵团运动战的成功战例，为解放战争大兵团作战打下基础。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起点为S0043所述后方安置下来、前方仗怎么打及敌我团数情报；终点为S0077所述诱敌深入组织最好一次、胜利最后得到，覆盖天目山战役从战前部署、总攻歼敌到战果与中央表扬总结。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC04-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "后方安置后，口述者说明前方作战态势：我方主力团9个，情报称敌方9个团中3个最强。",
+        "process_text": "    陈海峰：这样就把后方安置下来了。前方的仗怎么打呢？前方的仗呢，我们主力团是9个，开始得到的情报，敌人9个团里面有3个是最强的。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0043"
+        ],
+        "evidence_quote": "    陈海峰：这样就把后方安置下来了。前方的仗怎么打呢？前方的仗呢，我们主力团是9个，开始得到的情报，敌人9个团里面有3个是最强的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC04-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "战斗一开始，我方缩小包围圈并发现敌番号增多，已包围敌人主力，决定消灭最强的突击纵队。",
+        "process_text": "    陈海峰：后来战斗一开始啊，我们缩小了包围圈，缩小一部分消灭一部分，这个番号越来越多。哎，怎么回事？有好多新番号出来了，知道情况越来越复杂。但是已经包围了敌人的主力，我们就（要）消灭这个突击纵队，他是最强的。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0045",
+          "BATCH06-DOC04-S0046"
+        ],
+        "evidence_quote": "    陈海峰：后来战斗一开始啊，我们缩小了包围圈，缩小一部分消灭一部分，这个番号越来越多。哎，怎么回事？有好多新番号出来了，知道情况越来越复杂。但是已经包围了敌人的主力，我们就（要）消灭这个突击纵队，他是最强的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC04-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "依据“伤其九指不如断其一指”思想，确定歼灭战方针，放弃次要阵地，集中主力对付突击纵队，并指向从新登撤下的王必成部队。",
+        "process_text": "宁要集中部队剁他一个手指头，你不要（只让）他九个手指头受伤，是不是啊。那个不行，就是要歼灭战！那就放弃一部分敌人，次要的阵地就放弃。集中我们的所有的能够作战的主力，都集中到这里来，对付突击纵队。当时呢，（离突击纵队）最近（的）就是（从）新登撤下来的王必成的部队。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0048",
+          "BATCH06-DOC04-S0049",
+          "BATCH06-DOC04-S0050",
+          "BATCH06-DOC04-S0051"
+        ],
+        "evidence_quote": "宁要集中部队剁他一个手指头，你不要（只让）他九个手指头受伤，是不是啊。那个不行，就是要歼灭战！那就放弃一部分敌人，次要的阵地就放弃。集中我们的所有的能够作战的主力，都集中到这里来，对付突击纵队。当时呢，（离突击纵队）最近（的）就是（从）新登撤下来的王必成的部队。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC04-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "战斗中又发现第2特种部队和52师，因52师与皖南事变相关，提出消灭52师、消灭皖南事变凶手，并指出敌人企图把天目山战役变成第二个皖南事变。",
+        "process_text": "韩德勤的兵，我们抓过好几次，皖南事变他最直接。那么我们趁这个机会啊，把52师一定要消灭掉，要把皖南事变（的凶手）消灭。敌人是想制造第二个皖南事变，要把天目山战役啊，变成第二个皖南事变，要消灭我们这个主力。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0053",
+          "BATCH06-DOC04-S0054",
+          "BATCH06-DOC04-S0055"
+        ],
+        "evidence_quote": "韩德勤的兵，我们抓过好几次，皖南事变他最直接。那么我们趁这个机会啊，把52师一定要消灭掉，要把皖南事变（的凶手）消灭。敌人是想制造第二个皖南事变，要把天目山战役啊，变成第二个皖南事变，要消灭我们这个主力。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC04-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "作战方针定下后，4纵队等部队撤回来作机动，第1纵队为主攻，集中堵截后路，包围圈越缩越小并开始总攻。",
+        "process_text": "机动部队。一部分部队呢，参战，堵住敌人后路，不让他退。另外都分散在天目山，分散在湖州、杭州附近啊，一直比较散。那么把他集中，杀他的后路，他的主力都到港口附近来了，过了临安了，这样子。那么我们包围（圈）越缩越小，开始总攻。总攻主要是王必成的部队，主要就是这刘别生的部队，就是过去的老2团，48团。那个团长是饶惠潭。这个饶惠潭呢，“饶恕”你的“饶”，“惠民政策”的“惠”，“积水潭”那个“潭”。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0057",
+          "BATCH06-DOC04-S0060",
+          "BATCH06-DOC04-S0061",
+          "BATCH06-DOC04-S0062"
+        ],
+        "evidence_quote": "机动部队。一部分部队呢，参战，堵住敌人后路，不让他退。另外都分散在天目山，分散在湖州、杭州附近啊，一直比较散。那么把他集中，杀他的后路，他的主力都到港口附近来了，过了临安了，这样子。那么我们包围（圈）越缩越小，开始总攻。总攻主要是王必成的部队，主要就是这刘别生的部队，就是过去的老2团，48团。那个团长是饶惠潭。这个饶惠潭呢，“饶恕”你的“饶”，“惠民政策”的“惠”，“积水潭”那个“潭”。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC04-DE003-P06",
+        "stage_order": 6,
+        "stage_summary": "王必成下死命令，48团集中轻重机枪排成一线，在梯田地形居高临下集中火力，与敌突击队殊死战斗，最后敌主力被消灭得差不多并出现俘虏。",
+        "process_text": "    陈海峰：进入轻重机枪、步枪最有效射程啊。那看着倒下去啊，这个轻机枪“嘎嘎嘎嘎嘎嘎”一打，一片倒下去了，那真叫血流成河啊。这个敌人啊，把尸体堆起来，尸体当作掩体，两三个尸体堆起来，他用那个自动步枪啊，对着我们打，是不是啊。他反抗，等后续部队来。第二批冲锋过来，“嘎嘎嘎嘎”一打，倒下去，又垒起来。那个梯田里头啊，都是敌人的尸体啊。我们居高临下占领有利地形啊，我们集中火力啊。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0064",
+          "BATCH06-DOC04-S0066",
+          "BATCH06-DOC04-S0068",
+          "BATCH06-DOC04-S0070"
+        ],
+        "evidence_quote": "    陈海峰：进入轻重机枪、步枪最有效射程啊。那看着倒下去啊，这个轻机枪“嘎嘎嘎嘎嘎嘎”一打，一片倒下去了，那真叫血流成河啊。这个敌人啊，把尸体堆起来，尸体当作掩体，两三个尸体堆起来，他用那个自动步枪啊，对着我们打，是不是啊。他反抗，等后续部队来。第二批冲锋过来，“嘎嘎嘎嘎”一打，倒下去，又垒起来。那个梯田里头啊，都是敌人的尸体啊。我们居高临下占领有利地形啊，我们集中火力啊。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC04-DE003-P07",
+        "stage_order": 7,
+        "stage_summary": "口述者强调诱敌深入和伪装溃退成功，最终消灭敌人九千多、俘虏几千、歼灭整整9个团。",
+        "process_text": "    陈海峰：如果他没有进到我们这个包围圈里面，没有我们诱敌深入，伪装得好，伪装得（像）真的一样，溃退的样子，那跌跌冲冲啊，丢背包啊，丢伤员，他看到那样子，那没有今天。最后消灭敌人九千多，",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0072",
+          "BATCH06-DOC04-S0073"
+        ],
+        "evidence_quote": "    陈海峰：如果他没有进到我们这个包围圈里面，没有我们诱敌深入，伪装得好，伪装得（像）真的一样，溃退的样子，那跌跌冲冲啊，丢背包啊，丢伤员，他看到那样子，那没有今天。最后消灭敌人九千多，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC04-DE003-P08",
+        "stage_order": 8,
+        "stage_summary": "战役取得伟大/彻底胜利并获中央表扬，被总结为险胜、以少胜多、诱敌深入和大兵团运动战典范，为解放战争大兵团作战打下基础。",
+        "process_text": "苏浙军区三次天目山自卫反击战取得彻底胜利，但是中央指出来，你们要认真总结经验教训。所以后来讲啊，这个战役一个是险胜，一个是以少胜多，是诱敌深入成功的一个战例，是大兵团作战的运动战，在运动中间消灭敌人有生力量（的）一个典范事例。那么也为今后解放战争中间，大兵团作战打下了良好基础。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC04-S0074",
+          "BATCH06-DOC04-S0075",
+          "BATCH06-DOC04-S0077"
+        ],
+        "evidence_quote": "苏浙军区三次天目山自卫反击战取得彻底胜利，但是中央指出来，你们要认真总结经验教训。所以后来讲啊，这个战役一个是险胜，一个是以少胜多，是诱敌深入成功的一个战例，是大兵团作战的运动战，在运动中间消灭敌人有生力量（的）一个典范事例。那么也为今后解放战争中间，大兵团作战打下了良好基础。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC04-DE003-P01",
+        "target_stage_id": "BATCH06-DOC04-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC04-S0045",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC04-DE003-P02",
+        "target_stage_id": "BATCH06-DOC04-DE003-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC04-S0049",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC04-DE003-P03",
+        "target_stage_id": "BATCH06-DOC04-DE003-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC04-S0053",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC04-DE003-P04",
+        "target_stage_id": "BATCH06-DOC04-DE003-P05",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH06-DOC04-S0057",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC04-DE003-P05",
+        "target_stage_id": "BATCH06-DOC04-DE003-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC04-S0064",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC04-DE003-P06",
+        "target_stage_id": "BATCH06-DOC04-DE003-P07",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC04-S0072",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC04-DE003-P07",
+        "target_stage_id": "BATCH06-DOC04-DE003-P08",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC04-S0074",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

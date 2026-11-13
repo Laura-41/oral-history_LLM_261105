@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T00:07:59",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC07-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC07-DE005",
+  "usage": {
+    "prompt_tokens": 1171,
+    "total_tokens": 3839,
+    "completion_tokens": 2668,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1929
+    },
+    "time_to_first_token_ms": 20760,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC07-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"特纵一个团在行进半路奉命停止作战并分批撤回。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以事件证据引文为界：起于原计划打更大仗但因兵力不足，止于“就把部队分批撤回来”；同段后文关于敌机扫射无伤亡的叙述属于撤回途中的伴随情况，未纳入本事件边界。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"原计划打更大仗，但因兵力不足而取消。\",\n      \"process_text\": \"本来想着在那个地方打一个更大的仗，但是敌我的兵力（相比），我们的兵力不够。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0033\"\n      ],\n      \"evidence_quote\": \"本来想着在那个地方打一个更大的仗，但是敌我的兵力（相比），我们的兵力不够。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"特纵一个团几乎全部出动，行进至半路。\",\n      \"process_text\": \"我这个部队特纵一个团差不多全部上去了，但是走在半路\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0033\"\n      ],\n      \"evidence_quote\": \"我这个部队特纵一个团差不多全部上去了，但是走在半路\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"接令停止作战，部队分批撤回。\",\n      \"process_text\": \"说仗不打了，就把部队分批撤回来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0033\"\n      ],\n      \"evidence_quote\": \"说仗不打了，就把部队分批撤回来。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE005-P01\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0033\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE005-P02\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0033\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC07-DE005",
+    "event_enrichment": {
+      "result_state": "特纵一个团在行进半路奉命停止作战并分批撤回。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以事件证据引文为界：起于原计划打更大仗但因兵力不足，止于“就把部队分批撤回来”；同段后文关于敌机扫射无伤亡的叙述属于撤回途中的伴随情况，未纳入本事件边界。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC07-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "原计划打更大仗，但因兵力不足而取消。",
+        "process_text": "本来想着在那个地方打一个更大的仗，但是敌我的兵力（相比），我们的兵力不够。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0033"
+        ],
+        "evidence_quote": "本来想着在那个地方打一个更大的仗，但是敌我的兵力（相比），我们的兵力不够。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "特纵一个团几乎全部出动，行进至半路。",
+        "process_text": "我这个部队特纵一个团差不多全部上去了，但是走在半路",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0033"
+        ],
+        "evidence_quote": "我这个部队特纵一个团差不多全部上去了，但是走在半路",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "接令停止作战，部队分批撤回。",
+        "process_text": "说仗不打了，就把部队分批撤回来。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0033"
+        ],
+        "evidence_quote": "说仗不打了，就把部队分批撤回来。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC07-DE005-P01",
+        "target_stage_id": "BATCH05-DOC07-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0033",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC07-DE005-P02",
+        "target_stage_id": "BATCH05-DOC07-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0033",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

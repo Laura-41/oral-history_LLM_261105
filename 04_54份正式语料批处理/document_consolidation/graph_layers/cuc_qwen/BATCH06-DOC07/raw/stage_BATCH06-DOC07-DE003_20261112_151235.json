@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T15:12:35",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE003",
+  "usage": {
+    "prompt_tokens": 1453,
+    "total_tokens": 15408,
+    "completion_tokens": 13955,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12686
+    },
+    "time_to_first_token_ms": 238751,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13954000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"山东军区成立并与华中军区分开；叶飞部队随陈老总过去，华中一纵队作为主力由陈老总带去，地方部队和一小部分主力留在山东。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件自 S0128 总述“叶飞部队就跟着陈老总成立山东军区”开始，经 S0129—S0130 说明115师北靠东北、撤出山东、华中接及成立山东军区安排，至 S0132—S0133 说明叶飞随陈老总去、山东军区与华中军区分开结束。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"总述叶飞部队随陈老总成立山东军区。\",\n      \"process_text\": \"    陈海峰：叶飞部队就跟着陈老总成立山东军区。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0128\"\n      ],\n      \"evidence_quote\": \"    陈海峰：叶飞部队就跟着陈老总成立山东军区。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"说明山东115师部队要向北靠、到东北去。\",\n      \"process_text\": \"山东的115师的部队啊，他要向北靠，要到东北去，\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0129\"\n      ],\n      \"evidence_quote\": \"山东的115师的部队啊，他要向北靠，要到东北去，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"说明要撤出山东、由华中接，并成立山东军区，安排留守地方部队和一小部分主力，华中一纵队为主力由陈老总带去。\",\n      \"process_text\": \"要撤出山东。山东要华中接，要成立山东军区。山东军区呢，就是他留一部分下来，就说把地方部队留下来，留一小部分主力部队，由华中一纵队为主力部队过去，就陈老总带去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0130\"\n      ],\n      \"evidence_quote\": \"要撤出山东。山东要华中接，要成立山东军区。山东军区呢，就是他留一部分下来，就说把地方部队留下来，留一小部分主力部队，由华中一纵队为主力部队过去，就陈老总带去。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"说明叶飞随陈老总去，山东军区成立并与华中军区分开。\",\n      \"process_text\": \"成立山东军区，这山东军区和华中军区分开了。这是\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0132\",\n        \"BATCH06-DOC07-S0133\"\n      ],\n      \"evidence_quote\": \"成立山东军区，这山东军区和华中军区分开了。这是\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE003-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0129\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE003-P02\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0130\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE003-P03\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE003-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0133\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE003",
+    "event_enrichment": {
+      "result_state": "山东军区成立并与华中军区分开；叶飞部队随陈老总过去，华中一纵队作为主力由陈老总带去，地方部队和一小部分主力留在山东。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件自 S0128 总述“叶飞部队就跟着陈老总成立山东军区”开始，经 S0129—S0130 说明115师北靠东北、撤出山东、华中接及成立山东军区安排，至 S0132—S0133 说明叶飞随陈老总去、山东军区与华中军区分开结束。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "总述叶飞部队随陈老总成立山东军区。",
+        "process_text": "    陈海峰：叶飞部队就跟着陈老总成立山东军区。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0128"
+        ],
+        "evidence_quote": "    陈海峰：叶飞部队就跟着陈老总成立山东军区。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "说明山东115师部队要向北靠、到东北去。",
+        "process_text": "山东的115师的部队啊，他要向北靠，要到东北去，",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0129"
+        ],
+        "evidence_quote": "山东的115师的部队啊，他要向北靠，要到东北去，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "说明要撤出山东、由华中接，并成立山东军区，安排留守地方部队和一小部分主力，华中一纵队为主力由陈老总带去。",
+        "process_text": "要撤出山东。山东要华中接，要成立山东军区。山东军区呢，就是他留一部分下来，就说把地方部队留下来，留一小部分主力部队，由华中一纵队为主力部队过去，就陈老总带去。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0130"
+        ],
+        "evidence_quote": "要撤出山东。山东要华中接，要成立山东军区。山东军区呢，就是他留一部分下来，就说把地方部队留下来，留一小部分主力部队，由华中一纵队为主力部队过去，就陈老总带去。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "说明叶飞随陈老总去，山东军区成立并与华中军区分开。",
+        "process_text": "成立山东军区，这山东军区和华中军区分开了。这是",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0132",
+          "BATCH06-DOC07-S0133"
+        ],
+        "evidence_quote": "成立山东军区，这山东军区和华中军区分开了。这是",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE003-P01",
+        "target_stage_id": "BATCH06-DOC07-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0129",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE003-P02",
+        "target_stage_id": "BATCH06-DOC07-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0130",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE003-P03",
+        "target_stage_id": "BATCH06-DOC07-DE003-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC07-S0133",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

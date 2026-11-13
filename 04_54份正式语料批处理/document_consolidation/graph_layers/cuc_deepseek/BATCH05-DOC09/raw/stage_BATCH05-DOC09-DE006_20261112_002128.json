@@ -1,0 +1,144 @@
+{
+  "run_time": "2026-11-12T00:21:28",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC09-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC09-DE006",
+  "usage": {
+    "prompt_tokens": 1488,
+    "total_tokens": 6659,
+    "completion_tokens": 5171,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3903
+    },
+    "time_to_first_token_ms": 39843,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-17\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC09-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"新登战斗未攻克，部队因粮食供应不上而主动撤退。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于粮食供应困难及新登战斗未攻克的叙述，止于“只打了一半，我们主动撤退”；不扩展到后续天目山战役经验总结。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"粮食供应困难，部队伙食保障逐步下降\",\n      \"process_text\": \"粮食还没有，供应不上；从第一次、第二次反顽战起已发生困难，伙食保障逐步下降。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0175\"\n      ],\n      \"evidence_quote\": \"当时啊，粮食还没有，供应不上。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"远离根据地导致后勤跟不上\",\n      \"process_text\": \"部队远离根据地，后勤跟不上，粮食等供应难以保障。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0177\"\n      ],\n      \"evidence_quote\": \"因为我们远离根据地，后勤跟不上。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"装备、弹药和粮食供应不上，影响作战\",\n      \"process_text\": \"部队装备、弹药和吃的东西供应不上，仗就打不好。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0178\"\n      ],\n      \"evidence_quote\": \"你部队的装备、弹药供应不上，吃供应不上，那不行的。那个仗打不好的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"供应困难影响士气\",\n      \"process_text\": \"供应不上进一步影响部队士气。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0179\"\n      ],\n      \"evidence_quote\": \"那么就影响士气。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE006-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"新登战斗基本未攻克\",\n      \"process_text\": \"新登基本上没打下来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0181\"\n      ],\n      \"evidence_quote\": \"新登基本上没打下来。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE006-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"只打了一半即主动撤退\",\n      \"process_text\": \"新登战斗只打了一半，部队因粮食供应不上而主动撤退。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0182\"\n      ],\n      \"evidence_quote\": \"只打了一半，我们主动撤退。粮食啊，供应不上，从溧阳……\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE006-P01\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE006-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC09-S0177\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE006-P02\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE006-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH05-DOC09-S0178\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE006-P03\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE006-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH05-DOC09-S0179\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE006-P04\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE006-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC09-S0181\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE006-P05\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE006-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC09-S0182\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-17",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC09-DE006",
+    "event_enrichment": {
+      "result_state": "新登战斗未攻克，部队因粮食供应不上而主动撤退。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于粮食供应困难及新登战斗未攻克的叙述，止于“只打了一半，我们主动撤退”；不扩展到后续天目山战役经验总结。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC09-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "粮食供应困难，部队伙食保障逐步下降",
+        "process_text": "粮食还没有，供应不上；从第一次、第二次反顽战起已发生困难，伙食保障逐步下降。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0175"
+        ],
+        "evidence_quote": "当时啊，粮食还没有，供应不上。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "远离根据地导致后勤跟不上",
+        "process_text": "部队远离根据地，后勤跟不上，粮食等供应难以保障。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0177"
+        ],
+        "evidence_quote": "因为我们远离根据地，后勤跟不上。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "装备、弹药和粮食供应不上，影响作战",
+        "process_text": "部队装备、弹药和吃的东西供应不上，仗就打不好。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0178"
+        ],
+        "evidence_quote": "你部队的装备、弹药供应不上，吃供应不上，那不行的。那个仗打不好的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "供应困难影响士气",
+        "process_text": "供应不上进一步影响部队士气。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0179"
+        ],
+        "evidence_quote": "那么就影响士气。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE006-P05",
+        "stage_order": 5,
+        "stage_summary": "新登战斗基本未攻克",
+        "process_text": "新登基本上没打下来。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0181"
+        ],
+        "evidence_quote": "新登基本上没打下来。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE006-P06",
+        "stage_order": 6,
+        "stage_summary": "只打了一半即主动撤退",
+        "process_text": "新登战斗只打了一半，部队因粮食供应不上而主动撤退。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0182"
+        ],
+        "evidence_quote": "只打了一半，我们主动撤退。粮食啊，供应不上，从溧阳……",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC09-DE006-P01",
+        "target_stage_id": "BATCH05-DOC09-DE006-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC09-S0177",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC09-DE006-P02",
+        "target_stage_id": "BATCH05-DOC09-DE006-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH05-DOC09-S0178",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC09-DE006-P03",
+        "target_stage_id": "BATCH05-DOC09-DE006-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH05-DOC09-S0179",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC09-DE006-P04",
+        "target_stage_id": "BATCH05-DOC09-DE006-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC09-S0181",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC09-DE006-P05",
+        "target_stage_id": "BATCH05-DOC09-DE006-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC09-S0182",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

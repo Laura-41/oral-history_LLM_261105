@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T22:44:17",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC08-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC08-DE002",
+  "usage": {
+    "prompt_tokens": 1287,
+    "total_tokens": 3552,
+    "completion_tokens": 2265,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1406
+    },
+    "time_to_first_token_ms": 19861,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2264000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC08-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"药品得到补充，来源包括进入镇子、县城后获取敌方药房药库和医院药品，以及乡镇解放后花钱向私人诊所购买现成药品。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“我们到5团以后呢”为起点，至“都是买现成的”结束；其后“到后面，我还讲到向八路军学习的问题”为话题转换，不纳入本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC08-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"到5团后，作战进入镇子或县城时，首先寻找敌方药房、药库。\",\n      \"process_text\": \"一进镇子、县城，首先找他们的药房、药库。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC08-S0056\"\n      ],\n      \"evidence_quote\": \"我们到5团以后呢，我们打仗啊，打日本鬼子也好，打伪军也好，（和）国民党摩擦打仗也好。我们的任务，一进那个镇子，一进那个县城，首先是找他们的药房啊，他们的药库啊。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC08-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"到敌方医院先取药品，补充我方药品不足。\",\n      \"process_text\": \"到他们的医院去，先把药品拿来，补充我们的不足。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC08-S0058\"\n      ],\n      \"evidence_quote\": \"（到）他们的医院去，先把药品拿来，补充我们的不足。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC08-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"乡镇解放后，花钱向私人诊所买药，并让诊所医生自行再购；当时无自造药条件，均买现成药品。\",\n      \"process_text\": \"乡镇解放出来后，私人诊所花钱买药，让医生以后再自己去买药；自己造药条件没有，都是买现成的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC08-S0058\"\n      ],\n      \"evidence_quote\": \"如果说一个乡镇解放出来，私人诊所我们都花钱买他的药。你让那个私人诊所的医生呢，他以后再自己去买药。那个时候自己造药的条件没有啊，都是买现成的。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC08-DE002-P01\",\n      \"target_stage_id\": \"BATCH03-DOC08-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC08-S0058\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC08-DE002-P02\",\n      \"target_stage_id\": \"BATCH03-DOC08-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC08-S0058\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC08-DE002",
+    "event_enrichment": {
+      "result_state": "药品得到补充，来源包括进入镇子、县城后获取敌方药房药库和医院药品，以及乡镇解放后花钱向私人诊所购买现成药品。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以“我们到5团以后呢”为起点，至“都是买现成的”结束；其后“到后面，我还讲到向八路军学习的问题”为话题转换，不纳入本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC08-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "到5团后，作战进入镇子或县城时，首先寻找敌方药房、药库。",
+        "process_text": "一进镇子、县城，首先找他们的药房、药库。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC08-S0056"
+        ],
+        "evidence_quote": "我们到5团以后呢，我们打仗啊，打日本鬼子也好，打伪军也好，（和）国民党摩擦打仗也好。我们的任务，一进那个镇子，一进那个县城，首先是找他们的药房啊，他们的药库啊。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC08-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "到敌方医院先取药品，补充我方药品不足。",
+        "process_text": "到他们的医院去，先把药品拿来，补充我们的不足。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC08-S0058"
+        ],
+        "evidence_quote": "（到）他们的医院去，先把药品拿来，补充我们的不足。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC08-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "乡镇解放后，花钱向私人诊所买药，并让诊所医生自行再购；当时无自造药条件，均买现成药品。",
+        "process_text": "乡镇解放出来后，私人诊所花钱买药，让医生以后再自己去买药；自己造药条件没有，都是买现成的。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC08-S0058"
+        ],
+        "evidence_quote": "如果说一个乡镇解放出来，私人诊所我们都花钱买他的药。你让那个私人诊所的医生呢，他以后再自己去买药。那个时候自己造药的条件没有啊，都是买现成的。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC08-DE002-P01",
+        "target_stage_id": "BATCH03-DOC08-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC08-S0058",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC08-DE002-P02",
+        "target_stage_id": "BATCH03-DOC08-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC08-S0058",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

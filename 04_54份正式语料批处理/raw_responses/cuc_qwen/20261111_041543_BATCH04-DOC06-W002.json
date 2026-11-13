@@ -1,0 +1,223 @@
+{
+  "run_time": "2026-11-11T04:15:43",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH04-DOC06-W002",
+  "technical_document_id": "BATCH04-DOC06",
+  "document_id": "10.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH04-DOC06-S0029",
+    "BATCH04-DOC06-S0030",
+    "BATCH04-DOC06-S0031",
+    "BATCH04-DOC06-S0032",
+    "BATCH04-DOC06-S0033",
+    "BATCH04-DOC06-S0034",
+    "BATCH04-DOC06-S0035",
+    "BATCH04-DOC06-S0036",
+    "BATCH04-DOC06-S0037",
+    "BATCH04-DOC06-S0038",
+    "BATCH04-DOC06-S0039",
+    "BATCH04-DOC06-S0040",
+    "BATCH04-DOC06-S0041",
+    "BATCH04-DOC06-S0042",
+    "BATCH04-DOC06-S0043",
+    "BATCH04-DOC06-S0044",
+    "BATCH04-DOC06-S0045",
+    "BATCH04-DOC06-S0046",
+    "BATCH04-DOC06-S0047",
+    "BATCH04-DOC06-S0048",
+    "BATCH04-DOC06-S0049",
+    "BATCH04-DOC06-S0050",
+    "BATCH04-DOC06-S0051",
+    "BATCH04-DOC06-S0052",
+    "BATCH04-DOC06-S0053",
+    "BATCH04-DOC06-S0054",
+    "BATCH04-DOC06-S0055",
+    "BATCH04-DOC06-S0056",
+    "BATCH04-DOC06-S0057",
+    "BATCH04-DOC06-S0058",
+    "BATCH04-DOC06-S0059",
+    "BATCH04-DOC06-S0060",
+    "BATCH04-DOC06-S0061"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 12,
+    "unassigned_segment_count": 21,
+    "input_segment_count": 33,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH04-DOC06-W002-E01"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH04-DOC06-W002",
+    "events": [
+      {
+        "candidate_id": "BATCH04-DOC06-W002-E01",
+        "source_segment_ids": [
+          "BATCH04-DOC06-S0029",
+          "BATCH04-DOC06-S0031",
+          "BATCH04-DOC06-S0033",
+          "BATCH04-DOC06-S0035",
+          "BATCH04-DOC06-S0036",
+          "BATCH04-DOC06-S0037",
+          "BATCH04-DOC06-S0039",
+          "BATCH04-DOC06-S0043",
+          "BATCH04-DOC06-S0053",
+          "BATCH04-DOC06-S0058",
+          "BATCH04-DOC06-S0059",
+          "BATCH04-DOC06-S0061"
+        ],
+        "event": {
+          "event_name": "陈海峰所在医院/医疗队在东台沿海大范围分散安置伤员",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "分散安置伤员",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们医疗队",
+              "normalized_entity": "陈海峰所在医院/医疗队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "伤员",
+              "normalized_entity": "伤员",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "东台沿海弶港、三仓河、沈灶、角斜、大丰县交界、神门口、蹲门口一带",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "海边盐沼",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "清乡回来",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "分散在小村庄、大户人家和盐沼中",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "盐沼有吃的，房子半边在地下，没有道路，日本鬼子不去",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "南北六七十华里，东西八十多华里",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "一个医疗队在那儿，最北面是蹲门口，所以南北六七十华里，东西八十多华里，你说世界上哪有这么大的医院呢？这个里面的小村庄，甚至大户人家住的，有很多都有住伤员。只要我们这个医疗队在那中心一站，周围的大大小小，大户人家都有。",
+          "type_basis": "核心过程是医院/医疗队将伤员分散驻扎在村庄、大户人家和盐沼中，属于可观察的组织行动与空间分布；Actor为医院/医疗队，Goal为伤员；不是单纯存在或关系，因为强调安置/驻扎的行动结果。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC06-W002-E02",
+        "source_segment_ids": [
+          "BATCH04-DOC06-S0058",
+          "BATCH04-DOC06-S0059"
+        ],
+        "event": {
+          "event_name": "在邵家鐅建设临时简易飞机场准备接待盟军",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "搞临时飞机场",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰所在医疗队/前方休养所",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "临时飞机场",
+              "normalized_entity": "邵家鐅临时简易飞机场",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "邵家鐅",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "准备接待盟军炸东京停留",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "那个时候",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那个邵家鐅（音），我们那个时候还搞了个临时飞机场，准备接待盟军炸东京的那个停留的那个飞机场，一个简易机场。",
+          "type_basis": "核心过程是组织/建设简易机场，属于物质过程；Actor为“我们”，Goal为临时飞机场；目的为接待盟军停留；不是言语或关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH04-DOC06-S0030",
+      "BATCH04-DOC06-S0032",
+      "BATCH04-DOC06-S0034",
+      "BATCH04-DOC06-S0038",
+      "BATCH04-DOC06-S0040",
+      "BATCH04-DOC06-S0041",
+      "BATCH04-DOC06-S0042",
+      "BATCH04-DOC06-S0044",
+      "BATCH04-DOC06-S0045",
+      "BATCH04-DOC06-S0046",
+      "BATCH04-DOC06-S0047",
+      "BATCH04-DOC06-S0048",
+      "BATCH04-DOC06-S0049",
+      "BATCH04-DOC06-S0050",
+      "BATCH04-DOC06-S0051",
+      "BATCH04-DOC06-S0052",
+      "BATCH04-DOC06-S0054",
+      "BATCH04-DOC06-S0055",
+      "BATCH04-DOC06-S0056",
+      "BATCH04-DOC06-S0057",
+      "BATCH04-DOC06-S0060"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH04-DOC06-W002\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH04-DOC06-W002-E01\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC06-S0029\",\n        \"BATCH04-DOC06-S0031\",\n        \"BATCH04-DOC06-S0033\",\n        \"BATCH04-DOC06-S0035\",\n        \"BATCH04-DOC06-S0036\",\n        \"BATCH04-DOC06-S0037\",\n        \"BATCH04-DOC06-S0039\",\n        \"BATCH04-DOC06-S0043\",\n        \"BATCH04-DOC06-S0053\",\n        \"BATCH04-DOC06-S0058\",\n        \"BATCH04-DOC06-S0059\",\n        \"BATCH04-DOC06-S0061\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰所在医院/医疗队在东台沿海大范围分散安置伤员\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"分散安置伤员\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们医疗队\",\n            \"normalized_entity\": \"陈海峰所在医院/医疗队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"伤员\",\n            \"normalized_entity\": \"伤员\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"东台沿海弶港、三仓河、沈灶、角斜、大丰县交界、神门口、蹲门口一带\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"海边盐沼\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"清乡回来\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"分散在小村庄、大户人家和盐沼中\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"盐沼有吃的，房子半边在地下，没有道路，日本鬼子不去\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"南北六七十华里，东西八十多华里\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"一个医疗队在那儿，最北面是蹲门口，所以南北六七十华里，东西八十多华里，你说世界上哪有这么大的医院呢？这个里面的小村庄，甚至大户人家住的，有很多都有住伤员。只要我们这个医疗队在那中心一站，周围的大大小小，大户人家都有。\",\n        \"type_basis\": \"核心过程是医院/医疗队将伤员分散驻扎在村庄、大户人家和盐沼中，属于可观察的组织行动与空间分布；Actor为医院/医疗队，Goal为伤员；不是单纯存在或关系，因为强调安置/驻扎的行动结果。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC06-W002-E02\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC06-S0058\",\n        \"BATCH04-DOC06-S0059\"\n      ],\n      \"event\": {\n        \"event_name\": \"在邵家鐅建设临时简易飞机场准备接待盟军\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"搞临时飞机场\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰所在医疗队/前方休养所\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"临时飞机场\",\n            \"normalized_entity\": \"邵家鐅临时简易飞机场\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"邵家鐅\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"准备接待盟军炸东京停留\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"那个时候\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那个邵家鐅（音），我们那个时候还搞了个临时飞机场，准备接待盟军炸东京的那个停留的那个飞机场，一个简易机场。\",\n        \"type_basis\": \"核心过程是组织/建设简易机场，属于物质过程；Actor为“我们”，Goal为临时飞机场；目的为接待盟军停留；不是言语或关系。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH04-DOC06-S0030\",\n    \"BATCH04-DOC06-S0032\",\n    \"BATCH04-DOC06-S0034\",\n    \"BATCH04-DOC06-S0038\",\n    \"BATCH04-DOC06-S0040\",\n    \"BATCH04-DOC06-S0041\",\n    \"BATCH04-DOC06-S0042\",\n    \"BATCH04-DOC06-S0044\",\n    \"BATCH04-DOC06-S0045\",\n    \"BATCH04-DOC06-S0046\",\n    \"BATCH04-DOC06-S0047\",\n    \"BATCH04-DOC06-S0048\",\n    \"BATCH04-DOC06-S0049\",\n    \"BATCH04-DOC06-S0050\",\n    \"BATCH04-DOC06-S0051\",\n    \"BATCH04-DOC06-S0052\",\n    \"BATCH04-DOC06-S0054\",\n    \"BATCH04-DOC06-S0055\",\n    \"BATCH04-DOC06-S0056\",\n    \"BATCH04-DOC06-S0057\",\n    \"BATCH04-DOC06-S0060\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 6273,
+    "total_tokens": 22633,
+    "completion_tokens": 16360,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14645
+    },
+    "time_to_first_token_ms": 244701,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 16359000
+  }
+}

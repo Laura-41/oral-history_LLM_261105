@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-11T22:05:03",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC01-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC01-DE003",
+  "usage": {
+    "prompt_tokens": 1493,
+    "total_tokens": 6867,
+    "completion_tokens": 5374,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4097
+    },
+    "time_to_first_token_ms": 45695,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5373000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC01-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"到抗战后期，急救知识比较普及，整个战士都等于是卫生战士，都懂得急救；营连卫生员和卫生战士体系逐步建立。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为营卫生指导员统一指挥、连设卫生员；终点为抗战后期急救知识普及、整个战士都懂急救。中间包含训练卫生战士、上卫生课和卫生报告。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"建立营连卫生组织，营卫生指导员统一指挥，连设卫生员并逐步增至两名。\",\n      \"process_text\": \"营里卫生指导员统一指挥，每个连有卫生员，起初一个连一个，后来两个。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0025\"\n      ],\n      \"evidence_quote\": \"那个呢，就是营里卫生指导员统一指挥了。每个连有卫生员，那个时候我们一个连只有一个卫生员，到后来呢，有两个卫生员。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"训练卫生战士，每班配三名卫生战士，到车桥战役时保持三名。\",\n      \"process_text\": \"以后训练卫生战士，每一个班有三个卫生战士，到“车桥战役”就三个卫生战士了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0025\"\n      ],\n      \"evidence_quote\": \"以后呢，我们训练卫生战士，每一个班有三个卫生战士，到“车桥战役”，我们就三个卫生战士了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"通过每周卫生课训练战士，使战士掌握卫生知识。\",\n      \"process_text\": \"战士都训练他，上卫生课，每个礼拜都要上卫生课。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0035\"\n      ],\n      \"evidence_quote\": \"因为我们组织比较健全，而且战士都有这个知识，都训练他，上卫生课，我们每个礼拜都要上卫生课。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"由连卫生员、营医务员授课，并派下去检查工作、做卫生报告。\",\n      \"process_text\": \"连的卫生员上，营医务员要去上，派下去检查工作，要做卫生报告。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0037\"\n      ],\n      \"evidence_quote\": \"连的卫生员上，营医务员要去上，我们派下去检查工作，要做卫生报告。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"到抗战后期，急救知识普及，整个战士都等于是卫生战士，都懂得急救。\",\n      \"process_text\": \"到最后，等到解放战争之前，抗战快要结束那个时候，整个的战士都等于是卫生战士，都懂得急救。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0025\"\n      ],\n      \"evidence_quote\": \"到最后呢，等到解放战争之前，抗战快要结束那个时候，整个的战士都等于是卫生战士，都懂得急救。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE003-P01\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE003-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0025\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE003-P02\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0035\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE003-P03\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE003-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0037\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE003-P04\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE003-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0025\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC01-DE003",
+    "event_enrichment": {
+      "result_state": "到抗战后期，急救知识比较普及，整个战士都等于是卫生战士，都懂得急救；营连卫生员和卫生战士体系逐步建立。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为营卫生指导员统一指挥、连设卫生员；终点为抗战后期急救知识普及、整个战士都懂急救。中间包含训练卫生战士、上卫生课和卫生报告。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC01-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "建立营连卫生组织，营卫生指导员统一指挥，连设卫生员并逐步增至两名。",
+        "process_text": "营里卫生指导员统一指挥，每个连有卫生员，起初一个连一个，后来两个。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0025"
+        ],
+        "evidence_quote": "那个呢，就是营里卫生指导员统一指挥了。每个连有卫生员，那个时候我们一个连只有一个卫生员，到后来呢，有两个卫生员。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "训练卫生战士，每班配三名卫生战士，到车桥战役时保持三名。",
+        "process_text": "以后训练卫生战士，每一个班有三个卫生战士，到“车桥战役”就三个卫生战士了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0025"
+        ],
+        "evidence_quote": "以后呢，我们训练卫生战士，每一个班有三个卫生战士，到“车桥战役”，我们就三个卫生战士了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "通过每周卫生课训练战士，使战士掌握卫生知识。",
+        "process_text": "战士都训练他，上卫生课，每个礼拜都要上卫生课。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0035"
+        ],
+        "evidence_quote": "因为我们组织比较健全，而且战士都有这个知识，都训练他，上卫生课，我们每个礼拜都要上卫生课。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "由连卫生员、营医务员授课，并派下去检查工作、做卫生报告。",
+        "process_text": "连的卫生员上，营医务员要去上，派下去检查工作，要做卫生报告。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0037"
+        ],
+        "evidence_quote": "连的卫生员上，营医务员要去上，我们派下去检查工作，要做卫生报告。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "到抗战后期，急救知识普及，整个战士都等于是卫生战士，都懂得急救。",
+        "process_text": "到最后，等到解放战争之前，抗战快要结束那个时候，整个的战士都等于是卫生战士，都懂得急救。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0025"
+        ],
+        "evidence_quote": "到最后呢，等到解放战争之前，抗战快要结束那个时候，整个的战士都等于是卫生战士，都懂得急救。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC01-DE003-P01",
+        "target_stage_id": "BATCH03-DOC01-DE003-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH03-DOC01-S0025",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC01-DE003-P02",
+        "target_stage_id": "BATCH03-DOC01-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0035",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC01-DE003-P03",
+        "target_stage_id": "BATCH03-DOC01-DE003-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC01-S0037",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC01-DE003-P04",
+        "target_stage_id": "BATCH03-DOC01-DE003-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC01-S0025",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

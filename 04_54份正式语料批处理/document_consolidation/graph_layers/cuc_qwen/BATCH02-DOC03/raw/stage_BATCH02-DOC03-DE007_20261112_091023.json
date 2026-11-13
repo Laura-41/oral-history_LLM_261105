@@ -1,0 +1,110 @@
+{
+  "run_time": "2026-11-12T09:10:23",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC03-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC03-DE007",
+  "usage": {
+    "prompt_tokens": 1546,
+    "total_tokens": 10970,
+    "completion_tokens": 9424,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8223
+    },
+    "time_to_first_token_ms": 138803,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9423000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V1-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC03-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"完成公共卫生训练班/皖南医学院训练并毕业，随后被派往前方。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"LOW\",\n    \"boundary_note\": \"本事件按报名/开始训练至毕业把握；原文出现1939年12月底报名、1939年1月开始训练、8月8日毕业及一年零一个月毕业等表述，时间链存在不一致。“毕业以后，我就派到前方去了”作为紧接结果纳入，后续到三支队任职及升任团卫生队队长不展开为本事件阶段。\",\n    \"boundary_confidence\": \"LOW\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"因新四军缺医少药需要学医人员而报名。\",\n      \"process_text\": \"讲了以后，就是你们新四军现在缺医少药，需要一批人来学医。那么我就报名了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0033\",\n        \"BATCH02-DOC03-S0037\"\n      ],\n      \"evidence_quote\": \"讲了以后，就是你们新四军现在缺医少药，需要一批人来学医。那么我就报名了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"训练班初称公共卫生训练班，后批准为皖南医学院。\",\n      \"process_text\": \"刚刚开始呢，都和国民党的编制一样，叫军医处，叫皖南新四军军医处，那么叫公共卫生训练班。以后我们这个班呢，周总理和李先念都批准了，就叫皖南医学院。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0035\"\n      ],\n      \"evidence_quote\": \"刚刚开始呢，都和国民党的编制一样，叫军医处，叫皖南新四军军医处，那么叫公共卫生训练班。以后我们这个班呢，周总理和李先念都批准了，就叫皖南医学院。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"参加训练并毕业。\",\n      \"process_text\": \"那么1939年1月开始训练，到8月8号毕业\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0035\",\n        \"BATCH02-DOC03-S0037\"\n      ],\n      \"evidence_quote\": \"那么1939年1月开始训练，到8月8号毕业\",\n      \"confidence\": \"LOW\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"毕业后被派往前方。\",\n      \"process_text\": \"毕业以后，我就派到前方去了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0035\"\n      ],\n      \"evidence_quote\": \"毕业以后，我就派到前方去了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE007-P01\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE007-P02\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE007-P03\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE007-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0035\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC03-DE007",
+    "event_enrichment": {
+      "result_state": "完成公共卫生训练班/皖南医学院训练并毕业，随后被派往前方。",
+      "factuality": "REPORTED",
+      "confidence": "LOW",
+      "boundary_note": "本事件按报名/开始训练至毕业把握；原文出现1939年12月底报名、1939年1月开始训练、8月8日毕业及一年零一个月毕业等表述，时间链存在不一致。“毕业以后，我就派到前方去了”作为紧接结果纳入，后续到三支队任职及升任团卫生队队长不展开为本事件阶段。",
+      "boundary_confidence": "LOW"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC03-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "因新四军缺医少药需要学医人员而报名。",
+        "process_text": "讲了以后，就是你们新四军现在缺医少药，需要一批人来学医。那么我就报名了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0033",
+          "BATCH02-DOC03-S0037"
+        ],
+        "evidence_quote": "讲了以后，就是你们新四军现在缺医少药，需要一批人来学医。那么我就报名了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "训练班初称公共卫生训练班，后批准为皖南医学院。",
+        "process_text": "刚刚开始呢，都和国民党的编制一样，叫军医处，叫皖南新四军军医处，那么叫公共卫生训练班。以后我们这个班呢，周总理和李先念都批准了，就叫皖南医学院。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0035"
+        ],
+        "evidence_quote": "刚刚开始呢，都和国民党的编制一样，叫军医处，叫皖南新四军军医处，那么叫公共卫生训练班。以后我们这个班呢，周总理和李先念都批准了，就叫皖南医学院。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "参加训练并毕业。",
+        "process_text": "那么1939年1月开始训练，到8月8号毕业",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0035",
+          "BATCH02-DOC03-S0037"
+        ],
+        "evidence_quote": "那么1939年1月开始训练，到8月8号毕业",
+        "confidence": "LOW"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "毕业后被派往前方。",
+        "process_text": "毕业以后，我就派到前方去了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0035"
+        ],
+        "evidence_quote": "毕业以后，我就派到前方去了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC03-DE007-P01",
+        "target_stage_id": "BATCH02-DOC03-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE007-P02",
+        "target_stage_id": "BATCH02-DOC03-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE007-P03",
+        "target_stage_id": "BATCH02-DOC03-DE007-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC03-S0035",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T10:18:09",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC07-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC07-DE003",
+  "usage": {
+    "prompt_tokens": 1345,
+    "total_tokens": 8104,
+    "completion_tokens": 6759,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5846
+    },
+    "time_to_first_token_ms": 109586,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC07-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"稿件经公开发报并投到上海《密勒氏评论报》、发送到美国，稿费交给新四军。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以 S0013 中“她有一个打字机，一天到晚“啪啪啪啪”打字，采访了以后呢，就发报发走了”至“拿到稿费就交给新四军”为事件过程边界；S0015 为口述者评价，不扩展事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"采访后使用打字机打字并发报\",\n      \"process_text\": \"她有一个打字机，一天到晚“啪啪啪啪”打字，采访了以后呢，就发报发走了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0013\"\n      ],\n      \"evidence_quote\": \"她有一个打字机，一天到晚“啪啪啪啪”打字，采访了以后呢，就发报发走了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"到泾县邮局公开发报，稿件投上海《密勒氏评论报》并发往美国\",\n      \"process_text\": \"她是公开的，到泾县邮局去发去，公开发。她经常写稿子（投）到上海的《密勒氏评论报》，都发到美国去，\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0013\"\n      ],\n      \"evidence_quote\": \"她是公开的，到泾县邮局去发去，公开发。她经常写稿子（投）到上海的《密勒氏评论报》，都发到美国去，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"拿到稿费后交给新四军\",\n      \"process_text\": \"拿到稿费就交给新四军。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0013\"\n      ],\n      \"evidence_quote\": \"拿到稿费就交给新四军。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE003-P01\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE003-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0013\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE003-P02\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE003-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0013\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V2-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC07-DE003",
+    "event_enrichment": {
+      "result_state": "稿件经公开发报并投到上海《密勒氏评论报》、发送到美国，稿费交给新四军。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "以 S0013 中“她有一个打字机，一天到晚“啪啪啪啪”打字，采访了以后呢，就发报发走了”至“拿到稿费就交给新四军”为事件过程边界；S0015 为口述者评价，不扩展事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC07-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "采访后使用打字机打字并发报",
+        "process_text": "她有一个打字机，一天到晚“啪啪啪啪”打字，采访了以后呢，就发报发走了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0013"
+        ],
+        "evidence_quote": "她有一个打字机，一天到晚“啪啪啪啪”打字，采访了以后呢，就发报发走了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "到泾县邮局公开发报，稿件投上海《密勒氏评论报》并发往美国",
+        "process_text": "她是公开的，到泾县邮局去发去，公开发。她经常写稿子（投）到上海的《密勒氏评论报》，都发到美国去，",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0013"
+        ],
+        "evidence_quote": "她是公开的，到泾县邮局去发去，公开发。她经常写稿子（投）到上海的《密勒氏评论报》，都发到美国去，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "拿到稿费后交给新四军",
+        "process_text": "拿到稿费就交给新四军。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0013"
+        ],
+        "evidence_quote": "拿到稿费就交给新四军。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC07-DE003-P01",
+        "target_stage_id": "BATCH02-DOC07-DE003-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC07-S0013",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE003-P02",
+        "target_stage_id": "BATCH02-DOC07-DE003-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC07-S0013",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

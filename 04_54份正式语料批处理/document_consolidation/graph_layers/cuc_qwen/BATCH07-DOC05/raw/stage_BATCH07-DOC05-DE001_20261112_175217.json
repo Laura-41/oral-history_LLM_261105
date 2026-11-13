@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T17:52:17",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC05-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC05-DE001",
+  "usage": {
+    "prompt_tokens": 1876,
+    "total_tokens": 17866,
+    "completion_tokens": 15990,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14642
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 15989000,
+    "time_to_first_token_ms": 290187
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC05-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"朱潮称所托付物品一个多礼拜就丢掉了，急救物品和笔记本等被丢光。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于陈海峰从皖南带出急救物品、笔记本等，止于朱潮称一个多礼拜丢光及新6团被包围突围的背景说明。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC05-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰从皖南带出急救物品、笔记本等。\",\n      \"process_text\": \"我从皖南出来多少次把背包丢掉，保存的这些急救的东西，还有自己的笔记本，自己的参考的必需（用到）的书。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC05-S0016\"\n      ],\n      \"evidence_quote\": \"我从皖南出来多少次把背包丢掉，保存的这些急救的东西，还有自己的笔记本，自己的参考的必需（用到）的书。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC05-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"皖南事变以后，陈海峰在句容茅山树林中找到朱潮，把急救物品和笔记本等交给他。\",\n      \"process_text\": \"在皖南事变以后，我找到他，他在句容那一带（的）山里头，茅山。上面有鬼子，（我）就在下面树林子里头找到他，把所有都交给他，血管、镊子、剪子、（手术）刀什么东西，我的笔记本什么，都交给他。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC05-S0020\"\n      ],\n      \"evidence_quote\": \"在皖南事变以后，我找到他，他在句容那一带（的）山里头，茅山。上面有鬼子，（我）就在下面树林子里头找到他，把所有都交给他，血管、镊子、剪子、（手术）刀什么东西，我的笔记本什么，都交给他。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC05-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"朱潮所在新6团在茅山句容地区被包围，突围中团长牺牲、伤亡很大。\",\n      \"process_text\": \"这个新6团在茅山句容地区被包围，那个时候他这一个团就六百多人，打得很惨哪，突围出来，团长牺牲，伤亡很大。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC05-S0022\"\n      ],\n      \"evidence_quote\": \"这个新6团在茅山句容地区被包围，那个时候他这一个团就六百多人，打得很惨哪，突围出来，团长牺牲，伤亡很大。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC05-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"朱潮在打仗轻装中把所托付物品丢光，一个多礼拜就丢掉了。\",\n      \"process_text\": \"他什么都丢光了。他就拿着枪打，什么卫生队不卫生队，和战士一块打仗啊！哪里还（管得了）这个背包，什么都丢掉了，轻装，一个多礼拜就丢光了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC05-S0024\"\n      ],\n      \"evidence_quote\": \"他什么都丢光了。他就拿着枪打，什么卫生队不卫生队，和战士一块打仗啊！哪里还（管得了）这个背包，什么都丢掉了，轻装，一个多礼拜就丢光了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC05-DE001-P01\",\n      \"target_stage_id\": \"BATCH07-DOC05-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC05-S0020\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC05-DE001-P02\",\n      \"target_stage_id\": \"BATCH07-DOC05-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC05-S0022\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC05-DE001-P03\",\n      \"target_stage_id\": \"BATCH07-DOC05-DE001-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH07-DOC05-S0024\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC05-DE001",
+    "event_enrichment": {
+      "result_state": "朱潮称所托付物品一个多礼拜就丢掉了，急救物品和笔记本等被丢光。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于陈海峰从皖南带出急救物品、笔记本等，止于朱潮称一个多礼拜丢光及新6团被包围突围的背景说明。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC05-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰从皖南带出急救物品、笔记本等。",
+        "process_text": "我从皖南出来多少次把背包丢掉，保存的这些急救的东西，还有自己的笔记本，自己的参考的必需（用到）的书。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC05-S0016"
+        ],
+        "evidence_quote": "我从皖南出来多少次把背包丢掉，保存的这些急救的东西，还有自己的笔记本，自己的参考的必需（用到）的书。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC05-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "皖南事变以后，陈海峰在句容茅山树林中找到朱潮，把急救物品和笔记本等交给他。",
+        "process_text": "在皖南事变以后，我找到他，他在句容那一带（的）山里头，茅山。上面有鬼子，（我）就在下面树林子里头找到他，把所有都交给他，血管、镊子、剪子、（手术）刀什么东西，我的笔记本什么，都交给他。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC05-S0020"
+        ],
+        "evidence_quote": "在皖南事变以后，我找到他，他在句容那一带（的）山里头，茅山。上面有鬼子，（我）就在下面树林子里头找到他，把所有都交给他，血管、镊子、剪子、（手术）刀什么东西，我的笔记本什么，都交给他。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC05-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "朱潮所在新6团在茅山句容地区被包围，突围中团长牺牲、伤亡很大。",
+        "process_text": "这个新6团在茅山句容地区被包围，那个时候他这一个团就六百多人，打得很惨哪，突围出来，团长牺牲，伤亡很大。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC05-S0022"
+        ],
+        "evidence_quote": "这个新6团在茅山句容地区被包围，那个时候他这一个团就六百多人，打得很惨哪，突围出来，团长牺牲，伤亡很大。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC05-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "朱潮在打仗轻装中把所托付物品丢光，一个多礼拜就丢掉了。",
+        "process_text": "他什么都丢光了。他就拿着枪打，什么卫生队不卫生队，和战士一块打仗啊！哪里还（管得了）这个背包，什么都丢掉了，轻装，一个多礼拜就丢光了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC05-S0024"
+        ],
+        "evidence_quote": "他什么都丢光了。他就拿着枪打，什么卫生队不卫生队，和战士一块打仗啊！哪里还（管得了）这个背包，什么都丢掉了，轻装，一个多礼拜就丢光了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC05-DE001-P01",
+        "target_stage_id": "BATCH07-DOC05-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC05-S0020",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC05-DE001-P02",
+        "target_stage_id": "BATCH07-DOC05-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC05-S0022",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC05-DE001-P03",
+        "target_stage_id": "BATCH07-DOC05-DE001-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH07-DOC05-S0024",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

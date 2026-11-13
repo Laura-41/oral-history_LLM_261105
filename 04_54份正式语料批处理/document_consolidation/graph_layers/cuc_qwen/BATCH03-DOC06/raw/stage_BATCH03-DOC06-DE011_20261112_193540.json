@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T19:35:40",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE011",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE011",
+  "usage": {
+    "prompt_tokens": 1361,
+    "total_tokens": 8380,
+    "completion_tokens": 7019,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5853
+    },
+    "tokens_per_second": 7018000,
+    "time_to_first_token_ms": 101977,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE011\",\n  \"event_enrichment\": {\n    \"result_state\": \"685团到达微山湖西（以后叫苏鲁边）\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于片段S0059中“8月份685团走了，肖华走……这个部队就先走了”，止于“685团就到了微山湖西——以后叫苏鲁边，就到那里去了”；前文罗帅12月回来接受调山东任务为背景，不纳入本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE011-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"685团与肖华部队先行出发\",\n      \"process_text\": \"8月份685团走了，肖华走，他们前后，杨得志去当344旅的副旅长之后，这个部队就先走了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0059\"\n      ],\n      \"evidence_quote\": \"8月份685团走了，肖华走，他们前后，杨得志去当344旅的副旅长之后，这个部队就先走了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE011-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"在山西太谷或平遥附近作战并有排长牺牲\",\n      \"process_text\": \"先在山西，好像在太谷还是平遥附近，还打了几仗，我们有一个排长，是个警卫员，年纪挺轻牺牲了\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0059\"\n      ],\n      \"evidence_quote\": \"先在山西，好像在太谷还是平遥附近，还打了几仗，我们有一个排长，是个警卫员，年纪挺轻牺牲了\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE011-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"在太行稍事休息后东进\",\n      \"process_text\": \"他们在太行稍事休息一下以后，就东进了\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0059\"\n      ],\n      \"evidence_quote\": \"他们在太行稍事休息一下以后，就东进了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE011-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"685团到达微山湖西/苏鲁边\",\n      \"process_text\": \"685团就到了微山湖西——以后叫苏鲁边，就到那里去了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0059\"\n      ],\n      \"evidence_quote\": \"685团就到了微山湖西——以后叫苏鲁边，就到那里去了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE011-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE011-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0059\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE011-P02\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE011-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0059\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE011-P03\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE011-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0059\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE011",
+    "event_enrichment": {
+      "result_state": "685团到达微山湖西（以后叫苏鲁边）",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于片段S0059中“8月份685团走了，肖华走……这个部队就先走了”，止于“685团就到了微山湖西——以后叫苏鲁边，就到那里去了”；前文罗帅12月回来接受调山东任务为背景，不纳入本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE011-P01",
+        "stage_order": 1,
+        "stage_summary": "685团与肖华部队先行出发",
+        "process_text": "8月份685团走了，肖华走，他们前后，杨得志去当344旅的副旅长之后，这个部队就先走了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0059"
+        ],
+        "evidence_quote": "8月份685团走了，肖华走，他们前后，杨得志去当344旅的副旅长之后，这个部队就先走了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE011-P02",
+        "stage_order": 2,
+        "stage_summary": "在山西太谷或平遥附近作战并有排长牺牲",
+        "process_text": "先在山西，好像在太谷还是平遥附近，还打了几仗，我们有一个排长，是个警卫员，年纪挺轻牺牲了",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0059"
+        ],
+        "evidence_quote": "先在山西，好像在太谷还是平遥附近，还打了几仗，我们有一个排长，是个警卫员，年纪挺轻牺牲了",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE011-P03",
+        "stage_order": 3,
+        "stage_summary": "在太行稍事休息后东进",
+        "process_text": "他们在太行稍事休息一下以后，就东进了",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0059"
+        ],
+        "evidence_quote": "他们在太行稍事休息一下以后，就东进了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE011-P04",
+        "stage_order": 4,
+        "stage_summary": "685团到达微山湖西/苏鲁边",
+        "process_text": "685团就到了微山湖西——以后叫苏鲁边，就到那里去了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0059"
+        ],
+        "evidence_quote": "685团就到了微山湖西——以后叫苏鲁边，就到那里去了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE011-P01",
+        "target_stage_id": "BATCH03-DOC06-DE011-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0059",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE011-P02",
+        "target_stage_id": "BATCH03-DOC06-DE011-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0059",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE011-P03",
+        "target_stage_id": "BATCH03-DOC06-DE011-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC06-S0059",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

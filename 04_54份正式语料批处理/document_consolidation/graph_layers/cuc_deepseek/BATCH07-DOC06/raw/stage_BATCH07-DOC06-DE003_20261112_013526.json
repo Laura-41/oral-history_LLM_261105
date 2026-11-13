@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T01:35:26",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC06-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC06-DE003",
+  "usage": {
+    "prompt_tokens": 1595,
+    "total_tokens": 6414,
+    "completion_tokens": 4819,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3371
+    },
+    "time_to_first_token_ms": 37141,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4818000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC06-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰经东台接待站留1师师部后，被李振湘派往2旅5团（新5团）\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于陈海峰到达东台，止于李振湘明确派其到2旅5团；不含此前皖南经历和后续到任情况。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰到达东台\",\n      \"process_text\": \"陈海峰到东台了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0126\"\n      ],\n      \"evidence_quote\": \"陈海峰：到东台了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"东台接待站由钟期光统一收容皖南过来的人\",\n      \"process_text\": \"到了东台以后，东台有个接待站，由1师政治部主任钟期光统一收容皖南过来的人，都经过他那个接待站。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0130\"\n      ],\n      \"evidence_quote\": \"陈海峰：那么到了东台以后呢，东台有个接待站。接待站呢，就是1师的政治部主任钟期光，原来是新四军军部的政治部副主任，统一收容皖南过来的人，都经过他那个接待站。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"接待站决定去留，陈海峰等留1师师部\",\n      \"process_text\": \"哪个到军部去，哪个留到1师，由接待站决定；陈海峰等一到以后就都留到1师师部了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0132\"\n      ],\n      \"evidence_quote\": \"陈海峰：哪个到军部去，哪个留到1师，由他那里决定。我们一到以后呢，聂正恒也好啊，我也好，我们就都留到1师师部了。师部就是陈毅的吧，那么……\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"见到院长李振湘，听取先到人员与卫生部组建情况\",\n      \"process_text\": \"见到李振湘院长，他介绍先到人员情况和卫生部正在组建、缺乏人员、后方医院院长未定、师部科室干部不健全。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0134\"\n      ],\n      \"evidence_quote\": \"见到了。马上就见到我们的院长了，那是李振湘，军医院的院长，他就是卫生部长了，看到很高兴啊。你们来了，我们带了几个人啊，他再介绍介绍他们先到的一些情况，已经到了哪些人，现在组建了卫生部。因为新四军军部刚成立，正在组建中间，缺乏人员。准备成立个后方医院，后方医院嘛，院长还没有，那么就是部长自己兼。师部的科长还不健全，科的干部也没有。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"李振湘让陈海峰回5团，明确为2旅5团（新5团）\",\n      \"process_text\": \"李振湘找陈海峰谈话，说你现在不是5团的卫生队长嘛，现在你还是回你的5团去；陈海峰质疑5团都没有了，对方明确你到2旅5团去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0134\"\n      ],\n      \"evidence_quote\": \"那么他找我了，说你现在不是5团的卫生队长嘛，现在你还是回你的5团去。（陈海峰笑）怎么还回5团？5团都没有了，还回5团！（跟我说是）你到2旅5团去。所以我那个书上就写从5团到5团，从老5团到新5团。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE003-P01\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC06-S0130\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE003-P02\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE003-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH07-DOC06-S0132\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE003-P03\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE003-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC06-S0134\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE003-P04\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE003-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC06-S0134\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC06-DE003",
+    "event_enrichment": {
+      "result_state": "陈海峰经东台接待站留1师师部后，被李振湘派往2旅5团（新5团）",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于陈海峰到达东台，止于李振湘明确派其到2旅5团；不含此前皖南经历和后续到任情况。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC06-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰到达东台",
+        "process_text": "陈海峰到东台了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0126"
+        ],
+        "evidence_quote": "陈海峰：到东台了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "东台接待站由钟期光统一收容皖南过来的人",
+        "process_text": "到了东台以后，东台有个接待站，由1师政治部主任钟期光统一收容皖南过来的人，都经过他那个接待站。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0130"
+        ],
+        "evidence_quote": "陈海峰：那么到了东台以后呢，东台有个接待站。接待站呢，就是1师的政治部主任钟期光，原来是新四军军部的政治部副主任，统一收容皖南过来的人，都经过他那个接待站。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "接待站决定去留，陈海峰等留1师师部",
+        "process_text": "哪个到军部去，哪个留到1师，由接待站决定；陈海峰等一到以后就都留到1师师部了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0132"
+        ],
+        "evidence_quote": "陈海峰：哪个到军部去，哪个留到1师，由他那里决定。我们一到以后呢，聂正恒也好啊，我也好，我们就都留到1师师部了。师部就是陈毅的吧，那么……",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "见到院长李振湘，听取先到人员与卫生部组建情况",
+        "process_text": "见到李振湘院长，他介绍先到人员情况和卫生部正在组建、缺乏人员、后方医院院长未定、师部科室干部不健全。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0134"
+        ],
+        "evidence_quote": "见到了。马上就见到我们的院长了，那是李振湘，军医院的院长，他就是卫生部长了，看到很高兴啊。你们来了，我们带了几个人啊，他再介绍介绍他们先到的一些情况，已经到了哪些人，现在组建了卫生部。因为新四军军部刚成立，正在组建中间，缺乏人员。准备成立个后方医院，后方医院嘛，院长还没有，那么就是部长自己兼。师部的科长还不健全，科的干部也没有。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "李振湘让陈海峰回5团，明确为2旅5团（新5团）",
+        "process_text": "李振湘找陈海峰谈话，说你现在不是5团的卫生队长嘛，现在你还是回你的5团去；陈海峰质疑5团都没有了，对方明确你到2旅5团去。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0134"
+        ],
+        "evidence_quote": "那么他找我了，说你现在不是5团的卫生队长嘛，现在你还是回你的5团去。（陈海峰笑）怎么还回5团？5团都没有了，还回5团！（跟我说是）你到2旅5团去。所以我那个书上就写从5团到5团，从老5团到新5团。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC06-DE003-P01",
+        "target_stage_id": "BATCH07-DOC06-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC06-S0130",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE003-P02",
+        "target_stage_id": "BATCH07-DOC06-DE003-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH07-DOC06-S0132",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE003-P03",
+        "target_stage_id": "BATCH07-DOC06-DE003-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC06-S0134",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE003-P04",
+        "target_stage_id": "BATCH07-DOC06-DE003-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC06-S0134",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

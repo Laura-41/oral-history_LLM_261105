@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T13:13:02",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC05-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC05-DE003",
+  "usage": {
+    "prompt_tokens": 1303,
+    "total_tokens": 7381,
+    "completion_tokens": 6078,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4963
+    },
+    "time_to_first_token_ms": 89459,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-07\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC05-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆已将一本军部护照交给联络人，并自认该行为违反纪律；相关来往人员未告发，其同时指出若上报将证据确凿被捉。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件起于 S0011 中军部发护照、陈锐霆拿一本，止于 S0013 中说明未告发及违反统一战线纪律的后果；围绕提供军部护照并自认违纪。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"军部发放护照，陈锐霆取用一本\",\n      \"process_text\": \"军部给我们发了好几本，我拿了一本\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0011\"\n      ],\n      \"evidence_quote\": \"军部给我们发了好几本，我拿了一本，\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"将护照交给联络人\",\n      \"process_text\": \"交给跟我去联系的人\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0011\"\n      ],\n      \"evidence_quote\": \"交给跟我去联系的人，\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"自认提供护照属于违反纪律\",\n      \"process_text\": \"这是一个违反纪律的地方\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0011\"\n      ],\n      \"evidence_quote\": \"这是一个违反纪律的地方。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"说明来往人员未告发及若上报的后果\",\n      \"process_text\": \"因为我到这个团处理关系各个方面都还比较好，对他们也很尊重，所以也没有告发我。实际上那个时候往上面一报告，那马上证据确凿，就把我捉起来了，就叫违反纪律嘛，违反统一战线的纪律。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0013\"\n      ],\n      \"evidence_quote\": \"因为我到这个团处理关系各个方面都还比较好，对他们也很尊重，所以也没有告发我。实际上那个时候往上面一报告，那马上证据确凿，就把我捉起来了，就叫违反纪律嘛，违反统一战线的纪律。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE003-P01\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE003-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0011\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE003-P02\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE003-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0011\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE003-P03\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE003-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0013\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-07",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC05-DE003",
+    "event_enrichment": {
+      "result_state": "陈锐霆已将一本军部护照交给联络人，并自认该行为违反纪律；相关来往人员未告发，其同时指出若上报将证据确凿被捉。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件起于 S0011 中军部发护照、陈锐霆拿一本，止于 S0013 中说明未告发及违反统一战线纪律的后果；围绕提供军部护照并自认违纪。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC05-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "军部发放护照，陈锐霆取用一本",
+        "process_text": "军部给我们发了好几本，我拿了一本",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0011"
+        ],
+        "evidence_quote": "军部给我们发了好几本，我拿了一本，",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "将护照交给联络人",
+        "process_text": "交给跟我去联系的人",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0011"
+        ],
+        "evidence_quote": "交给跟我去联系的人，",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "自认提供护照属于违反纪律",
+        "process_text": "这是一个违反纪律的地方",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0011"
+        ],
+        "evidence_quote": "这是一个违反纪律的地方。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "说明来往人员未告发及若上报的后果",
+        "process_text": "因为我到这个团处理关系各个方面都还比较好，对他们也很尊重，所以也没有告发我。实际上那个时候往上面一报告，那马上证据确凿，就把我捉起来了，就叫违反纪律嘛，违反统一战线的纪律。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0013"
+        ],
+        "evidence_quote": "因为我到这个团处理关系各个方面都还比较好，对他们也很尊重，所以也没有告发我。实际上那个时候往上面一报告，那马上证据确凿，就把我捉起来了，就叫违反纪律嘛，违反统一战线的纪律。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC05-DE003-P01",
+        "target_stage_id": "BATCH03-DOC05-DE003-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH03-DOC05-S0011",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC05-DE003-P02",
+        "target_stage_id": "BATCH03-DOC05-DE003-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC05-S0011",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC05-DE003-P03",
+        "target_stage_id": "BATCH03-DOC05-DE003-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC05-S0013",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

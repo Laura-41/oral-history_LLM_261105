@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T23:13:22",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC03-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC03-DE008",
+  "usage": {
+    "prompt_tokens": 1556,
+    "total_tokens": 4990,
+    "completion_tokens": 3434,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2112
+    },
+    "time_to_first_token_ms": 34833,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC03-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"六中全会精神由罗荣桓分批传达，杨永松等参加传达；传达后杨永松知道段君毅是泰西地委书记、万里是宣传部长。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以罗荣桓到常村后准备代表中央传达六中全会建议为起点，以杨永松参加传达后知道段君毅、万里职务为终点；不扩展到六中全会本身或其他传达对象。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"杨永松等到达常村，六支队、区党委党校、地委党校等前来会合，罗荣桓准备代表中央传达六中全会建议。\",\n      \"process_text\": \"到常村后，罗荣桓马上要抓代表中央传达六中全会建议，各方人员前来会合。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0051\"\n      ],\n      \"evidence_quote\": \"我们过了运河，先到了无盐村，以后就到了夏谢，以后又搬到常村。当时罗帅马上要抓的就是要代表中央传达六中全会的建议，就把当时到跟前来的一个……是跟六支队会合了，以后（鲁西）区党委党校来了，（泰西）地委党校也来了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"在常村传达六中全会建议，686团分散掩护师部并临时组织团机关。\",\n      \"process_text\": \"在常村传达六中全会建议；686团分散在几个方面掩护师部，并临时组织团的机关。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0056\"\n      ],\n      \"evidence_quote\": \"在常村那里呢，除了传达六中全会的建议以外，686团就分散在几个方面来掩护师部，因为686团本身，因为（杨勇是）它这个团长，他也把团部的大部分留在杨勇那里了。他这里要临时组织团的机关，四个教导员，刘西元当了政委，还有什么人呢？政治主任覃士冕，还有一个副主任，还有一个……反正四个教导员都安排了职务。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"罗荣桓集中精力赶快传达，传达完后带骑兵排过津浦路东，到蒙阴附近山东纵队司令部继续传达中央精神。\",\n      \"process_text\": \"罗荣桓集中精力赶快传达，传达完带骑兵排过津浦路东，到蒙阴附近山东纵队司令部传达中央精神。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0067\"\n      ],\n      \"evidence_quote\": \"罗那时候呢，他要集中精力赶快传达，传达完了他带骑兵排，就过了（津浦）路东，到了蒙阴附近，就是山东黎玉、张经武他们在那里的山东纵队司令部，那个时候我也在那个地方。所以他去传达这个中央的精神。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"传达分批进行，按对象不同详略不同；杨永松参加传达后知道段君毅、万里的职务。\",\n      \"process_text\": \"罗荣桓传达分好几批，对师首长、政治部部长讲得较细，以下较简单；杨永松参加传达后知道段君毅是泰西地委书记、万里是宣传部长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0067\"\n      ],\n      \"evidence_quote\": \"他传达也分好几批，省委一级讲到什么程度，你像我们那里，跟他们师的首长、政治部的部长，讲得比较细；以下就比较简单一些，讲重要一点。那个时候我们在那里参加传达之后，知道是段君毅，是泰西地委书记，万里是宣传部长，（后来的）副总理万里，他是那时地委的宣传部长。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE008-P01\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0056\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE008-P02\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0067\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE008-P03\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE008-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0067\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC03-DE008",
+    "event_enrichment": {
+      "result_state": "六中全会精神由罗荣桓分批传达，杨永松等参加传达；传达后杨永松知道段君毅是泰西地委书记、万里是宣传部长。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以罗荣桓到常村后准备代表中央传达六中全会建议为起点，以杨永松参加传达后知道段君毅、万里职务为终点；不扩展到六中全会本身或其他传达对象。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC03-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "杨永松等到达常村，六支队、区党委党校、地委党校等前来会合，罗荣桓准备代表中央传达六中全会建议。",
+        "process_text": "到常村后，罗荣桓马上要抓代表中央传达六中全会建议，各方人员前来会合。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0051"
+        ],
+        "evidence_quote": "我们过了运河，先到了无盐村，以后就到了夏谢，以后又搬到常村。当时罗帅马上要抓的就是要代表中央传达六中全会的建议，就把当时到跟前来的一个……是跟六支队会合了，以后（鲁西）区党委党校来了，（泰西）地委党校也来了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "在常村传达六中全会建议，686团分散掩护师部并临时组织团机关。",
+        "process_text": "在常村传达六中全会建议；686团分散在几个方面掩护师部，并临时组织团的机关。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0056"
+        ],
+        "evidence_quote": "在常村那里呢，除了传达六中全会的建议以外，686团就分散在几个方面来掩护师部，因为686团本身，因为（杨勇是）它这个团长，他也把团部的大部分留在杨勇那里了。他这里要临时组织团的机关，四个教导员，刘西元当了政委，还有什么人呢？政治主任覃士冕，还有一个副主任，还有一个……反正四个教导员都安排了职务。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "罗荣桓集中精力赶快传达，传达完后带骑兵排过津浦路东，到蒙阴附近山东纵队司令部继续传达中央精神。",
+        "process_text": "罗荣桓集中精力赶快传达，传达完带骑兵排过津浦路东，到蒙阴附近山东纵队司令部传达中央精神。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0067"
+        ],
+        "evidence_quote": "罗那时候呢，他要集中精力赶快传达，传达完了他带骑兵排，就过了（津浦）路东，到了蒙阴附近，就是山东黎玉、张经武他们在那里的山东纵队司令部，那个时候我也在那个地方。所以他去传达这个中央的精神。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "传达分批进行，按对象不同详略不同；杨永松参加传达后知道段君毅、万里的职务。",
+        "process_text": "罗荣桓传达分好几批，对师首长、政治部部长讲得较细，以下较简单；杨永松参加传达后知道段君毅是泰西地委书记、万里是宣传部长。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0067"
+        ],
+        "evidence_quote": "他传达也分好几批，省委一级讲到什么程度，你像我们那里，跟他们师的首长、政治部的部长，讲得比较细；以下就比较简单一些，讲重要一点。那个时候我们在那里参加传达之后，知道是段君毅，是泰西地委书记，万里是宣传部长，（后来的）副总理万里，他是那时地委的宣传部长。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC03-DE008-P01",
+        "target_stage_id": "BATCH04-DOC03-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0056",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE008-P02",
+        "target_stage_id": "BATCH04-DOC03-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0067",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE008-P03",
+        "target_stage_id": "BATCH04-DOC03-DE008-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0067",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

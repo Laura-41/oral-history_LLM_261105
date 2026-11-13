@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-12T19:21:22",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE005",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE005",
+  "usage": {
+    "prompt_tokens": 1391,
+    "total_tokens": 10917,
+    "completion_tokens": 9526,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8146
+    },
+    "time_to_first_token_ms": 140657,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"总部电报先令陈光代理旅长，后又指定陈光代理师长；中央知道后其命令没有发下来。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于S0021‘这个时候就发电报给中央，中央组织赶快把他送回延安来’，止于S0023‘中央那个意思呢，完了，他知道总部已经命令陈光代理师长以后，他那命令没有发下来’。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"发电报给中央并送回延安\",\n      \"process_text\": \"这个时候就发电报给中央，中央组织赶快把他送回延安来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0021\"\n      ],\n      \"evidence_quote\": \"这个时候就发电报给中央，中央组织赶快把他送回延安来。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"延安方面听说要罗荣桓代理师长兼政委\",\n      \"process_text\": \"延安那边呢，以后听说的，说是要罗荣桓代理师长兼政委\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0021\"\n      ],\n      \"evidence_quote\": \"延安那边呢，以后听说的，说是要罗荣桓代理师长兼政委\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"总部电报先令陈光代理旅长\",\n      \"process_text\": \"可是总部电报先来，要陈光代理旅长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0021\"\n      ],\n      \"evidence_quote\": \"可是总部电报先来，要陈光代理旅长。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"总部因电报联系迅速指定陈光代理师长\",\n      \"process_text\": \"因为他在太行啊，咱们没有无线通话的东西，只有电报的东西。一听说林彪一负伤，总部就赶快指定陈光代理师长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0023\"\n      ],\n      \"evidence_quote\": \"因为他在太行啊，咱们没有无线通话的东西，只有电报的东西。一听说林彪一负伤，总部就赶快指定陈光代理师长。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE005-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"中央相关命令未发下来\",\n      \"process_text\": \"中央那个意思呢，完了，他知道总部已经命令陈光代理师长以后，他那命令没有发下来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0023\"\n      ],\n      \"evidence_quote\": \"中央那个意思呢，完了，他知道总部已经命令陈光代理师长以后，他那命令没有发下来。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE005-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0021\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE005-P02\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0021\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE005-P03\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE005-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0023\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE005-P04\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE005-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0023\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE005",
+    "event_enrichment": {
+      "result_state": "总部电报先令陈光代理旅长，后又指定陈光代理师长；中央知道后其命令没有发下来。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于S0021‘这个时候就发电报给中央，中央组织赶快把他送回延安来’，止于S0023‘中央那个意思呢，完了，他知道总部已经命令陈光代理师长以后，他那命令没有发下来’。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "发电报给中央并送回延安",
+        "process_text": "这个时候就发电报给中央，中央组织赶快把他送回延安来。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0021"
+        ],
+        "evidence_quote": "这个时候就发电报给中央，中央组织赶快把他送回延安来。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "延安方面听说要罗荣桓代理师长兼政委",
+        "process_text": "延安那边呢，以后听说的，说是要罗荣桓代理师长兼政委",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0021"
+        ],
+        "evidence_quote": "延安那边呢，以后听说的，说是要罗荣桓代理师长兼政委",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "总部电报先令陈光代理旅长",
+        "process_text": "可是总部电报先来，要陈光代理旅长。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0021"
+        ],
+        "evidence_quote": "可是总部电报先来，要陈光代理旅长。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "总部因电报联系迅速指定陈光代理师长",
+        "process_text": "因为他在太行啊，咱们没有无线通话的东西，只有电报的东西。一听说林彪一负伤，总部就赶快指定陈光代理师长。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0023"
+        ],
+        "evidence_quote": "因为他在太行啊，咱们没有无线通话的东西，只有电报的东西。一听说林彪一负伤，总部就赶快指定陈光代理师长。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE005-P05",
+        "stage_order": 5,
+        "stage_summary": "中央相关命令未发下来",
+        "process_text": "中央那个意思呢，完了，他知道总部已经命令陈光代理师长以后，他那命令没有发下来。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0023"
+        ],
+        "evidence_quote": "中央那个意思呢，完了，他知道总部已经命令陈光代理师长以后，他那命令没有发下来。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE005-P01",
+        "target_stage_id": "BATCH03-DOC06-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0021",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE005-P02",
+        "target_stage_id": "BATCH03-DOC06-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0021",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE005-P03",
+        "target_stage_id": "BATCH03-DOC06-DE005-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0023",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE005-P04",
+        "target_stage_id": "BATCH03-DOC06-DE005-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC06-S0023",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

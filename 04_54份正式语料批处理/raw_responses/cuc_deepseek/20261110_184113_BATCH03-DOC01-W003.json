@@ -1,0 +1,139 @@
+{
+  "run_time": "2026-11-10T18:41:13",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC01-W003",
+  "technical_document_id": "BATCH03-DOC01",
+  "document_id": "05.陈海峰（二访）（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC01-S0046",
+    "BATCH03-DOC01-S0047",
+    "BATCH03-DOC01-S0048",
+    "BATCH03-DOC01-S0049",
+    "BATCH03-DOC01-S0050",
+    "BATCH03-DOC01-S0051",
+    "BATCH03-DOC01-S0052",
+    "BATCH03-DOC01-S0053",
+    "BATCH03-DOC01-S0054",
+    "BATCH03-DOC01-S0055",
+    "BATCH03-DOC01-S0056",
+    "BATCH03-DOC01-S0057",
+    "BATCH03-DOC01-S0058",
+    "BATCH03-DOC01-S0059",
+    "BATCH03-DOC01-S0060",
+    "BATCH03-DOC01-S0061",
+    "BATCH03-DOC01-S0062",
+    "BATCH03-DOC01-S0063",
+    "BATCH03-DOC01-S0064",
+    "BATCH03-DOC01-S0065",
+    "BATCH03-DOC01-S0066",
+    "BATCH03-DOC01-S0067",
+    "BATCH03-DOC01-S0068"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 3,
+    "unassigned_segment_count": 20,
+    "input_segment_count": 23,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH03-DOC01-W003-E01"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC01-W003",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC01-W003-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC01-S0063",
+          "BATCH03-DOC01-S0065",
+          "BATCH03-DOC01-S0067"
+        ],
+        "event": {
+          "event_name": "陈海峰参加铁门闩伏击战",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "打埋伏",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我们这个二营",
+              "normalized_entity": "新四军第二营",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "敌人",
+              "normalized_entity": "日军",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "铁门闩",
+              "normalized_value": "铁门闩"
+            },
+            {
+              "kind": "TIME",
+              "value": "天朦朦亮",
+              "normalized_value": "黎明"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那么我们就是打埋伏，打埋伏就是我们这个二营管，那个时候我还在二营。",
+          "type_basis": "核心过程为“打埋伏”，是二营在铁门闩对日军实施的物质行动；参与者为Actor（陈海峰、二营）和Goal（日军），符合MATERIAL角色词表；非言语、心理或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC01-S0046",
+      "BATCH03-DOC01-S0047",
+      "BATCH03-DOC01-S0048",
+      "BATCH03-DOC01-S0049",
+      "BATCH03-DOC01-S0050",
+      "BATCH03-DOC01-S0051",
+      "BATCH03-DOC01-S0052",
+      "BATCH03-DOC01-S0053",
+      "BATCH03-DOC01-S0054",
+      "BATCH03-DOC01-S0055",
+      "BATCH03-DOC01-S0056",
+      "BATCH03-DOC01-S0057",
+      "BATCH03-DOC01-S0058",
+      "BATCH03-DOC01-S0059",
+      "BATCH03-DOC01-S0060",
+      "BATCH03-DOC01-S0061",
+      "BATCH03-DOC01-S0062",
+      "BATCH03-DOC01-S0064",
+      "BATCH03-DOC01-S0066",
+      "BATCH03-DOC01-S0068"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH03-DOC01-W003\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC01-W003-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC01-S0063\",\n        \"BATCH03-DOC01-S0065\",\n        \"BATCH03-DOC01-S0067\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰参加铁门闩伏击战\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"打埋伏\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们这个二营\",\n            \"normalized_entity\": \"新四军第二营\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"敌人\",\n            \"normalized_entity\": \"日军\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"铁门闩\",\n            \"normalized_value\": \"铁门闩\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"天朦朦亮\",\n            \"normalized_value\": \"黎明\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那么我们就是打埋伏，打埋伏就是我们这个二营管，那个时候我还在二营。\",\n        \"type_basis\": \"核心过程为“打埋伏”，是二营在铁门闩对日军实施的物质行动；参与者为Actor（陈海峰、二营）和Goal（日军），符合MATERIAL角色词表；非言语、心理或关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC01-S0046\",\n    \"BATCH03-DOC01-S0047\",\n    \"BATCH03-DOC01-S0048\",\n    \"BATCH03-DOC01-S0049\",\n    \"BATCH03-DOC01-S0050\",\n    \"BATCH03-DOC01-S0051\",\n    \"BATCH03-DOC01-S0052\",\n    \"BATCH03-DOC01-S0053\",\n    \"BATCH03-DOC01-S0054\",\n    \"BATCH03-DOC01-S0055\",\n    \"BATCH03-DOC01-S0056\",\n    \"BATCH03-DOC01-S0057\",\n    \"BATCH03-DOC01-S0058\",\n    \"BATCH03-DOC01-S0059\",\n    \"BATCH03-DOC01-S0060\",\n    \"BATCH03-DOC01-S0061\",\n    \"BATCH03-DOC01-S0062\",\n    \"BATCH03-DOC01-S0064\",\n    \"BATCH03-DOC01-S0066\",\n    \"BATCH03-DOC01-S0068\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5645,
+    "total_tokens": 11849,
+    "completion_tokens": 6204,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5483
+    },
+    "time_to_first_token_ms": 60714,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  }
+}

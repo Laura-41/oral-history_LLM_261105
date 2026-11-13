@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T22:25:03",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC05-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC05-DE002",
+  "usage": {
+    "prompt_tokens": 1667,
+    "total_tokens": 5845,
+    "completion_tokens": 4178,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2993
+    },
+    "time_to_first_token_ms": 34766,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4177000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-07\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC05-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆以侦察和敌情不明为由拖延，未执行截击命令；共产党两路部队发现国民党部队过河后连夜撤至涡河以东，截击未发生。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以师部发现共产党两路部队并下令截击为起点，以陈锐霆借侦察拖延、共军连夜撤退及事后刘震印证未执行后果为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"师部发现共产党两路部队，命令陈锐霆派人前出截断并分段消灭。\",\n      \"process_text\": \"师部也发现了，马上叫我派人到前面去，把他掐断了，分段消灭了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0017\"\n      ],\n      \"evidence_quote\": \"师部也发现了，马上叫我派人到前面去，把他掐断了，分段消灭了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈锐霆以已派侦察、黄泛区地形复杂、敌后续不明为由回复，表示以后根据情况出击，实际拖延未执行。\",\n      \"process_text\": \"我就说我派人已经出去侦察去了。一个（方面）那是黄泛区，我说前面地形很复杂，有些地方人没法通过，我（派人）去地形侦察，另外敌人的后续部队到底有多少，我现在没查清，我也派人去查了，看到底有多少人，我以后根据情况出击。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0017\"\n      ],\n      \"evidence_quote\": \"我就说我派人已经出去侦察去了。一个（方面）那是黄泛区，我说前面地形很复杂，有些地方人没法通过，我（派人）去地形侦察，另外敌人的后续部队到底有多少，我现在没查清，我也派人去查了，看到底有多少人，我以后根据情况出击。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"共产党部队发现国民党部队搭浮桥过河，连夜紧急撤退至涡河以东，截击未发生。\",\n      \"process_text\": \"我们（共产党）的部队也发现国民党的部队搭了浮桥过了河，所以连夜紧急撤退，就撤退到涡河以东。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0019\"\n      ],\n      \"evidence_quote\": \"我们（共产党）的部队也发现国民党的部队搭了浮桥过了河，所以连夜紧急撤退，就撤退到涡河以东。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC05-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"事后刘震对陈锐霆说，若非地下党员，那天就当了俘虏，并提及前面一插就插断，侧面印证陈未执行截击。\",\n      \"process_text\": \"他说（当时）我刚结了婚不久，如果你不是个地下党员，我那天就当了俘虏。我前面一插就插断了嘛\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC05-S0023\"\n      ],\n      \"evidence_quote\": \"他说（当时）我刚结了婚不久，如果你不是个地下党员，我那天就当了俘虏。我前面一插就插断了嘛\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE002-P01\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0017\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE002-P02\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE002-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0019\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC05-DE002-P03\",\n      \"target_stage_id\": \"BATCH03-DOC05-DE002-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC05-S0023\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-07",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC05-DE002",
+    "event_enrichment": {
+      "result_state": "陈锐霆以侦察和敌情不明为由拖延，未执行截击命令；共产党两路部队发现国民党部队过河后连夜撤至涡河以东，截击未发生。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以师部发现共产党两路部队并下令截击为起点，以陈锐霆借侦察拖延、共军连夜撤退及事后刘震印证未执行后果为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC05-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "师部发现共产党两路部队，命令陈锐霆派人前出截断并分段消灭。",
+        "process_text": "师部也发现了，马上叫我派人到前面去，把他掐断了，分段消灭了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0017"
+        ],
+        "evidence_quote": "师部也发现了，马上叫我派人到前面去，把他掐断了，分段消灭了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "陈锐霆以已派侦察、黄泛区地形复杂、敌后续不明为由回复，表示以后根据情况出击，实际拖延未执行。",
+        "process_text": "我就说我派人已经出去侦察去了。一个（方面）那是黄泛区，我说前面地形很复杂，有些地方人没法通过，我（派人）去地形侦察，另外敌人的后续部队到底有多少，我现在没查清，我也派人去查了，看到底有多少人，我以后根据情况出击。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0017"
+        ],
+        "evidence_quote": "我就说我派人已经出去侦察去了。一个（方面）那是黄泛区，我说前面地形很复杂，有些地方人没法通过，我（派人）去地形侦察，另外敌人的后续部队到底有多少，我现在没查清，我也派人去查了，看到底有多少人，我以后根据情况出击。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "共产党部队发现国民党部队搭浮桥过河，连夜紧急撤退至涡河以东，截击未发生。",
+        "process_text": "我们（共产党）的部队也发现国民党的部队搭了浮桥过了河，所以连夜紧急撤退，就撤退到涡河以东。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0019"
+        ],
+        "evidence_quote": "我们（共产党）的部队也发现国民党的部队搭了浮桥过了河，所以连夜紧急撤退，就撤退到涡河以东。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC05-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "事后刘震对陈锐霆说，若非地下党员，那天就当了俘虏，并提及前面一插就插断，侧面印证陈未执行截击。",
+        "process_text": "他说（当时）我刚结了婚不久，如果你不是个地下党员，我那天就当了俘虏。我前面一插就插断了嘛",
+        "evidence_segment_ids": [
+          "BATCH03-DOC05-S0023"
+        ],
+        "evidence_quote": "他说（当时）我刚结了婚不久，如果你不是个地下党员，我那天就当了俘虏。我前面一插就插断了嘛",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC05-DE002-P01",
+        "target_stage_id": "BATCH03-DOC05-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC05-S0017",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC05-DE002-P02",
+        "target_stage_id": "BATCH03-DOC05-DE002-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC05-S0019",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC05-DE002-P03",
+        "target_stage_id": "BATCH03-DOC05-DE002-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC05-S0023",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

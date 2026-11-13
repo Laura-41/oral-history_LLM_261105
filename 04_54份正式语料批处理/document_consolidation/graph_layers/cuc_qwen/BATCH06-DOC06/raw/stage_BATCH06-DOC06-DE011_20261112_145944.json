@@ -1,0 +1,111 @@
+{
+  "run_time": "2026-11-12T14:59:44",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC06-DE011",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC06-DE011",
+  "usage": {
+    "prompt_tokens": 1724,
+    "total_tokens": 10943,
+    "completion_tokens": 9219,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7941
+    },
+    "time_to_first_token_ms": 165264,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC06-DE011\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆过江后接收江阴要塞，安排政治委员和地方党同志接管军官并主持，炮三团团长李安邦任要塞副司令，陈锐霆未再更多管理并转往常州武进。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点以S0032自述23号过江并接收江阴要塞为核心，S0034补充过江前地下党动员作为背景；终点以S0042李安邦任副司令、陈锐霆未再更多管理并到常州武进为止，S0042后续接收上海委员会等内容不纳入本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE011-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"过江前江阴要塞已有地下党活动，并有同志先到江阴动员起义。\",\n      \"process_text\": \"我们没过江以前，他先过去了，就在江阴，动员他们起义。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0032\",\n        \"BATCH06-DOC06-S0034\"\n      ],\n      \"evidence_quote\": \"我们没过江以前，他先过去了，就在江阴，动员他们起义。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE011-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈锐霆自述23号过江后接收江阴要塞。\",\n      \"process_text\": \"我是23号过的江吧，我记不太清楚了。过江就接收江阴要塞\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0032\"\n      ],\n      \"evidence_quote\": \"我是23号过的江吧，我记不太清楚了。过江就接收江阴要塞\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE011-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"接收后安排政治委员从后边来接管江阴要塞军官，并让地方党同志唐君照过去主持。\",\n      \"process_text\": \"以后我们的政治委员从后边来，他就接管这个江阴要塞的军官嘛。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0032\",\n        \"BATCH06-DOC06-S0034\",\n        \"BATCH06-DOC06-S0040\"\n      ],\n      \"evidence_quote\": \"以后我们的政治委员从后边来，他就接管这个江阴要塞的军官嘛。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE011-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"炮三团团长李安邦任要塞副司令，陈锐霆未再更多管理并转往常州武进。\",\n      \"process_text\": \"另外我们炮三团的团长李安邦就当要塞的副司令，我就没更多管这个事情，我就到了常州，到了武进嘛\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0042\"\n      ],\n      \"evidence_quote\": \"另外我们炮三团的团长李安邦就当要塞的副司令，我就没更多管这个事情，我就到了常州，到了武进嘛\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE011-P01\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE011-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0034\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE011-P02\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE011-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0032\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE011-P03\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE011-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0042\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC06-DE011",
+    "event_enrichment": {
+      "result_state": "陈锐霆过江后接收江阴要塞，安排政治委员和地方党同志接管军官并主持，炮三团团长李安邦任要塞副司令，陈锐霆未再更多管理并转往常州武进。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点以S0032自述23号过江并接收江阴要塞为核心，S0034补充过江前地下党动员作为背景；终点以S0042李安邦任副司令、陈锐霆未再更多管理并到常州武进为止，S0042后续接收上海委员会等内容不纳入本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC06-DE011-P01",
+        "stage_order": 1,
+        "stage_summary": "过江前江阴要塞已有地下党活动，并有同志先到江阴动员起义。",
+        "process_text": "我们没过江以前，他先过去了，就在江阴，动员他们起义。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0032",
+          "BATCH06-DOC06-S0034"
+        ],
+        "evidence_quote": "我们没过江以前，他先过去了，就在江阴，动员他们起义。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE011-P02",
+        "stage_order": 2,
+        "stage_summary": "陈锐霆自述23号过江后接收江阴要塞。",
+        "process_text": "我是23号过的江吧，我记不太清楚了。过江就接收江阴要塞",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0032"
+        ],
+        "evidence_quote": "我是23号过的江吧，我记不太清楚了。过江就接收江阴要塞",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE011-P03",
+        "stage_order": 3,
+        "stage_summary": "接收后安排政治委员从后边来接管江阴要塞军官，并让地方党同志唐君照过去主持。",
+        "process_text": "以后我们的政治委员从后边来，他就接管这个江阴要塞的军官嘛。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0032",
+          "BATCH06-DOC06-S0034",
+          "BATCH06-DOC06-S0040"
+        ],
+        "evidence_quote": "以后我们的政治委员从后边来，他就接管这个江阴要塞的军官嘛。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE011-P04",
+        "stage_order": 4,
+        "stage_summary": "炮三团团长李安邦任要塞副司令，陈锐霆未再更多管理并转往常州武进。",
+        "process_text": "另外我们炮三团的团长李安邦就当要塞的副司令，我就没更多管这个事情，我就到了常州，到了武进嘛",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0042"
+        ],
+        "evidence_quote": "另外我们炮三团的团长李安邦就当要塞的副司令，我就没更多管这个事情，我就到了常州，到了武进嘛",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC06-DE011-P01",
+        "target_stage_id": "BATCH06-DOC06-DE011-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH06-DOC06-S0034",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE011-P02",
+        "target_stage_id": "BATCH06-DOC06-DE011-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0032",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE011-P03",
+        "target_stage_id": "BATCH06-DOC06-DE011-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0042",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

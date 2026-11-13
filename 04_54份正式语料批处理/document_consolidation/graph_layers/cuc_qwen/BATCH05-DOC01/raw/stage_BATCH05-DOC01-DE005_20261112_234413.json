@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T23:44:13",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC01-DE005",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC01-DE005",
+  "usage": {
+    "prompt_tokens": 1444,
+    "total_tokens": 9060,
+    "completion_tokens": 7616,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6213
+    },
+    "time_to_first_token_ms": 111132,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7615000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC01-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"18旅北渡长江到达苏中，并在江都县、高邮县、宝应县开辟江高宝地区一分区；该一分区以18旅52团为主开辟，51团后来也过来。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"边界起于苏南被占领、中央决定1师和6师合并及谭震林带18旅，止于江高宝一分区由18旅52团为主开辟、51团后来过来；S0114末句谭震林职务为伴随背景说明。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"苏南被占领、大部队难活动，中央决定1师和6师合并，谭震林带18旅\",\n      \"process_text\": \"苏南的一半已经被鬼子彻底占领，大部队很难活动；中央有个决定，1师和6师合并，谭震林带着18旅。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0111\"\n      ],\n      \"evidence_quote\": \"    陈海峰：就是苏南的一半已经（被鬼子）彻底占领了，大部队就很难活动（了）。这个时候，中央有个决定，1师和6师合并，谭震林带着18旅，就（是）《沙家浜》那个18旅。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"18旅北渡长江到达苏中\",\n      \"process_text\": \"18旅北渡长江，到达苏中。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0112\"\n      ],\n      \"evidence_quote\": \"那个18旅呢，就北渡长江，就到了苏中。到了苏中呢，18旅就开辟了一个新的（根据地），就（是）一分区，在扬州旁边的江都县、高邮县、宝应县，三个县叫做一分区，叫做“江高宝”地区。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"18旅在苏中开辟江高宝地区一分区\",\n      \"process_text\": \"18旅到苏中后开辟新的根据地一分区，即扬州旁边的江都县、高邮县、宝应县，称江高宝地区。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0112\"\n      ],\n      \"evidence_quote\": \"那个18旅呢，就北渡长江，就到了苏中。到了苏中呢，18旅就开辟了一个新的（根据地），就（是）一分区，在扬州旁边的江都县、高邮县、宝应县，三个县叫做一分区，叫做“江高宝”地区。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"江高宝一分区以18旅52团为主开辟，51团后来也过来\",\n      \"process_text\": \"江高宝地区一分区以18旅52团为主开辟，51团留在江南，后来51团也过来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0114\"\n      ],\n      \"evidence_quote\": \"    陈海峰：“江高宝”地区就叫做一分区，就是18旅52团为主（开辟的），51团留在江南，后来51团也过来了。谭震林呢，他本来是6师师长兼副司令兼政委。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE005-P01\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0112\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE005-P02\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE005-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0112\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE005-P03\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE005-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0114\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC01-DE005",
+    "event_enrichment": {
+      "result_state": "18旅北渡长江到达苏中，并在江都县、高邮县、宝应县开辟江高宝地区一分区；该一分区以18旅52团为主开辟，51团后来也过来。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "边界起于苏南被占领、中央决定1师和6师合并及谭震林带18旅，止于江高宝一分区由18旅52团为主开辟、51团后来过来；S0114末句谭震林职务为伴随背景说明。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC01-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "苏南被占领、大部队难活动，中央决定1师和6师合并，谭震林带18旅",
+        "process_text": "苏南的一半已经被鬼子彻底占领，大部队很难活动；中央有个决定，1师和6师合并，谭震林带着18旅。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0111"
+        ],
+        "evidence_quote": "    陈海峰：就是苏南的一半已经（被鬼子）彻底占领了，大部队就很难活动（了）。这个时候，中央有个决定，1师和6师合并，谭震林带着18旅，就（是）《沙家浜》那个18旅。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "18旅北渡长江到达苏中",
+        "process_text": "18旅北渡长江，到达苏中。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0112"
+        ],
+        "evidence_quote": "那个18旅呢，就北渡长江，就到了苏中。到了苏中呢，18旅就开辟了一个新的（根据地），就（是）一分区，在扬州旁边的江都县、高邮县、宝应县，三个县叫做一分区，叫做“江高宝”地区。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "18旅在苏中开辟江高宝地区一分区",
+        "process_text": "18旅到苏中后开辟新的根据地一分区，即扬州旁边的江都县、高邮县、宝应县，称江高宝地区。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0112"
+        ],
+        "evidence_quote": "那个18旅呢，就北渡长江，就到了苏中。到了苏中呢，18旅就开辟了一个新的（根据地），就（是）一分区，在扬州旁边的江都县、高邮县、宝应县，三个县叫做一分区，叫做“江高宝”地区。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "江高宝一分区以18旅52团为主开辟，51团后来也过来",
+        "process_text": "江高宝地区一分区以18旅52团为主开辟，51团留在江南，后来51团也过来。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0114"
+        ],
+        "evidence_quote": "    陈海峰：“江高宝”地区就叫做一分区，就是18旅52团为主（开辟的），51团留在江南，后来51团也过来了。谭震林呢，他本来是6师师长兼副司令兼政委。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC01-DE005-P01",
+        "target_stage_id": "BATCH05-DOC01-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC01-S0112",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC01-DE005-P02",
+        "target_stage_id": "BATCH05-DOC01-DE005-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC01-S0112",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC01-DE005-P03",
+        "target_stage_id": "BATCH05-DOC01-DE005-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC01-S0114",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

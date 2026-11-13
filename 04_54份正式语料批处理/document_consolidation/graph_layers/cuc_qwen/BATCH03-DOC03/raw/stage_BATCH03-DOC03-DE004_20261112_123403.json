@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T12:34:03",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC03-DE004",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC03-DE004",
+  "usage": {
+    "prompt_tokens": 1362,
+    "total_tokens": 11310,
+    "completion_tokens": 9948,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8872
+    },
+    "time_to_first_token_ms": 148393,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9947000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC03-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"正面部队投入作战，父子岭战斗中特务团和教导队上去，打到军部附近；何家湾战斗被叙述者说明为另外一个事。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 BATCH03-DOC03-S0019，本事件从“正面的部队主要是（傅秋涛的）老一团和（黄火星）老三团了，和新四军军部的特务团上去打了”起，至“打到军部附近了”止；片段前段“打后方了以后，他这个前面他就接济不上了，他就慌了。使它早点结束这样子。”作为前文背景，不拆入本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"正面部队主要由老一团、老三团和特务团投入作战。\",\n      \"process_text\": \"正面的部队主要是（傅秋涛的）老一团和（黄火星）老三团了，和新四军军部的特务团上去打了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0019\"\n      ],\n      \"evidence_quote\": \"正面的部队主要是（傅秋涛的）老一团和（黄火星）老三团了，和新四军军部的特务团上去打了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"黄火星三团在何家湾打了一大仗，被称作何家湾战斗，叙述者说明这是另外一个事、不是“我们这个部队”打的。\",\n      \"process_text\": \"黄火星（的）三团在何家湾打了一大仗，叫“何家湾战斗”，这另外一个事了，不是我们这个部队打的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0019\"\n      ],\n      \"evidence_quote\": \"黄火星（的）三团在何家湾打了一大仗，叫“何家湾战斗”，这另外一个事了，不是我们这个部队打的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"父子岭战斗由老一团打，叶挺在那指挥，傅秋涛指挥一团，特务团和教导队上去，打到军部附近。\",\n      \"process_text\": \"“父子岭战斗”是老一团打的，是叶挺在那指挥了，傅秋涛指挥一团，那个特务团和教导队就上去了，打到军部附近了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0019\"\n      ],\n      \"evidence_quote\": \"“父子岭战斗”是老一团打的，是叶挺在那指挥了，傅秋涛指挥一团，那个特务团和教导队就上去了，打到军部附近了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE004-P01\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0019\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE004-P02\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0019\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC03-DE004",
+    "event_enrichment": {
+      "result_state": "正面部队投入作战，父子岭战斗中特务团和教导队上去，打到军部附近；何家湾战斗被叙述者说明为另外一个事。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 BATCH03-DOC03-S0019，本事件从“正面的部队主要是（傅秋涛的）老一团和（黄火星）老三团了，和新四军军部的特务团上去打了”起，至“打到军部附近了”止；片段前段“打后方了以后，他这个前面他就接济不上了，他就慌了。使它早点结束这样子。”作为前文背景，不拆入本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC03-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "正面部队主要由老一团、老三团和特务团投入作战。",
+        "process_text": "正面的部队主要是（傅秋涛的）老一团和（黄火星）老三团了，和新四军军部的特务团上去打了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0019"
+        ],
+        "evidence_quote": "正面的部队主要是（傅秋涛的）老一团和（黄火星）老三团了，和新四军军部的特务团上去打了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "黄火星三团在何家湾打了一大仗，被称作何家湾战斗，叙述者说明这是另外一个事、不是“我们这个部队”打的。",
+        "process_text": "黄火星（的）三团在何家湾打了一大仗，叫“何家湾战斗”，这另外一个事了，不是我们这个部队打的。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0019"
+        ],
+        "evidence_quote": "黄火星（的）三团在何家湾打了一大仗，叫“何家湾战斗”，这另外一个事了，不是我们这个部队打的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "父子岭战斗由老一团打，叶挺在那指挥，傅秋涛指挥一团，特务团和教导队上去，打到军部附近。",
+        "process_text": "“父子岭战斗”是老一团打的，是叶挺在那指挥了，傅秋涛指挥一团，那个特务团和教导队就上去了，打到军部附近了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0019"
+        ],
+        "evidence_quote": "“父子岭战斗”是老一团打的，是叶挺在那指挥了，傅秋涛指挥一团，那个特务团和教导队就上去了，打到军部附近了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC03-DE004-P01",
+        "target_stage_id": "BATCH03-DOC03-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC03-S0019",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC03-DE004-P02",
+        "target_stage_id": "BATCH03-DOC03-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC03-S0019",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

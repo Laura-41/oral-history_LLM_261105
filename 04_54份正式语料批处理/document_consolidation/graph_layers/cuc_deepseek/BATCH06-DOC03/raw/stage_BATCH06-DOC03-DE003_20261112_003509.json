@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T00:35:09",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC03-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC03-DE003",
+  "usage": {
+    "prompt_tokens": 1724,
+    "total_tokens": 6897,
+    "completion_tokens": 5173,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3940
+    },
+    "time_to_first_token_ms": 39858,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5172000
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC03-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"形成开辟鲁南新区并以白彦为攻击开刀目标的决策\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以师部研究打开鲁南局面为起点，以确定从白彦开刀及对周边敌情的判断为终点；后续实际作战行动不属于本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"师部研究如何打开鲁南局面，形成开辟新区的背景动因。\",\n      \"process_text\": \"师部研究如何来开鲁南这个局面。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0028\"\n      ],\n      \"evidence_quote\": \"那个时候师部就研究，怎么样来开鲁南这个局面。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"决定开辟新区，并采用罗帅所说的“挤”的办法。\",\n      \"process_text\": \"决定要开辟新区，用“挤”的办法，涉及“穿、插、挤”和“统”即统一战线。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0032\"\n      ],\n      \"evidence_quote\": \"就决定要开辟新区，就罗帅说的，用“挤”的办法，那几个字我背不下来，“穿、插、挤”，还有一个“统”吧，统一战线吧，六个字。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"分析滕县至临沂公路中间地带，认为城前、城后和白彦是较有利的地点。\",\n      \"process_text\": \"认为当时比较有利的地方是滕县到临沂公路的中间，一个是城前、城后，一个是白彦。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0032\"\n      ],\n      \"evidence_quote\": \"当时比较有利的地方就是滕县到临沂的公路的中间，一个是城前、城后，一个是白彦\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"判断日军调兵外出，考虑从白彦方向开刀。\",\n      \"process_text\": \"当时准备去打的时候，日本人调了兵出去了，因此考虑到从那里来开刀。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0034\"\n      ],\n      \"evidence_quote\": \"当时我们要去打的时候，日本人当时调了兵出去了，所以考虑到从那里来开刀。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"补充说明日军临时调走且去向不明，并交代城前、城后等周边据点敌情。\",\n      \"process_text\": \"补充说明不知道日军临时调到哪里去了，并提到西边城前、城后有一个日本人的据点。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0037\"\n      ],\n      \"evidence_quote\": \"当时没有，不知道临时调到哪里去了。西边城前、城后有个据点，就是一个日本人的据点\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE003-P01\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0032\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE003-P02\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0032\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE003-P03\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE003-P04\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0034\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE003-P04\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE003-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0037\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC03-DE003",
+    "event_enrichment": {
+      "result_state": "形成开辟鲁南新区并以白彦为攻击开刀目标的决策",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以师部研究打开鲁南局面为起点，以确定从白彦开刀及对周边敌情的判断为终点；后续实际作战行动不属于本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC03-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "师部研究如何打开鲁南局面，形成开辟新区的背景动因。",
+        "process_text": "师部研究如何来开鲁南这个局面。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0028"
+        ],
+        "evidence_quote": "那个时候师部就研究，怎么样来开鲁南这个局面。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "决定开辟新区，并采用罗帅所说的“挤”的办法。",
+        "process_text": "决定要开辟新区，用“挤”的办法，涉及“穿、插、挤”和“统”即统一战线。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0032"
+        ],
+        "evidence_quote": "就决定要开辟新区，就罗帅说的，用“挤”的办法，那几个字我背不下来，“穿、插、挤”，还有一个“统”吧，统一战线吧，六个字。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "分析滕县至临沂公路中间地带，认为城前、城后和白彦是较有利的地点。",
+        "process_text": "认为当时比较有利的地方是滕县到临沂公路的中间，一个是城前、城后，一个是白彦。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0032"
+        ],
+        "evidence_quote": "当时比较有利的地方就是滕县到临沂的公路的中间，一个是城前、城后，一个是白彦",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "判断日军调兵外出，考虑从白彦方向开刀。",
+        "process_text": "当时准备去打的时候，日本人调了兵出去了，因此考虑到从那里来开刀。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0034"
+        ],
+        "evidence_quote": "当时我们要去打的时候，日本人当时调了兵出去了，所以考虑到从那里来开刀。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "补充说明日军临时调走且去向不明，并交代城前、城后等周边据点敌情。",
+        "process_text": "补充说明不知道日军临时调到哪里去了，并提到西边城前、城后有一个日本人的据点。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0037"
+        ],
+        "evidence_quote": "当时没有，不知道临时调到哪里去了。西边城前、城后有个据点，就是一个日本人的据点",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC03-DE003-P01",
+        "target_stage_id": "BATCH06-DOC03-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC03-S0032",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE003-P02",
+        "target_stage_id": "BATCH06-DOC03-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC03-S0032",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE003-P03",
+        "target_stage_id": "BATCH06-DOC03-DE003-P04",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH06-DOC03-S0034",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE003-P04",
+        "target_stage_id": "BATCH06-DOC03-DE003-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC03-S0037",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

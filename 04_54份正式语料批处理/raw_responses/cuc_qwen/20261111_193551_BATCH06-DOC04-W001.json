@@ -1,0 +1,253 @@
+{
+  "run_time": "2026-11-11T19:35:51",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH06-DOC04-W001",
+  "technical_document_id": "BATCH06-DOC04",
+  "document_id": "19.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH06-DOC04-S0002",
+    "BATCH06-DOC04-S0003",
+    "BATCH06-DOC04-S0004",
+    "BATCH06-DOC04-S0005",
+    "BATCH06-DOC04-S0006",
+    "BATCH06-DOC04-S0007",
+    "BATCH06-DOC04-S0008",
+    "BATCH06-DOC04-S0009",
+    "BATCH06-DOC04-S0010",
+    "BATCH06-DOC04-S0011",
+    "BATCH06-DOC04-S0012",
+    "BATCH06-DOC04-S0013",
+    "BATCH06-DOC04-S0014",
+    "BATCH06-DOC04-S0015",
+    "BATCH06-DOC04-S0016",
+    "BATCH06-DOC04-S0017",
+    "BATCH06-DOC04-S0018",
+    "BATCH06-DOC04-S0019",
+    "BATCH06-DOC04-S0020",
+    "BATCH06-DOC04-S0021",
+    "BATCH06-DOC04-S0022",
+    "BATCH06-DOC04-S0023",
+    "BATCH06-DOC04-S0024",
+    "BATCH06-DOC04-S0025",
+    "BATCH06-DOC04-S0026",
+    "BATCH06-DOC04-S0027",
+    "BATCH06-DOC04-S0028"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 15,
+    "unassigned_segment_count": 12,
+    "input_segment_count": 27,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH06-DOC04-W001-E02"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH06-DOC04-W001",
+    "events": [
+      {
+        "candidate_id": "BATCH06-DOC04-W001-E01",
+        "source_segment_ids": [
+          "BATCH06-DOC04-S0003",
+          "BATCH06-DOC04-S0004",
+          "BATCH06-DOC04-S0005",
+          "BATCH06-DOC04-S0007",
+          "BATCH06-DOC04-S0009"
+        ],
+        "event": {
+          "event_name": "陈海峰给粟司令注射奎宁针抢救打摆子",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "注射奎宁针",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "粟司令",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "臀部",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "没有几分钟，20分钟",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "打摆子",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "陈海峰：那么粟司令呢，马上我就拿了这个奎宁针啊，给他臀部注射，一针就打下去了。",
+          "type_basis": "核心过程是注射奎宁针，Actor为陈海峰，Goal为粟司令，并产生可观察状态改变（不抖）；属于物质过程，不是心理或言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC04-W001-E02",
+        "source_segment_ids": [
+          "BATCH06-DOC04-S0009",
+          "BATCH06-DOC04-S0011",
+          "BATCH06-DOC04-S0013",
+          "BATCH06-DOC04-S0015",
+          "BATCH06-DOC04-S0016",
+          "BATCH06-DOC04-S0018",
+          "BATCH06-DOC04-S0020",
+          "BATCH06-DOC04-S0022",
+          "BATCH06-DOC04-S0024",
+          "BATCH06-DOC04-S0026",
+          "BATCH06-DOC04-S0028"
+        ],
+        "event": {
+          "event_name": "粟司令命令医院转移并调兵抬担架一天内撤至桥下",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "命令医院转移并调兵抬担架",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "粟司令",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我们卫生部医院",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "三个半团",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "医院",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "伤员",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "一天之内",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "拂晓之前",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "后方",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "桥下",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "分批走",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "四个人一副担架",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "敌人来的主力部队呢，我们知道的大概是九个团",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "布置口袋，我们需要用兵",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "不至于影响我们这个后退的（通路）",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "沿途一路下雨",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "有些桥都冲掉了，部队都搭临时桥啊",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "陈海峰：那么基本上要将近四千人抬担架。这个是我们新四军、八路军、解放军历史上第一次，作战的紧要关头，要抽出三个半团的作战部队，把伤员全部运走。粟司令下命令，死命令，“伤员一个不能丢，你们必须保证。”给部队下命令也是这样下（的），给我们卫生部医院也这么下命令，不准丢。那么我们在拂晓之前，半夜十二点多钟，我们去的时候大概八九点钟这样子，我们回到家已经十点多钟了，是不是。立刻准备啊，命令也到了，拂晓之前就开始运了，第一批就走了。",
+          "type_basis": "核心是粟司令下令调兵、医院准备并分批转移伤员，属于组织行动和空间移动；言语命令、原因和沿途环境作为阶段或环境成分，不改变主导物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH06-DOC04-S0002",
+      "BATCH06-DOC04-S0006",
+      "BATCH06-DOC04-S0008",
+      "BATCH06-DOC04-S0010",
+      "BATCH06-DOC04-S0012",
+      "BATCH06-DOC04-S0014",
+      "BATCH06-DOC04-S0017",
+      "BATCH06-DOC04-S0019",
+      "BATCH06-DOC04-S0021",
+      "BATCH06-DOC04-S0023",
+      "BATCH06-DOC04-S0025",
+      "BATCH06-DOC04-S0027"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH06-DOC04-W001\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH06-DOC04-W001-E01\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC04-S0003\",\n        \"BATCH06-DOC04-S0004\",\n        \"BATCH06-DOC04-S0005\",\n        \"BATCH06-DOC04-S0007\",\n        \"BATCH06-DOC04-S0009\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰给粟司令注射奎宁针抢救打摆子\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"注射奎宁针\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"粟司令\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"臀部\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"没有几分钟，20分钟\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"打摆子\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"陈海峰：那么粟司令呢，马上我就拿了这个奎宁针啊，给他臀部注射，一针就打下去了。\",\n        \"type_basis\": \"核心过程是注射奎宁针，Actor为陈海峰，Goal为粟司令，并产生可观察状态改变（不抖）；属于物质过程，不是心理或言语过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC04-W001-E02\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC04-S0009\",\n        \"BATCH06-DOC04-S0011\",\n        \"BATCH06-DOC04-S0013\",\n        \"BATCH06-DOC04-S0015\",\n        \"BATCH06-DOC04-S0016\",\n        \"BATCH06-DOC04-S0018\",\n        \"BATCH06-DOC04-S0020\",\n        \"BATCH06-DOC04-S0022\",\n        \"BATCH06-DOC04-S0024\",\n        \"BATCH06-DOC04-S0026\",\n        \"BATCH06-DOC04-S0028\"\n      ],\n      \"event\": {\n        \"event_name\": \"粟司令命令医院转移并调兵抬担架一天内撤至桥下\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"命令医院转移并调兵抬担架\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"粟司令\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们卫生部医院\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"三个半团\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"医院\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"伤员\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"一天之内\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"拂晓之前\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"后方\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"桥下\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"分批走\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"四个人一副担架\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"敌人来的主力部队呢，我们知道的大概是九个团\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"布置口袋，我们需要用兵\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"不至于影响我们这个后退的（通路）\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"沿途一路下雨\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"有些桥都冲掉了，部队都搭临时桥啊\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"陈海峰：那么基本上要将近四千人抬担架。这个是我们新四军、八路军、解放军历史上第一次，作战的紧要关头，要抽出三个半团的作战部队，把伤员全部运走。粟司令下命令，死命令，“伤员一个不能丢，你们必须保证。”给部队下命令也是这样下（的），给我们卫生部医院也这么下命令，不准丢。那么我们在拂晓之前，半夜十二点多钟，我们去的时候大概八九点钟这样子，我们回到家已经十点多钟了，是不是。立刻准备啊，命令也到了，拂晓之前就开始运了，第一批就走了。\",\n        \"type_basis\": \"核心是粟司令下令调兵、医院准备并分批转移伤员，属于组织行动和空间移动；言语命令、原因和沿途环境作为阶段或环境成分，不改变主导物质过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH06-DOC04-S0002\",\n    \"BATCH06-DOC04-S0006\",\n    \"BATCH06-DOC04-S0008\",\n    \"BATCH06-DOC04-S0010\",\n    \"BATCH06-DOC04-S0012\",\n    \"BATCH06-DOC04-S0014\",\n    \"BATCH06-DOC04-S0017\",\n    \"BATCH06-DOC04-S0019\",\n    \"BATCH06-DOC04-S0021\",\n    \"BATCH06-DOC04-S0023\",\n    \"BATCH06-DOC04-S0025\",\n    \"BATCH06-DOC04-S0027\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 6050,
+    "total_tokens": 25588,
+    "completion_tokens": 19538,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 17661
+    },
+    "time_to_first_token_ms": 553346,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 19537000
+  }
+}

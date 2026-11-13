@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-12T09:08:27",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC03-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC03-DE006",
+  "usage": {
+    "prompt_tokens": 1377,
+    "total_tokens": 9165,
+    "completion_tokens": 7788,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6837
+    },
+    "time_to_first_token_ms": 115948,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7787000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V1-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC03-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰报名学医，同批报名共66人。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为S0031中动员学医、说明部队前方缺医少药；终点为S0033中‘那么我就报名了。我们一块报名是66个人’。S0033末尾关于军卫生部/卫生部的名称说明作为背景补充，不改变报名事件边界。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"动员学医：说明部队前方缺医少药、需要自己培养医生，并批评国民党腐败。\",\n      \"process_text\": \"他当翻译给我们动员，翻译得挺好。就动员初中毕业，高中生文化水平的，在教导队的、政治队的。军事队都是老红军了，老红军不参加。都是学生来参军的，来动员学医，就讲部队前方非常需要医生，缺医少药，部队里面没有医生，我们自己培养医生。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0031\"\n      ],\n      \"evidence_quote\": \"    陈海峰：他爱人昨天给我一个贺年片来着，章央芬，上海医科大学毕业的。他当翻译给我们动员，翻译得挺好。就动员初中毕业，高中生文化水平的，在教导队的、政治队的。军事队都是老红军了，老红军不参加。都是学生来参军的，来动员学医，就讲部队前方非常需要医生，缺医少药，部队里面没有医生，我们自己培养医生。就把国民党里面腐败的情况，讲到包围打武汉，失利中间的一个主要原因就是疟疾流行，救济总署给他四吨奎宁，一个疟疾都没治好。当时奎宁是最好的了，为什么治不好呢？他每一个战士发10克奎宁，一个疟疾也治不好是不是，有的只发4克奎宁。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈海峰报名学医，同批共66人报名。\",\n      \"process_text\": \"讲了以后，就是你们新四军现在缺医少药，需要一批人来学医。那么我就报名了。我们一块报名是66个人\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0033\"\n      ],\n      \"evidence_quote\": \"    陈海峰：撒芝麻撒掉了，四吨奎宁不浪费，不懂预防卫生，不懂医疗的技术。就是国民党军队腐败的情况，看到他们那个野战医院里面伤兵伙食的差，看到我们军医院伙食的好，对比，给她很感动。讲了以后，就是你们新四军现在缺医少药，需要一批人来学医。那么我就报名了。我们一块报名是66个人，当时不叫军卫生部， “皖南事变”以后，成立了新的新四军，以后叫卫生部。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE006-P01\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE006-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0033\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V1-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC03-DE006",
+    "event_enrichment": {
+      "result_state": "陈海峰报名学医，同批报名共66人。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起点为S0031中动员学医、说明部队前方缺医少药；终点为S0033中‘那么我就报名了。我们一块报名是66个人’。S0033末尾关于军卫生部/卫生部的名称说明作为背景补充，不改变报名事件边界。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC03-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "动员学医：说明部队前方缺医少药、需要自己培养医生，并批评国民党腐败。",
+        "process_text": "他当翻译给我们动员，翻译得挺好。就动员初中毕业，高中生文化水平的，在教导队的、政治队的。军事队都是老红军了，老红军不参加。都是学生来参军的，来动员学医，就讲部队前方非常需要医生，缺医少药，部队里面没有医生，我们自己培养医生。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0031"
+        ],
+        "evidence_quote": "    陈海峰：他爱人昨天给我一个贺年片来着，章央芬，上海医科大学毕业的。他当翻译给我们动员，翻译得挺好。就动员初中毕业，高中生文化水平的，在教导队的、政治队的。军事队都是老红军了，老红军不参加。都是学生来参军的，来动员学医，就讲部队前方非常需要医生，缺医少药，部队里面没有医生，我们自己培养医生。就把国民党里面腐败的情况，讲到包围打武汉，失利中间的一个主要原因就是疟疾流行，救济总署给他四吨奎宁，一个疟疾都没治好。当时奎宁是最好的了，为什么治不好呢？他每一个战士发10克奎宁，一个疟疾也治不好是不是，有的只发4克奎宁。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "陈海峰报名学医，同批共66人报名。",
+        "process_text": "讲了以后，就是你们新四军现在缺医少药，需要一批人来学医。那么我就报名了。我们一块报名是66个人",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0033"
+        ],
+        "evidence_quote": "    陈海峰：撒芝麻撒掉了，四吨奎宁不浪费，不懂预防卫生，不懂医疗的技术。就是国民党军队腐败的情况，看到他们那个野战医院里面伤兵伙食的差，看到我们军医院伙食的好，对比，给她很感动。讲了以后，就是你们新四军现在缺医少药，需要一批人来学医。那么我就报名了。我们一块报名是66个人，当时不叫军卫生部， “皖南事变”以后，成立了新的新四军，以后叫卫生部。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC03-DE006-P01",
+        "target_stage_id": "BATCH02-DOC03-DE006-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH02-DOC03-S0033",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

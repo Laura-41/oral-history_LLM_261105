@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T13:50:52",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC03-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC03-DE001",
+  "usage": {
+    "prompt_tokens": 1184,
+    "total_tokens": 8834,
+    "completion_tokens": 7650,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6871
+    },
+    "time_to_first_token_ms": 115116,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7649000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC03-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"师部在梁山一带消灭敌人一个大队并缴获两门大炮。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"边界起于原文“师部他在梁山那一带活动”，止于“缴了两门大炮那个地方”；同片段后续686团被扫荡及“两门炮也被弄回去了”未纳入本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"师部在梁山一带活动\",\n      \"process_text\": \"师部他在梁山那一带活动\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0005\"\n      ],\n      \"evidence_quote\": \"师部他在梁山那一带活动\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"师部消灭敌人一个大队\",\n      \"process_text\": \"不还消灭敌人一个大队\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0005\"\n      ],\n      \"evidence_quote\": \"不还消灭敌人一个大队\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"师部缴获两门大炮\",\n      \"process_text\": \"缴了两门大炮那个地方\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0005\"\n      ],\n      \"evidence_quote\": \"缴了两门大炮那个地方\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE001-P01\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0005\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE001-P02\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE001-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0005\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC03-DE001",
+    "event_enrichment": {
+      "result_state": "师部在梁山一带消灭敌人一个大队并缴获两门大炮。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "边界起于原文“师部他在梁山那一带活动”，止于“缴了两门大炮那个地方”；同片段后续686团被扫荡及“两门炮也被弄回去了”未纳入本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC03-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "师部在梁山一带活动",
+        "process_text": "师部他在梁山那一带活动",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0005"
+        ],
+        "evidence_quote": "师部他在梁山那一带活动",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "师部消灭敌人一个大队",
+        "process_text": "不还消灭敌人一个大队",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0005"
+        ],
+        "evidence_quote": "不还消灭敌人一个大队",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "师部缴获两门大炮",
+        "process_text": "缴了两门大炮那个地方",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0005"
+        ],
+        "evidence_quote": "缴了两门大炮那个地方",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC03-DE001-P01",
+        "target_stage_id": "BATCH06-DOC03-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC03-S0005",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE001-P02",
+        "target_stage_id": "BATCH06-DOC03-DE001-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC03-S0005",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

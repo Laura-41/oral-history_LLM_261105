@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-12T00:56:48",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE009",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE009",
+  "usage": {
+    "prompt_tokens": 1271,
+    "total_tokens": 3537,
+    "completion_tokens": 2266,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1611
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 17490
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"医院已从湖心寺迁至河下镇，湖心寺与河下镇隔一条运河。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于S0165中央拟迁华中、拟设机构于湖心寺并派人看房的迁移动因，止于S0167医院从湖心寺搬至河下镇；不扩展到后续医院活动。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"中央拟迁华中并设机构于湖心寺，派人到湖心寺看房。\",\n      \"process_text\": \"中央准备搬到华中来，党中央准备设在淮安，中央机构就设在湖心寺；中央已派人到湖心寺看房子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0165\"\n      ],\n      \"evidence_quote\": \"中央准备搬到华中来。我们党中央准备设在淮安，现在看起来没有材料全部公布的，但是有些那个回忆录，有些文章里面隐隐约约地提到这个事，没有明显地讲这东西。但是我是知道内幕，我们这些直接单位有关系啊，中央已经派人来看房子了。中央派了人，司令部带了人，卫生部带了人，到我们这个湖心寺来看，中央机构就设在湖心寺。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"医院从湖心寺搬至河下镇，两地隔一条运河。\",\n      \"process_text\": \"我们（从）湖心寺搬家，医院搬到对面一个镇上，叫河下镇，隔了一条运河。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0167\"\n      ],\n      \"evidence_quote\": \"我们（从）湖心寺搬家，我们医院就搬到对面一个镇上，叫河下镇，隔了一条运河。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE009-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0167\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE009",
+    "event_enrichment": {
+      "result_state": "医院已从湖心寺迁至河下镇，湖心寺与河下镇隔一条运河。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于S0165中央拟迁华中、拟设机构于湖心寺并派人看房的迁移动因，止于S0167医院从湖心寺搬至河下镇；不扩展到后续医院活动。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "中央拟迁华中并设机构于湖心寺，派人到湖心寺看房。",
+        "process_text": "中央准备搬到华中来，党中央准备设在淮安，中央机构就设在湖心寺；中央已派人到湖心寺看房子。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0165"
+        ],
+        "evidence_quote": "中央准备搬到华中来。我们党中央准备设在淮安，现在看起来没有材料全部公布的，但是有些那个回忆录，有些文章里面隐隐约约地提到这个事，没有明显地讲这东西。但是我是知道内幕，我们这些直接单位有关系啊，中央已经派人来看房子了。中央派了人，司令部带了人，卫生部带了人，到我们这个湖心寺来看，中央机构就设在湖心寺。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "医院从湖心寺搬至河下镇，两地隔一条运河。",
+        "process_text": "我们（从）湖心寺搬家，医院搬到对面一个镇上，叫河下镇，隔了一条运河。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0167"
+        ],
+        "evidence_quote": "我们（从）湖心寺搬家，我们医院就搬到对面一个镇上，叫河下镇，隔了一条运河。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE009-P01",
+        "target_stage_id": "BATCH06-DOC07-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0167",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

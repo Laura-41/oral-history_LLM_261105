@@ -1,0 +1,303 @@
+{
+  "run_time": "2026-11-11T09:48:51",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH05-DOC04-W003",
+  "technical_document_id": "BATCH05-DOC04",
+  "document_id": "14.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH05-DOC04-S0088",
+    "BATCH05-DOC04-S0089",
+    "BATCH05-DOC04-S0090",
+    "BATCH05-DOC04-S0091",
+    "BATCH05-DOC04-S0092",
+    "BATCH05-DOC04-S0093",
+    "BATCH05-DOC04-S0094",
+    "BATCH05-DOC04-S0095",
+    "BATCH05-DOC04-S0096",
+    "BATCH05-DOC04-S0097",
+    "BATCH05-DOC04-S0098",
+    "BATCH05-DOC04-S0099",
+    "BATCH05-DOC04-S0100",
+    "BATCH05-DOC04-S0101",
+    "BATCH05-DOC04-S0102",
+    "BATCH05-DOC04-S0103",
+    "BATCH05-DOC04-S0104",
+    "BATCH05-DOC04-S0105",
+    "BATCH05-DOC04-S0106",
+    "BATCH05-DOC04-S0107",
+    "BATCH05-DOC04-S0108",
+    "BATCH05-DOC04-S0109",
+    "BATCH05-DOC04-S0110",
+    "BATCH05-DOC04-S0111",
+    "BATCH05-DOC04-S0112",
+    "BATCH05-DOC04-S0113",
+    "BATCH05-DOC04-S0114",
+    "BATCH05-DOC04-S0115",
+    "BATCH05-DOC04-S0116",
+    "BATCH05-DOC04-S0117",
+    "BATCH05-DOC04-S0118",
+    "BATCH05-DOC04-S0119",
+    "BATCH05-DOC04-S0120",
+    "BATCH05-DOC04-S0121",
+    "BATCH05-DOC04-S0122",
+    "BATCH05-DOC04-S0123",
+    "BATCH05-DOC04-S0124",
+    "BATCH05-DOC04-S0125",
+    "BATCH05-DOC04-S0126",
+    "BATCH05-DOC04-S0127",
+    "BATCH05-DOC04-S0128",
+    "BATCH05-DOC04-S0129",
+    "BATCH05-DOC04-S0130",
+    "BATCH05-DOC04-S0131",
+    "BATCH05-DOC04-S0132",
+    "BATCH05-DOC04-S0133",
+    "BATCH05-DOC04-S0134",
+    "BATCH05-DOC04-S0135",
+    "BATCH05-DOC04-S0136",
+    "BATCH05-DOC04-S0137",
+    "BATCH05-DOC04-S0138",
+    "BATCH05-DOC04-S0139",
+    "BATCH05-DOC04-S0140",
+    "BATCH05-DOC04-S0141",
+    "BATCH05-DOC04-S0142",
+    "BATCH05-DOC04-S0143",
+    "BATCH05-DOC04-S0144",
+    "BATCH05-DOC04-S0145",
+    "BATCH05-DOC04-S0146",
+    "BATCH05-DOC04-S0147",
+    "BATCH05-DOC04-S0148",
+    "BATCH05-DOC04-S0149",
+    "BATCH05-DOC04-S0150",
+    "BATCH05-DOC04-S0151"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 3,
+    "assigned_segment_count": 31,
+    "unassigned_segment_count": 33,
+    "input_segment_count": 64,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH05-DOC04-W003-E03"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH05-DOC04-W003",
+    "events": [
+      {
+        "candidate_id": "BATCH05-DOC04-W003-E01",
+        "source_segment_ids": [
+          "BATCH05-DOC04-S0088",
+          "BATCH05-DOC04-S0090",
+          "BATCH05-DOC04-S0091",
+          "BATCH05-DOC04-S0092",
+          "BATCH05-DOC04-S0093"
+        ],
+        "event": {
+          "event_name": "陈海峰等医务人员担架换药并治疗马苏政",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "担架换药并治疗",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "陈海峰",
+              "normalized_entity": "陈海峰",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "马苏政",
+              "normalized_entity": "马苏政",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "MANNER",
+              "value": "跪着",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们担架经过的，假设你跪在地上给他换药。因为担架走路啊，要给他换药啊，他这个绷带掉了，你给他重新换。冬天冷，夏天烈日底下，满头大汗。你不能够站在那地方，伤员躺在那里，你医务人员是跪在那里的，跪着给他换药，伤员永远记住（你）。你像这个1师分会的会长，原来北京新四军研究会的副会长马苏政啊。",
+          "type_basis": "核心过程为担架换药和治疗，属于职业劳动/执行任务，使伤员状态改变；Actor为陈海峰/医务人员，Goal为马苏政，角色均在MATERIAL允许词表；马苏政的引语和后续死亡不作为主事件，排除VERBAL、MENTAL和RELATIONAL。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH05-DOC04-W003-E02",
+        "source_segment_ids": [
+          "BATCH05-DOC04-S0111",
+          "BATCH05-DOC04-S0113",
+          "BATCH05-DOC04-S0114",
+          "BATCH05-DOC04-S0115",
+          "BATCH05-DOC04-S0116",
+          "BATCH05-DOC04-S0118",
+          "BATCH05-DOC04-S0120",
+          "BATCH05-DOC04-S0121",
+          "BATCH05-DOC04-S0122",
+          "BATCH05-DOC04-S0124",
+          "BATCH05-DOC04-S0125",
+          "BATCH05-DOC04-S0126",
+          "BATCH05-DOC04-S0127",
+          "BATCH05-DOC04-S0128",
+          "BATCH05-DOC04-S0129",
+          "BATCH05-DOC04-S0130",
+          "BATCH05-DOC04-S0132",
+          "BATCH05-DOC04-S0133",
+          "BATCH05-DOC04-S0135",
+          "BATCH05-DOC04-S0136",
+          "BATCH05-DOC04-S0137",
+          "BATCH05-DOC04-S0138"
+        ],
+        "event": {
+          "event_name": "陈海峰1943年夏调往老1团并经历部队整编",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "调往老1团并经历部队整编",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "陈海峰",
+              "normalized_entity": "陈海峰",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "老1团",
+              "normalized_entity": "老1团",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "（19）43年的夏天",
+              "normalized_value": "1943年夏"
+            },
+            {
+              "kind": "TIME",
+              "value": "4月11号又到5月，到6月",
+              "normalized_value": "1943年4月11日至6月"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "前方休养所",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我就到老1团去了。",
+          "type_basis": "核心过程为调往老1团和部队整编，属于移动/组织行动；Actor为陈海峰，Goal为老1团，角色符合MATERIAL允许词表；不是身份属性或存在引入，排除RELATIONAL和EXISTENTIAL。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH05-DOC04-W003-E03",
+        "source_segment_ids": [
+          "BATCH05-DOC04-S0127",
+          "BATCH05-DOC04-S0128",
+          "BATCH05-DOC04-S0146",
+          "BATCH05-DOC04-S0148",
+          "BATCH05-DOC04-S0149",
+          "BATCH05-DOC04-S0150"
+        ],
+        "event": {
+          "event_name": "陈海峰到老1团后参加车桥战役",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "参加车桥战役",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "陈海峰",
+              "normalized_entity": "陈海峰",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Scope",
+              "mention": "车桥战役",
+              "normalized_entity": "车桥战役",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1944年3月5号",
+              "normalized_value": "1944-03-05"
+            },
+            {
+              "kind": "OTHER",
+              "value": "2月底3月初",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "一个呢，就是这个车桥战役。",
+          "type_basis": "核心过程为打大仗/参加车桥战役，属于作战行动；Actor为陈海峰，Scope为车桥战役，角色符合MATERIAL允许词表；窗口未完整叙述战役过程，设NEEDS_REVIEW。",
+          "alternative_event_type": null,
+          "ambiguity_reason": "窗口仅开头提及车桥战役，未完整叙述战役过程；S0150的“2月底3月初”与S0151记者确认的1944年到老1团存在时间衔接不确定。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH05-DOC04-S0089",
+      "BATCH05-DOC04-S0094",
+      "BATCH05-DOC04-S0095",
+      "BATCH05-DOC04-S0096",
+      "BATCH05-DOC04-S0097",
+      "BATCH05-DOC04-S0098",
+      "BATCH05-DOC04-S0099",
+      "BATCH05-DOC04-S0100",
+      "BATCH05-DOC04-S0101",
+      "BATCH05-DOC04-S0102",
+      "BATCH05-DOC04-S0103",
+      "BATCH05-DOC04-S0104",
+      "BATCH05-DOC04-S0105",
+      "BATCH05-DOC04-S0106",
+      "BATCH05-DOC04-S0107",
+      "BATCH05-DOC04-S0108",
+      "BATCH05-DOC04-S0109",
+      "BATCH05-DOC04-S0110",
+      "BATCH05-DOC04-S0112",
+      "BATCH05-DOC04-S0117",
+      "BATCH05-DOC04-S0119",
+      "BATCH05-DOC04-S0123",
+      "BATCH05-DOC04-S0131",
+      "BATCH05-DOC04-S0134",
+      "BATCH05-DOC04-S0139",
+      "BATCH05-DOC04-S0140",
+      "BATCH05-DOC04-S0141",
+      "BATCH05-DOC04-S0142",
+      "BATCH05-DOC04-S0143",
+      "BATCH05-DOC04-S0144",
+      "BATCH05-DOC04-S0145",
+      "BATCH05-DOC04-S0147",
+      "BATCH05-DOC04-S0151"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH05-DOC04-W003\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH05-DOC04-W003-E01\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC04-S0088\",\n        \"BATCH05-DOC04-S0090\",\n        \"BATCH05-DOC04-S0091\",\n        \"BATCH05-DOC04-S0092\",\n        \"BATCH05-DOC04-S0093\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰等医务人员担架换药并治疗马苏政\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"担架换药并治疗\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"陈海峰\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"马苏政\",\n            \"normalized_entity\": \"马苏政\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"跪着\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们担架经过的，假设你跪在地上给他换药。因为担架走路啊，要给他换药啊，他这个绷带掉了，你给他重新换。冬天冷，夏天烈日底下，满头大汗。你不能够站在那地方，伤员躺在那里，你医务人员是跪在那里的，跪着给他换药，伤员永远记住（你）。你像这个1师分会的会长，原来北京新四军研究会的副会长马苏政啊。\",\n        \"type_basis\": \"核心过程为担架换药和治疗，属于职业劳动/执行任务，使伤员状态改变；Actor为陈海峰/医务人员，Goal为马苏政，角色均在MATERIAL允许词表；马苏政的引语和后续死亡不作为主事件，排除VERBAL、MENTAL和RELATIONAL。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH05-DOC04-W003-E02\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC04-S0111\",\n        \"BATCH05-DOC04-S0113\",\n        \"BATCH05-DOC04-S0114\",\n        \"BATCH05-DOC04-S0115\",\n        \"BATCH05-DOC04-S0116\",\n        \"BATCH05-DOC04-S0118\",\n        \"BATCH05-DOC04-S0120\",\n        \"BATCH05-DOC04-S0121\",\n        \"BATCH05-DOC04-S0122\",\n        \"BATCH05-DOC04-S0124\",\n        \"BATCH05-DOC04-S0125\",\n        \"BATCH05-DOC04-S0126\",\n        \"BATCH05-DOC04-S0127\",\n        \"BATCH05-DOC04-S0128\",\n        \"BATCH05-DOC04-S0129\",\n        \"BATCH05-DOC04-S0130\",\n        \"BATCH05-DOC04-S0132\",\n        \"BATCH05-DOC04-S0133\",\n        \"BATCH05-DOC04-S0135\",\n        \"BATCH05-DOC04-S0136\",\n        \"BATCH05-DOC04-S0137\",\n        \"BATCH05-DOC04-S0138\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰1943年夏调往老1团并经历部队整编\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"调往老1团并经历部队整编\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"陈海峰\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"老1团\",\n            \"normalized_entity\": \"老1团\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"（19）43年的夏天\",\n            \"normalized_value\": \"1943年夏\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"4月11号又到5月，到6月\",\n            \"normalized_value\": \"1943年4月11日至6月\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"前方休养所\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我就到老1团去了。\",\n        \"type_basis\": \"核心过程为调往老1团和部队整编，属于移动/组织行动；Actor为陈海峰，Goal为老1团，角色符合MATERIAL允许词表；不是身份属性或存在引入，排除RELATIONAL和EXISTENTIAL。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH05-DOC04-W003-E03\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC04-S0127\",\n        \"BATCH05-DOC04-S0128\",\n        \"BATCH05-DOC04-S0146\",\n        \"BATCH05-DOC04-S0148\",\n        \"BATCH05-DOC04-S0149\",\n        \"BATCH05-DOC04-S0150\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰到老1团后参加车桥战役\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"参加车桥战役\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"陈海峰\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"车桥战役\",\n            \"normalized_entity\": \"车桥战役\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"1944年3月5号\",\n            \"normalized_value\": \"1944-03-05\"\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"2月底3月初\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"一个呢，就是这个车桥战役。\",\n        \"type_basis\": \"核心过程为打大仗/参加车桥战役，属于作战行动；Actor为陈海峰，Scope为车桥战役，角色符合MATERIAL允许词表；窗口未完整叙述战役过程，设NEEDS_REVIEW。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": \"窗口仅开头提及车桥战役，未完整叙述战役过程；S0150的“2月底3月初”与S0151记者确认的1944年到老1团存在时间衔接不确定。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH05-DOC04-S0089\",\n    \"BATCH05-DOC04-S0094\",\n    \"BATCH05-DOC04-S0095\",\n    \"BATCH05-DOC04-S0096\",\n    \"BATCH05-DOC04-S0097\",\n    \"BATCH05-DOC04-S0098\",\n    \"BATCH05-DOC04-S0099\",\n    \"BATCH05-DOC04-S0100\",\n    \"BATCH05-DOC04-S0101\",\n    \"BATCH05-DOC04-S0102\",\n    \"BATCH05-DOC04-S0103\",\n    \"BATCH05-DOC04-S0104\",\n    \"BATCH05-DOC04-S0105\",\n    \"BATCH05-DOC04-S0106\",\n    \"BATCH05-DOC04-S0107\",\n    \"BATCH05-DOC04-S0108\",\n    \"BATCH05-DOC04-S0109\",\n    \"BATCH05-DOC04-S0110\",\n    \"BATCH05-DOC04-S0112\",\n    \"BATCH05-DOC04-S0117\",\n    \"BATCH05-DOC04-S0119\",\n    \"BATCH05-DOC04-S0123\",\n    \"BATCH05-DOC04-S0131\",\n    \"BATCH05-DOC04-S0134\",\n    \"BATCH05-DOC04-S0139\",\n    \"BATCH05-DOC04-S0140\",\n    \"BATCH05-DOC04-S0141\",\n    \"BATCH05-DOC04-S0142\",\n    \"BATCH05-DOC04-S0143\",\n    \"BATCH05-DOC04-S0144\",\n    \"BATCH05-DOC04-S0145\",\n    \"BATCH05-DOC04-S0147\",\n    \"BATCH05-DOC04-S0151\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 7099,
+    "total_tokens": 31827,
+    "completion_tokens": 24728,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 22169
+    },
+    "time_to_first_token_ms": 370273,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 12363500
+  }
+}

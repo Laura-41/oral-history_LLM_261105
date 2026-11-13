@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T23:32:39",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC08-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC08-DE003",
+  "usage": {
+    "prompt_tokens": 1100,
+    "total_tokens": 3329,
+    "completion_tokens": 2229,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1547
+    },
+    "time_to_first_token_ms": 17694,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2228000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC08-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"庆祝大会召开，人们流泪狂欢，并向地方做了宣传。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“那个时候开大会”为起点，至“给地方上也做宣传”结束；其后“接着三师打下了淮阴”转入其他事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"听到日本投降的消息后，人们陷入狂欢。\",\n      \"process_text\": \"听到日本投降，都是狂欢啊！\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0010\"\n      ],\n      \"evidence_quote\": \"听到日本投降，都是狂欢啊！\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"召开大会庆祝胜利，人们激动流泪。\",\n      \"process_text\": \"那个时候开大会，庆祝胜利，人们都流泪了！\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0010\"\n      ],\n      \"evidence_quote\": \"那个时候开大会，庆祝胜利，人们都流泪了！\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"借庆祝大会向地方上做宣传。\",\n      \"process_text\": \"开大会庆祝嘛，给地方上也做宣传。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0010\"\n      ],\n      \"evidence_quote\": \"开大会庆祝嘛，给地方上也做宣传。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE003-P01\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE003-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0010\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE003-P02\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0010\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC08-DE003",
+    "event_enrichment": {
+      "result_state": "庆祝大会召开，人们流泪狂欢，并向地方做了宣传。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以“那个时候开大会”为起点，至“给地方上也做宣传”结束；其后“接着三师打下了淮阴”转入其他事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC08-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "听到日本投降的消息后，人们陷入狂欢。",
+        "process_text": "听到日本投降，都是狂欢啊！",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "evidence_quote": "听到日本投降，都是狂欢啊！",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "召开大会庆祝胜利，人们激动流泪。",
+        "process_text": "那个时候开大会，庆祝胜利，人们都流泪了！",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "evidence_quote": "那个时候开大会，庆祝胜利，人们都流泪了！",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "借庆祝大会向地方上做宣传。",
+        "process_text": "开大会庆祝嘛，给地方上也做宣传。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "evidence_quote": "开大会庆祝嘛，给地方上也做宣传。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC08-DE003-P01",
+        "target_stage_id": "BATCH04-DOC08-DE003-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH04-DOC08-S0010",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC08-DE003-P02",
+        "target_stage_id": "BATCH04-DOC08-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC08-S0010",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

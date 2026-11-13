@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T00:08:20",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC07-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC07-DE006",
+  "usage": {
+    "prompt_tokens": 1304,
+    "total_tokens": 3600,
+    "completion_tokens": 2296,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1270
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 17889,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC07-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"潍县、兖州已被攻取，津浦路与胶济路被切断，济南成为孤城，并已下命令准备下一步打济南。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以S0037中内线部队春季攻潍县为起点，以“下命令做准备，下一步打济南”为终点；不扩展到济南战役本身。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"内线部队春季攻潍县、夏季打开兖州府，形成对胶济路与津浦路两个重点的作战。\",\n      \"process_text\": \"内线部队春天打了潍县，到了夏天7、8月的时候，又打开津浦路的兖州府，这是胶济路、津浦线的两个重点。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0037\"\n      ],\n      \"evidence_quote\": \"接着这个时候我们内线的部队，春天打了潍县，到了夏天7、8月的时候，又打开津浦路的兖州府，这是胶济路，津浦线的两个重点嘛。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"毛主席和中央军委发出预先号令，提出豫东战役结束后内外兵团合攻济南。\",\n      \"process_text\": \"毛主席和中央军委有一个预先号令，说豫东战役结束了，内外兵团要合到一起来攻占济南。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0037\"\n      ],\n      \"evidence_quote\": \"这个时候毛主席和中央军委，有一个预先号令，就说豫东战役结束了，内外兵团要合到一起来攻占济南。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"津浦路、胶济路被切断，济南成为孤城。\",\n      \"process_text\": \"这个时候津浦路也断了，胶济路也断了，济南成了孤城。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0037\"\n      ],\n      \"evidence_quote\": \"这个时候津浦路也断了，胶济路也断了，济南成了孤城了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"在此态势下下命令做准备，下一步打济南。\",\n      \"process_text\": \"所以这个时候下命令做准备，下一步打济南。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0037\"\n      ],\n      \"evidence_quote\": \"所以这个时候下命令做准备，下一步打济南。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE006-P01\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0037\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE006-P02\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE006-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0037\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE006-P03\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE006-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0037\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC07-DE006",
+    "event_enrichment": {
+      "result_state": "潍县、兖州已被攻取，津浦路与胶济路被切断，济南成为孤城，并已下命令准备下一步打济南。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以S0037中内线部队春季攻潍县为起点，以“下命令做准备，下一步打济南”为终点；不扩展到济南战役本身。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC07-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "内线部队春季攻潍县、夏季打开兖州府，形成对胶济路与津浦路两个重点的作战。",
+        "process_text": "内线部队春天打了潍县，到了夏天7、8月的时候，又打开津浦路的兖州府，这是胶济路、津浦线的两个重点。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0037"
+        ],
+        "evidence_quote": "接着这个时候我们内线的部队，春天打了潍县，到了夏天7、8月的时候，又打开津浦路的兖州府，这是胶济路，津浦线的两个重点嘛。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "毛主席和中央军委发出预先号令，提出豫东战役结束后内外兵团合攻济南。",
+        "process_text": "毛主席和中央军委有一个预先号令，说豫东战役结束了，内外兵团要合到一起来攻占济南。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0037"
+        ],
+        "evidence_quote": "这个时候毛主席和中央军委，有一个预先号令，就说豫东战役结束了，内外兵团要合到一起来攻占济南。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "津浦路、胶济路被切断，济南成为孤城。",
+        "process_text": "这个时候津浦路也断了，胶济路也断了，济南成了孤城。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0037"
+        ],
+        "evidence_quote": "这个时候津浦路也断了，胶济路也断了，济南成了孤城了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "在此态势下下命令做准备，下一步打济南。",
+        "process_text": "所以这个时候下命令做准备，下一步打济南。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0037"
+        ],
+        "evidence_quote": "所以这个时候下命令做准备，下一步打济南。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC07-DE006-P01",
+        "target_stage_id": "BATCH05-DOC07-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0037",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC07-DE006-P02",
+        "target_stage_id": "BATCH05-DOC07-DE006-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0037",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC07-DE006-P03",
+        "target_stage_id": "BATCH05-DOC07-DE006-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC07-S0037",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

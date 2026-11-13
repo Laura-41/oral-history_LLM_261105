@@ -1,0 +1,164 @@
+{
+  "run_time": "2026-11-12T15:18:37",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE005",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE005",
+  "usage": {
+    "prompt_tokens": 2269,
+    "total_tokens": 16072,
+    "completion_tokens": 13803,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 11460
+    },
+    "time_to_first_token_ms": 238958,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13802000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"湖心寺被没收，主持房子被抄，查获与日本大佐合影及东亚学院毕业照片等真实罪证；部队及伤员在湖心寺居住，党中央来看房子并告知对外保密。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起自叙述湖心寺规模与僧侣头目，止于叙述伤病员居住、党中央来看房子并要求保密；核心依据为没收湖心寺抄主持房子查获照片罪证，以及部队/伤员入住湖心寺的补充叙述。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"交代湖心寺规模与建筑情况\",\n      \"process_text\": \"寺庙”的“寺”。这个寺庙（是）苏北最大的一个寺庙，这个有五进的房子，五个大殿，第一大殿、第二大殿、第三大殿、第四大殿、第五（大殿）。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0091\"\n      ],\n      \"evidence_quote\": \"寺庙”的“寺”。这个寺庙（是）苏北最大的一个寺庙，这个有五进的房子，五个大殿，第一大殿、第二大殿、第三大殿、第四大殿、第五（大殿）。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"交代湖心寺僧侣头目主持\",\n      \"process_text\": \"    陈海峰：两个头儿，一个主持叫楞定。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0096\"\n      ],\n      \"evidence_quote\": \"    陈海峰：两个头儿，一个主持叫楞定。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"入住后获得情报，主持与方丈被指为日本特务\",\n      \"process_text\": \"    陈海峰：方丈叫什么呢……两个都是大学生。这个后来呢，等我们住的时间长了以后，得到地方党的内部情报，敌工部门转过来消息，这两个是日本特务。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0100\"\n      ],\n      \"evidence_quote\": \"    陈海峰：方丈叫什么呢……两个都是大学生。这个后来呢，等我们住的时间长了以后，得到地方党的内部情报，敌工部门转过来消息，这两个是日本特务。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"说明主持与方丈经过日本特务训练\",\n      \"process_text\": \"    陈海峰：一个方丈一个主持啊，是经过日本专门训练的高级特务，埋藏很深的。是南通日本鬼子办了一个特务训练的机构，叫东亚学院。“东方”的“东”，“亚洲”的“亚”。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0101\"\n      ],\n      \"evidence_quote\": \"    陈海峰：一个方丈一个主持啊，是经过日本专门训练的高级特务，埋藏很深的。是南通日本鬼子办了一个特务训练的机构，叫东亚学院。“东方”的“东”，“亚洲”的“亚”。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE005-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"没收湖心寺并抄主持房子，查获与日本大佐合影及东亚学院毕业照片\",\n      \"process_text\": \"    陈海峰：（在南通）狼牙山庙里面办的，这个训练出来的。最后我们没收那个湖心寺的时候，抄主持的房子，箱子里面抄到一个照片，他和日本鬼子训练的那个大佐啊，一块拍的照。东亚学院毕业照片都有，\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0103\",\n        \"BATCH06-DOC07-S0104\"\n      ],\n      \"evidence_quote\": \"    陈海峰：（在南通）狼牙山庙里面办的，这个训练出来的。最后我们没收那个湖心寺的时候，抄主持的房子，箱子里面抄到一个照片，他和日本鬼子训练的那个大佐啊，一块拍的照。东亚学院毕业照片都有，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE005-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"部队及伤员入住湖心寺，涉及新四军军部、叶飞纵队等\",\n      \"process_text\": \"    陈海峰：那么我们就在这里住，所有伤员，就是（从19）45年的11月开始，就确定新四军军部带着叶飞的一个纵队，（华中野战军）第1纵队，就苏浙军区的第4纵队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0105\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那么我们就在这里住，所有伤员，就是（从19）45年的11月开始，就确定新四军军部带着叶飞的一个纵队，（华中野战军）第1纵队，就苏浙军区的第4纵队。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE005-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"补充伤病员居住情况，党中央来看房子并要求保密\",\n      \"process_text\": \"伤病员了。这是第二个事情啊。党中央来看了房子，而且偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道。那说明这个事情是真的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0185\",\n        \"BATCH06-DOC07-S0186\"\n      ],\n      \"evidence_quote\": \"伤病员了。这是第二个事情啊。党中央来看了房子，而且偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道。那说明这个事情是真的。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE005-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE005-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0096\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE005-P02\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0100\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE005-P03\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE005-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0101\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE005-P04\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE005-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0103\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE005-P05\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE005-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0105\",\n      \"confidence\": \"LOW\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE005-P06\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE005-P07\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0186\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE005",
+    "event_enrichment": {
+      "result_state": "湖心寺被没收，主持房子被抄，查获与日本大佐合影及东亚学院毕业照片等真实罪证；部队及伤员在湖心寺居住，党中央来看房子并告知对外保密。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起自叙述湖心寺规模与僧侣头目，止于叙述伤病员居住、党中央来看房子并要求保密；核心依据为没收湖心寺抄主持房子查获照片罪证，以及部队/伤员入住湖心寺的补充叙述。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "交代湖心寺规模与建筑情况",
+        "process_text": "寺庙”的“寺”。这个寺庙（是）苏北最大的一个寺庙，这个有五进的房子，五个大殿，第一大殿、第二大殿、第三大殿、第四大殿、第五（大殿）。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0091"
+        ],
+        "evidence_quote": "寺庙”的“寺”。这个寺庙（是）苏北最大的一个寺庙，这个有五进的房子，五个大殿，第一大殿、第二大殿、第三大殿、第四大殿、第五（大殿）。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "交代湖心寺僧侣头目主持",
+        "process_text": "    陈海峰：两个头儿，一个主持叫楞定。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0096"
+        ],
+        "evidence_quote": "    陈海峰：两个头儿，一个主持叫楞定。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "入住后获得情报，主持与方丈被指为日本特务",
+        "process_text": "    陈海峰：方丈叫什么呢……两个都是大学生。这个后来呢，等我们住的时间长了以后，得到地方党的内部情报，敌工部门转过来消息，这两个是日本特务。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0100"
+        ],
+        "evidence_quote": "    陈海峰：方丈叫什么呢……两个都是大学生。这个后来呢，等我们住的时间长了以后，得到地方党的内部情报，敌工部门转过来消息，这两个是日本特务。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "说明主持与方丈经过日本特务训练",
+        "process_text": "    陈海峰：一个方丈一个主持啊，是经过日本专门训练的高级特务，埋藏很深的。是南通日本鬼子办了一个特务训练的机构，叫东亚学院。“东方”的“东”，“亚洲”的“亚”。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0101"
+        ],
+        "evidence_quote": "    陈海峰：一个方丈一个主持啊，是经过日本专门训练的高级特务，埋藏很深的。是南通日本鬼子办了一个特务训练的机构，叫东亚学院。“东方”的“东”，“亚洲”的“亚”。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE005-P05",
+        "stage_order": 5,
+        "stage_summary": "没收湖心寺并抄主持房子，查获与日本大佐合影及东亚学院毕业照片",
+        "process_text": "    陈海峰：（在南通）狼牙山庙里面办的，这个训练出来的。最后我们没收那个湖心寺的时候，抄主持的房子，箱子里面抄到一个照片，他和日本鬼子训练的那个大佐啊，一块拍的照。东亚学院毕业照片都有，",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0103",
+          "BATCH06-DOC07-S0104"
+        ],
+        "evidence_quote": "    陈海峰：（在南通）狼牙山庙里面办的，这个训练出来的。最后我们没收那个湖心寺的时候，抄主持的房子，箱子里面抄到一个照片，他和日本鬼子训练的那个大佐啊，一块拍的照。东亚学院毕业照片都有，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE005-P06",
+        "stage_order": 6,
+        "stage_summary": "部队及伤员入住湖心寺，涉及新四军军部、叶飞纵队等",
+        "process_text": "    陈海峰：那么我们就在这里住，所有伤员，就是（从19）45年的11月开始，就确定新四军军部带着叶飞的一个纵队，（华中野战军）第1纵队，就苏浙军区的第4纵队。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0105"
+        ],
+        "evidence_quote": "    陈海峰：那么我们就在这里住，所有伤员，就是（从19）45年的11月开始，就确定新四军军部带着叶飞的一个纵队，（华中野战军）第1纵队，就苏浙军区的第4纵队。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE005-P07",
+        "stage_order": 7,
+        "stage_summary": "补充伤病员居住情况，党中央来看房子并要求保密",
+        "process_text": "伤病员了。这是第二个事情啊。党中央来看了房子，而且偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道。那说明这个事情是真的。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0185",
+          "BATCH06-DOC07-S0186"
+        ],
+        "evidence_quote": "伤病员了。这是第二个事情啊。党中央来看了房子，而且偷偷地告诉我们，如果上级执行的话，要搬到你们这儿来，你们现在对外保密，对我们领导人员讲，不得提，下面不知道。那说明这个事情是真的。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE005-P01",
+        "target_stage_id": "BATCH06-DOC07-DE005-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC07-S0096",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE005-P02",
+        "target_stage_id": "BATCH06-DOC07-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0100",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE005-P03",
+        "target_stage_id": "BATCH06-DOC07-DE005-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC07-S0101",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE005-P04",
+        "target_stage_id": "BATCH06-DOC07-DE005-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0103",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE005-P05",
+        "target_stage_id": "BATCH06-DOC07-DE005-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0105",
+        "confidence": "LOW"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE005-P06",
+        "target_stage_id": "BATCH06-DOC07-DE005-P07",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH06-DOC07-S0186",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

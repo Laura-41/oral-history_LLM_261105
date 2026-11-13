@@ -1,0 +1,131 @@
+{
+  "run_time": "2026-11-12T22:16:03",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC05-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC05-DE003",
+  "usage": {
+    "prompt_tokens": 2000,
+    "total_tokens": 9873,
+    "completion_tokens": 7873,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6013
+    },
+    "time_to_first_token_ms": 115095,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7872000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC05-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰通过阶段性教育和若干次专科重点训练达到大专医学水平，相当于正规医科大学毕业水平。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"事件从基础教学与轮训队讲授开始，经新学生培训、实际锻炼与学习时间受限、阶段教育、战役间隙分阶段轮训，止于达到大专医学水平；依据 S0040 至 S0055 的连续口述。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"基础教学与轮训队讲授\",\n      \"process_text\": \"正常就是基础教学，医学的基础课都是正常的，给学生，轮训队也讲，学生讲得浅，就是知识。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0040\",\n        \"BATCH04-DOC05-S0041\",\n        \"BATCH04-DOC05-S0043\",\n        \"BATCH04-DOC05-S0045\",\n        \"BATCH04-DOC05-S0046\"\n      ],\n      \"evidence_quote\": \"    陈海峰：正常就是基础教学，\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"新学生培训、实际锻炼与学习时间受限\",\n      \"process_text\": \"新学生毕业工作简单，以搞护理工作为主；男的到部队当卫生员，卫生队培训，经过实际锻炼再提高；学习时间有限，轮训队一般6个月到8个月，因日本鬼子扫荡搬家，一年真正学知识只有七八个月。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0048\"\n      ],\n      \"evidence_quote\": \"    陈海峰：正常情况为主，那么异常呢？因为那个新学生啊，一般毕业的时候，他工作简单，以搞护理工作为主。男的到部队去（当）卫生员，经常有医务员。卫生队还有股长啊，还有队长啊，他们还在培训他，经过实际（锻炼），再提高他。他这里学的有限，因为他（在）这里只能学三个月（到）半年。轮训队呢，一般6个月到8个月，加上日本鬼子扫荡啦，有的时候搬家了，要应付扫荡啦，那么一年至少三四个月。所以讲起来，学习一年，他真正学知识只有七八个月。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"阶段教育与轮训重点专科安排\",\n      \"process_text\": \"部队教育总结为阶段教育；第一次学习以普通教育、知识性教育、打基础为主，正常为主异常为次；轮训时有主要课和重点，依次以血管外伤、骨折、脑部外伤、胸部外伤、腹部外伤、四肢外伤为主。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0050\",\n        \"BATCH04-DOC05-S0051\"\n      ],\n      \"evidence_quote\": \"知识性教育为主，打基础为主，是正常的为主，异常的为次，是吧。轮训的时候，有主要课，有重点了。要结合这个重点，这一次以血管外伤为主，下一次以骨折为主，再下次以脑部外伤为主，再下次胸部外伤为主，再就腹部外伤为主，（直至）四肢外伤为主。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"战役间隙分阶段轮训与专科提高\",\n      \"process_text\": \"分阶段轮训，经常轮训；两个大战役之间部队休整，医务卫生员集中轮训，一个专科一个专科提高，积累局部知识成系统知识；战斗环境不能整天学校学习，部队要人要干部，抽来学习比较好，部队也需要干部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0053\"\n      ],\n      \"evidence_quote\": \"    陈海峰：他是分阶段轮训，经常轮训，两个大战役之间，部队休整，医务卫生员马上集中轮训。一个专科一个专科提高。其实（是）等于打仗啊，积少胜为大胜。那么就这样子积累一个一个局部的知识，累积起来的一些系统知识，经过了不知道多少次的轮训……因为这个战斗环境（下），不可能整天到晚给你放到学校里去学，这个部队里要人、要干部，要抽来学习都是比较好的。你部队里也需要干部。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"达到大专医学水平\",\n      \"process_text\": \"一学期回去，通过阶段性教育和若干次专科重点训练，达到大专医学水平，等于正规医科大学毕业水平。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0055\"\n      ],\n      \"evidence_quote\": \"    陈海峰：所以一学期我就得回去。这样子，就（通过）阶段性的教育来（和）若干次专科重点训练，达到大专医学水平。就等于是正规的医科大学毕业，这个水平。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE003-P01\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0048\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE003-P02\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE003-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0050\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE003-P03\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE003-P04\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0053\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE003-P04\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE003-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0055\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC05-DE003",
+    "event_enrichment": {
+      "result_state": "陈海峰通过阶段性教育和若干次专科重点训练达到大专医学水平，相当于正规医科大学毕业水平。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "事件从基础教学与轮训队讲授开始，经新学生培训、实际锻炼与学习时间受限、阶段教育、战役间隙分阶段轮训，止于达到大专医学水平；依据 S0040 至 S0055 的连续口述。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC05-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "基础教学与轮训队讲授",
+        "process_text": "正常就是基础教学，医学的基础课都是正常的，给学生，轮训队也讲，学生讲得浅，就是知识。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0040",
+          "BATCH04-DOC05-S0041",
+          "BATCH04-DOC05-S0043",
+          "BATCH04-DOC05-S0045",
+          "BATCH04-DOC05-S0046"
+        ],
+        "evidence_quote": "    陈海峰：正常就是基础教学，",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "新学生培训、实际锻炼与学习时间受限",
+        "process_text": "新学生毕业工作简单，以搞护理工作为主；男的到部队当卫生员，卫生队培训，经过实际锻炼再提高；学习时间有限，轮训队一般6个月到8个月，因日本鬼子扫荡搬家，一年真正学知识只有七八个月。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0048"
+        ],
+        "evidence_quote": "    陈海峰：正常情况为主，那么异常呢？因为那个新学生啊，一般毕业的时候，他工作简单，以搞护理工作为主。男的到部队去（当）卫生员，经常有医务员。卫生队还有股长啊，还有队长啊，他们还在培训他，经过实际（锻炼），再提高他。他这里学的有限，因为他（在）这里只能学三个月（到）半年。轮训队呢，一般6个月到8个月，加上日本鬼子扫荡啦，有的时候搬家了，要应付扫荡啦，那么一年至少三四个月。所以讲起来，学习一年，他真正学知识只有七八个月。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "阶段教育与轮训重点专科安排",
+        "process_text": "部队教育总结为阶段教育；第一次学习以普通教育、知识性教育、打基础为主，正常为主异常为次；轮训时有主要课和重点，依次以血管外伤、骨折、脑部外伤、胸部外伤、腹部外伤、四肢外伤为主。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0050",
+          "BATCH04-DOC05-S0051"
+        ],
+        "evidence_quote": "知识性教育为主，打基础为主，是正常的为主，异常的为次，是吧。轮训的时候，有主要课，有重点了。要结合这个重点，这一次以血管外伤为主，下一次以骨折为主，再下次以脑部外伤为主，再下次胸部外伤为主，再就腹部外伤为主，（直至）四肢外伤为主。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "战役间隙分阶段轮训与专科提高",
+        "process_text": "分阶段轮训，经常轮训；两个大战役之间部队休整，医务卫生员集中轮训，一个专科一个专科提高，积累局部知识成系统知识；战斗环境不能整天学校学习，部队要人要干部，抽来学习比较好，部队也需要干部。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0053"
+        ],
+        "evidence_quote": "    陈海峰：他是分阶段轮训，经常轮训，两个大战役之间，部队休整，医务卫生员马上集中轮训。一个专科一个专科提高。其实（是）等于打仗啊，积少胜为大胜。那么就这样子积累一个一个局部的知识，累积起来的一些系统知识，经过了不知道多少次的轮训……因为这个战斗环境（下），不可能整天到晚给你放到学校里去学，这个部队里要人、要干部，要抽来学习都是比较好的。你部队里也需要干部。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "达到大专医学水平",
+        "process_text": "一学期回去，通过阶段性教育和若干次专科重点训练，达到大专医学水平，等于正规医科大学毕业水平。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0055"
+        ],
+        "evidence_quote": "    陈海峰：所以一学期我就得回去。这样子，就（通过）阶段性的教育来（和）若干次专科重点训练，达到大专医学水平。就等于是正规的医科大学毕业，这个水平。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC05-DE003-P01",
+        "target_stage_id": "BATCH04-DOC05-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC05-S0048",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC05-DE003-P02",
+        "target_stage_id": "BATCH04-DOC05-DE003-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC05-S0050",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC05-DE003-P03",
+        "target_stage_id": "BATCH04-DOC05-DE003-P04",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC05-S0053",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC05-DE003-P04",
+        "target_stage_id": "BATCH04-DOC05-DE003-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC05-S0055",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

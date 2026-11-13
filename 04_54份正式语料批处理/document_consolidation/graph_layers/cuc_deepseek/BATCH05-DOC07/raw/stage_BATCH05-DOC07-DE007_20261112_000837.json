@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T00:08:37",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC07-DE007",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC07-DE007",
+  "usage": {
+    "prompt_tokens": 1316,
+    "total_tokens": 3953,
+    "completion_tokens": 2637,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1570
+    },
+    "time_to_first_token_ms": 20730,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC07-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆抵达石家庄后因连日大雨、滹沱河涨水无法过河，被困石家庄，未能前往西柏坡向中央军委汇报；叶剑英为其安排铺位并一起吃饭。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以中央点名要求陈锐霆赴西柏坡为起点，以抵达石家庄后遇雨受阻、被叶剑英安置为终点；后文关于白区党时期关系的追述属于背景补充，不纳入本事件阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"中央点名要求陈锐霆不带随员赴西柏坡。\",\n      \"process_text\": \"中央点名，指名要陈锐霆自己不要带随员，到西柏坡去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0041\"\n      ],\n      \"evidence_quote\": \"那个时候中央就点名，指名要我自己不要带随员，到西柏坡去。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"因九月会议住处安排，计划先到石家庄，再由叶剑英安排赴西柏坡中央军委汇报。\",\n      \"process_text\": \"当时要开九月会议，那个地方没有房子住，要先到石家庄，由叶剑英安排到西柏坡中央军委去汇报。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0041\"\n      ],\n      \"evidence_quote\": \"当时要开九月会议，那个地方没有房子住，要先到石家庄，由叶剑英安排我到西柏坡中央军委去汇报。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"抵达石家庄后连降三天大雨，滹沱河涨水无法过河，被困不能去中央。\",\n      \"process_text\": \"到了石家庄，连着下了三天大雨，滹沱河的水也比较大，过不了河，困在那个地方，中央去不了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0041\"\n      ],\n      \"evidence_quote\": \"哎呀，到了石家庄，连着下了三天大雨，滹沱河的水也比较大，也过不了，困在那个地方中央去不了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"叶剑英在其住处外为陈锐霆搭铺安置，并一起吃饭。\",\n      \"process_text\": \"叶剑英住在里面一个屋子，在外头给陈锐霆搭一个铺，在一块吃饭。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0041\"\n      ],\n      \"evidence_quote\": \"叶帅住在里面一个屋子，就在外头给我搭一个铺，在一块吃饭。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE007-P01\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0041\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE007-P02\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0041\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE007-P03\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE007-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0041\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC07-DE007",
+    "event_enrichment": {
+      "result_state": "陈锐霆抵达石家庄后因连日大雨、滹沱河涨水无法过河，被困石家庄，未能前往西柏坡向中央军委汇报；叶剑英为其安排铺位并一起吃饭。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以中央点名要求陈锐霆赴西柏坡为起点，以抵达石家庄后遇雨受阻、被叶剑英安置为终点；后文关于白区党时期关系的追述属于背景补充，不纳入本事件阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC07-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "中央点名要求陈锐霆不带随员赴西柏坡。",
+        "process_text": "中央点名，指名要陈锐霆自己不要带随员，到西柏坡去。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0041"
+        ],
+        "evidence_quote": "那个时候中央就点名，指名要我自己不要带随员，到西柏坡去。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "因九月会议住处安排，计划先到石家庄，再由叶剑英安排赴西柏坡中央军委汇报。",
+        "process_text": "当时要开九月会议，那个地方没有房子住，要先到石家庄，由叶剑英安排到西柏坡中央军委去汇报。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0041"
+        ],
+        "evidence_quote": "当时要开九月会议，那个地方没有房子住，要先到石家庄，由叶剑英安排我到西柏坡中央军委去汇报。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "抵达石家庄后连降三天大雨，滹沱河涨水无法过河，被困不能去中央。",
+        "process_text": "到了石家庄，连着下了三天大雨，滹沱河的水也比较大，过不了河，困在那个地方，中央去不了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0041"
+        ],
+        "evidence_quote": "哎呀，到了石家庄，连着下了三天大雨，滹沱河的水也比较大，也过不了，困在那个地方中央去不了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "叶剑英在其住处外为陈锐霆搭铺安置，并一起吃饭。",
+        "process_text": "叶剑英住在里面一个屋子，在外头给陈锐霆搭一个铺，在一块吃饭。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0041"
+        ],
+        "evidence_quote": "叶帅住在里面一个屋子，就在外头给我搭一个铺，在一块吃饭。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC07-DE007-P01",
+        "target_stage_id": "BATCH05-DOC07-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0041",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC07-DE007-P02",
+        "target_stage_id": "BATCH05-DOC07-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0041",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC07-DE007-P03",
+        "target_stage_id": "BATCH05-DOC07-DE007-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC07-S0041",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

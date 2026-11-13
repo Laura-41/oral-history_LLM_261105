@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-12T17:38:24",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC04-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC04-DE008",
+  "usage": {
+    "prompt_tokens": 1234,
+    "total_tokens": 8701,
+    "completion_tokens": 7467,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6771
+    },
+    "time_to_first_token_ms": 113407,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC04-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"林明永带领十几个伤员作为皖南撤退出来的最后一批伤员撤出。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据 BATCH07-DOC04-S0090 中“最后一批伤员撤出来”至“这是我们皖南撤退出来的最后一批伤员”；后续“他带领那十几个伤员过来以后”未纳入本事件边界。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"叙述者说明最后一批撤出的伤员由林明永带领，并介绍其身份。\",\n      \"process_text\": \"最后一批伤员撤出来，是第三期我老伴的一个同学，叫林明永。双木“林”，日月“明”，“永久”的“永”，福建人，现在已经死掉了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0090\"\n      ],\n      \"evidence_quote\": \"最后一批伤员撤出来，是第三期我老伴的一个同学，叫林明永。双木“林”，日月“明”，“永久”的“永”，福建人，现在已经死掉了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"林明永带十几个伤员拄拐撤出，被确认为皖南撤退出来的最后一批伤员。\",\n      \"process_text\": \"林明永带了十几个伤员，一拐一拐，还拄着个拐杖。这是我们皖南撤退出来的最后一批伤员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0090\"\n      ],\n      \"evidence_quote\": \"林明永带了十几个伤员，一拐一拐，还拄着个拐杖。这是我们皖南撤退出来的最后一批伤员。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE008-P01\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0090\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC04-DE008",
+    "event_enrichment": {
+      "result_state": "林明永带领十几个伤员作为皖南撤退出来的最后一批伤员撤出。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "依据 BATCH07-DOC04-S0090 中“最后一批伤员撤出来”至“这是我们皖南撤退出来的最后一批伤员”；后续“他带领那十几个伤员过来以后”未纳入本事件边界。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC04-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "叙述者说明最后一批撤出的伤员由林明永带领，并介绍其身份。",
+        "process_text": "最后一批伤员撤出来，是第三期我老伴的一个同学，叫林明永。双木“林”，日月“明”，“永久”的“永”，福建人，现在已经死掉了。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0090"
+        ],
+        "evidence_quote": "最后一批伤员撤出来，是第三期我老伴的一个同学，叫林明永。双木“林”，日月“明”，“永久”的“永”，福建人，现在已经死掉了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "林明永带十几个伤员拄拐撤出，被确认为皖南撤退出来的最后一批伤员。",
+        "process_text": "林明永带了十几个伤员，一拐一拐，还拄着个拐杖。这是我们皖南撤退出来的最后一批伤员。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0090"
+        ],
+        "evidence_quote": "林明永带了十几个伤员，一拐一拐，还拄着个拐杖。这是我们皖南撤退出来的最后一批伤员。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC04-DE008-P01",
+        "target_stage_id": "BATCH07-DOC04-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC04-S0090",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

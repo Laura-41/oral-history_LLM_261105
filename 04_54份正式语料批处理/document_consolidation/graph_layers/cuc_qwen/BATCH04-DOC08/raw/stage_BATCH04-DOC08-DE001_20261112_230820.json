@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T23:08:20",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC08-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC08-DE001",
+  "usage": {
+    "prompt_tokens": 1142,
+    "total_tokens": 5103,
+    "completion_tokens": 3961,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2986
+    },
+    "time_to_first_token_ms": 58888,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3960000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC08-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆因在敌我兵力悬殊时起义并负重伤，获得老同志尊重，并与司令部相关科、政治部、供给部、卫生部等关系相处较好。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以片段 BATCH04-DOC08-S0003 中陈锐霆自述尊重原因及与各部门关系为边界，从“虽然我入党的时间比较短一些”起，到“相处都挺好的”止。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"自述入党时间短且未参加长征，但老同志仍尊重。\",\n      \"process_text\": \"虽然我入党的时间比较短一些，另外一个没参加长征，但是底下的老同志他们都对我还是很尊重的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0003\"\n      ],\n      \"evidence_quote\": \"虽然我入党的时间比较短一些，另外一个没参加长征，但是底下的老同志他们都对我还是很尊重的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"说明尊重原因：敌我兵力悬殊时起义并负重伤，关系处理不错。\",\n      \"process_text\": \"因为我在部队敌我兵力很悬殊的时候起义，另外自己负了重伤，所以（他们）对我非常尊敬，跟我的关系处理得都还不错。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0003\"\n      ],\n      \"evidence_quote\": \"因为我在部队敌我兵力很悬殊的时候起义，另外自己负了重伤，所以（他们）对我非常尊敬，跟我的关系处理得都还不错。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"具体说明与司令部相关科、政治部、供给部、卫生部相处较好。\",\n      \"process_text\": \"除了司令部的几个科处得挺好，另外跟政治部、后勤部——那时候不叫后勤部叫供给部，（还有）跟卫生部，相处都挺好的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0003\"\n      ],\n      \"evidence_quote\": \"除了司令部的几个科处得挺好，另外跟政治部、后勤部——那时候不叫后勤部叫供给部，（还有）跟卫生部，相处都挺好的。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE001-P01\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0003\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE001-P02\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE001-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0003\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC08-DE001",
+    "event_enrichment": {
+      "result_state": "陈锐霆因在敌我兵力悬殊时起义并负重伤，获得老同志尊重，并与司令部相关科、政治部、供给部、卫生部等关系相处较好。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "以片段 BATCH04-DOC08-S0003 中陈锐霆自述尊重原因及与各部门关系为边界，从“虽然我入党的时间比较短一些”起，到“相处都挺好的”止。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC08-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "自述入党时间短且未参加长征，但老同志仍尊重。",
+        "process_text": "虽然我入党的时间比较短一些，另外一个没参加长征，但是底下的老同志他们都对我还是很尊重的。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0003"
+        ],
+        "evidence_quote": "虽然我入党的时间比较短一些，另外一个没参加长征，但是底下的老同志他们都对我还是很尊重的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "说明尊重原因：敌我兵力悬殊时起义并负重伤，关系处理不错。",
+        "process_text": "因为我在部队敌我兵力很悬殊的时候起义，另外自己负了重伤，所以（他们）对我非常尊敬，跟我的关系处理得都还不错。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0003"
+        ],
+        "evidence_quote": "因为我在部队敌我兵力很悬殊的时候起义，另外自己负了重伤，所以（他们）对我非常尊敬，跟我的关系处理得都还不错。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "具体说明与司令部相关科、政治部、供给部、卫生部相处较好。",
+        "process_text": "除了司令部的几个科处得挺好，另外跟政治部、后勤部——那时候不叫后勤部叫供给部，（还有）跟卫生部，相处都挺好的。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0003"
+        ],
+        "evidence_quote": "除了司令部的几个科处得挺好，另外跟政治部、后勤部——那时候不叫后勤部叫供给部，（还有）跟卫生部，相处都挺好的。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC08-DE001-P01",
+        "target_stage_id": "BATCH04-DOC08-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC08-S0003",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC08-DE001-P02",
+        "target_stage_id": "BATCH04-DOC08-DE001-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC08-S0003",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

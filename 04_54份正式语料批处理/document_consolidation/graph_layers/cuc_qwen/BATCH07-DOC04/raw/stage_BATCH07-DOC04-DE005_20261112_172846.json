@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-12T17:28:46",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC04-DE005",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC04-DE005",
+  "usage": {
+    "prompt_tokens": 1856,
+    "total_tokens": 12465,
+    "completion_tokens": 10609,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9181
+    },
+    "time_to_first_token_ms": 168052,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC04-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰与哥哥在情报站站长掩护下翻墙进入对面院子躲藏，第二天离开，站长随后把窗子重新装回。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以 S0037 中“我们到那个地方去，没想到被忠义救国军包围”为起点，以 S0039 中“第二天我们才走。（我们）走了以后，（他把）窗子再拉走，再装起来”为终点；S0041 中“有一次”便衣盘查为另一段经历，不纳入本事件阶段。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰与哥哥到秘密驻地后被忠义救国军包围并遭搜索\",\n      \"process_text\": \"我们到那个地方去，没想到被忠义救国军包围，来（了）两百多人，从宜兴来的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0037\"\n      ],\n      \"evidence_quote\": \"我们到那个地方去，没想到被忠义救国军包围，来（了）两百多人，从宜兴来的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"情报站站长掩护二人并架窗准备翻墙\",\n      \"process_text\": \"他掩护我们，我们住在那个楼上。他（把）窗子拿下来，架在夹道的两边围墙上面，\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0037\"\n      ],\n      \"evidence_quote\": \"他掩护我们，我们住在那个楼上。他（把）窗子拿下来，架在夹道的两边围墙上面，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"二人翻墙进入对面院子\",\n      \"process_text\": \"我们翻墙跳到对面一个院子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0037\"\n      ],\n      \"evidence_quote\": \"我们翻墙跳到对面一个院子。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"二人在对面院子柴禾堆旁躲藏至第二天离开\",\n      \"process_text\": \"院子里堆着柴禾什么东西，乱七八糟的那个地方，躲了一晚上，白天又躲了一天，第二天我们才走。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0039\"\n      ],\n      \"evidence_quote\": \"院子里堆着柴禾什么东西，乱七八糟的那个地方，躲了一晚上，白天又躲了一天，第二天我们才走。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC04-DE005-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"二人离开后站长重新装回窗子\",\n      \"process_text\": \"（我们）走了以后，（他把）窗子再拉走，再装起来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC04-S0039\"\n      ],\n      \"evidence_quote\": \"（我们）走了以后，（他把）窗子再拉走，再装起来。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE005-P01\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE005-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0037\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE005-P02\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE005-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0037\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE005-P03\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE005-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0039\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC04-DE005-P04\",\n      \"target_stage_id\": \"BATCH07-DOC04-DE005-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH07-DOC04-S0039\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC04-DE005",
+    "event_enrichment": {
+      "result_state": "陈海峰与哥哥在情报站站长掩护下翻墙进入对面院子躲藏，第二天离开，站长随后把窗子重新装回。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "以 S0037 中“我们到那个地方去，没想到被忠义救国军包围”为起点，以 S0039 中“第二天我们才走。（我们）走了以后，（他把）窗子再拉走，再装起来”为终点；S0041 中“有一次”便衣盘查为另一段经历，不纳入本事件阶段。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC04-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰与哥哥到秘密驻地后被忠义救国军包围并遭搜索",
+        "process_text": "我们到那个地方去，没想到被忠义救国军包围，来（了）两百多人，从宜兴来的。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0037"
+        ],
+        "evidence_quote": "我们到那个地方去，没想到被忠义救国军包围，来（了）两百多人，从宜兴来的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "情报站站长掩护二人并架窗准备翻墙",
+        "process_text": "他掩护我们，我们住在那个楼上。他（把）窗子拿下来，架在夹道的两边围墙上面，",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0037"
+        ],
+        "evidence_quote": "他掩护我们，我们住在那个楼上。他（把）窗子拿下来，架在夹道的两边围墙上面，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "二人翻墙进入对面院子",
+        "process_text": "我们翻墙跳到对面一个院子。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0037"
+        ],
+        "evidence_quote": "我们翻墙跳到对面一个院子。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "二人在对面院子柴禾堆旁躲藏至第二天离开",
+        "process_text": "院子里堆着柴禾什么东西，乱七八糟的那个地方，躲了一晚上，白天又躲了一天，第二天我们才走。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0039"
+        ],
+        "evidence_quote": "院子里堆着柴禾什么东西，乱七八糟的那个地方，躲了一晚上，白天又躲了一天，第二天我们才走。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC04-DE005-P05",
+        "stage_order": 5,
+        "stage_summary": "二人离开后站长重新装回窗子",
+        "process_text": "（我们）走了以后，（他把）窗子再拉走，再装起来。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC04-S0039"
+        ],
+        "evidence_quote": "（我们）走了以后，（他把）窗子再拉走，再装起来。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC04-DE005-P01",
+        "target_stage_id": "BATCH07-DOC04-DE005-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH07-DOC04-S0037",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE005-P02",
+        "target_stage_id": "BATCH07-DOC04-DE005-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH07-DOC04-S0037",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE005-P03",
+        "target_stage_id": "BATCH07-DOC04-DE005-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC04-S0039",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC04-DE005-P04",
+        "target_stage_id": "BATCH07-DOC04-DE005-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH07-DOC04-S0039",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T13:59:05",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC03-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC03-DE007",
+  "usage": {
+    "prompt_tokens": 1585,
+    "total_tokens": 7850,
+    "completion_tokens": 6265,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5140
+    },
+    "time_to_first_token_ms": 91544,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC03-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"六团一部分与师部特务营编成特务团，特务团为两个营八个连、没有第三营，杨永松任政治主任，团长吴世安、副团长张策平。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 S0028 中六团一部分到鲁南并与师部特务营编成特务团，以及 S0030 中特务团编制和杨永松任政治主任、团长副团长信息确定；S0030 后续苏鲁支队、686团等内容不纳入本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"师部研究开辟鲁南局面，六团一部分到达鲁南。\",\n      \"process_text\": \"师部就研究怎么样来开鲁南这个局面；当年的12月份，六团一部分就到鲁南我们那个地方。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0028\"\n      ],\n      \"evidence_quote\": \"那个时候师部就研究，怎么样来开鲁南这个局面。当年的12月份，这个部队跟谁一块来我不知道，就是曾国华支队的，他一个老五团，出发时候变成一个营了，扩大一个团，晋察冀还留了千把人。他在那里当地组织的团长是党员，以后他就从冀鲁边那边，在鲁西北的还北面，因为那个环境很艰苦，粮食不够吃的，人太多了，五支队就从那里撤到鲁西来了，以后肖华也撤到鲁西来了。这个六团一部分就到鲁南我们那个地方，就跟师部的特务营编成一个特务团。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"六团一部分与师部特务营编成特务团。\",\n      \"process_text\": \"这个六团一部分就到鲁南我们那个地方，就跟师部的特务营编成一个特务团。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0028\"\n      ],\n      \"evidence_quote\": \"这个六团一部分就到鲁南我们那个地方，就跟师部的特务营编成一个特务团。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"特务团形成两个营八个连，杨永松任政治主任，团长吴世安、副团长张策平。\",\n      \"process_text\": \"这个特务团两个营八个连，没有第三营，我就去当政治主任，团长是吴世安，副团长就是六团的副团长，叫张策平。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0030\"\n      ],\n      \"evidence_quote\": \"这个特务团两个营八个连，没有第三营，我就去当政治主任，团长是吴世安，副团长就是六团的副团长，叫张策平，这老党员，牙齿都掉了，60多岁了，在军队干也很艰苦。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE007-P01\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0028\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE007-P02\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE007-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0030\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC03-DE007",
+    "event_enrichment": {
+      "result_state": "六团一部分与师部特务营编成特务团，特务团为两个营八个连、没有第三营，杨永松任政治主任，团长吴世安、副团长张策平。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 S0028 中六团一部分到鲁南并与师部特务营编成特务团，以及 S0030 中特务团编制和杨永松任政治主任、团长副团长信息确定；S0030 后续苏鲁支队、686团等内容不纳入本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC03-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "师部研究开辟鲁南局面，六团一部分到达鲁南。",
+        "process_text": "师部就研究怎么样来开鲁南这个局面；当年的12月份，六团一部分就到鲁南我们那个地方。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0028"
+        ],
+        "evidence_quote": "那个时候师部就研究，怎么样来开鲁南这个局面。当年的12月份，这个部队跟谁一块来我不知道，就是曾国华支队的，他一个老五团，出发时候变成一个营了，扩大一个团，晋察冀还留了千把人。他在那里当地组织的团长是党员，以后他就从冀鲁边那边，在鲁西北的还北面，因为那个环境很艰苦，粮食不够吃的，人太多了，五支队就从那里撤到鲁西来了，以后肖华也撤到鲁西来了。这个六团一部分就到鲁南我们那个地方，就跟师部的特务营编成一个特务团。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "六团一部分与师部特务营编成特务团。",
+        "process_text": "这个六团一部分就到鲁南我们那个地方，就跟师部的特务营编成一个特务团。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0028"
+        ],
+        "evidence_quote": "这个六团一部分就到鲁南我们那个地方，就跟师部的特务营编成一个特务团。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "特务团形成两个营八个连，杨永松任政治主任，团长吴世安、副团长张策平。",
+        "process_text": "这个特务团两个营八个连，没有第三营，我就去当政治主任，团长是吴世安，副团长就是六团的副团长，叫张策平。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0030"
+        ],
+        "evidence_quote": "这个特务团两个营八个连，没有第三营，我就去当政治主任，团长是吴世安，副团长就是六团的副团长，叫张策平，这老党员，牙齿都掉了，60多岁了，在军队干也很艰苦。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC03-DE007-P01",
+        "target_stage_id": "BATCH06-DOC03-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC03-S0028",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE007-P02",
+        "target_stage_id": "BATCH06-DOC03-DE007-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC03-S0030",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,143 @@
+{
+  "run_time": "2026-11-12T23:39:34",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC01-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC01-DE003",
+  "usage": {
+    "prompt_tokens": 1557,
+    "total_tokens": 9423,
+    "completion_tokens": 7866,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6231
+    },
+    "time_to_first_token_ms": 117351,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC01-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"张震东腹部枪伤经临时处理，后续派人往后方医院送。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据 S0055 至 S0060：从重要干部负伤先处理、处理之后往后方转，到曹家埠战斗中张震东腹部枪伤、转送后方医院困难、临时处理、弄好后派人送。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"重要干部负伤先处理的处置原则\",\n      \"process_text\": \"万一有重要干部负伤，我们还要给他先处理。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0055\"\n      ],\n      \"evidence_quote\": \"    陈海峰：万一有重要干部负伤，我们还要给他先处理。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"处理之后往后方转\",\n      \"process_text\": \"处理之后，往后方转啊。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0056\"\n      ],\n      \"evidence_quote\": \"处理之后，往后方转啊。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"曹家埠战斗背景及张震东参谋处长身份\",\n      \"process_text\": \"你像打曹家埠战斗的时候，攻坚战，可以叫新四军的第一次攻坚战，曹家埠战斗。曹家埠战斗，我们那个参谋处长啊，等于副参谋长了，叫张震东啊，\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0057\"\n      ],\n      \"evidence_quote\": \"你像打曹家埠战斗的时候，攻坚战，可以叫新四军的第一次攻坚战，曹家埠战斗。曹家埠战斗，我们那个参谋处长啊，等于副参谋长了，叫张震东啊，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"张震东腹部枪伤送抵前方医院且转送后方医院困难\",\n      \"process_text\": \"就是腹部枪伤，子弹没打穿，弹头还在里头。所以送到我们那里呢，那就往后方医院送。后方医院还在二百里以外了，还（要）通过好多封锁线。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0058\"\n      ],\n      \"evidence_quote\": \"就是腹部枪伤，子弹没打穿，弹头还在里头。所以送到我们那里呢，那就往后方医院送。后方医院还在二百里以外了，还（要）通过好多封锁线。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"因转送困难而临时处理伤口\",\n      \"process_text\": \"所以很麻烦，这个你临时地处理一下，\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0059\"\n      ],\n      \"evidence_quote\": \"所以很麻烦，这个你临时地处理一下，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE003-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"处理完成后派人往后方医院送\",\n      \"process_text\": \"弄好了以后，再派人送。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0060\"\n      ],\n      \"evidence_quote\": \"弄好了以后，再派人送。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE003-P01\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0056\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE003-P02\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE003-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0057\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE003-P03\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE003-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0058\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE003-P04\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE003-P05\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0059\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE003-P05\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE003-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0060\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC01-DE003",
+    "event_enrichment": {
+      "result_state": "张震东腹部枪伤经临时处理，后续派人往后方医院送。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "依据 S0055 至 S0060：从重要干部负伤先处理、处理之后往后方转，到曹家埠战斗中张震东腹部枪伤、转送后方医院困难、临时处理、弄好后派人送。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC01-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "重要干部负伤先处理的处置原则",
+        "process_text": "万一有重要干部负伤，我们还要给他先处理。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0055"
+        ],
+        "evidence_quote": "    陈海峰：万一有重要干部负伤，我们还要给他先处理。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "处理之后往后方转",
+        "process_text": "处理之后，往后方转啊。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0056"
+        ],
+        "evidence_quote": "处理之后，往后方转啊。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "曹家埠战斗背景及张震东参谋处长身份",
+        "process_text": "你像打曹家埠战斗的时候，攻坚战，可以叫新四军的第一次攻坚战，曹家埠战斗。曹家埠战斗，我们那个参谋处长啊，等于副参谋长了，叫张震东啊，",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0057"
+        ],
+        "evidence_quote": "你像打曹家埠战斗的时候，攻坚战，可以叫新四军的第一次攻坚战，曹家埠战斗。曹家埠战斗，我们那个参谋处长啊，等于副参谋长了，叫张震东啊，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "张震东腹部枪伤送抵前方医院且转送后方医院困难",
+        "process_text": "就是腹部枪伤，子弹没打穿，弹头还在里头。所以送到我们那里呢，那就往后方医院送。后方医院还在二百里以外了，还（要）通过好多封锁线。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0058"
+        ],
+        "evidence_quote": "就是腹部枪伤，子弹没打穿，弹头还在里头。所以送到我们那里呢，那就往后方医院送。后方医院还在二百里以外了，还（要）通过好多封锁线。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "因转送困难而临时处理伤口",
+        "process_text": "所以很麻烦，这个你临时地处理一下，",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0059"
+        ],
+        "evidence_quote": "所以很麻烦，这个你临时地处理一下，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE003-P06",
+        "stage_order": 6,
+        "stage_summary": "处理完成后派人往后方医院送",
+        "process_text": "弄好了以后，再派人送。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0060"
+        ],
+        "evidence_quote": "弄好了以后，再派人送。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC01-DE003-P01",
+        "target_stage_id": "BATCH05-DOC01-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC01-S0056",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC01-DE003-P02",
+        "target_stage_id": "BATCH05-DOC01-DE003-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC01-S0057",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC01-DE003-P03",
+        "target_stage_id": "BATCH05-DOC01-DE003-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC01-S0058",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC01-DE003-P04",
+        "target_stage_id": "BATCH05-DOC01-DE003-P05",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH05-DOC01-S0059",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC01-DE003-P05",
+        "target_stage_id": "BATCH05-DOC01-DE003-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC01-S0060",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

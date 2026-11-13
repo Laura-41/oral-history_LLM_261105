@@ -1,0 +1,162 @@
+{
+  "run_time": "2026-11-12T21:14:53",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC02-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC02-DE003",
+  "usage": {
+    "prompt_tokens": 2824,
+    "total_tokens": 18354,
+    "completion_tokens": 15530,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 13153
+    },
+    "tokens_per_second": 15529000,
+    "time_to_first_token_ms": 230769,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC02-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰赴军部汇报后，见习罗生特手术并考察医院管理，认为一个礼拜收获很大，随后转到师部。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于 S0026 陈海峰到海神庙军部医院向崔义田、罗生特汇报，止于 S0048 一个礼拜收获很大并转到师部；中间包含汇报后交流、留宿、获准见习、考察医院管理安排、手术见习评价与学习收获。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰到海神庙军部医院向崔义田、罗生特汇报。\",\n      \"process_text\": \"向军的卫生（部）领导崔义田崔部长，军的顾问罗生特，做汇报。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0026\"\n      ],\n      \"evidence_quote\": \"    陈海峰：向军的卫生（部）领导崔义田崔部长，军的顾问罗生特，做汇报。因为我们到军部很近啊，我们2旅那个时候就在建阳，离开只有四五十里地啊，我就到了海神庙。现在海神庙已经没有了，那个时候就（是）军部的一个医院，在盐城的一个串场河边上。现在就是一个粮库了，在那里。那么这个卫生部呢，就在这个海神庙的边上。这个罗生特呢，就是奥地利那个医生，你采访那个李磊啊，他一定会详细介绍这个情况。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"汇报后陈海峰与罗生特共同吃饭，罗生特询问部队情况。\",\n      \"process_text\": \"我汇报以后呢，和我共同吃饭。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0029\"\n      ],\n      \"evidence_quote\": \"    陈海峰：我汇报以后呢，和我共同吃饭。那卫生部住的是个野灶，住在毛棚子里头，现在盐城都是高楼大厦了。罗生特呢，很高兴，问了我很多问题，我那部队里的情况，因为他不了解这个部队情况，他没到过新四军的部队，听得很有兴趣。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈海峰在军部医院住一个晚上，罗生特早上带小警卫员锻炼。\",\n      \"process_text\": \"在那里住了一个晚上，罗生特很注意，一早上起来就锻炼身体，带着他的小警卫员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0030\"\n      ],\n      \"evidence_quote\": \"在那里住了一个晚上，罗生特很注意，一早上起来就锻炼身体，带着他的小警卫员。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"崔部长告知陈海峰可住医院见习罗生特开刀一个礼拜，穿隔离衣戴口罩看手术学技术。\",\n      \"process_text\": \"批准我见习罗生特开刀一个礼拜。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0033\"\n      ],\n      \"evidence_quote\": \"    陈海峰：欸，李光。带李光在那个盐场上面跑步，跑十几圈，很注意锻炼身体。吃饭我们一块吃，那么他做手术，那个部长啊，就告诉我，他说：“你趁这个机会业务上学习一下，你在这里住一个礼拜，你住到医院去。最近有批伤员，罗生特要开刀，你可以见习。”穿上隔离衣呀，戴上口罩啊，站在旁边，看他怎么开。这样子呢，学点技术，批准我见习罗生特开刀一个礼拜。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"陈海峰说明要参观盐城军部医院管理，考察一个礼拜，之后到师部报到。\",\n      \"process_text\": \"参观这个医院的管理。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0035\"\n      ],\n      \"evidence_quote\": \"    陈海峰：参观这个医院的管理。因为我在皖南军部医院搞过，是不是，外科病室的副室长嘛。那么盐城军部的医院怎么管的，看一看。就考察他一个礼拜，（这是）另外加一个礼拜，那么这样子（之后）呢，我再到师部去报到，这样子。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE003-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"陈海峰见习罗生特手术，认为其诊断果断、手术标准细致，一个礼拜看几十个手术，很满意。\",\n      \"process_text\": \"一个礼拜看他做了好多手术，一天要做七八个手术，那么（一礼拜）也做了几十个手术，看了以后，我在那里很满意。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0045\"\n      ],\n      \"evidence_quote\": \"    陈海峰：他两个手打得都非常好。两个手打结，用血管镊子打结，速度非常快，就靠平时锻炼了。看这个伤员，一看以后下决心啊，很果断，不犹豫。该怎么样就怎么样，决心也很大。医疗作风，诊断的水平、手术的水平，业务水平，他的业务技术部分的细致，做得漂亮，手术做得标准，水平比较高。一个礼拜看他做了好多手术，一天要做七八个手术，那么（一礼拜）也做了几十个手术，看了以后，我在那里很满意。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE003-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"陈海峰认为一个礼拜收获很大，随后转到师部。\",\n      \"process_text\": \"一个礼拜的收获还是很大。以后呢，我就转到师部去了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0048\"\n      ],\n      \"evidence_quote\": \"比较多，全军送来的，又见识了多，是不是。那么炸伤的，都是重伤病员，重病人多。这样子呢，一个礼拜的收获还是很大。以后呢，我就转到师部去了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE003-P01\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0029\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE003-P02\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0030\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE003-P03\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE003-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0033\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE003-P04\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE003-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0035\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE003-P05\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE003-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0045\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE003-P06\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE003-P07\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0048\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC02-DE003",
+    "event_enrichment": {
+      "result_state": "陈海峰赴军部汇报后，见习罗生特手术并考察医院管理，认为一个礼拜收获很大，随后转到师部。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于 S0026 陈海峰到海神庙军部医院向崔义田、罗生特汇报，止于 S0048 一个礼拜收获很大并转到师部；中间包含汇报后交流、留宿、获准见习、考察医院管理安排、手术见习评价与学习收获。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC02-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰到海神庙军部医院向崔义田、罗生特汇报。",
+        "process_text": "向军的卫生（部）领导崔义田崔部长，军的顾问罗生特，做汇报。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0026"
+        ],
+        "evidence_quote": "    陈海峰：向军的卫生（部）领导崔义田崔部长，军的顾问罗生特，做汇报。因为我们到军部很近啊，我们2旅那个时候就在建阳，离开只有四五十里地啊，我就到了海神庙。现在海神庙已经没有了，那个时候就（是）军部的一个医院，在盐城的一个串场河边上。现在就是一个粮库了，在那里。那么这个卫生部呢，就在这个海神庙的边上。这个罗生特呢，就是奥地利那个医生，你采访那个李磊啊，他一定会详细介绍这个情况。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "汇报后陈海峰与罗生特共同吃饭，罗生特询问部队情况。",
+        "process_text": "我汇报以后呢，和我共同吃饭。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0029"
+        ],
+        "evidence_quote": "    陈海峰：我汇报以后呢，和我共同吃饭。那卫生部住的是个野灶，住在毛棚子里头，现在盐城都是高楼大厦了。罗生特呢，很高兴，问了我很多问题，我那部队里的情况，因为他不了解这个部队情况，他没到过新四军的部队，听得很有兴趣。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "陈海峰在军部医院住一个晚上，罗生特早上带小警卫员锻炼。",
+        "process_text": "在那里住了一个晚上，罗生特很注意，一早上起来就锻炼身体，带着他的小警卫员。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0030"
+        ],
+        "evidence_quote": "在那里住了一个晚上，罗生特很注意，一早上起来就锻炼身体，带着他的小警卫员。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "崔部长告知陈海峰可住医院见习罗生特开刀一个礼拜，穿隔离衣戴口罩看手术学技术。",
+        "process_text": "批准我见习罗生特开刀一个礼拜。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0033"
+        ],
+        "evidence_quote": "    陈海峰：欸，李光。带李光在那个盐场上面跑步，跑十几圈，很注意锻炼身体。吃饭我们一块吃，那么他做手术，那个部长啊，就告诉我，他说：“你趁这个机会业务上学习一下，你在这里住一个礼拜，你住到医院去。最近有批伤员，罗生特要开刀，你可以见习。”穿上隔离衣呀，戴上口罩啊，站在旁边，看他怎么开。这样子呢，学点技术，批准我见习罗生特开刀一个礼拜。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "陈海峰说明要参观盐城军部医院管理，考察一个礼拜，之后到师部报到。",
+        "process_text": "参观这个医院的管理。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0035"
+        ],
+        "evidence_quote": "    陈海峰：参观这个医院的管理。因为我在皖南军部医院搞过，是不是，外科病室的副室长嘛。那么盐城军部的医院怎么管的，看一看。就考察他一个礼拜，（这是）另外加一个礼拜，那么这样子（之后）呢，我再到师部去报到，这样子。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE003-P06",
+        "stage_order": 6,
+        "stage_summary": "陈海峰见习罗生特手术，认为其诊断果断、手术标准细致，一个礼拜看几十个手术，很满意。",
+        "process_text": "一个礼拜看他做了好多手术，一天要做七八个手术，那么（一礼拜）也做了几十个手术，看了以后，我在那里很满意。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0045"
+        ],
+        "evidence_quote": "    陈海峰：他两个手打得都非常好。两个手打结，用血管镊子打结，速度非常快，就靠平时锻炼了。看这个伤员，一看以后下决心啊，很果断，不犹豫。该怎么样就怎么样，决心也很大。医疗作风，诊断的水平、手术的水平，业务水平，他的业务技术部分的细致，做得漂亮，手术做得标准，水平比较高。一个礼拜看他做了好多手术，一天要做七八个手术，那么（一礼拜）也做了几十个手术，看了以后，我在那里很满意。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE003-P07",
+        "stage_order": 7,
+        "stage_summary": "陈海峰认为一个礼拜收获很大，随后转到师部。",
+        "process_text": "一个礼拜的收获还是很大。以后呢，我就转到师部去了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0048"
+        ],
+        "evidence_quote": "比较多，全军送来的，又见识了多，是不是。那么炸伤的，都是重伤病员，重病人多。这样子呢，一个礼拜的收获还是很大。以后呢，我就转到师部去了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC02-DE003-P01",
+        "target_stage_id": "BATCH04-DOC02-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0029",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE003-P02",
+        "target_stage_id": "BATCH04-DOC02-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0030",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE003-P03",
+        "target_stage_id": "BATCH04-DOC02-DE003-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0033",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE003-P04",
+        "target_stage_id": "BATCH04-DOC02-DE003-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0035",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE003-P05",
+        "target_stage_id": "BATCH04-DOC02-DE003-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0045",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE003-P06",
+        "target_stage_id": "BATCH04-DOC02-DE003-P07",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC02-S0048",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

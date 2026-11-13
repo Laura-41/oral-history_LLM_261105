@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T00:50:51",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC06-DE014",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC06-DE014",
+  "usage": {
+    "prompt_tokens": 1213,
+    "total_tokens": 3148,
+    "completion_tokens": 1935,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1167
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 17031
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC06-DE014\",\n  \"event_enrichment\": {\n    \"result_state\": \"上海军管期间接收到的车辆不多，其中最好的一部车已按陈老总要求送给邓小平。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈锐霆叙述上海军管期间接收车辆、陈老总要求送车以及最终送给邓书记为起止；原文未展开车辆后续使用情况。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE014-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"上海军管事务繁多，接收到的物资不多，仅接收少量车辆。\",\n      \"process_text\": \"在上海军管的事情非常地多，另外陆军都没有好多东西留下，国民党把它都搬走了，接收的东西不多，接收了一点车辆吧。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0046\"\n      ],\n      \"evidence_quote\": \"在上海军管的事情非常地多，另外陆军都没有好多东西留下，国民党把它都搬走了，接收的东西不多，接收了一点车辆吧。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE014-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈老总要求把最好的一部车送给邓书记。\",\n      \"process_text\": \"最好的一部车子，陈老总要我送给邓书记\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0046\"\n      ],\n      \"evidence_quote\": \"最好的一部车子，陈老总要我送给邓书记\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE014-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"结合邓小平在淮海战役和过江战役中的指挥身份，将车送给他。\",\n      \"process_text\": \"淮海战役的时候前委书记邓小平嘛，过江的战役也归他指挥，就送给他了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0046\"\n      ],\n      \"evidence_quote\": \"淮海战役的时候前委书记邓小平嘛，过江的战役也归他指挥，就送给他了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE014-P01\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE014-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0046\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE014-P02\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE014-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0046\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC06-DE014",
+    "event_enrichment": {
+      "result_state": "上海军管期间接收到的车辆不多，其中最好的一部车已按陈老总要求送给邓小平。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以陈锐霆叙述上海军管期间接收车辆、陈老总要求送车以及最终送给邓书记为起止；原文未展开车辆后续使用情况。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC06-DE014-P01",
+        "stage_order": 1,
+        "stage_summary": "上海军管事务繁多，接收到的物资不多，仅接收少量车辆。",
+        "process_text": "在上海军管的事情非常地多，另外陆军都没有好多东西留下，国民党把它都搬走了，接收的东西不多，接收了一点车辆吧。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0046"
+        ],
+        "evidence_quote": "在上海军管的事情非常地多，另外陆军都没有好多东西留下，国民党把它都搬走了，接收的东西不多，接收了一点车辆吧。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE014-P02",
+        "stage_order": 2,
+        "stage_summary": "陈老总要求把最好的一部车送给邓书记。",
+        "process_text": "最好的一部车子，陈老总要我送给邓书记",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0046"
+        ],
+        "evidence_quote": "最好的一部车子，陈老总要我送给邓书记",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE014-P03",
+        "stage_order": 3,
+        "stage_summary": "结合邓小平在淮海战役和过江战役中的指挥身份，将车送给他。",
+        "process_text": "淮海战役的时候前委书记邓小平嘛，过江的战役也归他指挥，就送给他了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0046"
+        ],
+        "evidence_quote": "淮海战役的时候前委书记邓小平嘛，过江的战役也归他指挥，就送给他了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC06-DE014-P01",
+        "target_stage_id": "BATCH06-DOC06-DE014-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0046",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE014-P02",
+        "target_stage_id": "BATCH06-DOC06-DE014-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC06-S0046",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

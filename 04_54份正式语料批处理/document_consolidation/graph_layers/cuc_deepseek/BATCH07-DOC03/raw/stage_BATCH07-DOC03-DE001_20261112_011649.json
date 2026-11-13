@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T01:16:49",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC03-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC03-DE001",
+  "usage": {
+    "prompt_tokens": 1457,
+    "total_tokens": 5185,
+    "completion_tokens": 3728,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2756
+    },
+    "time_to_first_token_ms": 34065,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC03-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰已离开5团，调至萧村军部医院并任外科病室护士长。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以1940年10月调动及紧急命令催促为起点，以到萧村军部医院任外科病室护士长为止；不纳入后续东进北渡第三批大队组织、李振湘任职及皖南事变中5团损失等内容。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC03-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"调离前，陈海峰具备地下工作、部队政治宣传和医务管理等多方面经历。\",\n      \"process_text\": \"陈海峰自述在江抗、青年训练班做过地下工作、情报工作，当过情报站副站长，也做过政治宣传、刻蜡板、编报纸，并在连队、营里担任卫生指导员、卫生巡视员、卫生队长等。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC03-S0021\"\n      ],\n      \"evidence_quote\": \"我在江抗、青年训练班，又搞过地下工作，搞过情报，当（过）情报站副站长，我们有18个情报分站。地下工作搞过，武装也搞过，政治工作，我（在）政治部当过政治干事、宣传干事，管刻蜡板，出党报，印团的报纸，编报纸，（我）都干过。在连队里也干过，营里面当过卫生指导员，当过部队的卫生巡视员，当过卫生队长。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC03-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈海峰被指定立刻调回，紧急命令多次催促报到，随后很快离开5团。\",\n      \"process_text\": \"陈海峰自述前方经历、地下工作、部队工作及医务管理经验；随后被指定立刻调回，紧急命令来两三次催促必须立刻报到，很快离开5团。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC03-S0023\"\n      ],\n      \"evidence_quote\": \"指定把我立刻调回来，紧急命令来了两三次，来催我，必须立刻报到。所以命令来了一次两次后，（我）很快就离开5团。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC03-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"1940年10月，陈海峰调到萧村军部医院，担任外科病室护士长。\",\n      \"process_text\": \"1940年10月，陈海峰调到萧村军部医院，担任外科病室护士长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC03-S0017\"\n      ],\n      \"evidence_quote\": \"我从（19）40年10月调到萧村，到军部医院当外科病室的护士长。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC03-DE001-P01\",\n      \"target_stage_id\": \"BATCH07-DOC03-DE001-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH07-DOC03-S0023\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC03-DE001-P02\",\n      \"target_stage_id\": \"BATCH07-DOC03-DE001-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH07-DOC03-S0017\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC03-DE001",
+    "event_enrichment": {
+      "result_state": "陈海峰已离开5团，调至萧村军部医院并任外科病室护士长。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以1940年10月调动及紧急命令催促为起点，以到萧村军部医院任外科病室护士长为止；不纳入后续东进北渡第三批大队组织、李振湘任职及皖南事变中5团损失等内容。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC03-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "调离前，陈海峰具备地下工作、部队政治宣传和医务管理等多方面经历。",
+        "process_text": "陈海峰自述在江抗、青年训练班做过地下工作、情报工作，当过情报站副站长，也做过政治宣传、刻蜡板、编报纸，并在连队、营里担任卫生指导员、卫生巡视员、卫生队长等。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC03-S0021"
+        ],
+        "evidence_quote": "我在江抗、青年训练班，又搞过地下工作，搞过情报，当（过）情报站副站长，我们有18个情报分站。地下工作搞过，武装也搞过，政治工作，我（在）政治部当过政治干事、宣传干事，管刻蜡板，出党报，印团的报纸，编报纸，（我）都干过。在连队里也干过，营里面当过卫生指导员，当过部队的卫生巡视员，当过卫生队长。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC03-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "陈海峰被指定立刻调回，紧急命令多次催促报到，随后很快离开5团。",
+        "process_text": "陈海峰自述前方经历、地下工作、部队工作及医务管理经验；随后被指定立刻调回，紧急命令来两三次催促必须立刻报到，很快离开5团。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC03-S0023"
+        ],
+        "evidence_quote": "指定把我立刻调回来，紧急命令来了两三次，来催我，必须立刻报到。所以命令来了一次两次后，（我）很快就离开5团。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC03-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "1940年10月，陈海峰调到萧村军部医院，担任外科病室护士长。",
+        "process_text": "1940年10月，陈海峰调到萧村军部医院，担任外科病室护士长。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC03-S0017"
+        ],
+        "evidence_quote": "我从（19）40年10月调到萧村，到军部医院当外科病室的护士长。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC03-DE001-P01",
+        "target_stage_id": "BATCH07-DOC03-DE001-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH07-DOC03-S0023",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC03-DE001-P02",
+        "target_stage_id": "BATCH07-DOC03-DE001-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH07-DOC03-S0017",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

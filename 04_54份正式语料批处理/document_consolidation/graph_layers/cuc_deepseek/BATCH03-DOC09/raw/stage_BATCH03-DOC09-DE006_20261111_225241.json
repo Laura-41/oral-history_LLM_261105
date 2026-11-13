@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T22:52:41",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC09-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC09-DE006",
+  "usage": {
+    "prompt_tokens": 1249,
+    "total_tokens": 5239,
+    "completion_tokens": 3990,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3176
+    },
+    "time_to_first_token_ms": 30861,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3989000
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC09-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆明确表达起义决心，并表明即使只剩一人也要回到党的队伍、愿意回到自己的部队。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于陈锐霆表达自己也要起义及不愿带人打共产党，止于其表示愿意回到自己的部队；中间以回到党的队伍的决心为核心表述。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆形成起义念头，并认为作为共产党带人打共产党是犯罪。\",\n      \"process_text\": \"陈锐霆表示若不同意，能带多少带多少，自己也要起义；并认为自己是共产党却带人打共产党是犯罪。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0069\"\n      ],\n      \"evidence_quote\": \"陈锐霆：不同意（的话，）我能带多少带多少，我自己也要起义嘛。自己是共产党，带着人打共产党，那算个什么东西，那不是犯罪嘛。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈锐霆确立回到党的队伍的决心，即使只剩一人也要回去。\",\n      \"process_text\": \"陈锐霆讲即使剩一个人也要回去，要回到党的队伍，这是他的决心，明知其不可为而为之。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0071\"\n      ],\n      \"evidence_quote\": \"陈锐霆：我当时讲（就算）剩一个人我也要回去，要回到党的队伍，那就是我的决心，明知其不可为而为之嘛。那个我们兵力相差太悬殊了，敌强我弱，敌多我少，敌人的装备我们不能比啊！\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆表示愿意回到自己的部队。\",\n      \"process_text\": \"陈锐霆表示愿意回到自己的部队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0079\"\n      ],\n      \"evidence_quote\": \"陈锐霆：愿意回到自己的部队嘛。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE006-P01\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE006-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0071\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE006-P02\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE006-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0079\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC09-DE006",
+    "event_enrichment": {
+      "result_state": "陈锐霆明确表达起义决心，并表明即使只剩一人也要回到党的队伍、愿意回到自己的部队。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于陈锐霆表达自己也要起义及不愿带人打共产党，止于其表示愿意回到自己的部队；中间以回到党的队伍的决心为核心表述。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC09-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆形成起义念头，并认为作为共产党带人打共产党是犯罪。",
+        "process_text": "陈锐霆表示若不同意，能带多少带多少，自己也要起义；并认为自己是共产党却带人打共产党是犯罪。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0069"
+        ],
+        "evidence_quote": "陈锐霆：不同意（的话，）我能带多少带多少，我自己也要起义嘛。自己是共产党，带着人打共产党，那算个什么东西，那不是犯罪嘛。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "陈锐霆确立回到党的队伍的决心，即使只剩一人也要回去。",
+        "process_text": "陈锐霆讲即使剩一个人也要回去，要回到党的队伍，这是他的决心，明知其不可为而为之。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0071"
+        ],
+        "evidence_quote": "陈锐霆：我当时讲（就算）剩一个人我也要回去，要回到党的队伍，那就是我的决心，明知其不可为而为之嘛。那个我们兵力相差太悬殊了，敌强我弱，敌多我少，敌人的装备我们不能比啊！",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆表示愿意回到自己的部队。",
+        "process_text": "陈锐霆表示愿意回到自己的部队。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0079"
+        ],
+        "evidence_quote": "陈锐霆：愿意回到自己的部队嘛。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC09-DE006-P01",
+        "target_stage_id": "BATCH03-DOC09-DE006-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH03-DOC09-S0071",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE006-P02",
+        "target_stage_id": "BATCH03-DOC09-DE006-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC09-S0079",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

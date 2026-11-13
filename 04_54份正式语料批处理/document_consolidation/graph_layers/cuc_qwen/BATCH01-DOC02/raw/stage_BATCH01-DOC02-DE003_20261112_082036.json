@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T08:20:36",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC02-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC02-DE003",
+  "usage": {
+    "prompt_tokens": 1671,
+    "total_tokens": 13628,
+    "completion_tokens": 11957,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10254
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11956000,
+    "time_to_first_token_ms": 177766
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC02-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"141师一个团在正定抗击日军，团长牺牲，13个连长牺牲12个，两个营长负重伤，其中王启明在正定受重伤；部队装备落后，仅有一个机枪、步枪、重机关枪、迫击炮，炮兵未用上。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起自S0024所述9月底十月初部队接触、32军在石家庄北边正定、141师一个团抗击日军；止于S0031所述该团装备落后、仅有一个机枪、步枪、重机关枪、迫击炮且炮兵未用上；S0026、S0028补充团长、连长、营长伤亡及王启明正定受重伤。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC02-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"9月底十月初部队接触，32军141师一个团在石家庄北边正定抗击日军。\",\n      \"process_text\": \"这个时候32军的141师就在大概国民党“双十节”之前十几天，就是9月底十月初，部队就接触上了。32军在石家庄北边的正定，141师的一个团在那儿抗击日军。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC02-S0024\"\n      ],\n      \"evidence_quote\": \"这个时候32军的141师就在大概国民党“双十节”之前十几天，就是9月底十月初，部队就接触上了。32军在石家庄北边的正定，141师的一个团在那儿抗击日军。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC02-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"该团人员多由河北军事政治学校老师、队长、同学组成，团长为步兵大队队长，营长、连长多为其同学。\",\n      \"process_text\": \"那个时候这个团大部分都是我们河北军事政治学校的老师啊、队长啊、同学啊，团长就是步兵大队队长，另外底下营长、连长大部分都是我们的同学。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC02-S0026\"\n      ],\n      \"evidence_quote\": \"那个时候这个团大部分都是我们河北军事政治学校的老师啊、队长啊、同学啊，团长就是步兵大队队长，另外底下营长、连长大部分都是我们的同学。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC02-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"正定抗战中团长牺牲，13个连长牺牲12个，两个营长负重伤，其中共产党员王启明负伤。\",\n      \"process_text\": \"结果团长也牺牲了，同时13个连长牺牲了12个，另外两个营长负了重伤，其中一个还是共产党员呢，也是我们的同学，叫王启明。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC02-S0026\"\n      ],\n      \"evidence_quote\": \"结果团长也牺牲了，同时13个连长牺牲了12个，另外两个营长负了重伤，其中一个还是共产党员呢，也是我们的同学，叫王启明。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC02-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"王启明在正定受重伤得到补充说明。\",\n      \"process_text\": \"他也在正定受了重伤。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC02-S0028\"\n      ],\n      \"evidence_quote\": \"他也在正定受了重伤。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC02-DE003-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"部队爱国思想坚定、打仗勇敢，但装备落后，仅有一个机枪、步枪、重机关枪、迫击炮，炮兵未用上。\",\n      \"process_text\": \"爱国的思想都是挺坚定的，打仗也很勇敢的，就是装备落后！我们那个时候就是有一个机枪、步枪、重机关枪、迫击炮，就这么些装备，那个时候那个炮兵还没用得上。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC02-S0031\"\n      ],\n      \"evidence_quote\": \"爱国的思想都是挺坚定的，打仗也很勇敢的，就是装备落后！我们那个时候就是有一个机枪、步枪、重机关枪、迫击炮，就这么些装备，那个时候那个炮兵还没用得上。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC02-DE003-P01\",\n      \"target_stage_id\": \"BATCH01-DOC02-DE003-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH01-DOC02-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC02-DE003-P02\",\n      \"target_stage_id\": \"BATCH01-DOC02-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC02-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC02-DE003-P03\",\n      \"target_stage_id\": \"BATCH01-DOC02-DE003-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH01-DOC02-S0028\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC02-DE003-P04\",\n      \"target_stage_id\": \"BATCH01-DOC02-DE003-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC02-S0031\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC02-DE003",
+    "event_enrichment": {
+      "result_state": "141师一个团在正定抗击日军，团长牺牲，13个连长牺牲12个，两个营长负重伤，其中王启明在正定受重伤；部队装备落后，仅有一个机枪、步枪、重机关枪、迫击炮，炮兵未用上。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起自S0024所述9月底十月初部队接触、32军在石家庄北边正定、141师一个团抗击日军；止于S0031所述该团装备落后、仅有一个机枪、步枪、重机关枪、迫击炮且炮兵未用上；S0026、S0028补充团长、连长、营长伤亡及王启明正定受重伤。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC02-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "9月底十月初部队接触，32军141师一个团在石家庄北边正定抗击日军。",
+        "process_text": "这个时候32军的141师就在大概国民党“双十节”之前十几天，就是9月底十月初，部队就接触上了。32军在石家庄北边的正定，141师的一个团在那儿抗击日军。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC02-S0024"
+        ],
+        "evidence_quote": "这个时候32军的141师就在大概国民党“双十节”之前十几天，就是9月底十月初，部队就接触上了。32军在石家庄北边的正定，141师的一个团在那儿抗击日军。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC02-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "该团人员多由河北军事政治学校老师、队长、同学组成，团长为步兵大队队长，营长、连长多为其同学。",
+        "process_text": "那个时候这个团大部分都是我们河北军事政治学校的老师啊、队长啊、同学啊，团长就是步兵大队队长，另外底下营长、连长大部分都是我们的同学。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC02-S0026"
+        ],
+        "evidence_quote": "那个时候这个团大部分都是我们河北军事政治学校的老师啊、队长啊、同学啊，团长就是步兵大队队长，另外底下营长、连长大部分都是我们的同学。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC02-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "正定抗战中团长牺牲，13个连长牺牲12个，两个营长负重伤，其中共产党员王启明负伤。",
+        "process_text": "结果团长也牺牲了，同时13个连长牺牲了12个，另外两个营长负了重伤，其中一个还是共产党员呢，也是我们的同学，叫王启明。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC02-S0026"
+        ],
+        "evidence_quote": "结果团长也牺牲了，同时13个连长牺牲了12个，另外两个营长负了重伤，其中一个还是共产党员呢，也是我们的同学，叫王启明。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC02-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "王启明在正定受重伤得到补充说明。",
+        "process_text": "他也在正定受了重伤。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC02-S0028"
+        ],
+        "evidence_quote": "他也在正定受了重伤。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC02-DE003-P05",
+        "stage_order": 5,
+        "stage_summary": "部队爱国思想坚定、打仗勇敢，但装备落后，仅有一个机枪、步枪、重机关枪、迫击炮，炮兵未用上。",
+        "process_text": "爱国的思想都是挺坚定的，打仗也很勇敢的，就是装备落后！我们那个时候就是有一个机枪、步枪、重机关枪、迫击炮，就这么些装备，那个时候那个炮兵还没用得上。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC02-S0031"
+        ],
+        "evidence_quote": "爱国的思想都是挺坚定的，打仗也很勇敢的，就是装备落后！我们那个时候就是有一个机枪、步枪、重机关枪、迫击炮，就这么些装备，那个时候那个炮兵还没用得上。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC02-DE003-P01",
+        "target_stage_id": "BATCH01-DOC02-DE003-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH01-DOC02-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC02-DE003-P02",
+        "target_stage_id": "BATCH01-DOC02-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC02-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC02-DE003-P03",
+        "target_stage_id": "BATCH01-DOC02-DE003-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH01-DOC02-S0028",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC02-DE003-P04",
+        "target_stage_id": "BATCH01-DOC02-DE003-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC02-S0031",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

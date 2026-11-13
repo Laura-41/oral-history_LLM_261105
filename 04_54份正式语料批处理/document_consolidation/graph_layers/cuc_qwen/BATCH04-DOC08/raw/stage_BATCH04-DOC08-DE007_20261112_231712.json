@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T23:17:12",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC08-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC08-DE007",
+  "usage": {
+    "prompt_tokens": 1294,
+    "total_tokens": 7128,
+    "completion_tokens": 5834,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4554
+    },
+    "time_to_first_token_ms": 86302,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC08-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆作为先遣代表到山东，向黎玉汇报并请求帮助搞驻地，住在临沂西关天主教堂，并与陈司令电报沟通军部人员未到任情况。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 S0016 从“先到了山东去”开始，至“现在参谋长也还没有到任”结束；覆盖先遣赴山东、向黎玉汇报、驻临沂及给陈司令打电报的连续叙述。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"因两个司令未上任，陈锐霆被命为先遣代表先到山东。\",\n      \"process_text\": \"我这淮阴的警备司令也没上任，两个司令都没上任（陈锐霆笑），是命（我）作为一个先遣的代表吧，先到了山东去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0016\"\n      ],\n      \"evidence_quote\": \"我这淮阴的警备司令也没上任，两个司令都没上任（陈锐霆笑），是命（我）作为一个先遣的代表吧，先到了山东去。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"向负责山东的黎玉汇报新四军军部及部队上来情况，并请求帮助搞驻地。\",\n      \"process_text\": \"山东是黎玉同志在那儿负责，就向他汇报新四军军部的情况，另外部队上来的情况，主要是讲军部的情况，请他帮助搞驻地。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0016\"\n      ],\n      \"evidence_quote\": \"山东是黎玉同志在那儿负责，就向他汇报新四军军部的情况，另外部队上来的情况，主要是讲军部的情况，请他帮助搞驻地。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"住在临沂西关天主教堂。\",\n      \"process_text\": \"我们就住在临沂的西关，里头有个天主教堂，就住在那个地方。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0016\"\n      ],\n      \"evidence_quote\": \"我们就住在临沂的西关，里头有个天主教堂，就住在那个地方。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"到山东后给陈司令打电报表示去汇报，陈司令称军部无人、副军长年纪大、参谋长未到任。\",\n      \"process_text\": \"我到了山东去给陈司令打电报，我就说我到他那里去汇报汇报，他说现在你们军部没有人，副军长年纪也大了，现在参谋长也还没有到任。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0016\"\n      ],\n      \"evidence_quote\": \"我到了山东去给陈司令打电报，我就说我到他那里去汇报汇报，他说现在你们军部没有人，副军长年纪也大了，现在参谋长也还没有到任。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE007-P01\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0016\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE007-P02\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0016\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE007-P03\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE007-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0016\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC08-DE007",
+    "event_enrichment": {
+      "result_state": "陈锐霆作为先遣代表到山东，向黎玉汇报并请求帮助搞驻地，住在临沂西关天主教堂，并与陈司令电报沟通军部人员未到任情况。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 S0016 从“先到了山东去”开始，至“现在参谋长也还没有到任”结束；覆盖先遣赴山东、向黎玉汇报、驻临沂及给陈司令打电报的连续叙述。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC08-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "因两个司令未上任，陈锐霆被命为先遣代表先到山东。",
+        "process_text": "我这淮阴的警备司令也没上任，两个司令都没上任（陈锐霆笑），是命（我）作为一个先遣的代表吧，先到了山东去。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0016"
+        ],
+        "evidence_quote": "我这淮阴的警备司令也没上任，两个司令都没上任（陈锐霆笑），是命（我）作为一个先遣的代表吧，先到了山东去。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "向负责山东的黎玉汇报新四军军部及部队上来情况，并请求帮助搞驻地。",
+        "process_text": "山东是黎玉同志在那儿负责，就向他汇报新四军军部的情况，另外部队上来的情况，主要是讲军部的情况，请他帮助搞驻地。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0016"
+        ],
+        "evidence_quote": "山东是黎玉同志在那儿负责，就向他汇报新四军军部的情况，另外部队上来的情况，主要是讲军部的情况，请他帮助搞驻地。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "住在临沂西关天主教堂。",
+        "process_text": "我们就住在临沂的西关，里头有个天主教堂，就住在那个地方。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0016"
+        ],
+        "evidence_quote": "我们就住在临沂的西关，里头有个天主教堂，就住在那个地方。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "到山东后给陈司令打电报表示去汇报，陈司令称军部无人、副军长年纪大、参谋长未到任。",
+        "process_text": "我到了山东去给陈司令打电报，我就说我到他那里去汇报汇报，他说现在你们军部没有人，副军长年纪也大了，现在参谋长也还没有到任。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0016"
+        ],
+        "evidence_quote": "我到了山东去给陈司令打电报，我就说我到他那里去汇报汇报，他说现在你们军部没有人，副军长年纪也大了，现在参谋长也还没有到任。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC08-DE007-P01",
+        "target_stage_id": "BATCH04-DOC08-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC08-S0016",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC08-DE007-P02",
+        "target_stage_id": "BATCH04-DOC08-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC08-S0016",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC08-DE007-P03",
+        "target_stage_id": "BATCH04-DOC08-DE007-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC08-S0016",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

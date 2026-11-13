@@ -1,0 +1,93 @@
+{
+  "run_time": "2026-11-11T23:57:11",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC04-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC04-DE005",
+  "usage": {
+    "prompt_tokens": 1346,
+    "total_tokens": 7364,
+    "completion_tokens": 6018,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5161
+    },
+    "tokens_per_second": 6017000,
+    "time_to_first_token_ms": 46357,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC04-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰在1943年夏到老1团，并在该团进行了约三个多月的练兵。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于1943年夏到老1团，止于练兵约三个多月；中间包含对老1团整编背景的说明。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰到老1团去。\",\n      \"process_text\": \"我就到老1团去了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0115\"\n      ],\n      \"evidence_quote\": \"我就到老1团去了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"说明老1团是师部主力团，由1团和2团合并为主力大团，廖政国任团长。\",\n      \"process_text\": \"老1团是师部的一个主力团，廖政国当团长；1团和2团合并编成主力团，由约两千人的团变为三千五百人的大团，相当于一个旅。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0120\",\n        \"BATCH05-DOC04-S0121\",\n        \"BATCH05-DOC04-S0122\"\n      ],\n      \"evidence_quote\": \"    陈海峰：到那个老1团，是师部的一个主力团，廖政国当团长。    陈海峰：廖政国，就是1团和2团合并，编个主力团。原来是两千人的一个团，就变成三千五百人一个大团，等于一个旅。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"1943年夏到老1团后开始练兵，持续约三个多月。\",\n      \"process_text\": \"1943年夏天到老1团，开始练兵；练了大概三个多月。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0152\",\n        \"BATCH05-DOC04-S0153\"\n      ],\n      \"evidence_quote\": \"    陈海峰：不是，（19）43年的夏天，到老1团，开始练兵。练了大概三个多月。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE005-P01\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0120\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE005-P02\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0152\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC04-DE005",
+    "event_enrichment": {
+      "result_state": "陈海峰在1943年夏到老1团，并在该团进行了约三个多月的练兵。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于1943年夏到老1团，止于练兵约三个多月；中间包含对老1团整编背景的说明。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC04-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰到老1团去。",
+        "process_text": "我就到老1团去了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0115"
+        ],
+        "evidence_quote": "我就到老1团去了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "说明老1团是师部主力团，由1团和2团合并为主力大团，廖政国任团长。",
+        "process_text": "老1团是师部的一个主力团，廖政国当团长；1团和2团合并编成主力团，由约两千人的团变为三千五百人的大团，相当于一个旅。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0120",
+          "BATCH05-DOC04-S0121",
+          "BATCH05-DOC04-S0122"
+        ],
+        "evidence_quote": "    陈海峰：到那个老1团，是师部的一个主力团，廖政国当团长。    陈海峰：廖政国，就是1团和2团合并，编个主力团。原来是两千人的一个团，就变成三千五百人一个大团，等于一个旅。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "1943年夏到老1团后开始练兵，持续约三个多月。",
+        "process_text": "1943年夏天到老1团，开始练兵；练了大概三个多月。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0152",
+          "BATCH05-DOC04-S0153"
+        ],
+        "evidence_quote": "    陈海峰：不是，（19）43年的夏天，到老1团，开始练兵。练了大概三个多月。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC04-DE005-P01",
+        "target_stage_id": "BATCH05-DOC04-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC04-S0120",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC04-DE005-P02",
+        "target_stage_id": "BATCH05-DOC04-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC04-S0152",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

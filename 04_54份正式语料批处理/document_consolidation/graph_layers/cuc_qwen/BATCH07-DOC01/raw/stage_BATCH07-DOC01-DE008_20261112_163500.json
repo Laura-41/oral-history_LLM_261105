@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T16:35:00",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC01-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC01-DE008",
+  "usage": {
+    "prompt_tokens": 1351,
+    "total_tokens": 7123,
+    "completion_tokens": 5772,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4803
+    },
+    "time_to_first_token_ms": 123762,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-15\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC01-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈毅在辽东演习第一天晚上到陈锐霆这里来访，并与陈锐霆谈话，提及延安炮校推荐、南京未放行及华东炮兵工作成效。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据原文从辽东演习背景与陈毅得知陈锐霆在场开始，到陈毅谈话中评价华东炮兵工作结束；片段开头关于‘她’开玩笑的话为前文语境，不作为本事件核心阶段。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"辽东演习背景与陈毅得知陈锐霆在场\",\n      \"process_text\": \"辽东演习第一天晚上，陈毅刚当元帅，与陈锐霆住在一个大院，听说陈锐霆也在。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0042\"\n      ],\n      \"evidence_quote\": \"的确是，那年我们辽东演习，他那时候刚当了元帅，第一天晚上我们住在一个大院里面，他听说我也在，叶剑英同志当总导演，我是炮兵的副导演，他听说我在那个地方，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈毅晚饭后亲自到陈锐霆这里来访\",\n      \"process_text\": \"陈毅吃了晚饭以后自己跑到陈锐霆这里来看陈锐霆。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0042\"\n      ],\n      \"evidence_quote\": \"他吃了晚饭以后自己……元帅（啊），就跑到我这了，来看我了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈毅与陈锐霆谈话并评价其炮兵工作\",\n      \"process_text\": \"陈毅又跟陈锐霆讲了讲，提到当初推荐陈锐霆到延安炮校，南京没有放陈锐霆去，看来不去也好，陈锐霆在华东搞炮兵发挥力量很大。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0042\"\n      ],\n      \"evidence_quote\": \"他又跟我讲了讲，他说我当初，我推荐你到延安炮校去，南京那个时候没有放你去，他说看来不去也好，你在这个地方发挥的力量（很大），在华东搞了炮兵，搞得那么好。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE008-P01\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0042\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE008-P02\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0042\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-15",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC01-DE008",
+    "event_enrichment": {
+      "result_state": "陈毅在辽东演习第一天晚上到陈锐霆这里来访，并与陈锐霆谈话，提及延安炮校推荐、南京未放行及华东炮兵工作成效。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "依据原文从辽东演习背景与陈毅得知陈锐霆在场开始，到陈毅谈话中评价华东炮兵工作结束；片段开头关于‘她’开玩笑的话为前文语境，不作为本事件核心阶段。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC01-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "辽东演习背景与陈毅得知陈锐霆在场",
+        "process_text": "辽东演习第一天晚上，陈毅刚当元帅，与陈锐霆住在一个大院，听说陈锐霆也在。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0042"
+        ],
+        "evidence_quote": "的确是，那年我们辽东演习，他那时候刚当了元帅，第一天晚上我们住在一个大院里面，他听说我也在，叶剑英同志当总导演，我是炮兵的副导演，他听说我在那个地方，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "陈毅晚饭后亲自到陈锐霆这里来访",
+        "process_text": "陈毅吃了晚饭以后自己跑到陈锐霆这里来看陈锐霆。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0042"
+        ],
+        "evidence_quote": "他吃了晚饭以后自己……元帅（啊），就跑到我这了，来看我了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "陈毅与陈锐霆谈话并评价其炮兵工作",
+        "process_text": "陈毅又跟陈锐霆讲了讲，提到当初推荐陈锐霆到延安炮校，南京没有放陈锐霆去，看来不去也好，陈锐霆在华东搞炮兵发挥力量很大。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0042"
+        ],
+        "evidence_quote": "他又跟我讲了讲，他说我当初，我推荐你到延安炮校去，南京那个时候没有放你去，他说看来不去也好，你在这个地方发挥的力量（很大），在华东搞了炮兵，搞得那么好。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC01-DE008-P01",
+        "target_stage_id": "BATCH07-DOC01-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC01-S0042",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC01-DE008-P02",
+        "target_stage_id": "BATCH07-DOC01-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC01-S0042",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

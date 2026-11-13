@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-11T23:22:25",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC05-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC05-DE004",
+  "usage": {
+    "prompt_tokens": 1904,
+    "total_tokens": 6469,
+    "completion_tokens": 4565,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3278
+    },
+    "time_to_first_token_ms": 42718,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4564000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC05-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"卫校形成课堂讲授与课后讨论、辅导、总结、教材更新相结合的互教互学教学方式，师生互相学习并共享经验。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以课堂教师主讲为起点，经课后整理、辅导、晚间讨论形成互教互学，延伸到教师参与讨论、学生总结发表、讲义教材补充和知识共享；末尾关于卫校轮训队规模等内容作为背景补充，不纳入阶段。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"课堂以教师讲授为主，学生听讲、记笔记、画图。\",\n      \"process_text\": \"课堂上面老师为主，老师讲，学生精心听，做笔记，画图。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0145\"\n      ],\n      \"evidence_quote\": \"课堂上面老师为主，老师讲，那大家精心听，做笔记，画图。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"课后整理笔记、辅导答疑，晚上讨论交流，形成互教互学。\",\n      \"process_text\": \"回来以后整理笔记，再辅导，不懂的问老师，老师有辅导课；晚上讨论、交流，就互教互学了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0145\"\n      ],\n      \"evidence_quote\": \"那回来以后，整理笔记，再辅导，不懂的问老师，老师有辅导课。晚上讨论，交流，那就互教互学了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"老师参加学生讨论，师生互学，老师也获得知识。\",\n      \"process_text\": \"老师去参加学生的讨论，老师也得到知识。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0146\"\n      ],\n      \"evidence_quote\": \"老师去参加他们的讨论，那么老师也得到知识。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"下一班编讲义、补充新内容，优秀学生整理书面经验并发表，文章补充到教材。\",\n      \"process_text\": \"再下一班编讲义，补充新的；哪个学生讲得比较好、体会比较多，就让他整理书面的，自己总结点经验，在部队的杂志上发表，文章留下来补充到新的教材里去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0146\"\n      ],\n      \"evidence_quote\": \"再下一班，编讲义，补充新的，有好处。哪个学生讲得比较好，他体会比较多，要他整理一个书面的。他自己也总结点经验，在部队的杂志上发表。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE004-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"大家贡献各自经验，讨论热烈，形成知识共享氛围。\",\n      \"process_text\": \"大家贡献出来，你贡献你的，我贡献我的，争先恐后，讨论得很热烈、很热闹。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0154\"\n      ],\n      \"evidence_quote\": \"大家贡献出来，你贡献你的，我贡献我的，大家争先恐后，那讨论得很热烈，很热闹。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE004-P01\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0145\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE004-P02\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE004-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0146\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE004-P03\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE004-P04\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0146\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE004-P04\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE004-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0154\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC05-DE004",
+    "event_enrichment": {
+      "result_state": "卫校形成课堂讲授与课后讨论、辅导、总结、教材更新相结合的互教互学教学方式，师生互相学习并共享经验。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以课堂教师主讲为起点，经课后整理、辅导、晚间讨论形成互教互学，延伸到教师参与讨论、学生总结发表、讲义教材补充和知识共享；末尾关于卫校轮训队规模等内容作为背景补充，不纳入阶段。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC05-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "课堂以教师讲授为主，学生听讲、记笔记、画图。",
+        "process_text": "课堂上面老师为主，老师讲，学生精心听，做笔记，画图。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0145"
+        ],
+        "evidence_quote": "课堂上面老师为主，老师讲，那大家精心听，做笔记，画图。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "课后整理笔记、辅导答疑，晚上讨论交流，形成互教互学。",
+        "process_text": "回来以后整理笔记，再辅导，不懂的问老师，老师有辅导课；晚上讨论、交流，就互教互学了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0145"
+        ],
+        "evidence_quote": "那回来以后，整理笔记，再辅导，不懂的问老师，老师有辅导课。晚上讨论，交流，那就互教互学了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "老师参加学生讨论，师生互学，老师也获得知识。",
+        "process_text": "老师去参加学生的讨论，老师也得到知识。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0146"
+        ],
+        "evidence_quote": "老师去参加他们的讨论，那么老师也得到知识。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "下一班编讲义、补充新内容，优秀学生整理书面经验并发表，文章补充到教材。",
+        "process_text": "再下一班编讲义，补充新的；哪个学生讲得比较好、体会比较多，就让他整理书面的，自己总结点经验，在部队的杂志上发表，文章留下来补充到新的教材里去。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0146"
+        ],
+        "evidence_quote": "再下一班，编讲义，补充新的，有好处。哪个学生讲得比较好，他体会比较多，要他整理一个书面的。他自己也总结点经验，在部队的杂志上发表。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE004-P05",
+        "stage_order": 5,
+        "stage_summary": "大家贡献各自经验，讨论热烈，形成知识共享氛围。",
+        "process_text": "大家贡献出来，你贡献你的，我贡献我的，争先恐后，讨论得很热烈、很热闹。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0154"
+        ],
+        "evidence_quote": "大家贡献出来，你贡献你的，我贡献我的，大家争先恐后，那讨论得很热烈，很热闹。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC05-DE004-P01",
+        "target_stage_id": "BATCH04-DOC05-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC05-S0145",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC05-DE004-P02",
+        "target_stage_id": "BATCH04-DOC05-DE004-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC05-S0146",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC05-DE004-P03",
+        "target_stage_id": "BATCH04-DOC05-DE004-P04",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC05-S0146",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC05-DE004-P04",
+        "target_stage_id": "BATCH04-DOC05-DE004-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC05-S0154",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

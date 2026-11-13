@@ -1,0 +1,144 @@
+{
+  "run_time": "2026-11-12T11:26:41",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC09-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC09-DE007",
+  "usage": {
+    "prompt_tokens": 1780,
+    "total_tokens": 11693,
+    "completion_tokens": 9913,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7942
+    },
+    "tokens_per_second": 9912000,
+    "time_to_first_token_ms": 234140,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC09-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"685团新营西撤途中与卫立煌所带一个营相遇，卫立煌对比后认为八路军无枪不害怕、不简单，叙述者补充八路军经过多年战争锻炼。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于S0079交代685团新营被叫自行西撤及必要时过黄河；止于S0087补充八路军经过多年战争锻炼，作为遇卫立煌部队后评价的说明。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"685团新营因无武器被安排自行西撤，必要时可过黄河。\",\n      \"process_text\": \"当时685团只有两个老营，新营在敌人南下作战时被叫自行往西走，如果追得紧可主动过黄河，因为没武器。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0079\"\n      ],\n      \"evidence_quote\": \"    杨永松：当时我们685团只有两个老营，这个新营怎么办？敌人南下我们进行作战活动的时候，叫这个新营啊，叫他自行往西走，就是如果敌人要追得紧，实在不行你可以主动地过黄河去。因为他没武器呀。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"因没有大的战斗计划而不过黄河、不敢过黄河。\",\n      \"process_text\": \"因为没有大的战斗计划，他就不过，他不敢过；陕甘宁边区边防部队少，若进攻可攻破。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0081\"\n      ],\n      \"evidence_quote\": \"    杨永松：因为他没有这个大的战斗计划呀，他就不过，他不敢过不是。我们陕甘宁边区也有边防部队呀，也会守在那里，但是我们的部队很少啊，他要攻你就是可以攻破的，不是攻不破的（杨永松笑），是吧。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"新营西撤途中休息时唱歌，情绪高兴。\",\n      \"process_text\": \"这个营往西走，政治思想工作干部都是打过很多仗的人，带部队到某地休息时唱歌，挺高兴。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0083\"\n      ],\n      \"evidence_quote\": \"我们这个营往西走——就是以后我们才知道——我们这个部队政治思想工作干部都是打过很多仗的人，所以带这个部队到你这地方休息的时候啊，都唱歌啊什么，挺高兴的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"途中遇到卫立煌所带一个营，其部队自动武器多但因日本人进攻炮响而慌张。\",\n      \"process_text\": \"卫立煌由第二战区副司令长官调第一战区司令长官，从晋南走不了，要走延安绕洛阳，指挥部在那；他带一个营，自动武器很多，因日本人进攻炮响，兵慌慌张张。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0083\"\n      ],\n      \"evidence_quote\": \"这个卫立煌啊，他第二战区副司令长官要调到第一战区去当司令长官，当时从晋南走他走不了了，他就要走延安，这么绕到洛阳去，他指挥部在那。他带了一个营，自动武器很多。因为这日本人进攻，炮响啊，他的兵就慌慌张张的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE007-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"卫立煌对比八路军无枪不害怕与自己兵有武器害怕，评价八路军不简单。\",\n      \"process_text\": \"卫立煌一看八路军枪都没有却不害怕，骂自己兵武器好却吓得不行，由此在山西抗战中感到红军改编的八路军不简单。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0085\"\n      ],\n      \"evidence_quote\": \"结果（一看）我们的部队，卫立煌说你们看看你八路军枪都没有，人家都不害怕。你们他妈的那么好的武器背着，你们吓得不行，你们真没用！所以卫立煌在山西抗战，他也感觉到红军改编的八路军不简单。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE007-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"叙述者补充八路军经过多年战争锻炼，有长征战士和长征干部。\",\n      \"process_text\": \"这些都是经过多年战争锻炼出来的，当时还有战士有长征的，班长、排长是长征干部，个别战士还有。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0087\"\n      ],\n      \"evidence_quote\": \"我们这都是经过多年战争锻炼出来的，当时我们还有战士都有长征的，班长、排长那个不用说，是长征干部，个别战士还有。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE007-P01\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0081\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE007-P02\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0083\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE007-P03\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE007-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0083\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE007-P04\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE007-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0085\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE007-P05\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE007-P06\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0087\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC09-DE007",
+    "event_enrichment": {
+      "result_state": "685团新营西撤途中与卫立煌所带一个营相遇，卫立煌对比后认为八路军无枪不害怕、不简单，叙述者补充八路军经过多年战争锻炼。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于S0079交代685团新营被叫自行西撤及必要时过黄河；止于S0087补充八路军经过多年战争锻炼，作为遇卫立煌部队后评价的说明。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC09-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "685团新营因无武器被安排自行西撤，必要时可过黄河。",
+        "process_text": "当时685团只有两个老营，新营在敌人南下作战时被叫自行往西走，如果追得紧可主动过黄河，因为没武器。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0079"
+        ],
+        "evidence_quote": "    杨永松：当时我们685团只有两个老营，这个新营怎么办？敌人南下我们进行作战活动的时候，叫这个新营啊，叫他自行往西走，就是如果敌人要追得紧，实在不行你可以主动地过黄河去。因为他没武器呀。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "因没有大的战斗计划而不过黄河、不敢过黄河。",
+        "process_text": "因为没有大的战斗计划，他就不过，他不敢过；陕甘宁边区边防部队少，若进攻可攻破。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0081"
+        ],
+        "evidence_quote": "    杨永松：因为他没有这个大的战斗计划呀，他就不过，他不敢过不是。我们陕甘宁边区也有边防部队呀，也会守在那里，但是我们的部队很少啊，他要攻你就是可以攻破的，不是攻不破的（杨永松笑），是吧。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "新营西撤途中休息时唱歌，情绪高兴。",
+        "process_text": "这个营往西走，政治思想工作干部都是打过很多仗的人，带部队到某地休息时唱歌，挺高兴。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0083"
+        ],
+        "evidence_quote": "我们这个营往西走——就是以后我们才知道——我们这个部队政治思想工作干部都是打过很多仗的人，所以带这个部队到你这地方休息的时候啊，都唱歌啊什么，挺高兴的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "途中遇到卫立煌所带一个营，其部队自动武器多但因日本人进攻炮响而慌张。",
+        "process_text": "卫立煌由第二战区副司令长官调第一战区司令长官，从晋南走不了，要走延安绕洛阳，指挥部在那；他带一个营，自动武器很多，因日本人进攻炮响，兵慌慌张张。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0083"
+        ],
+        "evidence_quote": "这个卫立煌啊，他第二战区副司令长官要调到第一战区去当司令长官，当时从晋南走他走不了了，他就要走延安，这么绕到洛阳去，他指挥部在那。他带了一个营，自动武器很多。因为这日本人进攻，炮响啊，他的兵就慌慌张张的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE007-P05",
+        "stage_order": 5,
+        "stage_summary": "卫立煌对比八路军无枪不害怕与自己兵有武器害怕，评价八路军不简单。",
+        "process_text": "卫立煌一看八路军枪都没有却不害怕，骂自己兵武器好却吓得不行，由此在山西抗战中感到红军改编的八路军不简单。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0085"
+        ],
+        "evidence_quote": "结果（一看）我们的部队，卫立煌说你们看看你八路军枪都没有，人家都不害怕。你们他妈的那么好的武器背着，你们吓得不行，你们真没用！所以卫立煌在山西抗战，他也感觉到红军改编的八路军不简单。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE007-P06",
+        "stage_order": 6,
+        "stage_summary": "叙述者补充八路军经过多年战争锻炼，有长征战士和长征干部。",
+        "process_text": "这些都是经过多年战争锻炼出来的，当时还有战士有长征的，班长、排长是长征干部，个别战士还有。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0087"
+        ],
+        "evidence_quote": "我们这都是经过多年战争锻炼出来的，当时我们还有战士都有长征的，班长、排长那个不用说，是长征干部，个别战士还有。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC09-DE007-P01",
+        "target_stage_id": "BATCH02-DOC09-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0081",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE007-P02",
+        "target_stage_id": "BATCH02-DOC09-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0083",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE007-P03",
+        "target_stage_id": "BATCH02-DOC09-DE007-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0083",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE007-P04",
+        "target_stage_id": "BATCH02-DOC09-DE007-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC09-S0085",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE007-P05",
+        "target_stage_id": "BATCH02-DOC09-DE007-P06",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC09-S0087",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

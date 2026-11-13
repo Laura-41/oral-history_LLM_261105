@@ -1,0 +1,255 @@
+{
+  "run_time": "2026-11-11T02:55:16",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH04-DOC02-W005",
+  "technical_document_id": "BATCH04-DOC02",
+  "document_id": "08.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH04-DOC02-S0121",
+    "BATCH04-DOC02-S0122",
+    "BATCH04-DOC02-S0123",
+    "BATCH04-DOC02-S0124",
+    "BATCH04-DOC02-S0125",
+    "BATCH04-DOC02-S0126",
+    "BATCH04-DOC02-S0127",
+    "BATCH04-DOC02-S0128",
+    "BATCH04-DOC02-S0129",
+    "BATCH04-DOC02-S0130"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 3,
+    "assigned_segment_count": 7,
+    "unassigned_segment_count": 3,
+    "input_segment_count": 10,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH04-DOC02-W005-E03"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH04-DOC02-W005",
+    "events": [
+      {
+        "candidate_id": "BATCH04-DOC02-W005-E01",
+        "source_segment_ids": [
+          "BATCH04-DOC02-S0121"
+        ],
+        "event": {
+          "event_name": "某副官到苏中卫校担任行政副队长并与陈海峰共事，后任福建医科大学副校长等并病逝",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "到苏中卫校担任行政副队长，后任福建医科大学副校长等并病逝",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他",
+              "normalized_entity": null,
+              "certainty": "LOW"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "皖南事变以后",
+              "normalized_value": "皖南事变以后"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "苏中卫校",
+              "normalized_value": "苏中卫校"
+            },
+            {
+              "kind": "TIME",
+              "value": "解放以后",
+              "normalized_value": "解放以后"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "生癌症",
+              "normalized_value": "癌症"
+            },
+            {
+              "kind": "OTHER",
+              "value": "一直和我在一块，我们两个很要好",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "到了苏北以后，皖南事变以后呢，他到苏中卫校，他本来是在粟裕身边，就到卫校来当行政副队长。一直和我在一块，我们两个很要好，现在已经死了。解放以后呢，他就是福建医科大学的副校长，也是福建省建设厅的副厅长，他以后生癌症死了。",
+          "type_basis": "核心是“到苏中卫校当行政副队长”的移动/任职行动，参考“到上海印书馆做排字工人”归为物质过程；后续任职与病逝作为同一人物经历阶段合并，不单独拆节点。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC02-W005-E02",
+        "source_segment_ids": [
+          "BATCH04-DOC02-S0121",
+          "BATCH04-DOC02-S0123",
+          "BATCH04-DOC02-S0124",
+          "BATCH04-DOC02-S0125"
+        ],
+        "event": {
+          "event_name": "指导员苏君彦及三人队部领导身份",
+          "event_type": "RELATIONAL",
+          "event_type_zh": "关系",
+          "core_process": "担任指导员、任辽宁省地委主任并构成队部领导",
+          "participants": [
+            {
+              "role": "Carrier",
+              "mention": "苏君彦",
+              "normalized_entity": "苏君彦",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Attribute",
+              "mention": "指导员",
+              "normalized_entity": "指导员",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Carrier",
+              "mention": "这个人",
+              "normalized_entity": "苏君彦",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Attribute",
+              "mention": "辽宁省的地委主任",
+              "normalized_entity": "辽宁省地委主任",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Carrier",
+              "mention": "我们三个人",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Attribute",
+              "mention": "队部的领导",
+              "normalized_entity": "队部领导",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "解放以后",
+              "normalized_value": "解放以后"
+            },
+            {
+              "kind": "OTHER",
+              "value": "这两个都已经过世了",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "这个人解放以后是辽宁省的地委主任。这两个都已经过世了。我们三个人是队部的领导。",
+          "type_basis": "“叫苏君彦”“是辽宁省的地委主任”“是队部的领导”均建立身份、属性或所属关系；“我们三个人”由前文行政副官、苏君彦和受访者构成，作为关系结果合并。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC02-W005-E03",
+        "source_segment_ids": [
+          "BATCH04-DOC02-S0126",
+          "BATCH04-DOC02-S0128",
+          "BATCH04-DOC02-S0129"
+        ],
+        "event": {
+          "event_name": "教育干事进入卫校兼基础课和护理课并带新学生班",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "进入卫校当教育干事，兼基础课、护理课，带新学生班讲生理解剖",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他",
+              "normalized_entity": null,
+              "certainty": "LOW"
+            },
+            {
+              "role": "Goal",
+              "mention": "新的学生班",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Scope",
+              "mention": "基础课",
+              "normalized_entity": "基础课",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Scope",
+              "mention": "一部分护理课",
+              "normalized_entity": "护理课",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Scope",
+              "mention": "生理解剖",
+              "normalized_entity": "生理解剖",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "我们卫校",
+              "normalized_value": "卫校"
+            },
+            {
+              "kind": "TIME",
+              "value": "进来以后",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "是外边学的，是中级护校毕业的，他（在）中级护校教过课",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "干部班他没有课",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那么专职教员呢，有一个教育干事，是外边学的，是中级护校毕业的，他（在）中级护校教过课。那么进来以后，在我们卫校当教育干事，他就兼基础课，兼一部分护理课。",
+          "type_basis": "教学/职业劳动为物质过程；“当教育干事”融入任职行动，“兼课/带班/讲”为行动；无具体言语内容，不标言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH04-DOC02-S0122",
+      "BATCH04-DOC02-S0127",
+      "BATCH04-DOC02-S0130"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH04-DOC02-W005\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH04-DOC02-W005-E01\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC02-S0121\"\n      ],\n      \"event\": {\n        \"event_name\": \"某副官到苏中卫校担任行政副队长并与陈海峰共事，后任福建医科大学副校长等并病逝\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"到苏中卫校担任行政副队长，后任福建医科大学副校长等并病逝\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"他\",\n            \"normalized_entity\": null,\n            \"certainty\": \"LOW\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"皖南事变以后\",\n            \"normalized_value\": \"皖南事变以后\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"苏中卫校\",\n            \"normalized_value\": \"苏中卫校\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"解放以后\",\n            \"normalized_value\": \"解放以后\"\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"生癌症\",\n            \"normalized_value\": \"癌症\"\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"一直和我在一块，我们两个很要好\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"到了苏北以后，皖南事变以后呢，他到苏中卫校，他本来是在粟裕身边，就到卫校来当行政副队长。一直和我在一块，我们两个很要好，现在已经死了。解放以后呢，他就是福建医科大学的副校长，也是福建省建设厅的副厅长，他以后生癌症死了。\",\n        \"type_basis\": \"核心是“到苏中卫校当行政副队长”的移动/任职行动，参考“到上海印书馆做排字工人”归为物质过程；后续任职与病逝作为同一人物经历阶段合并，不单独拆节点。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC02-W005-E02\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC02-S0121\",\n        \"BATCH04-DOC02-S0123\",\n        \"BATCH04-DOC02-S0124\",\n        \"BATCH04-DOC02-S0125\"\n      ],\n      \"event\": {\n        \"event_name\": \"指导员苏君彦及三人队部领导身份\",\n        \"event_type\": \"RELATIONAL\",\n        \"event_type_zh\": \"关系\",\n        \"core_process\": \"担任指导员、任辽宁省地委主任并构成队部领导\",\n        \"participants\": [\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"苏君彦\",\n            \"normalized_entity\": \"苏君彦\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"指导员\",\n            \"normalized_entity\": \"指导员\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"这个人\",\n            \"normalized_entity\": \"苏君彦\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"辽宁省的地委主任\",\n            \"normalized_entity\": \"辽宁省地委主任\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"我们三个人\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"队部的领导\",\n            \"normalized_entity\": \"队部领导\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"解放以后\",\n            \"normalized_value\": \"解放以后\"\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"这两个都已经过世了\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"这个人解放以后是辽宁省的地委主任。这两个都已经过世了。我们三个人是队部的领导。\",\n        \"type_basis\": \"“叫苏君彦”“是辽宁省的地委主任”“是队部的领导”均建立身份、属性或所属关系；“我们三个人”由前文行政副官、苏君彦和受访者构成，作为关系结果合并。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC02-W005-E03\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC02-S0126\",\n        \"BATCH04-DOC02-S0128\",\n        \"BATCH04-DOC02-S0129\"\n      ],\n      \"event\": {\n        \"event_name\": \"教育干事进入卫校兼基础课和护理课并带新学生班\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"进入卫校当教育干事，兼基础课、护理课，带新学生班讲生理解剖\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"他\",\n            \"normalized_entity\": null,\n            \"certainty\": \"LOW\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"新的学生班\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"基础课\",\n            \"normalized_entity\": \"基础课\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"一部分护理课\",\n            \"normalized_entity\": \"护理课\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"生理解剖\",\n            \"normalized_entity\": \"生理解剖\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"我们卫校\",\n            \"normalized_value\": \"卫校\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"进来以后\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"是外边学的，是中级护校毕业的，他（在）中级护校教过课\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"干部班他没有课\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那么专职教员呢，有一个教育干事，是外边学的，是中级护校毕业的，他（在）中级护校教过课。那么进来以后，在我们卫校当教育干事，他就兼基础课，兼一部分护理课。\",\n        \"type_basis\": \"教学/职业劳动为物质过程；“当教育干事”融入任职行动，“兼课/带班/讲”为行动；无具体言语内容，不标言语过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH04-DOC02-S0122\",\n    \"BATCH04-DOC02-S0127\",\n    \"BATCH04-DOC02-S0130\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 4678,
+    "total_tokens": 23903,
+    "completion_tokens": 19225,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 17222
+    },
+    "time_to_first_token_ms": 299339,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 19224000
+  }
+}

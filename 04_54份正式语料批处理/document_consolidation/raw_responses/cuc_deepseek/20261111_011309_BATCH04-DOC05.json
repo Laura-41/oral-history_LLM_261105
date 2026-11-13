@@ -1,0 +1,692 @@
+{
+  "run_time": "2026-11-11T01:13:09",
+  "run_stage": "DOCUMENT_CONSOLIDATION_AND_SCOPE",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+document-consolidation-v0.1+output-contract-v0.3",
+  "technical_document_id": "BATCH04-DOC05",
+  "document_id": "09.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "input_candidate_ids": [
+    "BATCH04-DOC05-W002-E01",
+    "BATCH04-DOC05-W003-E01",
+    "BATCH04-DOC05-W003-E02",
+    "BATCH04-DOC05-W005-E01",
+    "BATCH04-DOC05-W005-E02"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "input_candidate_count": 5,
+    "document_event_count": 5,
+    "candidate_decision_count": 5,
+    "personal_event_count": 3,
+    "context_event_count": 1,
+    "uncertain_event_count": 1,
+    "needs_review_count": 3
+  },
+  "normalization_applied": false,
+  "normalization_error": null,
+  "parsed_output": {
+    "schema_version": "document-consolidation-v1.0",
+    "technical_document_id": "BATCH04-DOC05",
+    "document_id": "09.陈海峰（三访）20110816（一校后 阅读版）.docx",
+    "interviewee": "陈海峰",
+    "document_events": [
+      {
+        "document_event_id": "BATCH04-DOC05-DE001",
+        "source_candidate_ids": [
+          "BATCH04-DOC05-W002-E01",
+          "BATCH04-DOC05-W003-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC05-S0053",
+          "BATCH04-DOC05-S0055"
+        ],
+        "experience_scope": "UNCERTAIN",
+        "participation_bases": [
+          "INSUFFICIENT_EVIDENCE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC05-S0055"
+        ],
+        "scope_evidence_quote": "所以一学期我就得回去。这样子，就（通过）阶段性的教育来（和）若干次专科重点训练，达到大专医学水平。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "通过阶段性医学教育达到大专医学水平",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "通过阶段性医学教育和专科重点训练达到大专医学水平",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "LOW"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "MANNER",
+              "value": "阶段性的教育来（和）若干次专科重点训练",
+              "normalized_value": "阶段性教育和专科重点训练"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "所以一学期我就得回去。这样子，就（通过）阶段性的教育来（和）若干次专科重点训练，达到大专医学水平。就等于是正规的医科大学毕业，这个水平。",
+          "type_basis": "核心过程为通过阶段性教育和专科训练达到医学水平，属于有目标的行动/结果；参与者为 Actor 我，符合 MATERIAL 角色词表。不是单纯关系判断或心理过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": "原文‘达到大专医学水平’的主语未明确，可能指受访者本人，也可能指受训学员整体。",
+          "review_status": "NEEDS_REVIEW"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "经历范围不确定：原文‘达到大专医学水平’的主语未明确，可能指受访者本人或受训学员整体。"
+      },
+      {
+        "document_event_id": "BATCH04-DOC05-DE002",
+        "source_candidate_ids": [
+          "BATCH04-DOC05-W003-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC05-S0070",
+          "BATCH04-DOC05-S0071",
+          "BATCH04-DOC05-S0074",
+          "BATCH04-DOC05-S0075"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC05-S0071"
+        ],
+        "scope_evidence_quote": "我支援，我管这个支援研究工作（陈海峰笑），科技……",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈海峰负责援越抗美支援研究工作",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "负责支援研究工作",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "援越抗美战争期间",
+              "normalized_value": "援越抗美战争期间"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我支援，我管这个支援研究工作（陈海峰笑），科技……",
+          "type_basis": "核心过程为负责支援研究工作，属于有目标的行动/工作经历；参与者为 Actor 我，符合 MATERIAL 角色词表。不是单纯心理知道或言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC05-DE003",
+        "source_candidate_ids": [
+          "BATCH04-DOC05-W005-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC05-S0189",
+          "BATCH04-DOC05-S0191"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC05-S0191"
+        ],
+        "scope_evidence_quote": "（19）42年的1月到10月，10月基本就离开这个学校了，我在那儿只实际上待了10个月。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈海峰在卫校任职（1942年1月至10月）",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "在卫校任职",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1942年1月到10月",
+              "normalized_value": "1942-01至1942-10"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "这个学校",
+              "normalized_value": "卫校"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "（19）42年的1月到10月，10月基本就离开这个学校了，我在那儿只实际上待了10个月。",
+          "type_basis": "核心过程为在卫校任职/工作，属于职业劳动；参与者为 Actor 我，符合 MATERIAL 角色词表。",
+          "alternative_event_type": "RELATIONAL",
+          "ambiguity_reason": "‘任职/待了10个月’也可分析为关系或存在过程，需人工确认。",
+          "review_status": "NEEDS_REVIEW"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "由混合候选拆分出的个人任职经历，需人工确认事件边界和类型。"
+      },
+      {
+        "document_event_id": "BATCH04-DOC05-DE004",
+        "source_candidate_ids": [
+          "BATCH04-DOC05-W005-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC05-S0143",
+          "BATCH04-DOC05-S0145",
+          "BATCH04-DOC05-S0146",
+          "BATCH04-DOC05-S0148",
+          "BATCH04-DOC05-S0149",
+          "BATCH04-DOC05-S0150",
+          "BATCH04-DOC05-S0152",
+          "BATCH04-DOC05-S0153",
+          "BATCH04-DOC05-S0154",
+          "BATCH04-DOC05-S0178",
+          "BATCH04-DOC05-S0179",
+          "BATCH04-DOC05-S0180",
+          "BATCH04-DOC05-S0181",
+          "BATCH04-DOC05-S0183",
+          "BATCH04-DOC05-S0185",
+          "BATCH04-DOC05-S0187"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC05-S0145"
+        ],
+        "scope_evidence_quote": "那么学生他互相在讲经验。所以互教互学。师是徒，徒是师。师教徒，徒教师。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "卫校采用互教互学教学方式",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "采用互教互学教学",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "学生",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "老师",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "卫校",
+              "normalized_value": "卫校"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那么学生他互相在讲经验。所以互教互学。师是徒，徒是师。师教徒，徒教师。",
+          "type_basis": "核心过程为教学组织与互教互学实践，属于组织行动/职业劳动；参与者为学生和老师，符合 MATERIAL 的 Actor 配置。虽涉及言说，但整体是教学组织，故归为 MATERIAL。",
+          "alternative_event_type": "VERBAL",
+          "ambiguity_reason": "教学组织涉及大量言说，整体归为物质组织行动，但也可考虑言语过程。",
+          "review_status": "NEEDS_REVIEW"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "由混合候选拆分出的讲述背景，需人工确认是否作为独立事件。"
+      },
+      {
+        "document_event_id": "BATCH04-DOC05-DE005",
+        "source_candidate_ids": [
+          "BATCH04-DOC05-W005-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC05-S0176",
+          "BATCH04-DOC05-S0177"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC05-S0177"
+        ],
+        "scope_evidence_quote": "死的。我还帮他找医生专家来看病。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈海峰帮陈仁洪找医生专家看病",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "找医生专家看病",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Client",
+              "mention": "他",
+              "normalized_entity": "陈仁洪",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "医生专家",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "我还帮他找医生专家来看病。",
+          "type_basis": "核心过程为找医生专家，是具体物质行动；参与者为 Actor 我、Client 他、Goal 医生专家，符合 MATERIAL 角色配置。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "candidate_id": "BATCH04-DOC05-W002-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH04-DOC05-DE001"
+        ],
+        "reason": "与W003-E01共享S0055，指向同一阶段性医学教育达到大专水平的事件，归并为一个文档事件。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC05-W003-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH04-DOC05-DE001"
+        ],
+        "reason": "包含W002-E01的同一事件并补充S0053背景，归并到DE001。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC05-W003-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH04-DOC05-DE002"
+        ],
+        "reason": "个人直接陈述‘我支援，我管这个支援研究工作’，单独保留为个人经历事件。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC05-W005-E01",
+        "action": "SPLIT",
+        "document_event_ids": [
+          "BATCH04-DOC05-DE003",
+          "BATCH04-DOC05-DE004"
+        ],
+        "reason": "候选混合了受访者在卫校的个人任职经历与卫校互教互学教学方式的讲述背景，拆分为个人经历和背景两个文档事件。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC05-W005-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH04-DOC05-DE005"
+        ],
+        "reason": "个人直接陈述‘我还帮他找医生专家来看病’，单独保留为个人经历事件。"
+      }
+    ]
+  },
+  "normalized_output": {
+    "schema_version": "document-consolidation-v1.0",
+    "technical_document_id": "BATCH04-DOC05",
+    "document_id": "09.陈海峰（三访）20110816（一校后 阅读版）.docx",
+    "interviewee": "陈海峰",
+    "document_events": [
+      {
+        "document_event_id": "BATCH04-DOC05-DE001",
+        "source_candidate_ids": [
+          "BATCH04-DOC05-W002-E01",
+          "BATCH04-DOC05-W003-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC05-S0053",
+          "BATCH04-DOC05-S0055"
+        ],
+        "experience_scope": "UNCERTAIN",
+        "participation_bases": [
+          "INSUFFICIENT_EVIDENCE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC05-S0055"
+        ],
+        "scope_evidence_quote": "所以一学期我就得回去。这样子，就（通过）阶段性的教育来（和）若干次专科重点训练，达到大专医学水平。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "通过阶段性医学教育达到大专医学水平",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "通过阶段性医学教育和专科重点训练达到大专医学水平",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "LOW"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "MANNER",
+              "value": "阶段性的教育来（和）若干次专科重点训练",
+              "normalized_value": "阶段性教育和专科重点训练"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "所以一学期我就得回去。这样子，就（通过）阶段性的教育来（和）若干次专科重点训练，达到大专医学水平。就等于是正规的医科大学毕业，这个水平。",
+          "type_basis": "核心过程为通过阶段性教育和专科训练达到医学水平，属于有目标的行动/结果；参与者为 Actor 我，符合 MATERIAL 角色词表。不是单纯关系判断或心理过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": "原文‘达到大专医学水平’的主语未明确，可能指受访者本人，也可能指受训学员整体。",
+          "review_status": "NEEDS_REVIEW"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "经历范围不确定：原文‘达到大专医学水平’的主语未明确，可能指受访者本人或受训学员整体。"
+      },
+      {
+        "document_event_id": "BATCH04-DOC05-DE002",
+        "source_candidate_ids": [
+          "BATCH04-DOC05-W003-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC05-S0070",
+          "BATCH04-DOC05-S0071",
+          "BATCH04-DOC05-S0074",
+          "BATCH04-DOC05-S0075"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC05-S0071"
+        ],
+        "scope_evidence_quote": "我支援，我管这个支援研究工作（陈海峰笑），科技……",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈海峰负责援越抗美支援研究工作",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "负责支援研究工作",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "援越抗美战争期间",
+              "normalized_value": "援越抗美战争期间"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我支援，我管这个支援研究工作（陈海峰笑），科技……",
+          "type_basis": "核心过程为负责支援研究工作，属于有目标的行动/工作经历；参与者为 Actor 我，符合 MATERIAL 角色词表。不是单纯心理知道或言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC05-DE003",
+        "source_candidate_ids": [
+          "BATCH04-DOC05-W005-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC05-S0189",
+          "BATCH04-DOC05-S0191"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC05-S0191"
+        ],
+        "scope_evidence_quote": "（19）42年的1月到10月，10月基本就离开这个学校了，我在那儿只实际上待了10个月。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈海峰在卫校任职（1942年1月至10月）",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "在卫校任职",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1942年1月到10月",
+              "normalized_value": "1942-01至1942-10"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "这个学校",
+              "normalized_value": "卫校"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "（19）42年的1月到10月，10月基本就离开这个学校了，我在那儿只实际上待了10个月。",
+          "type_basis": "核心过程为在卫校任职/工作，属于职业劳动；参与者为 Actor 我，符合 MATERIAL 角色词表。",
+          "alternative_event_type": "RELATIONAL",
+          "ambiguity_reason": "‘任职/待了10个月’也可分析为关系或存在过程，需人工确认。",
+          "review_status": "NEEDS_REVIEW"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "由混合候选拆分出的个人任职经历，需人工确认事件边界和类型。"
+      },
+      {
+        "document_event_id": "BATCH04-DOC05-DE004",
+        "source_candidate_ids": [
+          "BATCH04-DOC05-W005-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC05-S0143",
+          "BATCH04-DOC05-S0145",
+          "BATCH04-DOC05-S0146",
+          "BATCH04-DOC05-S0148",
+          "BATCH04-DOC05-S0149",
+          "BATCH04-DOC05-S0150",
+          "BATCH04-DOC05-S0152",
+          "BATCH04-DOC05-S0153",
+          "BATCH04-DOC05-S0154",
+          "BATCH04-DOC05-S0178",
+          "BATCH04-DOC05-S0179",
+          "BATCH04-DOC05-S0180",
+          "BATCH04-DOC05-S0181",
+          "BATCH04-DOC05-S0183",
+          "BATCH04-DOC05-S0185",
+          "BATCH04-DOC05-S0187"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC05-S0145"
+        ],
+        "scope_evidence_quote": "那么学生他互相在讲经验。所以互教互学。师是徒，徒是师。师教徒，徒教师。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "卫校采用互教互学教学方式",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "采用互教互学教学",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "学生",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "老师",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "卫校",
+              "normalized_value": "卫校"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那么学生他互相在讲经验。所以互教互学。师是徒，徒是师。师教徒，徒教师。",
+          "type_basis": "核心过程为教学组织与互教互学实践，属于组织行动/职业劳动；参与者为学生和老师，符合 MATERIAL 的 Actor 配置。虽涉及言说，但整体是教学组织，故归为 MATERIAL。",
+          "alternative_event_type": "VERBAL",
+          "ambiguity_reason": "教学组织涉及大量言说，整体归为物质组织行动，但也可考虑言语过程。",
+          "review_status": "NEEDS_REVIEW"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "由混合候选拆分出的讲述背景，需人工确认是否作为独立事件。"
+      },
+      {
+        "document_event_id": "BATCH04-DOC05-DE005",
+        "source_candidate_ids": [
+          "BATCH04-DOC05-W005-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC05-S0176",
+          "BATCH04-DOC05-S0177"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC05-S0177"
+        ],
+        "scope_evidence_quote": "死的。我还帮他找医生专家来看病。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈海峰帮陈仁洪找医生专家看病",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "找医生专家看病",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Client",
+              "mention": "他",
+              "normalized_entity": "陈仁洪",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "医生专家",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "我还帮他找医生专家来看病。",
+          "type_basis": "核心过程为找医生专家，是具体物质行动；参与者为 Actor 我、Client 他、Goal 医生专家，符合 MATERIAL 角色配置。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "candidate_id": "BATCH04-DOC05-W002-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH04-DOC05-DE001"
+        ],
+        "reason": "与W003-E01共享S0055，指向同一阶段性医学教育达到大专水平的事件，归并为一个文档事件。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC05-W003-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH04-DOC05-DE001"
+        ],
+        "reason": "包含W002-E01的同一事件并补充S0053背景，归并到DE001。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC05-W003-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH04-DOC05-DE002"
+        ],
+        "reason": "个人直接陈述‘我支援，我管这个支援研究工作’，单独保留为个人经历事件。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC05-W005-E01",
+        "action": "SPLIT",
+        "document_event_ids": [
+          "BATCH04-DOC05-DE003",
+          "BATCH04-DOC05-DE004"
+        ],
+        "reason": "候选混合了受访者在卫校的个人任职经历与卫校互教互学教学方式的讲述背景，拆分为个人经历和背景两个文档事件。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC05-W005-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH04-DOC05-DE005"
+        ],
+        "reason": "个人直接陈述‘我还帮他找医生专家来看病’，单独保留为个人经历事件。"
+      }
+    ]
+  },
+  "raw_content": "{\n  \"schema_version\": \"document-consolidation-v1.0\",\n  \"technical_document_id\": \"BATCH04-DOC05\",\n  \"document_id\": \"09.陈海峰（三访）20110816（一校后 阅读版）.docx\",\n  \"interviewee\": \"陈海峰\",\n  \"document_events\": [\n    {\n      \"document_event_id\": \"BATCH04-DOC05-DE001\",\n      \"source_candidate_ids\": [\n        \"BATCH04-DOC05-W002-E01\",\n        \"BATCH04-DOC05-W003-E01\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH04-DOC05-S0053\",\n        \"BATCH04-DOC05-S0055\"\n      ],\n      \"experience_scope\": \"UNCERTAIN\",\n      \"participation_bases\": [\n        \"INSUFFICIENT_EVIDENCE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0055\"\n      ],\n      \"scope_evidence_quote\": \"所以一学期我就得回去。这样子，就（通过）阶段性的教育来（和）若干次专科重点训练，达到大专医学水平。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"通过阶段性医学教育达到大专医学水平\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"通过阶段性医学教育和专科重点训练达到大专医学水平\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"LOW\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"阶段性的教育来（和）若干次专科重点训练\",\n            \"normalized_value\": \"阶段性教育和专科重点训练\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"所以一学期我就得回去。这样子，就（通过）阶段性的教育来（和）若干次专科重点训练，达到大专医学水平。就等于是正规的医科大学毕业，这个水平。\",\n        \"type_basis\": \"核心过程为通过阶段性教育和专科训练达到医学水平，属于有目标的行动/结果；参与者为 Actor 我，符合 MATERIAL 角色词表。不是单纯关系判断或心理过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": \"原文‘达到大专医学水平’的主语未明确，可能指受访者本人，也可能指受训学员整体。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      },\n      \"review_status\": \"NEEDS_REVIEW\",\n      \"review_reason\": \"经历范围不确定：原文‘达到大专医学水平’的主语未明确，可能指受访者本人或受训学员整体。\"\n    },\n    {\n      \"document_event_id\": \"BATCH04-DOC05-DE002\",\n      \"source_candidate_ids\": [\n        \"BATCH04-DOC05-W003-E02\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH04-DOC05-S0070\",\n        \"BATCH04-DOC05-S0071\",\n        \"BATCH04-DOC05-S0074\",\n        \"BATCH04-DOC05-S0075\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"DIRECT_FIRST_PERSON\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0071\"\n      ],\n      \"scope_evidence_quote\": \"我支援，我管这个支援研究工作（陈海峰笑），科技……\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"陈海峰负责援越抗美支援研究工作\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"负责支援研究工作\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"援越抗美战争期间\",\n            \"normalized_value\": \"援越抗美战争期间\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我支援，我管这个支援研究工作（陈海峰笑），科技……\",\n        \"type_basis\": \"核心过程为负责支援研究工作，属于有目标的行动/工作经历；参与者为 Actor 我，符合 MATERIAL 角色词表。不是单纯心理知道或言语过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH04-DOC05-DE003\",\n      \"source_candidate_ids\": [\n        \"BATCH04-DOC05-W005-E01\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH04-DOC05-S0189\",\n        \"BATCH04-DOC05-S0191\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"DIRECT_FIRST_PERSON\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0191\"\n      ],\n      \"scope_evidence_quote\": \"（19）42年的1月到10月，10月基本就离开这个学校了，我在那儿只实际上待了10个月。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"陈海峰在卫校任职（1942年1月至10月）\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"在卫校任职\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"1942年1月到10月\",\n            \"normalized_value\": \"1942-01至1942-10\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"这个学校\",\n            \"normalized_value\": \"卫校\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"（19）42年的1月到10月，10月基本就离开这个学校了，我在那儿只实际上待了10个月。\",\n        \"type_basis\": \"核心过程为在卫校任职/工作，属于职业劳动；参与者为 Actor 我，符合 MATERIAL 角色词表。\",\n        \"alternative_event_type\": \"RELATIONAL\",\n        \"ambiguity_reason\": \"‘任职/待了10个月’也可分析为关系或存在过程，需人工确认。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      },\n      \"review_status\": \"NEEDS_REVIEW\",\n      \"review_reason\": \"由混合候选拆分出的个人任职经历，需人工确认事件边界和类型。\"\n    },\n    {\n      \"document_event_id\": \"BATCH04-DOC05-DE004\",\n      \"source_candidate_ids\": [\n        \"BATCH04-DOC05-W005-E01\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH04-DOC05-S0143\",\n        \"BATCH04-DOC05-S0145\",\n        \"BATCH04-DOC05-S0146\",\n        \"BATCH04-DOC05-S0148\",\n        \"BATCH04-DOC05-S0149\",\n        \"BATCH04-DOC05-S0150\",\n        \"BATCH04-DOC05-S0152\",\n        \"BATCH04-DOC05-S0153\",\n        \"BATCH04-DOC05-S0154\",\n        \"BATCH04-DOC05-S0178\",\n        \"BATCH04-DOC05-S0179\",\n        \"BATCH04-DOC05-S0180\",\n        \"BATCH04-DOC05-S0181\",\n        \"BATCH04-DOC05-S0183\",\n        \"BATCH04-DOC05-S0185\",\n        \"BATCH04-DOC05-S0187\"\n      ],\n      \"experience_scope\": \"NARRATED_CONTEXT\",\n      \"participation_bases\": [\n        \"THIRD_PARTY_ONLY\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0145\"\n      ],\n      \"scope_evidence_quote\": \"那么学生他互相在讲经验。所以互教互学。师是徒，徒是师。师教徒，徒教师。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"卫校采用互教互学教学方式\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"采用互教互学教学\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"学生\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"老师\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"卫校\",\n            \"normalized_value\": \"卫校\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那么学生他互相在讲经验。所以互教互学。师是徒，徒是师。师教徒，徒教师。\",\n        \"type_basis\": \"核心过程为教学组织与互教互学实践，属于组织行动/职业劳动；参与者为学生和老师，符合 MATERIAL 的 Actor 配置。虽涉及言说，但整体是教学组织，故归为 MATERIAL。\",\n        \"alternative_event_type\": \"VERBAL\",\n        \"ambiguity_reason\": \"教学组织涉及大量言说，整体归为物质组织行动，但也可考虑言语过程。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      },\n      \"review_status\": \"NEEDS_REVIEW\",\n      \"review_reason\": \"由混合候选拆分出的讲述背景，需人工确认是否作为独立事件。\"\n    },\n    {\n      \"document_event_id\": \"BATCH04-DOC05-DE005\",\n      \"source_candidate_ids\": [\n        \"BATCH04-DOC05-W005-E02\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH04-DOC05-S0176\",\n        \"BATCH04-DOC05-S0177\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"DIRECT_FIRST_PERSON\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0177\"\n      ],\n      \"scope_evidence_quote\": \"死的。我还帮他找医生专家来看病。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"陈海峰帮陈仁洪找医生专家看病\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"找医生专家看病\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈海峰\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Client\",\n            \"mention\": \"他\",\n            \"normalized_entity\": \"陈仁洪\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"医生专家\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我还帮他找医生专家来看病。\",\n        \"type_basis\": \"核心过程为找医生专家，是具体物质行动；参与者为 Actor 我、Client 他、Goal 医生专家，符合 MATERIAL 角色配置。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    }\n  ],\n  \"candidate_decisions\": [\n    {\n      \"candidate_id\": \"BATCH04-DOC05-W002-E01\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH04-DOC05-DE001\"\n      ],\n      \"reason\": \"与W003-E01共享S0055，指向同一阶段性医学教育达到大专水平的事件，归并为一个文档事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC05-W003-E01\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH04-DOC05-DE001\"\n      ],\n      \"reason\": \"包含W002-E01的同一事件并补充S0053背景，归并到DE001。\"\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC05-W003-E02\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH04-DOC05-DE002\"\n      ],\n      \"reason\": \"个人直接陈述‘我支援，我管这个支援研究工作’，单独保留为个人经历事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC05-W005-E01\",\n      \"action\": \"SPLIT\",\n      \"document_event_ids\": [\n        \"BATCH04-DOC05-DE003\",\n        \"BATCH04-DOC05-DE004\"\n      ],\n      \"reason\": \"候选混合了受访者在卫校的个人任职经历与卫校互教互学教学方式的讲述背景，拆分为个人经历和背景两个文档事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC05-W005-E02\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH04-DOC05-DE005\"\n      ],\n      \"reason\": \"个人直接陈述‘我还帮他找医生专家来看病’，单独保留为个人经历事件。\"\n    }\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 18339,
+    "total_tokens": 46471,
+    "completion_tokens": 28132,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 24855
+    },
+    "time_to_first_token_ms": 235701,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 14065500
+  }
+}

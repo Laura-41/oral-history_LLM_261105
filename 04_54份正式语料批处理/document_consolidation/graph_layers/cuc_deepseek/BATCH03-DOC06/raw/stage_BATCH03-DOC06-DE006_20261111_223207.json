@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T22:32:07",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE006",
+  "usage": {
+    "prompt_tokens": 1383,
+    "total_tokens": 5000,
+    "completion_tokens": 3617,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2514
+    },
+    "time_to_first_token_ms": 27903,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"新兵营打开阎锡山仓库取得枪支、机枪等武器并装备；阎锡山方面来质问后，新兵营以打日本为由拖延，未归还武器。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以老百姓告知山洞有阎锡山存放的武器为起点，以新兵营对阎方质问拖延、不归还武器为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"获知山洞有阎锡山存放的武器，且仓库无人看管。\",\n      \"process_text\": \"老百姓告知山洞里有阎锡山存的武器，仓库没人看，看仓库的人也跑了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0036\"\n      ],\n      \"evidence_quote\": \"有一天在一个山洞里边，老百姓告诉他，你们怎么没有枪啊？他说那个地方有，阎锡山存的武器。所以这个营长和教导员管他妈的，你日本人来你不是丢掉了就丢掉了，他那个（仓库）没（人）看，仓库的人也跑了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"弄开仓库，按需拿取枪支、机枪和重机枪。\",\n      \"process_text\": \"弄开仓库，该拿枪的拿一支枪，该拿机枪的拿机枪，该拿重机枪的拿重机枪。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0036\"\n      ],\n      \"evidence_quote\": \"他就把他弄开，每一个人该拿枪的拿一支枪，该拿机枪的拿机枪，该拿重机枪的拿重机枪。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"阎锡山方面得知后返回山西，质问新兵营为何拿他们的武器。\",\n      \"process_text\": \"阎锡山那边知道后，其部队从河那边回到山西，来质问为什么拿他们的武器。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0039\"\n      ],\n      \"evidence_quote\": \"可是过了时间不长，这事找麻烦了，阎锡山那边知道了，我们到了汾阳、孝义以后，他们的部队从河那边又回到山西来了，他就来（问），你们为什么拿我们的武器？\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"以打日本为由辩解并拖延，不归还武器。\",\n      \"process_text\": \"回答说你们放在那里的日本枪也会被日本人拿走，拿武器去打日本有什么不可以，就跟他拖、不管他。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0041\"\n      ],\n      \"evidence_quote\": \"我们一说，你们放到那儿的日本枪，还不被日本人拿走了，我们拿你们的武器那么多，我们去打日本有什么不可以呀，就跟他拖了，就不管他了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE006-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE006-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0036\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE006-P02\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE006-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0039\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE006-P03\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE006-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0041\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE006",
+    "event_enrichment": {
+      "result_state": "新兵营打开阎锡山仓库取得枪支、机枪等武器并装备；阎锡山方面来质问后，新兵营以打日本为由拖延，未归还武器。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以老百姓告知山洞有阎锡山存放的武器为起点，以新兵营对阎方质问拖延、不归还武器为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "获知山洞有阎锡山存放的武器，且仓库无人看管。",
+        "process_text": "老百姓告知山洞里有阎锡山存的武器，仓库没人看，看仓库的人也跑了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0036"
+        ],
+        "evidence_quote": "有一天在一个山洞里边，老百姓告诉他，你们怎么没有枪啊？他说那个地方有，阎锡山存的武器。所以这个营长和教导员管他妈的，你日本人来你不是丢掉了就丢掉了，他那个（仓库）没（人）看，仓库的人也跑了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "弄开仓库，按需拿取枪支、机枪和重机枪。",
+        "process_text": "弄开仓库，该拿枪的拿一支枪，该拿机枪的拿机枪，该拿重机枪的拿重机枪。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0036"
+        ],
+        "evidence_quote": "他就把他弄开，每一个人该拿枪的拿一支枪，该拿机枪的拿机枪，该拿重机枪的拿重机枪。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "阎锡山方面得知后返回山西，质问新兵营为何拿他们的武器。",
+        "process_text": "阎锡山那边知道后，其部队从河那边回到山西，来质问为什么拿他们的武器。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0039"
+        ],
+        "evidence_quote": "可是过了时间不长，这事找麻烦了，阎锡山那边知道了，我们到了汾阳、孝义以后，他们的部队从河那边又回到山西来了，他就来（问），你们为什么拿我们的武器？",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "以打日本为由辩解并拖延，不归还武器。",
+        "process_text": "回答说你们放在那里的日本枪也会被日本人拿走，拿武器去打日本有什么不可以，就跟他拖、不管他。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0041"
+        ],
+        "evidence_quote": "我们一说，你们放到那儿的日本枪，还不被日本人拿走了，我们拿你们的武器那么多，我们去打日本有什么不可以呀，就跟他拖了，就不管他了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE006-P01",
+        "target_stage_id": "BATCH03-DOC06-DE006-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH03-DOC06-S0036",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE006-P02",
+        "target_stage_id": "BATCH03-DOC06-DE006-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH03-DOC06-S0039",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE006-P03",
+        "target_stage_id": "BATCH03-DOC06-DE006-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC06-S0041",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

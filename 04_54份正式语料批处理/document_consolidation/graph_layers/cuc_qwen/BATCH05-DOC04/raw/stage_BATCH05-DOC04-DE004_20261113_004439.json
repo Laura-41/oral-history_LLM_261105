@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-13T00:44:39",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC04-DE004",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC04-DE004",
+  "usage": {
+    "prompt_tokens": 1571,
+    "total_tokens": 9577,
+    "completion_tokens": 8006,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6385
+    },
+    "tokens_per_second": 8005000,
+    "time_to_first_token_ms": 127093,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC04-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"马苏政经担架换药和开三次刀治疗后治好，并因医务人员跪着换药而感动、愿意留在后方工作。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起自 S0088 叙述担架经过、绷带掉了需要跪着换药并举马苏政为例，止于 S0093 “才把他治好”；S0090-S0092 补充马苏政身份、记忆与重伤开刀治疗。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"担架行进中绷带脱落，医务人员跪着给伤员换药，并举马苏政为例。\",\n      \"process_text\": \"我们担架经过的，假设你跪在地上给他换药。因为担架走路啊，要给他换药啊，他这个绷带掉了，你给他重新换。冬天冷，夏天烈日底下，满头大汗。你不能够站在那地方，伤员躺在那里，你医务人员是跪在那里的，跪着给他换药，伤员永远记住（你）。你像这个1师分会的会长，原来北京新四军研究会的副会长马苏政啊。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0088\"\n      ],\n      \"evidence_quote\": \"我们担架经过的，假设你跪在地上给他换药。因为担架走路啊，要给他换药啊，他这个绷带掉了，你给他重新换。冬天冷，夏天烈日底下，满头大汗。你不能够站在那地方，伤员躺在那里，你医务人员是跪在那里的，跪着给他换药，伤员永远记住（你）。你像这个1师分会的会长，原来北京新四军研究会的副会长马苏政啊。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"叙述者补充马苏政的职务及与自己的关系。\",\n      \"process_text\": \"    陈海峰：工程兵的副司令啊，我在5团当卫生队长，他是指导员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0090\"\n      ],\n      \"evidence_quote\": \"    陈海峰：工程兵的副司令啊，我在5团当卫生队长，他是指导员。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"马苏政记住担架跪着换药，受感动并愿意留在后方工作。\",\n      \"process_text\": \"后来到了江南，16旅卫生部的协理员，就（相当于）教导员了。他就记住，就是这个担架，跪在那里给他换药。他以后愿意留在后方工作。他感动得不得了，“我能够有今天，是医务人员跪在那里给我换药。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0091\"\n      ],\n      \"evidence_quote\": \"后来到了江南，16旅卫生部的协理员，就（相当于）教导员了。他就记住，就是这个担架，跪在那里给他换药。他以后愿意留在后方工作。他感动得不得了，“我能够有今天，是医务人员跪在那里给我换药。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"马苏政重伤不能动，接受开刀治疗。\",\n      \"process_text\": \"我当时不能动啊，重伤啊！”他说。他开了三次刀，\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0092\"\n      ],\n      \"evidence_quote\": \"我当时不能动啊，重伤啊！”他说。他开了三次刀，\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC04-DE004-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"马苏政经开三次刀后被治好。\",\n      \"process_text\": \"才把他治好。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC04-S0093\"\n      ],\n      \"evidence_quote\": \"才把他治好。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE004-P01\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE004-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0090\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE004-P02\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0091\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE004-P03\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE004-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0092\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC04-DE004-P04\",\n      \"target_stage_id\": \"BATCH05-DOC04-DE004-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC04-S0093\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC04-DE004",
+    "event_enrichment": {
+      "result_state": "马苏政经担架换药和开三次刀治疗后治好，并因医务人员跪着换药而感动、愿意留在后方工作。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起自 S0088 叙述担架经过、绷带掉了需要跪着换药并举马苏政为例，止于 S0093 “才把他治好”；S0090-S0092 补充马苏政身份、记忆与重伤开刀治疗。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC04-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "担架行进中绷带脱落，医务人员跪着给伤员换药，并举马苏政为例。",
+        "process_text": "我们担架经过的，假设你跪在地上给他换药。因为担架走路啊，要给他换药啊，他这个绷带掉了，你给他重新换。冬天冷，夏天烈日底下，满头大汗。你不能够站在那地方，伤员躺在那里，你医务人员是跪在那里的，跪着给他换药，伤员永远记住（你）。你像这个1师分会的会长，原来北京新四军研究会的副会长马苏政啊。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0088"
+        ],
+        "evidence_quote": "我们担架经过的，假设你跪在地上给他换药。因为担架走路啊，要给他换药啊，他这个绷带掉了，你给他重新换。冬天冷，夏天烈日底下，满头大汗。你不能够站在那地方，伤员躺在那里，你医务人员是跪在那里的，跪着给他换药，伤员永远记住（你）。你像这个1师分会的会长，原来北京新四军研究会的副会长马苏政啊。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "叙述者补充马苏政的职务及与自己的关系。",
+        "process_text": "    陈海峰：工程兵的副司令啊，我在5团当卫生队长，他是指导员。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0090"
+        ],
+        "evidence_quote": "    陈海峰：工程兵的副司令啊，我在5团当卫生队长，他是指导员。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "马苏政记住担架跪着换药，受感动并愿意留在后方工作。",
+        "process_text": "后来到了江南，16旅卫生部的协理员，就（相当于）教导员了。他就记住，就是这个担架，跪在那里给他换药。他以后愿意留在后方工作。他感动得不得了，“我能够有今天，是医务人员跪在那里给我换药。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0091"
+        ],
+        "evidence_quote": "后来到了江南，16旅卫生部的协理员，就（相当于）教导员了。他就记住，就是这个担架，跪在那里给他换药。他以后愿意留在后方工作。他感动得不得了，“我能够有今天，是医务人员跪在那里给我换药。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "马苏政重伤不能动，接受开刀治疗。",
+        "process_text": "我当时不能动啊，重伤啊！”他说。他开了三次刀，",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0092"
+        ],
+        "evidence_quote": "我当时不能动啊，重伤啊！”他说。他开了三次刀，",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC04-DE004-P05",
+        "stage_order": 5,
+        "stage_summary": "马苏政经开三次刀后被治好。",
+        "process_text": "才把他治好。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC04-S0093"
+        ],
+        "evidence_quote": "才把他治好。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC04-DE004-P01",
+        "target_stage_id": "BATCH05-DOC04-DE004-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC04-S0090",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC04-DE004-P02",
+        "target_stage_id": "BATCH05-DOC04-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC04-S0091",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC04-DE004-P03",
+        "target_stage_id": "BATCH05-DOC04-DE004-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC04-S0092",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC04-DE004-P04",
+        "target_stage_id": "BATCH05-DOC04-DE004-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC04-S0093",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T00:33:25",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC02-DE013",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC02-DE013",
+  "usage": {
+    "prompt_tokens": 1202,
+    "total_tokens": 5660,
+    "completion_tokens": 4458,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3648
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 37280
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-18\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC02-DE013\",\n  \"event_enrichment\": {\n    \"result_state\": \"保健盒仍在家中保存，尚未联系军事医科院；此前医院保存的战争环境物品已捐给盐城纪念馆并装车运走。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈海峰陈述保健盒仍在家中、准备捐献为起点，到说明过去医院文物已捐给盐城纪念馆并装车运走为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE013-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰保存的保健盒仍在家中，并称这是自己保存的最后一批战争环境物品。\",\n      \"process_text\": \"陈海峰说保健盒还在家里，并称这是自己保存的最后一批战争环境物品。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0101\"\n      ],\n      \"evidence_quote\": \"我带了，（保健盒）那个盒子还在（家里）这儿呢，我准备捐给军事医科院，我还没跟他们联系呢。最后一批，我保存的战争环境的东西啊\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE013-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"他计划将保健盒捐给军事医科院，但尚未与对方联系。\",\n      \"process_text\": \"他准备把保健盒捐给军事医科院，但还没有与对方联系。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0101\"\n      ],\n      \"evidence_quote\": \"我准备捐给军事医科院，我还没跟他们联系呢\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE013-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"过去医院保存的战争环境物品已捐给盐城纪念馆，并由“没保车（音）”装走。\",\n      \"process_text\": \"过去医院保存的战争环境物品都给了盐城纪念馆，并用“没保车（音）”装走。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0101\"\n      ],\n      \"evidence_quote\": \"过去我们医院的都给盐城那个纪念馆了，弄了一个没保车（音）装走的\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE013-P01\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE013-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0101\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE013-P02\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE013-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0101\",\n      \"confidence\": \"LOW\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-18",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC02-DE013",
+    "event_enrichment": {
+      "result_state": "保健盒仍在家中保存，尚未联系军事医科院；此前医院保存的战争环境物品已捐给盐城纪念馆并装车运走。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以陈海峰陈述保健盒仍在家中、准备捐献为起点，到说明过去医院文物已捐给盐城纪念馆并装车运走为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC02-DE013-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰保存的保健盒仍在家中，并称这是自己保存的最后一批战争环境物品。",
+        "process_text": "陈海峰说保健盒还在家里，并称这是自己保存的最后一批战争环境物品。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0101"
+        ],
+        "evidence_quote": "我带了，（保健盒）那个盒子还在（家里）这儿呢，我准备捐给军事医科院，我还没跟他们联系呢。最后一批，我保存的战争环境的东西啊",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE013-P02",
+        "stage_order": 2,
+        "stage_summary": "他计划将保健盒捐给军事医科院，但尚未与对方联系。",
+        "process_text": "他准备把保健盒捐给军事医科院，但还没有与对方联系。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0101"
+        ],
+        "evidence_quote": "我准备捐给军事医科院，我还没跟他们联系呢",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE013-P03",
+        "stage_order": 3,
+        "stage_summary": "过去医院保存的战争环境物品已捐给盐城纪念馆，并由“没保车（音）”装走。",
+        "process_text": "过去医院保存的战争环境物品都给了盐城纪念馆，并用“没保车（音）”装走。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0101"
+        ],
+        "evidence_quote": "过去我们医院的都给盐城那个纪念馆了，弄了一个没保车（音）装走的",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC02-DE013-P01",
+        "target_stage_id": "BATCH06-DOC02-DE013-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH06-DOC02-S0101",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE013-P02",
+        "target_stage_id": "BATCH06-DOC02-DE013-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0101",
+        "confidence": "LOW"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T12:14:29",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC02-DE005",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC02-DE005",
+  "usage": {
+    "prompt_tokens": 1438,
+    "total_tokens": 6667,
+    "completion_tokens": 5229,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4045
+    },
+    "time_to_first_token_ms": 113212,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC02-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"师长从重庆回来后，陈锐霆获得皮夹克和手表作为奖励，上级对其信任增强，有利于其在国民党部队做秘密工作。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点依据 S0032 中胜仗后师里高兴、师长请假赴重庆的叙述；终点依据 S0035 中师长回来奖励皮夹克和手表，并带来信任增强的叙述。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"胜仗后师部高兴，师长请假赴重庆\",\n      \"process_text\": \"打了胜仗以后师里面也非常地高兴，找了一些战利品。师长他在陆军大学当过教授，在重庆很多熟人嘛，他请了一个假，就到了重庆去了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0032\"\n      ],\n      \"evidence_quote\": \"陈锐霆：这国民党的部队都避着敌人远远的，怕靠近敌人，怕打仗，主动出击敌人的，还没有这个先例。但是我牛刀杀鸡的这个办法打了胜仗。我的部队除有一个人手脖子这个地方（陈老指手腕外侧）擦破了一点皮以外，其余的一个也没伤亡。我那个时候没请示师部，我一方面报告师部，一方面我部队就展开进攻了嘛。打了胜仗以后师里面也非常地高兴，找了一些战利品。师长他在陆军大学当过教授，在重庆很多熟人嘛，他请了一个假，就到了重庆去了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"师长在重庆做宣传、报功\",\n      \"process_text\": \"去做宣传嘛，报功嘛。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0035\"\n      ],\n      \"evidence_quote\": \"陈锐霆：去做宣传嘛，报功嘛。以后他回来，给我来了一个皮夹克，牛皮的，皮夹克挺好的，还有一个手表，作为我的奖励吧。这个最大的好处是对我在国民党部队做秘密工作很有利，上面对我比较信任了。所以以后他虽然听说我订着有《新华日报》，还好看共产党的书，他就问我为什么还订这个《新华日报》，我说我要了解全面情况，我说我还订了《人民日报》呢，他以后再没说什么。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC02-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"师长回来奖励皮夹克和手表，并增强上级信任\",\n      \"process_text\": \"以后他回来，给我来了一个皮夹克，牛皮的，皮夹克挺好的，还有一个手表，作为我的奖励吧。这个最大的好处是对我在国民党部队做秘密工作很有利，上面对我比较信任了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC02-S0035\"\n      ],\n      \"evidence_quote\": \"陈锐霆：去做宣传嘛，报功嘛。以后他回来，给我来了一个皮夹克，牛皮的，皮夹克挺好的，还有一个手表，作为我的奖励吧。这个最大的好处是对我在国民党部队做秘密工作很有利，上面对我比较信任了。所以以后他虽然听说我订着有《新华日报》，还好看共产党的书，他就问我为什么还订这个《新华日报》，我说我要了解全面情况，我说我还订了《人民日报》呢，他以后再没说什么。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE005-P01\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0035\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC02-DE005-P02\",\n      \"target_stage_id\": \"BATCH03-DOC02-DE005-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC02-S0035\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC02-DE005",
+    "event_enrichment": {
+      "result_state": "师长从重庆回来后，陈锐霆获得皮夹克和手表作为奖励，上级对其信任增强，有利于其在国民党部队做秘密工作。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起点依据 S0032 中胜仗后师里高兴、师长请假赴重庆的叙述；终点依据 S0035 中师长回来奖励皮夹克和手表，并带来信任增强的叙述。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC02-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "胜仗后师部高兴，师长请假赴重庆",
+        "process_text": "打了胜仗以后师里面也非常地高兴，找了一些战利品。师长他在陆军大学当过教授，在重庆很多熟人嘛，他请了一个假，就到了重庆去了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0032"
+        ],
+        "evidence_quote": "陈锐霆：这国民党的部队都避着敌人远远的，怕靠近敌人，怕打仗，主动出击敌人的，还没有这个先例。但是我牛刀杀鸡的这个办法打了胜仗。我的部队除有一个人手脖子这个地方（陈老指手腕外侧）擦破了一点皮以外，其余的一个也没伤亡。我那个时候没请示师部，我一方面报告师部，一方面我部队就展开进攻了嘛。打了胜仗以后师里面也非常地高兴，找了一些战利品。师长他在陆军大学当过教授，在重庆很多熟人嘛，他请了一个假，就到了重庆去了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "师长在重庆做宣传、报功",
+        "process_text": "去做宣传嘛，报功嘛。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0035"
+        ],
+        "evidence_quote": "陈锐霆：去做宣传嘛，报功嘛。以后他回来，给我来了一个皮夹克，牛皮的，皮夹克挺好的，还有一个手表，作为我的奖励吧。这个最大的好处是对我在国民党部队做秘密工作很有利，上面对我比较信任了。所以以后他虽然听说我订着有《新华日报》，还好看共产党的书，他就问我为什么还订这个《新华日报》，我说我要了解全面情况，我说我还订了《人民日报》呢，他以后再没说什么。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC02-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "师长回来奖励皮夹克和手表，并增强上级信任",
+        "process_text": "以后他回来，给我来了一个皮夹克，牛皮的，皮夹克挺好的，还有一个手表，作为我的奖励吧。这个最大的好处是对我在国民党部队做秘密工作很有利，上面对我比较信任了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC02-S0035"
+        ],
+        "evidence_quote": "陈锐霆：去做宣传嘛，报功嘛。以后他回来，给我来了一个皮夹克，牛皮的，皮夹克挺好的，还有一个手表，作为我的奖励吧。这个最大的好处是对我在国民党部队做秘密工作很有利，上面对我比较信任了。所以以后他虽然听说我订着有《新华日报》，还好看共产党的书，他就问我为什么还订这个《新华日报》，我说我要了解全面情况，我说我还订了《人民日报》呢，他以后再没说什么。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC02-DE005-P01",
+        "target_stage_id": "BATCH03-DOC02-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC02-S0035",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC02-DE005-P02",
+        "target_stage_id": "BATCH03-DOC02-DE005-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC02-S0035",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T23:33:22",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC08-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC08-DE005",
+  "usage": {
+    "prompt_tokens": 1212,
+    "total_tokens": 4134,
+    "completion_tokens": 2922,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2133
+    },
+    "time_to_first_token_ms": 23101,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC08-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆已作为先遣代表到山东并向黎玉汇报军部及部队情况，驻地安排在临沂西关天主教堂。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以“作为先遣代表先到山东”为起点，以“住在临沂西关天主教堂”为驻地安排结果；同段后续给陈司令打电报属相邻情节，不纳入本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆作为先遣代表先到山东，山东由黎玉负责。\",\n      \"process_text\": \"陈锐霆作为先遣代表先到山东，山东由黎玉负责。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0016\"\n      ],\n      \"evidence_quote\": \"是命（我）作为一个先遣的代表吧，先到了山东去。山东是黎玉同志在那儿负责\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"向黎玉汇报新四军军部情况、部队上来情况，主要讲军部情况，并请黎玉帮助搞驻地。\",\n      \"process_text\": \"向黎玉汇报新四军军部情况、部队上来情况，主要讲军部情况，并请黎玉帮助搞驻地。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0016\"\n      ],\n      \"evidence_quote\": \"就向他汇报新四军军部的情况，另外部队上来的情况，主要是讲军部的情况，请他帮助搞驻地。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"驻地安排在临沂西关的天主教堂。\",\n      \"process_text\": \"安排住在临沂西关的天主教堂。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0016\"\n      ],\n      \"evidence_quote\": \"我们就住在临沂的西关，里头有个天主教堂，就住在那个地方。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE005-P01\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0016\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE005-P02\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE005-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0016\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC08-DE005",
+    "event_enrichment": {
+      "result_state": "陈锐霆已作为先遣代表到山东并向黎玉汇报军部及部队情况，驻地安排在临沂西关天主教堂。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以“作为先遣代表先到山东”为起点，以“住在临沂西关天主教堂”为驻地安排结果；同段后续给陈司令打电报属相邻情节，不纳入本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC08-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆作为先遣代表先到山东，山东由黎玉负责。",
+        "process_text": "陈锐霆作为先遣代表先到山东，山东由黎玉负责。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0016"
+        ],
+        "evidence_quote": "是命（我）作为一个先遣的代表吧，先到了山东去。山东是黎玉同志在那儿负责",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "向黎玉汇报新四军军部情况、部队上来情况，主要讲军部情况，并请黎玉帮助搞驻地。",
+        "process_text": "向黎玉汇报新四军军部情况、部队上来情况，主要讲军部情况，并请黎玉帮助搞驻地。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0016"
+        ],
+        "evidence_quote": "就向他汇报新四军军部的情况，另外部队上来的情况，主要是讲军部的情况，请他帮助搞驻地。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "驻地安排在临沂西关的天主教堂。",
+        "process_text": "安排住在临沂西关的天主教堂。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0016"
+        ],
+        "evidence_quote": "我们就住在临沂的西关，里头有个天主教堂，就住在那个地方。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC08-DE005-P01",
+        "target_stage_id": "BATCH04-DOC08-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC08-S0016",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC08-DE005-P02",
+        "target_stage_id": "BATCH04-DOC08-DE005-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC08-S0016",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

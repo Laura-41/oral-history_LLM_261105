@@ -1,0 +1,95 @@
+{
+  "validated_at": "2026-11-10T19:48:54",
+  "source_raw_response": "04_54份正式语料批处理/raw_responses/cuc_deepseek/20261110_194731_BATCH03-DOC03-W002.json",
+  "model_id": "cuc/deepseek",
+  "window_id": "BATCH03-DOC03-W002",
+  "technical_document_id": "BATCH03-DOC03",
+  "document_id": "06.陈海峰（二访）（二校后 阅读版）.docx",
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 6,
+    "unassigned_segment_count": 8,
+    "input_segment_count": 14,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH03-DOC03-W002-E01"
+  ],
+  "postprocessed_output": {
+    "window_id": "BATCH03-DOC03-W002",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC03-W002-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC03-S0021",
+          "BATCH03-DOC03-S0023",
+          "BATCH03-DOC03-S0025",
+          "BATCH03-DOC03-S0027",
+          "BATCH03-DOC03-S0029",
+          "BATCH03-DOC03-S0031"
+        ],
+        "event": {
+          "event_name": "团休养所转移至牧家亭山区并建立山洞医院收治伤员",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "转移至牧家亭山区并建立山洞医院",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们团的休养所",
+              "normalized_entity": "团休养所",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "伤员",
+              "normalized_entity": "伤员",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "铜陵、南陵和繁昌的交界，一个叫牧家亭（的地方）",
+              "normalized_value": "牧家亭"
+            },
+            {
+              "kind": "MANNER",
+              "value": "隐蔽",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "需要的时候呢，我们把比较重一点的伤员放到山洞里去了，所以我们就叫它“山洞医院”。",
+          "type_basis": "核心过程为团休养所转移、隐蔽并建立山洞医院收治伤员，属组织行动和物质变化；Actor为团休养所，Goal为伤员，角色均在MATERIAL允许词表内。不是单纯关系或存在过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": "候选触及非末窗口最后一个受访者片段，可能在下一窗口继续。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC03-S0018",
+      "BATCH03-DOC03-S0019",
+      "BATCH03-DOC03-S0020",
+      "BATCH03-DOC03-S0022",
+      "BATCH03-DOC03-S0024",
+      "BATCH03-DOC03-S0026",
+      "BATCH03-DOC03-S0028",
+      "BATCH03-DOC03-S0030"
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 5570,
+    "total_tokens": 15737,
+    "completion_tokens": 10167,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9563
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 10166000,
+    "time_to_first_token_ms": 82728
+  }
+}

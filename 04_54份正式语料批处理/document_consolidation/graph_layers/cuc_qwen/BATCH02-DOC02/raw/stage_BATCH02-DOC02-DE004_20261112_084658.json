@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-12T08:46:58",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC02-DE004",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC02-DE004",
+  "usage": {
+    "prompt_tokens": 1276,
+    "total_tokens": 9361,
+    "completion_tokens": 8085,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7142
+    },
+    "time_to_first_token_ms": 120654,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8084000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC02-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆被王兴纲带到东南局，黄道同志当东南局的书记。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起自王兴纲跟商震到南昌并与陈锐霆见面交换情况，止于王兴纲带陈锐霆到东南局并说明黄道任东南局书记；S0037 为对黄道及此前去过新四军办事处的补充说明。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"王兴纲到南昌并与陈锐霆见面交换情况\",\n      \"process_text\": \"王兴纲同志跟商震到了南昌，陈锐霆与王兴纲见面，互相讲了一下情况。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0035\"\n      ],\n      \"evidence_quote\": \"那么我的单线联系的领导人，王兴纲同志也跟商震到了南昌。这个时候我们见了面，互相的情况都讲了一下子。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"国共合作较好时王兴纲带陈锐霆到东南局\",\n      \"process_text\": \"这个时候国共合作比较好，王兴纲带陈锐霆到东南局，黄道同志当东南局的书记。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0035\"\n      ],\n      \"evidence_quote\": \"这个时候国共合作比较好，他带我到东南局，黄道同志当东南局的书记。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"补充黄道背景及以前与王兴纲去过两三次、（那儿）也是新四军办事处\",\n      \"process_text\": \"叙述者补充黄道同志是北师大毕业、江西上饶人，以前曾与王兴纲去过两三次，（那儿）也是新四军办事处。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0037\"\n      ],\n      \"evidence_quote\": \"黄道同志是北师大毕业的，他是江西上饶人。以前我们去过两三次跟王兴纲一块去的，（那儿）也是新四军办事处。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE004-P01\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0035\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE004-P02\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE004-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0037\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC02-DE004",
+    "event_enrichment": {
+      "result_state": "陈锐霆被王兴纲带到东南局，黄道同志当东南局的书记。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起自王兴纲跟商震到南昌并与陈锐霆见面交换情况，止于王兴纲带陈锐霆到东南局并说明黄道任东南局书记；S0037 为对黄道及此前去过新四军办事处的补充说明。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC02-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "王兴纲到南昌并与陈锐霆见面交换情况",
+        "process_text": "王兴纲同志跟商震到了南昌，陈锐霆与王兴纲见面，互相讲了一下情况。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0035"
+        ],
+        "evidence_quote": "那么我的单线联系的领导人，王兴纲同志也跟商震到了南昌。这个时候我们见了面，互相的情况都讲了一下子。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "国共合作较好时王兴纲带陈锐霆到东南局",
+        "process_text": "这个时候国共合作比较好，王兴纲带陈锐霆到东南局，黄道同志当东南局的书记。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0035"
+        ],
+        "evidence_quote": "这个时候国共合作比较好，他带我到东南局，黄道同志当东南局的书记。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "补充黄道背景及以前与王兴纲去过两三次、（那儿）也是新四军办事处",
+        "process_text": "叙述者补充黄道同志是北师大毕业、江西上饶人，以前曾与王兴纲去过两三次，（那儿）也是新四军办事处。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0037"
+        ],
+        "evidence_quote": "黄道同志是北师大毕业的，他是江西上饶人。以前我们去过两三次跟王兴纲一块去的，（那儿）也是新四军办事处。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC02-DE004-P01",
+        "target_stage_id": "BATCH02-DOC02-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC02-S0035",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC02-DE004-P02",
+        "target_stage_id": "BATCH02-DOC02-DE004-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC02-S0037",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T08:35:15",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC03-DE004",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC03-DE004",
+  "usage": {
+    "prompt_tokens": 1397,
+    "total_tokens": 12431,
+    "completion_tokens": 11034,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9772
+    },
+    "time_to_first_token_ms": 165743,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11033000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC03-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"东北大学生到政治处担任敌工干事并教政治处人员喊话，同时说明当时部队缺乏日语翻译和有文化人才准备。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件起于 S0082 中“到了以后，才来了一个东北的大学生……作为敌工干事”，经 S0084 中教拼音和“缴枪不杀”等喊话内容，止于 S0084 中“所以咱们没有这个翻译的准备……”及 S0087 中“应该我们上面有这个有文化的人，但是好像没有准备这个人才”。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"缺乏准备背景下东北大学生到政治处任敌工干事\",\n      \"process_text\": \"出发抗战时候没有准备这个，部队没有；到了以后来了一个会日文的东北大学生，到政治处里边作为敌工干事。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0082\"\n      ],\n      \"evidence_quote\": \"没有条件呀，出发抗战时候没有准备这个，但是那个时候我们上边也不知道有没有，反正我们部队没有。到了以后，才来了一个东北的大学生，会日文，才到我们政治处里边作为敌工干事\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"教日语拼音和缴枪不杀等喊话内容\",\n      \"process_text\": \"教我们拼音、日语字母和“缴枪不杀”等喊话内容，说明中国话“缴枪不杀”对方听不懂。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0084\"\n      ],\n      \"evidence_quote\": \"教我们拼音，あいうえお（a、i、u、e、o）はひふへほ（ha、hi、hu、he、ho）（日语）50个字母，缴枪不杀，缴枪Giositelu Kilosanayi（日语），意思是你缴枪我不杀你，你说咱们中国话“缴枪不杀”，他听不懂。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"说明部队缺乏翻译准备\",\n      \"process_text\": \"所以没有这个翻译的准备，连师部都没有，不要说团里头了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0084\"\n      ],\n      \"evidence_quote\": \"所以咱们没有这个翻译的准备，连师部都没有，不要说团里头了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"评价上级缺乏有文化人才准备\",\n      \"process_text\": \"应该上面有有文化的人，但是好像没有准备这个人才。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0087\"\n      ],\n      \"evidence_quote\": \"应该我们上面有这个有文化的人，但是好像没有准备这个人才。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE004-P01\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0082\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE004-P02\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE004-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0084\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE004-P03\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE004-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0087\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC03-DE004",
+    "event_enrichment": {
+      "result_state": "东北大学生到政治处担任敌工干事并教政治处人员喊话，同时说明当时部队缺乏日语翻译和有文化人才准备。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "事件起于 S0082 中“到了以后，才来了一个东北的大学生……作为敌工干事”，经 S0084 中教拼音和“缴枪不杀”等喊话内容，止于 S0084 中“所以咱们没有这个翻译的准备……”及 S0087 中“应该我们上面有这个有文化的人，但是好像没有准备这个人才”。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC03-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "缺乏准备背景下东北大学生到政治处任敌工干事",
+        "process_text": "出发抗战时候没有准备这个，部队没有；到了以后来了一个会日文的东北大学生，到政治处里边作为敌工干事。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0082"
+        ],
+        "evidence_quote": "没有条件呀，出发抗战时候没有准备这个，但是那个时候我们上边也不知道有没有，反正我们部队没有。到了以后，才来了一个东北的大学生，会日文，才到我们政治处里边作为敌工干事",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "教日语拼音和缴枪不杀等喊话内容",
+        "process_text": "教我们拼音、日语字母和“缴枪不杀”等喊话内容，说明中国话“缴枪不杀”对方听不懂。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0084"
+        ],
+        "evidence_quote": "教我们拼音，あいうえお（a、i、u、e、o）はひふへほ（ha、hi、hu、he、ho）（日语）50个字母，缴枪不杀，缴枪Giositelu Kilosanayi（日语），意思是你缴枪我不杀你，你说咱们中国话“缴枪不杀”，他听不懂。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "说明部队缺乏翻译准备",
+        "process_text": "所以没有这个翻译的准备，连师部都没有，不要说团里头了。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0084"
+        ],
+        "evidence_quote": "所以咱们没有这个翻译的准备，连师部都没有，不要说团里头了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "评价上级缺乏有文化人才准备",
+        "process_text": "应该上面有有文化的人，但是好像没有准备这个人才。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0087"
+        ],
+        "evidence_quote": "应该我们上面有这个有文化的人，但是好像没有准备这个人才。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC03-DE004-P01",
+        "target_stage_id": "BATCH01-DOC03-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC03-S0082",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE004-P02",
+        "target_stage_id": "BATCH01-DOC03-DE004-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH01-DOC03-S0084",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE004-P03",
+        "target_stage_id": "BATCH01-DOC03-DE004-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH01-DOC03-S0087",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

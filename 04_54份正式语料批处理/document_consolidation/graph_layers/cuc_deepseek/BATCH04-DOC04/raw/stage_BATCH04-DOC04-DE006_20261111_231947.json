@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T23:19:47",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC04-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC04-DE006",
+  "usage": {
+    "prompt_tokens": 1281,
+    "total_tokens": 3943,
+    "completion_tokens": 2662,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1896
+    },
+    "time_to_first_token_ms": 21004,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC04-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆与妻子在四师结婚，婚礼以当晚安排的一桌饭形式完成。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈锐霆与妻子在党校熟悉并一同到四师为前因，以在四师由郭金林提议、邓子恢在场安排一桌饭后结婚为事件终点；后续赴抗大四分校不属于本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆与后来的妻子在党校已熟悉，并一同到四师。\",\n      \"process_text\": \"陈锐霆与妻子在党校熟悉后一同到四师。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0041\"\n      ],\n      \"evidence_quote\": \"我那个时候在党校就跟他（陈锐霆指了下儿子）母亲熟悉了，我们一块到了四师。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"邓子恢在四师询问情况，供给部长郭金林提议当晚办一桌饭为他们结婚。\",\n      \"process_text\": \"邓子恢询问陈锐霆带了什么，郭金林提议当晚弄一桌饭，为他们当天结婚。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0043\"\n      ],\n      \"evidence_quote\": \"邓政委就讲你带了什么东西，一个供给部长叫郭金林，说今天晚上弄一桌饭，给他们今天结婚\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC04-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆与妻子就在四师结婚。\",\n      \"process_text\": \"他们就在四师那里结了婚。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC04-S0043\"\n      ],\n      \"evidence_quote\": \"就在那里结了婚\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE006-P01\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE006-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0043\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC04-DE006-P02\",\n      \"target_stage_id\": \"BATCH04-DOC04-DE006-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC04-S0043\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC04-DE006",
+    "event_enrichment": {
+      "result_state": "陈锐霆与妻子在四师结婚，婚礼以当晚安排的一桌饭形式完成。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以陈锐霆与妻子在党校熟悉并一同到四师为前因，以在四师由郭金林提议、邓子恢在场安排一桌饭后结婚为事件终点；后续赴抗大四分校不属于本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC04-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆与后来的妻子在党校已熟悉，并一同到四师。",
+        "process_text": "陈锐霆与妻子在党校熟悉后一同到四师。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0041"
+        ],
+        "evidence_quote": "我那个时候在党校就跟他（陈锐霆指了下儿子）母亲熟悉了，我们一块到了四师。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "邓子恢在四师询问情况，供给部长郭金林提议当晚办一桌饭为他们结婚。",
+        "process_text": "邓子恢询问陈锐霆带了什么，郭金林提议当晚弄一桌饭，为他们当天结婚。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0043"
+        ],
+        "evidence_quote": "邓政委就讲你带了什么东西，一个供给部长叫郭金林，说今天晚上弄一桌饭，给他们今天结婚",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC04-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆与妻子就在四师结婚。",
+        "process_text": "他们就在四师那里结了婚。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC04-S0043"
+        ],
+        "evidence_quote": "就在那里结了婚",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC04-DE006-P01",
+        "target_stage_id": "BATCH04-DOC04-DE006-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC04-S0043",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC04-DE006-P02",
+        "target_stage_id": "BATCH04-DOC04-DE006-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC04-S0043",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

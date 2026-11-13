@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T16:33:11",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC03-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC03-DE005",
+  "usage": {
+    "prompt_tokens": 1343,
+    "total_tokens": 7516,
+    "completion_tokens": 6173,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5216
+    },
+    "time_to_first_token_ms": 51428,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 6172000
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC03-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"该连在运城通过展览缴获品动员新兵，群众形成八路军是打胜仗部队的印象。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以杨永松说明带三营11连去动员新兵为起点，以在运城街上展览钢帽、日本信件、旗帜等缴获品并引起群众反应为终点；缴获与伤亡情况作为该连背景纳入。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"带三营11连去动员新兵，交代连长身份。\",\n      \"process_text\": \"杨永松等带三营11连去动员新兵，并说明连长刘杨初是湖南人、长征过来的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0064\"\n      ],\n      \"evidence_quote\": \"    杨永松：至于哪个单位缴多少我不知道，我们带的一个连去动员新兵的时候啊，这个连是三营11连，这上头写了，连长是刘杨初（音），湖南人，长征过来的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"该连缴获歪把子机枪，数量记忆不确定。\",\n      \"process_text\": \"该连又缴获机枪，杨永松回忆数量为两挺或三挺，但表示不确定。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0066\"\n      ],\n      \"evidence_quote\": \"    杨永松：他这个连又缴了……我在上面写的三挺好像是，两挺还是三挺。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC03-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"该连伤亡过半、装备三八式，并在运城展览缴获品动员新兵，群众反应积极。\",\n      \"process_text\": \"该连几十人已伤亡过半，战士除机枪外全部背三八式；在运城动员新兵时，拿钢帽、日本信件、旗帜等上街展览，群众称八路军是打胜仗的部队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC03-S0068\"\n      ],\n      \"evidence_quote\": \"    杨永松：这个歪把子机枪，日本人的钢帽，他这个连就几十个人，这已经打掉一半多了，战士全部背的是三八式，除了机枪以外。所以这个连呢，我们去动员新兵，在运城，他有钢帽，日本什么信啊什么旗帜之类的东西，拿到街上一展览，呦，说这八路军打胜仗的部队，歪把子机枪都是。它这比较新啊，进攻中国的都是新武器，步枪也是新的，所以他的射击比较准，很多人啊都头上（中弹）。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE005-P01\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0066\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC03-DE005-P02\",\n      \"target_stage_id\": \"BATCH01-DOC03-DE005-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH01-DOC03-S0068\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC03-DE005",
+    "event_enrichment": {
+      "result_state": "该连在运城通过展览缴获品动员新兵，群众形成八路军是打胜仗部队的印象。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以杨永松说明带三营11连去动员新兵为起点，以在运城街上展览钢帽、日本信件、旗帜等缴获品并引起群众反应为终点；缴获与伤亡情况作为该连背景纳入。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC03-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "带三营11连去动员新兵，交代连长身份。",
+        "process_text": "杨永松等带三营11连去动员新兵，并说明连长刘杨初是湖南人、长征过来的。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0064"
+        ],
+        "evidence_quote": "    杨永松：至于哪个单位缴多少我不知道，我们带的一个连去动员新兵的时候啊，这个连是三营11连，这上头写了，连长是刘杨初（音），湖南人，长征过来的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "该连缴获歪把子机枪，数量记忆不确定。",
+        "process_text": "该连又缴获机枪，杨永松回忆数量为两挺或三挺，但表示不确定。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0066"
+        ],
+        "evidence_quote": "    杨永松：他这个连又缴了……我在上面写的三挺好像是，两挺还是三挺。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC03-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "该连伤亡过半、装备三八式，并在运城展览缴获品动员新兵，群众反应积极。",
+        "process_text": "该连几十人已伤亡过半，战士除机枪外全部背三八式；在运城动员新兵时，拿钢帽、日本信件、旗帜等上街展览，群众称八路军是打胜仗的部队。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC03-S0068"
+        ],
+        "evidence_quote": "    杨永松：这个歪把子机枪，日本人的钢帽，他这个连就几十个人，这已经打掉一半多了，战士全部背的是三八式，除了机枪以外。所以这个连呢，我们去动员新兵，在运城，他有钢帽，日本什么信啊什么旗帜之类的东西，拿到街上一展览，呦，说这八路军打胜仗的部队，歪把子机枪都是。它这比较新啊，进攻中国的都是新武器，步枪也是新的，所以他的射击比较准，很多人啊都头上（中弹）。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC03-DE005-P01",
+        "target_stage_id": "BATCH01-DOC03-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC03-S0066",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC03-DE005-P02",
+        "target_stage_id": "BATCH01-DOC03-DE005-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH01-DOC03-S0068",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

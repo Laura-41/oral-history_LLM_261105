@@ -1,0 +1,71 @@
+{
+  "run_time": "2026-11-13T01:29:50",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC07-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC07-DE003",
+  "usage": {
+    "prompt_tokens": 1257,
+    "total_tokens": 6050,
+    "completion_tokens": 4793,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3981
+    },
+    "time_to_first_token_ms": 71239,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4792000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC07-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"讨逆战役获胜，原文表述为“打得非常漂亮”；泰安作战中慰问一纵叶飞部队，并查看泰安城附近地形。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点依据 S0015 中“特别是在头一年，在解放战争开始以前的停战期间，我们给国民党的部队发动了一个讨逆战役”；终点依据 S0017 中“所以进行一个讨逆的战役，这一仗我们打得非常漂亮！打泰安的时候……”所述战役结果及泰安相关行动。S0015 前半关于部队没准备、配合野战军的内容作为背景，不扩展本事件边界。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"停战期间对国民党汪精卫番号部队发动讨逆战役\",\n      \"process_text\": \"特别是在头一年，在解放战争开始以前的停战期间，我们给国民党的部队发动了一个讨逆战役，（敌人）都是国民党汪精卫那个番号的，以后蒋介石都把它整编了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0015\"\n      ],\n      \"evidence_quote\": \"特别是在头一年，在解放战争开始以前的停战期间，我们给国民党的部队发动了一个讨逆战役，（敌人）都是国民党汪精卫那个番号的，以后蒋介石都把它整编了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC07-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"讨逆战役获胜，泰安作战中慰问一纵叶飞部队并查看地形\",\n      \"process_text\": \"所以进行一个讨逆的战役，这一仗我们打得非常漂亮！打泰安的时候，我跟我们的组织部长张克，我们两个人就到泰安去慰问一纵叶飞那个部队。那个时候没有逛泰山的想法，我就是在泰安城附近看看那个地形。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC07-S0017\"\n      ],\n      \"evidence_quote\": \"所以进行一个讨逆的战役，这一仗我们打得非常漂亮！打泰安的时候，我跟我们的组织部长张克，我们两个人就到泰安去慰问一纵叶飞那个部队。那个时候没有逛泰山的想法，我就是在泰安城附近看看那个地形。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC07-DE003-P01\",\n      \"target_stage_id\": \"BATCH05-DOC07-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC07-S0017\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC07-DE003",
+    "event_enrichment": {
+      "result_state": "讨逆战役获胜，原文表述为“打得非常漂亮”；泰安作战中慰问一纵叶飞部队，并查看泰安城附近地形。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点依据 S0015 中“特别是在头一年，在解放战争开始以前的停战期间，我们给国民党的部队发动了一个讨逆战役”；终点依据 S0017 中“所以进行一个讨逆的战役，这一仗我们打得非常漂亮！打泰安的时候……”所述战役结果及泰安相关行动。S0015 前半关于部队没准备、配合野战军的内容作为背景，不扩展本事件边界。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC07-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "停战期间对国民党汪精卫番号部队发动讨逆战役",
+        "process_text": "特别是在头一年，在解放战争开始以前的停战期间，我们给国民党的部队发动了一个讨逆战役，（敌人）都是国民党汪精卫那个番号的，以后蒋介石都把它整编了。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0015"
+        ],
+        "evidence_quote": "特别是在头一年，在解放战争开始以前的停战期间，我们给国民党的部队发动了一个讨逆战役，（敌人）都是国民党汪精卫那个番号的，以后蒋介石都把它整编了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC07-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "讨逆战役获胜，泰安作战中慰问一纵叶飞部队并查看地形",
+        "process_text": "所以进行一个讨逆的战役，这一仗我们打得非常漂亮！打泰安的时候，我跟我们的组织部长张克，我们两个人就到泰安去慰问一纵叶飞那个部队。那个时候没有逛泰山的想法，我就是在泰安城附近看看那个地形。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC07-S0017"
+        ],
+        "evidence_quote": "所以进行一个讨逆的战役，这一仗我们打得非常漂亮！打泰安的时候，我跟我们的组织部长张克，我们两个人就到泰安去慰问一纵叶飞那个部队。那个时候没有逛泰山的想法，我就是在泰安城附近看看那个地形。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC07-DE003-P01",
+        "target_stage_id": "BATCH05-DOC07-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC07-S0017",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

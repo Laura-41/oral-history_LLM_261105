@@ -1,0 +1,1016 @@
+图谱新增层批量执行：cuc/qwen
+日志：04_54份正式语料批处理/run_logs/GRAPH_ALL_cuc_qwen_20261112_184401_pid39647.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+单次 API 等待上限：1800s（DeepSeek 大请求上游固定 30 分钟回 500/504，建议 1200 提前放弃；Qwen 线用 3600）
+运行模式：STAGE ONLY —— 只跑快的二级阶段；不调用 entity_time、不做后处理/验收/导出
+语料口径：60 份总账 = 6 份人工 Demo + 54 份正式语料；BATCH01 三份同为正式语料，全数纳入。
+
+一级层结果 54 份｜新增层已验收 1 份｜本次待跑 53 份
+待跑清单：
+  BATCH01-DOC01
+  BATCH01-DOC02
+  BATCH01-DOC03
+  BATCH02-DOC02
+  BATCH02-DOC03
+  BATCH02-DOC04
+  BATCH02-DOC05
+  BATCH02-DOC06
+  BATCH02-DOC07
+  BATCH02-DOC08
+  BATCH02-DOC09
+  BATCH03-DOC01
+  BATCH03-DOC02
+  BATCH03-DOC03
+  BATCH03-DOC04
+  BATCH03-DOC05
+  BATCH03-DOC06
+  BATCH03-DOC07
+  BATCH03-DOC08
+  BATCH03-DOC09
+  BATCH04-DOC01
+  BATCH04-DOC02
+  BATCH04-DOC03
+  BATCH04-DOC04
+  BATCH04-DOC05
+  BATCH04-DOC06
+  BATCH04-DOC07
+  BATCH04-DOC08
+  BATCH04-DOC09
+  BATCH05-DOC01
+  BATCH05-DOC02
+  BATCH05-DOC03
+  BATCH05-DOC04
+  BATCH05-DOC05
+  BATCH05-DOC06
+  BATCH05-DOC07
+  BATCH05-DOC08
+  BATCH05-DOC09
+  BATCH06-DOC01
+  BATCH06-DOC02
+  BATCH06-DOC03
+  BATCH06-DOC04
+  BATCH06-DOC05
+  BATCH06-DOC06
+  BATCH06-DOC07
+  BATCH06-DOC08
+  BATCH06-DOC09
+  BATCH07-DOC01
+  BATCH07-DOC02
+  BATCH07-DOC03
+  BATCH07-DOC04
+  BATCH07-DOC05
+  BATCH07-DOC06
+
+[1/54] ===== BATCH01-DOC01 只跑 stage =====
+[真实调用] BATCH01-DOC01 / cuc/qwen / tasks=stage
+  一级事件 11｜原文片段 86｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH01-DOC01/raw
+
+== stage：11 次调用 ==
+  [1/11] stage_BATCH01-DOC01-DE001 已有成功响应，跳过（断点续跑）
+  [2/11] stage_BATCH01-DOC01-DE002 已有成功响应，跳过（断点续跑）
+  [3/11] stage_BATCH01-DOC01-DE003 已有成功响应，跳过（断点续跑）
+  [4/11] stage_BATCH01-DOC01-DE004 已有成功响应，跳过（断点续跑）
+  [5/11] stage_BATCH01-DOC01-DE005 已有成功响应，跳过（断点续跑）
+  [6/11] stage_BATCH01-DOC01-DE006 已有成功响应，跳过（断点续跑）
+  [7/11] stage_BATCH01-DOC01-DE007 已有成功响应，跳过（断点续跑）
+  [8/11] stage_BATCH01-DOC01-DE008 已有成功响应，跳过（断点续跑）
+  [9/11] stage_BATCH01-DOC01-DE009 已有成功响应，跳过（断点续跑）
+  [10/11] stage_BATCH01-DOC01-DE010 已有成功响应，跳过（断点续跑）
+  [11/11] stage_BATCH01-DOC01-DE011 已有成功响应，跳过（断点续跑）
+
+全部完成：11 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH01-DOC01 --model cuc/qwen --write
+[2/54] ===== BATCH01-DOC02 只跑 stage =====
+[真实调用] BATCH01-DOC02 / cuc/qwen / tasks=stage
+  一级事件 5｜原文片段 84｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH01-DOC02/raw
+
+== stage：5 次调用 ==
+  [1/5] stage_BATCH01-DOC02-DE001 已有成功响应，跳过（断点续跑）
+  [2/5] stage_BATCH01-DOC02-DE002 已有成功响应，跳过（断点续跑）
+  [3/5] stage_BATCH01-DOC02-DE003 已有成功响应，跳过（断点续跑）
+  [4/5] stage_BATCH01-DOC02-DE004 已有成功响应，跳过（断点续跑）
+  [5/5] stage_BATCH01-DOC02-DE005 已有成功响应，跳过（断点续跑）
+
+全部完成：5 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH01-DOC02 --model cuc/qwen --write
+[3/54] ===== BATCH01-DOC03 只跑 stage =====
+[真实调用] BATCH01-DOC03 / cuc/qwen / tasks=stage
+  一级事件 7｜原文片段 97｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH01-DOC03/raw
+
+== stage：7 次调用 ==
+  [1/7] stage_BATCH01-DOC03-DE001 已有成功响应，跳过（断点续跑）
+  [2/7] stage_BATCH01-DOC03-DE002 已有成功响应，跳过（断点续跑）
+  [3/7] stage_BATCH01-DOC03-DE003 已有成功响应，跳过（断点续跑）
+  [4/7] stage_BATCH01-DOC03-DE004 已有成功响应，跳过（断点续跑）
+  [5/7] stage_BATCH01-DOC03-DE005 已有成功响应，跳过（断点续跑）
+  [6/7] stage_BATCH01-DOC03-DE006 已有成功响应，跳过（断点续跑）
+  [7/7] stage_BATCH01-DOC03-DE007 已有成功响应，跳过（断点续跑）
+
+全部完成：7 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH01-DOC03 --model cuc/qwen --write
+[4/54] BATCH02-DOC01 已完整验收，跳过
+[5/54] ===== BATCH02-DOC02 只跑 stage =====
+[真实调用] BATCH02-DOC02 / cuc/qwen / tasks=stage
+  一级事件 8｜原文片段 58｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH02-DOC02/raw
+
+== stage：8 次调用 ==
+  [1/8] stage_BATCH02-DOC02-DE001 已有成功响应，跳过（断点续跑）
+  [2/8] stage_BATCH02-DOC02-DE002 已有成功响应，跳过（断点续跑）
+  [3/8] stage_BATCH02-DOC02-DE003 已有成功响应，跳过（断点续跑）
+  [4/8] stage_BATCH02-DOC02-DE004 已有成功响应，跳过（断点续跑）
+  [5/8] stage_BATCH02-DOC02-DE005 已有成功响应，跳过（断点续跑）
+  [6/8] stage_BATCH02-DOC02-DE006 已有成功响应，跳过（断点续跑）
+  [7/8] stage_BATCH02-DOC02-DE007 已有成功响应，跳过（断点续跑）
+  [8/8] stage_BATCH02-DOC02-DE008 已有成功响应，跳过（断点续跑）
+
+全部完成：8 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH02-DOC02 --model cuc/qwen --write
+[6/54] ===== BATCH02-DOC03 只跑 stage =====
+[真实调用] BATCH02-DOC03 / cuc/qwen / tasks=stage
+  一级事件 12｜原文片段 69｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH02-DOC03/raw
+
+== stage：12 次调用 ==
+  [1/12] stage_BATCH02-DOC03-DE001 已有成功响应，跳过（断点续跑）
+  [2/12] stage_BATCH02-DOC03-DE002 已有成功响应，跳过（断点续跑）
+  [3/12] stage_BATCH02-DOC03-DE003 已有成功响应，跳过（断点续跑）
+  [4/12] stage_BATCH02-DOC03-DE004 已有成功响应，跳过（断点续跑）
+  [5/12] stage_BATCH02-DOC03-DE005 已有成功响应，跳过（断点续跑）
+  [6/12] stage_BATCH02-DOC03-DE006 已有成功响应，跳过（断点续跑）
+  [7/12] stage_BATCH02-DOC03-DE007 已有成功响应，跳过（断点续跑）
+  [8/12] stage_BATCH02-DOC03-DE008 已有成功响应，跳过（断点续跑）
+  [9/12] stage_BATCH02-DOC03-DE009 已有成功响应，跳过（断点续跑）
+  [10/12] stage_BATCH02-DOC03-DE010 已有成功响应，跳过（断点续跑）
+  [11/12] stage_BATCH02-DOC03-DE011 已有成功响应，跳过（断点续跑）
+  [12/12] stage_BATCH02-DOC03-DE012 已有成功响应，跳过（断点续跑）
+
+全部完成：12 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH02-DOC03 --model cuc/qwen --write
+[7/54] ===== BATCH02-DOC04 只跑 stage =====
+[真实调用] BATCH02-DOC04 / cuc/qwen / tasks=stage
+  一级事件 9｜原文片段 102｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH02-DOC04/raw
+
+== stage：9 次调用 ==
+  [1/9] stage_BATCH02-DOC04-DE001 已有成功响应，跳过（断点续跑）
+  [2/9] stage_BATCH02-DOC04-DE002 已有成功响应，跳过（断点续跑）
+  [3/9] stage_BATCH02-DOC04-DE003 已有成功响应，跳过（断点续跑）
+  [4/9] stage_BATCH02-DOC04-DE004 已有成功响应，跳过（断点续跑）
+  [5/9] stage_BATCH02-DOC04-DE005 已有成功响应，跳过（断点续跑）
+  [6/9] stage_BATCH02-DOC04-DE006 已有成功响应，跳过（断点续跑）
+  [7/9] stage_BATCH02-DOC04-DE007 已有成功响应，跳过（断点续跑）
+  [8/9] stage_BATCH02-DOC04-DE008 已有成功响应，跳过（断点续跑）
+  [9/9] stage_BATCH02-DOC04-DE009 已有成功响应，跳过（断点续跑）
+
+全部完成：9 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH02-DOC04 --model cuc/qwen --write
+[8/54] ===== BATCH02-DOC05 只跑 stage =====
+[真实调用] BATCH02-DOC05 / cuc/qwen / tasks=stage
+  一级事件 9｜原文片段 80｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH02-DOC05/raw
+
+== stage：9 次调用 ==
+  [1/9] stage_BATCH02-DOC05-DE001 已有成功响应，跳过（断点续跑）
+  [2/9] stage_BATCH02-DOC05-DE002 已有成功响应，跳过（断点续跑）
+  [3/9] stage_BATCH02-DOC05-DE003 已有成功响应，跳过（断点续跑）
+  [4/9] stage_BATCH02-DOC05-DE004 已有成功响应，跳过（断点续跑）
+  [5/9] 请求 stage/BATCH02-DOC05-DE005，输入 4,251 字符，最长等待 1800s……
+  完成：total_tokens=12402
+  [6/9] 请求 stage/BATCH02-DOC05-DE006，输入 3,471 字符，最长等待 1800s……
+  完成：total_tokens=6808
+  [7/9] 请求 stage/BATCH02-DOC05-DE007，输入 3,320 字符，最长等待 1800s……
+  完成：total_tokens=9480
+  [8/9] 请求 stage/BATCH02-DOC05-DE008，输入 3,597 字符，最长等待 1800s……
+  完成：total_tokens=10180
+  [9/9] 请求 stage/BATCH02-DOC05-DE009，输入 3,570 字符，最长等待 1800s……
+  完成：total_tokens=12747
+
+全部完成：9 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH02-DOC05 --model cuc/qwen --write
+[9/54] ===== BATCH02-DOC06 只跑 stage =====
+[真实调用] BATCH02-DOC06 / cuc/qwen / tasks=stage
+  一级事件 6｜原文片段 54｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH02-DOC06/raw
+
+== stage：6 次调用 ==
+  [1/6] stage_BATCH02-DOC06-DE001 已有成功响应，跳过（断点续跑）
+  [2/6] stage_BATCH02-DOC06-DE002 已有成功响应，跳过（断点续跑）
+  [3/6] stage_BATCH02-DOC06-DE003 已有成功响应，跳过（断点续跑）
+  [4/6] stage_BATCH02-DOC06-DE004 已有成功响应，跳过（断点续跑）
+  [5/6] stage_BATCH02-DOC06-DE005 已有成功响应，跳过（断点续跑）
+  [6/6] stage_BATCH02-DOC06-DE007 已有成功响应，跳过（断点续跑）
+
+全部完成：6 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH02-DOC06 --model cuc/qwen --write
+[10/54] ===== BATCH02-DOC07 只跑 stage =====
+[真实调用] BATCH02-DOC07 / cuc/qwen / tasks=stage
+  一级事件 12｜原文片段 68｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH02-DOC07/raw
+
+== stage：12 次调用 ==
+  [1/12] stage_BATCH02-DOC07-DE001 已有成功响应，跳过（断点续跑）
+  [2/12] stage_BATCH02-DOC07-DE002 已有成功响应，跳过（断点续跑）
+  [3/12] stage_BATCH02-DOC07-DE003 已有成功响应，跳过（断点续跑）
+  [4/12] stage_BATCH02-DOC07-DE004 已有成功响应，跳过（断点续跑）
+  [5/12] stage_BATCH02-DOC07-DE005 已有成功响应，跳过（断点续跑）
+  [6/12] stage_BATCH02-DOC07-DE006 已有成功响应，跳过（断点续跑）
+  [7/12] stage_BATCH02-DOC07-DE007 已有成功响应，跳过（断点续跑）
+  [8/12] stage_BATCH02-DOC07-DE008 已有成功响应，跳过（断点续跑）
+  [9/12] stage_BATCH02-DOC07-DE009 已有成功响应，跳过（断点续跑）
+  [10/12] stage_BATCH02-DOC07-DE010 已有成功响应，跳过（断点续跑）
+  [11/12] stage_BATCH02-DOC07-DE011 已有成功响应，跳过（断点续跑）
+  [12/12] stage_BATCH02-DOC07-DE012 已有成功响应，跳过（断点续跑）
+
+全部完成：12 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH02-DOC07 --model cuc/qwen --write
+[11/54] ===== BATCH02-DOC08 只跑 stage =====
+[真实调用] BATCH02-DOC08 / cuc/qwen / tasks=stage
+  一级事件 10｜原文片段 61｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH02-DOC08/raw
+
+== stage：10 次调用 ==
+  [1/10] stage_BATCH02-DOC08-DE001 已有成功响应，跳过（断点续跑）
+  [2/10] stage_BATCH02-DOC08-DE002 已有成功响应，跳过（断点续跑）
+  [3/10] stage_BATCH02-DOC08-DE003 已有成功响应，跳过（断点续跑）
+  [4/10] stage_BATCH02-DOC08-DE004 已有成功响应，跳过（断点续跑）
+  [5/10] stage_BATCH02-DOC08-DE005 已有成功响应，跳过（断点续跑）
+  [6/10] 请求 stage/BATCH02-DOC08-DE006，输入 3,354 字符，最长等待 1800s……
+  完成：total_tokens=9006
+  [7/10] 请求 stage/BATCH02-DOC08-DE007，输入 3,497 字符，最长等待 1800s……
+  完成：total_tokens=8840
+  [8/10] 请求 stage/BATCH02-DOC08-DE008，输入 3,644 字符，最长等待 1800s……
+  完成：total_tokens=11787
+  [9/10] 请求 stage/BATCH02-DOC08-DE009，输入 2,982 字符，最长等待 1800s……
+  完成：total_tokens=5655
+  [10/10] 请求 stage/BATCH02-DOC08-DE010，输入 3,993 字符，最长等待 1800s……
+  完成：total_tokens=13321
+
+全部完成：10 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH02-DOC08 --model cuc/qwen --write
+[12/54] ===== BATCH02-DOC09 只跑 stage =====
+[真实调用] BATCH02-DOC09 / cuc/qwen / tasks=stage
+  一级事件 9｜原文片段 100｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH02-DOC09/raw
+
+== stage：9 次调用 ==
+  [1/9] stage_BATCH02-DOC09-DE001 已有成功响应，跳过（断点续跑）
+  [2/9] stage_BATCH02-DOC09-DE002 已有成功响应，跳过（断点续跑）
+  [3/9] stage_BATCH02-DOC09-DE003 已有成功响应，跳过（断点续跑）
+  [4/9] stage_BATCH02-DOC09-DE004 已有成功响应，跳过（断点续跑）
+  [5/9] stage_BATCH02-DOC09-DE005 已有成功响应，跳过（断点续跑）
+  [6/9] stage_BATCH02-DOC09-DE006 已有成功响应，跳过（断点续跑）
+  [7/9] stage_BATCH02-DOC09-DE007 已有成功响应，跳过（断点续跑）
+  [8/9] stage_BATCH02-DOC09-DE008 已有成功响应，跳过（断点续跑）
+  [9/9] stage_BATCH02-DOC09-DE009 已有成功响应，跳过（断点续跑）
+
+全部完成：9 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH02-DOC09 --model cuc/qwen --write
+[13/54] ===== BATCH03-DOC01 只跑 stage =====
+[真实调用] BATCH03-DOC01 / cuc/qwen / tasks=stage
+  一级事件 10｜原文片段 84｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC01/raw
+
+== stage：10 次调用 ==
+  [1/10] stage_BATCH03-DOC01-DE001 已有成功响应，跳过（断点续跑）
+  [2/10] stage_BATCH03-DOC01-DE002 已有成功响应，跳过（断点续跑）
+  [3/10] stage_BATCH03-DOC01-DE003 已有成功响应，跳过（断点续跑）
+  [4/10] stage_BATCH03-DOC01-DE004 已有成功响应，跳过（断点续跑）
+  [5/10] stage_BATCH03-DOC01-DE005 已有成功响应，跳过（断点续跑）
+  [6/10] stage_BATCH03-DOC01-DE006 已有成功响应，跳过（断点续跑）
+  [7/10] stage_BATCH03-DOC01-DE007 已有成功响应，跳过（断点续跑）
+  [8/10] stage_BATCH03-DOC01-DE008 已有成功响应，跳过（断点续跑）
+  [9/10] stage_BATCH03-DOC01-DE009 已有成功响应，跳过（断点续跑）
+  [10/10] stage_BATCH03-DOC01-DE010 已有成功响应，跳过（断点续跑）
+
+全部完成：10 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH03-DOC01 --model cuc/qwen --write
+[14/54] ===== BATCH03-DOC02 只跑 stage =====
+[真实调用] BATCH03-DOC02 / cuc/qwen / tasks=stage
+  一级事件 8｜原文片段 52｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC02/raw
+
+== stage：8 次调用 ==
+  [1/8] stage_BATCH03-DOC02-DE001 已有成功响应，跳过（断点续跑）
+  [2/8] stage_BATCH03-DOC02-DE002 已有成功响应，跳过（断点续跑）
+  [3/8] stage_BATCH03-DOC02-DE003 已有成功响应，跳过（断点续跑）
+  [4/8] stage_BATCH03-DOC02-DE004 已有成功响应，跳过（断点续跑）
+  [5/8] stage_BATCH03-DOC02-DE005 已有成功响应，跳过（断点续跑）
+  [6/8] stage_BATCH03-DOC02-DE006 已有成功响应，跳过（断点续跑）
+  [7/8] stage_BATCH03-DOC02-DE007 已有成功响应，跳过（断点续跑）
+  [8/8] stage_BATCH03-DOC02-DE008 已有成功响应，跳过（断点续跑）
+
+全部完成：8 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH03-DOC02 --model cuc/qwen --write
+[15/54] ===== BATCH03-DOC03 只跑 stage =====
+[真实调用] BATCH03-DOC03 / cuc/qwen / tasks=stage
+  一级事件 6｜原文片段 92｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC03/raw
+
+== stage：6 次调用 ==
+  [1/6] stage_BATCH03-DOC03-DE001 已有成功响应，跳过（断点续跑）
+  [2/6] stage_BATCH03-DOC03-DE002 已有成功响应，跳过（断点续跑）
+  [3/6] stage_BATCH03-DOC03-DE003 已有成功响应，跳过（断点续跑）
+  [4/6] stage_BATCH03-DOC03-DE004 已有成功响应，跳过（断点续跑）
+  [5/6] stage_BATCH03-DOC03-DE005 已有成功响应，跳过（断点续跑）
+  [6/6] stage_BATCH03-DOC03-DE006 已有成功响应，跳过（断点续跑）
+
+全部完成：6 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH03-DOC03 --model cuc/qwen --write
+[16/54] ===== BATCH03-DOC04 只跑 stage =====
+[真实调用] BATCH03-DOC04 / cuc/qwen / tasks=stage
+  一级事件 5｜原文片段 73｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC04/raw
+
+== stage：5 次调用 ==
+  [1/5] stage_BATCH03-DOC04-DE001 已有成功响应，跳过（断点续跑）
+  [2/5] stage_BATCH03-DOC04-DE002 已有成功响应，跳过（断点续跑）
+  [3/5] stage_BATCH03-DOC04-DE003 已有成功响应，跳过（断点续跑）
+  [4/5] stage_BATCH03-DOC04-DE004 已有成功响应，跳过（断点续跑）
+  [5/5] stage_BATCH03-DOC04-DE005 已有成功响应，跳过（断点续跑）
+
+全部完成：5 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH03-DOC04 --model cuc/qwen --write
+[17/54] ===== BATCH03-DOC05 只跑 stage =====
+[真实调用] BATCH03-DOC05 / cuc/qwen / tasks=stage
+  一级事件 8｜原文片段 51｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC05/raw
+
+== stage：8 次调用 ==
+  [1/8] stage_BATCH03-DOC05-DE001 已有成功响应，跳过（断点续跑）
+  [2/8] stage_BATCH03-DOC05-DE002 已有成功响应，跳过（断点续跑）
+  [3/8] stage_BATCH03-DOC05-DE003 已有成功响应，跳过（断点续跑）
+  [4/8] stage_BATCH03-DOC05-DE004 已有成功响应，跳过（断点续跑）
+  [5/8] stage_BATCH03-DOC05-DE005 已有成功响应，跳过（断点续跑）
+  [6/8] stage_BATCH03-DOC05-DE006 已有成功响应，跳过（断点续跑）
+  [7/8] stage_BATCH03-DOC05-DE007 已有成功响应，跳过（断点续跑）
+  [8/8] stage_BATCH03-DOC05-DE008 已有成功响应，跳过（断点续跑）
+
+全部完成：8 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH03-DOC05 --model cuc/qwen --write
+[18/54] ===== BATCH03-DOC06 只跑 stage =====
+[真实调用] BATCH03-DOC06 / cuc/qwen / tasks=stage
+  一级事件 13｜原文片段 86｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC06/raw
+
+== stage：13 次调用 ==
+  [1/13] 请求 stage/BATCH03-DOC06-DE001，输入 4,117 字符，最长等待 1800s……
+  完成：total_tokens=7676
+  [2/13] 请求 stage/BATCH03-DOC06-DE002，输入 4,454 字符，最长等待 1800s……
+  完成：total_tokens=12166
+  [3/13] 请求 stage/BATCH03-DOC06-DE003，输入 3,882 字符，最长等待 1800s……
+  完成：total_tokens=8846
+  [4/13] 请求 stage/BATCH03-DOC06-DE004，输入 3,331 字符，最长等待 1800s……
+  完成：total_tokens=9836
+  [5/13] 请求 stage/BATCH03-DOC06-DE005，输入 3,681 字符，最长等待 1800s……
+  完成：total_tokens=10917
+  [6/13] 请求 stage/BATCH03-DOC06-DE006，输入 4,176 字符，最长等待 1800s……
+  完成：total_tokens=10731
+  [7/13] 请求 stage/BATCH03-DOC06-DE007，输入 3,333 字符，最长等待 1800s……
+  完成：total_tokens=6697
+  [8/13] 请求 stage/BATCH03-DOC06-DE008，输入 4,336 字符，最长等待 1800s……
+  完成：total_tokens=7485
+  [9/13] 请求 stage/BATCH03-DOC06-DE009，输入 3,266 字符，最长等待 1800s……
+  完成：total_tokens=6527
+  [10/13] 请求 stage/BATCH03-DOC06-DE010，输入 3,251 字符，最长等待 1800s……
+  完成：total_tokens=6934
+  [11/13] 请求 stage/BATCH03-DOC06-DE011，输入 3,427 字符，最长等待 1800s……
+  完成：total_tokens=8380
+  [12/13] 请求 stage/BATCH03-DOC06-DE012，输入 6,950 字符，最长等待 1800s……
+  完成：total_tokens=17803
+  [13/13] 请求 stage/BATCH03-DOC06-DE013，输入 3,955 字符，最长等待 1800s……
+  完成：total_tokens=11259
+
+全部完成：13 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH03-DOC06 --model cuc/qwen --write
+[19/54] ===== BATCH03-DOC07 只跑 stage =====
+[真实调用] BATCH03-DOC07 / cuc/qwen / tasks=stage
+  一级事件 5｜原文片段 85｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC07/raw
+
+== stage：5 次调用 ==
+  [1/5] 请求 stage/BATCH03-DOC07-DE001，输入 7,560 字符，最长等待 1800s……
+  完成：total_tokens=22994
+  [2/5] 请求 stage/BATCH03-DOC07-DE002，输入 7,716 字符，最长等待 1800s……
+  完成：total_tokens=21628
+  [3/5] 请求 stage/BATCH03-DOC07-DE003，输入 5,338 字符，最长等待 1800s……
+  完成：total_tokens=17154
+  [4/5] 请求 stage/BATCH03-DOC07-DE004，输入 6,312 字符，最长等待 1800s……
+  完成：total_tokens=20057
+  [5/5] 请求 stage/BATCH03-DOC07-DE005，输入 5,993 字符，最长等待 1800s……
+  完成：total_tokens=13440
+
+全部完成：5 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH03-DOC07 --model cuc/qwen --write
+[20/54] ===== BATCH03-DOC08 只跑 stage =====
+[真实调用] BATCH03-DOC08 / cuc/qwen / tasks=stage
+  一级事件 3｜原文片段 135｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC08/raw
+
+== stage：3 次调用 ==
+  [1/3] 请求 stage/BATCH03-DOC08-DE001，输入 4,748 字符，最长等待 1800s……
+  完成：total_tokens=16427
+  [2/3] 请求 stage/BATCH03-DOC08-DE002，输入 12,689 字符，最长等待 1800s……
+  完成：total_tokens=22970
+  [3/3] 请求 stage/BATCH03-DOC08-DE003，输入 3,238 字符，最长等待 1800s……
+  完成：total_tokens=6494
+
+全部完成：3 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH03-DOC08 --model cuc/qwen --write
+[21/54] ===== BATCH03-DOC09 只跑 stage =====
+[真实调用] BATCH03-DOC09 / cuc/qwen / tasks=stage
+  一级事件 9｜原文片段 98｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH03-DOC09/raw
+
+== stage：9 次调用 ==
+  [1/9] 请求 stage/BATCH03-DOC09-DE001，输入 5,454 字符，最长等待 1800s……
+  完成：total_tokens=14267
+  [2/9] 请求 stage/BATCH03-DOC09-DE002，输入 5,022 字符，最长等待 1800s……
+  完成：total_tokens=13733
+  [3/9] 请求 stage/BATCH03-DOC09-DE003，输入 3,355 字符，最长等待 1800s……
+  完成：total_tokens=8146
+  [4/9] 请求 stage/BATCH03-DOC09-DE004，输入 3,618 字符，最长等待 1800s……
+  完成：total_tokens=10240
+  [5/9] 请求 stage/BATCH03-DOC09-DE005，输入 3,932 字符，最长等待 1800s……
+  完成：total_tokens=11032
+  [6/9] 请求 stage/BATCH03-DOC09-DE006，输入 3,399 字符，最长等待 1800s……
+  完成：total_tokens=7501
+  [7/9] 请求 stage/BATCH03-DOC09-DE007，输入 2,915 字符，最长等待 1800s……
+  完成：total_tokens=7739
+  [8/9] 请求 stage/BATCH03-DOC09-DE008，输入 3,212 字符，最长等待 1800s……
+  完成：total_tokens=6607
+  [9/9] 请求 stage/BATCH03-DOC09-DE009，输入 3,054 字符，最长等待 1800s……
+  完成：total_tokens=6891
+
+全部完成：9 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH03-DOC09 --model cuc/qwen --write
+[22/54] ===== BATCH04-DOC01 只跑 stage =====
+[真实调用] BATCH04-DOC01 / cuc/qwen / tasks=stage
+  一级事件 8｜原文片段 188｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH04-DOC01/raw
+
+== stage：8 次调用 ==
+  [1/8] 请求 stage/BATCH04-DOC01-DE001，输入 5,553 字符，最长等待 1800s……
+  完成：total_tokens=15621
+  [2/8] 请求 stage/BATCH04-DOC01-DE002，输入 5,252 字符，最长等待 1800s……
+  完成：total_tokens=15116
+  [3/8] 请求 stage/BATCH04-DOC01-DE003，输入 4,362 字符，最长等待 1800s……
+  完成：total_tokens=11727
+  [4/8] 请求 stage/BATCH04-DOC01-DE004，输入 4,008 字符，最长等待 1800s……
+  完成：total_tokens=9367
+  [5/8] 请求 stage/BATCH04-DOC01-DE005，输入 4,578 字符，最长等待 1800s……
+  完成：total_tokens=11869
+  [6/8] 请求 stage/BATCH04-DOC01-DE006，输入 4,603 字符，最长等待 1800s……
+  完成：total_tokens=12042
+  [7/8] 请求 stage/BATCH04-DOC01-DE007，输入 7,478 字符，最长等待 1800s……
+  完成：total_tokens=27290
+  [8/8] 请求 stage/BATCH04-DOC01-DE008，输入 4,606 字符，最长等待 1800s……
+  完成：total_tokens=13602
+
+全部完成：8 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH04-DOC01 --model cuc/qwen --write
+[23/54] ===== BATCH04-DOC02 只跑 stage =====
+[真实调用] BATCH04-DOC02 / cuc/qwen / tasks=stage
+  一级事件 9｜原文片段 130｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH04-DOC02/raw
+
+== stage：9 次调用 ==
+  [1/9] 请求 stage/BATCH04-DOC02-DE001，输入 4,929 字符，最长等待 1800s……
+  完成：total_tokens=12660
+  [2/9] 请求 stage/BATCH04-DOC02-DE002，输入 3,733 字符，最长等待 1800s……
+  完成：total_tokens=12205
+  [3/9] 请求 stage/BATCH04-DOC02-DE003，输入 6,353 字符，最长等待 1800s……
+  完成：total_tokens=18354
+  [4/9] 请求 stage/BATCH04-DOC02-DE004，输入 8,153 字符，最长等待 1800s……
+  完成：total_tokens=14954
+  [5/9] 请求 stage/BATCH04-DOC02-DE005，输入 4,691 字符，最长等待 1800s……
+  完成：total_tokens=12715
+  [6/9] 请求 stage/BATCH04-DOC02-DE006，输入 4,428 字符，最长等待 1800s……
+  完成：total_tokens=12745
+  [7/9] 请求 stage/BATCH04-DOC02-DE007，输入 3,740 字符，最长等待 1800s……
+  完成：total_tokens=14109
+  [8/9] 请求 stage/BATCH04-DOC02-DE008，输入 3,958 字符，最长等待 1800s……
+  完成：total_tokens=10553
+  [9/9] 请求 stage/BATCH04-DOC02-DE009，输入 3,681 字符，最长等待 1800s……
+  完成：total_tokens=10974
+
+全部完成：9 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH04-DOC02 --model cuc/qwen --write
+[24/54] ===== BATCH04-DOC03 只跑 stage =====
+[真实调用] BATCH04-DOC03 / cuc/qwen / tasks=stage
+  一级事件 9｜原文片段 73｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH04-DOC03/raw
+
+== stage：9 次调用 ==
+  [1/9] 请求 stage/BATCH04-DOC03-DE001，输入 3,076 字符，最长等待 1800s……
+  完成：total_tokens=8018
+  [2/9] 请求 stage/BATCH04-DOC03-DE002，输入 4,122 字符，最长等待 1800s……
+  完成：total_tokens=10829
+  [3/9] 请求 stage/BATCH04-DOC03-DE003，输入 3,750 字符，最长等待 1800s……
+  完成：total_tokens=10179
+  [4/9] 请求 stage/BATCH04-DOC03-DE004，输入 4,644 字符，最长等待 1800s……
+  完成：total_tokens=20078
+  [5/9] 请求 stage/BATCH04-DOC03-DE005，输入 7,416 字符，最长等待 1800s……
+  完成：total_tokens=17973
+  [6/9] 请求 stage/BATCH04-DOC03-DE006，输入 4,005 字符，最长等待 1800s……
+  完成：total_tokens=8862
+  [7/9] 请求 stage/BATCH04-DOC03-DE007，输入 3,514 字符，最长等待 1800s……
+  完成：total_tokens=7812
+  [8/9] 请求 stage/BATCH04-DOC03-DE008，输入 3,462 字符，最长等待 1800s……
+  完成：total_tokens=9420
+  [9/9] 请求 stage/BATCH04-DOC03-DE009，输入 3,925 字符，最长等待 1800s……
+  完成：total_tokens=10412
+
+全部完成：9 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH04-DOC03 --model cuc/qwen --write
+[25/54] ===== BATCH04-DOC04 只跑 stage =====
+[真实调用] BATCH04-DOC04 / cuc/qwen / tasks=stage
+  一级事件 5｜原文片段 78｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH04-DOC04/raw
+
+== stage：5 次调用 ==
+  [1/5] 请求 stage/BATCH04-DOC04-DE001，输入 3,067 字符，最长等待 1800s……
+  完成：total_tokens=7700
+  [2/5] 请求 stage/BATCH04-DOC04-DE002，输入 5,787 字符，最长等待 1800s……
+  完成：total_tokens=16837
+  [3/5] 请求 stage/BATCH04-DOC04-DE003，输入 5,425 字符，最长等待 1800s……
+  完成：total_tokens=15708
+  [4/5] 请求 stage/BATCH04-DOC04-DE004，输入 3,700 字符，最长等待 1800s……
+  完成：total_tokens=10761
+  [5/5] 请求 stage/BATCH04-DOC04-DE005，输入 3,441 字符，最长等待 1800s……
+  完成：total_tokens=9291
+
+全部完成：5 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH04-DOC04 --model cuc/qwen --write
+[26/54] ===== BATCH04-DOC05 只跑 stage =====
+[真实调用] BATCH04-DOC05 / cuc/qwen / tasks=stage
+  一级事件 10｜原文片段 199｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH04-DOC05/raw
+
+== stage：10 次调用 ==
+  [1/10] 请求 stage/BATCH04-DOC05-DE001，输入 5,965 字符，最长等待 1800s……
+  完成：total_tokens=17212
+  [2/10] 请求 stage/BATCH04-DOC05-DE002，输入 4,286 字符，最长等待 1800s……
+  完成：total_tokens=14266
+  [3/10] 请求 stage/BATCH04-DOC05-DE003，输入 4,714 字符，最长等待 1800s……
+  完成：total_tokens=9873
+  [4/10] 请求 stage/BATCH04-DOC05-DE004，输入 3,174 字符，最长等待 1800s……
+  完成：total_tokens=5108
+  [5/10] 请求 stage/BATCH04-DOC05-DE005，输入 3,426 字符，最长等待 1800s……
+  完成：total_tokens=7443
+  [6/10] 请求 stage/BATCH04-DOC05-DE006，输入 4,130 字符，最长等待 1800s……
+  完成：total_tokens=11079
+  [7/10] 请求 stage/BATCH04-DOC05-DE007，输入 10,411 字符，最长等待 1800s……
+  完成：total_tokens=15350
+  [8/10] 请求 stage/BATCH04-DOC05-DE008，输入 2,807 字符，最长等待 1800s……
+  完成：total_tokens=2947
+  [9/10] 请求 stage/BATCH04-DOC05-DE009，输入 3,537 字符，最长等待 1800s……
+  完成：total_tokens=10189
+  [10/10] 请求 stage/BATCH04-DOC05-DE010，输入 3,331 字符，最长等待 1800s……
+  完成：total_tokens=9459
+
+全部完成：10 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH04-DOC05 --model cuc/qwen --write
+[27/54] ===== BATCH04-DOC06 只跑 stage =====
+[真实调用] BATCH04-DOC06 / cuc/qwen / tasks=stage
+  一级事件 7｜原文片段 142｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH04-DOC06/raw
+
+== stage：7 次调用 ==
+  [1/7] 请求 stage/BATCH04-DOC06-DE001，输入 5,810 字符，最长等待 1800s……
+  完成：total_tokens=12837
+  [2/7] 请求 stage/BATCH04-DOC06-DE002，输入 5,716 字符，最长等待 1800s……
+  完成：total_tokens=16922
+  [3/7] 请求 stage/BATCH04-DOC06-DE003，输入 7,153 字符，最长等待 1800s……
+  完成：total_tokens=19463
+  [4/7] 请求 stage/BATCH04-DOC06-DE004，输入 3,230 字符，最长等待 1800s……
+  完成：total_tokens=3729
+  [5/7] 请求 stage/BATCH04-DOC06-DE005，输入 4,667 字符，最长等待 1800s……
+  完成：total_tokens=15760
+  [6/7] 请求 stage/BATCH04-DOC06-DE006，输入 2,911 字符，最长等待 1800s……
+  完成：total_tokens=4398
+  [7/7] 请求 stage/BATCH04-DOC06-DE007，输入 9,074 字符，最长等待 1800s……
+  完成：total_tokens=16572
+
+全部完成：7 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH04-DOC06 --model cuc/qwen --write
+[28/54] ===== BATCH04-DOC07 只跑 stage =====
+[真实调用] BATCH04-DOC07 / cuc/qwen / tasks=stage
+  一级事件 8｜原文片段 189｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH04-DOC07/raw
+
+== stage：8 次调用 ==
+  [1/8] 请求 stage/BATCH04-DOC07-DE001，输入 4,430 字符，最长等待 1800s……
+  完成：total_tokens=14307
+  [2/8] 请求 stage/BATCH04-DOC07-DE002，输入 4,637 字符，最长等待 1800s……
+  完成：total_tokens=16906
+  [3/8] 请求 stage/BATCH04-DOC07-DE003，输入 3,436 字符，最长等待 1800s……
+  完成：total_tokens=6312
+  [4/8] 请求 stage/BATCH04-DOC07-DE004，输入 5,136 字符，最长等待 1800s……
+  完成：total_tokens=12052
+  [5/8] 请求 stage/BATCH04-DOC07-DE005，输入 9,128 字符，最长等待 1800s……
+  完成：total_tokens=15244
+  [6/8] 请求 stage/BATCH04-DOC07-DE006，输入 4,148 字符，最长等待 1800s……
+  完成：total_tokens=11677
+  [7/8] 请求 stage/BATCH04-DOC07-DE007，输入 6,307 字符，最长等待 1800s……
+  完成：total_tokens=16812
+  [8/8] 请求 stage/BATCH04-DOC07-DE008，输入 3,679 字符，最长等待 1800s……
+  完成：total_tokens=4774
+
+全部完成：8 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH04-DOC07 --model cuc/qwen --write
+[29/54] ===== BATCH04-DOC08 只跑 stage =====
+[真实调用] BATCH04-DOC08 / cuc/qwen / tasks=stage
+  一级事件 12｜原文片段 54｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH04-DOC08/raw
+
+== stage：12 次调用 ==
+  [1/12] 请求 stage/BATCH04-DOC08-DE001，输入 2,912 字符，最长等待 1800s……
+  完成：total_tokens=5103
+  [2/12] 请求 stage/BATCH04-DOC08-DE002，输入 2,803 字符，最长等待 1800s……
+  完成：total_tokens=7152
+  [3/12] 请求 stage/BATCH04-DOC08-DE003，输入 3,829 字符，最长等待 1800s……
+  完成：total_tokens=6574
+  [4/12] 请求 stage/BATCH04-DOC08-DE004，输入 2,929 字符，最长等待 1800s……
+  完成：total_tokens=9322
+  [5/12] 请求 stage/BATCH04-DOC08-DE005，输入 2,996 字符，最长等待 1800s……
+  完成：total_tokens=5048
+  [6/12] 请求 stage/BATCH04-DOC08-DE006，输入 3,475 字符，最长等待 1800s……
+  完成：total_tokens=10035
+  [7/12] 请求 stage/BATCH04-DOC08-DE007，输入 3,317 字符，最长等待 1800s……
+  完成：total_tokens=7128
+  [8/12] 请求 stage/BATCH04-DOC08-DE008，输入 3,633 字符，最长等待 1800s……
+  完成：total_tokens=9113
+  [9/12] 请求 stage/BATCH04-DOC08-DE009，输入 3,738 字符，最长等待 1800s……
+  完成：total_tokens=8412
+  [10/12] 请求 stage/BATCH04-DOC08-DE010，输入 3,078 字符，最长等待 1800s……
+  完成：total_tokens=6895
+  [11/12] 请求 stage/BATCH04-DOC08-DE011，输入 4,148 字符，最长等待 1800s……
+  完成：total_tokens=16752
+  [12/12] 请求 stage/BATCH04-DOC08-DE012，输入 3,605 字符，最长等待 1800s……
+  完成：total_tokens=7136
+
+全部完成：12 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH04-DOC08 --model cuc/qwen --write
+[30/54] ===== BATCH04-DOC09 只跑 stage =====
+[真实调用] BATCH04-DOC09 / cuc/qwen / tasks=stage
+  一级事件 1｜原文片段 74｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH04-DOC09/raw
+
+== stage：1 次调用 ==
+  [1/1] 请求 stage/BATCH04-DOC09-DE001，输入 12,748 字符，最长等待 1800s……
+  完成：total_tokens=25728
+
+全部完成：1 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH04-DOC09 --model cuc/qwen --write
+[31/54] ===== BATCH05-DOC01 只跑 stage =====
+[真实调用] BATCH05-DOC01 / cuc/qwen / tasks=stage
+  一级事件 7｜原文片段 180｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH05-DOC01/raw
+
+== stage：7 次调用 ==
+  [1/7] 请求 stage/BATCH05-DOC01-DE001，输入 6,010 字符，最长等待 1800s……
+  完成：total_tokens=15018
+  [2/7] 请求 stage/BATCH05-DOC01-DE002，输入 9,865 字符，最长等待 1800s……
+  完成：total_tokens=16228
+  [3/7] 请求 stage/BATCH05-DOC01-DE003，输入 3,850 字符，最长等待 1800s……
+  完成：total_tokens=9423
+  [4/7] 请求 stage/BATCH05-DOC01-DE004，输入 4,897 字符，最长等待 1800s……
+  完成：total_tokens=12976
+  [5/7] 请求 stage/BATCH05-DOC01-DE005，输入 3,524 字符，最长等待 1800s……
+  完成：total_tokens=9060
+  [6/7] 请求 stage/BATCH05-DOC01-DE006，输入 8,983 字符，最长等待 1800s……
+  完成：total_tokens=19730
+  [7/7] 请求 stage/BATCH05-DOC01-DE007，输入 4,206 字符，最长等待 1800s……
+  完成：total_tokens=7730
+
+全部完成：7 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH05-DOC01 --model cuc/qwen --write
+[32/54] ===== BATCH05-DOC02 只跑 stage =====
+[真实调用] BATCH05-DOC02 / cuc/qwen / tasks=stage
+  一级事件 6｜原文片段 201｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH05-DOC02/raw
+
+== stage：6 次调用 ==
+  [1/6] 请求 stage/BATCH05-DOC02-DE001，输入 3,435 字符，最长等待 1800s……
+  完成：total_tokens=9908
+  [2/6] 请求 stage/BATCH05-DOC02-DE002，输入 16,175 字符，最长等待 1800s……
+  完成：total_tokens=25775
+  [3/6] 请求 stage/BATCH05-DOC02-DE003，输入 6,258 字符，最长等待 1800s……
+  完成：total_tokens=21105
+  [4/6] 请求 stage/BATCH05-DOC02-DE004，输入 3,494 字符，最长等待 1800s……
+  完成：total_tokens=6795
+  [5/6] 请求 stage/BATCH05-DOC02-DE005，输入 4,412 字符，最长等待 1800s……
+  完成：total_tokens=9503
+  [6/6] 请求 stage/BATCH05-DOC02-DE006，输入 4,474 字符，最长等待 1800s……
+  完成：total_tokens=15745
+
+全部完成：6 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH05-DOC02 --model cuc/qwen --write
+[33/54] ===== BATCH05-DOC03 只跑 stage =====
+[真实调用] BATCH05-DOC03 / cuc/qwen / tasks=stage
+  一级事件 11｜原文片段 69｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH05-DOC03/raw
+
+== stage：11 次调用 ==
+  [1/11] 请求 stage/BATCH05-DOC03-DE001，输入 3,367 字符，最长等待 1800s……
+  完成：total_tokens=8394
+  [2/11] 请求 stage/BATCH05-DOC03-DE002，输入 3,954 字符，最长等待 1800s……
+  完成：total_tokens=13889
+  [3/11] 请求 stage/BATCH05-DOC03-DE003，输入 3,734 字符，最长等待 1800s……
+  完成：total_tokens=12011
+  [4/11] 请求 stage/BATCH05-DOC03-DE004，输入 3,434 字符，最长等待 1800s……
+  完成：total_tokens=7086
+  [5/11] 请求 stage/BATCH05-DOC03-DE005，输入 5,624 字符，最长等待 1800s……
+  完成：total_tokens=20130
+  [6/11] 请求 stage/BATCH05-DOC03-DE006，输入 4,379 字符，最长等待 1800s……
+  完成：total_tokens=12412
+  [7/11] 请求 stage/BATCH05-DOC03-DE007，输入 3,527 字符，最长等待 1800s……
+  完成：total_tokens=8434
+  [8/11] 请求 stage/BATCH05-DOC03-DE008，输入 3,431 字符，最长等待 1800s……
+  完成：total_tokens=8254
+  [9/11] 请求 stage/BATCH05-DOC03-DE009，输入 3,155 字符，最长等待 1800s……
+  完成：total_tokens=6789
+  [10/11] 请求 stage/BATCH05-DOC03-DE010，输入 3,042 字符，最长等待 1800s……
+  完成：total_tokens=6501
+  [11/11] 请求 stage/BATCH05-DOC03-DE011，输入 3,340 字符，最长等待 1800s……
+  完成：total_tokens=7413
+
+全部完成：11 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH05-DOC03 --model cuc/qwen --write
+[34/54] ===== BATCH05-DOC04 只跑 stage =====
+[真实调用] BATCH05-DOC04 / cuc/qwen / tasks=stage
+  一级事件 7｜原文片段 204｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH05-DOC04/raw
+
+== stage：7 次调用 ==
+  [1/7] 请求 stage/BATCH05-DOC04-DE001，输入 10,677 字符，最长等待 1800s……
+  完成：total_tokens=16343
+  [2/7] 请求 stage/BATCH05-DOC04-DE002，输入 4,003 字符，最长等待 1800s……
+  完成：total_tokens=17454
+  [3/7] 请求 stage/BATCH05-DOC04-DE003，输入 5,320 字符，最长等待 1800s……
+  完成：total_tokens=12925
+  [4/7] 请求 stage/BATCH05-DOC04-DE004，输入 3,844 字符，最长等待 1800s……
+  完成：total_tokens=9577
+  [5/7] 请求 stage/BATCH05-DOC04-DE005，输入 5,526 字符，最长等待 1800s……
+  完成：total_tokens=12520
+  [6/7] 请求 stage/BATCH05-DOC04-DE006，输入 5,499 字符，最长等待 1800s……
+  完成：total_tokens=13691
+  [7/7] 请求 stage/BATCH05-DOC04-DE007，输入 7,979 字符，最长等待 1800s……
+  完成：total_tokens=13509
+
+全部完成：7 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH05-DOC04 --model cuc/qwen --write
+[35/54] ===== BATCH05-DOC05 只跑 stage =====
+[真实调用] BATCH05-DOC05 / cuc/qwen / tasks=stage
+  一级事件 6｜原文片段 190｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH05-DOC05/raw
+
+== stage：6 次调用 ==
+  [1/6] 请求 stage/BATCH05-DOC05-DE001，输入 7,521 字符，最长等待 1800s……
+  完成：total_tokens=16706
+  [2/6] 请求 stage/BATCH05-DOC05-DE002，输入 6,930 字符，最长等待 1800s……
+  完成：total_tokens=18076
+  [3/6] 请求 stage/BATCH05-DOC05-DE003，输入 6,455 字符，最长等待 1800s……
+  完成：total_tokens=19312
+  [4/6] 请求 stage/BATCH05-DOC05-DE004，输入 5,038 字符，最长等待 1800s……
+  完成：total_tokens=19617
+  [5/6] 请求 stage/BATCH05-DOC05-DE005，输入 7,183 字符，最长等待 1800s……
+  完成：total_tokens=13432
+  [6/6] 请求 stage/BATCH05-DOC05-DE006，输入 2,998 字符，最长等待 1800s……
+  完成：total_tokens=6048
+
+全部完成：6 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH05-DOC05 --model cuc/qwen --write
+[36/54] ===== BATCH05-DOC06 只跑 stage =====
+[真实调用] BATCH05-DOC06 / cuc/qwen / tasks=stage
+  一级事件 5｜原文片段 64｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH05-DOC06/raw
+
+== stage：5 次调用 ==
+  [1/5] 请求 stage/BATCH05-DOC06-DE001，输入 4,748 字符，最长等待 1800s……
+  完成：total_tokens=10374
+  [2/5] 请求 stage/BATCH05-DOC06-DE002，输入 3,319 字符，最长等待 1800s……
+  完成：total_tokens=10088
+  [3/5] 请求 stage/BATCH05-DOC06-DE003，输入 3,474 字符，最长等待 1800s……
+  完成：total_tokens=8061
+  [4/5] 请求 stage/BATCH05-DOC06-DE004，输入 3,994 字符，最长等待 1800s……
+  完成：total_tokens=11031
+  [5/5] 请求 stage/BATCH05-DOC06-DE005，输入 5,495 字符，最长等待 1800s……
+  完成：total_tokens=14368
+
+全部完成：5 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH05-DOC06 --model cuc/qwen --write
+[37/54] ===== BATCH05-DOC07 只跑 stage =====
+[真实调用] BATCH05-DOC07 / cuc/qwen / tasks=stage
+  一级事件 11｜原文片段 65｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH05-DOC07/raw
+
+== stage：11 次调用 ==
+  [1/11] 请求 stage/BATCH05-DOC07-DE001，输入 4,331 字符，最长等待 1800s……
+  完成：total_tokens=13386
+  [2/11] 请求 stage/BATCH05-DOC07-DE002，输入 5,539 字符，最长等待 1800s……
+  完成：total_tokens=12053
+  [3/11] 请求 stage/BATCH05-DOC07-DE003，输入 3,126 字符，最长等待 1800s……
+  完成：total_tokens=6050
+  [4/11] 请求 stage/BATCH05-DOC07-DE004，输入 3,281 字符，最长等待 1800s……
+  完成：total_tokens=5535
+  [5/11] 请求 stage/BATCH05-DOC07-DE005，输入 3,863 字符，最长等待 1800s……
+  完成：total_tokens=8498
+  [6/11] 请求 stage/BATCH05-DOC07-DE006，输入 3,498 字符，最长等待 1800s……
+  完成：total_tokens=11537
+  [7/11] 请求 stage/BATCH05-DOC07-DE007，输入 3,098 字符，最长等待 1800s……
+  完成：total_tokens=6416
+  [8/11] 请求 stage/BATCH05-DOC07-DE008，输入 4,399 字符，最长等待 1800s……
+  完成：total_tokens=7268
+  [9/11] 请求 stage/BATCH05-DOC07-DE009，输入 3,497 字符，最长等待 1800s……
+  完成：total_tokens=6673
+  [10/11] 请求 stage/BATCH05-DOC07-DE010，输入 3,079 字符，最长等待 1800s……
+  完成：total_tokens=7077
+  [11/11] 请求 stage/BATCH05-DOC07-DE011，输入 4,601 字符，最长等待 1800s……
+  完成：total_tokens=8749
+
+全部完成：11 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH05-DOC07 --model cuc/qwen --write
+[38/54] ===== BATCH05-DOC08 只跑 stage =====
+[真实调用] BATCH05-DOC08 / cuc/qwen / tasks=stage
+  一级事件 5｜原文片段 182｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH05-DOC08/raw
+
+== stage：5 次调用 ==
+  [1/5] 请求 stage/BATCH05-DOC08-DE001，输入 6,188 字符，最长等待 1800s……
+  完成：total_tokens=11866
+  [2/5] 请求 stage/BATCH05-DOC08-DE002，输入 11,909 字符，最长等待 1800s……
+  完成：total_tokens=20078
+  [3/5] 请求 stage/BATCH05-DOC08-DE003，输入 4,667 字符，最长等待 1800s……
+  完成：total_tokens=14295
+  [4/5] 请求 stage/BATCH05-DOC08-DE004，输入 6,714 字符，最长等待 1800s……
+  完成：total_tokens=13073
+  [5/5] 请求 stage/BATCH05-DOC08-DE005，输入 3,393 字符，最长等待 1800s……
+  完成：total_tokens=6623
+
+全部完成：5 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH05-DOC08 --model cuc/qwen --write
+[39/54] ===== BATCH05-DOC09 只跑 stage =====
+[真实调用] BATCH05-DOC09 / cuc/qwen / tasks=stage
+  一级事件 4｜原文片段 189｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH05-DOC09/raw
+
+== stage：4 次调用 ==
+  [1/4] 请求 stage/BATCH05-DOC09-DE001，输入 11,757 字符，最长等待 1800s……
+  完成：total_tokens=21143
+  [2/4] 请求 stage/BATCH05-DOC09-DE002，输入 3,550 字符，最长等待 1800s……
+  完成：total_tokens=7899
+  [3/4] 请求 stage/BATCH05-DOC09-DE003，输入 3,847 字符，最长等待 1800s……
+  完成：total_tokens=9474
+  [4/4] 请求 stage/BATCH05-DOC09-DE004，输入 11,135 字符，最长等待 1800s……
+  完成：total_tokens=22644
+
+全部完成：4 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH05-DOC09 --model cuc/qwen --write
+[40/54] ===== BATCH06-DOC01 只跑 stage =====
+[真实调用] BATCH06-DOC01 / cuc/qwen / tasks=stage
+  一级事件 3｜原文片段 52｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH06-DOC01/raw
+
+== stage：3 次调用 ==
+  [1/3] 请求 stage/BATCH06-DOC01-DE001，输入 4,345 字符，最长等待 1800s……
+  完成：total_tokens=15979
+  [2/3] 请求 stage/BATCH06-DOC01-DE002，输入 4,624 字符，最长等待 1800s……
+  完成：total_tokens=10656
+  [3/3] 请求 stage/BATCH06-DOC01-DE003，输入 5,266 字符，最长等待 1800s……
+  完成：total_tokens=13090
+
+全部完成：3 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH06-DOC01 --model cuc/qwen --write
+[41/54] ===== BATCH06-DOC02 只跑 stage =====
+[真实调用] BATCH06-DOC02 / cuc/qwen / tasks=stage
+  一级事件 9｜原文片段 105｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH06-DOC02/raw
+
+== stage：9 次调用 ==
+  [1/9] stage_BATCH06-DOC02-DE001 已有成功响应，跳过（断点续跑）
+  [2/9] stage_BATCH06-DOC02-DE002 已有成功响应，跳过（断点续跑）
+  [3/9] stage_BATCH06-DOC02-DE003 已有成功响应，跳过（断点续跑）
+  [4/9] stage_BATCH06-DOC02-DE004 已有成功响应，跳过（断点续跑）
+  [5/9] stage_BATCH06-DOC02-DE005 已有成功响应，跳过（断点续跑）
+  [6/9] stage_BATCH06-DOC02-DE006 已有成功响应，跳过（断点续跑）
+  [7/9] stage_BATCH06-DOC02-DE007 已有成功响应，跳过（断点续跑）
+  [8/9] stage_BATCH06-DOC02-DE008 已有成功响应，跳过（断点续跑）
+  [9/9] stage_BATCH06-DOC02-DE009 已有成功响应，跳过（断点续跑）
+
+全部完成：9 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH06-DOC02 --model cuc/qwen --write
+[42/54] ===== BATCH06-DOC03 只跑 stage =====
+[真实调用] BATCH06-DOC03 / cuc/qwen / tasks=stage
+  一级事件 13｜原文片段 64｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH06-DOC03/raw
+
+== stage：13 次调用 ==
+  [1/13] stage_BATCH06-DOC03-DE001 已有成功响应，跳过（断点续跑）
+  [2/13] stage_BATCH06-DOC03-DE002 已有成功响应，跳过（断点续跑）
+  [3/13] stage_BATCH06-DOC03-DE003 已有成功响应，跳过（断点续跑）
+  [4/13] stage_BATCH06-DOC03-DE004 已有成功响应，跳过（断点续跑）
+  [5/13] stage_BATCH06-DOC03-DE005 已有成功响应，跳过（断点续跑）
+  [6/13] stage_BATCH06-DOC03-DE006 已有成功响应，跳过（断点续跑）
+  [7/13] stage_BATCH06-DOC03-DE007 已有成功响应，跳过（断点续跑）
+  [8/13] stage_BATCH06-DOC03-DE008 已有成功响应，跳过（断点续跑）
+  [9/13] stage_BATCH06-DOC03-DE009 已有成功响应，跳过（断点续跑）
+  [10/13] stage_BATCH06-DOC03-DE010 已有成功响应，跳过（断点续跑）
+  [11/13] stage_BATCH06-DOC03-DE011 已有成功响应，跳过（断点续跑）
+  [12/13] stage_BATCH06-DOC03-DE012 已有成功响应，跳过（断点续跑）
+  [13/13] stage_BATCH06-DOC03-DE013 已有成功响应，跳过（断点续跑）
+
+全部完成：13 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH06-DOC03 --model cuc/qwen --write
+[43/54] ===== BATCH06-DOC04 只跑 stage =====
+[真实调用] BATCH06-DOC04 / cuc/qwen / tasks=stage
+  一级事件 3｜原文片段 79｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH06-DOC04/raw
+
+== stage：3 次调用 ==
+  [1/3] stage_BATCH06-DOC04-DE001 已有成功响应，跳过（断点续跑）
+  [2/3] stage_BATCH06-DOC04-DE002 已有成功响应，跳过（断点续跑）
+  [3/3] stage_BATCH06-DOC04-DE003 已有成功响应，跳过（断点续跑）
+
+全部完成：3 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH06-DOC04 --model cuc/qwen --write
+[44/54] ===== BATCH06-DOC05 只跑 stage =====
+[真实调用] BATCH06-DOC05 / cuc/qwen / tasks=stage
+  一级事件 4｜原文片段 147｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH06-DOC05/raw
+
+== stage：4 次调用 ==
+  [1/4] stage_BATCH06-DOC05-DE001 已有成功响应，跳过（断点续跑）
+  [2/4] stage_BATCH06-DOC05-DE002 已有成功响应，跳过（断点续跑）
+  [3/4] stage_BATCH06-DOC05-DE003 已有成功响应，跳过（断点续跑）
+  [4/4] stage_BATCH06-DOC05-DE004 已有成功响应，跳过（断点续跑）
+
+全部完成：4 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH06-DOC05 --model cuc/qwen --write
+[45/54] ===== BATCH06-DOC06 只跑 stage =====
+[真实调用] BATCH06-DOC06 / cuc/qwen / tasks=stage
+  一级事件 14｜原文片段 57｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH06-DOC06/raw
+
+== stage：14 次调用 ==
+  [1/14] stage_BATCH06-DOC06-DE001 已有成功响应，跳过（断点续跑）
+  [2/14] stage_BATCH06-DOC06-DE002 已有成功响应，跳过（断点续跑）
+  [3/14] stage_BATCH06-DOC06-DE003 已有成功响应，跳过（断点续跑）
+  [4/14] stage_BATCH06-DOC06-DE004 已有成功响应，跳过（断点续跑）
+  [5/14] stage_BATCH06-DOC06-DE005 已有成功响应，跳过（断点续跑）
+  [6/14] stage_BATCH06-DOC06-DE006 已有成功响应，跳过（断点续跑）
+  [7/14] stage_BATCH06-DOC06-DE007 已有成功响应，跳过（断点续跑）
+  [8/14] stage_BATCH06-DOC06-DE008 已有成功响应，跳过（断点续跑）
+  [9/14] stage_BATCH06-DOC06-DE009 已有成功响应，跳过（断点续跑）
+  [10/14] stage_BATCH06-DOC06-DE010 已有成功响应，跳过（断点续跑）
+  [11/14] stage_BATCH06-DOC06-DE011 已有成功响应，跳过（断点续跑）
+  [12/14] stage_BATCH06-DOC06-DE012 已有成功响应，跳过（断点续跑）
+  [13/14] stage_BATCH06-DOC06-DE013 已有成功响应，跳过（断点续跑）
+  [14/14] stage_BATCH06-DOC06-DE014 已有成功响应，跳过（断点续跑）
+
+全部完成：14 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH06-DOC06 --model cuc/qwen --write
+[46/54] ===== BATCH06-DOC07 只跑 stage =====
+[真实调用] BATCH06-DOC07 / cuc/qwen / tasks=stage
+  一级事件 10｜原文片段 193｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH06-DOC07/raw
+
+== stage：10 次调用 ==
+  [1/10] stage_BATCH06-DOC07-DE001 已有成功响应，跳过（断点续跑）
+  [2/10] stage_BATCH06-DOC07-DE002 已有成功响应，跳过（断点续跑）
+  [3/10] stage_BATCH06-DOC07-DE003 已有成功响应，跳过（断点续跑）
+  [4/10] stage_BATCH06-DOC07-DE004 已有成功响应，跳过（断点续跑）
+  [5/10] stage_BATCH06-DOC07-DE005 已有成功响应，跳过（断点续跑）
+  [6/10] stage_BATCH06-DOC07-DE006 已有成功响应，跳过（断点续跑）
+  [7/10] stage_BATCH06-DOC07-DE007 已有成功响应，跳过（断点续跑）
+  [8/10] stage_BATCH06-DOC07-DE008 已有成功响应，跳过（断点续跑）
+  [9/10] stage_BATCH06-DOC07-DE009 已有成功响应，跳过（断点续跑）
+  [10/10] stage_BATCH06-DOC07-DE010 已有成功响应，跳过（断点续跑）
+
+全部完成：10 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH06-DOC07 --model cuc/qwen --write
+[47/54] ===== BATCH06-DOC08 只跑 stage =====
+[真实调用] BATCH06-DOC08 / cuc/qwen / tasks=stage
+  一级事件 7｜原文片段 74｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH06-DOC08/raw
+
+== stage：7 次调用 ==
+  [1/7] stage_BATCH06-DOC08-DE001 已有成功响应，跳过（断点续跑）
+  [2/7] stage_BATCH06-DOC08-DE002 已有成功响应，跳过（断点续跑）
+  [3/7] stage_BATCH06-DOC08-DE003 已有成功响应，跳过（断点续跑）
+  [4/7] stage_BATCH06-DOC08-DE004 已有成功响应，跳过（断点续跑）
+  [5/7] stage_BATCH06-DOC08-DE005 已有成功响应，跳过（断点续跑）
+  [6/7] stage_BATCH06-DOC08-DE006 已有成功响应，跳过（断点续跑）
+  [7/7] stage_BATCH06-DOC08-DE007 已有成功响应，跳过（断点续跑）
+
+全部完成：7 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH06-DOC08 --model cuc/qwen --write
+[48/54] ===== BATCH06-DOC09 只跑 stage =====
+[真实调用] BATCH06-DOC09 / cuc/qwen / tasks=stage
+  一级事件 7｜原文片段 104｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH06-DOC09/raw
+
+== stage：7 次调用 ==
+  [1/7] stage_BATCH06-DOC09-DE001 已有成功响应，跳过（断点续跑）
+  [2/7] stage_BATCH06-DOC09-DE002 已有成功响应，跳过（断点续跑）
+  [3/7] stage_BATCH06-DOC09-DE003 已有成功响应，跳过（断点续跑）
+  [4/7] stage_BATCH06-DOC09-DE004 已有成功响应，跳过（断点续跑）
+  [5/7] stage_BATCH06-DOC09-DE005 已有成功响应，跳过（断点续跑）
+  [6/7] stage_BATCH06-DOC09-DE006 已有成功响应，跳过（断点续跑）
+  [7/7] stage_BATCH06-DOC09-DE007 已有成功响应，跳过（断点续跑）
+
+全部完成：7 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH06-DOC09 --model cuc/qwen --write
+[49/54] ===== BATCH07-DOC01 只跑 stage =====
+[真实调用] BATCH07-DOC01 / cuc/qwen / tasks=stage
+  一级事件 10｜原文片段 57｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH07-DOC01/raw
+
+== stage：10 次调用 ==
+  [1/10] stage_BATCH07-DOC01-DE001 已有成功响应，跳过（断点续跑）
+  [2/10] stage_BATCH07-DOC01-DE002 已有成功响应，跳过（断点续跑）
+  [3/10] stage_BATCH07-DOC01-DE003 已有成功响应，跳过（断点续跑）
+  [4/10] stage_BATCH07-DOC01-DE004 已有成功响应，跳过（断点续跑）
+  [5/10] stage_BATCH07-DOC01-DE005 已有成功响应，跳过（断点续跑）
+  [6/10] stage_BATCH07-DOC01-DE006 已有成功响应，跳过（断点续跑）
+  [7/10] stage_BATCH07-DOC01-DE007 已有成功响应，跳过（断点续跑）
+  [8/10] stage_BATCH07-DOC01-DE008 已有成功响应，跳过（断点续跑）
+  [9/10] stage_BATCH07-DOC01-DE009 已有成功响应，跳过（断点续跑）
+  [10/10] stage_BATCH07-DOC01-DE010 已有成功响应，跳过（断点续跑）
+
+全部完成：10 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH07-DOC01 --model cuc/qwen --write
+[50/54] ===== BATCH07-DOC02 只跑 stage =====
+[真实调用] BATCH07-DOC02 / cuc/qwen / tasks=stage
+  一级事件 3｜原文片段 33｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH07-DOC02/raw
+
+== stage：3 次调用 ==
+  [1/3] stage_BATCH07-DOC02-DE001 已有成功响应，跳过（断点续跑）
+  [2/3] stage_BATCH07-DOC02-DE002 已有成功响应，跳过（断点续跑）
+  [3/3] stage_BATCH07-DOC02-DE003 已有成功响应，跳过（断点续跑）
+
+全部完成：3 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH07-DOC02 --model cuc/qwen --write
+[51/54] ===== BATCH07-DOC03 只跑 stage =====
+[真实调用] BATCH07-DOC03 / cuc/qwen / tasks=stage
+  一级事件 4｜原文片段 122｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH07-DOC03/raw
+
+== stage：4 次调用 ==
+  [1/4] stage_BATCH07-DOC03-DE001 已有成功响应，跳过（断点续跑）
+  [2/4] stage_BATCH07-DOC03-DE002 已有成功响应，跳过（断点续跑）
+  [3/4] stage_BATCH07-DOC03-DE003 已有成功响应，跳过（断点续跑）
+  [4/4] stage_BATCH07-DOC03-DE004 已有成功响应，跳过（断点续跑）
+
+全部完成：4 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH07-DOC03 --model cuc/qwen --write
+[52/54] ===== BATCH07-DOC04 只跑 stage =====
+[真实调用] BATCH07-DOC04 / cuc/qwen / tasks=stage
+  一级事件 11｜原文片段 143｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH07-DOC04/raw
+
+== stage：11 次调用 ==
+  [1/11] stage_BATCH07-DOC04-DE001 已有成功响应，跳过（断点续跑）
+  [2/11] stage_BATCH07-DOC04-DE002 已有成功响应，跳过（断点续跑）
+  [3/11] stage_BATCH07-DOC04-DE003 已有成功响应，跳过（断点续跑）
+  [4/11] stage_BATCH07-DOC04-DE004 已有成功响应，跳过（断点续跑）
+  [5/11] stage_BATCH07-DOC04-DE005 已有成功响应，跳过（断点续跑）
+  [6/11] stage_BATCH07-DOC04-DE006 已有成功响应，跳过（断点续跑）
+  [7/11] stage_BATCH07-DOC04-DE007 已有成功响应，跳过（断点续跑）
+  [8/11] stage_BATCH07-DOC04-DE008 已有成功响应，跳过（断点续跑）
+  [9/11] stage_BATCH07-DOC04-DE009 已有成功响应，跳过（断点续跑）
+  [10/11] stage_BATCH07-DOC04-DE010 已有成功响应，跳过（断点续跑）
+  [11/11] stage_BATCH07-DOC04-DE011 已有成功响应，跳过（断点续跑）
+
+全部完成：11 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH07-DOC04 --model cuc/qwen --write
+[53/54] ===== BATCH07-DOC05 只跑 stage =====
+[真实调用] BATCH07-DOC05 / cuc/qwen / tasks=stage
+  一级事件 2｜原文片段 92｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH07-DOC05/raw
+
+== stage：2 次调用 ==
+  [1/2] stage_BATCH07-DOC05-DE001 已有成功响应，跳过（断点续跑）
+  [2/2] stage_BATCH07-DOC05-DE002 已有成功响应，跳过（断点续跑）
+
+全部完成：2 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH07-DOC05 --model cuc/qwen --write
+[54/54] ===== BATCH07-DOC06 只跑 stage =====
+[真实调用] BATCH07-DOC06 / cuc/qwen / tasks=stage
+  一级事件 7｜原文片段 143｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH07-DOC06/raw
+
+== stage：7 次调用 ==
+  [1/7] stage_BATCH07-DOC06-DE001 已有成功响应，跳过（断点续跑）
+  [2/7] stage_BATCH07-DOC06-DE002 已有成功响应，跳过（断点续跑）
+  [3/7] stage_BATCH07-DOC06-DE003 已有成功响应，跳过（断点续跑）
+  [4/7] stage_BATCH07-DOC06-DE004 已有成功响应，跳过（断点续跑）
+  [5/7] stage_BATCH07-DOC06-DE005 已有成功响应，跳过（断点续跑）
+  [6/7] stage_BATCH07-DOC06-DE006 已有成功响应，跳过（断点续跑）
+  [7/7] stage_BATCH07-DOC06-DE007 已有成功响应，跳过（断点续跑）
+
+全部完成：7 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH07-DOC06 --model cuc/qwen --write
+
+===== stage 专跑结束：本轮跑齐 53 份，未跑齐 0 份 =====
+本模式不调用 entity_time、不做后处理／验收／导出；落盘的只是原始响应，仍需跑正常命令补全。
+下一步：caffeinate -i env TIMEOUT=1200 MODEL=cuc/qwen SKIP_AFTER=2 bash scripts/graph_run_all_in_terminal.sh

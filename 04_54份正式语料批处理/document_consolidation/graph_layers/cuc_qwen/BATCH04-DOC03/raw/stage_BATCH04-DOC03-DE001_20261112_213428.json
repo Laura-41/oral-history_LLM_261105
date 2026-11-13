@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T21:34:28",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC03-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC03-DE001",
+  "usage": {
+    "prompt_tokens": 1225,
+    "total_tokens": 8018,
+    "completion_tokens": 6793,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5558
+    },
+    "time_to_first_token_ms": 102110,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC03-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"师领导向连队干部简单讲解平原作战意图，连队干部知道了相关讲解内容。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于片段BATCH04-DOC03-S0004所述那几天要进行平原地区作战教育、师领导要把意图简单讲一讲；止于片段BATCH04-DOC03-S0006所述平原作战、村落战、队形、占领坡地洼地及改造地形等内容讲完。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"确定平原作战教育安排，师领导准备向连队干部简单讲解意图\",\n      \"process_text\": \"师的领导确定就是，那几天要进行平原地区作战的教育，师的领导要把这个意图简单给下面讲一讲。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0004\"\n      ],\n      \"evidence_quote\": \"杨永松：师的领导确定就是，那几天要进行平原地区作战的教育，师的领导要把这个意图简单给下面讲一讲。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"讲解平原作战条件下以村落战和村落掩护为主\",\n      \"process_text\": \"平原作战，主要一个没有山坡、土包、坟墓这个情况底下，主要就是要村落战，用村落来掩护咱们自己，你完全不能在平地打仗，目标太大。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0006\"\n      ],\n      \"evidence_quote\": \"平原作战，主要一个没有山坡、土包、坟墓这个情况底下，主要就是要村落战，用村落来掩护咱们自己，你完全不能在平地打仗，目标太大。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"讲解进攻时队形不宜过密，并说明连队干部简单了解\",\n      \"process_text\": \"将来一些战术上，有的时候要疏散一些，当然在进攻敌人的时候，队形不能够太密，这是跟连队干部简单一讲就是知道了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0006\"\n      ],\n      \"evidence_quote\": \"将来一些战术上，有的时候要疏散一些，当然在进攻敌人的时候，队形不能够太密，这是跟连队干部简单一讲就是知道了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"讲解利用坡地洼地并改造地形，借鉴129师经验领导群众\",\n      \"process_text\": \"占领坡地，也可以占洼地。再一个就是要改造地形，这就是根据129师他们先到济南的经验，就是到了地方以后，自己参加，领导群众。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0006\"\n      ],\n      \"evidence_quote\": \"占领坡地，也可以占洼地。再一个就是要改造地形，这就是根据129师他们先到济南的经验，就是到了地方以后，自己参加，领导群众。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE001-P01\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE001-P02\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE001-P03\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE001-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC03-DE001",
+    "event_enrichment": {
+      "result_state": "师领导向连队干部简单讲解平原作战意图，连队干部知道了相关讲解内容。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于片段BATCH04-DOC03-S0004所述那几天要进行平原地区作战教育、师领导要把意图简单讲一讲；止于片段BATCH04-DOC03-S0006所述平原作战、村落战、队形、占领坡地洼地及改造地形等内容讲完。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC03-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "确定平原作战教育安排，师领导准备向连队干部简单讲解意图",
+        "process_text": "师的领导确定就是，那几天要进行平原地区作战的教育，师的领导要把这个意图简单给下面讲一讲。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0004"
+        ],
+        "evidence_quote": "杨永松：师的领导确定就是，那几天要进行平原地区作战的教育，师的领导要把这个意图简单给下面讲一讲。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "讲解平原作战条件下以村落战和村落掩护为主",
+        "process_text": "平原作战，主要一个没有山坡、土包、坟墓这个情况底下，主要就是要村落战，用村落来掩护咱们自己，你完全不能在平地打仗，目标太大。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0006"
+        ],
+        "evidence_quote": "平原作战，主要一个没有山坡、土包、坟墓这个情况底下，主要就是要村落战，用村落来掩护咱们自己，你完全不能在平地打仗，目标太大。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "讲解进攻时队形不宜过密，并说明连队干部简单了解",
+        "process_text": "将来一些战术上，有的时候要疏散一些，当然在进攻敌人的时候，队形不能够太密，这是跟连队干部简单一讲就是知道了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0006"
+        ],
+        "evidence_quote": "将来一些战术上，有的时候要疏散一些，当然在进攻敌人的时候，队形不能够太密，这是跟连队干部简单一讲就是知道了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "讲解利用坡地洼地并改造地形，借鉴129师经验领导群众",
+        "process_text": "占领坡地，也可以占洼地。再一个就是要改造地形，这就是根据129师他们先到济南的经验，就是到了地方以后，自己参加，领导群众。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0006"
+        ],
+        "evidence_quote": "占领坡地，也可以占洼地。再一个就是要改造地形，这就是根据129师他们先到济南的经验，就是到了地方以后，自己参加，领导群众。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC03-DE001-P01",
+        "target_stage_id": "BATCH04-DOC03-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE001-P02",
+        "target_stage_id": "BATCH04-DOC03-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE001-P03",
+        "target_stage_id": "BATCH04-DOC03-DE001-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-12T13:26:55",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC02-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC02-DE001",
+  "usage": {
+    "prompt_tokens": 2056,
+    "total_tokens": 13709,
+    "completion_tokens": 11653,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10016
+    },
+    "time_to_first_token_ms": 171450,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11652000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-18\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC02-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"医务人员抠大便并灌肠后，大便仍泄不下来。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于粮食短缺、当地被吃光与代粮的描述，止于医务人员用泄油灌肠后仍泄不下来。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"当地解决不了，人口和部队多，把地方吃光，形成粮食短缺。\",\n      \"process_text\": \"    陈海峰：当地解决不了，当地孝丰只有九万多人口啊，我们双方部队十万多，第一次第二次，当时敌人就有四万多，没有七万，我们是一万多人，是不是。到后来，我们是四个纵队下来，是两万多人，那敌人是将近七万，是不是。那么就说十几万人，把这地方吃光了，等于蝗虫一样的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0009\"\n      ],\n      \"evidence_quote\": \"    陈海峰：当地解决不了，当地孝丰只有九万多人口啊，我们双方部队十万多，第一次第二次，当时敌人就有四万多，没有七万，我们是一万多人，是不是。到后来，我们是四个纵队下来，是两万多人，那敌人是将近七万，是不是。那么就说十几万人，把这地方吃光了，等于蝗虫一样的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"当地能吃的被吃光、用钱买不到后，开始用代粮食的东西。\",\n      \"process_text\": \"    陈海峰：把当地能吃的都吃掉了，先有钱买。一个月（以后），用钱买不到了，先是粮食供应给你。以后是代粮食的一些东西呀，连笋干都吃差不多了，腌的笋干呢都要吃掉了。那个能够代粮食的地瓜、山芋，地里头的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0011\"\n      ],\n      \"evidence_quote\": \"    陈海峰：把当地能吃的都吃掉了，先有钱买。一个月（以后），用钱买不到了，先是粮食供应给你。以后是代粮食的一些东西呀，连笋干都吃差不多了，腌的笋干呢都要吃掉了。那个能够代粮食的地瓜、山芋，地里头的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"代粮被当饭吃后，大便解不下来，医务人员也出现便秘。\",\n      \"process_text\": \"当饭吃以后呢，大便都解不下来！我们那时候大便都解不下来，讲得不好听啊，我们医务人员好一点了，大便（里边）都粗纤维啊，喝了很多水，它也解不下来呀。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0015\"\n      ],\n      \"evidence_quote\": \"当饭吃以后呢，大便都解不下来！我们那时候大便都解不下来，讲得不好听啊，我们医务人员好一点了，大便（里边）都粗纤维啊，喝了很多水，它也解不下来呀。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"医务人员套橡皮手套抠大便，并用泄油灌肠。\",\n      \"process_text\": \"解不下来，我们医务人员都套着那个橡皮手套，我给你抠啊，把那个大便（给你）抠下来呀，你给我抠啊……用这个泄油（灌肠）\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0015\"\n      ],\n      \"evidence_quote\": \"解不下来，我们医务人员都套着那个橡皮手套，我给你抠啊，把那个大便（给你）抠下来呀，你给我抠啊……用这个泄油（灌肠）\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"抠大便和灌肠后仍泄不下来。\",\n      \"process_text\": \"都泄不下来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0015\"\n      ],\n      \"evidence_quote\": \"都泄不下来。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE001-P01\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE001-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0011\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE001-P02\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE001-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0015\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE001-P03\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE001-P04\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0015\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE001-P04\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE001-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0015\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-18",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC02-DE001",
+    "event_enrichment": {
+      "result_state": "医务人员抠大便并灌肠后，大便仍泄不下来。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于粮食短缺、当地被吃光与代粮的描述，止于医务人员用泄油灌肠后仍泄不下来。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC02-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "当地解决不了，人口和部队多，把地方吃光，形成粮食短缺。",
+        "process_text": "    陈海峰：当地解决不了，当地孝丰只有九万多人口啊，我们双方部队十万多，第一次第二次，当时敌人就有四万多，没有七万，我们是一万多人，是不是。到后来，我们是四个纵队下来，是两万多人，那敌人是将近七万，是不是。那么就说十几万人，把这地方吃光了，等于蝗虫一样的。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0009"
+        ],
+        "evidence_quote": "    陈海峰：当地解决不了，当地孝丰只有九万多人口啊，我们双方部队十万多，第一次第二次，当时敌人就有四万多，没有七万，我们是一万多人，是不是。到后来，我们是四个纵队下来，是两万多人，那敌人是将近七万，是不是。那么就说十几万人，把这地方吃光了，等于蝗虫一样的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "当地能吃的被吃光、用钱买不到后，开始用代粮食的东西。",
+        "process_text": "    陈海峰：把当地能吃的都吃掉了，先有钱买。一个月（以后），用钱买不到了，先是粮食供应给你。以后是代粮食的一些东西呀，连笋干都吃差不多了，腌的笋干呢都要吃掉了。那个能够代粮食的地瓜、山芋，地里头的。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0011"
+        ],
+        "evidence_quote": "    陈海峰：把当地能吃的都吃掉了，先有钱买。一个月（以后），用钱买不到了，先是粮食供应给你。以后是代粮食的一些东西呀，连笋干都吃差不多了，腌的笋干呢都要吃掉了。那个能够代粮食的地瓜、山芋，地里头的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "代粮被当饭吃后，大便解不下来，医务人员也出现便秘。",
+        "process_text": "当饭吃以后呢，大便都解不下来！我们那时候大便都解不下来，讲得不好听啊，我们医务人员好一点了，大便（里边）都粗纤维啊，喝了很多水，它也解不下来呀。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0015"
+        ],
+        "evidence_quote": "当饭吃以后呢，大便都解不下来！我们那时候大便都解不下来，讲得不好听啊，我们医务人员好一点了，大便（里边）都粗纤维啊，喝了很多水，它也解不下来呀。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "医务人员套橡皮手套抠大便，并用泄油灌肠。",
+        "process_text": "解不下来，我们医务人员都套着那个橡皮手套，我给你抠啊，把那个大便（给你）抠下来呀，你给我抠啊……用这个泄油（灌肠）",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0015"
+        ],
+        "evidence_quote": "解不下来，我们医务人员都套着那个橡皮手套，我给你抠啊，把那个大便（给你）抠下来呀，你给我抠啊……用这个泄油（灌肠）",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "抠大便和灌肠后仍泄不下来。",
+        "process_text": "都泄不下来。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0015"
+        ],
+        "evidence_quote": "都泄不下来。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC02-DE001-P01",
+        "target_stage_id": "BATCH06-DOC02-DE001-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC02-S0011",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE001-P02",
+        "target_stage_id": "BATCH06-DOC02-DE001-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC02-S0015",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE001-P03",
+        "target_stage_id": "BATCH06-DOC02-DE001-P04",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC02-S0015",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE001-P04",
+        "target_stage_id": "BATCH06-DOC02-DE001-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC02-S0015",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

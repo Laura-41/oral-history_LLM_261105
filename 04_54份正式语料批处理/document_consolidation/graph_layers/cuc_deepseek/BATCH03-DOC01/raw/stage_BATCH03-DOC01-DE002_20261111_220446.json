@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T22:04:46",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC01-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC01-DE002",
+  "usage": {
+    "prompt_tokens": 1178,
+    "total_tokens": 3422,
+    "completion_tokens": 2244,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1439
+    },
+    "time_to_first_token_ms": 17349,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC01-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"妇女会承担包扎所的生活照护，儿童团在外放哨，包扎所在接近前线的情况下获得支援与警戒。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以片段S0023中妇女会照护、儿童团放哨及包扎所靠近前线的叙述为边界；未扩展到其他支援前线行动。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"背景：包扎所靠近前线，大部分战士支援前线，仅留少数人。\",\n      \"process_text\": \"剩下的战士都去支援前线，这里只留一少部分；包扎所接近前线，炮声、机枪声都听得到。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0023\"\n      ],\n      \"evidence_quote\": \"剩下的战士呢，都去支援前线去了，这里只留了一少部分。所以这个包扎所本身也是接近前线，很近，离得并不远，那炮声都听（得）到，打机枪也都听（得）到。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"妇女会为包扎所人员弄水、喂饭喂水、送吃喝并处理排泄照护，且经过训练。\",\n      \"process_text\": \"妇女会帮我们弄水、喂饭、喂水、送吃的喝的，拉屎拉尿都是训练她们搞。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0023\"\n      ],\n      \"evidence_quote\": \"那个妇女会帮我们弄水了，喂饭了，喂水了，送吃的喝的了什么东西，拉屎拉尿啦，都是训练她们搞。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC01-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"儿童团在包扎所外面放哨警戒。\",\n      \"process_text\": \"儿童团就在外面放哨。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC01-S0023\"\n      ],\n      \"evidence_quote\": \"儿童团就在外面放哨。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE002-P01\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0023\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC01-DE002-P02\",\n      \"target_stage_id\": \"BATCH03-DOC01-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC01-S0023\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V2-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC01-DE002",
+    "event_enrichment": {
+      "result_state": "妇女会承担包扎所的生活照护，儿童团在外放哨，包扎所在接近前线的情况下获得支援与警戒。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以片段S0023中妇女会照护、儿童团放哨及包扎所靠近前线的叙述为边界；未扩展到其他支援前线行动。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC01-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "背景：包扎所靠近前线，大部分战士支援前线，仅留少数人。",
+        "process_text": "剩下的战士都去支援前线，这里只留一少部分；包扎所接近前线，炮声、机枪声都听得到。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0023"
+        ],
+        "evidence_quote": "剩下的战士呢，都去支援前线去了，这里只留了一少部分。所以这个包扎所本身也是接近前线，很近，离得并不远，那炮声都听（得）到，打机枪也都听（得）到。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "妇女会为包扎所人员弄水、喂饭喂水、送吃喝并处理排泄照护，且经过训练。",
+        "process_text": "妇女会帮我们弄水、喂饭、喂水、送吃的喝的，拉屎拉尿都是训练她们搞。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0023"
+        ],
+        "evidence_quote": "那个妇女会帮我们弄水了，喂饭了，喂水了，送吃的喝的了什么东西，拉屎拉尿啦，都是训练她们搞。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC01-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "儿童团在包扎所外面放哨警戒。",
+        "process_text": "儿童团就在外面放哨。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC01-S0023"
+        ],
+        "evidence_quote": "儿童团就在外面放哨。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC01-DE002-P01",
+        "target_stage_id": "BATCH03-DOC01-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0023",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC01-DE002-P02",
+        "target_stage_id": "BATCH03-DOC01-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC01-S0023",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

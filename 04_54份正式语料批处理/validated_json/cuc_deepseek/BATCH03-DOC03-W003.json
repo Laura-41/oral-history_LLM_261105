@@ -1,0 +1,142 @@
+{
+  "validated_at": "2026-11-10T19:50:10",
+  "source_raw_response": "04_54份正式语料批处理/raw_responses/cuc_deepseek/20261110_194854_BATCH03-DOC03-W003.json",
+  "model_id": "cuc/deepseek",
+  "window_id": "BATCH03-DOC03-W003",
+  "technical_document_id": "BATCH03-DOC03",
+  "document_id": "06.陈海峰（二访）（二校后 阅读版）.docx",
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 8,
+    "unassigned_segment_count": 10,
+    "input_segment_count": 18,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH03-DOC03-W003-E02"
+  ],
+  "postprocessed_output": {
+    "window_id": "BATCH03-DOC03-W003",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC03-W003-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC03-S0029",
+          "BATCH03-DOC03-S0031",
+          "BATCH03-DOC03-S0032",
+          "BATCH03-DOC03-S0034",
+          "BATCH03-DOC03-S0036"
+        ],
+        "event": {
+          "event_name": "三支队在月亮洞山洞医院收治重伤员并防范日军",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "设立山洞医院收治重伤员",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "新四军第三支队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "比较重一点的伤员",
+              "normalized_entity": "重伤员",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "月亮洞山",
+              "normalized_value": "月亮洞山"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "小庙",
+              "normalized_value": "小庙"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "需要的时候呢，我们把比较重一点的伤员放到山洞里去了，所以我们就叫它“山洞医院”。",
+          "type_basis": "核心过程为把重伤员安置到山洞医院并收治，属物质过程；Actor为三支队，Goal为重伤员；角色均在MATERIAL允许词表内。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC03-W003-E02",
+        "source_segment_ids": [
+          "BATCH03-DOC03-S0041",
+          "BATCH03-DOC03-S0043",
+          "BATCH03-DOC03-S0045"
+        ],
+        "event": {
+          "event_name": "三支队在友军后撤后坚守阵地并开展游击战",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "坚守阵地并开展游击战",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们三支队",
+              "normalized_entity": "新四军第三支队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "这个阵地",
+              "normalized_entity": "三支队防地",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "铜、南、繁",
+              "normalized_value": "铜陵、南陵、繁昌地区"
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "牵制敌人，消灭敌人有生力量",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们坚守这个阵地。但是这个阵地不能让的，所以我们游击部队伸得很前，超过我们的防线",
+          "type_basis": "核心过程为坚守阵地并前伸游击部队开展游击战，属物质过程；Actor为三支队，Goal为阵地；非言语、心理或关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": "候选触及非末窗口最后一个受访者片段，可能在下一窗口继续。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC03-S0028",
+      "BATCH03-DOC03-S0030",
+      "BATCH03-DOC03-S0033",
+      "BATCH03-DOC03-S0035",
+      "BATCH03-DOC03-S0037",
+      "BATCH03-DOC03-S0038",
+      "BATCH03-DOC03-S0039",
+      "BATCH03-DOC03-S0040",
+      "BATCH03-DOC03-S0042",
+      "BATCH03-DOC03-S0044"
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 5718,
+    "total_tokens": 14910,
+    "completion_tokens": 9192,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8198
+    },
+    "time_to_first_token_ms": 76654,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4595500
+  }
+}

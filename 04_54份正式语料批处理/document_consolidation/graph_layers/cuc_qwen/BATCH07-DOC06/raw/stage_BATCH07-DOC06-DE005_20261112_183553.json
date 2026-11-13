@@ -1,0 +1,130 @@
+{
+  "run_time": "2026-11-12T18:35:53",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC06-DE005",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC06-DE005",
+  "usage": {
+    "prompt_tokens": 1625,
+    "total_tokens": 11460,
+    "completion_tokens": 9835,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8235
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9834000,
+    "time_to_first_token_ms": 197304
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC06-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰确认粟裕曾带恽前程多次侦察该路线，并认可双方对进一天可接应/到达的设想，同时说明路线经宣城、靠湖边、1支队、2支队和军部配合。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"从记者提及恽前程并转述粟裕带恽前程侦察路线开始，到陈海峰确认一天不要走两天半、记者确认一天能到结束。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"记者提及恽前程，陈海峰确认认识并经常联系。\",\n      \"process_text\": \"记者提到采访过恽前程，陈海峰表示知道，并说经常联系。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0067\",\n        \"BATCH07-DOC06-S0068\"\n      ],\n      \"evidence_quote\": \"    陈海峰：恽前程，知道，我们经常联系。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"记者转述粟裕曾带恽前程侦察路线，陈海峰确认多次去侦察。\",\n      \"process_text\": \"记者说恽前程提到粟裕曾带着恽前程侦察过这条路线，陈海峰回应多次去侦察。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0069\",\n        \"BATCH07-DOC06-S0070\"\n      ],\n      \"evidence_quote\": \"    陈海峰：多次去侦察！\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"记者说明恽前程指的是陈海峰走的路线，双方对进一天可接应。\",\n      \"process_text\": \"记者说明恽前程说的不是长江，而是陈海峰走的路线，双方对进一天就能接应上。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0071\",\n        \"BATCH07-DOC06-S0077\"\n      ],\n      \"evidence_quote\": \"    记者：恽前程说的不是长江，他说的是您老走的那条路线。他们从茅山那边，往军部那方向走，你们从军部往他们那边撤，双方对进啊，一天就能接应上。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE005-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"陈海峰确认路线经宣城、靠湖边，1支队、2支队和军部配合。\",\n      \"process_text\": \"陈海峰确认是的是的，说明中间路线走宣城，靠湖边，1支队、2支队和军部配合。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0078\"\n      ],\n      \"evidence_quote\": \"    陈海峰：是的是的。他中间那条路线是走宣城。宣城那边有两个湖，一个叫19湖（音），一个（是）东坝那里（的）湖。你向湖的北面一点呢，就是靠芜湖很近了，向南边一点呢，就是说又靠国民党很近了。这样子靠湖边上走，那么1支队、2支队和军部配合。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE005-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"陈海峰确认对进一天即可，不要走两天半。\",\n      \"process_text\": \"陈海峰说对着干，这样子一天，不要走两天半；记者确认一天能到。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0080\",\n        \"BATCH07-DOC06-S0081\"\n      ],\n      \"evidence_quote\": \"    陈海峰：对着，对着干。这样子呢，一天，不要走两天半。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE005-P01\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE005-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC06-S0069\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE005-P02\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC06-S0071\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE005-P03\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE005-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC06-S0078\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE005-P04\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE005-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC06-S0080\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC06-DE005",
+    "event_enrichment": {
+      "result_state": "陈海峰确认粟裕曾带恽前程多次侦察该路线，并认可双方对进一天可接应/到达的设想，同时说明路线经宣城、靠湖边、1支队、2支队和军部配合。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "从记者提及恽前程并转述粟裕带恽前程侦察路线开始，到陈海峰确认一天不要走两天半、记者确认一天能到结束。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC06-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "记者提及恽前程，陈海峰确认认识并经常联系。",
+        "process_text": "记者提到采访过恽前程，陈海峰表示知道，并说经常联系。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0067",
+          "BATCH07-DOC06-S0068"
+        ],
+        "evidence_quote": "    陈海峰：恽前程，知道，我们经常联系。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "记者转述粟裕曾带恽前程侦察路线，陈海峰确认多次去侦察。",
+        "process_text": "记者说恽前程提到粟裕曾带着恽前程侦察过这条路线，陈海峰回应多次去侦察。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0069",
+          "BATCH07-DOC06-S0070"
+        ],
+        "evidence_quote": "    陈海峰：多次去侦察！",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "记者说明恽前程指的是陈海峰走的路线，双方对进一天可接应。",
+        "process_text": "记者说明恽前程说的不是长江，而是陈海峰走的路线，双方对进一天就能接应上。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0071",
+          "BATCH07-DOC06-S0077"
+        ],
+        "evidence_quote": "    记者：恽前程说的不是长江，他说的是您老走的那条路线。他们从茅山那边，往军部那方向走，你们从军部往他们那边撤，双方对进啊，一天就能接应上。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE005-P04",
+        "stage_order": 4,
+        "stage_summary": "陈海峰确认路线经宣城、靠湖边，1支队、2支队和军部配合。",
+        "process_text": "陈海峰确认是的是的，说明中间路线走宣城，靠湖边，1支队、2支队和军部配合。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0078"
+        ],
+        "evidence_quote": "    陈海峰：是的是的。他中间那条路线是走宣城。宣城那边有两个湖，一个叫19湖（音），一个（是）东坝那里（的）湖。你向湖的北面一点呢，就是靠芜湖很近了，向南边一点呢，就是说又靠国民党很近了。这样子靠湖边上走，那么1支队、2支队和军部配合。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE005-P05",
+        "stage_order": 5,
+        "stage_summary": "陈海峰确认对进一天即可，不要走两天半。",
+        "process_text": "陈海峰说对着干，这样子一天，不要走两天半；记者确认一天能到。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0080",
+          "BATCH07-DOC06-S0081"
+        ],
+        "evidence_quote": "    陈海峰：对着，对着干。这样子呢，一天，不要走两天半。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC06-DE005-P01",
+        "target_stage_id": "BATCH07-DOC06-DE005-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC06-S0069",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE005-P02",
+        "target_stage_id": "BATCH07-DOC06-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC06-S0071",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE005-P03",
+        "target_stage_id": "BATCH07-DOC06-DE005-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC06-S0078",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE005-P04",
+        "target_stage_id": "BATCH07-DOC06-DE005-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC06-S0080",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,201 @@
+{
+  "run_time": "2026-11-12T09:38:05",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC04-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC04-DE008",
+  "usage": {
+    "prompt_tokens": 2675,
+    "total_tokens": 16843,
+    "completion_tokens": 14168,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10853
+    },
+    "time_to_first_token_ms": 236812,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 14167000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"YYS-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC04-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈光在豆村镇附近会议上完成讲话，说明平型关战斗后人员装备未得到补充，并表达对执行忻口作战任务的抵触；讲话使连以上干部思想有所放宽，认为应得到补充后再继续作战。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于 BATCH02-DOC04-S0071 部队在豆村镇附近、陈光接到准备参加忻口战斗；止于 BATCH02-DOC04-S0096 陈光讲话对连以上干部思想产生影响。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"部队在豆村镇附近，陈光接到准备参加忻口战斗。\",\n      \"process_text\": \"杨永松说部队在石咀搞了几天后往西靠，团在豆村镇附近，此时旅长陈光接到准备参加忻口战斗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0071\"\n      ],\n      \"evidence_quote\": \"    杨永松：我们在石咀搞了几天，石咀镇离五台山就很近了，又接到上边的命令，我们往西靠，我们团就在豆村镇的附近。这个时候呢，旅长陈光啊，接到（命令）准备参加忻口战斗。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈光开会讲话，先讲上级任务，后讲个人意见，说明平型关后人员装备未补充。\",\n      \"process_text\": \"杨永松记录陈光开会讲话，前面讲上级任务，后面讲个人意见，平型关战斗以后人员装备都没得到补充，只领到很少手榴弹，七九子弹和三八式子弹没补充，发了一点干粮。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0073\"\n      ],\n      \"evidence_quote\": \"    杨永松：陈光在开会的时候，我专门写了，就是主要讲的一通，前面讲了上级的任务，后面讲他个人意见，就是我们平型关战斗以后，人员装备都没得到补充——就是路过太原的时候领到很少的手榴弹。下来以后，就在那个附近不知道什么单位那里，一个人领到个手榴弹，七九子弹也不知道阎锡山那有没有，中央军是有的，七九子弹没得到补充。三八式不是我们全部都是三八式吧，阎锡山是三八式的步枪，就是三八式的步枪这个子弹也没得到补充，就在那里呢，给我们发了一点干粮。这么大一个箱子这么厚（杨永松比划大约长80厘米宽45厘米高45厘米），跟日本人那个一样大，阎锡山他们学日本人的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"说明补给只发干粮，其他东西没补充。\",\n      \"process_text\": \"杨永松说阎锡山大饼子合口味，就一个人发了十个，其他东西什么也没补充。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0075\"\n      ],\n      \"evidence_quote\": \"    杨永松：日本人是小饼干，阎锡山是大饼子。这个大饼子还是合我们的口味，它有点咸有点甜，比这个（杨永松指右手食指）稍薄一点，很解决问题。就给我们一个人发了十个，其他东西什么也没补充。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"说明缴获未补充，平型关所得均为现场搞到。\",\n      \"process_text\": \"杨永松说缴获了一部分，但当时部队没有到弹药堆栈那里去，师部后方没有一个到前面去的，所以平型关部队弄到的东西都是当时现场搞到的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0077\",\n        \"BATCH02-DOC04-S0080\",\n        \"BATCH02-DOC04-S0082\"\n      ],\n      \"evidence_quote\": \"    杨永松：所以平型关我们部队弄到的东西都是当时现场搞到的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE008-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"说明686团炮情况不明，685团没有弄到那门炮。\",\n      \"process_text\": \"杨永松说不知道686团离得比较近补充了什么东西没有，听说有一门炮，686团东进时有一门小炮，但685团没有弄到。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0084\",\n        \"BATCH02-DOC04-S0086\"\n      ],\n      \"evidence_quote\": \"    杨永松：可是686团我们东进的时候他有一门，就那个小炮。我在山东，我们跟686团分在一块的时候，我也看见那门炮，一个雨布盖着呢（杨永松笑）。是不是那个我就不知道了，所以那门炮反正我们685团没有弄到。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE008-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"陈光讲中央任务与上忻口作战的矛盾。\",\n      \"process_text\": \"杨永松记录陈光讲中央给的任务是打运动游击战、不放弃有利条件的运动战、在敌后建立根据地、扩大人民军队，可是现在要上忻口作战，忻口有十几二十万中央军和阎锡山部队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0089\"\n      ],\n      \"evidence_quote\": \"    杨永松：我这个上面写了，陈光就讲，中央给我们的任务，打运动游击战，不放弃有利条件的运动战，交给我们的任务是要在敌后建立根据地，扩大我们人民自己的军队。可是现在呢，要我们上忻口去作战，忻口是十几二十万中央军！还有阎锡山的部队。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE008-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"说明没有补充、兵力少，再打会影响建立根据地和宣传组织群众。\",\n      \"process_text\": \"杨永松说陈光的意思是部队没有得到补充，江西长征出来的都是老骨头硬骨头，本来人已经不多，再打一家伙就没有多少了，还要考虑如何建立根据地、作为抗日主力军宣传组织群众。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0091\"\n      ],\n      \"evidence_quote\": \"    杨永松：我们离那里比较近，炮啊响得“咚咚”的，离得是比较近。他的意思是说我们没有得到补充，江西长征出来的都是老骨头硬骨头，我们把这硬骨头打了，你一上去不就……本来人就已经不多了，你再打一家伙就没有多少了。我们怎么样去建立根据地，怎么样去作为抗日的主力军宣传、组织群众？他有这么个讲话，那个会我参加了，我记忆多少大概就是这么一些，可能讲了有不到一个钟头的话。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE008-P08\",\n      \"stage_order\": 8,\n      \"stage_summary\": \"陈光对执行忻口作战任务明显抵触，认为兵力少作用有限。\",\n      \"process_text\": \"杨永松说陈光对上面要执行忻口作战任务的思想很明显有抵触，忻口人多武器多，敌人一个师团最多万把人，两个团合起来千把人上战场最多不到一千人，去顶什么用。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0093\"\n      ],\n      \"evidence_quote\": \"    杨永松：就是在这个时候呢，陈光他跟上面的这个思想，要我们执行忻口作战任务的，很明显就有抵触了。意思说忻口那么多人，他那么多武器，敌人那个方向也是一个师团，从雁门关进来的。他一个师团最多嘛万把人，二三十万人打他，那么多武器，炮兵多少团在那边，我们去顶什么用？这么几百人啊，两个团合起来千把人，上战场嘛最多不到一千人。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE008-P09\",\n      \"stage_order\": 9,\n      \"stage_summary\": \"讲话使连以上干部思想放宽，认为应补充后再继续作战。\",\n      \"process_text\": \"杨永松说陈光讲话对连以上干部的思想宽广起来了，认为不是逞目前一时之勇，平型关战斗胜利已有较大影响，应该得到补充然后才能继续作战，不能把老骨头都打光。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0096\"\n      ],\n      \"evidence_quote\": \"    杨永松：你打光了以后怎么样去执行以后的任务？他这个讲话呢，对我们连以上干部的人的思想啊就宽广起来了，就说我们不是光是逞目前一时之勇，我已经打到平型关的战斗胜利，已经在全国有比较大的影响了。我们是应该要得到补充，然后才能继续作战。不能把这老骨头都打光了，拿什么本钱去做生意啊。（杨永松笑）\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE008-P01\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0073\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE008-P02\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE008-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0075\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE008-P03\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE008-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0077\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE008-P04\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE008-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0084\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE008-P05\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE008-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0089\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE008-P06\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE008-P07\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0091\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE008-P07\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE008-P08\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0093\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE008-P08\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE008-P09\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0096\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC04-DE008",
+    "event_enrichment": {
+      "result_state": "陈光在豆村镇附近会议上完成讲话，说明平型关战斗后人员装备未得到补充，并表达对执行忻口作战任务的抵触；讲话使连以上干部思想有所放宽，认为应得到补充后再继续作战。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于 BATCH02-DOC04-S0071 部队在豆村镇附近、陈光接到准备参加忻口战斗；止于 BATCH02-DOC04-S0096 陈光讲话对连以上干部思想产生影响。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC04-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "部队在豆村镇附近，陈光接到准备参加忻口战斗。",
+        "process_text": "杨永松说部队在石咀搞了几天后往西靠，团在豆村镇附近，此时旅长陈光接到准备参加忻口战斗。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0071"
+        ],
+        "evidence_quote": "    杨永松：我们在石咀搞了几天，石咀镇离五台山就很近了，又接到上边的命令，我们往西靠，我们团就在豆村镇的附近。这个时候呢，旅长陈光啊，接到（命令）准备参加忻口战斗。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "陈光开会讲话，先讲上级任务，后讲个人意见，说明平型关后人员装备未补充。",
+        "process_text": "杨永松记录陈光开会讲话，前面讲上级任务，后面讲个人意见，平型关战斗以后人员装备都没得到补充，只领到很少手榴弹，七九子弹和三八式子弹没补充，发了一点干粮。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0073"
+        ],
+        "evidence_quote": "    杨永松：陈光在开会的时候，我专门写了，就是主要讲的一通，前面讲了上级的任务，后面讲他个人意见，就是我们平型关战斗以后，人员装备都没得到补充——就是路过太原的时候领到很少的手榴弹。下来以后，就在那个附近不知道什么单位那里，一个人领到个手榴弹，七九子弹也不知道阎锡山那有没有，中央军是有的，七九子弹没得到补充。三八式不是我们全部都是三八式吧，阎锡山是三八式的步枪，就是三八式的步枪这个子弹也没得到补充，就在那里呢，给我们发了一点干粮。这么大一个箱子这么厚（杨永松比划大约长80厘米宽45厘米高45厘米），跟日本人那个一样大，阎锡山他们学日本人的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "说明补给只发干粮，其他东西没补充。",
+        "process_text": "杨永松说阎锡山大饼子合口味，就一个人发了十个，其他东西什么也没补充。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0075"
+        ],
+        "evidence_quote": "    杨永松：日本人是小饼干，阎锡山是大饼子。这个大饼子还是合我们的口味，它有点咸有点甜，比这个（杨永松指右手食指）稍薄一点，很解决问题。就给我们一个人发了十个，其他东西什么也没补充。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "说明缴获未补充，平型关所得均为现场搞到。",
+        "process_text": "杨永松说缴获了一部分，但当时部队没有到弹药堆栈那里去，师部后方没有一个到前面去的，所以平型关部队弄到的东西都是当时现场搞到的。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0077",
+          "BATCH02-DOC04-S0080",
+          "BATCH02-DOC04-S0082"
+        ],
+        "evidence_quote": "    杨永松：所以平型关我们部队弄到的东西都是当时现场搞到的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE008-P05",
+        "stage_order": 5,
+        "stage_summary": "说明686团炮情况不明，685团没有弄到那门炮。",
+        "process_text": "杨永松说不知道686团离得比较近补充了什么东西没有，听说有一门炮，686团东进时有一门小炮，但685团没有弄到。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0084",
+          "BATCH02-DOC04-S0086"
+        ],
+        "evidence_quote": "    杨永松：可是686团我们东进的时候他有一门，就那个小炮。我在山东，我们跟686团分在一块的时候，我也看见那门炮，一个雨布盖着呢（杨永松笑）。是不是那个我就不知道了，所以那门炮反正我们685团没有弄到。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE008-P06",
+        "stage_order": 6,
+        "stage_summary": "陈光讲中央任务与上忻口作战的矛盾。",
+        "process_text": "杨永松记录陈光讲中央给的任务是打运动游击战、不放弃有利条件的运动战、在敌后建立根据地、扩大人民军队，可是现在要上忻口作战，忻口有十几二十万中央军和阎锡山部队。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0089"
+        ],
+        "evidence_quote": "    杨永松：我这个上面写了，陈光就讲，中央给我们的任务，打运动游击战，不放弃有利条件的运动战，交给我们的任务是要在敌后建立根据地，扩大我们人民自己的军队。可是现在呢，要我们上忻口去作战，忻口是十几二十万中央军！还有阎锡山的部队。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE008-P07",
+        "stage_order": 7,
+        "stage_summary": "说明没有补充、兵力少，再打会影响建立根据地和宣传组织群众。",
+        "process_text": "杨永松说陈光的意思是部队没有得到补充，江西长征出来的都是老骨头硬骨头，本来人已经不多，再打一家伙就没有多少了，还要考虑如何建立根据地、作为抗日主力军宣传组织群众。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0091"
+        ],
+        "evidence_quote": "    杨永松：我们离那里比较近，炮啊响得“咚咚”的，离得是比较近。他的意思是说我们没有得到补充，江西长征出来的都是老骨头硬骨头，我们把这硬骨头打了，你一上去不就……本来人就已经不多了，你再打一家伙就没有多少了。我们怎么样去建立根据地，怎么样去作为抗日的主力军宣传、组织群众？他有这么个讲话，那个会我参加了，我记忆多少大概就是这么一些，可能讲了有不到一个钟头的话。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE008-P08",
+        "stage_order": 8,
+        "stage_summary": "陈光对执行忻口作战任务明显抵触，认为兵力少作用有限。",
+        "process_text": "杨永松说陈光对上面要执行忻口作战任务的思想很明显有抵触，忻口人多武器多，敌人一个师团最多万把人，两个团合起来千把人上战场最多不到一千人，去顶什么用。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0093"
+        ],
+        "evidence_quote": "    杨永松：就是在这个时候呢，陈光他跟上面的这个思想，要我们执行忻口作战任务的，很明显就有抵触了。意思说忻口那么多人，他那么多武器，敌人那个方向也是一个师团，从雁门关进来的。他一个师团最多嘛万把人，二三十万人打他，那么多武器，炮兵多少团在那边，我们去顶什么用？这么几百人啊，两个团合起来千把人，上战场嘛最多不到一千人。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE008-P09",
+        "stage_order": 9,
+        "stage_summary": "讲话使连以上干部思想放宽，认为应补充后再继续作战。",
+        "process_text": "杨永松说陈光讲话对连以上干部的思想宽广起来了，认为不是逞目前一时之勇，平型关战斗胜利已有较大影响，应该得到补充然后才能继续作战，不能把老骨头都打光。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0096"
+        ],
+        "evidence_quote": "    杨永松：你打光了以后怎么样去执行以后的任务？他这个讲话呢，对我们连以上干部的人的思想啊就宽广起来了，就说我们不是光是逞目前一时之勇，我已经打到平型关的战斗胜利，已经在全国有比较大的影响了。我们是应该要得到补充，然后才能继续作战。不能把这老骨头都打光了，拿什么本钱去做生意啊。（杨永松笑）",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC04-DE008-P01",
+        "target_stage_id": "BATCH02-DOC04-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0073",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE008-P02",
+        "target_stage_id": "BATCH02-DOC04-DE008-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC04-S0075",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE008-P03",
+        "target_stage_id": "BATCH02-DOC04-DE008-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC04-S0077",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE008-P04",
+        "target_stage_id": "BATCH02-DOC04-DE008-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC04-S0084",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE008-P05",
+        "target_stage_id": "BATCH02-DOC04-DE008-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0089",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE008-P06",
+        "target_stage_id": "BATCH02-DOC04-DE008-P07",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC04-S0091",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE008-P07",
+        "target_stage_id": "BATCH02-DOC04-DE008-P08",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH02-DOC04-S0093",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE008-P08",
+        "target_stage_id": "BATCH02-DOC04-DE008-P09",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC04-S0096",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,229 @@
+{
+  "run_time": "2026-11-11T04:14:27",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH06-DOC02-W004",
+  "technical_document_id": "BATCH06-DOC02",
+  "document_id": "18.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH06-DOC02-S0067",
+    "BATCH06-DOC02-S0068",
+    "BATCH06-DOC02-S0069",
+    "BATCH06-DOC02-S0070",
+    "BATCH06-DOC02-S0071",
+    "BATCH06-DOC02-S0072",
+    "BATCH06-DOC02-S0073",
+    "BATCH06-DOC02-S0074",
+    "BATCH06-DOC02-S0075",
+    "BATCH06-DOC02-S0076",
+    "BATCH06-DOC02-S0077",
+    "BATCH06-DOC02-S0078",
+    "BATCH06-DOC02-S0079",
+    "BATCH06-DOC02-S0080",
+    "BATCH06-DOC02-S0081",
+    "BATCH06-DOC02-S0082",
+    "BATCH06-DOC02-S0083",
+    "BATCH06-DOC02-S0084",
+    "BATCH06-DOC02-S0085",
+    "BATCH06-DOC02-S0086",
+    "BATCH06-DOC02-S0087",
+    "BATCH06-DOC02-S0088"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 3,
+    "assigned_segment_count": 12,
+    "unassigned_segment_count": 10,
+    "input_segment_count": 22,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH06-DOC02-W004-E03"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH06-DOC02-W004",
+    "events": [
+      {
+        "candidate_id": "BATCH06-DOC02-W004-E01",
+        "source_segment_ids": [
+          "BATCH06-DOC02-S0068",
+          "BATCH06-DOC02-S0070",
+          "BATCH06-DOC02-S0072",
+          "BATCH06-DOC02-S0074"
+        ],
+        "event": {
+          "event_name": "医院在五云里忍饥挨饿收治并安慰伤员",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "收治并安慰伤员",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们医院",
+              "normalized_entity": "医院工作人员",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "伤员",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "6月，雨季",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "五云里（孝丰县港口附近）",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "忍饥挨饿、保持乐观",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "没有吃（陈海峰大笑）没有穿，敌人给我们……敌人啊，那里能弄到一点，还不够，狼狈不堪，真是叫狼狈不堪。那个不能叫饥饿交加，几乎天天饿肠辘辘，还要干事，还要镇静，还要乐观，还要给伤兵唱歌，还要安慰伤员。",
+          "type_basis": "核心过程为医院工作人员收治、安慰伤员的组织性医疗行动，有Actor和Goal，属物质过程；唱歌、安慰等行为服务于同一收治任务，不单列为行为或言语事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC02-W004-E02",
+        "source_segment_ids": [
+          "BATCH06-DOC02-S0074",
+          "BATCH06-DOC02-S0076",
+          "BATCH06-DOC02-S0077",
+          "BATCH06-DOC02-S0078",
+          "BATCH06-DOC02-S0079",
+          "BATCH06-DOC02-S0081",
+          "BATCH06-DOC02-S0083"
+        ],
+        "event": {
+          "event_name": "因敌军逼近医院在竹林准备隐蔽伤员",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "选择隐蔽地点并搭建竹子医院",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰、钱野（音）等医院工作人员",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "伤员",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "敌军辎重部队逼近，医院可能撤不走",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "天荒坪一带竹林（五云里背后18里）",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "准备万一撤不走时将伤员分散到竹林",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "准备万一撤不走，我们伤员都转到这个竹林里去，变成真正的竹子医院了。",
+          "type_basis": "核心过程为选择隐蔽地点、搭建竹子医院并准备转移伤员的组织性物质行动，有Actor和Goal；敌军逼近是原因，不另立存在或物质事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC02-W004-E03",
+        "source_segment_ids": [
+          "BATCH06-DOC02-S0083",
+          "BATCH06-DOC02-S0085",
+          "BATCH06-DOC02-S0088"
+        ],
+        "event": {
+          "event_name": "冒雨到吴家道给患疟疾的粟司令打针",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "给粟司令打针",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "陈海峰、钱野（音）等医疗人员",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "粟司令",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "下大雨",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "吴家道小木棚子（指挥所）",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "那么我们就随身都带着了，给干部看病的保健盒，里面（有）各种贵重药品，镇痛药呀，吗啡片啦，打针的啦。南方摆子都有奎宁针啊，都带着了，消炎药啊，马上就给粟司令打针。",
+          "type_basis": "核心过程为给粟司令注射药物的具体医疗处置，有Actor和Goal，属物质过程；粟司令患疟疾是背景，不另立关系或存在事件。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH06-DOC02-S0067",
+      "BATCH06-DOC02-S0069",
+      "BATCH06-DOC02-S0071",
+      "BATCH06-DOC02-S0073",
+      "BATCH06-DOC02-S0075",
+      "BATCH06-DOC02-S0080",
+      "BATCH06-DOC02-S0082",
+      "BATCH06-DOC02-S0084",
+      "BATCH06-DOC02-S0086",
+      "BATCH06-DOC02-S0087"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH06-DOC02-W004\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH06-DOC02-W004-E01\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC02-S0068\",\n        \"BATCH06-DOC02-S0070\",\n        \"BATCH06-DOC02-S0072\",\n        \"BATCH06-DOC02-S0074\"\n      ],\n      \"event\": {\n        \"event_name\": \"医院在五云里忍饥挨饿收治并安慰伤员\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"收治并安慰伤员\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们医院\",\n            \"normalized_entity\": \"医院工作人员\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"伤员\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"6月，雨季\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"五云里（孝丰县港口附近）\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"忍饥挨饿、保持乐观\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"没有吃（陈海峰大笑）没有穿，敌人给我们……敌人啊，那里能弄到一点，还不够，狼狈不堪，真是叫狼狈不堪。那个不能叫饥饿交加，几乎天天饿肠辘辘，还要干事，还要镇静，还要乐观，还要给伤兵唱歌，还要安慰伤员。\",\n        \"type_basis\": \"核心过程为医院工作人员收治、安慰伤员的组织性医疗行动，有Actor和Goal，属物质过程；唱歌、安慰等行为服务于同一收治任务，不单列为行为或言语事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC02-W004-E02\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC02-S0074\",\n        \"BATCH06-DOC02-S0076\",\n        \"BATCH06-DOC02-S0077\",\n        \"BATCH06-DOC02-S0078\",\n        \"BATCH06-DOC02-S0079\",\n        \"BATCH06-DOC02-S0081\",\n        \"BATCH06-DOC02-S0083\"\n      ],\n      \"event\": {\n        \"event_name\": \"因敌军逼近医院在竹林准备隐蔽伤员\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"选择隐蔽地点并搭建竹子医院\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰、钱野（音）等医院工作人员\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"伤员\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"敌军辎重部队逼近，医院可能撤不走\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"天荒坪一带竹林（五云里背后18里）\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"准备万一撤不走时将伤员分散到竹林\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"准备万一撤不走，我们伤员都转到这个竹林里去，变成真正的竹子医院了。\",\n        \"type_basis\": \"核心过程为选择隐蔽地点、搭建竹子医院并准备转移伤员的组织性物质行动，有Actor和Goal；敌军逼近是原因，不另立存在或物质事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC02-W004-E03\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC02-S0083\",\n        \"BATCH06-DOC02-S0085\",\n        \"BATCH06-DOC02-S0088\"\n      ],\n      \"event\": {\n        \"event_name\": \"冒雨到吴家道给患疟疾的粟司令打针\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"给粟司令打针\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"陈海峰、钱野（音）等医疗人员\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"粟司令\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"下大雨\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"吴家道小木棚子（指挥所）\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"那么我们就随身都带着了，给干部看病的保健盒，里面（有）各种贵重药品，镇痛药呀，吗啡片啦，打针的啦。南方摆子都有奎宁针啊，都带着了，消炎药啊，马上就给粟司令打针。\",\n        \"type_basis\": \"核心过程为给粟司令注射药物的具体医疗处置，有Actor和Goal，属物质过程；粟司令患疟疾是背景，不另立关系或存在事件。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH06-DOC02-S0067\",\n    \"BATCH06-DOC02-S0069\",\n    \"BATCH06-DOC02-S0071\",\n    \"BATCH06-DOC02-S0073\",\n    \"BATCH06-DOC02-S0075\",\n    \"BATCH06-DOC02-S0080\",\n    \"BATCH06-DOC02-S0082\",\n    \"BATCH06-DOC02-S0084\",\n    \"BATCH06-DOC02-S0086\",\n    \"BATCH06-DOC02-S0087\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5645,
+    "total_tokens": 19268,
+    "completion_tokens": 13623,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12032
+    },
+    "time_to_first_token_ms": 115648,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13622000
+  }
+}

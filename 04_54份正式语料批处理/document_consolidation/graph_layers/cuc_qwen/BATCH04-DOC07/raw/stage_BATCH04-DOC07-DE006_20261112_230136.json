@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T23:01:36",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC07-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC07-DE006",
+  "usage": {
+    "prompt_tokens": 1708,
+    "total_tokens": 11677,
+    "completion_tokens": 9969,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8438
+    },
+    "time_to_first_token_ms": 147030,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC07-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"师部转移以陆地为主，物资以后方海上转移为主，重物资打埋伏、必需物资随带；扫荡到海边，后方机关待不住，指挥机关南移，主力部队周旋打仗，2旅去保护军部，留一个团保护师部。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 S0127—S0155：起于师部陆地走，经物资海上走、必需物资携带，至扫荡背景与师部保护调整；止于 S0155 留一个团保护师部。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"师部转移以陆地为主\",\n      \"process_text\": \"    陈海峰：师部大部分都是陆地走的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0127\"\n      ],\n      \"evidence_quote\": \"    陈海峰：师部大部分都是陆地走的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"物资以后方海上转移为主，陆路需通过封锁线，重物资打埋伏\",\n      \"process_text\": \"那个后方是海上走的多，物资得海上走，因为（陆路）你要通过好多封锁线。那个物资啊，很麻烦，那重的物资都打埋伏了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0131\"\n      ],\n      \"evidence_quote\": \"那个后方是海上走的多，物资得海上走，因为（陆路）你要通过好多封锁线。那个物资啊，很麻烦，那重的物资都打埋伏了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"战争必需的弹药、供应、物资还要带一部分\",\n      \"process_text\": \"    陈海峰：就是必需的，战争需要的，弹药、供应、物资啊，那还要带一部分啊。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0133\"\n      ],\n      \"evidence_quote\": \"    陈海峰：就是必需的，战争需要的，弹药、供应、物资啊，那还要带一部分啊。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"扫荡到海边，后方机关待不住，指挥机关南移，主力部队周旋打仗\",\n      \"process_text\": \"    陈海峰：扫荡（到）海边了，后方机关待不住啊，指挥机关也南移了。那主力部队就周旋了，和敌人一天到晚打仗了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0154\"\n      ],\n      \"evidence_quote\": \"    陈海峰：扫荡（到）海边了，后方机关待不住啊，指挥机关也南移了。那主力部队就周旋了，和敌人一天到晚打仗了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE006-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"2旅去保护军部，留一个团保护师部\",\n      \"process_text\": \"就是3旅，本来是2旅保护我们师部的，2旅去保护军部去了，留了一个团保护这个师部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0155\"\n      ],\n      \"evidence_quote\": \"就是3旅，本来是2旅保护我们师部的，2旅去保护军部去了，留了一个团保护这个师部。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE006-P01\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0131\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE006-P02\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE006-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0133\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE006-P03\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE006-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0154\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE006-P04\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE006-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0155\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC07-DE006",
+    "event_enrichment": {
+      "result_state": "师部转移以陆地为主，物资以后方海上转移为主，重物资打埋伏、必需物资随带；扫荡到海边，后方机关待不住，指挥机关南移，主力部队周旋打仗，2旅去保护军部，留一个团保护师部。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 S0127—S0155：起于师部陆地走，经物资海上走、必需物资携带，至扫荡背景与师部保护调整；止于 S0155 留一个团保护师部。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC07-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "师部转移以陆地为主",
+        "process_text": "    陈海峰：师部大部分都是陆地走的。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0127"
+        ],
+        "evidence_quote": "    陈海峰：师部大部分都是陆地走的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "物资以后方海上转移为主，陆路需通过封锁线，重物资打埋伏",
+        "process_text": "那个后方是海上走的多，物资得海上走，因为（陆路）你要通过好多封锁线。那个物资啊，很麻烦，那重的物资都打埋伏了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0131"
+        ],
+        "evidence_quote": "那个后方是海上走的多，物资得海上走，因为（陆路）你要通过好多封锁线。那个物资啊，很麻烦，那重的物资都打埋伏了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "战争必需的弹药、供应、物资还要带一部分",
+        "process_text": "    陈海峰：就是必需的，战争需要的，弹药、供应、物资啊，那还要带一部分啊。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0133"
+        ],
+        "evidence_quote": "    陈海峰：就是必需的，战争需要的，弹药、供应、物资啊，那还要带一部分啊。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "扫荡到海边，后方机关待不住，指挥机关南移，主力部队周旋打仗",
+        "process_text": "    陈海峰：扫荡（到）海边了，后方机关待不住啊，指挥机关也南移了。那主力部队就周旋了，和敌人一天到晚打仗了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0154"
+        ],
+        "evidence_quote": "    陈海峰：扫荡（到）海边了，后方机关待不住啊，指挥机关也南移了。那主力部队就周旋了，和敌人一天到晚打仗了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE006-P05",
+        "stage_order": 5,
+        "stage_summary": "2旅去保护军部，留一个团保护师部",
+        "process_text": "就是3旅，本来是2旅保护我们师部的，2旅去保护军部去了，留了一个团保护这个师部。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0155"
+        ],
+        "evidence_quote": "就是3旅，本来是2旅保护我们师部的，2旅去保护军部去了，留了一个团保护这个师部。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC07-DE006-P01",
+        "target_stage_id": "BATCH04-DOC07-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0131",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE006-P02",
+        "target_stage_id": "BATCH04-DOC07-DE006-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC07-S0133",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE006-P03",
+        "target_stage_id": "BATCH04-DOC07-DE006-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0154",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE006-P04",
+        "target_stage_id": "BATCH04-DOC07-DE006-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0155",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

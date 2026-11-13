@@ -1,0 +1,1867 @@
+{
+  "run_time": "2026-11-11T08:14:41",
+  "run_stage": "DOCUMENT_CONSOLIDATION_AND_SCOPE",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+document-consolidation-v0.1+output-contract-v0.3",
+  "technical_document_id": "BATCH04-DOC08",
+  "document_id": "10.陈锐霆 090509（三校后 阅读版）.docx",
+  "input_candidate_ids": [
+    "BATCH04-DOC08-W001-E01",
+    "BATCH04-DOC08-W001-E02",
+    "BATCH04-DOC08-W001-E03",
+    "BATCH04-DOC08-W001-E04",
+    "BATCH04-DOC08-W001-E05",
+    "BATCH04-DOC08-W001-E06",
+    "BATCH04-DOC08-W002-E01",
+    "BATCH04-DOC08-W002-E02",
+    "BATCH04-DOC08-W002-E03",
+    "BATCH04-DOC08-W002-E04"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "input_candidate_count": 10,
+    "document_event_count": 12,
+    "candidate_decision_count": 10,
+    "personal_event_count": 9,
+    "context_event_count": 3,
+    "uncertain_event_count": 0,
+    "needs_review_count": 1
+  },
+  "normalization_applied": false,
+  "normalization_error": null,
+  "parsed_output": {
+    "schema_version": "document-consolidation-v1.0",
+    "technical_document_id": "BATCH04-DOC08",
+    "document_id": "10.陈锐霆 090509（三校后 阅读版）.docx",
+    "interviewee": "陈锐霆",
+    "document_events": [
+      {
+        "document_event_id": "BATCH04-DOC08-DE001",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0003"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECTLY_AFFECTED"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0003"
+        ],
+        "scope_evidence_quote": "底下的老同志他们都对我还是很尊重的。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈锐霆因起义负伤获得老同志尊重",
+          "event_type": "MENTAL",
+          "event_type_zh": "心理",
+          "core_process": "受到尊重",
+          "participants": [
+            {
+              "role": "Senser",
+              "mention": "底下的老同志",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Phenomenon",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "在部队敌我兵力很悬殊的时候起义，另外自己负了重伤",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "底下的老同志他们都对我还是很尊重的。",
+          "type_basis": "核心是老同志对陈锐霆的尊重，属心理过程；Senser=底下的老同志，Phenomenon=陈锐霆；关系良好作为伴随状态，不主导。",
+          "alternative_event_type": "RELATIONAL",
+          "ambiguity_reason": "原文同时包含尊重心理与部门关系状态，主导类型需复核。",
+          "review_status": "NEEDS_REVIEW"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "尊重与关系状态并存，主导事件类型需人工确认。"
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE002",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0005"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0005"
+        ],
+        "scope_evidence_quote": "我就领导整风",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈锐霆领导整风",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "领导整风",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Scope",
+              "mention": "整风",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "学习快要结束了",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我就领导整风",
+          "type_basis": "领导整风是组织行动，可用What did X do?测试；Actor=陈锐霆，Scope=整风；排除心理和关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE003",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0005",
+          "BATCH04-DOC08-S0008",
+          "BATCH04-DOC08-S0010"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0008"
+        ],
+        "scope_evidence_quote": "他们以后就报告我，我又报告了上边。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈锐霆等接收日本投降消息并开大会庆祝胜利",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "接收日本投降消息并开大会庆祝胜利",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "三科",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "人们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Scope",
+              "mention": "胜利",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "上边",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "那个时候",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "日本天皇广播（宣布）投降了",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "狂欢",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "给地方上也做宣传",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "开大会，庆祝胜利，人们都流泪了！",
+          "type_basis": "核心是开大会庆祝胜利，可观察组织行动；三科听广播、陈锐霆上报为消息接收阶段，服务同一胜利庆祝结果；Actor配置支持物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE004",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E04"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "scope_evidence_quote": "接着三师打下了淮阴，洪学智那个时候是独立旅的旅长，打下淮阴后他（当）的警备司令。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "三师打下淮阴",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "打下淮阴",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "三师",
+              "normalized_entity": "新四军三师",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "淮阴",
+              "normalized_entity": "淮阴",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "鬼子投降以后",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "接着三师打下了淮阴，洪学智那个时候是独立旅的旅长，打下淮阴后他（当）的警备司令。",
+          "type_basis": "军事行动使地点状态改变，Actor=三师，Goal=淮阴；陈锐霆未参与，属讲述背景。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE005",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E04"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "scope_evidence_quote": "他的警备司令（一职）由我来担任。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈锐霆被任命为淮阴警备司令",
+          "event_type": "RELATIONAL",
+          "event_type_zh": "关系",
+          "core_process": "担任警备司令",
+          "participants": [
+            {
+              "role": "Token",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Value",
+              "mention": "警备司令",
+              "normalized_entity": "淮阴警备司令",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "中央来了命令",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "鬼子投降以后",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他的警备司令（一职）由我来担任。",
+          "type_basis": "“由我来担任”建立职务身份，识别型关系过程；Token=陈锐霆，Value=警备司令；前因中央命令作为环境，不主导物质。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE006",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E05"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0012",
+          "BATCH04-DOC08-S0014"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0012"
+        ],
+        "scope_evidence_quote": "也就是说新四军跟山东军区合并，把新四军的主力，都带到山东去，编一个山东野战军，陈老总（当）的司令员兼政治委员嘛",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "新四军军部与山东军区合并并编成山东野战军",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "合并并编成山东野战军",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "新四军",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "山东军区",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "山东野战军",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "临沂",
+              "normalized_value": "临沂"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "山东",
+              "normalized_value": "山东"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "中央又有了命令",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "也就是说新四军跟山东军区合并，把新四军的主力，都带到山东去，编一个山东野战军，陈老总（当）的司令员兼政治委员嘛",
+          "type_basis": "组织合并、部队调动和编制变化是可观察组织行动；Actor=新四军/山东军区，Goal=山东野战军；陈锐霆未直接参与，属讲述背景。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE007",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E05"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0016"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0016"
+        ],
+        "scope_evidence_quote": "就向他汇报新四军军部的情况，另外部队上来的情况，主要是讲军部的情况，请他帮助搞驻地。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈锐霆作为先遣代表赴山东汇报并驻临沂",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "先遣赴山东汇报并安排驻地",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "山东",
+              "normalized_entity": "山东",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "黎玉",
+              "normalized_entity": "黎玉",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "临沂的西关，里头有个天主教堂",
+              "normalized_value": "临沂西关天主教堂"
+            },
+            {
+              "kind": "MANNER",
+              "value": "作为一个先遣的代表",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "帮助搞驻地",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "两个司令都没上任",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "现在你们军部没有人，副军长年纪也大了，现在参谋长也还没有到任。",
+          "evidence_quote": "就向他汇报新四军军部的情况，另外部队上来的情况，主要是讲军部的情况，请他帮助搞驻地。",
+          "type_basis": "陈锐霆执行先遣汇报和安排驻地任务，属组织行动和执行任务；Actor=陈锐霆，Goal=山东，Recipient=黎玉；打电报为言语阶段，不改变主导物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE008",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E06"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0018",
+          "BATCH04-DOC08-S0020"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "COLLECTIVE_WITHOUT_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0018"
+        ],
+        "scope_evidence_quote": "1月13号国民党跟我们（签了）停战协定，不久以后执行部成立了",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "鲁南停战、执行部成立与陈老总赴济南徐州谈判",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "停战、成立执行部并赴济南徐州谈判",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "国民党",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "停战协定",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "执行部",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "陈老总",
+              "normalized_entity": "陈毅",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "济南、徐州",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1月13号",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "临沂",
+              "normalized_value": "临沂"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "1月13号国民党跟我们（签了）停战协定，不久以后执行部成立了",
+          "type_basis": "停战协定、执行部成立和陈老总移动谈判是可观察组织/军事行动；原文只有泛称“我们”，无陈锐霆具体角色，属讲述背景。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE009",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E06",
+          "BATCH04-DOC08-W002-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0020",
+          "BATCH04-DOC08-S0022",
+          "BATCH04-DOC08-S0024"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0020"
+        ],
+        "scope_evidence_quote": "美国的一个代表也到了临沂，我们也好好接待他呗，晚上就给他演《兄妹开荒》的小段，他们也非常地高兴。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈锐霆等接待美国代表并在欢迎会上讲话交锋",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "欢迎会上讲话交锋",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "他们",
+              "normalized_entity": "美国代表",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Sayer",
+              "mention": "陈老总",
+              "normalized_entity": "陈毅",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "美国的这位先生",
+              "normalized_entity": "美国代表",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "临沂",
+              "normalized_value": "临沂"
+            },
+            {
+              "kind": "TIME",
+              "value": "晚上",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "好好接待",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "演《兄妹开荒》的小段",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "他们讲话里边就是批评我们没出息，自己打自己；陈老总说无论如何不能够忘记过去，现在我们从战争中（走出来），现在停战了，但是不要忘了过去；美国内战结束才几年，南北战争打了多少年，现在都忘记了，我们无论如何不能忘记",
+          "evidence_quote": "最后陈老总接着又讲话，他说无论如何不能够忘记过去啊，他说现在我们从战争中（走出来），现在停战了，但是不要忘了过去。",
+          "type_basis": "核心是欢迎会上美国代表批评与陈老总回应，明确象征交换；Sayer/Receiver配置；接待和演出为环境，不主导物质。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE010",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W002-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0026",
+          "BATCH04-DOC08-S0028"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECTLY_AFFECTED"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0026"
+        ],
+        "scope_evidence_quote": "叫我也跟着去。陈老总一听，“他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。”",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈老总阻止陈锐霆随军赴济南",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "阻止陈锐霆赴济南",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "陈老总",
+              "normalized_entity": "陈毅",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "有些人提议，我对国民党那个部队熟悉",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。",
+          "evidence_quote": "陈老总一听，“他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。”",
+          "type_basis": "陈老总通过直接引语发出阻止性要求，Sayer-Receiver言语配置；赴济南移动只是言语内容，不单独作为物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE011",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W002-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0031",
+          "BATCH04-DOC08-S0033",
+          "BATCH04-DOC08-S0035",
+          "BATCH04-DOC08-S0037",
+          "BATCH04-DOC08-S0039"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0033"
+        ],
+        "scope_evidence_quote": "军队由我来负责，（集中军队）团以上的干部，（地方）县以上的干部，传达这个“二一指示”。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "临沂西关孔庙传达“二一指示”会议",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "陈毅传达“二一指示”",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "陈毅同志",
+              "normalized_entity": "陈毅",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "党政军的人",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Verbiage",
+              "mention": "二一指示",
+              "normalized_entity": "二一指示",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "临沂西关孔庙",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "2月1号",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "非常地透彻",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "和平民主新阶段：首先要肯定和平，高高举起和平旗帜；蒋介石不把共产党消灭觉都睡不好，一定还要打；山东不能复员，老病残要安置，青年一个不能复员，可当警察；敌我力量悬殊，可能被迫转移黄河以北，地方准备游击战争；军队加强训练",
+          "evidence_quote": "他把党政军的人都集合到一起，到临沂西关孔庙来，开了一个传达会议，由陈毅同志来传达。",
+          "type_basis": "核心是陈毅在会议上传达指示，Sayer-Receiver-Verbiage言语配置；陈锐霆负责军队干部集中，个人参与；开会和干部集合是言语过程环境。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE012",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W002-E04"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0039",
+          "BATCH04-DOC08-S0041",
+          "BATCH04-DOC08-S0043"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0041"
+        ],
+        "scope_evidence_quote": "我们都跟着去了，在西边。一部分随着部队到了外线，去支援刘邓，其余的我们就南麻、临朐（战役）后就到了渤海地区了。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "主力分兵支援刘邓、南麻临朐失利后转移渤海整编联合",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "分兵支援刘邓并转移渤海整编联合",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们主力",
+              "normalized_entity": "陈锐霆所在部队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "陈士榘、唐亮",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "七月",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "支援刘邓进大别山",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "河南",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "渤海地区",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "胶东",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "以后我们南麻、临朐（失利），因为（七月）分兵嘛，我们主力支援刘邓进大别山，由陈士榘、唐亮带着一、四、六纵队，还有三纵队、八纵队，（总共）五个纵队吧，到河南去了。",
+          "type_basis": "核心是部队分兵、作战失利、转移和整编联合等可观察军事组织行动；“我们都跟着去了”证明陈锐霆随集体在场，Actor配置支持物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E01",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE001"
+        ],
+        "reason": "保留为个人直接受影响事件；尊重与关系状态并存，类型需复核。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE002"
+        ],
+        "reason": "领导整风是本人直接组织行动，单独保留。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E03",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE003"
+        ],
+        "reason": "接收日本投降消息与开大会庆祝服务同一胜利结果，合并保留。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E04",
+        "action": "SPLIT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE004",
+          "BATCH04-DOC08-DE005"
+        ],
+        "reason": "候选同时包含三师打下淮阴的他人军事行动和陈锐霆被任命警备司令的本人职务，拆分为两个范围不同事件。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E05",
+        "action": "SPLIT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE006",
+          "BATCH04-DOC08-DE007"
+        ],
+        "reason": "候选同时包含新四军与山东军区合并的机构沿革和陈锐霆先遣赴山东汇报的本人任务，拆分为两个范围不同事件。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E06",
+        "action": "SPLIT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE008",
+          "BATCH04-DOC08-DE009"
+        ],
+        "reason": "候选同时包含鲁南停战/执行部成立/陈老总谈判的背景与接待美国代表并欢迎讲话交锋，拆分为两个事件。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W002-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE009"
+        ],
+        "reason": "与W001-E06共享欢迎讲话交锋核心，归并到同一接待美国代表讲话事件。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W002-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE010"
+        ],
+        "reason": "陈老总阻止陈锐霆赴济南是独立言语事件，本人直接受影响，单独保留。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W002-E03",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE011"
+        ],
+        "reason": "传达二一指示会议是独立言语事件，陈锐霆负责军队干部，单独保留。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W002-E04",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE012"
+        ],
+        "reason": "主力分兵、转移渤海和整编联合是同一军事组织行动链，单独保留。"
+      }
+    ]
+  },
+  "normalized_output": {
+    "schema_version": "document-consolidation-v1.0",
+    "technical_document_id": "BATCH04-DOC08",
+    "document_id": "10.陈锐霆 090509（三校后 阅读版）.docx",
+    "interviewee": "陈锐霆",
+    "document_events": [
+      {
+        "document_event_id": "BATCH04-DOC08-DE001",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0003"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECTLY_AFFECTED"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0003"
+        ],
+        "scope_evidence_quote": "底下的老同志他们都对我还是很尊重的。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈锐霆因起义负伤获得老同志尊重",
+          "event_type": "MENTAL",
+          "event_type_zh": "心理",
+          "core_process": "受到尊重",
+          "participants": [
+            {
+              "role": "Senser",
+              "mention": "底下的老同志",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Phenomenon",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "在部队敌我兵力很悬殊的时候起义，另外自己负了重伤",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "底下的老同志他们都对我还是很尊重的。",
+          "type_basis": "核心是老同志对陈锐霆的尊重，属心理过程；Senser=底下的老同志，Phenomenon=陈锐霆；关系良好作为伴随状态，不主导。",
+          "alternative_event_type": "RELATIONAL",
+          "ambiguity_reason": "原文同时包含尊重心理与部门关系状态，主导类型需复核。",
+          "review_status": "NEEDS_REVIEW"
+        },
+        "review_status": "NEEDS_REVIEW",
+        "review_reason": "尊重与关系状态并存，主导事件类型需人工确认。"
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE002",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0005"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0005"
+        ],
+        "scope_evidence_quote": "我就领导整风",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈锐霆领导整风",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "领导整风",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Scope",
+              "mention": "整风",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "学习快要结束了",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我就领导整风",
+          "type_basis": "领导整风是组织行动，可用What did X do?测试；Actor=陈锐霆，Scope=整风；排除心理和关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE003",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0005",
+          "BATCH04-DOC08-S0008",
+          "BATCH04-DOC08-S0010"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0008"
+        ],
+        "scope_evidence_quote": "他们以后就报告我，我又报告了上边。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈锐霆等接收日本投降消息并开大会庆祝胜利",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "接收日本投降消息并开大会庆祝胜利",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "三科",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "人们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Scope",
+              "mention": "胜利",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "上边",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "那个时候",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "日本天皇广播（宣布）投降了",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "狂欢",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "给地方上也做宣传",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "开大会，庆祝胜利，人们都流泪了！",
+          "type_basis": "核心是开大会庆祝胜利，可观察组织行动；三科听广播、陈锐霆上报为消息接收阶段，服务同一胜利庆祝结果；Actor配置支持物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE004",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E04"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "scope_evidence_quote": "接着三师打下了淮阴，洪学智那个时候是独立旅的旅长，打下淮阴后他（当）的警备司令。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "三师打下淮阴",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "打下淮阴",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "三师",
+              "normalized_entity": "新四军三师",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "淮阴",
+              "normalized_entity": "淮阴",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "鬼子投降以后",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "接着三师打下了淮阴，洪学智那个时候是独立旅的旅长，打下淮阴后他（当）的警备司令。",
+          "type_basis": "军事行动使地点状态改变，Actor=三师，Goal=淮阴；陈锐霆未参与，属讲述背景。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE005",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E04"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "scope_evidence_quote": "他的警备司令（一职）由我来担任。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈锐霆被任命为淮阴警备司令",
+          "event_type": "RELATIONAL",
+          "event_type_zh": "关系",
+          "core_process": "担任警备司令",
+          "participants": [
+            {
+              "role": "Token",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Value",
+              "mention": "警备司令",
+              "normalized_entity": "淮阴警备司令",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "中央来了命令",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "鬼子投降以后",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "他的警备司令（一职）由我来担任。",
+          "type_basis": "“由我来担任”建立职务身份，识别型关系过程；Token=陈锐霆，Value=警备司令；前因中央命令作为环境，不主导物质。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE006",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E05"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0012",
+          "BATCH04-DOC08-S0014"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "THIRD_PARTY_ONLY"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0012"
+        ],
+        "scope_evidence_quote": "也就是说新四军跟山东军区合并，把新四军的主力，都带到山东去，编一个山东野战军，陈老总（当）的司令员兼政治委员嘛",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "新四军军部与山东军区合并并编成山东野战军",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "合并并编成山东野战军",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "新四军",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "山东军区",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "山东野战军",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "临沂",
+              "normalized_value": "临沂"
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "山东",
+              "normalized_value": "山东"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "中央又有了命令",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "也就是说新四军跟山东军区合并，把新四军的主力，都带到山东去，编一个山东野战军，陈老总（当）的司令员兼政治委员嘛",
+          "type_basis": "组织合并、部队调动和编制变化是可观察组织行动；Actor=新四军/山东军区，Goal=山东野战军；陈锐霆未直接参与，属讲述背景。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE007",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E05"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0016"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0016"
+        ],
+        "scope_evidence_quote": "就向他汇报新四军军部的情况，另外部队上来的情况，主要是讲军部的情况，请他帮助搞驻地。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈锐霆作为先遣代表赴山东汇报并驻临沂",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "先遣赴山东汇报并安排驻地",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "山东",
+              "normalized_entity": "山东",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "黎玉",
+              "normalized_entity": "黎玉",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "临沂的西关，里头有个天主教堂",
+              "normalized_value": "临沂西关天主教堂"
+            },
+            {
+              "kind": "MANNER",
+              "value": "作为一个先遣的代表",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "帮助搞驻地",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "两个司令都没上任",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "现在你们军部没有人，副军长年纪也大了，现在参谋长也还没有到任。",
+          "evidence_quote": "就向他汇报新四军军部的情况，另外部队上来的情况，主要是讲军部的情况，请他帮助搞驻地。",
+          "type_basis": "陈锐霆执行先遣汇报和安排驻地任务，属组织行动和执行任务；Actor=陈锐霆，Goal=山东，Recipient=黎玉；打电报为言语阶段，不改变主导物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE008",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E06"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0018",
+          "BATCH04-DOC08-S0020"
+        ],
+        "experience_scope": "NARRATED_CONTEXT",
+        "participation_bases": [
+          "COLLECTIVE_WITHOUT_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0018"
+        ],
+        "scope_evidence_quote": "1月13号国民党跟我们（签了）停战协定，不久以后执行部成立了",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "鲁南停战、执行部成立与陈老总赴济南徐州谈判",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "停战、成立执行部并赴济南徐州谈判",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "国民党",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "停战协定",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "执行部",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "陈老总",
+              "normalized_entity": "陈毅",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "济南、徐州",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1月13号",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "临沂",
+              "normalized_value": "临沂"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "1月13号国民党跟我们（签了）停战协定，不久以后执行部成立了",
+          "type_basis": "停战协定、执行部成立和陈老总移动谈判是可观察组织/军事行动；原文只有泛称“我们”，无陈锐霆具体角色，属讲述背景。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE009",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W001-E06",
+          "BATCH04-DOC08-W002-E01"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0020",
+          "BATCH04-DOC08-S0022",
+          "BATCH04-DOC08-S0024"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0020"
+        ],
+        "scope_evidence_quote": "美国的一个代表也到了临沂，我们也好好接待他呗，晚上就给他演《兄妹开荒》的小段，他们也非常地高兴。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈锐霆等接待美国代表并在欢迎会上讲话交锋",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "欢迎会上讲话交锋",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "他们",
+              "normalized_entity": "美国代表",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Sayer",
+              "mention": "陈老总",
+              "normalized_entity": "陈毅",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "美国的这位先生",
+              "normalized_entity": "美国代表",
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "临沂",
+              "normalized_value": "临沂"
+            },
+            {
+              "kind": "TIME",
+              "value": "晚上",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "好好接待",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "演《兄妹开荒》的小段",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "他们讲话里边就是批评我们没出息，自己打自己；陈老总说无论如何不能够忘记过去，现在我们从战争中（走出来），现在停战了，但是不要忘了过去；美国内战结束才几年，南北战争打了多少年，现在都忘记了，我们无论如何不能忘记",
+          "evidence_quote": "最后陈老总接着又讲话，他说无论如何不能够忘记过去啊，他说现在我们从战争中（走出来），现在停战了，但是不要忘了过去。",
+          "type_basis": "核心是欢迎会上美国代表批评与陈老总回应，明确象征交换；Sayer/Receiver配置；接待和演出为环境，不主导物质。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE010",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W002-E02"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0026",
+          "BATCH04-DOC08-S0028"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECTLY_AFFECTED"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0026"
+        ],
+        "scope_evidence_quote": "叫我也跟着去。陈老总一听，“他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。”",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "陈老总阻止陈锐霆随军赴济南",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "阻止陈锐霆赴济南",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "陈老总",
+              "normalized_entity": "陈毅",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "CAUSE",
+              "value": "有些人提议，我对国民党那个部队熟悉",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。",
+          "evidence_quote": "陈老总一听，“他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。”",
+          "type_basis": "陈老总通过直接引语发出阻止性要求，Sayer-Receiver言语配置；赴济南移动只是言语内容，不单独作为物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE011",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W002-E03"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0031",
+          "BATCH04-DOC08-S0033",
+          "BATCH04-DOC08-S0035",
+          "BATCH04-DOC08-S0037",
+          "BATCH04-DOC08-S0039"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "DIRECT_FIRST_PERSON"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0033"
+        ],
+        "scope_evidence_quote": "军队由我来负责，（集中军队）团以上的干部，（地方）县以上的干部，传达这个“二一指示”。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "临沂西关孔庙传达“二一指示”会议",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "陈毅传达“二一指示”",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "陈毅同志",
+              "normalized_entity": "陈毅",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "党政军的人",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Verbiage",
+              "mention": "二一指示",
+              "normalized_entity": "二一指示",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "临沂西关孔庙",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "2月1号",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "非常地透彻",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "和平民主新阶段：首先要肯定和平，高高举起和平旗帜；蒋介石不把共产党消灭觉都睡不好，一定还要打；山东不能复员，老病残要安置，青年一个不能复员，可当警察；敌我力量悬殊，可能被迫转移黄河以北，地方准备游击战争；军队加强训练",
+          "evidence_quote": "他把党政军的人都集合到一起，到临沂西关孔庙来，开了一个传达会议，由陈毅同志来传达。",
+          "type_basis": "核心是陈毅在会议上传达指示，Sayer-Receiver-Verbiage言语配置；陈锐霆负责军队干部集中，个人参与；开会和干部集合是言语过程环境。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      },
+      {
+        "document_event_id": "BATCH04-DOC08-DE012",
+        "source_candidate_ids": [
+          "BATCH04-DOC08-W002-E04"
+        ],
+        "source_segment_ids": [
+          "BATCH04-DOC08-S0039",
+          "BATCH04-DOC08-S0041",
+          "BATCH04-DOC08-S0043"
+        ],
+        "experience_scope": "PERSONAL_EXPERIENCE",
+        "participation_bases": [
+          "COLLECTIVE_WITH_ROLE"
+        ],
+        "scope_evidence_segment_ids": [
+          "BATCH04-DOC08-S0041"
+        ],
+        "scope_evidence_quote": "我们都跟着去了，在西边。一部分随着部队到了外线，去支援刘邓，其余的我们就南麻、临朐（战役）后就到了渤海地区了。",
+        "completeness": "COMPLETE",
+        "canonical_event": {
+          "event_name": "主力分兵支援刘邓、南麻临朐失利后转移渤海整编联合",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "分兵支援刘邓并转移渤海整编联合",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们主力",
+              "normalized_entity": "陈锐霆所在部队",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "陈士榘、唐亮",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "七月",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "支援刘邓进大别山",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "河南",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "渤海地区",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "胶东",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "以后我们南麻、临朐（失利），因为（七月）分兵嘛，我们主力支援刘邓进大别山，由陈士榘、唐亮带着一、四、六纵队，还有三纵队、八纵队，（总共）五个纵队吧，到河南去了。",
+          "type_basis": "核心是部队分兵、作战失利、转移和整编联合等可观察军事组织行动；“我们都跟着去了”证明陈锐霆随集体在场，Actor配置支持物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        },
+        "review_status": "AUTO_VALIDATED",
+        "review_reason": null
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E01",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE001"
+        ],
+        "reason": "保留为个人直接受影响事件；尊重与关系状态并存，类型需复核。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE002"
+        ],
+        "reason": "领导整风是本人直接组织行动，单独保留。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E03",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE003"
+        ],
+        "reason": "接收日本投降消息与开大会庆祝服务同一胜利结果，合并保留。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E04",
+        "action": "SPLIT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE004",
+          "BATCH04-DOC08-DE005"
+        ],
+        "reason": "候选同时包含三师打下淮阴的他人军事行动和陈锐霆被任命警备司令的本人职务，拆分为两个范围不同事件。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E05",
+        "action": "SPLIT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE006",
+          "BATCH04-DOC08-DE007"
+        ],
+        "reason": "候选同时包含新四军与山东军区合并的机构沿革和陈锐霆先遣赴山东汇报的本人任务，拆分为两个范围不同事件。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W001-E06",
+        "action": "SPLIT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE008",
+          "BATCH04-DOC08-DE009"
+        ],
+        "reason": "候选同时包含鲁南停战/执行部成立/陈老总谈判的背景与接待美国代表并欢迎讲话交锋，拆分为两个事件。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W002-E01",
+        "action": "MERGED",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE009"
+        ],
+        "reason": "与W001-E06共享欢迎讲话交锋核心，归并到同一接待美国代表讲话事件。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W002-E02",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE010"
+        ],
+        "reason": "陈老总阻止陈锐霆赴济南是独立言语事件，本人直接受影响，单独保留。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W002-E03",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE011"
+        ],
+        "reason": "传达二一指示会议是独立言语事件，陈锐霆负责军队干部，单独保留。"
+      },
+      {
+        "candidate_id": "BATCH04-DOC08-W002-E04",
+        "action": "KEPT",
+        "document_event_ids": [
+          "BATCH04-DOC08-DE012"
+        ],
+        "reason": "主力分兵、转移渤海和整编联合是同一军事组织行动链，单独保留。"
+      }
+    ]
+  },
+  "raw_content": "\n\n{\n  \"schema_version\": \"document-consolidation-v1.0\",\n  \"technical_document_id\": \"BATCH04-DOC08\",\n  \"document_id\": \"10.陈锐霆 090509（三校后 阅读版）.docx\",\n  \"interviewee\": \"陈锐霆\",\n  \"document_events\": [\n    {\n      \"document_event_id\": \"BATCH04-DOC08-DE001\",\n      \"source_candidate_ids\": [\n        \"BATCH04-DOC08-W001-E01\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0003\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"DIRECTLY_AFFECTED\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0003\"\n      ],\n      \"scope_evidence_quote\": \"底下的老同志他们都对我还是很尊重的。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"陈锐霆因起义负伤获得老同志尊重\",\n        \"event_type\": \"MENTAL\",\n        \"event_type_zh\": \"心理\",\n        \"core_process\": \"受到尊重\",\n        \"participants\": [\n          {\n            \"role\": \"Senser\",\n            \"mention\": \"底下的老同志\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Phenomenon\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"在部队敌我兵力很悬殊的时候起义，另外自己负了重伤\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"底下的老同志他们都对我还是很尊重的。\",\n        \"type_basis\": \"核心是老同志对陈锐霆的尊重，属心理过程；Senser=底下的老同志，Phenomenon=陈锐霆；关系良好作为伴随状态，不主导。\",\n        \"alternative_event_type\": \"RELATIONAL\",\n        \"ambiguity_reason\": \"原文同时包含尊重心理与部门关系状态，主导类型需复核。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      },\n      \"review_status\": \"NEEDS_REVIEW\",\n      \"review_reason\": \"尊重与关系状态并存，主导事件类型需人工确认。\"\n    },\n    {\n      \"document_event_id\": \"BATCH04-DOC08-DE002\",\n      \"source_candidate_ids\": [\n        \"BATCH04-DOC08-W001-E02\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0005\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"DIRECT_FIRST_PERSON\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0005\"\n      ],\n      \"scope_evidence_quote\": \"我就领导整风\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"陈锐霆领导整风\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"领导整风\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"整风\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"学习快要结束了\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我就领导整风\",\n        \"type_basis\": \"领导整风是组织行动，可用What did X do?测试；Actor=陈锐霆，Scope=整风；排除心理和关系。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH04-DOC08-DE003\",\n      \"source_candidate_ids\": [\n        \"BATCH04-DOC08-W001-E03\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0005\",\n        \"BATCH04-DOC08-S0008\",\n        \"BATCH04-DOC08-S0010\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"DIRECT_FIRST_PERSON\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0008\"\n      ],\n      \"scope_evidence_quote\": \"他们以后就报告我，我又报告了上边。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"陈锐霆等接收日本投降消息并开大会庆祝胜利\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"接收日本投降消息并开大会庆祝胜利\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"三科\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"人们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"胜利\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"上边\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"那个时候\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"日本天皇广播（宣布）投降了\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"狂欢\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"给地方上也做宣传\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"开大会，庆祝胜利，人们都流泪了！\",\n        \"type_basis\": \"核心是开大会庆祝胜利，可观察组织行动；三科听广播、陈锐霆上报为消息接收阶段，服务同一胜利庆祝结果；Actor配置支持物质过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH04-DOC08-DE004\",\n      \"source_candidate_ids\": [\n        \"BATCH04-DOC08-W001-E04\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0010\"\n      ],\n      \"experience_scope\": \"NARRATED_CONTEXT\",\n      \"participation_bases\": [\n        \"THIRD_PARTY_ONLY\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0010\"\n      ],\n      \"scope_evidence_quote\": \"接着三师打下了淮阴，洪学智那个时候是独立旅的旅长，打下淮阴后他（当）的警备司令。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"三师打下淮阴\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"打下淮阴\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"三师\",\n            \"normalized_entity\": \"新四军三师\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"淮阴\",\n            \"normalized_entity\": \"淮阴\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"鬼子投降以后\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"接着三师打下了淮阴，洪学智那个时候是独立旅的旅长，打下淮阴后他（当）的警备司令。\",\n        \"type_basis\": \"军事行动使地点状态改变，Actor=三师，Goal=淮阴；陈锐霆未参与，属讲述背景。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH04-DOC08-DE005\",\n      \"source_candidate_ids\": [\n        \"BATCH04-DOC08-W001-E04\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0010\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"DIRECT_FIRST_PERSON\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0010\"\n      ],\n      \"scope_evidence_quote\": \"他的警备司令（一职）由我来担任。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"陈锐霆被任命为淮阴警备司令\",\n        \"event_type\": \"RELATIONAL\",\n        \"event_type_zh\": \"关系\",\n        \"core_process\": \"担任警备司令\",\n        \"participants\": [\n          {\n            \"role\": \"Token\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Value\",\n            \"mention\": \"警备司令\",\n            \"normalized_entity\": \"淮阴警备司令\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"中央来了命令\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"鬼子投降以后\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"他的警备司令（一职）由我来担任。\",\n        \"type_basis\": \"“由我来担任”建立职务身份，识别型关系过程；Token=陈锐霆，Value=警备司令；前因中央命令作为环境，不主导物质。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH04-DOC08-DE006\",\n      \"source_candidate_ids\": [\n        \"BATCH04-DOC08-W001-E05\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0012\",\n        \"BATCH04-DOC08-S0014\"\n      ],\n      \"experience_scope\": \"NARRATED_CONTEXT\",\n      \"participation_bases\": [\n        \"THIRD_PARTY_ONLY\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0012\"\n      ],\n      \"scope_evidence_quote\": \"也就是说新四军跟山东军区合并，把新四军的主力，都带到山东去，编一个山东野战军，陈老总（当）的司令员兼政治委员嘛\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"新四军军部与山东军区合并并编成山东野战军\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"合并并编成山东野战军\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"新四军\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"山东军区\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"山东野战军\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"临沂\",\n            \"normalized_value\": \"临沂\"\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"山东\",\n            \"normalized_value\": \"山东\"\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"中央又有了命令\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"也就是说新四军跟山东军区合并，把新四军的主力，都带到山东去，编一个山东野战军，陈老总（当）的司令员兼政治委员嘛\",\n        \"type_basis\": \"组织合并、部队调动和编制变化是可观察组织行动；Actor=新四军/山东军区，Goal=山东野战军；陈锐霆未直接参与，属讲述背景。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH04-DOC08-DE007\",\n      \"source_candidate_ids\": [\n        \"BATCH04-DOC08-W001-E05\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0016\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"DIRECT_FIRST_PERSON\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0016\"\n      ],\n      \"scope_evidence_quote\": \"就向他汇报新四军军部的情况，另外部队上来的情况，主要是讲军部的情况，请他帮助搞驻地。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"陈锐霆作为先遣代表赴山东汇报并驻临沂\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"先遣赴山东汇报并安排驻地\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"山东\",\n            \"normalized_entity\": \"山东\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"黎玉\",\n            \"normalized_entity\": \"黎玉\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"临沂的西关，里头有个天主教堂\",\n            \"normalized_value\": \"临沂西关天主教堂\"\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"作为一个先遣的代表\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"帮助搞驻地\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"两个司令都没上任\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"现在你们军部没有人，副军长年纪也大了，现在参谋长也还没有到任。\",\n        \"evidence_quote\": \"就向他汇报新四军军部的情况，另外部队上来的情况，主要是讲军部的情况，请他帮助搞驻地。\",\n        \"type_basis\": \"陈锐霆执行先遣汇报和安排驻地任务，属组织行动和执行任务；Actor=陈锐霆，Goal=山东，Recipient=黎玉；打电报为言语阶段，不改变主导物质过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH04-DOC08-DE008\",\n      \"source_candidate_ids\": [\n        \"BATCH04-DOC08-W001-E06\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0018\",\n        \"BATCH04-DOC08-S0020\"\n      ],\n      \"experience_scope\": \"NARRATED_CONTEXT\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITHOUT_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0018\"\n      ],\n      \"scope_evidence_quote\": \"1月13号国民党跟我们（签了）停战协定，不久以后执行部成立了\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"鲁南停战、执行部成立与陈老总赴济南徐州谈判\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"停战、成立执行部并赴济南徐州谈判\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"国民党\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"停战协定\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"执行部\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"陈老总\",\n            \"normalized_entity\": \"陈毅\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"济南、徐州\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"1月13号\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"临沂\",\n            \"normalized_value\": \"临沂\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"1月13号国民党跟我们（签了）停战协定，不久以后执行部成立了\",\n        \"type_basis\": \"停战协定、执行部成立和陈老总移动谈判是可观察组织/军事行动；原文只有泛称“我们”，无陈锐霆具体角色，属讲述背景。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH04-DOC08-DE009\",\n      \"source_candidate_ids\": [\n        \"BATCH04-DOC08-W001-E06\",\n        \"BATCH04-DOC08-W002-E01\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0020\",\n        \"BATCH04-DOC08-S0022\",\n        \"BATCH04-DOC08-S0024\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0020\"\n      ],\n      \"scope_evidence_quote\": \"美国的一个代表也到了临沂，我们也好好接待他呗，晚上就给他演《兄妹开荒》的小段，他们也非常地高兴。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"陈锐霆等接待美国代表并在欢迎会上讲话交锋\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"欢迎会上讲话交锋\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"他们\",\n            \"normalized_entity\": \"美国代表\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"陈老总\",\n            \"normalized_entity\": \"陈毅\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"美国的这位先生\",\n            \"normalized_entity\": \"美国代表\",\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"临沂\",\n            \"normalized_value\": \"临沂\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"晚上\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"好好接待\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"演《兄妹开荒》的小段\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"他们讲话里边就是批评我们没出息，自己打自己；陈老总说无论如何不能够忘记过去，现在我们从战争中（走出来），现在停战了，但是不要忘了过去；美国内战结束才几年，南北战争打了多少年，现在都忘记了，我们无论如何不能忘记\",\n        \"evidence_quote\": \"最后陈老总接着又讲话，他说无论如何不能够忘记过去啊，他说现在我们从战争中（走出来），现在停战了，但是不要忘了过去。\",\n        \"type_basis\": \"核心是欢迎会上美国代表批评与陈老总回应，明确象征交换；Sayer/Receiver配置；接待和演出为环境，不主导物质。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH04-DOC08-DE010\",\n      \"source_candidate_ids\": [\n        \"BATCH04-DOC08-W002-E02\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0026\",\n        \"BATCH04-DOC08-S0028\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"DIRECTLY_AFFECTED\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0026\"\n      ],\n      \"scope_evidence_quote\": \"叫我也跟着去。陈老总一听，“他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。”\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"陈老总阻止陈锐霆随军赴济南\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"阻止陈锐霆赴济南\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"陈老总\",\n            \"normalized_entity\": \"陈毅\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"有些人提议，我对国民党那个部队熟悉\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。\",\n        \"evidence_quote\": \"陈老总一听，“他怎么能去？现在到了济南，国民党当他叛徒，把他捉起来，我们没有话讲啊。”\",\n        \"type_basis\": \"陈老总通过直接引语发出阻止性要求，Sayer-Receiver言语配置；赴济南移动只是言语内容，不单独作为物质过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH04-DOC08-DE011\",\n      \"source_candidate_ids\": [\n        \"BATCH04-DOC08-W002-E03\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0031\",\n        \"BATCH04-DOC08-S0033\",\n        \"BATCH04-DOC08-S0035\",\n        \"BATCH04-DOC08-S0037\",\n        \"BATCH04-DOC08-S0039\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"DIRECT_FIRST_PERSON\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0033\"\n      ],\n      \"scope_evidence_quote\": \"军队由我来负责，（集中军队）团以上的干部，（地方）县以上的干部，传达这个“二一指示”。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"临沂西关孔庙传达“二一指示”会议\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"陈毅传达“二一指示”\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"陈毅同志\",\n            \"normalized_entity\": \"陈毅\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"党政军的人\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Verbiage\",\n            \"mention\": \"二一指示\",\n            \"normalized_entity\": \"二一指示\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"临沂西关孔庙\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"2月1号\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"非常地透彻\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"和平民主新阶段：首先要肯定和平，高高举起和平旗帜；蒋介石不把共产党消灭觉都睡不好，一定还要打；山东不能复员，老病残要安置，青年一个不能复员，可当警察；敌我力量悬殊，可能被迫转移黄河以北，地方准备游击战争；军队加强训练\",\n        \"evidence_quote\": \"他把党政军的人都集合到一起，到临沂西关孔庙来，开了一个传达会议，由陈毅同志来传达。\",\n        \"type_basis\": \"核心是陈毅在会议上传达指示，Sayer-Receiver-Verbiage言语配置；陈锐霆负责军队干部集中，个人参与；开会和干部集合是言语过程环境。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    },\n    {\n      \"document_event_id\": \"BATCH04-DOC08-DE012\",\n      \"source_candidate_ids\": [\n        \"BATCH04-DOC08-W002-E04\"\n      ],\n      \"source_segment_ids\": [\n        \"BATCH04-DOC08-S0039\",\n        \"BATCH04-DOC08-S0041\",\n        \"BATCH04-DOC08-S0043\"\n      ],\n      \"experience_scope\": \"PERSONAL_EXPERIENCE\",\n      \"participation_bases\": [\n        \"COLLECTIVE_WITH_ROLE\"\n      ],\n      \"scope_evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0041\"\n      ],\n      \"scope_evidence_quote\": \"我们都跟着去了，在西边。一部分随着部队到了外线，去支援刘邓，其余的我们就南麻、临朐（战役）后就到了渤海地区了。\",\n      \"completeness\": \"COMPLETE\",\n      \"canonical_event\": {\n        \"event_name\": \"主力分兵支援刘邓、南麻临朐失利后转移渤海整编联合\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"分兵支援刘邓并转移渤海整编联合\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们主力\",\n            \"normalized_entity\": \"陈锐霆所在部队\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"陈士榘、唐亮\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"七月\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"支援刘邓进大别山\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"河南\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"渤海地区\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"胶东\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"以后我们南麻、临朐（失利），因为（七月）分兵嘛，我们主力支援刘邓进大别山，由陈士榘、唐亮带着一、四、六纵队，还有三纵队、八纵队，（总共）五个纵队吧，到河南去了。\",\n        \"type_basis\": \"核心是部队分兵、作战失利、转移和整编联合等可观察军事组织行动；“我们都跟着去了”证明陈锐霆随集体在场，Actor配置支持物质过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      },\n      \"review_status\": \"AUTO_VALIDATED\",\n      \"review_reason\": null\n    }\n  ],\n  \"candidate_decisions\": [\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W001-E01\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH04-DOC08-DE001\"\n      ],\n      \"reason\": \"保留为个人直接受影响事件；尊重与关系状态并存，类型需复核。\"\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W001-E02\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH04-DOC08-DE002\"\n      ],\n      \"reason\": \"领导整风是本人直接组织行动，单独保留。\"\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W001-E03\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH04-DOC08-DE003\"\n      ],\n      \"reason\": \"接收日本投降消息与开大会庆祝服务同一胜利结果，合并保留。\"\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W001-E04\",\n      \"action\": \"SPLIT\",\n      \"document_event_ids\": [\n        \"BATCH04-DOC08-DE004\",\n        \"BATCH04-DOC08-DE005\"\n      ],\n      \"reason\": \"候选同时包含三师打下淮阴的他人军事行动和陈锐霆被任命警备司令的本人职务，拆分为两个范围不同事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W001-E05\",\n      \"action\": \"SPLIT\",\n      \"document_event_ids\": [\n        \"BATCH04-DOC08-DE006\",\n        \"BATCH04-DOC08-DE007\"\n      ],\n      \"reason\": \"候选同时包含新四军与山东军区合并的机构沿革和陈锐霆先遣赴山东汇报的本人任务，拆分为两个范围不同事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W001-E06\",\n      \"action\": \"SPLIT\",\n      \"document_event_ids\": [\n        \"BATCH04-DOC08-DE008\",\n        \"BATCH04-DOC08-DE009\"\n      ],\n      \"reason\": \"候选同时包含鲁南停战/执行部成立/陈老总谈判的背景与接待美国代表并欢迎讲话交锋，拆分为两个事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W002-E01\",\n      \"action\": \"MERGED\",\n      \"document_event_ids\": [\n        \"BATCH04-DOC08-DE009\"\n      ],\n      \"reason\": \"与W001-E06共享欢迎讲话交锋核心，归并到同一接待美国代表讲话事件。\"\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W002-E02\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH04-DOC08-DE010\"\n      ],\n      \"reason\": \"陈老总阻止陈锐霆赴济南是独立言语事件，本人直接受影响，单独保留。\"\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W002-E03\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH04-DOC08-DE011\"\n      ],\n      \"reason\": \"传达二一指示会议是独立言语事件，陈锐霆负责军队干部，单独保留。\"\n    },\n    {\n      \"candidate_id\": \"BATCH04-DOC08-W002-E04\",\n      \"action\": \"KEPT\",\n      \"document_event_ids\": [\n        \"BATCH04-DOC08-DE012\"\n      ],\n      \"reason\": \"主力分兵、转移渤海和整编联合是同一军事组织行动链，单独保留。\"\n    }\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 11911,
+    "total_tokens": 53433,
+    "completion_tokens": 41522,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 32479
+    },
+    "time_to_first_token_ms": 640630,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13840333.33
+  }
+}

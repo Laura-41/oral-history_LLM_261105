@@ -1,0 +1,162 @@
+{
+  "run_time": "2026-11-12T00:52:25",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE002",
+  "usage": {
+    "prompt_tokens": 1788,
+    "total_tokens": 6982,
+    "completion_tokens": 5194,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3622
+    },
+    "time_to_first_token_ms": 41822,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"苏浙军区后方医院成立并接收野战医院伤员，后随北撤到江北而撤销。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以伤员先行转移治疗为起点，以后方医院到江北后撤销为终点；中间包含成立医院、任命院长和接收野战医院伤员。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"伤员先行撤离并接受约两三个月的治疗。\",\n      \"process_text\": \"伤员先走了，进行两三月治疗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0019\"\n      ],\n      \"evidence_quote\": \"    陈海峰：伤员先走了，两三月治疗\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"治疗后约一半伤员回部队，一小半重伤员被送往江北。\",\n      \"process_text\": \"差不多一半伤员治疗后回部队，一小半重伤员送到江北去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0020\"\n      ],\n      \"evidence_quote\": \"差不多一半就都回部队了。一小半呢，就重伤啊，送到江北去（了）。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"因江南没有后方医院，重伤员转往苏北、苏中后方医院。\",\n      \"process_text\": \"重伤员走到苏北的、苏中的后方医院去了，因为江南没有后方医院。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0023\"\n      ],\n      \"evidence_quote\": \"走到苏北的、苏中的后方医院去了，\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"成立苏浙军区后方医院，但规模不大，力量不及野战医院。\",\n      \"process_text\": \"后来成立了苏浙军区后方医院，规模不太大，力量还没有野战医院大。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0025\"\n      ],\n      \"evidence_quote\": \"后来我们成立了苏浙军区后方医院，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE002-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"彭道清任后方医院院长，此前任医政科长并来自医务职业学校。\",\n      \"process_text\": \"那个时候医院的院长就是彭道清，他由医政科长调任，并兼后方医院院长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0029\"\n      ],\n      \"evidence_quote\": \"    陈海峰：不兼了。那个时候医院的院长就是彭道清了，\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE002-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"野战医院撤销，其伤员交给后方医院，后方医院成为苏浙军区医院。\",\n      \"process_text\": \"野战医院没有了，野战医院的伤员都交给后方医院，这个变成苏浙军区的医院了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0035\"\n      ],\n      \"evidence_quote\": \"野战医院没有了，野战医院（的）伤员都交给后方医院了，这个变成苏浙军区的医院了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE002-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"北撤到江北后，后方医院撤销。\",\n      \"process_text\": \"以后撤退到江北，后方医院就撤销了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0037\"\n      ],\n      \"evidence_quote\": \"到江北来了，他就撤销了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE002-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0020\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE002-P02\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0023\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE002-P03\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE002-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0025\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE002-P04\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE002-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0029\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE002-P05\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE002-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0035\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE002-P06\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE002-P07\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0037\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE002",
+    "event_enrichment": {
+      "result_state": "苏浙军区后方医院成立并接收野战医院伤员，后随北撤到江北而撤销。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以伤员先行转移治疗为起点，以后方医院到江北后撤销为终点；中间包含成立医院、任命院长和接收野战医院伤员。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "伤员先行撤离并接受约两三个月的治疗。",
+        "process_text": "伤员先走了，进行两三月治疗。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0019"
+        ],
+        "evidence_quote": "    陈海峰：伤员先走了，两三月治疗",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "治疗后约一半伤员回部队，一小半重伤员被送往江北。",
+        "process_text": "差不多一半伤员治疗后回部队，一小半重伤员送到江北去。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0020"
+        ],
+        "evidence_quote": "差不多一半就都回部队了。一小半呢，就重伤啊，送到江北去（了）。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "因江南没有后方医院，重伤员转往苏北、苏中后方医院。",
+        "process_text": "重伤员走到苏北的、苏中的后方医院去了，因为江南没有后方医院。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0023"
+        ],
+        "evidence_quote": "走到苏北的、苏中的后方医院去了，",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "成立苏浙军区后方医院，但规模不大，力量不及野战医院。",
+        "process_text": "后来成立了苏浙军区后方医院，规模不太大，力量还没有野战医院大。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0025"
+        ],
+        "evidence_quote": "后来我们成立了苏浙军区后方医院，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE002-P05",
+        "stage_order": 5,
+        "stage_summary": "彭道清任后方医院院长，此前任医政科长并来自医务职业学校。",
+        "process_text": "那个时候医院的院长就是彭道清，他由医政科长调任，并兼后方医院院长。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0029"
+        ],
+        "evidence_quote": "    陈海峰：不兼了。那个时候医院的院长就是彭道清了，",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE002-P06",
+        "stage_order": 6,
+        "stage_summary": "野战医院撤销，其伤员交给后方医院，后方医院成为苏浙军区医院。",
+        "process_text": "野战医院没有了，野战医院的伤员都交给后方医院，这个变成苏浙军区的医院了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0035"
+        ],
+        "evidence_quote": "野战医院没有了，野战医院（的）伤员都交给后方医院了，这个变成苏浙军区的医院了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE002-P07",
+        "stage_order": 7,
+        "stage_summary": "北撤到江北后，后方医院撤销。",
+        "process_text": "以后撤退到江北，后方医院就撤销了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0037"
+        ],
+        "evidence_quote": "到江北来了，他就撤销了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE002-P01",
+        "target_stage_id": "BATCH06-DOC07-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0020",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE002-P02",
+        "target_stage_id": "BATCH06-DOC07-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0023",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE002-P03",
+        "target_stage_id": "BATCH06-DOC07-DE002-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0025",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE002-P04",
+        "target_stage_id": "BATCH06-DOC07-DE002-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0029",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE002-P05",
+        "target_stage_id": "BATCH06-DOC07-DE002-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0035",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE002-P06",
+        "target_stage_id": "BATCH06-DOC07-DE002-P07",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0037",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T23:32:16",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC08-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC08-DE002",
+  "usage": {
+    "prompt_tokens": 1329,
+    "total_tokens": 4251,
+    "completion_tokens": 2922,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1946
+    },
+    "time_to_first_token_ms": 22520,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC08-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆从三科获知日本投降并向上级报告，随后参与庆祝胜利和宣传活动。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以日本天皇广播投降为触发，经三科收听广播、接收中央电报并报告陈锐霆，至陈锐霆获知并上报；S0010中的庆祝活动作为获知后的反应纳入，后续淮阴作战等不纳入。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"日本天皇广播宣布投降，构成获知事件的触发背景。\",\n      \"process_text\": \"日本天皇广播（宣布）投降。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0005\"\n      ],\n      \"evidence_quote\": \"不久鬼子投降了，日本天皇广播（宣布）投降了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"三科通过广播和中央电报获知日本投降。\",\n      \"process_text\": \"三科跟中央有联系，听广播，中央也有电报告诉他们。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0008\"\n      ],\n      \"evidence_quote\": \"那时候我们的三科跟中央也有联系，他也有广播，听广播，中央也有电报告诉他们。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"三科向陈锐霆报告，陈锐霆随后向上级报告。\",\n      \"process_text\": \"他们报告我，我又报告了上边。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0008\"\n      ],\n      \"evidence_quote\": \"他们以后就报告我，我又报告了上边。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"陈锐霆等开大会庆祝胜利并向地方宣传。\",\n      \"process_text\": \"开大会庆祝胜利，人们流泪、狂欢，给地方上也做宣传。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0010\"\n      ],\n      \"evidence_quote\": \"哎呦，那个时候开大会，庆祝胜利，人们都流泪了！打了八年，他妈！死了那么多的同志！听到日本投降，都是狂欢啊！开大会庆祝嘛，给地方上也做宣传。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE002-P01\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0008\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE002-P02\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE002-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0008\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE002-P03\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE002-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0010\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC08-DE002",
+    "event_enrichment": {
+      "result_state": "陈锐霆从三科获知日本投降并向上级报告，随后参与庆祝胜利和宣传活动。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以日本天皇广播投降为触发，经三科收听广播、接收中央电报并报告陈锐霆，至陈锐霆获知并上报；S0010中的庆祝活动作为获知后的反应纳入，后续淮阴作战等不纳入。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC08-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "日本天皇广播宣布投降，构成获知事件的触发背景。",
+        "process_text": "日本天皇广播（宣布）投降。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0005"
+        ],
+        "evidence_quote": "不久鬼子投降了，日本天皇广播（宣布）投降了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "三科通过广播和中央电报获知日本投降。",
+        "process_text": "三科跟中央有联系，听广播，中央也有电报告诉他们。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0008"
+        ],
+        "evidence_quote": "那时候我们的三科跟中央也有联系，他也有广播，听广播，中央也有电报告诉他们。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "三科向陈锐霆报告，陈锐霆随后向上级报告。",
+        "process_text": "他们报告我，我又报告了上边。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0008"
+        ],
+        "evidence_quote": "他们以后就报告我，我又报告了上边。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "陈锐霆等开大会庆祝胜利并向地方宣传。",
+        "process_text": "开大会庆祝胜利，人们流泪、狂欢，给地方上也做宣传。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "evidence_quote": "哎呦，那个时候开大会，庆祝胜利，人们都流泪了！打了八年，他妈！死了那么多的同志！听到日本投降，都是狂欢啊！开大会庆祝嘛，给地方上也做宣传。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC08-DE002-P01",
+        "target_stage_id": "BATCH04-DOC08-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC08-S0008",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC08-DE002-P02",
+        "target_stage_id": "BATCH04-DOC08-DE002-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC08-S0008",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC08-DE002-P03",
+        "target_stage_id": "BATCH04-DOC08-DE002-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC08-S0010",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

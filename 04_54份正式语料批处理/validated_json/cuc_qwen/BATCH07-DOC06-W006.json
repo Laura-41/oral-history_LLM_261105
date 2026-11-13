@@ -1,0 +1,94 @@
+{
+  "validated_at": "2026-11-12T05:05:51",
+  "source_raw_response": "04_54份正式语料批处理/raw_responses/cuc_qwen/20261112_050158_BATCH07-DOC06-W006.json",
+  "model_id": "cuc/qwen",
+  "window_id": "BATCH07-DOC06-W006",
+  "technical_document_id": "BATCH07-DOC06",
+  "document_id": "05.陈海峰（三访）20110816（一校后 阅读版）.doc",
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 2,
+    "unassigned_segment_count": 11,
+    "input_segment_count": 13,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH07-DOC06-W006-E01"
+  ],
+  "postprocessed_output": {
+    "window_id": "BATCH07-DOC06-W006",
+    "events": [
+      {
+        "candidate_id": "BATCH07-DOC06-W006-E01",
+        "source_segment_ids": [
+          "BATCH07-DOC06-S0132",
+          "BATCH07-DOC06-S0134"
+        ],
+        "event": {
+          "event_name": "陈海峰到一师师部后被李振湘安排回二旅五团",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "安排回二旅五团",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他",
+              "normalized_entity": "李振湘",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "我",
+              "normalized_entity": "陈海峰",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "1师师部",
+              "normalized_value": "新四军一师师部"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "因为新四军军部刚成立，正在组建中间，缺乏人员",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "你到2旅5团去",
+          "evidence_quote": "那么他找我了，说你现在不是5团的卫生队长嘛，现在你还是回你的5团去。（陈海峰笑）怎么还回5团？5团都没有了，还回5团！（跟我说是）你到2旅5团去。",
+          "type_basis": "核心过程是李振湘以组织安排方式使陈海峰回二旅五团，参与者配置为Actor=李振湘、Goal=陈海峰，结果为单位/职务变化；言语命令是实现方式，故候选MATERIAL，同时VERBAL有依据。",
+          "alternative_event_type": "VERBAL",
+          "ambiguity_reason": "原文包含明确命令言语“你到2旅5团去”，可作VERBAL；但事件核心结果是组织调动/任职变化，可作MATERIAL。；候选触及文档最后一个受访者片段，需人工确认叙述是否已完整。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH07-DOC06-S0131",
+      "BATCH07-DOC06-S0133",
+      "BATCH07-DOC06-S0135",
+      "BATCH07-DOC06-S0136",
+      "BATCH07-DOC06-S0137",
+      "BATCH07-DOC06-S0138",
+      "BATCH07-DOC06-S0139",
+      "BATCH07-DOC06-S0140",
+      "BATCH07-DOC06-S0141",
+      "BATCH07-DOC06-S0142",
+      "BATCH07-DOC06-S0143"
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 5183,
+    "total_tokens": 20428,
+    "completion_tokens": 15245,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14467
+    },
+    "time_to_first_token_ms": 232528,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 15244000
+  }
+}

@@ -1,0 +1,474 @@
+{
+  "run_time": "2026-11-12T03:11:19",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH07-DOC01-W002",
+  "technical_document_id": "BATCH07-DOC01",
+  "document_id": "15.陈锐霆 090510（二校完 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH07-DOC01-S0020",
+    "BATCH07-DOC01-S0021",
+    "BATCH07-DOC01-S0022",
+    "BATCH07-DOC01-S0023",
+    "BATCH07-DOC01-S0024",
+    "BATCH07-DOC01-S0025",
+    "BATCH07-DOC01-S0026",
+    "BATCH07-DOC01-S0027",
+    "BATCH07-DOC01-S0028",
+    "BATCH07-DOC01-S0029",
+    "BATCH07-DOC01-S0030",
+    "BATCH07-DOC01-S0031",
+    "BATCH07-DOC01-S0032",
+    "BATCH07-DOC01-S0033",
+    "BATCH07-DOC01-S0034",
+    "BATCH07-DOC01-S0035",
+    "BATCH07-DOC01-S0036",
+    "BATCH07-DOC01-S0037",
+    "BATCH07-DOC01-S0038",
+    "BATCH07-DOC01-S0039",
+    "BATCH07-DOC01-S0040"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 7,
+    "assigned_segment_count": 10,
+    "unassigned_segment_count": 11,
+    "input_segment_count": 21,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH07-DOC01-W002-E07"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH07-DOC01-W002",
+    "events": [
+      {
+        "candidate_id": "BATCH07-DOC01-W002-E01",
+        "source_segment_ids": [
+          "BATCH07-DOC01-S0023"
+        ],
+        "event": {
+          "event_name": "陈锐霆等上海入城经过租界街道",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "经过租界街道",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "南京路、淮海路",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "英国租界、法国租界",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "没有。（我们）就是去了南京路、淮海路，就是英国租界、法国租界嘛，也是外国人住的地方嘛。就是打从他们那的街上过嘛，你还能到人家家里去吗？",
+          "type_basis": "核心过程是“去了”和“过”，表示空间移动，Actor为“我们”，地点为租界街道；不是言语、心理或关系身份。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH07-DOC01-W002-E02",
+        "source_segment_ids": [
+          "BATCH07-DOC01-S0023"
+        ],
+        "event": {
+          "event_name": "特纵结束上海军管任务撤往南京",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "军管任务结束并撤往南京",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们特纵",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "8月18号",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "上海",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "南京",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "到了8月的时候，我们这个军管任务就告一段落了，我们特纵8月18号就从上海撤到南京了。",
+          "type_basis": "核心是组织行动和空间移动，Actor为特纵，时间、起点和方向明确；不是单纯任职关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH07-DOC01-W002-E03",
+        "source_segment_ids": [
+          "BATCH07-DOC01-S0025"
+        ],
+        "event": {
+          "event_name": "特校改南京炮校且陈锐霆任名誉校长政委",
+          "event_type": "RELATIONAL",
+          "event_type_zh": "关系",
+          "core_process": "特校改名并任职",
+          "participants": [
+            {
+              "role": "Carrier",
+              "mention": "我们这个特校",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Attribute",
+              "mention": "南京炮校",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Carrier",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Attribute",
+              "mention": "首任的，名誉的，不驻校的校长跟政治委员",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Carrier",
+              "mention": "政治委员",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Attribute",
+              "mention": "首任的，名誉的，不驻校的校长跟政治委员",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "南京",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "到了南京以后，我们这个特校就变成南京炮校，以后（因为是）第三野战军嘛，又改成第三炮校，以后又改回来，还是南京炮校。我跟政治委员都是首任的，名誉的，不驻校的校长跟政治委员。",
+          "type_basis": "核心是类别和身份建立，使用Carrier+Attribute；“变成/改成”在此表达组织名称和职务身份，不是具体物质行动。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH07-DOC01-W002-E04",
+        "source_segment_ids": [
+          "BATCH07-DOC01-S0027"
+        ],
+        "event": {
+          "event_name": "陈锐霆等南京炮兵干部培训与炮兵师编制",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "担任炮兵战术教员并编成炮兵师",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Scope",
+              "mention": "炮兵战术",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "炮三师",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "炮七师",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "南京",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "第二年抗美援朝就开始了",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "建设正规化、现代化、革命化的“三化”军队",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "到了南京，上面就提出来要建设正规化、现代化、革命化的“三化”军队嘛。这个时候陈老总不是在上海当副市长嘛，也回来到南京办了一个团以上的干部（培训班），就找我们去当教员，就教炮兵战术。这个时候主要是练兵，军队正规化嘛，第二年抗美援朝就开始了，以后我们的炮兵编成一个炮三师，一个炮七师。",
+          "type_basis": "核心是职业劳动和组织行动，Actor为“我们”，Scope为炮兵战术，Goal为炮三师/炮七师；不是身份关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH07-DOC01-W002-E05",
+        "source_segment_ids": [
+          "BATCH07-DOC01-S0029",
+          "BATCH07-DOC01-S0031"
+        ],
+        "event": {
+          "event_name": "特纵分建后陈锐霆任炮兵工兵领导",
+          "event_type": "RELATIONAL",
+          "event_type_zh": "关系",
+          "core_process": "特纵分建后任职",
+          "participants": [
+            {
+              "role": "Carrier",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Attribute",
+              "mention": "炮兵跟工兵这一头（的领导）",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Carrier",
+              "mention": "政治委员（何克希）",
+              "normalized_entity": "何克希",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Attribute",
+              "mention": "装甲兵司令",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Carrier",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Attribute",
+              "mention": "炮兵司令部",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "南京",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "徐州",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我就担任炮兵跟工兵这一头（的领导），政治委员（何克希）就到徐州去了当装甲兵司令。这个时候在南京特纵就完成历史任务了。分建了以后我们就叫炮兵司令部，管炮三师，还有以后又建的一个炮七师，还有一个高炮六十三师，三个师嘛，主要是训练干部。",
+          "type_basis": "受访者主线是“我就担任”和“到徐州去了当装甲兵司令”，核心为职务身份建立，使用Carrier+Attribute；分建背景作为环境。",
+          "alternative_event_type": "MATERIAL",
+          "ambiguity_reason": "特纵分建、建制调整和管辖范围变化也可视为组织行动或客观变化，但本事件以任职身份为核心。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      },
+      {
+        "candidate_id": "BATCH07-DOC01-W002-E06",
+        "source_segment_ids": [
+          "BATCH07-DOC01-S0033"
+        ],
+        "event": {
+          "event_name": "陈老总为南京军区炮兵司令部和南京炮校授旗",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "授旗",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "陈老总",
+              "normalized_entity": "陈毅",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "南军军区炮兵司令（部）的军旗",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "南京炮校的军旗",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "南京炮校那个地方",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "操场地下搭了一个台子",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "亲自",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "授旗的时候都是陈老总亲自来授旗，就是在南京炮校那个地方，就在操场地下搭了一个台子，陈老总就在那个地方授旗，就是南军军区炮兵司令（部）的军旗，还有南京炮校的军旗，这两个军旗都是陈老总亲自授的。",
+          "type_basis": "授旗是可观察的仪式性物质行动，Actor为陈老总，Goal为军旗；不是言语命题或身份关系。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH07-DOC01-W002-E07",
+        "source_segment_ids": [
+          "BATCH07-DOC01-S0033",
+          "BATCH07-DOC01-S0035",
+          "BATCH07-DOC01-S0036",
+          "BATCH07-DOC01-S0038",
+          "BATCH07-DOC01-S0040"
+        ],
+        "event": {
+          "event_name": "陈锐霆接调令赴京前向陈毅告别听取指示",
+          "event_type": "VERBAL",
+          "event_type_zh": "言语",
+          "core_process": "接调令并向陈毅告别听取指示",
+          "participants": [
+            {
+              "role": "Sayer",
+              "mention": "陈锡联",
+              "normalized_entity": "陈锡联",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Sayer",
+              "mention": "陈毅司令员",
+              "normalized_entity": "陈毅",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Receiver",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "1952年",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "军械部",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "搞政治运动",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "走的时候",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "南京",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": "说要调我到北京去当军委参谋长，我说我没有这方面的经验，我推辞。（那边说）都已经下了命令了，我打个招呼告诉你。他说我们都不懂啊，就指望你来教炮兵了。他说我看你的历史，你都没有做（过）副职工作，你连长（后）就当营长，营长（后）就当团长，以后又当校长，到这个参谋处也是一把手。他说你不要看不起这个参谋长，实际上参谋长的意见正确，司令员、政治委员也要按着办。他说一定要把老同志团结好，领导干部团结好，这是最重要的。一个兵种，一个单位要搞好工作，团结是最主要的事情。一个不要嫌副职、参谋长没权，另外一个对老同志要很好地团结，这两个同志都很好的。他交代了这么两大问题。他接着又说，我要去开会了，不能够给你送行了。",
+          "evidence_quote": "1952年，我正在军械部帮助他们搞“三查三整”，搞政治运动嘛，接了北京的电话，说要调我到北京去当军委参谋长，我说我没有这方面的经验，我推辞。（那边说）都已经下了命令了，我打个招呼告诉你。",
+          "type_basis": "核心是电话调令、告别和指示等言语过程，Sayer包括陈锡联和陈毅，Receiver为陈锐霆；调令与指示内容写入projected_content，后续未探望作为关系结果合并。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH07-DOC01-S0020",
+      "BATCH07-DOC01-S0021",
+      "BATCH07-DOC01-S0022",
+      "BATCH07-DOC01-S0024",
+      "BATCH07-DOC01-S0026",
+      "BATCH07-DOC01-S0028",
+      "BATCH07-DOC01-S0030",
+      "BATCH07-DOC01-S0032",
+      "BATCH07-DOC01-S0034",
+      "BATCH07-DOC01-S0037",
+      "BATCH07-DOC01-S0039"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH07-DOC01-W002\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH07-DOC01-W002-E01\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC01-S0023\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆等上海入城经过租界街道\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"经过租界街道\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"南京路、淮海路\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"英国租界、法国租界\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"没有。（我们）就是去了南京路、淮海路，就是英国租界、法国租界嘛，也是外国人住的地方嘛。就是打从他们那的街上过嘛，你还能到人家家里去吗？\",\n        \"type_basis\": \"核心过程是“去了”和“过”，表示空间移动，Actor为“我们”，地点为租界街道；不是言语、心理或关系身份。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH07-DOC01-W002-E02\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC01-S0023\"\n      ],\n      \"event\": {\n        \"event_name\": \"特纵结束上海军管任务撤往南京\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"军管任务结束并撤往南京\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们特纵\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"8月18号\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"上海\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"南京\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"到了8月的时候，我们这个军管任务就告一段落了，我们特纵8月18号就从上海撤到南京了。\",\n        \"type_basis\": \"核心是组织行动和空间移动，Actor为特纵，时间、起点和方向明确；不是单纯任职关系。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH07-DOC01-W002-E03\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC01-S0025\"\n      ],\n      \"event\": {\n        \"event_name\": \"特校改南京炮校且陈锐霆任名誉校长政委\",\n        \"event_type\": \"RELATIONAL\",\n        \"event_type_zh\": \"关系\",\n        \"core_process\": \"特校改名并任职\",\n        \"participants\": [\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"我们这个特校\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"南京炮校\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"首任的，名誉的，不驻校的校长跟政治委员\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"政治委员\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"首任的，名誉的，不驻校的校长跟政治委员\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"南京\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"到了南京以后，我们这个特校就变成南京炮校，以后（因为是）第三野战军嘛，又改成第三炮校，以后又改回来，还是南京炮校。我跟政治委员都是首任的，名誉的，不驻校的校长跟政治委员。\",\n        \"type_basis\": \"核心是类别和身份建立，使用Carrier+Attribute；“变成/改成”在此表达组织名称和职务身份，不是具体物质行动。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH07-DOC01-W002-E04\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC01-S0027\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆等南京炮兵干部培训与炮兵师编制\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"担任炮兵战术教员并编成炮兵师\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Scope\",\n            \"mention\": \"炮兵战术\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"炮三师\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"炮七师\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"南京\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"第二年抗美援朝就开始了\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"建设正规化、现代化、革命化的“三化”军队\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"到了南京，上面就提出来要建设正规化、现代化、革命化的“三化”军队嘛。这个时候陈老总不是在上海当副市长嘛，也回来到南京办了一个团以上的干部（培训班），就找我们去当教员，就教炮兵战术。这个时候主要是练兵，军队正规化嘛，第二年抗美援朝就开始了，以后我们的炮兵编成一个炮三师，一个炮七师。\",\n        \"type_basis\": \"核心是职业劳动和组织行动，Actor为“我们”，Scope为炮兵战术，Goal为炮三师/炮七师；不是身份关系。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH07-DOC01-W002-E05\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC01-S0029\",\n        \"BATCH07-DOC01-S0031\"\n      ],\n      \"event\": {\n        \"event_name\": \"特纵分建后陈锐霆任炮兵工兵领导\",\n        \"event_type\": \"RELATIONAL\",\n        \"event_type_zh\": \"关系\",\n        \"core_process\": \"特纵分建后任职\",\n        \"participants\": [\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"炮兵跟工兵这一头（的领导）\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"政治委员（何克希）\",\n            \"normalized_entity\": \"何克希\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"装甲兵司令\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Carrier\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Attribute\",\n            \"mention\": \"炮兵司令部\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"南京\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"徐州\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我就担任炮兵跟工兵这一头（的领导），政治委员（何克希）就到徐州去了当装甲兵司令。这个时候在南京特纵就完成历史任务了。分建了以后我们就叫炮兵司令部，管炮三师，还有以后又建的一个炮七师，还有一个高炮六十三师，三个师嘛，主要是训练干部。\",\n        \"type_basis\": \"受访者主线是“我就担任”和“到徐州去了当装甲兵司令”，核心为职务身份建立，使用Carrier+Attribute；分建背景作为环境。\",\n        \"alternative_event_type\": \"MATERIAL\",\n        \"ambiguity_reason\": \"特纵分建、建制调整和管辖范围变化也可视为组织行动或客观变化，但本事件以任职身份为核心。\",\n        \"review_status\": \"NEEDS_REVIEW\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH07-DOC01-W002-E06\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC01-S0033\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈老总为南京军区炮兵司令部和南京炮校授旗\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"授旗\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"陈老总\",\n            \"normalized_entity\": \"陈毅\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"南军军区炮兵司令（部）的军旗\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"南京炮校的军旗\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"南京炮校那个地方\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"操场地下搭了一个台子\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"亲自\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"授旗的时候都是陈老总亲自来授旗，就是在南京炮校那个地方，就在操场地下搭了一个台子，陈老总就在那个地方授旗，就是南军军区炮兵司令（部）的军旗，还有南京炮校的军旗，这两个军旗都是陈老总亲自授的。\",\n        \"type_basis\": \"授旗是可观察的仪式性物质行动，Actor为陈老总，Goal为军旗；不是言语命题或身份关系。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH07-DOC01-W002-E07\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC01-S0033\",\n        \"BATCH07-DOC01-S0035\",\n        \"BATCH07-DOC01-S0036\",\n        \"BATCH07-DOC01-S0038\",\n        \"BATCH07-DOC01-S0040\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆接调令赴京前向陈毅告别听取指示\",\n        \"event_type\": \"VERBAL\",\n        \"event_type_zh\": \"言语\",\n        \"core_process\": \"接调令并向陈毅告别听取指示\",\n        \"participants\": [\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"陈锡联\",\n            \"normalized_entity\": \"陈锡联\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Sayer\",\n            \"mention\": \"陈毅司令员\",\n            \"normalized_entity\": \"陈毅\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Receiver\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"1952年\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"军械部\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"搞政治运动\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"走的时候\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"南京\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": \"说要调我到北京去当军委参谋长，我说我没有这方面的经验，我推辞。（那边说）都已经下了命令了，我打个招呼告诉你。他说我们都不懂啊，就指望你来教炮兵了。他说我看你的历史，你都没有做（过）副职工作，你连长（后）就当营长，营长（后）就当团长，以后又当校长，到这个参谋处也是一把手。他说你不要看不起这个参谋长，实际上参谋长的意见正确，司令员、政治委员也要按着办。他说一定要把老同志团结好，领导干部团结好，这是最重要的。一个兵种，一个单位要搞好工作，团结是最主要的事情。一个不要嫌副职、参谋长没权，另外一个对老同志要很好地团结，这两个同志都很好的。他交代了这么两大问题。他接着又说，我要去开会了，不能够给你送行了。\",\n        \"evidence_quote\": \"1952年，我正在军械部帮助他们搞“三查三整”，搞政治运动嘛，接了北京的电话，说要调我到北京去当军委参谋长，我说我没有这方面的经验，我推辞。（那边说）都已经下了命令了，我打个招呼告诉你。\",\n        \"type_basis\": \"核心是电话调令、告别和指示等言语过程，Sayer包括陈锡联和陈毅，Receiver为陈锐霆；调令与指示内容写入projected_content，后续未探望作为关系结果合并。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH07-DOC01-S0020\",\n    \"BATCH07-DOC01-S0021\",\n    \"BATCH07-DOC01-S0022\",\n    \"BATCH07-DOC01-S0024\",\n    \"BATCH07-DOC01-S0026\",\n    \"BATCH07-DOC01-S0028\",\n    \"BATCH07-DOC01-S0030\",\n    \"BATCH07-DOC01-S0032\",\n    \"BATCH07-DOC01-S0034\",\n    \"BATCH07-DOC01-S0037\",\n    \"BATCH07-DOC01-S0039\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5840,
+    "total_tokens": 34008,
+    "completion_tokens": 28168,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 23941
+    },
+    "time_to_first_token_ms": 423816,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 14083500
+  }
+}

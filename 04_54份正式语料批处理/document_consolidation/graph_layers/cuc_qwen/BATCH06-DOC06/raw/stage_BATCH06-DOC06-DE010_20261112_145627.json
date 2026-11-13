@@ -1,0 +1,110 @@
+{
+  "run_time": "2026-11-12T14:56:27",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC06-DE010",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC06-DE010",
+  "usage": {
+    "prompt_tokens": 1636,
+    "total_tokens": 13980,
+    "completion_tokens": 12344,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10949
+    },
+    "time_to_first_token_ms": 196936,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 12343000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-14\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC06-DE010\",\n  \"event_enrichment\": {\n    \"result_state\": \"我方炮兵向旗舰（伦敦号）和“黑天鹅”开炮，打掉烟筒，英舰狼狈，副司令白制服被鲜血喷上，外国报纸报道了这一段。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于 S0024 所述“第二天”英军副司令带旗舰，以及 S0026 所述“黑天鹅”号等向我方地方来；止于 S0026 所述我方开炮打掉烟筒、英舰狼狈、鲜血喷白衬衣及外国报纸描写；S0028、S0029 开头用于确认旗舰名称与吨位，S0029 后半渡江战役别的情况不纳入本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE010-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"第二天英军副司令旗舰与“黑天鹅”号等向我方地方来。\",\n      \"process_text\": \"后面跟着一个“黑天鹅”（号）兵舰，两艘小兵舰护卫他嘛，又向我们这个地方来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0024\",\n        \"BATCH06-DOC06-S0026\",\n        \"BATCH06-DOC06-S0028\"\n      ],\n      \"evidence_quote\": \"后面跟着一个“黑天鹅”（号）兵舰，两艘小兵舰护卫他嘛，又向我们这个地方来。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE010-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"英舰向我纵深开炮，造成一名步兵团团长牺牲。\",\n      \"process_text\": \"他向我们这个纵深打了一炮，他有那个24公分的重炮，口径比较大，威力比较大。离江岸大概四五公里，我们一个步兵团的团长正在这开作战会议，一发炮弹打在那个地方，把团长也打牺牲了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0026\"\n      ],\n      \"evidence_quote\": \"他向我们这个纵深打了一炮，他有那个24公分的重炮，口径比较大，威力比较大。离江岸大概四五公里，我们一个步兵团的团长正在这开作战会议，一发炮弹打在那个地方，把团长也打牺牲了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE010-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"我方炮兵向旗舰和“黑天鹅”开炮，打掉其烟筒。\",\n      \"process_text\": \"以后我们也向这个旗舰，向这个“黑天鹅”开炮，把它的烟筒都给打掉了，很狼狈的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0026\"\n      ],\n      \"evidence_quote\": \"以后我们也向这个旗舰，向这个“黑天鹅”开炮，把它的烟筒都给打掉了，很狼狈的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC06-DE010-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"英舰人员受伤，副司令白制服被鲜血喷上，外国报纸报道。\",\n      \"process_text\": \"他这个副司令自己的战士的鲜血喷了他的白衬衣，（他们）都穿着海军那个白制服，鲜血都喷在上面，外国的报纸都描写了这一段。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC06-S0026\"\n      ],\n      \"evidence_quote\": \"他这个副司令自己的战士的鲜血喷了他的白衬衣，（他们）都穿着海军那个白制服，鲜血都喷在上面，外国的报纸都描写了这一段。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE010-P01\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE010-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE010-P02\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE010-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0026\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC06-DE010-P03\",\n      \"target_stage_id\": \"BATCH06-DOC06-DE010-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC06-S0026\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-14",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC06-DE010",
+    "event_enrichment": {
+      "result_state": "我方炮兵向旗舰（伦敦号）和“黑天鹅”开炮，打掉烟筒，英舰狼狈，副司令白制服被鲜血喷上，外国报纸报道了这一段。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于 S0024 所述“第二天”英军副司令带旗舰，以及 S0026 所述“黑天鹅”号等向我方地方来；止于 S0026 所述我方开炮打掉烟筒、英舰狼狈、鲜血喷白衬衣及外国报纸描写；S0028、S0029 开头用于确认旗舰名称与吨位，S0029 后半渡江战役别的情况不纳入本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC06-DE010-P01",
+        "stage_order": 1,
+        "stage_summary": "第二天英军副司令旗舰与“黑天鹅”号等向我方地方来。",
+        "process_text": "后面跟着一个“黑天鹅”（号）兵舰，两艘小兵舰护卫他嘛，又向我们这个地方来。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0024",
+          "BATCH06-DOC06-S0026",
+          "BATCH06-DOC06-S0028"
+        ],
+        "evidence_quote": "后面跟着一个“黑天鹅”（号）兵舰，两艘小兵舰护卫他嘛，又向我们这个地方来。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE010-P02",
+        "stage_order": 2,
+        "stage_summary": "英舰向我纵深开炮，造成一名步兵团团长牺牲。",
+        "process_text": "他向我们这个纵深打了一炮，他有那个24公分的重炮，口径比较大，威力比较大。离江岸大概四五公里，我们一个步兵团的团长正在这开作战会议，一发炮弹打在那个地方，把团长也打牺牲了。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0026"
+        ],
+        "evidence_quote": "他向我们这个纵深打了一炮，他有那个24公分的重炮，口径比较大，威力比较大。离江岸大概四五公里，我们一个步兵团的团长正在这开作战会议，一发炮弹打在那个地方，把团长也打牺牲了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE010-P03",
+        "stage_order": 3,
+        "stage_summary": "我方炮兵向旗舰和“黑天鹅”开炮，打掉其烟筒。",
+        "process_text": "以后我们也向这个旗舰，向这个“黑天鹅”开炮，把它的烟筒都给打掉了，很狼狈的。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0026"
+        ],
+        "evidence_quote": "以后我们也向这个旗舰，向这个“黑天鹅”开炮，把它的烟筒都给打掉了，很狼狈的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC06-DE010-P04",
+        "stage_order": 4,
+        "stage_summary": "英舰人员受伤，副司令白制服被鲜血喷上，外国报纸报道。",
+        "process_text": "他这个副司令自己的战士的鲜血喷了他的白衬衣，（他们）都穿着海军那个白制服，鲜血都喷在上面，外国的报纸都描写了这一段。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC06-S0026"
+        ],
+        "evidence_quote": "他这个副司令自己的战士的鲜血喷了他的白衬衣，（他们）都穿着海军那个白制服，鲜血都喷在上面，外国的报纸都描写了这一段。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC06-DE010-P01",
+        "target_stage_id": "BATCH06-DOC06-DE010-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE010-P02",
+        "target_stage_id": "BATCH06-DOC06-DE010-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC06-S0026",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC06-DE010-P03",
+        "target_stage_id": "BATCH06-DOC06-DE010-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC06-S0026",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

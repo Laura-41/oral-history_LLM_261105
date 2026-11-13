@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T21:29:55",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC02-DE008",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC02-DE008",
+  "usage": {
+    "prompt_tokens": 1551,
+    "total_tokens": 10553,
+    "completion_tokens": 9002,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7409
+    },
+    "time_to_first_token_ms": 132132,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9001000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC02-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"苏君彦任指导员，并与正队长、行政副队长共同构成队部领导；苏君彦解放以后任辽宁省地委主任。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 S0115 队部分工、S0121 行政副队长到苏中卫校、S0123-S0124 指导员苏君彦姓名、S0125 三人队部领导及解放后职务确定边界。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"说明队部编制与正队长、副队长、指导员的分工\",\n      \"process_text\": \"那么编成一个队，我是正队长，全面管理，行政管副队长、指导员就管政治思想。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0115\"\n      ],\n      \"evidence_quote\": \"那么编成一个队，我是正队长，全面管理，行政管副队长、指导员就管政治思想。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"行政副队长到苏中卫校任职并说明其解放后职务与去世\",\n      \"process_text\": \"军医处（有）四个管理员，叫四大副官，那个时候不叫管理员，叫副官，和国民党名字一样的。到了苏北以后，皖南事变以后呢，他到苏中卫校，他本来是在粟裕身边，就到卫校来当行政副队长。一直和我在一块，我们两个很要好，现在已经死了。解放以后呢，他就是福建医科大学的副校长，也是福建省建设厅的副厅长，他以后生癌症死了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0121\"\n      ],\n      \"evidence_quote\": \"军医处（有）四个管理员，叫四大副官，那个时候不叫管理员，叫副官，和国民党名字一样的。到了苏北以后，皖南事变以后呢，他到苏中卫校，他本来是在粟裕身边，就到卫校来当行政副队长。一直和我在一块，我们两个很要好，现在已经死了。解放以后呢，他就是福建医科大学的副校长，也是福建省建设厅的副厅长，他以后生癌症死了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"确认指导员姓名为苏君彦\",\n      \"process_text\": \"    陈海峰：指导员呢，叫苏君彦。“江苏”的“苏”，“君子小人”的“君”，\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0123\"\n      ],\n      \"evidence_quote\": \"    陈海峰：指导员呢，叫苏君彦。“江苏”的“苏”，“君子小人”的“君”，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"补充解释“彦”字写法\",\n      \"process_text\": \"彦呢，就是一个“立正稍息”的“立”，一撇再三撇，那个彦。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0124\"\n      ],\n      \"evidence_quote\": \"彦呢，就是一个“立正稍息”的“立”，一撇再三撇，那个彦。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC02-DE008-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"说明苏君彦解放后任辽宁省地委主任，并确认三人构成队部领导\",\n      \"process_text\": \"这个人解放以后是辽宁省的地委主任。这两个都已经过世了。我们三个人是队部的领导。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC02-S0125\"\n      ],\n      \"evidence_quote\": \"这个人解放以后是辽宁省的地委主任。这两个都已经过世了。我们三个人是队部的领导。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE008-P01\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0121\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE008-P02\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0123\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE008-P03\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE008-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0124\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC02-DE008-P04\",\n      \"target_stage_id\": \"BATCH04-DOC02-DE008-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC02-S0125\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC02-DE008",
+    "event_enrichment": {
+      "result_state": "苏君彦任指导员，并与正队长、行政副队长共同构成队部领导；苏君彦解放以后任辽宁省地委主任。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 S0115 队部分工、S0121 行政副队长到苏中卫校、S0123-S0124 指导员苏君彦姓名、S0125 三人队部领导及解放后职务确定边界。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC02-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "说明队部编制与正队长、副队长、指导员的分工",
+        "process_text": "那么编成一个队，我是正队长，全面管理，行政管副队长、指导员就管政治思想。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0115"
+        ],
+        "evidence_quote": "那么编成一个队，我是正队长，全面管理，行政管副队长、指导员就管政治思想。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "行政副队长到苏中卫校任职并说明其解放后职务与去世",
+        "process_text": "军医处（有）四个管理员，叫四大副官，那个时候不叫管理员，叫副官，和国民党名字一样的。到了苏北以后，皖南事变以后呢，他到苏中卫校，他本来是在粟裕身边，就到卫校来当行政副队长。一直和我在一块，我们两个很要好，现在已经死了。解放以后呢，他就是福建医科大学的副校长，也是福建省建设厅的副厅长，他以后生癌症死了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0121"
+        ],
+        "evidence_quote": "军医处（有）四个管理员，叫四大副官，那个时候不叫管理员，叫副官，和国民党名字一样的。到了苏北以后，皖南事变以后呢，他到苏中卫校，他本来是在粟裕身边，就到卫校来当行政副队长。一直和我在一块，我们两个很要好，现在已经死了。解放以后呢，他就是福建医科大学的副校长，也是福建省建设厅的副厅长，他以后生癌症死了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "确认指导员姓名为苏君彦",
+        "process_text": "    陈海峰：指导员呢，叫苏君彦。“江苏”的“苏”，“君子小人”的“君”，",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0123"
+        ],
+        "evidence_quote": "    陈海峰：指导员呢，叫苏君彦。“江苏”的“苏”，“君子小人”的“君”，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "补充解释“彦”字写法",
+        "process_text": "彦呢，就是一个“立正稍息”的“立”，一撇再三撇，那个彦。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0124"
+        ],
+        "evidence_quote": "彦呢，就是一个“立正稍息”的“立”，一撇再三撇，那个彦。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC02-DE008-P05",
+        "stage_order": 5,
+        "stage_summary": "说明苏君彦解放后任辽宁省地委主任，并确认三人构成队部领导",
+        "process_text": "这个人解放以后是辽宁省的地委主任。这两个都已经过世了。我们三个人是队部的领导。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC02-S0125"
+        ],
+        "evidence_quote": "这个人解放以后是辽宁省的地委主任。这两个都已经过世了。我们三个人是队部的领导。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC02-DE008-P01",
+        "target_stage_id": "BATCH04-DOC02-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0121",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE008-P02",
+        "target_stage_id": "BATCH04-DOC02-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0123",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE008-P03",
+        "target_stage_id": "BATCH04-DOC02-DE008-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC02-S0124",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC02-DE008-P04",
+        "target_stage_id": "BATCH04-DOC02-DE008-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC02-S0125",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

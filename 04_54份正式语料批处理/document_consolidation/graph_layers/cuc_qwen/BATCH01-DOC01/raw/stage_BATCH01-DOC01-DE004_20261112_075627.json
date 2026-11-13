@@ -1,0 +1,111 @@
+{
+  "run_time": "2026-11-12T07:56:27",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC01-DE004",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC01-DE004",
+  "usage": {
+    "prompt_tokens": 1846,
+    "total_tokens": 14198,
+    "completion_tokens": 12352,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10569
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 12351000,
+    "time_to_first_token_ms": 180471
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V1-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC01-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"江抗三路/早期团级部队经发展并改编为一师二旅六团，后续延续为第24集团军（含六纵、警卫三师等叙述中的后续编制）的稳定状态。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为 S0016/S0020 所述早期部队规模与“江抗二团/江抗三路”发展成一个团；终点为 S0016/S0018/S0020 所述该部队以后发展为第24集团军/北京军区驻承德及警卫三师等延续，S0022 表示该老部队交代完毕。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"早期部队由二百多人/一百多人发展成一个团，并出现“江抗二团”“江抗三路”等称呼。\",\n      \"process_text\": \"当时实际上只有二百多人，三百人还不到，以后逐渐发展。发展以后呢，简称叫“江抗二团”，没有一团，就变成一个团了。那个时候发展到七八百人，以后再发展。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0016\",\n        \"BATCH01-DOC01-S0020\"\n      ],\n      \"evidence_quote\": \"    陈海峰：当时实际上只有二百多人，三百人还不到，以后逐渐发展。发展以后呢，简称叫“江抗二团”，没有一团，就变成一个团了。那个时候发展到七八百人，以后再发展。到1941年“皖南事变”以后，就并到粟裕的一师，就变成一师二旅六团，变成正规军了。一师二旅这个部队呢，以后发展到什么呢？以后就发展到现在北京军区（的），（驻）承德的第24集团军。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"1941年皖南事变后并入粟裕一师，改编为一师二旅六团，成为正规军。\",\n      \"process_text\": \"到1941年“皖南事变”以后，就并到粟裕的一师，就变成一师二旅六团，变成正规军了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0016\"\n      ],\n      \"evidence_quote\": \"    陈海峰：当时实际上只有二百多人，三百人还不到，以后逐渐发展。发展以后呢，简称叫“江抗二团”，没有一团，就变成一个团了。那个时候发展到七八百人，以后再发展。到1941年“皖南事变”以后，就并到粟裕的一师，就变成一师二旅六团，变成正规军了。一师二旅这个部队呢，以后发展到什么呢？以后就发展到现在北京军区（的），（驻）承德的第24集团军。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"一师二旅/该旅后续被叙述为发展为六纵队/第24集团军。\",\n      \"process_text\": \"一师二旅这个部队呢，以后发展到什么呢？以后就发展到现在北京军区（的），（驻）承德的第24集团军。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0016\",\n        \"BATCH01-DOC01-S0018\",\n        \"BATCH01-DOC01-S0020\"\n      ],\n      \"evidence_quote\": \"    陈海峰：所以这一个部队，我在这里就交代完了。就是说我们八个人是哥哥带下来发展的，发展了五十几个抗日青年，选了八个人来参加“江抗三路”。“江抗三路”由一百多人发展到一个团，一个团参加主力军，主力军的一个旅以后就变成（第）六纵队。就是你们看到打孟良崮的（部队），打孟良崮的那个军长就是叶挺、王必成，叶帅（听不清）打74师的，以后打孟良崮的那个部队就变成24集团军。在垛庄消灭（国民党）74师，主攻的，就是我们老家的老部队。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"第24集团军延续为北京军区驻承德部队，并出现警卫三师等后续编制与联系。\",\n      \"process_text\": \"警卫三师就是我们这个旅的，我们后来六纵24集团军里面的一个师，现在在顺义，还是算警卫三师。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0016\",\n        \"BATCH01-DOC01-S0018\"\n      ],\n      \"evidence_quote\": \"    陈海峰：1941年是一个旅，发展到24集团军，集团军就是下面三个军。每年我们北京天安门城楼那个阅兵啊，形成一个方块团，方块团那个先导团就是警卫三师。每年这一个方块都是警卫三师的，（警卫三师）就是在顺义的。警卫三师就是我们这个旅的，我们后来六纵24集团军里面的一个师，现在在顺义，还是算警卫三师。每年春节以前，老同志多，都请我们去吃饭的。现在都是新人了，没有什么联系了。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE004-P01\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0016\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE004-P02\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE004-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0016\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE004-P03\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE004-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0018\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V1-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC01-DE004",
+    "event_enrichment": {
+      "result_state": "江抗三路/早期团级部队经发展并改编为一师二旅六团，后续延续为第24集团军（含六纵、警卫三师等叙述中的后续编制）的稳定状态。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为 S0016/S0020 所述早期部队规模与“江抗二团/江抗三路”发展成一个团；终点为 S0016/S0018/S0020 所述该部队以后发展为第24集团军/北京军区驻承德及警卫三师等延续，S0022 表示该老部队交代完毕。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC01-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "早期部队由二百多人/一百多人发展成一个团，并出现“江抗二团”“江抗三路”等称呼。",
+        "process_text": "当时实际上只有二百多人，三百人还不到，以后逐渐发展。发展以后呢，简称叫“江抗二团”，没有一团，就变成一个团了。那个时候发展到七八百人，以后再发展。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0016",
+          "BATCH01-DOC01-S0020"
+        ],
+        "evidence_quote": "    陈海峰：当时实际上只有二百多人，三百人还不到，以后逐渐发展。发展以后呢，简称叫“江抗二团”，没有一团，就变成一个团了。那个时候发展到七八百人，以后再发展。到1941年“皖南事变”以后，就并到粟裕的一师，就变成一师二旅六团，变成正规军了。一师二旅这个部队呢，以后发展到什么呢？以后就发展到现在北京军区（的），（驻）承德的第24集团军。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "1941年皖南事变后并入粟裕一师，改编为一师二旅六团，成为正规军。",
+        "process_text": "到1941年“皖南事变”以后，就并到粟裕的一师，就变成一师二旅六团，变成正规军了。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0016"
+        ],
+        "evidence_quote": "    陈海峰：当时实际上只有二百多人，三百人还不到，以后逐渐发展。发展以后呢，简称叫“江抗二团”，没有一团，就变成一个团了。那个时候发展到七八百人，以后再发展。到1941年“皖南事变”以后，就并到粟裕的一师，就变成一师二旅六团，变成正规军了。一师二旅这个部队呢，以后发展到什么呢？以后就发展到现在北京军区（的），（驻）承德的第24集团军。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "一师二旅/该旅后续被叙述为发展为六纵队/第24集团军。",
+        "process_text": "一师二旅这个部队呢，以后发展到什么呢？以后就发展到现在北京军区（的），（驻）承德的第24集团军。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0016",
+          "BATCH01-DOC01-S0018",
+          "BATCH01-DOC01-S0020"
+        ],
+        "evidence_quote": "    陈海峰：所以这一个部队，我在这里就交代完了。就是说我们八个人是哥哥带下来发展的，发展了五十几个抗日青年，选了八个人来参加“江抗三路”。“江抗三路”由一百多人发展到一个团，一个团参加主力军，主力军的一个旅以后就变成（第）六纵队。就是你们看到打孟良崮的（部队），打孟良崮的那个军长就是叶挺、王必成，叶帅（听不清）打74师的，以后打孟良崮的那个部队就变成24集团军。在垛庄消灭（国民党）74师，主攻的，就是我们老家的老部队。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "第24集团军延续为北京军区驻承德部队，并出现警卫三师等后续编制与联系。",
+        "process_text": "警卫三师就是我们这个旅的，我们后来六纵24集团军里面的一个师，现在在顺义，还是算警卫三师。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0016",
+          "BATCH01-DOC01-S0018"
+        ],
+        "evidence_quote": "    陈海峰：1941年是一个旅，发展到24集团军，集团军就是下面三个军。每年我们北京天安门城楼那个阅兵啊，形成一个方块团，方块团那个先导团就是警卫三师。每年这一个方块都是警卫三师的，（警卫三师）就是在顺义的。警卫三师就是我们这个旅的，我们后来六纵24集团军里面的一个师，现在在顺义，还是算警卫三师。每年春节以前，老同志多，都请我们去吃饭的。现在都是新人了，没有什么联系了。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC01-DE004-P01",
+        "target_stage_id": "BATCH01-DOC01-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH01-DOC01-S0016",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE004-P02",
+        "target_stage_id": "BATCH01-DOC01-DE004-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH01-DOC01-S0016",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE004-P03",
+        "target_stage_id": "BATCH01-DOC01-DE004-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH01-DOC01-S0018",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

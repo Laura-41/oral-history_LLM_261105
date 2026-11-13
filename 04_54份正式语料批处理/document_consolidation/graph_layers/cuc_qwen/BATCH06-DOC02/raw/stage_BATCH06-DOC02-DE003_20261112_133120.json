@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T13:31:20",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC02-DE003",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC02-DE003",
+  "usage": {
+    "prompt_tokens": 1490,
+    "total_tokens": 7587,
+    "completion_tokens": 6097,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4888
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 90969,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-18\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC02-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"小册子经医务人员绘图并刻蜡版完成，部队卫生员经训练和标本学习后到前方连队上卫生课，讲解可食野菜、中草药与常见食物禁忌。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"依据片段 BATCH06-DOC02-S0026，事件从“我们卫生部编那个小册子”开始，到“用野菜来代替吃。”结束；前文氰化物中毒抢救不知晓未纳入本事件边界。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"卫生部编印小册子，说明天目山区可食中草药及常见食物禁忌与营养。\",\n      \"process_text\": \"我们卫生部编那个小册子，天目山区有八百多种中草药，里面有好多是可以吃的。哪些常见的食物是不能吃的，哪些常见食物是有营养的，\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0026\"\n      ],\n      \"evidence_quote\": \"我们卫生部编那个小册子，天目山区有八百多种中草药，里面有好多是可以吃的。哪些常见的食物是不能吃的，哪些常见食物是有营养的，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"懂行的医务人员将内容画成图，并在无彩色条件下刻蜡版。\",\n      \"process_text\": \"我们医务人员懂的人，把它画成图。那个时候没有彩色，都刻蜡版，画成那个样子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0026\"\n      ],\n      \"evidence_quote\": \"我们医务人员懂的人，把它画成图。那个时候没有彩色，都刻蜡版，画成那个样子。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"训练部队卫生员，使其理解内容并查看标本。\",\n      \"process_text\": \"训练那个部队，让部队再懂。部队卫生员懂了以后，拿标本给他看。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0026\"\n      ],\n      \"evidence_quote\": \"训练那个部队，让部队再懂。部队卫生员懂了以后，拿标本给他看。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE003-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"卫生员到前方连队上卫生课，讲解可食野菜与食物安全知识。\",\n      \"process_text\": \"看了以后，他到前方给那个连队上卫生课，就讲这些东西，用野菜来代替吃。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0026\"\n      ],\n      \"evidence_quote\": \"看了以后，他到前方给那个连队上卫生课，就讲这些东西，用野菜来代替吃。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE003-P01\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0026\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE003-P02\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0026\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE003-P03\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE003-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0026\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-18",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC02-DE003",
+    "event_enrichment": {
+      "result_state": "小册子经医务人员绘图并刻蜡版完成，部队卫生员经训练和标本学习后到前方连队上卫生课，讲解可食野菜、中草药与常见食物禁忌。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "依据片段 BATCH06-DOC02-S0026，事件从“我们卫生部编那个小册子”开始，到“用野菜来代替吃。”结束；前文氰化物中毒抢救不知晓未纳入本事件边界。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC02-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "卫生部编印小册子，说明天目山区可食中草药及常见食物禁忌与营养。",
+        "process_text": "我们卫生部编那个小册子，天目山区有八百多种中草药，里面有好多是可以吃的。哪些常见的食物是不能吃的，哪些常见食物是有营养的，",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0026"
+        ],
+        "evidence_quote": "我们卫生部编那个小册子，天目山区有八百多种中草药，里面有好多是可以吃的。哪些常见的食物是不能吃的，哪些常见食物是有营养的，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "懂行的医务人员将内容画成图，并在无彩色条件下刻蜡版。",
+        "process_text": "我们医务人员懂的人，把它画成图。那个时候没有彩色，都刻蜡版，画成那个样子。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0026"
+        ],
+        "evidence_quote": "我们医务人员懂的人，把它画成图。那个时候没有彩色，都刻蜡版，画成那个样子。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "训练部队卫生员，使其理解内容并查看标本。",
+        "process_text": "训练那个部队，让部队再懂。部队卫生员懂了以后，拿标本给他看。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0026"
+        ],
+        "evidence_quote": "训练那个部队，让部队再懂。部队卫生员懂了以后，拿标本给他看。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE003-P04",
+        "stage_order": 4,
+        "stage_summary": "卫生员到前方连队上卫生课，讲解可食野菜与食物安全知识。",
+        "process_text": "看了以后，他到前方给那个连队上卫生课，就讲这些东西，用野菜来代替吃。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0026"
+        ],
+        "evidence_quote": "看了以后，他到前方给那个连队上卫生课，就讲这些东西，用野菜来代替吃。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC02-DE003-P01",
+        "target_stage_id": "BATCH06-DOC02-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0026",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE003-P02",
+        "target_stage_id": "BATCH06-DOC02-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0026",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE003-P03",
+        "target_stage_id": "BATCH06-DOC02-DE003-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC02-S0026",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

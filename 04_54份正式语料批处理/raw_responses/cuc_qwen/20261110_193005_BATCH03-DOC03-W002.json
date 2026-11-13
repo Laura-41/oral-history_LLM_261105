@@ -1,0 +1,155 @@
+{
+  "run_time": "2026-11-10T19:30:05",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC03-W002",
+  "technical_document_id": "BATCH03-DOC03",
+  "document_id": "06.陈海峰（二访）（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC03-S0018",
+    "BATCH03-DOC03-S0019",
+    "BATCH03-DOC03-S0020",
+    "BATCH03-DOC03-S0021",
+    "BATCH03-DOC03-S0022",
+    "BATCH03-DOC03-S0023",
+    "BATCH03-DOC03-S0024",
+    "BATCH03-DOC03-S0025",
+    "BATCH03-DOC03-S0026",
+    "BATCH03-DOC03-S0027",
+    "BATCH03-DOC03-S0028",
+    "BATCH03-DOC03-S0029",
+    "BATCH03-DOC03-S0030",
+    "BATCH03-DOC03-S0031"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 7,
+    "unassigned_segment_count": 7,
+    "input_segment_count": 14,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH03-DOC03-W002-E01"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC03-W002",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC03-W002-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC03-S0019",
+          "BATCH03-DOC03-S0021",
+          "BATCH03-DOC03-S0023",
+          "BATCH03-DOC03-S0025",
+          "BATCH03-DOC03-S0027",
+          "BATCH03-DOC03-S0029",
+          "BATCH03-DOC03-S0031"
+        ],
+        "event": {
+          "event_name": "繁昌战斗后团卫生队转移休养所并建立山洞医院",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "转移休养所、隐蔽并救治伤员",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "团卫生队",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "伤员",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "我调到团部以后",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "五千多鬼子已经接近我们军部了，就包围军部了",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "52师跑掉了，南陵放弃，泾县放弃，往后方跑了",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "靠近铜陵，靠近144师那个边上了",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "深山密林",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "牧家亭",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "小庙",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "山洞",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "隐蔽",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "洞门口用石头都垒起来",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "需要的时候呢，我们把比较重一点的伤员放到山洞里去了，所以我们就叫它“山洞医院”。",
+          "type_basis": "核心过程是团卫生队/休养所转移、隐蔽、接收和救治伤员，属于组织行动与职业劳动，可用“做了什么”测试；Actor为团卫生队，Goal为伤员，符合MATERIAL角色配置。正面部队作战、军部被围、52师撤退等作为背景原因，不单独成事件；小庙、山洞、老虎等是地点、方式或背景，不改变主导类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC03-S0018",
+      "BATCH03-DOC03-S0020",
+      "BATCH03-DOC03-S0022",
+      "BATCH03-DOC03-S0024",
+      "BATCH03-DOC03-S0026",
+      "BATCH03-DOC03-S0028",
+      "BATCH03-DOC03-S0030"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH03-DOC03-W002\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC03-W002-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC03-S0019\",\n        \"BATCH03-DOC03-S0021\",\n        \"BATCH03-DOC03-S0023\",\n        \"BATCH03-DOC03-S0025\",\n        \"BATCH03-DOC03-S0027\",\n        \"BATCH03-DOC03-S0029\",\n        \"BATCH03-DOC03-S0031\"\n      ],\n      \"event\": {\n        \"event_name\": \"繁昌战斗后团卫生队转移休养所并建立山洞医院\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"转移休养所、隐蔽并救治伤员\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"团卫生队\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"伤员\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"我调到团部以后\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"五千多鬼子已经接近我们军部了，就包围军部了\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"52师跑掉了，南陵放弃，泾县放弃，往后方跑了\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"靠近铜陵，靠近144师那个边上了\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"深山密林\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"牧家亭\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"小庙\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"山洞\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"隐蔽\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"洞门口用石头都垒起来\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"需要的时候呢，我们把比较重一点的伤员放到山洞里去了，所以我们就叫它“山洞医院”。\",\n        \"type_basis\": \"核心过程是团卫生队/休养所转移、隐蔽、接收和救治伤员，属于组织行动与职业劳动，可用“做了什么”测试；Actor为团卫生队，Goal为伤员，符合MATERIAL角色配置。正面部队作战、军部被围、52师撤退等作为背景原因，不单独成事件；小庙、山洞、老虎等是地点、方式或背景，不改变主导类型。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC03-S0018\",\n    \"BATCH03-DOC03-S0020\",\n    \"BATCH03-DOC03-S0022\",\n    \"BATCH03-DOC03-S0024\",\n    \"BATCH03-DOC03-S0026\",\n    \"BATCH03-DOC03-S0028\",\n    \"BATCH03-DOC03-S0030\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5758,
+    "total_tokens": 18245,
+    "completion_tokens": 12487,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 11474
+    },
+    "tokens_per_second": 12486000,
+    "time_to_first_token_ms": 208844,
+    "time_per_output_token_ms": 0
+  }
+}

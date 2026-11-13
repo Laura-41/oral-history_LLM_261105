@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-13T00:33:05",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC03-DE011",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC03-DE011",
+  "usage": {
+    "prompt_tokens": 1351,
+    "total_tokens": 7413,
+    "completion_tokens": 6062,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4882
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 92307,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC03-DE011\",\n  \"event_enrichment\": {\n    \"result_state\": \"决定一下子搞一个纵队，陈锐霆由参谋处长提高到纵队一级并担任纵队司令。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为缴获美国榴弹炮和坦克后陈老总与陈锐霆谈话，终点为陈毅、粟裕、陈士榘决定成纵队并任命陈锐霆为纵队司令；依据 S0060、S0062。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE011-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"缴获美制火炮坦克后陈老总提出让陈锐霆搞炮兵并回去研究\",\n      \"process_text\": \"这个时候缴获了那么多美国榴弹炮和坦克，陈老总对陈锐霆说其有用武之地，可以搞炮兵去了，并表示回去研究一下子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0060\"\n      ],\n      \"evidence_quote\": \"陈锐霆：这个时候我们缴获了那么多的美国榴弹炮，还有那么多的坦克，陈老总见了我也跟我讲，说这一下子你可有用武之地了。他对我懂炮兵的情况（很了解），他第一次见面不是就叫我不要丢掉嘛。他说这一下子你有用武之地了，你可以搞炮兵去了，他说我们回去研究一下子。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE011-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈毅、粟裕、陈士榘积极决定一下子搞一个纵队\",\n      \"process_text\": \"回去后，他、粟裕同志、陈士榘同志三个人非常积极，说要一下子搞一个纵队；虽然兵力、炮、人不多，但还要打胜仗并继续缴获敌人火炮、坦克。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0062\"\n      ],\n      \"evidence_quote\": \"陈锐霆：回去后，他、粟裕同志、陈士榘同志，三个人非常积极的，说要一下子搞一个纵队。现在虽然兵力不多，炮不多，人不多，但是我们继续还要打胜仗，继续还要缴获敌人的火炮、坦克，所以就一下子要成一个纵队，把我从参谋处长一下子提高到纵队的一级。纵队一级那个时候相当于军这一级的，像许世友、韦国清、宋时轮啊，他们都是纵队司令，我也是纵队司令了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC03-DE011-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆被提高到纵队一级并担任纵队司令\",\n      \"process_text\": \"陈锐霆从参谋处长一下子提高到纵队的一级；当时纵队一级相当于军一级，他成为纵队司令。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC03-S0062\"\n      ],\n      \"evidence_quote\": \"陈锐霆：回去后，他、粟裕同志、陈士榘同志，三个人非常积极的，说要一下子搞一个纵队。现在虽然兵力不多，炮不多，人不多，但是我们继续还要打胜仗，继续还要缴获敌人的火炮、坦克，所以就一下子要成一个纵队，把我从参谋处长一下子提高到纵队的一级。纵队一级那个时候相当于军这一级的，像许世友、韦国清、宋时轮啊，他们都是纵队司令，我也是纵队司令了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE011-P01\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE011-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0062\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC03-DE011-P02\",\n      \"target_stage_id\": \"BATCH05-DOC03-DE011-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH05-DOC03-S0062\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC03-DE011",
+    "event_enrichment": {
+      "result_state": "决定一下子搞一个纵队，陈锐霆由参谋处长提高到纵队一级并担任纵队司令。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起点为缴获美国榴弹炮和坦克后陈老总与陈锐霆谈话，终点为陈毅、粟裕、陈士榘决定成纵队并任命陈锐霆为纵队司令；依据 S0060、S0062。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC03-DE011-P01",
+        "stage_order": 1,
+        "stage_summary": "缴获美制火炮坦克后陈老总提出让陈锐霆搞炮兵并回去研究",
+        "process_text": "这个时候缴获了那么多美国榴弹炮和坦克，陈老总对陈锐霆说其有用武之地，可以搞炮兵去了，并表示回去研究一下子。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0060"
+        ],
+        "evidence_quote": "陈锐霆：这个时候我们缴获了那么多的美国榴弹炮，还有那么多的坦克，陈老总见了我也跟我讲，说这一下子你可有用武之地了。他对我懂炮兵的情况（很了解），他第一次见面不是就叫我不要丢掉嘛。他说这一下子你有用武之地了，你可以搞炮兵去了，他说我们回去研究一下子。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE011-P02",
+        "stage_order": 2,
+        "stage_summary": "陈毅、粟裕、陈士榘积极决定一下子搞一个纵队",
+        "process_text": "回去后，他、粟裕同志、陈士榘同志三个人非常积极，说要一下子搞一个纵队；虽然兵力、炮、人不多，但还要打胜仗并继续缴获敌人火炮、坦克。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0062"
+        ],
+        "evidence_quote": "陈锐霆：回去后，他、粟裕同志、陈士榘同志，三个人非常积极的，说要一下子搞一个纵队。现在虽然兵力不多，炮不多，人不多，但是我们继续还要打胜仗，继续还要缴获敌人的火炮、坦克，所以就一下子要成一个纵队，把我从参谋处长一下子提高到纵队的一级。纵队一级那个时候相当于军这一级的，像许世友、韦国清、宋时轮啊，他们都是纵队司令，我也是纵队司令了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC03-DE011-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆被提高到纵队一级并担任纵队司令",
+        "process_text": "陈锐霆从参谋处长一下子提高到纵队的一级；当时纵队一级相当于军一级，他成为纵队司令。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC03-S0062"
+        ],
+        "evidence_quote": "陈锐霆：回去后，他、粟裕同志、陈士榘同志，三个人非常积极的，说要一下子搞一个纵队。现在虽然兵力不多，炮不多，人不多，但是我们继续还要打胜仗，继续还要缴获敌人的火炮、坦克，所以就一下子要成一个纵队，把我从参谋处长一下子提高到纵队的一级。纵队一级那个时候相当于军这一级的，像许世友、韦国清、宋时轮啊，他们都是纵队司令，我也是纵队司令了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC03-DE011-P01",
+        "target_stage_id": "BATCH05-DOC03-DE011-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC03-S0062",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC03-DE011-P02",
+        "target_stage_id": "BATCH05-DOC03-DE011-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH05-DOC03-S0062",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

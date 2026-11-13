@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T23:26:01",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC06-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC06-DE006",
+  "usage": {
+    "prompt_tokens": 1323,
+    "total_tokens": 6004,
+    "completion_tokens": 4681,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3685
+    },
+    "time_to_first_token_ms": 39185,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4680000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC06-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"神门口医疗队中约二十七或二十八名未治好的重伤员牺牲，并建烈士堂（纪念堂）予以纪念。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以神门口医疗队收治重伤员、重伤员牺牲及建烈士堂纪念为边界；起于医疗队到神门口并面对大量重伤员，止于建烈士堂；不扩展到其他医院伤员总数或后续转移。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"医疗队向北转移至神门口，救治任务艰巨。\",\n      \"process_text\": \"向北到神门口，神门口医疗队的任务很艰巨。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0094\"\n      ],\n      \"evidence_quote\": \"向北呢，到那个神门口。神门口这个医疗队的任务是很艰巨。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"此时医疗队收治的伤员特别多，重伤员也增多。\",\n      \"process_text\": \"到那个时候，这个队伤员特别多，重伤员也多了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0102\"\n      ],\n      \"evidence_quote\": \"但是呢，到那个时候呢，这一个队伤员是特别多了，重伤员也多了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"因当时条件不好、伤重无法救治，部分重伤员牺牲。\",\n      \"process_text\": \"当时条件不太好，重伤的治不好，救不了，有的重伤员牺牲。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0098\"\n      ],\n      \"evidence_quote\": \"那时就是重伤死的了，有的是治不好的那种，那当时条件也不是太好啊，是不是。那个（伤）太重的，你救不了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC06-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"未治好的牺牲重伤员约二十七或二十八人，并建烈士堂。\",\n      \"process_text\": \"没有治好的牺牲重伤员大概二十七还是二十八个，建了个烈士堂。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC06-S0100\"\n      ],\n      \"evidence_quote\": \"没有治好的，牺牲的，那种伤员有大概二十七还是二十八个，建了个烈士堂。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE006-P01\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0102\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE006-P02\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE006-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0098\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC06-DE006-P03\",\n      \"target_stage_id\": \"BATCH04-DOC06-DE006-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC06-S0100\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC06-DE006",
+    "event_enrichment": {
+      "result_state": "神门口医疗队中约二十七或二十八名未治好的重伤员牺牲，并建烈士堂（纪念堂）予以纪念。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以神门口医疗队收治重伤员、重伤员牺牲及建烈士堂纪念为边界；起于医疗队到神门口并面对大量重伤员，止于建烈士堂；不扩展到其他医院伤员总数或后续转移。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC06-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "医疗队向北转移至神门口，救治任务艰巨。",
+        "process_text": "向北到神门口，神门口医疗队的任务很艰巨。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0094"
+        ],
+        "evidence_quote": "向北呢，到那个神门口。神门口这个医疗队的任务是很艰巨。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "此时医疗队收治的伤员特别多，重伤员也增多。",
+        "process_text": "到那个时候，这个队伤员特别多，重伤员也多了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0102"
+        ],
+        "evidence_quote": "但是呢，到那个时候呢，这一个队伤员是特别多了，重伤员也多了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "因当时条件不好、伤重无法救治，部分重伤员牺牲。",
+        "process_text": "当时条件不太好，重伤的治不好，救不了，有的重伤员牺牲。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0098"
+        ],
+        "evidence_quote": "那时就是重伤死的了，有的是治不好的那种，那当时条件也不是太好啊，是不是。那个（伤）太重的，你救不了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC06-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "未治好的牺牲重伤员约二十七或二十八人，并建烈士堂。",
+        "process_text": "没有治好的牺牲重伤员大概二十七还是二十八个，建了个烈士堂。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC06-S0100"
+        ],
+        "evidence_quote": "没有治好的，牺牲的，那种伤员有大概二十七还是二十八个，建了个烈士堂。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC06-DE006-P01",
+        "target_stage_id": "BATCH04-DOC06-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC06-S0102",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE006-P02",
+        "target_stage_id": "BATCH04-DOC06-DE006-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH04-DOC06-S0098",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC06-DE006-P03",
+        "target_stage_id": "BATCH04-DOC06-DE006-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC06-S0100",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,410 @@
+{
+  "run_time": "2026-11-11T19:00:50",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH06-DOC03-W002",
+  "technical_document_id": "BATCH06-DOC03",
+  "document_id": "09.杨永松100507（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH06-DOC03-S0020",
+    "BATCH06-DOC03-S0021",
+    "BATCH06-DOC03-S0022",
+    "BATCH06-DOC03-S0023",
+    "BATCH06-DOC03-S0024",
+    "BATCH06-DOC03-S0025",
+    "BATCH06-DOC03-S0026",
+    "BATCH06-DOC03-S0027",
+    "BATCH06-DOC03-S0028",
+    "BATCH06-DOC03-S0029",
+    "BATCH06-DOC03-S0030",
+    "BATCH06-DOC03-S0031",
+    "BATCH06-DOC03-S0032",
+    "BATCH06-DOC03-S0033",
+    "BATCH06-DOC03-S0034",
+    "BATCH06-DOC03-S0035",
+    "BATCH06-DOC03-S0036",
+    "BATCH06-DOC03-S0037"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 5,
+    "assigned_segment_count": 8,
+    "unassigned_segment_count": 10,
+    "input_segment_count": 18,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH06-DOC03-W002-E05"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH06-DOC03-W002",
+    "events": [
+      {
+        "candidate_id": "BATCH06-DOC03-W002-E01",
+        "source_segment_ids": [
+          "BATCH06-DOC03-S0022",
+          "BATCH06-DOC03-S0024"
+        ],
+        "event": {
+          "event_name": "特务营打击四各哨地主武装并返回四县边联",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "打击地主武装并返回",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "特务营",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Client",
+              "mention": "群众",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "四各哨（音）那个地主武装",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "四县边联的地方",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "鲁南",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "打了一下",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "人家弹药很充足，要攻的话伤亡很大",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "尽快地要回到山区去",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "结果人家弹药很充足，咱们打了一下，要攻的话伤亡很大，可是打这么一下，他知道八路军正规部队来了，不好惹，他这个反动的气焰就有所收敛，不敢随便出来抓我们的干部。",
+          "type_basis": "核心是特务营对地主武装实施打击并返回，可用What did X do?测试；群众要求作为Client，地主武装和返回地点作为Goal；师长政委的言语和对方心理只作背景，不改变主导物质过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC03-W002-E02",
+        "source_segment_ids": [
+          "BATCH06-DOC03-S0024"
+        ],
+        "event": {
+          "event_name": "陈、罗从鲁西梁山附近来到四县边联地区",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "来到四县边联地区",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "陈、罗",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "四县边联地区",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "当年的11月左右",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "鲁西梁山附近",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "陈、罗是在当年的11月左右，他从鲁西梁山附近，来到了我们在那所谓四县边联地区。",
+          "type_basis": "核心是陈、罗的空间移动，Actor为陈、罗，Goal为四县边联地区；时间地点作环境，排除关系过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC03-W002-E03",
+        "source_segment_ids": [
+          "BATCH06-DOC03-S0026"
+        ],
+        "event": {
+          "event_name": "罗政委与郭洪涛赴苏鲁豫解决湖西肃托事件后返回山区",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "解决湖西肃托事件并返回山区",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "罗政委（跟郭洪涛）",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "湖西肃托事件",
+              "normalized_entity": "湖西肃托事件",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "山区",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "MANNER",
+              "value": "带着一个连",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "津浦路",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "微山湖",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "苏鲁豫吧，就三省交界的地方",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "12月快中旬了，大概",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "罗政委（跟郭洪涛）就去解决那个问题。解决那个问题完了以后，再回到山区来的时候，已经到了12月快中旬了，大概。",
+          "type_basis": "核心是带连队前往苏鲁豫解决问题并返回，属于组织/军事行动；湖西肃托事件是行动对象而非主存在过程，排除存在过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC03-W002-E04",
+        "source_segment_ids": [
+          "BATCH06-DOC03-S0028",
+          "BATCH06-DOC03-S0030"
+        ],
+        "event": {
+          "event_name": "鲁南部队改编形成特务团和苏鲁支队，杨永松任政治主任",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "编成特务团、改编苏鲁支队并任命政治主任",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "师部",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "六团一部分",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "师部的特务营",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "特务团",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "罗政委",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "苏鲁支队",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "杨永松",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "当年的12月份",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "冬天",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "鲁南我们那个地方",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "师部附近",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "开鲁南这个局面",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "这个六团一部分就到鲁南我们那个地方，就跟师部的特务营编成一个特务团。",
+          "type_basis": "核心是部队调动、编制变化和任职，属于组织行动与职业劳动；‘当政治主任’作为任职行动融入core_process，不将职务标为Goal；师部研究不是主过程，排除心理/言语。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH06-DOC03-W002-E05",
+        "source_segment_ids": [
+          "BATCH06-DOC03-S0032",
+          "BATCH06-DOC03-S0034",
+          "BATCH06-DOC03-S0037"
+        ],
+        "event": {
+          "event_name": "决定开辟鲁南新区并考虑从白彦开刀",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "决定开辟新区并选择白彦开刀",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "部队",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "新区",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "白彦",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "滕县到临沂的公路的中间",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "城前、城后",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "“穿、插、挤”，还有一个“统”吧，统一战线吧，六个字",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "日本人当时调了兵出去了",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "孙鹤龄是个大地主，房子很漂亮，很结实，（这个人）挺坏啊",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "刘昭汉有五六百人，他既是汉奸，又是国民党，他两面的",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "当时我们要去打的时候，日本人当时调了兵出去了，所以考虑到从那里来开刀。",
+          "type_basis": "核心是部队决定开辟新区并选择开刀地点，属于组织行动；罗帅提出的办法作为MANNER，不单独构成言语事件；排除关系和心理过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH06-DOC03-S0020",
+      "BATCH06-DOC03-S0021",
+      "BATCH06-DOC03-S0023",
+      "BATCH06-DOC03-S0025",
+      "BATCH06-DOC03-S0027",
+      "BATCH06-DOC03-S0029",
+      "BATCH06-DOC03-S0031",
+      "BATCH06-DOC03-S0033",
+      "BATCH06-DOC03-S0035",
+      "BATCH06-DOC03-S0036"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH06-DOC03-W002\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH06-DOC03-W002-E01\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC03-S0022\",\n        \"BATCH06-DOC03-S0024\"\n      ],\n      \"event\": {\n        \"event_name\": \"特务营打击四各哨地主武装并返回四县边联\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"打击地主武装并返回\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"特务营\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Client\",\n            \"mention\": \"群众\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"四各哨（音）那个地主武装\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"四县边联的地方\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"鲁南\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"打了一下\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"人家弹药很充足，要攻的话伤亡很大\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"尽快地要回到山区去\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"结果人家弹药很充足，咱们打了一下，要攻的话伤亡很大，可是打这么一下，他知道八路军正规部队来了，不好惹，他这个反动的气焰就有所收敛，不敢随便出来抓我们的干部。\",\n        \"type_basis\": \"核心是特务营对地主武装实施打击并返回，可用What did X do?测试；群众要求作为Client，地主武装和返回地点作为Goal；师长政委的言语和对方心理只作背景，不改变主导物质过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC03-W002-E02\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC03-S0024\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈、罗从鲁西梁山附近来到四县边联地区\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"来到四县边联地区\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"陈、罗\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"四县边联地区\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"当年的11月左右\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"鲁西梁山附近\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"陈、罗是在当年的11月左右，他从鲁西梁山附近，来到了我们在那所谓四县边联地区。\",\n        \"type_basis\": \"核心是陈、罗的空间移动，Actor为陈、罗，Goal为四县边联地区；时间地点作环境，排除关系过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC03-W002-E03\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC03-S0026\"\n      ],\n      \"event\": {\n        \"event_name\": \"罗政委与郭洪涛赴苏鲁豫解决湖西肃托事件后返回山区\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"解决湖西肃托事件并返回山区\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"罗政委（跟郭洪涛）\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"湖西肃托事件\",\n            \"normalized_entity\": \"湖西肃托事件\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"山区\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"带着一个连\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"津浦路\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"微山湖\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"苏鲁豫吧，就三省交界的地方\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"12月快中旬了，大概\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"罗政委（跟郭洪涛）就去解决那个问题。解决那个问题完了以后，再回到山区来的时候，已经到了12月快中旬了，大概。\",\n        \"type_basis\": \"核心是带连队前往苏鲁豫解决问题并返回，属于组织/军事行动；湖西肃托事件是行动对象而非主存在过程，排除存在过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC03-W002-E04\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC03-S0028\",\n        \"BATCH06-DOC03-S0030\"\n      ],\n      \"event\": {\n        \"event_name\": \"鲁南部队改编形成特务团和苏鲁支队，杨永松任政治主任\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"编成特务团、改编苏鲁支队并任命政治主任\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"师部\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"六团一部分\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"师部的特务营\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"特务团\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"罗政委\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"苏鲁支队\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"杨永松\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"当年的12月份\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"冬天\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"鲁南我们那个地方\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"师部附近\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"开鲁南这个局面\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"这个六团一部分就到鲁南我们那个地方，就跟师部的特务营编成一个特务团。\",\n        \"type_basis\": \"核心是部队调动、编制变化和任职，属于组织行动与职业劳动；‘当政治主任’作为任职行动融入core_process，不将职务标为Goal；师部研究不是主过程，排除心理/言语。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH06-DOC03-W002-E05\",\n      \"source_segment_ids\": [\n        \"BATCH06-DOC03-S0032\",\n        \"BATCH06-DOC03-S0034\",\n        \"BATCH06-DOC03-S0037\"\n      ],\n      \"event\": {\n        \"event_name\": \"决定开辟鲁南新区并考虑从白彦开刀\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"决定开辟新区并选择白彦开刀\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": \"部队\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"新区\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"白彦\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"滕县到临沂的公路的中间\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"城前、城后\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"“穿、插、挤”，还有一个“统”吧，统一战线吧，六个字\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"日本人当时调了兵出去了\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"孙鹤龄是个大地主，房子很漂亮，很结实，（这个人）挺坏啊\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"刘昭汉有五六百人，他既是汉奸，又是国民党，他两面的\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"当时我们要去打的时候，日本人当时调了兵出去了，所以考虑到从那里来开刀。\",\n        \"type_basis\": \"核心是部队决定开辟新区并选择开刀地点，属于组织行动；罗帅提出的办法作为MANNER，不单独构成言语事件；排除关系和心理过程。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH06-DOC03-S0020\",\n    \"BATCH06-DOC03-S0021\",\n    \"BATCH06-DOC03-S0023\",\n    \"BATCH06-DOC03-S0025\",\n    \"BATCH06-DOC03-S0027\",\n    \"BATCH06-DOC03-S0029\",\n    \"BATCH06-DOC03-S0031\",\n    \"BATCH06-DOC03-S0033\",\n    \"BATCH06-DOC03-S0035\",\n    \"BATCH06-DOC03-S0036\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5785,
+    "total_tokens": 27455,
+    "completion_tokens": 21670,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 18444
+    },
+    "time_to_first_token_ms": 717191,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 21669000
+  }
+}

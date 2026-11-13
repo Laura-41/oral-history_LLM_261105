@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T09:44:58",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC05-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC05-DE002",
+  "usage": {
+    "prompt_tokens": 1407,
+    "total_tokens": 6848,
+    "completion_tokens": 5441,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4273
+    },
+    "time_to_first_token_ms": 80397,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5440000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC05-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰等学生在午睡后前往罗里村军部图书馆借书还书，并多次见到项英看书做笔记，对项英形成良好印象。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为 S0009 所述午睡后时间紧张、走半里路多一点到罗里村军部图书馆；终点为 S0011 所述因项英看书做笔记、以身作则而对项英印象非常好。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"学生午睡后时间紧张，仍要走半里路多一点到罗里村军部图书馆。\",\n      \"process_text\": \"除了半个小时的午睡，最晚到一个小时，就要出来上课了，那么半个多小时吧。就说这样子的时间，我们还要（走）半里路多一点到罗里村军部的图书馆。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0009\"\n      ],\n      \"evidence_quote\": \"除了半个小时的午睡，最晚到一个小时，就要出来上课了，那么半个多小时吧。就说这样子的时间，我们还要（走）半里路多一点到罗里村军部的图书馆。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"在书最多的图书馆进行借书和还书。\",\n      \"process_text\": \"图书馆里书最多，我们要借书、还书。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0009\"\n      ],\n      \"evidence_quote\": \"图书馆里书最多，我们要借书、还书。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"每次去图书馆几乎都碰到不午睡、看书做笔记的项英。\",\n      \"process_text\": \"每一次去几乎都碰到项英，项英不午睡，他就在那里看书，做笔记。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0011\"\n      ],\n      \"evidence_quote\": \"每一次去几乎都碰到项英，项英不午睡，他就在那里看书，做笔记。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"项英以身作则的表现使学生们对其留下良好印象。\",\n      \"process_text\": \"那个以身作则都非常好，所以我们对项英印象都非常好的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0011\"\n      ],\n      \"evidence_quote\": \"那个以身作则都非常好，所以我们对项英印象都非常好的。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE002-P01\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0009\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE002-P02\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE002-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0011\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE002-P03\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE002-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0011\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V2-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC05-DE002",
+    "event_enrichment": {
+      "result_state": "陈海峰等学生在午睡后前往罗里村军部图书馆借书还书，并多次见到项英看书做笔记，对项英形成良好印象。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为 S0009 所述午睡后时间紧张、走半里路多一点到罗里村军部图书馆；终点为 S0011 所述因项英看书做笔记、以身作则而对项英印象非常好。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC05-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "学生午睡后时间紧张，仍要走半里路多一点到罗里村军部图书馆。",
+        "process_text": "除了半个小时的午睡，最晚到一个小时，就要出来上课了，那么半个多小时吧。就说这样子的时间，我们还要（走）半里路多一点到罗里村军部的图书馆。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0009"
+        ],
+        "evidence_quote": "除了半个小时的午睡，最晚到一个小时，就要出来上课了，那么半个多小时吧。就说这样子的时间，我们还要（走）半里路多一点到罗里村军部的图书馆。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "在书最多的图书馆进行借书和还书。",
+        "process_text": "图书馆里书最多，我们要借书、还书。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0009"
+        ],
+        "evidence_quote": "图书馆里书最多，我们要借书、还书。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "每次去图书馆几乎都碰到不午睡、看书做笔记的项英。",
+        "process_text": "每一次去几乎都碰到项英，项英不午睡，他就在那里看书，做笔记。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0011"
+        ],
+        "evidence_quote": "每一次去几乎都碰到项英，项英不午睡，他就在那里看书，做笔记。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "项英以身作则的表现使学生们对其留下良好印象。",
+        "process_text": "那个以身作则都非常好，所以我们对项英印象都非常好的。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0011"
+        ],
+        "evidence_quote": "那个以身作则都非常好，所以我们对项英印象都非常好的。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC05-DE002-P01",
+        "target_stage_id": "BATCH02-DOC05-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC05-S0009",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC05-DE002-P02",
+        "target_stage_id": "BATCH02-DOC05-DE002-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC05-S0011",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC05-DE002-P03",
+        "target_stage_id": "BATCH02-DOC05-DE002-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC05-S0011",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

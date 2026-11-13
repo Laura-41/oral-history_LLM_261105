@@ -1,0 +1,125 @@
+{
+  "run_time": "2026-11-12T15:08:39",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC07-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC07-DE002",
+  "usage": {
+    "prompt_tokens": 3411,
+    "total_tokens": 17209,
+    "completion_tokens": 13798,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12182
+    },
+    "time_to_first_token_ms": 236081,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 13797000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-21\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC07-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"华中军区、华中野战军和苏皖边区政府整编建立，部队重新编，整编后有11万人，并在淮安县组建安排整个组织机构。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于到江北后地方工作人员撤到淮阴组织苏皖边区政府，止于11月至12月整编、整训、建立机构并调整成立边区政府；原文随后提到一直至5月局势紧张，作为后续背景，不纳入整编建立核心边界。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"到江北后，地方工作人员大部分撤到淮阴，组织苏皖边区政府。\",\n      \"process_text\": \"地方的工作人员大部分撤到淮阴，在淮阴呢，就组织了一个苏皖边区政府。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0042\"\n      ],\n      \"evidence_quote\": \"地方的工作人员大部分撤到淮阴，在淮阴呢，就组织了一个苏皖边区政府。“江苏”的“苏”，皖就是安徽。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"方毅任苏皖边区政府副主席管地方，军队方面成立华中军区并设军分区，主力部队成立华中野战军。\",\n      \"process_text\": \"方毅呢，当这个苏皖边区政府副主席，那么他就是管地方。军队呢，就成立华中军区。华中军区当时成立了8个军分区——开始6个军分区，后来到8个军分区。主力部队呢，成立叫华中野战军。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0046\"\n      ],\n      \"evidence_quote\": \"方毅呢，当这个苏皖边区政府副主席，那么他就是管地方。军队呢，就成立华中军区。华中军区当时成立了8个军分区——开始6个军分区，后来到8个军分区。主力部队呢，成立叫华中野战军。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"苏浙军区班子变成华中军区，原来留在苏中的都并到华中军区来。\",\n      \"process_text\": \"苏浙军区班子变成华中军区，原来留在苏中的都并到华中军区来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0051\"\n      ],\n      \"evidence_quote\": \"苏浙军区班子变成华中军区，原来留在苏中的都并到华中军区来。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"部队合并，原11纵队、12纵队、10纵队等撤销并重新编。\",\n      \"process_text\": \"都合并了，那都撤销，他原来是什么11纵队、12纵队、10纵队。都重新编。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0112\"\n      ],\n      \"evidence_quote\": \"都合并了，那都撤销，他原来是什么11纵队、12纵队、10纵队。都重新编。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC07-DE002-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"11月至12月进行整编、整训、建立机构，调整成立边区政府。\",\n      \"process_text\": \"11月，（到）12月，这个时候整编、整训、建立机构，调整成立边区政府。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC07-S0134\"\n      ],\n      \"evidence_quote\": \"11月，（到）12月，这个时候整编、整训、建立机构，调整成立边区政府。一直2月、3月、4月、5月……到5月就开始紧张了。5月就已经有迹象，就是要内战的苗头出来了，敌人在调兵。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE002-P01\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0046\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE002-P02\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0051\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE002-P03\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE002-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0108\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC07-DE002-P04\",\n      \"target_stage_id\": \"BATCH06-DOC07-DE002-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC07-S0134\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-21",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC07-DE002",
+    "event_enrichment": {
+      "result_state": "华中军区、华中野战军和苏皖边区政府整编建立，部队重新编，整编后有11万人，并在淮安县组建安排整个组织机构。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于到江北后地方工作人员撤到淮阴组织苏皖边区政府，止于11月至12月整编、整训、建立机构并调整成立边区政府；原文随后提到一直至5月局势紧张，作为后续背景，不纳入整编建立核心边界。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC07-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "到江北后，地方工作人员大部分撤到淮阴，组织苏皖边区政府。",
+        "process_text": "地方的工作人员大部分撤到淮阴，在淮阴呢，就组织了一个苏皖边区政府。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0042"
+        ],
+        "evidence_quote": "地方的工作人员大部分撤到淮阴，在淮阴呢，就组织了一个苏皖边区政府。“江苏”的“苏”，皖就是安徽。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "方毅任苏皖边区政府副主席管地方，军队方面成立华中军区并设军分区，主力部队成立华中野战军。",
+        "process_text": "方毅呢，当这个苏皖边区政府副主席，那么他就是管地方。军队呢，就成立华中军区。华中军区当时成立了8个军分区——开始6个军分区，后来到8个军分区。主力部队呢，成立叫华中野战军。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0046"
+        ],
+        "evidence_quote": "方毅呢，当这个苏皖边区政府副主席，那么他就是管地方。军队呢，就成立华中军区。华中军区当时成立了8个军分区——开始6个军分区，后来到8个军分区。主力部队呢，成立叫华中野战军。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "苏浙军区班子变成华中军区，原来留在苏中的都并到华中军区来。",
+        "process_text": "苏浙军区班子变成华中军区，原来留在苏中的都并到华中军区来。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0051"
+        ],
+        "evidence_quote": "苏浙军区班子变成华中军区，原来留在苏中的都并到华中军区来。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "部队合并，原11纵队、12纵队、10纵队等撤销并重新编。",
+        "process_text": "都合并了，那都撤销，他原来是什么11纵队、12纵队、10纵队。都重新编。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0112"
+        ],
+        "evidence_quote": "都合并了，那都撤销，他原来是什么11纵队、12纵队、10纵队。都重新编。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH06-DOC07-DE002-P05",
+        "stage_order": 5,
+        "stage_summary": "11月至12月进行整编、整训、建立机构，调整成立边区政府。",
+        "process_text": "11月，（到）12月，这个时候整编、整训、建立机构，调整成立边区政府。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC07-S0134"
+        ],
+        "evidence_quote": "11月，（到）12月，这个时候整编、整训、建立机构，调整成立边区政府。一直2月、3月、4月、5月……到5月就开始紧张了。5月就已经有迹象，就是要内战的苗头出来了，敌人在调兵。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC07-DE002-P01",
+        "target_stage_id": "BATCH06-DOC07-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0046",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE002-P02",
+        "target_stage_id": "BATCH06-DOC07-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0051",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE002-P03",
+        "target_stage_id": "BATCH06-DOC07-DE002-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC07-S0108",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC07-DE002-P04",
+        "target_stage_id": "BATCH06-DOC07-DE002-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC07-S0134",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

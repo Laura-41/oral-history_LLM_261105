@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T22:33:28",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC06-DE009",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC06-DE009",
+  "usage": {
+    "prompt_tokens": 1197,
+    "total_tokens": 4841,
+    "completion_tokens": 3644,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2925
+    },
+    "time_to_first_token_ms": 31584,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3643000
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC06-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队仍留在当地，以打小仗、隐蔽袭扰和破坏铁路的方式持续活动，未转入大规模作战。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以“打完以后”后部队仍在当地为背景，至“铁路上破坏一下，搞这个”所述小规模袭扰方式结束；中间罗帅开会等内容为旁涉背景，不纳入阶段。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"打完仗后，部队仍留在当地。\",\n      \"process_text\": \"打完以后，不是我们还在那里嘛。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0054\"\n      ],\n      \"evidence_quote\": \"打完以后，不是我们还在那里嘛。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"继续打小仗，不打大仗。\",\n      \"process_text\": \"我们就在那里继续打小仗，就不打大的了\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0057\"\n      ],\n      \"evidence_quote\": \"我们就在那里继续打小仗，就不打大的了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC06-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"以隐蔽方式袭扰并破坏铁路。\",\n      \"process_text\": \"就偷偷摸摸地打它一下，铁路上破坏一下，搞这个。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC06-S0057\"\n      ],\n      \"evidence_quote\": \"就偷偷摸摸地打它一下，铁路上破坏一下，搞这个。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE009-P01\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE009-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0057\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC06-DE009-P02\",\n      \"target_stage_id\": \"BATCH03-DOC06-DE009-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC06-S0057\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC06-DE009",
+    "event_enrichment": {
+      "result_state": "部队仍留在当地，以打小仗、隐蔽袭扰和破坏铁路的方式持续活动，未转入大规模作战。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以“打完以后”后部队仍在当地为背景，至“铁路上破坏一下，搞这个”所述小规模袭扰方式结束；中间罗帅开会等内容为旁涉背景，不纳入阶段。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC06-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "打完仗后，部队仍留在当地。",
+        "process_text": "打完以后，不是我们还在那里嘛。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0054"
+        ],
+        "evidence_quote": "打完以后，不是我们还在那里嘛。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "继续打小仗，不打大仗。",
+        "process_text": "我们就在那里继续打小仗，就不打大的了",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0057"
+        ],
+        "evidence_quote": "我们就在那里继续打小仗，就不打大的了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC06-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "以隐蔽方式袭扰并破坏铁路。",
+        "process_text": "就偷偷摸摸地打它一下，铁路上破坏一下，搞这个。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC06-S0057"
+        ],
+        "evidence_quote": "就偷偷摸摸地打它一下，铁路上破坏一下，搞这个。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC06-DE009-P01",
+        "target_stage_id": "BATCH03-DOC06-DE009-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH03-DOC06-S0057",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC06-DE009-P02",
+        "target_stage_id": "BATCH03-DOC06-DE009-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC06-S0057",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

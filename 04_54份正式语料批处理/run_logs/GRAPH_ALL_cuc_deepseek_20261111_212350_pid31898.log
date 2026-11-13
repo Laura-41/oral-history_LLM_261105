@@ -1,0 +1,46 @@
+图谱新增层批量执行：cuc/deepseek
+日志：04_54份正式语料批处理/run_logs/GRAPH_ALL_cuc_deepseek_20261111_212350_pid31898.log
+长任务由本地终端执行；Ctrl+C 可停，重跑同一命令即断点续跑。
+单次 API 等待上限：600s（DeepSeek 大请求上游固定 30 分钟回 500/504，建议 1200 提前放弃；Qwen 线用 3600）
+运行模式：STAGE ONLY —— 只跑快的二级阶段；不调用 entity_time、不做后处理/验收/导出
+语料口径：60 份总账 = 6 份人工 Demo + 54 份正式语料；BATCH01 三份同为正式语料，全数纳入。
+
+一级层结果 2 份｜新增层已验收 0 份｜本次待跑 2 份
+待跑清单：
+  BATCH03-DOC01
+  BATCH03-DOC02
+
+[1/2] ===== BATCH03-DOC01 只跑 stage =====
+[零 API 预演] BATCH03-DOC01 / cuc/deepseek / tasks=stage
+  一级事件 7｜原文片段 84｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH03-DOC01/raw
+
+== stage：7 次调用 ==
+  [1/7] stage_BATCH03-DOC01-DE001 预演：输入包 5,758 字符，未调用 API
+  [2/7] stage_BATCH03-DOC01-DE002 预演：输入包 3,038 字符，未调用 API
+  [3/7] stage_BATCH03-DOC01-DE003 预演：输入包 3,871 字符，未调用 API
+  [4/7] stage_BATCH03-DOC01-DE004 预演：输入包 2,834 字符，未调用 API
+  [5/7] stage_BATCH03-DOC01-DE005 预演：输入包 3,485 字符，未调用 API
+  [6/7] stage_BATCH03-DOC01-DE006 预演：输入包 2,896 字符，未调用 API
+  [7/7] stage_BATCH03-DOC01-DE007 预演：输入包 7,751 字符，未调用 API
+
+全部完成：7 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH03-DOC01 --model cuc/deepseek --write
+[2/2] ===== BATCH03-DOC02 只跑 stage =====
+[零 API 预演] BATCH03-DOC02 / cuc/deepseek / tasks=stage
+  一级事件 9｜原文片段 52｜输出目录 04_54份正式语料批处理/document_consolidation/graph_layers/cuc_deepseek/BATCH03-DOC02/raw
+
+== stage：9 次调用 ==
+  [1/9] stage_BATCH03-DOC02-DE001 预演：输入包 3,286 字符，未调用 API
+  [2/9] stage_BATCH03-DOC02-DE002 预演：输入包 3,320 字符，未调用 API
+  [3/9] stage_BATCH03-DOC02-DE003 预演：输入包 3,404 字符，未调用 API
+  [4/9] stage_BATCH03-DOC02-DE004 预演：输入包 4,423 字符，未调用 API
+  [5/9] stage_BATCH03-DOC02-DE005 预演：输入包 3,348 字符，未调用 API
+  [6/9] stage_BATCH03-DOC02-DE006 预演：输入包 3,290 字符，未调用 API
+  [7/9] stage_BATCH03-DOC02-DE007 预演：输入包 2,893 字符，未调用 API
+  [8/9] stage_BATCH03-DOC02-DE008 预演：输入包 2,992 字符，未调用 API
+  [9/9] stage_BATCH03-DOC02-DE009 预演：输入包 2,989 字符，未调用 API
+
+全部完成：9 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH03-DOC02 --model cuc/deepseek --write
+
+===== stage 专跑结束：本轮跑齐 2 份，未跑齐 0 份 =====
+本模式不调用 entity_time、不做后处理／验收／导出；落盘的只是原始响应，仍需跑正常命令补全。
+下一步：caffeinate -i env TIMEOUT=1200 MODEL=cuc/deepseek SKIP_AFTER=2 bash scripts/graph_run_all_in_terminal.sh

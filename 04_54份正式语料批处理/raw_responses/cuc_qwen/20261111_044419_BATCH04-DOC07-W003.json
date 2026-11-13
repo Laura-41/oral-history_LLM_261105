@@ -1,0 +1,191 @@
+{
+  "run_time": "2026-11-11T04:44:19",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH04-DOC07-W003",
+  "technical_document_id": "BATCH04-DOC07",
+  "document_id": "11.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH04-DOC07-S0073",
+    "BATCH04-DOC07-S0074",
+    "BATCH04-DOC07-S0075",
+    "BATCH04-DOC07-S0076",
+    "BATCH04-DOC07-S0077",
+    "BATCH04-DOC07-S0078",
+    "BATCH04-DOC07-S0079",
+    "BATCH04-DOC07-S0080",
+    "BATCH04-DOC07-S0081",
+    "BATCH04-DOC07-S0082",
+    "BATCH04-DOC07-S0083",
+    "BATCH04-DOC07-S0084",
+    "BATCH04-DOC07-S0085",
+    "BATCH04-DOC07-S0086",
+    "BATCH04-DOC07-S0087",
+    "BATCH04-DOC07-S0088",
+    "BATCH04-DOC07-S0089",
+    "BATCH04-DOC07-S0090",
+    "BATCH04-DOC07-S0091",
+    "BATCH04-DOC07-S0092",
+    "BATCH04-DOC07-S0093",
+    "BATCH04-DOC07-S0094",
+    "BATCH04-DOC07-S0095",
+    "BATCH04-DOC07-S0096",
+    "BATCH04-DOC07-S0097",
+    "BATCH04-DOC07-S0098",
+    "BATCH04-DOC07-S0099",
+    "BATCH04-DOC07-S0100",
+    "BATCH04-DOC07-S0101",
+    "BATCH04-DOC07-S0102",
+    "BATCH04-DOC07-S0103",
+    "BATCH04-DOC07-S0104"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 19,
+    "unassigned_segment_count": 13,
+    "input_segment_count": 32,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH04-DOC07-W003-E01"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH04-DOC07-W003",
+    "events": [
+      {
+        "candidate_id": "BATCH04-DOC07-W003-E01",
+        "source_segment_ids": [
+          "BATCH04-DOC07-S0075",
+          "BATCH04-DOC07-S0076",
+          "BATCH04-DOC07-S0078",
+          "BATCH04-DOC07-S0079",
+          "BATCH04-DOC07-S0080",
+          "BATCH04-DOC07-S0081",
+          "BATCH04-DOC07-S0082",
+          "BATCH04-DOC07-S0084",
+          "BATCH04-DOC07-S0085",
+          "BATCH04-DOC07-S0087",
+          "BATCH04-DOC07-S0089",
+          "BATCH04-DOC07-S0091",
+          "BATCH04-DOC07-S0093",
+          "BATCH04-DOC07-S0095",
+          "BATCH04-DOC07-S0097",
+          "BATCH04-DOC07-S0099",
+          "BATCH04-DOC07-S0101",
+          "BATCH04-DOC07-S0102",
+          "BATCH04-DOC07-S0104"
+        ],
+        "event": {
+          "event_name": "卫生部六条船海上转移遇台风损失三条船",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "海上转移",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们卫生部",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "船老大",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "下海以后",
+              "normalized_value": null
+            },
+            {
+              "kind": "LOCATION",
+              "value": "海上",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "弶港到吕四港",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "由北往南",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "顺水",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "狂风暴雨",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "没有通信联络",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "没有海上经验",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "气象知识太少",
+              "normalized_value": null
+            },
+            {
+              "kind": "PURPOSE",
+              "value": "和1师师部会合",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们卫生部有6条船，6条船后来走了。走那天，确实秩序都不好，我们没经验。急于呢要和1师师部会合，弶港到吕四港呢，差不多有二三百华里。",
+          "type_basis": "核心过程是卫生部六条船从弶港向吕四港海上转移，途中遭遇台风并发生船只损失，属于可观察的空间移动和物理变化；参与者配置为Actor（我们卫生部、船老大），可用What did X do?测试。海防部队掩护、气象知识不足、收帆泼水等是同一转移经历的阶段或原因，不单独建事件；排除心理、言语、关系、存在和行为主导类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH04-DOC07-S0073",
+      "BATCH04-DOC07-S0074",
+      "BATCH04-DOC07-S0077",
+      "BATCH04-DOC07-S0083",
+      "BATCH04-DOC07-S0086",
+      "BATCH04-DOC07-S0088",
+      "BATCH04-DOC07-S0090",
+      "BATCH04-DOC07-S0092",
+      "BATCH04-DOC07-S0094",
+      "BATCH04-DOC07-S0096",
+      "BATCH04-DOC07-S0098",
+      "BATCH04-DOC07-S0100",
+      "BATCH04-DOC07-S0103"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH04-DOC07-W003\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH04-DOC07-W003-E01\",\n      \"source_segment_ids\": [\n        \"BATCH04-DOC07-S0075\",\n        \"BATCH04-DOC07-S0076\",\n        \"BATCH04-DOC07-S0078\",\n        \"BATCH04-DOC07-S0079\",\n        \"BATCH04-DOC07-S0080\",\n        \"BATCH04-DOC07-S0081\",\n        \"BATCH04-DOC07-S0082\",\n        \"BATCH04-DOC07-S0084\",\n        \"BATCH04-DOC07-S0085\",\n        \"BATCH04-DOC07-S0087\",\n        \"BATCH04-DOC07-S0089\",\n        \"BATCH04-DOC07-S0091\",\n        \"BATCH04-DOC07-S0093\",\n        \"BATCH04-DOC07-S0095\",\n        \"BATCH04-DOC07-S0097\",\n        \"BATCH04-DOC07-S0099\",\n        \"BATCH04-DOC07-S0101\",\n        \"BATCH04-DOC07-S0102\",\n        \"BATCH04-DOC07-S0104\"\n      ],\n      \"event\": {\n        \"event_name\": \"卫生部六条船海上转移遇台风损失三条船\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"海上转移\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们卫生部\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"船老大\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"下海以后\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"海上\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"弶港到吕四港\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"由北往南\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"顺水\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"狂风暴雨\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"没有通信联络\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"没有海上经验\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"气象知识太少\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"PURPOSE\",\n            \"value\": \"和1师师部会合\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我们卫生部有6条船，6条船后来走了。走那天，确实秩序都不好，我们没经验。急于呢要和1师师部会合，弶港到吕四港呢，差不多有二三百华里。\",\n        \"type_basis\": \"核心过程是卫生部六条船从弶港向吕四港海上转移，途中遭遇台风并发生船只损失，属于可观察的空间移动和物理变化；参与者配置为Actor（我们卫生部、船老大），可用What did X do?测试。海防部队掩护、气象知识不足、收帆泼水等是同一转移经历的阶段或原因，不单独建事件；排除心理、言语、关系、存在和行为主导类型。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH04-DOC07-S0073\",\n    \"BATCH04-DOC07-S0074\",\n    \"BATCH04-DOC07-S0077\",\n    \"BATCH04-DOC07-S0083\",\n    \"BATCH04-DOC07-S0086\",\n    \"BATCH04-DOC07-S0088\",\n    \"BATCH04-DOC07-S0090\",\n    \"BATCH04-DOC07-S0092\",\n    \"BATCH04-DOC07-S0094\",\n    \"BATCH04-DOC07-S0096\",\n    \"BATCH04-DOC07-S0098\",\n    \"BATCH04-DOC07-S0100\",\n    \"BATCH04-DOC07-S0103\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 6147,
+    "total_tokens": 23959,
+    "completion_tokens": 17812,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 16498
+    },
+    "tokens_per_second": 8905500,
+    "time_to_first_token_ms": 271842,
+    "time_per_output_token_ms": 0
+  }
+}

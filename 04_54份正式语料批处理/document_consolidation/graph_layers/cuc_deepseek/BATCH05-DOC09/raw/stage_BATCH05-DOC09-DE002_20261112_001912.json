@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-12T00:19:12",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC09-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC09-DE002",
+  "usage": {
+    "prompt_tokens": 1305,
+    "total_tokens": 4086,
+    "completion_tokens": 2781,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2240
+    },
+    "time_to_first_token_ms": 21827,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2780000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-17\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC09-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰完成了一次夜间独自解剖尸体的学习活动，形成以自己琢磨、带书查阅、遇到问题自行学习为特征的学习结果。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于陈海峰自述晚上下课后独自去解剖，止于其带书查看并自行学习解剖内容；不包含后续抗美援朝尸体分配等背景扩展。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"夜间下课后独自前往解剖尸体\",\n      \"process_text\": \"陈海峰晚上下课后自己到解剖处解剖尸体。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0056\"\n      ],\n      \"evidence_quote\": \"那么本来一个人一具尸体，我自己晚上下了课，我自己到那里去解剖了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC09-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"解剖过程中自己琢磨、带书查阅并自行学习不懂内容\",\n      \"process_text\": \"解剖时自己琢磨，带着书看，遇到不懂的内容自己学。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC09-S0056\"\n      ],\n      \"evidence_quote\": \"自己琢磨了，带着那个书看了。这个下面（是）什么东西，自己学。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC09-DE002-P01\",\n      \"target_stage_id\": \"BATCH05-DOC09-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC09-S0056\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-17",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC09-DE002",
+    "event_enrichment": {
+      "result_state": "陈海峰完成了一次夜间独自解剖尸体的学习活动，形成以自己琢磨、带书查阅、遇到问题自行学习为特征的学习结果。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于陈海峰自述晚上下课后独自去解剖，止于其带书查看并自行学习解剖内容；不包含后续抗美援朝尸体分配等背景扩展。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC09-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "夜间下课后独自前往解剖尸体",
+        "process_text": "陈海峰晚上下课后自己到解剖处解剖尸体。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0056"
+        ],
+        "evidence_quote": "那么本来一个人一具尸体，我自己晚上下了课，我自己到那里去解剖了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC09-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "解剖过程中自己琢磨、带书查阅并自行学习不懂内容",
+        "process_text": "解剖时自己琢磨，带着书看，遇到不懂的内容自己学。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC09-S0056"
+        ],
+        "evidence_quote": "自己琢磨了，带着那个书看了。这个下面（是）什么东西，自己学。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC09-DE002-P01",
+        "target_stage_id": "BATCH05-DOC09-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC09-S0056",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

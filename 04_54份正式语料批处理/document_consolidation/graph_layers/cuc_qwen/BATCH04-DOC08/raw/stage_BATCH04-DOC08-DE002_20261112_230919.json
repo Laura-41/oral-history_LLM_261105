@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T23:09:19",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC08-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC08-DE002",
+  "usage": {
+    "prompt_tokens": 1085,
+    "total_tokens": 7152,
+    "completion_tokens": 6067,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 5216
+    },
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 91197,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC08-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆在军部给几个大单位整风、学习快要结束时领导整风，并表明自己熟悉党校和新四军四师的一套。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件边界从“军部给几个大单位都在整风，学习快要结束了”开始，到“在新四军四师也是这一套”结束；其后“不久鬼子投降了，日本天皇广播（宣布）投降了”是后续时间背景，不属于领导整风过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"军部给几个大单位整风且学习快要结束\",\n      \"process_text\": \"军部给几个大单位都在整风，学习快要结束了\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0005\"\n      ],\n      \"evidence_quote\": \"军部给几个大单位都在整风，学习快要结束了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈锐霆领导整风\",\n      \"process_text\": \"我就领导整风\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0005\"\n      ],\n      \"evidence_quote\": \"我就领导整风\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆说明自己熟悉整风学习的一套\",\n      \"process_text\": \"我也比较熟悉，在党校的学习就是这一套，在新四军四师也是这一套\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0005\"\n      ],\n      \"evidence_quote\": \"我也比较熟悉，在党校的学习就是这一套，在新四军四师也是这一套\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE002-P01\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0005\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE002-P02\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE002-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0005\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC08-DE002",
+    "event_enrichment": {
+      "result_state": "陈锐霆在军部给几个大单位整风、学习快要结束时领导整风，并表明自己熟悉党校和新四军四师的一套。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "事件边界从“军部给几个大单位都在整风，学习快要结束了”开始，到“在新四军四师也是这一套”结束；其后“不久鬼子投降了，日本天皇广播（宣布）投降了”是后续时间背景，不属于领导整风过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC08-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "军部给几个大单位整风且学习快要结束",
+        "process_text": "军部给几个大单位都在整风，学习快要结束了",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0005"
+        ],
+        "evidence_quote": "军部给几个大单位都在整风，学习快要结束了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "陈锐霆领导整风",
+        "process_text": "我就领导整风",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0005"
+        ],
+        "evidence_quote": "我就领导整风",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆说明自己熟悉整风学习的一套",
+        "process_text": "我也比较熟悉，在党校的学习就是这一套，在新四军四师也是这一套",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0005"
+        ],
+        "evidence_quote": "我也比较熟悉，在党校的学习就是这一套，在新四军四师也是这一套",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC08-DE002-P01",
+        "target_stage_id": "BATCH04-DOC08-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC08-S0005",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC08-DE002-P02",
+        "target_stage_id": "BATCH04-DOC08-DE002-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC08-S0005",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

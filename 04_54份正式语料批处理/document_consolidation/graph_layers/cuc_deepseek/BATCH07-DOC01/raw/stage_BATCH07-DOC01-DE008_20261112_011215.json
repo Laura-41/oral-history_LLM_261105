@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T01:12:15",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC01-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC01-DE008",
+  "usage": {
+    "prompt_tokens": 1635,
+    "total_tokens": 7131,
+    "completion_tokens": 5496,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4257
+    },
+    "time_to_first_token_ms": 44745,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-15\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC01-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆在调任北京前向陈毅告别并听取指示，陈毅交代了正确看待参谋长职权、团结老同志和领导干部等两大问题；因陈毅要去开会，未能送行，陈锐霆随后离开。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件始于陈锐霆走时请见陈毅告别并请指示，止于陈毅表示要去开会不能送行、陈锐霆离开；1952年调任电话为背景，后续未探望及张茜提及等为事后插叙，不纳入阶段。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆走时请见陈毅，向其告别并请指示。\",\n      \"process_text\": \"走的时候请见陈司令，向陈毅司令员告别，也是请他指示。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0036\"\n      ],\n      \"evidence_quote\": \"走的时候我就请见陈司令，那么多年了，陈毅司令员，向他告别吧，也是请他指示吧。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈毅介绍两位炮兵领导干部的情况，评价两人都很好。\",\n      \"process_text\": \"陈毅说两个炮兵的领导干部他都熟悉，介绍邱创成和另一位三兵团司令员的情况，称这两个同志都很好的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0036\"\n      ],\n      \"evidence_quote\": \"他说两个炮兵的领导干部我都熟悉，一个是中央红军的三军团的，长期做后勤工作的，叫邱创成，很老实的一个同志。另外一个司令员，三兵团的司令到那去，就是打那个（阳明堡），敌人的二十多架飞机一下子搞掉了，就他的这个团搞的，他说这两个同志都很好的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈毅根据陈锐霆的历史，告诫他不要看不起参谋长，并强调团结老同志和领导干部最重要。\",\n      \"process_text\": \"陈毅指出陈锐霆没有做过副职，告诫不要看不起参谋长，参谋长意见正确时司令员、政委也要按着办；强调一定要把老同志、领导干部团结好，交代了两大问题。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0038\"\n      ],\n      \"evidence_quote\": \"他说我看你的历史，你都没有做（过）副职工作，你连长（后）就当营长，营长（后）就当团长，以后又当校长，到这个参谋处也是一把手。他说你不要看不起这个参谋长，实际上参谋长的意见正确，司令员、政治委员也要按着办。他说一定要把老同志团结好，领导干部团结好，这是最重要的。一个兵种，一个单位要搞好工作，团结是最主要的事情。一个不要嫌副职、参谋长没权，另外一个对老同志要很好地团结，这两个同志都很好的。他交代了这么两大问题。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"陈毅表示要去开会不能送行，陈锐霆随后离开。\",\n      \"process_text\": \"陈毅接着说要开会，不能给陈锐霆送行；陈锐霆表示哪能要司令员送，随后离开。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0040\"\n      ],\n      \"evidence_quote\": \"他接着又说，我要去开会了，不能够给你送行了。我说哪能（要司令员送我），以后我就离开他了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE008-P01\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0036\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE008-P02\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE008-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0038\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE008-P03\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE008-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0040\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-15",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC01-DE008",
+    "event_enrichment": {
+      "result_state": "陈锐霆在调任北京前向陈毅告别并听取指示，陈毅交代了正确看待参谋长职权、团结老同志和领导干部等两大问题；因陈毅要去开会，未能送行，陈锐霆随后离开。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件始于陈锐霆走时请见陈毅告别并请指示，止于陈毅表示要去开会不能送行、陈锐霆离开；1952年调任电话为背景，后续未探望及张茜提及等为事后插叙，不纳入阶段。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC01-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆走时请见陈毅，向其告别并请指示。",
+        "process_text": "走的时候请见陈司令，向陈毅司令员告别，也是请他指示。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0036"
+        ],
+        "evidence_quote": "走的时候我就请见陈司令，那么多年了，陈毅司令员，向他告别吧，也是请他指示吧。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "陈毅介绍两位炮兵领导干部的情况，评价两人都很好。",
+        "process_text": "陈毅说两个炮兵的领导干部他都熟悉，介绍邱创成和另一位三兵团司令员的情况，称这两个同志都很好的。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0036"
+        ],
+        "evidence_quote": "他说两个炮兵的领导干部我都熟悉，一个是中央红军的三军团的，长期做后勤工作的，叫邱创成，很老实的一个同志。另外一个司令员，三兵团的司令到那去，就是打那个（阳明堡），敌人的二十多架飞机一下子搞掉了，就他的这个团搞的，他说这两个同志都很好的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "陈毅根据陈锐霆的历史，告诫他不要看不起参谋长，并强调团结老同志和领导干部最重要。",
+        "process_text": "陈毅指出陈锐霆没有做过副职，告诫不要看不起参谋长，参谋长意见正确时司令员、政委也要按着办；强调一定要把老同志、领导干部团结好，交代了两大问题。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0038"
+        ],
+        "evidence_quote": "他说我看你的历史，你都没有做（过）副职工作，你连长（后）就当营长，营长（后）就当团长，以后又当校长，到这个参谋处也是一把手。他说你不要看不起这个参谋长，实际上参谋长的意见正确，司令员、政治委员也要按着办。他说一定要把老同志团结好，领导干部团结好，这是最重要的。一个兵种，一个单位要搞好工作，团结是最主要的事情。一个不要嫌副职、参谋长没权，另外一个对老同志要很好地团结，这两个同志都很好的。他交代了这么两大问题。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "陈毅表示要去开会不能送行，陈锐霆随后离开。",
+        "process_text": "陈毅接着说要开会，不能给陈锐霆送行；陈锐霆表示哪能要司令员送，随后离开。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0040"
+        ],
+        "evidence_quote": "他接着又说，我要去开会了，不能够给你送行了。我说哪能（要司令员送我），以后我就离开他了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC01-DE008-P01",
+        "target_stage_id": "BATCH07-DOC01-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC01-S0036",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC01-DE008-P02",
+        "target_stage_id": "BATCH07-DOC01-DE008-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC01-S0038",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC01-DE008-P03",
+        "target_stage_id": "BATCH07-DOC01-DE008-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC01-S0040",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T20:40:40",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC09-DE009",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC09-DE009",
+  "usage": {
+    "prompt_tokens": 1232,
+    "total_tokens": 6891,
+    "completion_tokens": 5659,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4304
+    },
+    "time_to_first_token_ms": 84464,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC09-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆在南岳游干班由炮兵营长改任步兵团长，并自述当时思想是将来把部队带回自己的军队。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件自 S0092 的“当然有准备”起，至 S0094 的“生死自己没有计较”止，内容围绕南岳游干班改任步兵团长及当时思想。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈锐霆自述已有准备\",\n      \"process_text\": \"当然有准备，没有准备我怎么（会起义）……\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0092\"\n      ],\n      \"evidence_quote\": \"当然有准备，没有准备我怎么（会起义）……\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈锐霆在南岳游干班改任步兵团长\",\n      \"process_text\": \"我在南岳游干班不当炮兵营长了，到步兵（团）去当团长\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0092\"\n      ],\n      \"evidence_quote\": \"我在南岳游干班不当炮兵营长了，到步兵（团）去当团长\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈锐霆对改任步兵感到高兴，认为机动更方便\",\n      \"process_text\": \"我非常高兴，感觉笨重的炮兵不干了，我自己当步兵，机动起来非常地方便\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0092\"\n      ],\n      \"evidence_quote\": \"我非常高兴，感觉笨重的炮兵不干了，我自己当步兵，机动起来非常地方便\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE009-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"陈锐霆当时思想是将来把部队带回自己的军队\",\n      \"process_text\": \"我那个时候的思想就是，将来能把这个部队带回我们的军队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0092\"\n      ],\n      \"evidence_quote\": \"我那个时候的思想就是，将来能把这个部队带回我们的军队。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE009-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"陈锐霆补充说明当时思想充满热情，不计较生死\",\n      \"process_text\": \"所以我这个思想就是这样，那个时候是（满腔）真热情，生死自己没有计较。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0094\"\n      ],\n      \"evidence_quote\": \"所以我这个思想就是这样，那个时候是（满腔）真热情，生死自己没有计较。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE009-P01\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0092\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE009-P02\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE009-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0092\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE009-P03\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE009-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0092\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE009-P04\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE009-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0094\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC09-DE009",
+    "event_enrichment": {
+      "result_state": "陈锐霆在南岳游干班由炮兵营长改任步兵团长，并自述当时思想是将来把部队带回自己的军队。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "事件自 S0092 的“当然有准备”起，至 S0094 的“生死自己没有计较”止，内容围绕南岳游干班改任步兵团长及当时思想。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC09-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "陈锐霆自述已有准备",
+        "process_text": "当然有准备，没有准备我怎么（会起义）……",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0092"
+        ],
+        "evidence_quote": "当然有准备，没有准备我怎么（会起义）……",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "陈锐霆在南岳游干班改任步兵团长",
+        "process_text": "我在南岳游干班不当炮兵营长了，到步兵（团）去当团长",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0092"
+        ],
+        "evidence_quote": "我在南岳游干班不当炮兵营长了，到步兵（团）去当团长",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "陈锐霆对改任步兵感到高兴，认为机动更方便",
+        "process_text": "我非常高兴，感觉笨重的炮兵不干了，我自己当步兵，机动起来非常地方便",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0092"
+        ],
+        "evidence_quote": "我非常高兴，感觉笨重的炮兵不干了，我自己当步兵，机动起来非常地方便",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE009-P04",
+        "stage_order": 4,
+        "stage_summary": "陈锐霆当时思想是将来把部队带回自己的军队",
+        "process_text": "我那个时候的思想就是，将来能把这个部队带回我们的军队。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0092"
+        ],
+        "evidence_quote": "我那个时候的思想就是，将来能把这个部队带回我们的军队。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE009-P05",
+        "stage_order": 5,
+        "stage_summary": "陈锐霆补充说明当时思想充满热情，不计较生死",
+        "process_text": "所以我这个思想就是这样，那个时候是（满腔）真热情，生死自己没有计较。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0094"
+        ],
+        "evidence_quote": "所以我这个思想就是这样，那个时候是（满腔）真热情，生死自己没有计较。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC09-DE009-P01",
+        "target_stage_id": "BATCH03-DOC09-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC09-S0092",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE009-P02",
+        "target_stage_id": "BATCH03-DOC09-DE009-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC09-S0092",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE009-P03",
+        "target_stage_id": "BATCH03-DOC09-DE009-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC09-S0092",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE009-P04",
+        "target_stage_id": "BATCH03-DOC09-DE009-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC09-S0094",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T18:58:09",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC08-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC08-DE006",
+  "usage": {
+    "prompt_tokens": 1386,
+    "total_tokens": 9006,
+    "completion_tokens": 7620,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6601
+    },
+    "time_to_first_token_ms": 158987,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7619000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC08-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"我方在第六次繁昌战斗中面对日军来袭，因五个营兵力火力不足而抵不住。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"自“后来到第六次繁昌战斗”起，至“这样子的一个配备”止；前文医院放哨、群众组织放哨不属于本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"第六次繁昌战斗时日军来袭，兵力达五六千至一万多。\",\n      \"process_text\": \"后来到第六次“繁昌战斗”，那个时候日本鬼子一来都是五六千了，一万多了来了，\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0038\"\n      ],\n      \"evidence_quote\": \"后来到第六次“繁昌战斗”，那个时候日本鬼子一来都是五六千了，一万多了来了，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"我方表示抵不住。\",\n      \"process_text\": \"那时候我们抵不住了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0038\"\n      ],\n      \"evidence_quote\": \"那时候我们抵不住了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"说明我方五个营兵力少、火力弱，团部机炮连和特务营配备有限。\",\n      \"process_text\": \"我们就五个营，怎么打？那个时候一个营就是三百人左右，不是主力营，三百人还不到，一个团连机关（都算在一起），一千人不到。每一个连就是一挺轻机枪，到后来，团部有个机炮连，机炮连有一两门迫击炮，有两三挺重机枪。司令部里有一个特务营呢，火力比我们强一点，重机枪多一点，迫击炮多一点，子弹也比我们多一点，这样子的一个配备。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0038\"\n      ],\n      \"evidence_quote\": \"我们就五个营，怎么打？那个时候一个营就是三百人左右，不是主力营，三百人还不到，一个团连机关（都算在一起），一千人不到。每一个连就是一挺轻机枪，到后来，团部有个机炮连，机炮连有一两门迫击炮，有两三挺重机枪。司令部里有一个特务营呢，火力比我们强一点，重机枪多一点，迫击炮多一点，子弹也比我们多一点，这样子的一个配备。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE006-P01\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE006-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0038\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE006-P02\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE006-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0038\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC08-DE006",
+    "event_enrichment": {
+      "result_state": "我方在第六次繁昌战斗中面对日军来袭，因五个营兵力火力不足而抵不住。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "自“后来到第六次繁昌战斗”起，至“这样子的一个配备”止；前文医院放哨、群众组织放哨不属于本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC08-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "第六次繁昌战斗时日军来袭，兵力达五六千至一万多。",
+        "process_text": "后来到第六次“繁昌战斗”，那个时候日本鬼子一来都是五六千了，一万多了来了，",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0038"
+        ],
+        "evidence_quote": "后来到第六次“繁昌战斗”，那个时候日本鬼子一来都是五六千了，一万多了来了，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "我方表示抵不住。",
+        "process_text": "那时候我们抵不住了。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0038"
+        ],
+        "evidence_quote": "那时候我们抵不住了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "说明我方五个营兵力少、火力弱，团部机炮连和特务营配备有限。",
+        "process_text": "我们就五个营，怎么打？那个时候一个营就是三百人左右，不是主力营，三百人还不到，一个团连机关（都算在一起），一千人不到。每一个连就是一挺轻机枪，到后来，团部有个机炮连，机炮连有一两门迫击炮，有两三挺重机枪。司令部里有一个特务营呢，火力比我们强一点，重机枪多一点，迫击炮多一点，子弹也比我们多一点，这样子的一个配备。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0038"
+        ],
+        "evidence_quote": "我们就五个营，怎么打？那个时候一个营就是三百人左右，不是主力营，三百人还不到，一个团连机关（都算在一起），一千人不到。每一个连就是一挺轻机枪，到后来，团部有个机炮连，机炮连有一两门迫击炮，有两三挺重机枪。司令部里有一个特务营呢，火力比我们强一点，重机枪多一点，迫击炮多一点，子弹也比我们多一点，这样子的一个配备。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC08-DE006-P01",
+        "target_stage_id": "BATCH02-DOC08-DE006-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH02-DOC08-S0038",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE006-P02",
+        "target_stage_id": "BATCH02-DOC08-DE006-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC08-S0038",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

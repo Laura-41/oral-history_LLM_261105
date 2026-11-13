@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T22:47:56",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC08-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC08-DE006",
+  "usage": {
+    "prompt_tokens": 1159,
+    "total_tokens": 4951,
+    "completion_tokens": 3792,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2997
+    },
+    "time_to_first_token_ms": 30947,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC08-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈毅指示副官处主任给陈海峰10块钱，陈海峰惊讶并推辞说不需要那么多。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈毅看到陈海峰鞋子破了并指示给钱为起点，以陈海峰推辞为终点；不将前文“买笔记本”一句另立为同一事件内的独立阶段。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC08-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"触发：陈毅见陈海峰鞋破，指出这样到军部丢脸，要求他买新鞋。\",\n      \"process_text\": \"陈毅看到陈海峰鞋子破了，说这样到军部去丢脸，叫他买一双新鞋换一换。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC08-S0094\"\n      ],\n      \"evidence_quote\": \"他看到我们江抗来的第一个干部，那个鞋子上面都是老虎鞋，都破了。他说：“你这（样）到军部去，把我们1支队的脸都丢光了，去买一双新的鞋子，换一换，”\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC08-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"行动：陈毅叫副官处主任给陈海峰10块钱。\",\n      \"process_text\": \"陈毅叫副官处主任给陈海峰同志10块钱。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC08-S0094\"\n      ],\n      \"evidence_quote\": \"叫副官处主任，“给陈海峰同志10块钱。”\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC08-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"反应：陈海峰惊讶，推辞说不需要那么多。\",\n      \"process_text\": \"陈海峰听后惊讶，连说不需要那么多。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC08-S0094\"\n      ],\n      \"evidence_quote\": \"哎呦，我一听惊了下，我说不需要那么多不需要那么多\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC08-DE006-P01\",\n      \"target_stage_id\": \"BATCH03-DOC08-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC08-S0094\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC08-DE006-P02\",\n      \"target_stage_id\": \"BATCH03-DOC08-DE006-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC08-S0094\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC08-DE006",
+    "event_enrichment": {
+      "result_state": "陈毅指示副官处主任给陈海峰10块钱，陈海峰惊讶并推辞说不需要那么多。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以陈毅看到陈海峰鞋子破了并指示给钱为起点，以陈海峰推辞为终点；不将前文“买笔记本”一句另立为同一事件内的独立阶段。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC08-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "触发：陈毅见陈海峰鞋破，指出这样到军部丢脸，要求他买新鞋。",
+        "process_text": "陈毅看到陈海峰鞋子破了，说这样到军部去丢脸，叫他买一双新鞋换一换。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC08-S0094"
+        ],
+        "evidence_quote": "他看到我们江抗来的第一个干部，那个鞋子上面都是老虎鞋，都破了。他说：“你这（样）到军部去，把我们1支队的脸都丢光了，去买一双新的鞋子，换一换，”",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC08-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "行动：陈毅叫副官处主任给陈海峰10块钱。",
+        "process_text": "陈毅叫副官处主任给陈海峰同志10块钱。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC08-S0094"
+        ],
+        "evidence_quote": "叫副官处主任，“给陈海峰同志10块钱。”",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC08-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "反应：陈海峰惊讶，推辞说不需要那么多。",
+        "process_text": "陈海峰听后惊讶，连说不需要那么多。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC08-S0094"
+        ],
+        "evidence_quote": "哎呦，我一听惊了下，我说不需要那么多不需要那么多",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC08-DE006-P01",
+        "target_stage_id": "BATCH03-DOC08-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC08-S0094",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC08-DE006-P02",
+        "target_stage_id": "BATCH03-DOC08-DE006-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC08-S0094",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

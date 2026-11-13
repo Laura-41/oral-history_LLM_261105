@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T21:44:15",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC06-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC06-DE005",
+  "usage": {
+    "prompt_tokens": 1161,
+    "total_tokens": 3126,
+    "completion_tokens": 1965,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1323
+    },
+    "time_to_first_token_ms": 18722,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC06-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"被派往南岳游干班第二期学习，并于1939年6月从江西樟树镇到达湖南南岳衡山，进入国共合办的南岳游击战争训练班。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于“南岳游干班”第二期招生、作者被派去学习，止于1939年6月从江西樟树镇到湖南南岳衡山并说明该训练班为共产党与国民党合办的南岳游击战争训练班；前文樟树镇师长慰问属背景，不纳入本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"南岳游干班第二期招生，作者被派去学习。\",\n      \"process_text\": \"“南岳游干班”第二期招生后，作者被派去学习。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0032\"\n      ],\n      \"evidence_quote\": \"不久 “南岳游干班”第二期招生，我就被派去学习了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"1939年6月从江西樟树镇赴湖南南岳衡山，到达国共合办的南岳游击战争训练班。\",\n      \"process_text\": \"1939年六月，从江西樟树镇到了湖南南岳衡山；该训练班是共产党跟国民党合办的南岳游击战争训练班。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0032\"\n      ],\n      \"evidence_quote\": \"这是1939年六月了，就从江西樟树镇到了湖南南岳衡山，我们共产党跟国民党合办的一个南岳游击战争的训练班。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE005-P01\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE005-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0032\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC06-DE005",
+    "event_enrichment": {
+      "result_state": "被派往南岳游干班第二期学习，并于1939年6月从江西樟树镇到达湖南南岳衡山，进入国共合办的南岳游击战争训练班。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于“南岳游干班”第二期招生、作者被派去学习，止于1939年6月从江西樟树镇到湖南南岳衡山并说明该训练班为共产党与国民党合办的南岳游击战争训练班；前文樟树镇师长慰问属背景，不纳入本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC06-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "南岳游干班第二期招生，作者被派去学习。",
+        "process_text": "“南岳游干班”第二期招生后，作者被派去学习。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0032"
+        ],
+        "evidence_quote": "不久 “南岳游干班”第二期招生，我就被派去学习了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "1939年6月从江西樟树镇赴湖南南岳衡山，到达国共合办的南岳游击战争训练班。",
+        "process_text": "1939年六月，从江西樟树镇到了湖南南岳衡山；该训练班是共产党跟国民党合办的南岳游击战争训练班。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0032"
+        ],
+        "evidence_quote": "这是1939年六月了，就从江西樟树镇到了湖南南岳衡山，我们共产党跟国民党合办的一个南岳游击战争的训练班。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC06-DE005-P01",
+        "target_stage_id": "BATCH02-DOC06-DE005-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC06-S0032",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

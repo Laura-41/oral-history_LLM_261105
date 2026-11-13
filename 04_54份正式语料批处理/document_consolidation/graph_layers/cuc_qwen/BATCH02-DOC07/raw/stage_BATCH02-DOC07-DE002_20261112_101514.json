@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-12T10:15:14",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC07-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC07-DE002",
+  "usage": {
+    "prompt_tokens": 1816,
+    "total_tokens": 12135,
+    "completion_tokens": 10319,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8647
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 175465
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC07-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"史沫特莱在军医处得到语言通和生活照顾，饮食简单但吃得满意，章央芬大夫住隔壁便于交流，她因此方便打字发报、写稿并将稿费交给新四军，留下较好印象。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"依据 S0009 起说明史沫特莱主要在军医处、军医处大夫能讲英语并炒菜照顾，S0011 补充当地食物，S0013 说明语言通、章央芬住隔壁及其写作发报，S0015 总结“这是史沫特莱这一段”，故边界覆盖这些片段。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"史沫特莱主要在军医处，军医处大夫能讲英语，生活上可以照顾。\",\n      \"process_text\": \"她呢，主要在军医处。因为她讲英语，别的人不懂，军医处都在罗里村，军部是保密机关，也不让她去。那么她呢，军医处都是大夫，（他们）又都能讲英语，那么生活上可以照顾。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0009\"\n      ],\n      \"evidence_quote\": \"她呢，主要在军医处。因为她讲英语，别的人不懂，军医处都在罗里村，军部是保密机关，也不让她去。那么她呢，军医处都是大夫，（他们）又都能讲英语，那么生活上可以照顾。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"军医处小卖部可以炒菜，每次给她炒点菜。\",\n      \"process_text\": \"那么军医处有一个小卖部，可以炒菜，每次给她炒点菜。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0009\"\n      ],\n      \"evidence_quote\": \"那么军医处有一个小卖部，可以炒菜，每次给她炒点菜。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"军医处给她炒简单菜，她吃得很满意。\",\n      \"process_text\": \"剪下来，肉丝炒一盆给她吃，她吃得很满意。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0009\"\n      ],\n      \"evidence_quote\": \"剪下来，肉丝炒一盆给她吃，她吃得很满意。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"语言通是生活照顾重点，章央芬大夫住隔壁，有事可以交换，所以很方便。\",\n      \"process_text\": \"最重要（是）语言通，章央芬大夫就跟她住在一起，隔壁隔。那么这有什么事，她可以交换，因为她的翻译方练百（音）是个男的。所以她呢，很方便，\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0013\"\n      ],\n      \"evidence_quote\": \"最重要（是）语言通，章央芬大夫就跟她住在一起，隔壁隔。那么这有什么事，她可以交换，因为她的翻译方练百（音）是个男的。所以她呢，很方便，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC07-DE002-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"史沫特莱方便打字发报，写稿投到上海的《密勒氏评论报》，拿到稿费交给新四军。\",\n      \"process_text\": \"她有一个打字机，一天到晚“啪啪啪啪”打字，采访了以后呢，就发报发走了。她是公开的，到泾县邮局去发去，公开发。她经常写稿子（投）到上海的《密勒氏评论报》，都发到美国去，拿到稿费就交给新四军。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC07-S0013\"\n      ],\n      \"evidence_quote\": \"她有一个打字机，一天到晚“啪啪啪啪”打字，采访了以后呢，就发报发走了。她是公开的，到泾县邮局去发去，公开发。她经常写稿子（投）到上海的《密勒氏评论报》，都发到美国去，拿到稿费就交给新四军。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE002-P01\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE002-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0009\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE002-P02\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE002-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0009\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE002-P03\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE002-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0013\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC07-DE002-P04\",\n      \"target_stage_id\": \"BATCH02-DOC07-DE002-P05\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC07-S0013\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": null\n}",
+  "parsed": {
+    "document_id": "CHF-V2-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC07-DE002",
+    "event_enrichment": {
+      "result_state": "史沫特莱在军医处得到语言通和生活照顾，饮食简单但吃得满意，章央芬大夫住隔壁便于交流，她因此方便打字发报、写稿并将稿费交给新四军，留下较好印象。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "依据 S0009 起说明史沫特莱主要在军医处、军医处大夫能讲英语并炒菜照顾，S0011 补充当地食物，S0013 说明语言通、章央芬住隔壁及其写作发报，S0015 总结“这是史沫特莱这一段”，故边界覆盖这些片段。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC07-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "史沫特莱主要在军医处，军医处大夫能讲英语，生活上可以照顾。",
+        "process_text": "她呢，主要在军医处。因为她讲英语，别的人不懂，军医处都在罗里村，军部是保密机关，也不让她去。那么她呢，军医处都是大夫，（他们）又都能讲英语，那么生活上可以照顾。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0009"
+        ],
+        "evidence_quote": "她呢，主要在军医处。因为她讲英语，别的人不懂，军医处都在罗里村，军部是保密机关，也不让她去。那么她呢，军医处都是大夫，（他们）又都能讲英语，那么生活上可以照顾。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "军医处小卖部可以炒菜，每次给她炒点菜。",
+        "process_text": "那么军医处有一个小卖部，可以炒菜，每次给她炒点菜。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0009"
+        ],
+        "evidence_quote": "那么军医处有一个小卖部，可以炒菜，每次给她炒点菜。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "军医处给她炒简单菜，她吃得很满意。",
+        "process_text": "剪下来，肉丝炒一盆给她吃，她吃得很满意。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0009"
+        ],
+        "evidence_quote": "剪下来，肉丝炒一盆给她吃，她吃得很满意。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "语言通是生活照顾重点，章央芬大夫住隔壁，有事可以交换，所以很方便。",
+        "process_text": "最重要（是）语言通，章央芬大夫就跟她住在一起，隔壁隔。那么这有什么事，她可以交换，因为她的翻译方练百（音）是个男的。所以她呢，很方便，",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0013"
+        ],
+        "evidence_quote": "最重要（是）语言通，章央芬大夫就跟她住在一起，隔壁隔。那么这有什么事，她可以交换，因为她的翻译方练百（音）是个男的。所以她呢，很方便，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC07-DE002-P05",
+        "stage_order": 5,
+        "stage_summary": "史沫特莱方便打字发报，写稿投到上海的《密勒氏评论报》，拿到稿费交给新四军。",
+        "process_text": "她有一个打字机，一天到晚“啪啪啪啪”打字，采访了以后呢，就发报发走了。她是公开的，到泾县邮局去发去，公开发。她经常写稿子（投）到上海的《密勒氏评论报》，都发到美国去，拿到稿费就交给新四军。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC07-S0013"
+        ],
+        "evidence_quote": "她有一个打字机，一天到晚“啪啪啪啪”打字，采访了以后呢，就发报发走了。她是公开的，到泾县邮局去发去，公开发。她经常写稿子（投）到上海的《密勒氏评论报》，都发到美国去，拿到稿费就交给新四军。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC07-DE002-P01",
+        "target_stage_id": "BATCH02-DOC07-DE002-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC07-S0009",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE002-P02",
+        "target_stage_id": "BATCH02-DOC07-DE002-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC07-S0009",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE002-P03",
+        "target_stage_id": "BATCH02-DOC07-DE002-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC07-S0013",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC07-DE002-P04",
+        "target_stage_id": "BATCH02-DOC07-DE002-P05",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC07-S0013",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": null
+  },
+  "request_error": null
+}

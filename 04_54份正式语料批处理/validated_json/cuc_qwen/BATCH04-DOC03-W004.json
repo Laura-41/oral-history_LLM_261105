@@ -1,0 +1,145 @@
+{
+  "validated_at": "2026-11-11T03:19:26",
+  "source_raw_response": "04_54份正式语料批处理/raw_responses/cuc_qwen/20261111_031652_BATCH04-DOC03-W004.json",
+  "model_id": "cuc/qwen",
+  "window_id": "BATCH04-DOC03-W004",
+  "technical_document_id": "BATCH04-DOC03",
+  "document_id": "06.杨永松100507（二校后 阅读版）.docx",
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 2,
+    "unassigned_segment_count": 4,
+    "input_segment_count": 6,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH04-DOC03-W004-E02"
+  ],
+  "postprocessed_output": {
+    "window_id": "BATCH04-DOC03-W004",
+    "events": [
+      {
+        "candidate_id": "BATCH04-DOC03-W004-E01",
+        "source_segment_ids": [
+          "BATCH04-DOC03-S0069"
+        ],
+        "event": {
+          "event_name": "常村召开追悼大会并扩大声势",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "召开追悼大会",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "追悼大会",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "常村",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "过了几天",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "他们六支队就牺牲一个团长",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "声势也比较大",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "这样我们在常村又开了一个师部组织的追悼大会，村子里一个比较大的场子都坐得满满的了，这个声势也比较大，敌人当然也就知道了。",
+          "type_basis": "核心过程为‘开/召开追悼大会’，是组织行动并产生可观察活动，符合物质过程；Actor为‘我们’，Goal为‘追悼大会’；不是言语投射、关系识别、心理感知、存在引入或无命题行为。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH04-DOC03-W004-E02",
+        "source_segment_ids": [
+          "BATCH04-DOC03-S0071"
+        ],
+        "event": {
+          "event_name": "师部在常村驻扎、组织群众并转移",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "驻扎、组织群众并转移",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": "师部",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "地方",
+              "normalized_entity": null,
+              "certainty": "LOW"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "常村",
+              "normalized_value": null
+            },
+            {
+              "kind": "TIME",
+              "value": "最多住个把月",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "目标也暴露了",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "我们自己以后，就在常村住着，目标也暴露了，又转移了地方。",
+          "type_basis": "核心过程为‘住/转移’并伴随组织群众，是空间移动、驻扎状态变化和集体行动，符合物质过程；Actor为‘我们/师部’，LOCATION为常村，CAUSE为目标暴露；不是关系、存在、心理或言语过程。",
+          "alternative_event_type": null,
+          "ambiguity_reason": "候选触及文档最后一个受访者片段，需人工确认叙述是否已完整。",
+          "review_status": "NEEDS_REVIEW"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH04-DOC03-S0068",
+      "BATCH04-DOC03-S0070",
+      "BATCH04-DOC03-S0072",
+      "BATCH04-DOC03-S0073"
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 4571,
+    "total_tokens": 14278,
+    "completion_tokens": 9707,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8648
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9706000,
+    "time_to_first_token_ms": 153479
+  }
+}

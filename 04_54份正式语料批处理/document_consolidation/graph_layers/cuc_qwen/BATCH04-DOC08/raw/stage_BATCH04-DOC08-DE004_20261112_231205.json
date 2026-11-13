@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-12T23:12:05",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC08-DE004",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC08-DE004",
+  "usage": {
+    "prompt_tokens": 1184,
+    "total_tokens": 9322,
+    "completion_tokens": 8138,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7491
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 121651
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-10\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC08-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"淮阴被三师打下，洪学智任警备司令，军部转入淮阴。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起自‘接着三师打下了淮阴’，止于‘军部一下子就转到淮阴了’；同段后续‘中央来了命令，就要三师调东北去’属于后续调动，不纳入本事件。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"三师打下淮阴，洪学智任警备司令\",\n      \"process_text\": \"接着三师打下了淮阴，洪学智那个时候是独立旅的旅长，打下淮阴后他（当）的警备司令。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0010\"\n      ],\n      \"evidence_quote\": \"接着三师打下了淮阴，洪学智那个时候是独立旅的旅长，打下淮阴后他（当）的警备司令。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC08-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"鬼子投降后军部转入淮阴\",\n      \"process_text\": \"鬼子投降以后，打下淮阴来，军部一下子就转到淮阴了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC08-S0010\"\n      ],\n      \"evidence_quote\": \"鬼子投降以后，打下淮阴来，军部一下子就转到淮阴了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC08-DE004-P01\",\n      \"target_stage_id\": \"BATCH04-DOC08-DE004-P02\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC08-S0010\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-10",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC08-DE004",
+    "event_enrichment": {
+      "result_state": "淮阴被三师打下，洪学智任警备司令，军部转入淮阴。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起自‘接着三师打下了淮阴’，止于‘军部一下子就转到淮阴了’；同段后续‘中央来了命令，就要三师调东北去’属于后续调动，不纳入本事件。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC08-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "三师打下淮阴，洪学智任警备司令",
+        "process_text": "接着三师打下了淮阴，洪学智那个时候是独立旅的旅长，打下淮阴后他（当）的警备司令。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "evidence_quote": "接着三师打下了淮阴，洪学智那个时候是独立旅的旅长，打下淮阴后他（当）的警备司令。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC08-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "鬼子投降后军部转入淮阴",
+        "process_text": "鬼子投降以后，打下淮阴来，军部一下子就转到淮阴了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC08-S0010"
+        ],
+        "evidence_quote": "鬼子投降以后，打下淮阴来，军部一下子就转到淮阴了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC08-DE004-P01",
+        "target_stage_id": "BATCH04-DOC08-DE004-P02",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC08-S0010",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

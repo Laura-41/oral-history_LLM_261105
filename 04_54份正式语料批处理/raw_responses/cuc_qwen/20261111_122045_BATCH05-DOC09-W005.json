@@ -1,0 +1,235 @@
+{
+  "run_time": "2026-11-11T12:20:45",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH05-DOC09-W005",
+  "technical_document_id": "BATCH05-DOC09",
+  "document_id": "17.陈海峰（三访）20110816（一校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH05-DOC09-S0166",
+    "BATCH05-DOC09-S0167",
+    "BATCH05-DOC09-S0168",
+    "BATCH05-DOC09-S0169",
+    "BATCH05-DOC09-S0170",
+    "BATCH05-DOC09-S0171",
+    "BATCH05-DOC09-S0172",
+    "BATCH05-DOC09-S0173",
+    "BATCH05-DOC09-S0174",
+    "BATCH05-DOC09-S0175",
+    "BATCH05-DOC09-S0176",
+    "BATCH05-DOC09-S0177",
+    "BATCH05-DOC09-S0178",
+    "BATCH05-DOC09-S0179",
+    "BATCH05-DOC09-S0180",
+    "BATCH05-DOC09-S0181",
+    "BATCH05-DOC09-S0182",
+    "BATCH05-DOC09-S0183"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 2,
+    "assigned_segment_count": 9,
+    "unassigned_segment_count": 9,
+    "input_segment_count": 18,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH05-DOC09-W005-E02"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH05-DOC09-W005",
+    "events": [
+      {
+        "candidate_id": "BATCH05-DOC09-W005-E01",
+        "source_segment_ids": [
+          "BATCH05-DOC09-S0175"
+        ],
+        "event": {
+          "event_name": "第一次、第二次反顽战中部队粮食供应困难",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "部队买酱、吃酱和稀饭，粮食供应逐步减少",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "酱",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "第一次反顽战，第二次反顽战",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "一天三顿",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "两顿稀饭一顿干饭",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "最后是一顿干饭",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "连稀饭也保证不上了",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "第一次第二次，我们还吃那个酱，到镇上去买老百姓那个酱，把那笋干用开水泡了以后，放那个酱里面啊。",
+          "type_basis": "核心过程是部队购买、食用酱和稀饭/干饭，粮食供应逐步减少，属于可观察的物质行动与变化；参与者配置为Actor=我们、Goal=酱；排除BEHAVIORAL因包含买、泡、放等物质制作和供应变化，排除EXISTENTIAL因不是单纯存在，排除RELATIONAL因不是身份属性。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH05-DOC09-W005-E02",
+        "source_segment_ids": [
+          "BATCH05-DOC09-S0170",
+          "BATCH05-DOC09-S0171",
+          "BATCH05-DOC09-S0173",
+          "BATCH05-DOC09-S0175",
+          "BATCH05-DOC09-S0177",
+          "BATCH05-DOC09-S0178",
+          "BATCH05-DOC09-S0179",
+          "BATCH05-DOC09-S0181",
+          "BATCH05-DOC09-S0182"
+        ],
+        "event": {
+          "event_name": "新登战斗中刘别生牺牲、伤员后送、后勤不足与主动撤退",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "部队攻坚新登、接收伤员、后勤供应不足并主动撤退",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "新登",
+              "normalized_entity": "新登",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Actor",
+              "mention": "大批伤员",
+              "normalized_entity": null,
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Recipient",
+              "mention": "我们",
+              "normalized_entity": null,
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Actor",
+              "mention": "刘别生",
+              "normalized_entity": "刘别生",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "天目山战役",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "粮食啊，供应不上",
+              "normalized_value": "粮食供应不上"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "后勤跟不上",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "远离根据地",
+              "normalized_value": null
+            },
+            {
+              "kind": "CAUSE",
+              "value": "装备、弹药供应不上",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "分散了，攻坚了",
+              "normalized_value": null
+            },
+            {
+              "kind": "MANNER",
+              "value": "主动",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "只打了一半",
+              "normalized_value": null
+            },
+            {
+              "kind": "OTHER",
+              "value": "影响士气",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "只打了一半，我们主动撤退。粮食啊，供应不上，从溧阳……",
+          "type_basis": "核心过程是部队攻坚新登、接收伤员、刘别生牺牲、后勤和粮食供应不足并主动撤退，属于可观察的物质行动与变化；参与者配置为Actor=我们/大批伤员/刘别生、Goal=新登、Recipient=我们；排除VERBAL因不是言说命题，排除EXISTENTIAL因不是单纯存在，排除BEHAVIORAL因有物质结果。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH05-DOC09-S0166",
+      "BATCH05-DOC09-S0167",
+      "BATCH05-DOC09-S0168",
+      "BATCH05-DOC09-S0169",
+      "BATCH05-DOC09-S0172",
+      "BATCH05-DOC09-S0174",
+      "BATCH05-DOC09-S0176",
+      "BATCH05-DOC09-S0180",
+      "BATCH05-DOC09-S0183"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH05-DOC09-W005\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH05-DOC09-W005-E01\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC09-S0175\"\n      ],\n      \"event\": {\n        \"event_name\": \"第一次、第二次反顽战中部队粮食供应困难\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"部队买酱、吃酱和稀饭，粮食供应逐步减少\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"酱\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"第一次反顽战，第二次反顽战\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"一天三顿\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"两顿稀饭一顿干饭\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"最后是一顿干饭\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"连稀饭也保证不上了\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"第一次第二次，我们还吃那个酱，到镇上去买老百姓那个酱，把那笋干用开水泡了以后，放那个酱里面啊。\",\n        \"type_basis\": \"核心过程是部队购买、食用酱和稀饭/干饭，粮食供应逐步减少，属于可观察的物质行动与变化；参与者配置为Actor=我们、Goal=酱；排除BEHAVIORAL因包含买、泡、放等物质制作和供应变化，排除EXISTENTIAL因不是单纯存在，排除RELATIONAL因不是身份属性。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH05-DOC09-W005-E02\",\n      \"source_segment_ids\": [\n        \"BATCH05-DOC09-S0170\",\n        \"BATCH05-DOC09-S0171\",\n        \"BATCH05-DOC09-S0173\",\n        \"BATCH05-DOC09-S0175\",\n        \"BATCH05-DOC09-S0177\",\n        \"BATCH05-DOC09-S0178\",\n        \"BATCH05-DOC09-S0179\",\n        \"BATCH05-DOC09-S0181\",\n        \"BATCH05-DOC09-S0182\"\n      ],\n      \"event\": {\n        \"event_name\": \"新登战斗中刘别生牺牲、伤员后送、后勤不足与主动撤退\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"部队攻坚新登、接收伤员、后勤供应不足并主动撤退\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"新登\",\n            \"normalized_entity\": \"新登\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"大批伤员\",\n            \"normalized_entity\": null,\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Recipient\",\n            \"mention\": \"我们\",\n            \"normalized_entity\": null,\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"刘别生\",\n            \"normalized_entity\": \"刘别生\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"天目山战役\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"粮食啊，供应不上\",\n            \"normalized_value\": \"粮食供应不上\"\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"后勤跟不上\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"远离根据地\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"装备、弹药供应不上\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"分散了，攻坚了\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"MANNER\",\n            \"value\": \"主动\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"只打了一半\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"OTHER\",\n            \"value\": \"影响士气\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"只打了一半，我们主动撤退。粮食啊，供应不上，从溧阳……\",\n        \"type_basis\": \"核心过程是部队攻坚新登、接收伤员、刘别生牺牲、后勤和粮食供应不足并主动撤退，属于可观察的物质行动与变化；参与者配置为Actor=我们/大批伤员/刘别生、Goal=新登、Recipient=我们；排除VERBAL因不是言说命题，排除EXISTENTIAL因不是单纯存在，排除BEHAVIORAL因有物质结果。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH05-DOC09-S0166\",\n    \"BATCH05-DOC09-S0167\",\n    \"BATCH05-DOC09-S0168\",\n    \"BATCH05-DOC09-S0169\",\n    \"BATCH05-DOC09-S0172\",\n    \"BATCH05-DOC09-S0174\",\n    \"BATCH05-DOC09-S0176\",\n    \"BATCH05-DOC09-S0180\",\n    \"BATCH05-DOC09-S0183\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5026,
+    "total_tokens": 23738,
+    "completion_tokens": 18712,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 17001
+    },
+    "time_to_first_token_ms": 299135,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 18711000
+  }
+}

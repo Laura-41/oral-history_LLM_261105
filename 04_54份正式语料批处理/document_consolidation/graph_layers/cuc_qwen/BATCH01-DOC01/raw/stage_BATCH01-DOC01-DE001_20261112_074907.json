@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T07:49:07",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH01-DOC01-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH01-DOC01-DE001",
+  "usage": {
+    "prompt_tokens": 1686,
+    "total_tokens": 9937,
+    "completion_tokens": 8251,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6649
+    },
+    "time_to_first_token_ms": 121808,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8250000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V1-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH01-DOC01-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰等八人带四条枪进入该武装，在表面参加的情况下慢慢地控制这个部队；部队有一百多人，已经发展。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为国民党溃退时捡枪并挑选八人参加离开家里九里路的一个武装；终点为八人带四条枪进入并慢慢地控制这个部队，S0010补充部队发展状态。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"国民党溃退时获得枪支并挑选八人参加当地武装\",\n      \"process_text\": \"国民党溃退的时候捡了几条枪，加上哥哥的一条快慢机共四条枪；挑选八个思想比较好、身体比较好的人，参加离开家里九里路的一个武装。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0003\"\n      ],\n      \"evidence_quote\": \"    陈海峰：那么我们五十多人以后呢，当时国民党溃退的时候，我们又捡了几条枪。国民党部队走的时候，他枪都扔掉了，他人跑了，溃退下来的嘛。有一条马枪，有步枪啊，有三条枪，加上我哥哥的一条快慢机，（一共）四条枪。那么我们挑选了八个思想比较好的，身体比较好的，我们就参加了离开我们家里九里路的一个武装。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"说明该武装由地下党领导，上海党派李一平带上海工人参加\",\n      \"process_text\": \"这个武装是地下党领导的；领导人1927年“四·一二”大屠杀被捕以后在苏州监狱，抗战初期放出来，发展了一个武装，但和地方党、地下党没有联系；上海党派李玉平，后来改名李一平，带十几个上海工人下来参加部队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0005\"\n      ],\n      \"evidence_quote\": \"    陈海峰：这个武装是地下党领导的。这个领导人呢，他原来是1927年“四·一二”大屠杀被捕以后，在苏州监狱里面的，抗战初期就放出来了。他原来是一个学校里的老师,他家里有钱，他就发展了一个武装。但是他抗日，他和地方党，地下党没有取得联系。那么实际上呢，我们有地下党在里头，他不知道。上海党就派了一个新来的，叫李玉平，后来改名叫李一平，木子李，“一二三四”的“一”，“和平”的“平”。以后呢，是长春的市委书记，前几年过世了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"利用党的力量插入武装，八人带四条枪进入并逐步控制部队\",\n      \"process_text\": \"利用上海党派员带工人参加、有枪抗战的条件，党的力量插进去；篁村人民抗战救亡会选拔八人，哥哥带领，带四条枪，表面武装而过，实际进去，慢慢地控制这个部队。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0007\"\n      ],\n      \"evidence_quote\": \"    陈海峰：他先来，带了十几个上海工人下来，也参加了这个部队。因为他要抗战，他有枪。我们就利用这个，我们党的力量插进去，那么上海支持我们。我们篁村的人民抗战救亡会呢，我们要选拔一些进步的，我们就八个人。我一个堂兄，我一个表兄，我一个表弟，我一个堂弟，哥哥带领我们，我一个，一共是八个人，我们带了四条枪。等于是表面武装而过（音）了，实际上是进去了，慢慢地控制这个部队。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH01-DOC01-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"部队发展至一百多人，有当地排长和上海工人参加\",\n      \"process_text\": \"部队有一百多人，已经发展；许超当时在这里面是一个排长，当地人；叶藻是上海的工人，是李一平带下来的，也参加了这个地方。\",\n      \"evidence_segment_ids\": [\n        \"BATCH01-DOC01-S0010\"\n      ],\n      \"evidence_quote\": \"    陈海峰：部队有一百多人，这个部队已经发展了。现在空军学院的副校长叫许超，那个时候在这里面就是一个排长，当地人。装甲兵的一个副参谋长叫叶藻，“树叶”的“叶”，“海藻”的“藻”，草字头洗澡的澡。（他是）装甲兵的副参谋长，是上海的工人，是李一平带下来的，也参加了这个地方。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE001-P01\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE001-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0005\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE001-P02\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE001-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0007\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH01-DOC01-DE001-P03\",\n      \"target_stage_id\": \"BATCH01-DOC01-DE001-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH01-DOC01-S0010\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V1-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH01-DOC01-DE001",
+    "event_enrichment": {
+      "result_state": "陈海峰等八人带四条枪进入该武装，在表面参加的情况下慢慢地控制这个部队；部队有一百多人，已经发展。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为国民党溃退时捡枪并挑选八人参加离开家里九里路的一个武装；终点为八人带四条枪进入并慢慢地控制这个部队，S0010补充部队发展状态。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH01-DOC01-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "国民党溃退时获得枪支并挑选八人参加当地武装",
+        "process_text": "国民党溃退的时候捡了几条枪，加上哥哥的一条快慢机共四条枪；挑选八个思想比较好、身体比较好的人，参加离开家里九里路的一个武装。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0003"
+        ],
+        "evidence_quote": "    陈海峰：那么我们五十多人以后呢，当时国民党溃退的时候，我们又捡了几条枪。国民党部队走的时候，他枪都扔掉了，他人跑了，溃退下来的嘛。有一条马枪，有步枪啊，有三条枪，加上我哥哥的一条快慢机，（一共）四条枪。那么我们挑选了八个思想比较好的，身体比较好的，我们就参加了离开我们家里九里路的一个武装。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "说明该武装由地下党领导，上海党派李一平带上海工人参加",
+        "process_text": "这个武装是地下党领导的；领导人1927年“四·一二”大屠杀被捕以后在苏州监狱，抗战初期放出来，发展了一个武装，但和地方党、地下党没有联系；上海党派李玉平，后来改名李一平，带十几个上海工人下来参加部队。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0005"
+        ],
+        "evidence_quote": "    陈海峰：这个武装是地下党领导的。这个领导人呢，他原来是1927年“四·一二”大屠杀被捕以后，在苏州监狱里面的，抗战初期就放出来了。他原来是一个学校里的老师,他家里有钱，他就发展了一个武装。但是他抗日，他和地方党，地下党没有取得联系。那么实际上呢，我们有地下党在里头，他不知道。上海党就派了一个新来的，叫李玉平，后来改名叫李一平，木子李，“一二三四”的“一”，“和平”的“平”。以后呢，是长春的市委书记，前几年过世了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "利用党的力量插入武装，八人带四条枪进入并逐步控制部队",
+        "process_text": "利用上海党派员带工人参加、有枪抗战的条件，党的力量插进去；篁村人民抗战救亡会选拔八人，哥哥带领，带四条枪，表面武装而过，实际进去，慢慢地控制这个部队。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0007"
+        ],
+        "evidence_quote": "    陈海峰：他先来，带了十几个上海工人下来，也参加了这个部队。因为他要抗战，他有枪。我们就利用这个，我们党的力量插进去，那么上海支持我们。我们篁村的人民抗战救亡会呢，我们要选拔一些进步的，我们就八个人。我一个堂兄，我一个表兄，我一个表弟，我一个堂弟，哥哥带领我们，我一个，一共是八个人，我们带了四条枪。等于是表面武装而过（音）了，实际上是进去了，慢慢地控制这个部队。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH01-DOC01-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "部队发展至一百多人，有当地排长和上海工人参加",
+        "process_text": "部队有一百多人，已经发展；许超当时在这里面是一个排长，当地人；叶藻是上海的工人，是李一平带下来的，也参加了这个地方。",
+        "evidence_segment_ids": [
+          "BATCH01-DOC01-S0010"
+        ],
+        "evidence_quote": "    陈海峰：部队有一百多人，这个部队已经发展了。现在空军学院的副校长叫许超，那个时候在这里面就是一个排长，当地人。装甲兵的一个副参谋长叫叶藻，“树叶”的“叶”，“海藻”的“藻”，草字头洗澡的澡。（他是）装甲兵的副参谋长，是上海的工人，是李一平带下来的，也参加了这个地方。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH01-DOC01-DE001-P01",
+        "target_stage_id": "BATCH01-DOC01-DE001-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH01-DOC01-S0005",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE001-P02",
+        "target_stage_id": "BATCH01-DOC01-DE001-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH01-DOC01-S0007",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH01-DOC01-DE001-P03",
+        "target_stage_id": "BATCH01-DOC01-DE001-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH01-DOC01-S0010",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

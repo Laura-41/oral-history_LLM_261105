@@ -1,0 +1,144 @@
+{
+  "run_time": "2026-11-11T21:33:53",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC04-DE008",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC04-DE008",
+  "usage": {
+    "prompt_tokens": 1515,
+    "total_tokens": 7373,
+    "completion_tokens": 5858,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4317
+    },
+    "time_to_first_token_ms": 46468,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-03\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC04-DE008\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队已西靠至豆村镇附近，旅长陈光接到准备参加忻口战斗的命令；部队在补给困难中仅领到少量手榴弹和干粮，弹药等未获补充。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以接到上边命令、部队往西靠为起点，以团抵豆村镇附近并接到准备参加忻口战斗命令为终点；会中所述补给情况作为准备过程的一部分纳入。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE008-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"接到上边命令后，部队往西靠拢，团到达豆村镇附近。\",\n      \"process_text\": \"接到上边命令，部队往西靠，团在豆村镇附近。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0071\"\n      ],\n      \"evidence_quote\": \"又接到上边的命令，我们往西靠，我们团就在豆村镇的附近。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE008-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"旅长陈光接到准备参加忻口战斗的命令。\",\n      \"process_text\": \"此时旅长陈光接到命令，准备参加忻口战斗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0071\"\n      ],\n      \"evidence_quote\": \"这个时候呢，旅长陈光啊，接到（命令）准备参加忻口战斗。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE008-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"陈光开会说明上级任务与个人意见，指出平型关战斗后人员装备未得补充。\",\n      \"process_text\": \"陈光在开会时先讲上级任务，再讲个人意见，说明平型关战斗后人员装备都没有得到补充，路过太原时只领到很少的手榴弹。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0073\"\n      ],\n      \"evidence_quote\": \"陈光在开会的时候，我专门写了，就是主要讲的一通，前面讲了上级的任务，后面讲他个人意见，就是我们平型关战斗以后，人员装备都没得到补充——就是路过太原的时候领到很少的手榴弹。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE008-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"在附近单位领到一枚手榴弹，七九子弹等未得补充。\",\n      \"process_text\": \"下来以后，在附近不知道什么单位那里，一个人领到一枚手榴弹；七九子弹未得到补充。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0073\"\n      ],\n      \"evidence_quote\": \"下来以后，就在那个附近不知道什么单位那里，一个人领到个手榴弹，七九子弹也不知道阎锡山那有没有，中央军是有的，七九子弹没得到补充。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE008-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"发放干粮，每人十个，其他东西没有补充。\",\n      \"process_text\": \"给每人发了十个大饼子，其他东西什么也没有补充。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0075\"\n      ],\n      \"evidence_quote\": \"就给我们一个人发了十个，其他东西什么也没补充。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC04-DE008-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"补充限制：缴获的弹药未及取用，686团是否补充不明。\",\n      \"process_text\": \"部队缴获了一部分弹药，但当时没有到弹药堆栈那里去，部队还在作战；686团离得较近，不知道补充了没有。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC04-S0077\"\n      ],\n      \"evidence_quote\": \"咱们缴获了一部分啊。（但）当时部队没有到（弹药）堆栈那里去，部队还在作战，在那边。686团不知道补充了没有，他离得比较近。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE008-P01\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE008-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0071\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE008-P02\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE008-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0073\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE008-P03\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE008-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0073\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE008-P04\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE008-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0075\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC04-DE008-P05\",\n      \"target_stage_id\": \"BATCH02-DOC04-DE008-P06\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC04-S0077\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-03",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC04-DE008",
+    "event_enrichment": {
+      "result_state": "部队已西靠至豆村镇附近，旅长陈光接到准备参加忻口战斗的命令；部队在补给困难中仅领到少量手榴弹和干粮，弹药等未获补充。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以接到上边命令、部队往西靠为起点，以团抵豆村镇附近并接到准备参加忻口战斗命令为终点；会中所述补给情况作为准备过程的一部分纳入。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC04-DE008-P01",
+        "stage_order": 1,
+        "stage_summary": "接到上边命令后，部队往西靠拢，团到达豆村镇附近。",
+        "process_text": "接到上边命令，部队往西靠，团在豆村镇附近。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0071"
+        ],
+        "evidence_quote": "又接到上边的命令，我们往西靠，我们团就在豆村镇的附近。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE008-P02",
+        "stage_order": 2,
+        "stage_summary": "旅长陈光接到准备参加忻口战斗的命令。",
+        "process_text": "此时旅长陈光接到命令，准备参加忻口战斗。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0071"
+        ],
+        "evidence_quote": "这个时候呢，旅长陈光啊，接到（命令）准备参加忻口战斗。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE008-P03",
+        "stage_order": 3,
+        "stage_summary": "陈光开会说明上级任务与个人意见，指出平型关战斗后人员装备未得补充。",
+        "process_text": "陈光在开会时先讲上级任务，再讲个人意见，说明平型关战斗后人员装备都没有得到补充，路过太原时只领到很少的手榴弹。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0073"
+        ],
+        "evidence_quote": "陈光在开会的时候，我专门写了，就是主要讲的一通，前面讲了上级的任务，后面讲他个人意见，就是我们平型关战斗以后，人员装备都没得到补充——就是路过太原的时候领到很少的手榴弹。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE008-P04",
+        "stage_order": 4,
+        "stage_summary": "在附近单位领到一枚手榴弹，七九子弹等未得补充。",
+        "process_text": "下来以后，在附近不知道什么单位那里，一个人领到一枚手榴弹；七九子弹未得到补充。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0073"
+        ],
+        "evidence_quote": "下来以后，就在那个附近不知道什么单位那里，一个人领到个手榴弹，七九子弹也不知道阎锡山那有没有，中央军是有的，七九子弹没得到补充。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE008-P05",
+        "stage_order": 5,
+        "stage_summary": "发放干粮，每人十个，其他东西没有补充。",
+        "process_text": "给每人发了十个大饼子，其他东西什么也没有补充。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0075"
+        ],
+        "evidence_quote": "就给我们一个人发了十个，其他东西什么也没补充。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC04-DE008-P06",
+        "stage_order": 6,
+        "stage_summary": "补充限制：缴获的弹药未及取用，686团是否补充不明。",
+        "process_text": "部队缴获了一部分弹药，但当时没有到弹药堆栈那里去，部队还在作战；686团离得较近，不知道补充了没有。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC04-S0077"
+        ],
+        "evidence_quote": "咱们缴获了一部分啊。（但）当时部队没有到（弹药）堆栈那里去，部队还在作战，在那边。686团不知道补充了没有，他离得比较近。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC04-DE008-P01",
+        "target_stage_id": "BATCH02-DOC04-DE008-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0071",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE008-P02",
+        "target_stage_id": "BATCH02-DOC04-DE008-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC04-S0073",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE008-P03",
+        "target_stage_id": "BATCH02-DOC04-DE008-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0073",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE008-P04",
+        "target_stage_id": "BATCH02-DOC04-DE008-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC04-S0075",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC04-DE008-P05",
+        "target_stage_id": "BATCH02-DOC04-DE008-P06",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC04-S0077",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

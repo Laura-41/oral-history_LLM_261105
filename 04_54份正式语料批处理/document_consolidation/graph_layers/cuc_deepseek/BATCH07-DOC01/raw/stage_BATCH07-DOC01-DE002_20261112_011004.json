@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-12T01:10:04",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC01-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC01-DE002",
+  "usage": {
+    "prompt_tokens": 1158,
+    "total_tokens": 2344,
+    "completion_tokens": 1186,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 677
+    },
+    "time_to_first_token_ms": 9233,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-15\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC01-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"特纵的军管任务告一段落，并于8月18日从上海撤到南京。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于8月军管任务告一段落，止于特纵8月18日从上海撤到南京。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"到8月时，特纵承担的军管任务告一段落。\",\n      \"process_text\": \"到了8月的时候，军管任务告一段落。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0023\"\n      ],\n      \"evidence_quote\": \"到了8月的时候，我们这个军管任务就告一段落了\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC01-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"特纵于8月18日从上海撤往南京。\",\n      \"process_text\": \"特纵8月18号从上海撤到南京。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC01-S0023\"\n      ],\n      \"evidence_quote\": \"我们特纵8月18号就从上海撤到南京了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC01-DE002-P01\",\n      \"target_stage_id\": \"BATCH07-DOC01-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC01-S0023\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CRT-15",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC01-DE002",
+    "event_enrichment": {
+      "result_state": "特纵的军管任务告一段落，并于8月18日从上海撤到南京。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于8月军管任务告一段落，止于特纵8月18日从上海撤到南京。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC01-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "到8月时，特纵承担的军管任务告一段落。",
+        "process_text": "到了8月的时候，军管任务告一段落。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0023"
+        ],
+        "evidence_quote": "到了8月的时候，我们这个军管任务就告一段落了",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC01-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "特纵于8月18日从上海撤往南京。",
+        "process_text": "特纵8月18号从上海撤到南京。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC01-S0023"
+        ],
+        "evidence_quote": "我们特纵8月18号就从上海撤到南京了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC01-DE002-P01",
+        "target_stage_id": "BATCH07-DOC01-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC01-S0023",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

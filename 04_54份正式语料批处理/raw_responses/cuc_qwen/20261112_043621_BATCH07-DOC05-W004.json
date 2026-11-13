@@ -1,0 +1,145 @@
+{
+  "run_time": "2026-11-12T04:36:21",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/qwen",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH07-DOC05-W004",
+  "technical_document_id": "BATCH07-DOC05",
+  "document_id": "04.陈海峰（三访）20110816（二校后 阅读版）.doc",
+  "input_segment_ids": [
+    "BATCH07-DOC05-S0076",
+    "BATCH07-DOC05-S0077",
+    "BATCH07-DOC05-S0078",
+    "BATCH07-DOC05-S0079",
+    "BATCH07-DOC05-S0080",
+    "BATCH07-DOC05-S0081",
+    "BATCH07-DOC05-S0082",
+    "BATCH07-DOC05-S0083",
+    "BATCH07-DOC05-S0084",
+    "BATCH07-DOC05-S0085",
+    "BATCH07-DOC05-S0086",
+    "BATCH07-DOC05-S0087",
+    "BATCH07-DOC05-S0088",
+    "BATCH07-DOC05-S0089",
+    "BATCH07-DOC05-S0090",
+    "BATCH07-DOC05-S0091",
+    "BATCH07-DOC05-S0092"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 1,
+    "assigned_segment_count": 2,
+    "unassigned_segment_count": 15,
+    "input_segment_count": 17,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [],
+  "parsed_output": {
+    "window_id": "BATCH07-DOC05-W004",
+    "events": [
+      {
+        "candidate_id": "BATCH07-DOC05-W004-E01",
+        "source_segment_ids": [
+          "BATCH07-DOC05-S0079",
+          "BATCH07-DOC05-S0082"
+        ],
+        "event": {
+          "event_name": "陈海峰等参加寿宴后被地方政权招待并转移至毗卢寺、泰兴/靖江县政府及东台海岸",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "被招待并转移",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "他",
+              "normalized_entity": null,
+              "certainty": "LOW"
+            },
+            {
+              "role": "Actor",
+              "mention": "县政府",
+              "normalized_entity": "靖江县政府",
+              "certainty": "MEDIUM"
+            },
+            {
+              "role": "Goal",
+              "mention": "我们二十多个人",
+              "normalized_entity": "陈海峰等二十多人",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "早上",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "靖江毗卢寺",
+              "normalized_value": "靖江毗卢寺"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "泰兴",
+              "normalized_value": "泰兴"
+            },
+            {
+              "kind": "TIME",
+              "value": "两三天",
+              "normalized_value": null
+            },
+            {
+              "kind": "DIRECTION",
+              "value": "东台，整个海岸",
+              "normalized_value": "东台、整个海岸"
+            },
+            {
+              "kind": "CAUSE",
+              "value": "粮食很困难",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "早上派了4个人，（带）4个短枪，请我们吃了早饭。我们二十多个人，招待我们吃，（陈海峰大笑）招待我们住，送我们几十里地，送到靖江毗卢寺。",
+          "type_basis": "核心过程是请吃早饭、招待吃住、送几十里到靖江毗卢寺，并在泰兴/靖江县政府住两三天后再送东台海岸，属于空间移动和物质性招待；“他”和“县政府”可作 Actor，“我们二十多个人”作 Goal。言语祝贺和见到政权的喜悦是同一转移经历中的阶段，不单独主导事件类型。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH07-DOC05-S0076",
+      "BATCH07-DOC05-S0077",
+      "BATCH07-DOC05-S0078",
+      "BATCH07-DOC05-S0080",
+      "BATCH07-DOC05-S0081",
+      "BATCH07-DOC05-S0083",
+      "BATCH07-DOC05-S0084",
+      "BATCH07-DOC05-S0085",
+      "BATCH07-DOC05-S0086",
+      "BATCH07-DOC05-S0087",
+      "BATCH07-DOC05-S0088",
+      "BATCH07-DOC05-S0089",
+      "BATCH07-DOC05-S0090",
+      "BATCH07-DOC05-S0091",
+      "BATCH07-DOC05-S0092"
+    ]
+  },
+  "raw_content": "\n\n{\n  \"window_id\": \"BATCH07-DOC05-W004\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH07-DOC05-W004-E01\",\n      \"source_segment_ids\": [\n        \"BATCH07-DOC05-S0079\",\n        \"BATCH07-DOC05-S0082\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈海峰等参加寿宴后被地方政权招待并转移至毗卢寺、泰兴/靖江县政府及东台海岸\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"被招待并转移\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"他\",\n            \"normalized_entity\": null,\n            \"certainty\": \"LOW\"\n          },\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"县政府\",\n            \"normalized_entity\": \"靖江县政府\",\n            \"certainty\": \"MEDIUM\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"我们二十多个人\",\n            \"normalized_entity\": \"陈海峰等二十多人\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"早上\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"靖江毗卢寺\",\n            \"normalized_value\": \"靖江毗卢寺\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"泰兴\",\n            \"normalized_value\": \"泰兴\"\n          },\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"两三天\",\n            \"normalized_value\": null\n          },\n          {\n            \"kind\": \"DIRECTION\",\n            \"value\": \"东台，整个海岸\",\n            \"normalized_value\": \"东台、整个海岸\"\n          },\n          {\n            \"kind\": \"CAUSE\",\n            \"value\": \"粮食很困难\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"早上派了4个人，（带）4个短枪，请我们吃了早饭。我们二十多个人，招待我们吃，（陈海峰大笑）招待我们住，送我们几十里地，送到靖江毗卢寺。\",\n        \"type_basis\": \"核心过程是请吃早饭、招待吃住、送几十里到靖江毗卢寺，并在泰兴/靖江县政府住两三天后再送东台海岸，属于空间移动和物质性招待；“他”和“县政府”可作 Actor，“我们二十多个人”作 Goal。言语祝贺和见到政权的喜悦是同一转移经历中的阶段，不单独主导事件类型。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH07-DOC05-S0076\",\n    \"BATCH07-DOC05-S0077\",\n    \"BATCH07-DOC05-S0078\",\n    \"BATCH07-DOC05-S0080\",\n    \"BATCH07-DOC05-S0081\",\n    \"BATCH07-DOC05-S0083\",\n    \"BATCH07-DOC05-S0084\",\n    \"BATCH07-DOC05-S0085\",\n    \"BATCH07-DOC05-S0086\",\n    \"BATCH07-DOC05-S0087\",\n    \"BATCH07-DOC05-S0088\",\n    \"BATCH07-DOC05-S0089\",\n    \"BATCH07-DOC05-S0090\",\n    \"BATCH07-DOC05-S0091\",\n    \"BATCH07-DOC05-S0092\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5506,
+    "total_tokens": 13886,
+    "completion_tokens": 8380,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 7380
+    },
+    "time_to_first_token_ms": 126611,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8379000
+  }
+}

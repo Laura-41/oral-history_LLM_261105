@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-11T21:38:39",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC05-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC05-DE003",
+  "usage": {
+    "prompt_tokens": 1187,
+    "total_tokens": 3407,
+    "completion_tokens": 2220,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1450
+    },
+    "time_to_first_token_ms": 17123,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V2-02\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC05-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"周恩来视察军医处并到罗里村观看学员做人工呼吸，点头表示做得还可以。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以“来军医处参观，来检查工作”为起点，以观看人工呼吸课并点头认可为终点；依据片段S0036。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"周恩来来到军医处参观并检查工作。\",\n      \"process_text\": \"（他）来军医处参观，来检查工作。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0036\"\n      ],\n      \"evidence_quote\": \"大概是3月4号，（他）来军医处参观，来检查工作。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"周恩来从军医处关帝庙很快转到罗里村看望学员。\",\n      \"process_text\": \"到了军医处关帝庙以后，很快就到罗里村来看我们。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0036\"\n      ],\n      \"evidence_quote\": \"检查工作呢，到了军医处关帝庙以后，很快就到罗里村来看我们。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC05-DE003-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"周恩来观看学员上人工呼吸课，并点头表示做得还可以。\",\n      \"process_text\": \"学员正在上课做人工呼吸，一个学生做病人，一个学生做人工呼吸；他看着并点点头，意思做得还可以。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC05-S0036\"\n      ],\n      \"evidence_quote\": \"我们呢，正在上课，做人工呼吸。他一个学生做病人，一个学生在那做人工呼吸，他看着，他点点头，看他的意思做得还可以。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE003-P01\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0036\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC05-DE003-P02\",\n      \"target_stage_id\": \"BATCH02-DOC05-DE003-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC05-S0036\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V2-02",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC05-DE003",
+    "event_enrichment": {
+      "result_state": "周恩来视察军医处并到罗里村观看学员做人工呼吸，点头表示做得还可以。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "以“来军医处参观，来检查工作”为起点，以观看人工呼吸课并点头认可为终点；依据片段S0036。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC05-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "周恩来来到军医处参观并检查工作。",
+        "process_text": "（他）来军医处参观，来检查工作。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0036"
+        ],
+        "evidence_quote": "大概是3月4号，（他）来军医处参观，来检查工作。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "周恩来从军医处关帝庙很快转到罗里村看望学员。",
+        "process_text": "到了军医处关帝庙以后，很快就到罗里村来看我们。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0036"
+        ],
+        "evidence_quote": "检查工作呢，到了军医处关帝庙以后，很快就到罗里村来看我们。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC05-DE003-P03",
+        "stage_order": 3,
+        "stage_summary": "周恩来观看学员上人工呼吸课，并点头表示做得还可以。",
+        "process_text": "学员正在上课做人工呼吸，一个学生做病人，一个学生做人工呼吸；他看着并点点头，意思做得还可以。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC05-S0036"
+        ],
+        "evidence_quote": "我们呢，正在上课，做人工呼吸。他一个学生做病人，一个学生在那做人工呼吸，他看着，他点点头，看他的意思做得还可以。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC05-DE003-P01",
+        "target_stage_id": "BATCH02-DOC05-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC05-S0036",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC05-DE003-P02",
+        "target_stage_id": "BATCH02-DOC05-DE003-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC05-S0036",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

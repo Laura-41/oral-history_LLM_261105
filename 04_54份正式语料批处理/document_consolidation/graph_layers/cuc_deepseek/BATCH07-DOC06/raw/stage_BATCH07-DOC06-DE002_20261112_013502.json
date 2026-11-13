@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T01:35:02",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH07-DOC06-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH07-DOC06-DE002",
+  "usage": {
+    "prompt_tokens": 1321,
+    "total_tokens": 4340,
+    "completion_tokens": 3019,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2096
+    },
+    "time_to_first_token_ms": 23807,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3018000
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH07-DOC06-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"袁国平一行完成在一支队的调查，陈海峰带两名日军俘虏随行；原文未交代抵达军部教导队后的情况。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以陈海峰自述被送军部教导队学习、随袁国平同行为起点，以调查后带两名日军俘虏为终点；不扩展到后续到军部教导队的学习过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"陈海峰是江抗部队第一个被送到军部教导队学习的干部。\",\n      \"process_text\": \"我是江抗部队的第一个干部送到军部教导队学习的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0031\"\n      ],\n      \"evidence_quote\": \"我是江抗部队的第一个干部送到军部教导队学习的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"袁国平带一批干部同行，陈海峰为其中之一。\",\n      \"process_text\": \"那么带了一批干部，我是其中之一，跟着走的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0033\"\n      ],\n      \"evidence_quote\": \"那么带了一批干部，我是其中之一，跟着走的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"袁国平带一个警卫班到一支队调查。\",\n      \"process_text\": \"袁国平带着一个警卫班到1支队来调查。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0031\"\n      ],\n      \"evidence_quote\": \"袁国平带着一个警卫班到1支队来调查。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH07-DOC06-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"调查结束后，陈海峰带两名日军俘虏随行。\",\n      \"process_text\": \"调查以后呢，我带了两个日本鬼子俘虏。\",\n      \"evidence_segment_ids\": [\n        \"BATCH07-DOC06-S0031\"\n      ],\n      \"evidence_quote\": \"调查以后呢，我带了两个日本鬼子俘虏。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE002-P01\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC06-S0031\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE002-P02\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC06-S0031\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH07-DOC06-DE002-P03\",\n      \"target_stage_id\": \"BATCH07-DOC06-DE002-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH07-DOC06-S0031\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH07-DOC06-DE002",
+    "event_enrichment": {
+      "result_state": "袁国平一行完成在一支队的调查，陈海峰带两名日军俘虏随行；原文未交代抵达军部教导队后的情况。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以陈海峰自述被送军部教导队学习、随袁国平同行为起点，以调查后带两名日军俘虏为终点；不扩展到后续到军部教导队的学习过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH07-DOC06-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "陈海峰是江抗部队第一个被送到军部教导队学习的干部。",
+        "process_text": "我是江抗部队的第一个干部送到军部教导队学习的。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0031"
+        ],
+        "evidence_quote": "我是江抗部队的第一个干部送到军部教导队学习的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "袁国平带一批干部同行，陈海峰为其中之一。",
+        "process_text": "那么带了一批干部，我是其中之一，跟着走的。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0033"
+        ],
+        "evidence_quote": "那么带了一批干部，我是其中之一，跟着走的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "袁国平带一个警卫班到一支队调查。",
+        "process_text": "袁国平带着一个警卫班到1支队来调查。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0031"
+        ],
+        "evidence_quote": "袁国平带着一个警卫班到1支队来调查。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH07-DOC06-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "调查结束后，陈海峰带两名日军俘虏随行。",
+        "process_text": "调查以后呢，我带了两个日本鬼子俘虏。",
+        "evidence_segment_ids": [
+          "BATCH07-DOC06-S0031"
+        ],
+        "evidence_quote": "调查以后呢，我带了两个日本鬼子俘虏。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH07-DOC06-DE002-P01",
+        "target_stage_id": "BATCH07-DOC06-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC06-S0031",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE002-P02",
+        "target_stage_id": "BATCH07-DOC06-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC06-S0031",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH07-DOC06-DE002-P03",
+        "target_stage_id": "BATCH07-DOC06-DE002-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH07-DOC06-S0031",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

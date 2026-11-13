@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T00:34:26",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC03-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC03-DE001",
+  "usage": {
+    "prompt_tokens": 1768,
+    "total_tokens": 4935,
+    "completion_tokens": 3167,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1937
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 24438
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC03-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队打击四各哨地主武装后返回四县边联地区；四各哨地主武装气焰有所收敛，不敢随便出来抓干部。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于得到敌人扫荡消息后向南转移至郯城县西北部，止于打击四各哨地主武装后返回四县边联地区；S0024末句关于陈、罗到来的叙述作为后续背景不纳入本事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"得敌扫荡消息后向南转移至郯城西北部，以便解决粮食问题。\",\n      \"process_text\": \"得到敌人要扫荡的消息后，往南过徐州通临沂的公路，转移到郯城县西北部，那里粮食方便，较好解决粮食问题。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0019\"\n      ],\n      \"evidence_quote\": \"有一次敌人要扫荡了，我们得到消息，就往南过了徐州通临沂的公路，过到郯城县的西北部，那里粮食也方便，比较好解决粮食问题。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"直属队先过鲁南，师长、政委顾虑平原反扫荡；因顽固地主武装不能走，群众要求打四各哨地主武装。\",\n      \"process_text\": \"直属队一个特务营先过鲁南，万毅部随后跟进；师长、政委担心部队到平原后如何应对扫荡，要求尽快回山区，但当时因顽固地主武装不能走；当地群众要求去打四各哨地主武装。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0022\"\n      ],\n      \"evidence_quote\": \"我们就直属队，就一个特务营嘛，我们先去的。我们过了鲁南以后，万毅听到我们反扫荡要走，他也跟着我们一起过去了。以后他回我们活动地区，但是我们呢，师长、政委他说你们跑到平原去，扫荡你怎么办，你一个特务营，你这么大的机关。因为尽快地要回到山区去，当时又不能走，尽是顽固的地主武装，挺坏的，在那里。咱们活动那个地区，（有）严立天（音）一个县长，国民党在那里，群众要求我们去打四各哨（音）那个地主武装那个地方。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"对四各哨地主武装实施打击，迫使其反动气焰有所收敛。\",\n      \"process_text\": \"对四各哨地主武装打了一下；对方弹药充足，若强攻伤亡很大，但此打击使其知道八路军正规部队来了，反动气焰有所收敛，不敢随便出来抓干部。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0024\"\n      ],\n      \"evidence_quote\": \"结果人家弹药很充足，咱们打了一下，要攻的话伤亡很大，可是打这么一下，他知道八路军正规部队来了，不好惹，他这个反动的气焰就有所收敛，不敢随便出来抓我们的干部。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC03-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"部队返回四县边联地区。\",\n      \"process_text\": \"八路军正规军走这么一下后，部队返回四县边联地区。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC03-S0024\"\n      ],\n      \"evidence_quote\": \"我们在那边八路军正规军走这么一下，我们就回来了，又回到所谓四县边联的地方来了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE001-P01\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0022\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE001-P02\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE001-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0024\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC03-DE001-P03\",\n      \"target_stage_id\": \"BATCH06-DOC03-DE001-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC03-S0024\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "YYS-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC03-DE001",
+    "event_enrichment": {
+      "result_state": "部队打击四各哨地主武装后返回四县边联地区；四各哨地主武装气焰有所收敛，不敢随便出来抓干部。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于得到敌人扫荡消息后向南转移至郯城县西北部，止于打击四各哨地主武装后返回四县边联地区；S0024末句关于陈、罗到来的叙述作为后续背景不纳入本事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC03-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "得敌扫荡消息后向南转移至郯城西北部，以便解决粮食问题。",
+        "process_text": "得到敌人要扫荡的消息后，往南过徐州通临沂的公路，转移到郯城县西北部，那里粮食方便，较好解决粮食问题。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0019"
+        ],
+        "evidence_quote": "有一次敌人要扫荡了，我们得到消息，就往南过了徐州通临沂的公路，过到郯城县的西北部，那里粮食也方便，比较好解决粮食问题。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "直属队先过鲁南，师长、政委顾虑平原反扫荡；因顽固地主武装不能走，群众要求打四各哨地主武装。",
+        "process_text": "直属队一个特务营先过鲁南，万毅部随后跟进；师长、政委担心部队到平原后如何应对扫荡，要求尽快回山区，但当时因顽固地主武装不能走；当地群众要求去打四各哨地主武装。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0022"
+        ],
+        "evidence_quote": "我们就直属队，就一个特务营嘛，我们先去的。我们过了鲁南以后，万毅听到我们反扫荡要走，他也跟着我们一起过去了。以后他回我们活动地区，但是我们呢，师长、政委他说你们跑到平原去，扫荡你怎么办，你一个特务营，你这么大的机关。因为尽快地要回到山区去，当时又不能走，尽是顽固的地主武装，挺坏的，在那里。咱们活动那个地区，（有）严立天（音）一个县长，国民党在那里，群众要求我们去打四各哨（音）那个地主武装那个地方。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "对四各哨地主武装实施打击，迫使其反动气焰有所收敛。",
+        "process_text": "对四各哨地主武装打了一下；对方弹药充足，若强攻伤亡很大，但此打击使其知道八路军正规部队来了，反动气焰有所收敛，不敢随便出来抓干部。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0024"
+        ],
+        "evidence_quote": "结果人家弹药很充足，咱们打了一下，要攻的话伤亡很大，可是打这么一下，他知道八路军正规部队来了，不好惹，他这个反动的气焰就有所收敛，不敢随便出来抓我们的干部。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC03-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "部队返回四县边联地区。",
+        "process_text": "八路军正规军走这么一下后，部队返回四县边联地区。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC03-S0024"
+        ],
+        "evidence_quote": "我们在那边八路军正规军走这么一下，我们就回来了，又回到所谓四县边联的地方来了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC03-DE001-P01",
+        "target_stage_id": "BATCH06-DOC03-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC03-S0022",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE001-P02",
+        "target_stage_id": "BATCH06-DOC03-DE001-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH06-DOC03-S0024",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC03-DE001-P03",
+        "target_stage_id": "BATCH06-DOC03-DE001-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC03-S0024",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

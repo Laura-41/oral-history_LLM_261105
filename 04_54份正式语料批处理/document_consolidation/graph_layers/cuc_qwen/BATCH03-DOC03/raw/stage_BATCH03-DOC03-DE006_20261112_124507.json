@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T12:45:07",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC03-DE006",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC03-DE006",
+  "usage": {
+    "prompt_tokens": 1583,
+    "total_tokens": 20564,
+    "completion_tokens": 18981,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 17708
+    },
+    "time_to_first_token_ms": 409288,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 18980000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC03-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"国民党医疗队撤走，三名医生参加新四军搞工作，程贤家为其中之一。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于国民党医疗队因三支队战斗残酷、被一万多鬼子吓坏而请求调回，止于三名医生参加新四军搞工作；S0074补充医疗队撤走回屯溪/金华及程贤家为其中之一。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"国民党医疗队派至三支队，经历残酷战斗后请求调回\",\n      \"process_text\": \"国民党一个战区有一个大队。大队有好多医疗队，派到我们新四军是两个小队，一个放在军部，一个放在三支队。三支队是打两仗（陈海峰比划数目二），太残酷了！一万多鬼子一弄，把他吓坏了，他请求调回去\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0086\"\n      ],\n      \"evidence_quote\": \"陈海峰：国民党一个战区有一个大队。大队有好多医疗队，派到我们新四军是两个小队，一个放在军部，一个放在三支队。三支队是打两仗（陈海峰比划数目二），太残酷了！一万多鬼子一弄，把他吓坏了，他请求调回去，就撤走了。撤走那次欢送他，我还是卫生队长，还代表新四军。那天把我喝醉了，我原来是喝白干我可以喝一斤呢，现在一口不能喝了。可是争取了三个医生，参加我们新四军，搞工作。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"医疗队撤走，陈海峰代表新四军欢送\",\n      \"process_text\": \"就撤走了。撤走那次欢送他，我还是卫生队长，还代表新四军。那天把我喝醉了，我原来是喝白干我可以喝一斤呢，现在一口不能喝了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0086\"\n      ],\n      \"evidence_quote\": \"陈海峰：国民党一个战区有一个大队。大队有好多医疗队，派到我们新四军是两个小队，一个放在军部，一个放在三支队。三支队是打两仗（陈海峰比划数目二），太残酷了！一万多鬼子一弄，把他吓坏了，他请求调回去，就撤走了。撤走那次欢送他，我还是卫生队长，还代表新四军。那天把我喝醉了，我原来是喝白干我可以喝一斤呢，现在一口不能喝了。可是争取了三个医生，参加我们新四军，搞工作。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC03-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"三名医生参加新四军搞工作，程贤家为其中之一\",\n      \"process_text\": \"可是争取了三个医生，参加我们新四军，搞工作。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC03-S0086\",\n        \"BATCH03-DOC03-S0074\"\n      ],\n      \"evidence_quote\": \"陈海峰：国民党一个战区有一个大队。大队有好多医疗队，派到我们新四军是两个小队，一个放在军部，一个放在三支队。三支队是打两仗（陈海峰比划数目二），太残酷了！一万多鬼子一弄，把他吓坏了，他请求调回去，就撤走了。撤走那次欢送他，我还是卫生队长，还代表新四军。那天把我喝醉了，我原来是喝白干我可以喝一斤呢，现在一口不能喝了。可是争取了三个医生，参加我们新四军，搞工作。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE006-P01\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE006-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0086\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC03-DE006-P02\",\n      \"target_stage_id\": \"BATCH03-DOC03-DE006-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC03-S0086\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V2-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC03-DE006",
+    "event_enrichment": {
+      "result_state": "国民党医疗队撤走，三名医生参加新四军搞工作，程贤家为其中之一。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于国民党医疗队因三支队战斗残酷、被一万多鬼子吓坏而请求调回，止于三名医生参加新四军搞工作；S0074补充医疗队撤走回屯溪/金华及程贤家为其中之一。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC03-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "国民党医疗队派至三支队，经历残酷战斗后请求调回",
+        "process_text": "国民党一个战区有一个大队。大队有好多医疗队，派到我们新四军是两个小队，一个放在军部，一个放在三支队。三支队是打两仗（陈海峰比划数目二），太残酷了！一万多鬼子一弄，把他吓坏了，他请求调回去",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0086"
+        ],
+        "evidence_quote": "陈海峰：国民党一个战区有一个大队。大队有好多医疗队，派到我们新四军是两个小队，一个放在军部，一个放在三支队。三支队是打两仗（陈海峰比划数目二），太残酷了！一万多鬼子一弄，把他吓坏了，他请求调回去，就撤走了。撤走那次欢送他，我还是卫生队长，还代表新四军。那天把我喝醉了，我原来是喝白干我可以喝一斤呢，现在一口不能喝了。可是争取了三个医生，参加我们新四军，搞工作。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "医疗队撤走，陈海峰代表新四军欢送",
+        "process_text": "就撤走了。撤走那次欢送他，我还是卫生队长，还代表新四军。那天把我喝醉了，我原来是喝白干我可以喝一斤呢，现在一口不能喝了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0086"
+        ],
+        "evidence_quote": "陈海峰：国民党一个战区有一个大队。大队有好多医疗队，派到我们新四军是两个小队，一个放在军部，一个放在三支队。三支队是打两仗（陈海峰比划数目二），太残酷了！一万多鬼子一弄，把他吓坏了，他请求调回去，就撤走了。撤走那次欢送他，我还是卫生队长，还代表新四军。那天把我喝醉了，我原来是喝白干我可以喝一斤呢，现在一口不能喝了。可是争取了三个医生，参加我们新四军，搞工作。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH03-DOC03-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "三名医生参加新四军搞工作，程贤家为其中之一",
+        "process_text": "可是争取了三个医生，参加我们新四军，搞工作。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC03-S0086",
+          "BATCH03-DOC03-S0074"
+        ],
+        "evidence_quote": "陈海峰：国民党一个战区有一个大队。大队有好多医疗队，派到我们新四军是两个小队，一个放在军部，一个放在三支队。三支队是打两仗（陈海峰比划数目二），太残酷了！一万多鬼子一弄，把他吓坏了，他请求调回去，就撤走了。撤走那次欢送他，我还是卫生队长，还代表新四军。那天把我喝醉了，我原来是喝白干我可以喝一斤呢，现在一口不能喝了。可是争取了三个医生，参加我们新四军，搞工作。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC03-DE006-P01",
+        "target_stage_id": "BATCH03-DOC03-DE006-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH03-DOC03-S0086",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC03-DE006-P02",
+        "target_stage_id": "BATCH03-DOC03-DE006-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC03-S0086",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

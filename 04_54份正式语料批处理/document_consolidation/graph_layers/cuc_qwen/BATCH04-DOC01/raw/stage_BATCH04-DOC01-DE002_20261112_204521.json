@@ -1,0 +1,161 @@
+{
+  "run_time": "2026-11-12T20:45:21",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC01-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC01-DE002",
+  "usage": {
+    "prompt_tokens": 2204,
+    "total_tokens": 15116,
+    "completion_tokens": 12912,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10788
+    },
+    "time_to_first_token_ms": 190793,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 12911000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-07\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC01-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"受访者完成对皖南军部与1师指挥风格及政权建设条件的比较：人员来源无大不同，皖南较正规稳重保守，1师陈毅粟裕作风豪放且配合周密，政权建设方便但刚起步、地方干部和经验不足。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"边界起于 S0026 提及皖南军部、S0029 提及关系，止于 S0052 说明政权干部缺乏与培养；S0031-S0046 比较人员来源与指挥风格，S0048-S0050 转入政权建设条件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"说明皖南军部与1师人员来源没有大的不同\",\n      \"process_text\": \"没有什么大的不同，他都是三年游击战争的红军战士。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0031\"\n      ],\n      \"evidence_quote\": \"    陈海峰：没有什么大的不同，他都是三年游击战争的红军战士。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"比较皖南与1师指挥风格\",\n      \"process_text\": \"皖南比较稳重、保守，1师风格不一样，是陈毅和粟裕的作风多一点。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0034\"\n      ],\n      \"evidence_quote\": \"正规训练。比较稳重一点，现在讲比较保守一点。那么1师的风格不一样，就是陈毅和粟裕的作风多一点\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"展开1师陈毅与粟裕的指挥配合\",\n      \"process_text\": \"陈毅定战略决策，粟裕去搞作战方案，两人配合非常好。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0037\"\n      ],\n      \"evidence_quote\": \"    陈海峰：比较豪放.所以陈不离粟，粟不离陈,粟裕不能离开陈（毅），陈（毅）不能离开粟裕，两个（人）配合得非常好。就是战略决策陈毅定，一拍板子，粟裕去搞作战方案。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"说明粟裕执行作战方案并细致周密\",\n      \"process_text\": \"最后决策后粟裕执行，对地形和兵力布置非常周密。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0039\"\n      ],\n      \"evidence_quote\": \"    陈海峰：第一方案、第二方案、第三方案，最后你陈毅决定（用哪套方案）。那最后决策了以后，粟裕再去执行。就是天衣无缝，他粟裕可以，实际到几十万人打，甚至于一个排列一个连应该注意的问题，他都可以想到，是不是。他（对）那个地图非常熟，一天到晚看地图，自己到一个地方马上看地形，这个（是）军事干部的特点，参谋人员的特点。一到地方，周围环境马上熟悉了，哪里有一个堡，哪里有一个坑，哪里有洼，哪里可以利用地形的，他一目了然，一看就知道。地图上面那个小路一看就知道，大路小路，小路要注意什么问题，这个地方应该放一个班，这个地方应该放一个排，这个地方放一个加强排，放一个加强连，他能够布置得非常周密。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE002-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"强调陈毅与粟裕两人离不开\",\n      \"process_text\": \"所以这个非常好，他两个人是离不开的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0046\"\n      ],\n      \"evidence_quote\": \"    陈海峰：所以这个非常好，他两个人是离不开的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE002-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"说明政权建设方便但刚起步、缺乏经验\",\n      \"process_text\": \"方便多了，开始建立政权还没有经验，政权刚起步。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0050\"\n      ],\n      \"evidence_quote\": \"    陈海峰：方便多了。虽然说开始建立政权还没有经验，政权刚起步。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC01-DE002-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"说明政权起步问题多、地方干部缺乏需培养\",\n      \"process_text\": \"一起步问题很多，地方干部没有，要培养一批。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC01-S0052\"\n      ],\n      \"evidence_quote\": \"    陈海峰：一起步呢，问题很多，地方干部没有，都是打仗出来的。那么做地方工作的干部太少，政权（音）干部没有，要培养一批。在工作中间培养，政权的知识没有。所以一个要利用原有的一批人。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE002-P01\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0033\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE002-P02\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE002-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0037\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE002-P03\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE002-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0039\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE002-P04\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE002-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0046\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE002-P05\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE002-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0048\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC01-DE002-P06\",\n      \"target_stage_id\": \"BATCH04-DOC01-DE002-P07\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC01-S0052\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-07",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC01-DE002",
+    "event_enrichment": {
+      "result_state": "受访者完成对皖南军部与1师指挥风格及政权建设条件的比较：人员来源无大不同，皖南较正规稳重保守，1师陈毅粟裕作风豪放且配合周密，政权建设方便但刚起步、地方干部和经验不足。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "边界起于 S0026 提及皖南军部、S0029 提及关系，止于 S0052 说明政权干部缺乏与培养；S0031-S0046 比较人员来源与指挥风格，S0048-S0050 转入政权建设条件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC01-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "说明皖南军部与1师人员来源没有大的不同",
+        "process_text": "没有什么大的不同，他都是三年游击战争的红军战士。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0031"
+        ],
+        "evidence_quote": "    陈海峰：没有什么大的不同，他都是三年游击战争的红军战士。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "比较皖南与1师指挥风格",
+        "process_text": "皖南比较稳重、保守，1师风格不一样，是陈毅和粟裕的作风多一点。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0034"
+        ],
+        "evidence_quote": "正规训练。比较稳重一点，现在讲比较保守一点。那么1师的风格不一样，就是陈毅和粟裕的作风多一点",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "展开1师陈毅与粟裕的指挥配合",
+        "process_text": "陈毅定战略决策，粟裕去搞作战方案，两人配合非常好。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0037"
+        ],
+        "evidence_quote": "    陈海峰：比较豪放.所以陈不离粟，粟不离陈,粟裕不能离开陈（毅），陈（毅）不能离开粟裕，两个（人）配合得非常好。就是战略决策陈毅定，一拍板子，粟裕去搞作战方案。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "说明粟裕执行作战方案并细致周密",
+        "process_text": "最后决策后粟裕执行，对地形和兵力布置非常周密。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0039"
+        ],
+        "evidence_quote": "    陈海峰：第一方案、第二方案、第三方案，最后你陈毅决定（用哪套方案）。那最后决策了以后，粟裕再去执行。就是天衣无缝，他粟裕可以，实际到几十万人打，甚至于一个排列一个连应该注意的问题，他都可以想到，是不是。他（对）那个地图非常熟，一天到晚看地图，自己到一个地方马上看地形，这个（是）军事干部的特点，参谋人员的特点。一到地方，周围环境马上熟悉了，哪里有一个堡，哪里有一个坑，哪里有洼，哪里可以利用地形的，他一目了然，一看就知道。地图上面那个小路一看就知道，大路小路，小路要注意什么问题，这个地方应该放一个班，这个地方应该放一个排，这个地方放一个加强排，放一个加强连，他能够布置得非常周密。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE002-P05",
+        "stage_order": 5,
+        "stage_summary": "强调陈毅与粟裕两人离不开",
+        "process_text": "所以这个非常好，他两个人是离不开的。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0046"
+        ],
+        "evidence_quote": "    陈海峰：所以这个非常好，他两个人是离不开的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE002-P06",
+        "stage_order": 6,
+        "stage_summary": "说明政权建设方便但刚起步、缺乏经验",
+        "process_text": "方便多了，开始建立政权还没有经验，政权刚起步。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0050"
+        ],
+        "evidence_quote": "    陈海峰：方便多了。虽然说开始建立政权还没有经验，政权刚起步。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC01-DE002-P07",
+        "stage_order": 7,
+        "stage_summary": "说明政权起步问题多、地方干部缺乏需培养",
+        "process_text": "一起步问题很多，地方干部没有，要培养一批。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC01-S0052"
+        ],
+        "evidence_quote": "    陈海峰：一起步呢，问题很多，地方干部没有，都是打仗出来的。那么做地方工作的干部太少，政权（音）干部没有，要培养一批。在工作中间培养，政权的知识没有。所以一个要利用原有的一批人。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC01-DE002-P01",
+        "target_stage_id": "BATCH04-DOC01-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC01-S0033",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC01-DE002-P02",
+        "target_stage_id": "BATCH04-DOC01-DE002-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC01-S0037",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC01-DE002-P03",
+        "target_stage_id": "BATCH04-DOC01-DE002-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC01-S0039",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC01-DE002-P04",
+        "target_stage_id": "BATCH04-DOC01-DE002-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC01-S0046",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC01-DE002-P05",
+        "target_stage_id": "BATCH04-DOC01-DE002-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC01-S0048",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC01-DE002-P06",
+        "target_stage_id": "BATCH04-DOC01-DE002-P07",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC01-S0052",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

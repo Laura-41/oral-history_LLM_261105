@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T00:04:49",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC06-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC06-DE006",
+  "usage": {
+    "prompt_tokens": 1383,
+    "total_tokens": 5087,
+    "completion_tokens": 3704,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2489
+    },
+    "time_to_first_token_ms": 28826,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC06-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队结束在费西北两个多月的驻扎，与山东中共历山特委合在一起，夜渡黄河转移到临沂西边、费县西南的梁邱、柱子一带。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以5月底部队到费西北驻扎为起点，以住两个多月后与历山特委合在一起夜渡黄河、转移到临沂西边费县西南为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"部队于5月底到达费西北并住下，持续6月、7月两个多月。\",\n      \"process_text\": \"我们在费西北住了有差不多两个多月吧，我们是5月底过去的，6月、7月，两个多月。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0024\"\n      ],\n      \"evidence_quote\": \"我们在费西北住了有差不多两个多月吧，我们是5月底过去的，6月、7月，两个多月。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"驻扎期间，冀鲁边支队七团开到费西北，进行宣传抗日和训练部队，我们同在该地区。\",\n      \"process_text\": \"过来以后，他就在费（县）西北这个地区做宣传抗日、训练部队这样的，我们也在那里。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0022\"\n      ],\n      \"evidence_quote\": \"因为敌人不是要去占领那个地方嘛，我们过了几天，就是冀鲁边的哪个支队的七团，这个团有千把人，也过来了。过来以后，他就在费（县）西北这个地区做宣传抗日、训练部队这样的，我们也在那里。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"驻扎期间黄励向干部讲话，说明部队在费西北已吃一百多万斤粮食，反映驻军规模与粮食消耗。\",\n      \"process_text\": \"当时我们在那里，黄励跟干部说过一次话，他说不得了啊，你们不知道吧，我们在这里已经吃了人家一百多万斤粮食啦！\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0024\"\n      ],\n      \"evidence_quote\": \"当时我们在那里，黄励跟干部说过一次话，他说不得了啊，你们不知道吧，我们在这里已经吃了人家一百多万斤粮食啦！（杨永松笑）就一个人一天的一斤半粗粮，加上七团是三千人左右啊，要吃不少粮食的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"驻扎结束后，部队与山东中共历山特委合在一起，夜渡黄河转移到临沂西边、费县西南的梁邱、柱子一带。\",\n      \"process_text\": \"就跟我们合在一起，夜渡黄河，就到了临沂的西边，费县的西南边，就是梁邱、柱子\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0024\"\n      ],\n      \"evidence_quote\": \"可是在那个时候是接到什么指示呢？不知道，就山东中共历山特委，中共历山特委是在泗水的北面那个历山，在那个地区他有点工作基础。听到我们来了，可能上级也有指示，就跟我们合在一起，夜渡黄河，就到了临沂的西边，费县的西南边，就是梁邱、柱子，柱子（村）就是消灭刘桂堂那个地方。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC06-DE006-P01\",\n      \"target_stage_id\": \"BATCH05-DOC06-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC06-S0022\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC06-DE006-P02\",\n      \"target_stage_id\": \"BATCH05-DOC06-DE006-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC06-S0024\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC06-DE006-P03\",\n      \"target_stage_id\": \"BATCH05-DOC06-DE006-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC06-S0024\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC06-DE006",
+    "event_enrichment": {
+      "result_state": "部队结束在费西北两个多月的驻扎，与山东中共历山特委合在一起，夜渡黄河转移到临沂西边、费县西南的梁邱、柱子一带。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以5月底部队到费西北驻扎为起点，以住两个多月后与历山特委合在一起夜渡黄河、转移到临沂西边费县西南为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC06-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "部队于5月底到达费西北并住下，持续6月、7月两个多月。",
+        "process_text": "我们在费西北住了有差不多两个多月吧，我们是5月底过去的，6月、7月，两个多月。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0024"
+        ],
+        "evidence_quote": "我们在费西北住了有差不多两个多月吧，我们是5月底过去的，6月、7月，两个多月。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC06-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "驻扎期间，冀鲁边支队七团开到费西北，进行宣传抗日和训练部队，我们同在该地区。",
+        "process_text": "过来以后，他就在费（县）西北这个地区做宣传抗日、训练部队这样的，我们也在那里。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0022"
+        ],
+        "evidence_quote": "因为敌人不是要去占领那个地方嘛，我们过了几天，就是冀鲁边的哪个支队的七团，这个团有千把人，也过来了。过来以后，他就在费（县）西北这个地区做宣传抗日、训练部队这样的，我们也在那里。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC06-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "驻扎期间黄励向干部讲话，说明部队在费西北已吃一百多万斤粮食，反映驻军规模与粮食消耗。",
+        "process_text": "当时我们在那里，黄励跟干部说过一次话，他说不得了啊，你们不知道吧，我们在这里已经吃了人家一百多万斤粮食啦！",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0024"
+        ],
+        "evidence_quote": "当时我们在那里，黄励跟干部说过一次话，他说不得了啊，你们不知道吧，我们在这里已经吃了人家一百多万斤粮食啦！（杨永松笑）就一个人一天的一斤半粗粮，加上七团是三千人左右啊，要吃不少粮食的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC06-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "驻扎结束后，部队与山东中共历山特委合在一起，夜渡黄河转移到临沂西边、费县西南的梁邱、柱子一带。",
+        "process_text": "就跟我们合在一起，夜渡黄河，就到了临沂的西边，费县的西南边，就是梁邱、柱子",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0024"
+        ],
+        "evidence_quote": "可是在那个时候是接到什么指示呢？不知道，就山东中共历山特委，中共历山特委是在泗水的北面那个历山，在那个地区他有点工作基础。听到我们来了，可能上级也有指示，就跟我们合在一起，夜渡黄河，就到了临沂的西边，费县的西南边，就是梁邱、柱子，柱子（村）就是消灭刘桂堂那个地方。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC06-DE006-P01",
+        "target_stage_id": "BATCH05-DOC06-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC06-S0022",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC06-DE006-P02",
+        "target_stage_id": "BATCH05-DOC06-DE006-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC06-S0024",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC06-DE006-P03",
+        "target_stage_id": "BATCH05-DOC06-DE006-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC06-S0024",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

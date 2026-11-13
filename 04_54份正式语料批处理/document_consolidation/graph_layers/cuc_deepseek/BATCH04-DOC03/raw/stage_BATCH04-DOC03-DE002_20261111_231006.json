@@ -1,0 +1,111 @@
+{
+  "run_time": "2026-11-11T23:10:06",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC03-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC03-DE002",
+  "usage": {
+    "prompt_tokens": 1602,
+    "total_tokens": 5963,
+    "completion_tokens": 4361,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3210
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 35742
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-06\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC03-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"群众和部队共同挖成抗日沟，沟深约一人高、宽约一米五至三米，可隐蔽部队运动、阻碍敌人装甲汽车，并兼顾百姓大车通行与会车。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以发动群众和部队参加挖抗日沟为起点，以沟的尺寸、战术功能及会车设计说明为终点；未扩展到其他战斗或生产事件。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"发动群众和部队共同参加挖抗日沟。\",\n      \"process_text\": \"发动群众和部队都参加，挖抗日沟。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0009\"\n      ],\n      \"evidence_quote\": \"所以发动群众和自己都参加，挖抗日沟。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"按经验确定沟深，使部队在沟内运动时不被敌人看见。\",\n      \"process_text\": \"按经验确定抗日沟深度约一米至两米、一般一米七左右，使部队在沟内运动时不被敌人看见。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0009\",\n        \"BATCH04-DOC03-S0012\"\n      ],\n      \"evidence_quote\": \"抗日沟可以运动部队，这个就是一米（深），不超过两米，一米六七吧，咱们中国人一米八以上的很少，一般的都是一米七左右。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"明确沟宽并利用沟障制止敌人装甲和汽车的自由行动。\",\n      \"process_text\": \"明确沟宽并利用沟障制止敌人装甲和汽车的自由行动，使汽车难以通过、坦克也受阻碍。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0014\",\n        \"BATCH04-DOC03-S0015\",\n        \"BATCH04-DOC03-S0018\"\n      ],\n      \"evidence_quote\": \"另外可以制止敌人的装甲和汽车的自由行动，我这里挖了很多沟，你开这来，也得掉到里头了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC03-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"兼顾百姓大车通行，沟稍加宽并在长沟中间设会车处，以改造地形、深挖抗日沟。\",\n      \"process_text\": \"沟内兼顾大车、胶皮轮车通行，沟稍加宽，长沟中间设会车处，以改造地形、深挖抗日沟。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC03-S0020\"\n      ],\n      \"evidence_quote\": \"那个沟里边呢，也通大车，胶皮轮车，老百姓有车，沟里面也走车。所以咱们挖的沟就比那个稍微宽一点。如果这个沟很长的话，就在中间搞个会车的地方。你那边看见你来了，我们两个人怎么办，有一个人先到边上靠一下，会车的地方，他就这样，他躲一下，这边就过去了。所以改造地形，深挖抗日沟。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE002-P01\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0009\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE002-P02\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE002-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0015\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC03-DE002-P03\",\n      \"target_stage_id\": \"BATCH04-DOC03-DE002-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC03-S0020\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-06",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC03-DE002",
+    "event_enrichment": {
+      "result_state": "群众和部队共同挖成抗日沟，沟深约一人高、宽约一米五至三米，可隐蔽部队运动、阻碍敌人装甲汽车，并兼顾百姓大车通行与会车。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以发动群众和部队参加挖抗日沟为起点，以沟的尺寸、战术功能及会车设计说明为终点；未扩展到其他战斗或生产事件。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC03-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "发动群众和部队共同参加挖抗日沟。",
+        "process_text": "发动群众和部队都参加，挖抗日沟。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0009"
+        ],
+        "evidence_quote": "所以发动群众和自己都参加，挖抗日沟。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "按经验确定沟深，使部队在沟内运动时不被敌人看见。",
+        "process_text": "按经验确定抗日沟深度约一米至两米、一般一米七左右，使部队在沟内运动时不被敌人看见。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0009",
+          "BATCH04-DOC03-S0012"
+        ],
+        "evidence_quote": "抗日沟可以运动部队，这个就是一米（深），不超过两米，一米六七吧，咱们中国人一米八以上的很少，一般的都是一米七左右。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "明确沟宽并利用沟障制止敌人装甲和汽车的自由行动。",
+        "process_text": "明确沟宽并利用沟障制止敌人装甲和汽车的自由行动，使汽车难以通过、坦克也受阻碍。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0014",
+          "BATCH04-DOC03-S0015",
+          "BATCH04-DOC03-S0018"
+        ],
+        "evidence_quote": "另外可以制止敌人的装甲和汽车的自由行动，我这里挖了很多沟，你开这来，也得掉到里头了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC03-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "兼顾百姓大车通行，沟稍加宽并在长沟中间设会车处，以改造地形、深挖抗日沟。",
+        "process_text": "沟内兼顾大车、胶皮轮车通行，沟稍加宽，长沟中间设会车处，以改造地形、深挖抗日沟。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC03-S0020"
+        ],
+        "evidence_quote": "那个沟里边呢，也通大车，胶皮轮车，老百姓有车，沟里面也走车。所以咱们挖的沟就比那个稍微宽一点。如果这个沟很长的话，就在中间搞个会车的地方。你那边看见你来了，我们两个人怎么办，有一个人先到边上靠一下，会车的地方，他就这样，他躲一下，这边就过去了。所以改造地形，深挖抗日沟。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC03-DE002-P01",
+        "target_stage_id": "BATCH04-DOC03-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0009",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE002-P02",
+        "target_stage_id": "BATCH04-DOC03-DE002-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0015",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC03-DE002-P03",
+        "target_stage_id": "BATCH04-DOC03-DE002-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC03-S0020",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

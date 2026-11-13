@@ -1,0 +1,119 @@
+{
+  "run_time": "2026-11-11T23:41:19",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC01-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC01-DE004",
+  "usage": {
+    "prompt_tokens": 1329,
+    "total_tokens": 6756,
+    "completion_tokens": 5427,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4183
+    },
+    "time_to_first_token_ms": 41862,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-12\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC01-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"苏南清乡按第一、第二、第三阶段划分区域推进；清乡时集中兵力一万多，江南第一季清乡约一万五千，以日军师团、混成旅为主并配属和平军。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以第一阶段清乡区域为起点，依次覆盖第二、第三阶段区域，并以清乡兵力集中规模及第一季兵力构成说明收束；不延伸至清乡战果或反清乡行动。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"第一阶段清乡主要在江南靠近上海附近，包括昆山、太仓、常熟。\",\n      \"process_text\": \"第一阶段清乡开始于江南靠近上海附近，涉及昆山、太仓、常熟。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0100\"\n      ],\n      \"evidence_quote\": \"在第一阶段的时候呢，主要开始是（在）江南，靠近上海附近，昆山、太仓、常熟，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"第二阶段清乡区域为常熟、江阴、无锡，并带上武进一小部分。\",\n      \"process_text\": \"第二阶段清乡推进到常熟、江阴、无锡，并包括武进一小部分。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0101\"\n      ],\n      \"evidence_quote\": \"第二阶段呢，就是常熟、江阴、无锡，带上武进一小部分。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"第三阶段清乡区域为镇江、丹阳、溧阳，宜兴小部分、武进全部及江阴。\",\n      \"process_text\": \"第三阶段清乡涉及镇江、丹阳、溧阳，宜兴的小部分，武进的全部，江阴也在其中。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0101\"\n      ],\n      \"evidence_quote\": \"第三阶段呢，就是镇江、丹阳、溧阳啊，宜兴的小部分，武进的全部，江阴都在里头。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"清乡时兵力集中规模明显高于平时扫荡，来即一万多，江南第一季清乡约一万五千。\",\n      \"process_text\": \"平时扫荡多为一千至五千，最多七千；清乡时一来就是一万多，江南第一季清乡约一万五。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0103\"\n      ],\n      \"evidence_quote\": \"他来清乡的时候，一来就是一万多，江南的第一季清乡的时候是就一万五。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC01-DE004-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"第一季清乡以一万五千日军为主，主力包括师团、混成旅，并配属和平军。\",\n      \"process_text\": \"在三个半县投入一万五千鬼子为主，主力部队为师团、混成旅，加上和平军。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC01-S0104\"\n      ],\n      \"evidence_quote\": \"你才三个半县，一万五千鬼子为主，他的主力部队，师团、混成旅，加上和平军，二鬼子，是吧。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE004-P01\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0101\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE004-P02\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0101\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC01-DE004-P04\",\n      \"target_stage_id\": \"BATCH05-DOC01-DE004-P05\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC01-S0104\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-12",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC01-DE004",
+    "event_enrichment": {
+      "result_state": "苏南清乡按第一、第二、第三阶段划分区域推进；清乡时集中兵力一万多，江南第一季清乡约一万五千，以日军师团、混成旅为主并配属和平军。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以第一阶段清乡区域为起点，依次覆盖第二、第三阶段区域，并以清乡兵力集中规模及第一季兵力构成说明收束；不延伸至清乡战果或反清乡行动。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC01-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "第一阶段清乡主要在江南靠近上海附近，包括昆山、太仓、常熟。",
+        "process_text": "第一阶段清乡开始于江南靠近上海附近，涉及昆山、太仓、常熟。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0100"
+        ],
+        "evidence_quote": "在第一阶段的时候呢，主要开始是（在）江南，靠近上海附近，昆山、太仓、常熟，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "第二阶段清乡区域为常熟、江阴、无锡，并带上武进一小部分。",
+        "process_text": "第二阶段清乡推进到常熟、江阴、无锡，并包括武进一小部分。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0101"
+        ],
+        "evidence_quote": "第二阶段呢，就是常熟、江阴、无锡，带上武进一小部分。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "第三阶段清乡区域为镇江、丹阳、溧阳，宜兴小部分、武进全部及江阴。",
+        "process_text": "第三阶段清乡涉及镇江、丹阳、溧阳，宜兴的小部分，武进的全部，江阴也在其中。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0101"
+        ],
+        "evidence_quote": "第三阶段呢，就是镇江、丹阳、溧阳啊，宜兴的小部分，武进的全部，江阴都在里头。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "清乡时兵力集中规模明显高于平时扫荡，来即一万多，江南第一季清乡约一万五千。",
+        "process_text": "平时扫荡多为一千至五千，最多七千；清乡时一来就是一万多，江南第一季清乡约一万五。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0103"
+        ],
+        "evidence_quote": "他来清乡的时候，一来就是一万多，江南的第一季清乡的时候是就一万五。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC01-DE004-P05",
+        "stage_order": 5,
+        "stage_summary": "第一季清乡以一万五千日军为主，主力包括师团、混成旅，并配属和平军。",
+        "process_text": "在三个半县投入一万五千鬼子为主，主力部队为师团、混成旅，加上和平军。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC01-S0104"
+        ],
+        "evidence_quote": "你才三个半县，一万五千鬼子为主，他的主力部队，师团、混成旅，加上和平军，二鬼子，是吧。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC01-DE004-P01",
+        "target_stage_id": "BATCH05-DOC01-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC01-S0101",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC01-DE004-P02",
+        "target_stage_id": "BATCH05-DOC01-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC01-S0101",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC01-DE004-P04",
+        "target_stage_id": "BATCH05-DOC01-DE004-P05",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC01-S0104",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-11T22:00:14",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC09-DE009",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC09-DE009",
+  "usage": {
+    "prompt_tokens": 1453,
+    "total_tokens": 11351,
+    "completion_tokens": 9898,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 8536
+    },
+    "time_to_first_token_ms": 91454,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9897000
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC09-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队到达孝义地区并开展整训与警戒；同时发现新编二营等部队严重缺枪，二营除个别干部有手枪外没有步枪、机枪。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起点为过年后部队从洪洞赵城北移；终点为到达孝义地区整训警戒并发现新营缺枪。685团留连建营作为背景纳入。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"团内组织调整：留五个连在晋察冀并组建新的二营。\",\n      \"process_text\": \"685团留五个连（一个营加一个连）在晋察冀，随后把新的二营组织起来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0059\"\n      ],\n      \"evidence_quote\": \"那天我给你个别说过这个事，就是我们685团呢，留了五个连，一个营加一个连留到晋察冀了。（这时）就把新的二营组织起来，\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"部队过年后北移，经汾西到达汾阳、孝义地区。\",\n      \"process_text\": \"过年后部队从洪洞赵城往北，经汾西县地区，到达汾阳、孝义地区，主要驻在孝义县管辖地方。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0056\"\n      ],\n      \"evidence_quote\": \"部队在洪洞赵城过了年以后，就往北，经过汾西县地区，就到了汾阳、孝义地区，就是汾阳、孝义的西边，主要我们是在孝义县的管辖地方\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"北行途中发现部队武器严重不足。\",\n      \"process_text\": \"往北走时，看到部队除平型关自己带下来的枪以外，过去缴获的东西都留在那边，没有几个人有枪。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0060\"\n      ],\n      \"evidence_quote\": \"我们往北走的时候，我就看到我们部队怎么回事呀，就是除平型关自己带下来的枪以外，有人过去缴的什么东西都留到那边了，所以我说部队怎么没有几个人有枪的！\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE009-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"具体缺枪情形：多持大刀、手榴弹、红缨枪，二营无步枪机枪。\",\n      \"process_text\": \"部队多背大刀、手榴弹和红缨枪，衣服是自制新发的，但缺少武器；二营除个别干部有手枪外，没有步枪、机枪。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0062\"\n      ],\n      \"evidence_quote\": \"就是背大刀的，背手榴弹的，还有拿着咱们根据地民兵用的红缨枪，还有扛那个的呀。衣服都自己做的，新发的，清一色都挺好看，就是没有武器。二营呢，除了个别干部有手枪以外，他就根本就连步枪、机枪都没有。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE009-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"到达驻地后开展整训并警戒敌人。\",\n      \"process_text\": \"在孝义地区一方面整训，一方面警惕地注意敌人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0056\"\n      ],\n      \"evidence_quote\": \"在那里一方面整训，一方面警惕地注意敌人。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE009-P01\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE009-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0056\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE009-P02\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE009-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0060\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE009-P03\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE009-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0062\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE009-P04\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE009-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0056\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC09-DE009",
+    "event_enrichment": {
+      "result_state": "部队到达孝义地区并开展整训与警戒；同时发现新编二营等部队严重缺枪，二营除个别干部有手枪外没有步枪、机枪。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起点为过年后部队从洪洞赵城北移；终点为到达孝义地区整训警戒并发现新营缺枪。685团留连建营作为背景纳入。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC09-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "团内组织调整：留五个连在晋察冀并组建新的二营。",
+        "process_text": "685团留五个连（一个营加一个连）在晋察冀，随后把新的二营组织起来。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0059"
+        ],
+        "evidence_quote": "那天我给你个别说过这个事，就是我们685团呢，留了五个连，一个营加一个连留到晋察冀了。（这时）就把新的二营组织起来，",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "部队过年后北移，经汾西到达汾阳、孝义地区。",
+        "process_text": "过年后部队从洪洞赵城往北，经汾西县地区，到达汾阳、孝义地区，主要驻在孝义县管辖地方。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0056"
+        ],
+        "evidence_quote": "部队在洪洞赵城过了年以后，就往北，经过汾西县地区，就到了汾阳、孝义地区，就是汾阳、孝义的西边，主要我们是在孝义县的管辖地方",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "北行途中发现部队武器严重不足。",
+        "process_text": "往北走时，看到部队除平型关自己带下来的枪以外，过去缴获的东西都留在那边，没有几个人有枪。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0060"
+        ],
+        "evidence_quote": "我们往北走的时候，我就看到我们部队怎么回事呀，就是除平型关自己带下来的枪以外，有人过去缴的什么东西都留到那边了，所以我说部队怎么没有几个人有枪的！",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE009-P04",
+        "stage_order": 4,
+        "stage_summary": "具体缺枪情形：多持大刀、手榴弹、红缨枪，二营无步枪机枪。",
+        "process_text": "部队多背大刀、手榴弹和红缨枪，衣服是自制新发的，但缺少武器；二营除个别干部有手枪外，没有步枪、机枪。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0062"
+        ],
+        "evidence_quote": "就是背大刀的，背手榴弹的，还有拿着咱们根据地民兵用的红缨枪，还有扛那个的呀。衣服都自己做的，新发的，清一色都挺好看，就是没有武器。二营呢，除了个别干部有手枪以外，他就根本就连步枪、机枪都没有。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE009-P05",
+        "stage_order": 5,
+        "stage_summary": "到达驻地后开展整训并警戒敌人。",
+        "process_text": "在孝义地区一方面整训，一方面警惕地注意敌人。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0056"
+        ],
+        "evidence_quote": "在那里一方面整训，一方面警惕地注意敌人。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC09-DE009-P01",
+        "target_stage_id": "BATCH02-DOC09-DE009-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0056",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE009-P02",
+        "target_stage_id": "BATCH02-DOC09-DE009-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0060",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE009-P03",
+        "target_stage_id": "BATCH02-DOC09-DE009-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC09-S0062",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE009-P04",
+        "target_stage_id": "BATCH02-DOC09-DE009-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0056",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

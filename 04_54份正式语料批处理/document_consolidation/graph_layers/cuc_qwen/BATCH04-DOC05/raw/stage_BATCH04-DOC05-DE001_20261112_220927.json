@@ -1,0 +1,140 @@
+{
+  "run_time": "2026-11-12T22:09:27",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC05-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC05-DE001",
+  "usage": {
+    "prompt_tokens": 2783,
+    "total_tokens": 17212,
+    "completion_tokens": 14429,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12034
+    },
+    "time_to_first_token_ms": 212571,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 7214000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-09\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC05-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰已就朱群、周志方的职务分工及医学常识作出说明。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起自片段 BATCH04-DOC05-S0003 陈海峰说明教育干事朱群姓名，止于片段 BATCH04-DOC05-S0030 陈海峰说明沙门氏菌种类，内容均围绕职务分工与医学常识。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"说明朱群姓名写法及其护校、化验科主任背景。\",\n      \"process_text\": \"    陈海峰：这个教育干事叫朱群，未撇“朱”，“群众”的“群”。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0003\",\n        \"BATCH04-DOC05-S0005\",\n        \"BATCH04-DOC05-S0007\",\n        \"BATCH04-DOC05-S0008\"\n      ],\n      \"evidence_quote\": \"    陈海峰：这个教育干事叫朱群，未撇“朱”，“群众”的“群”。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"说明教育干事管理新学生班与轮训队、朱群兼课，并指出生理解剖学由周志方专门讲授。\",\n      \"process_text\": \"    陈海峰：教育干事，主要是管理新的学生班,这个轮训队我都管。那么他呢，就再兼一点课。但是生理解剖学呢，另外有一个专门教员，是南通医学院毕业的，叫周志方。“周总理”的“周”，“同志”的“志”，“方向”的“方”。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0010\",\n        \"BATCH04-DOC05-S0011\"\n      ],\n      \"evidence_quote\": \"    陈海峰：教育干事，主要是管理新的学生班,这个轮训队我都管。那么他呢，就再兼一点课。但是生理解剖学呢，另外有一个专门教员，是南通医学院毕业的，叫周志方。“周总理”的“周”，“同志”的“志”，“方向”的“方”。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"说明周志方解放后回南通医学院当教授，专门讲解剖，并强调局部解剖为重点。\",\n      \"process_text\": \"    陈海峰：解放以后，他还回到南通医学院当教授，一个老教授。他就专门讲解剖，对干部班轮训队也讲，轮训队就多讲一点局部解剖。因为大体解剖啊，从头到脚外形的解剖啊，叫大体解剖学。大体解剖学呢，一般过去都学过了。营连以上的卫生队长、股长以上的，过去的都说（是）卫校毕业的了，所以他基本都讲过了。这个大体解剖不是重点，局部解剖是重点。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0013\"\n      ],\n      \"evidence_quote\": \"    陈海峰：解放以后，他还回到南通医学院当教授，一个老教授。他就专门讲解剖，对干部班轮训队也讲，轮训队就多讲一点局部解剖。因为大体解剖啊，从头到脚外形的解剖啊，叫大体解剖学。大体解剖学呢，一般过去都学过了。营连以上的卫生队长、股长以上的，过去的都说（是）卫校毕业的了，所以他基本都讲过了。这个大体解剖不是重点，局部解剖是重点。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"说明局部解剖与枪伤、外伤处理的关系，危险区与《格氏局部解剖学》。\",\n      \"process_text\": \"    陈海峰：局部解剖有关系了，因为一个子弹打到局部，局部这个刀开下去，皮肤一切开下面是什么肌肉，肌肉下面有什么神经，有什么动脉，有什么静脉，这个旁边有什么危险，这个地方是不是危险区。譬如这里（是）危险三角（陈海峰示意鼻子周围），鼻子下面这（个），这里不能随便开刀。所以这里头生一个疖子，生一个脓包，不能挤的。你一挤以后，它离开脑子很近，这个脓啊，就外流。外流以后，就传染到脑子去了。那么人体有好多三角了，这个腋下也有三角什么的，很多三角了。这样子，局部解剖学为主，专门有本书叫《格氏局部解剖学》。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0015\",\n        \"BATCH04-DOC05-S0017\",\n        \"BATCH04-DOC05-S0018\",\n        \"BATCH04-DOC05-S0019\",\n        \"BATCH04-DOC05-S0020\",\n        \"BATCH04-DOC05-S0021\"\n      ],\n      \"evidence_quote\": \"    陈海峰：局部解剖有关系了，因为一个子弹打到局部，局部这个刀开下去，皮肤一切开下面是什么肌肉，肌肉下面有什么神经，有什么动脉，有什么静脉，这个旁边有什么危险，这个地方是不是危险区。譬如这里（是）危险三角（陈海峰示意鼻子周围），鼻子下面这（个），这里不能随便开刀。所以这里头生一个疖子，生一个脓包，不能挤的。你一挤以后，它离开脑子很近，这个脓啊，就外流。外流以后，就传染到脑子去了。那么人体有好多三角了，这个腋下也有三角什么的，很多三角了。这样子，局部解剖学为主，专门有本书叫《格氏局部解剖学》。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC05-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"说明先学正常才能识别异常的医学常识，并延伸到疾病、平衡与细菌种类。\",\n      \"process_text\": \"    陈海峰：解剖学是非常重要，解剖生理是这个人是正规的生理常识，要正常地学会了，先给你们看病了，你不知道正常，你（就）不知道异常。（凭空）你哪知道歪门邪道，你学了正的，你才知道歪的（是）什么东西，是不是。以正克邪嘛，是不是。那么你学了正常的以后，一有不正常，就马上知道了，就懂了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC05-S0023\",\n        \"BATCH04-DOC05-S0024\",\n        \"BATCH04-DOC05-S0026\",\n        \"BATCH04-DOC05-S0027\",\n        \"BATCH04-DOC05-S0029\",\n        \"BATCH04-DOC05-S0030\"\n      ],\n      \"evidence_quote\": \"    陈海峰：解剖学是非常重要，解剖生理是这个人是正规的生理常识，要正常地学会了，先给你们看病了，你不知道正常，你（就）不知道异常。（凭空）你哪知道歪门邪道，你学了正的，你才知道歪的（是）什么东西，是不是。以正克邪嘛，是不是。那么你学了正常的以后，一有不正常，就马上知道了，就懂了。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE001-P01\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0011\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE001-P02\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE001-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0013\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE001-P03\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE001-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0015\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC05-DE001-P04\",\n      \"target_stage_id\": \"BATCH04-DOC05-DE001-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC05-S0023\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-09",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC05-DE001",
+    "event_enrichment": {
+      "result_state": "陈海峰已就朱群、周志方的职务分工及医学常识作出说明。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起自片段 BATCH04-DOC05-S0003 陈海峰说明教育干事朱群姓名，止于片段 BATCH04-DOC05-S0030 陈海峰说明沙门氏菌种类，内容均围绕职务分工与医学常识。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC05-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "说明朱群姓名写法及其护校、化验科主任背景。",
+        "process_text": "    陈海峰：这个教育干事叫朱群，未撇“朱”，“群众”的“群”。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0003",
+          "BATCH04-DOC05-S0005",
+          "BATCH04-DOC05-S0007",
+          "BATCH04-DOC05-S0008"
+        ],
+        "evidence_quote": "    陈海峰：这个教育干事叫朱群，未撇“朱”，“群众”的“群”。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "说明教育干事管理新学生班与轮训队、朱群兼课，并指出生理解剖学由周志方专门讲授。",
+        "process_text": "    陈海峰：教育干事，主要是管理新的学生班,这个轮训队我都管。那么他呢，就再兼一点课。但是生理解剖学呢，另外有一个专门教员，是南通医学院毕业的，叫周志方。“周总理”的“周”，“同志”的“志”，“方向”的“方”。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0010",
+          "BATCH04-DOC05-S0011"
+        ],
+        "evidence_quote": "    陈海峰：教育干事，主要是管理新的学生班,这个轮训队我都管。那么他呢，就再兼一点课。但是生理解剖学呢，另外有一个专门教员，是南通医学院毕业的，叫周志方。“周总理”的“周”，“同志”的“志”，“方向”的“方”。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "说明周志方解放后回南通医学院当教授，专门讲解剖，并强调局部解剖为重点。",
+        "process_text": "    陈海峰：解放以后，他还回到南通医学院当教授，一个老教授。他就专门讲解剖，对干部班轮训队也讲，轮训队就多讲一点局部解剖。因为大体解剖啊，从头到脚外形的解剖啊，叫大体解剖学。大体解剖学呢，一般过去都学过了。营连以上的卫生队长、股长以上的，过去的都说（是）卫校毕业的了，所以他基本都讲过了。这个大体解剖不是重点，局部解剖是重点。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0013"
+        ],
+        "evidence_quote": "    陈海峰：解放以后，他还回到南通医学院当教授，一个老教授。他就专门讲解剖，对干部班轮训队也讲，轮训队就多讲一点局部解剖。因为大体解剖啊，从头到脚外形的解剖啊，叫大体解剖学。大体解剖学呢，一般过去都学过了。营连以上的卫生队长、股长以上的，过去的都说（是）卫校毕业的了，所以他基本都讲过了。这个大体解剖不是重点，局部解剖是重点。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "说明局部解剖与枪伤、外伤处理的关系，危险区与《格氏局部解剖学》。",
+        "process_text": "    陈海峰：局部解剖有关系了，因为一个子弹打到局部，局部这个刀开下去，皮肤一切开下面是什么肌肉，肌肉下面有什么神经，有什么动脉，有什么静脉，这个旁边有什么危险，这个地方是不是危险区。譬如这里（是）危险三角（陈海峰示意鼻子周围），鼻子下面这（个），这里不能随便开刀。所以这里头生一个疖子，生一个脓包，不能挤的。你一挤以后，它离开脑子很近，这个脓啊，就外流。外流以后，就传染到脑子去了。那么人体有好多三角了，这个腋下也有三角什么的，很多三角了。这样子，局部解剖学为主，专门有本书叫《格氏局部解剖学》。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0015",
+          "BATCH04-DOC05-S0017",
+          "BATCH04-DOC05-S0018",
+          "BATCH04-DOC05-S0019",
+          "BATCH04-DOC05-S0020",
+          "BATCH04-DOC05-S0021"
+        ],
+        "evidence_quote": "    陈海峰：局部解剖有关系了，因为一个子弹打到局部，局部这个刀开下去，皮肤一切开下面是什么肌肉，肌肉下面有什么神经，有什么动脉，有什么静脉，这个旁边有什么危险，这个地方是不是危险区。譬如这里（是）危险三角（陈海峰示意鼻子周围），鼻子下面这（个），这里不能随便开刀。所以这里头生一个疖子，生一个脓包，不能挤的。你一挤以后，它离开脑子很近，这个脓啊，就外流。外流以后，就传染到脑子去了。那么人体有好多三角了，这个腋下也有三角什么的，很多三角了。这样子，局部解剖学为主，专门有本书叫《格氏局部解剖学》。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC05-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "说明先学正常才能识别异常的医学常识，并延伸到疾病、平衡与细菌种类。",
+        "process_text": "    陈海峰：解剖学是非常重要，解剖生理是这个人是正规的生理常识，要正常地学会了，先给你们看病了，你不知道正常，你（就）不知道异常。（凭空）你哪知道歪门邪道，你学了正的，你才知道歪的（是）什么东西，是不是。以正克邪嘛，是不是。那么你学了正常的以后，一有不正常，就马上知道了，就懂了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC05-S0023",
+          "BATCH04-DOC05-S0024",
+          "BATCH04-DOC05-S0026",
+          "BATCH04-DOC05-S0027",
+          "BATCH04-DOC05-S0029",
+          "BATCH04-DOC05-S0030"
+        ],
+        "evidence_quote": "    陈海峰：解剖学是非常重要，解剖生理是这个人是正规的生理常识，要正常地学会了，先给你们看病了，你不知道正常，你（就）不知道异常。（凭空）你哪知道歪门邪道，你学了正的，你才知道歪的（是）什么东西，是不是。以正克邪嘛，是不是。那么你学了正常的以后，一有不正常，就马上知道了，就懂了。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC05-DE001-P01",
+        "target_stage_id": "BATCH04-DOC05-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC05-S0011",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC05-DE001-P02",
+        "target_stage_id": "BATCH04-DOC05-DE001-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC05-S0013",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC05-DE001-P03",
+        "target_stage_id": "BATCH04-DOC05-DE001-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC05-S0015",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC05-DE001-P04",
+        "target_stage_id": "BATCH04-DOC05-DE001-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC05-S0023",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

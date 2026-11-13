@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T00:04:10",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC06-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC06-DE004",
+  "usage": {
+    "prompt_tokens": 1306,
+    "total_tokens": 3838,
+    "completion_tokens": 2532,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1595
+    },
+    "time_to_first_token_ms": 19533,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2531000
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC06-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队在费县西北马家峪休整数日后，与三纵队一支队会合见面；随后徐向前、朱瑞带少数人经交通线到达，会合后他们自行东行蒙阴，未管我方事务。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以杨永松回忆部队进驻马家峪休整为起点，到与三纵队一支队会合、徐向前和朱瑞率部东行蒙阴为止；依据片段BATCH05-DOC06-S0018。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"部队在费县西北马家峪驻扎休整数日。\",\n      \"process_text\": \"我们就在马家峪，费县最后的一个村子。我们在那里住了几天\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0018\"\n      ],\n      \"evidence_quote\": \"我们就在马家峪，费县最后的一个村子。我们在那里住了几天\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"三纵队一支队与我们会合见面，大家很高兴。\",\n      \"process_text\": \"三纵队一支队那个支队长姓马，政委在福州当……周赤萍，他那个支队，就跟我们会合了，见面了，很高兴大家。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0018\"\n      ],\n      \"evidence_quote\": \"三纵队一支队那个支队长姓马，政委在福州当……周赤萍，他那个支队，就跟我们会合了，见面了，很高兴大家。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC06-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"待了两三天后，徐向前、朱瑞带少数人经交通线到达；会合后他们自行东行蒙阴，未管我方事务。\",\n      \"process_text\": \"结果我们在那待了两三天以后啊，徐向前、朱瑞带着他的人，人不太多，就从我们过路那个地方（过来），因为这走也有咱们自己工作的交通线嘛。我们会合以后，他们没管我们的事，就他自己走他的，他就往东走到蒙阴，蒙阴也有敌人。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC06-S0018\"\n      ],\n      \"evidence_quote\": \"结果我们在那待了两三天以后啊，徐向前、朱瑞带着他的人，人不太多，就从我们过路那个地方（过来），因为这走也有咱们自己工作的交通线嘛。我们会合以后，他们没管我们的事，就他自己走他的，他就往东走到蒙阴，蒙阴也有敌人。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC06-DE004-P01\",\n      \"target_stage_id\": \"BATCH05-DOC06-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC06-S0018\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC06-DE004-P02\",\n      \"target_stage_id\": \"BATCH05-DOC06-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC06-S0018\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC06-DE004",
+    "event_enrichment": {
+      "result_state": "部队在费县西北马家峪休整数日后，与三纵队一支队会合见面；随后徐向前、朱瑞带少数人经交通线到达，会合后他们自行东行蒙阴，未管我方事务。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以杨永松回忆部队进驻马家峪休整为起点，到与三纵队一支队会合、徐向前和朱瑞率部东行蒙阴为止；依据片段BATCH05-DOC06-S0018。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC06-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "部队在费县西北马家峪驻扎休整数日。",
+        "process_text": "我们就在马家峪，费县最后的一个村子。我们在那里住了几天",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0018"
+        ],
+        "evidence_quote": "我们就在马家峪，费县最后的一个村子。我们在那里住了几天",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC06-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "三纵队一支队与我们会合见面，大家很高兴。",
+        "process_text": "三纵队一支队那个支队长姓马，政委在福州当……周赤萍，他那个支队，就跟我们会合了，见面了，很高兴大家。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0018"
+        ],
+        "evidence_quote": "三纵队一支队那个支队长姓马，政委在福州当……周赤萍，他那个支队，就跟我们会合了，见面了，很高兴大家。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC06-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "待了两三天后，徐向前、朱瑞带少数人经交通线到达；会合后他们自行东行蒙阴，未管我方事务。",
+        "process_text": "结果我们在那待了两三天以后啊，徐向前、朱瑞带着他的人，人不太多，就从我们过路那个地方（过来），因为这走也有咱们自己工作的交通线嘛。我们会合以后，他们没管我们的事，就他自己走他的，他就往东走到蒙阴，蒙阴也有敌人。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC06-S0018"
+        ],
+        "evidence_quote": "结果我们在那待了两三天以后啊，徐向前、朱瑞带着他的人，人不太多，就从我们过路那个地方（过来），因为这走也有咱们自己工作的交通线嘛。我们会合以后，他们没管我们的事，就他自己走他的，他就往东走到蒙阴，蒙阴也有敌人。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC06-DE004-P01",
+        "target_stage_id": "BATCH05-DOC06-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC06-S0018",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC06-DE004-P02",
+        "target_stage_id": "BATCH05-DOC06-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC06-S0018",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

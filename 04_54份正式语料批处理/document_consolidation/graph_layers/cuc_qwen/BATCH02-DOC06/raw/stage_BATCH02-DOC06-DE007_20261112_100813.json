@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T10:08:13",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC06-DE007",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC06-DE007",
+  "usage": {
+    "prompt_tokens": 1511,
+    "total_tokens": 9809,
+    "completion_tokens": 8298,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 6648
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 8297000,
+    "time_to_first_token_ms": 162329
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-05\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC06-DE007\",\n  \"event_enrichment\": {\n    \"result_state\": \"李默庵被动员回国，并在建国35周年阅兵时在天安门城楼观礼。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起于S0046所述1984年建国35周年阅兵准备，止于S0048所述动员李默庵回国并在天安门城楼观礼；不扩展南岳游干班其他背景。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE007-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"1984年建国35周年阅兵准备背景\",\n      \"process_text\": \"（19）84年，他也回来了，我那个时候是全国政协的常委，（当年）也是（建国）35周年嘛，小平同志是军委主席，他要整顿部队，那个时候文化大革命，军队纪律废弛，很不大好，所以就花一点钱，就整顿部队，就在张家口这个地方训练阅兵分列式。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0046\"\n      ],\n      \"evidence_quote\": \"陈锐霆：南岳游干训练班以后，三十三兵团的司令叫李默庵，以后我们北京成立的黄埔同学会，（19）84年，他也回来了，我那个时候是全国政协的常委，（当年）也是（建国）35周年嘛，小平同志是军委主席，他要整顿部队，那个时候文化大革命，军队纪律废弛，很不大好，所以就花一点钱，就整顿部队，就在张家口这个地方训练阅兵分列式。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE007-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"李默庵对蒋介石不满且在美国定居不易\",\n      \"process_text\": \"他对蒋介石也不满，但是他在南岳游干班的纪念周上向来也没骂过共产党。那个时候蒋介石不是叛变革命嘛，他是黄埔一期的学生，也是共产党，以后就脱党了嘛。对蒋介石不满，到了台湾以后不久大概就到美国去定居了，在美国定居也不那么容易\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0048\"\n      ],\n      \"evidence_quote\": \"陈锐霆：小平同志都坐着车来检阅部队，（建国）35周年嘛。我在天安门上也跟李默庵见了面，他以后就回来了。他对蒋介石也不满，但是他在南岳游干班的纪念周上向来也没骂过共产党。那个时候蒋介石不是叛变革命嘛，他是黄埔一期的学生，也是共产党，以后就脱党了嘛。对蒋介石不满，到了台湾以后不久大概就到美国去定居了，在美国定居也不那么容易，我们就动员他回国，先回国来看一看嘛，就35周年那个阅兵，在天安门城楼上，他也被请上去观礼嘛。这是南岳游干班的一段情况。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE007-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"动员李默庵回国看一看\",\n      \"process_text\": \"我们就动员他回国，先回国来看一看嘛\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0048\"\n      ],\n      \"evidence_quote\": \"陈锐霆：小平同志都坐着车来检阅部队，（建国）35周年嘛。我在天安门上也跟李默庵见了面，他以后就回来了。他对蒋介石也不满，但是他在南岳游干班的纪念周上向来也没骂过共产党。那个时候蒋介石不是叛变革命嘛，他是黄埔一期的学生，也是共产党，以后就脱党了嘛。对蒋介石不满，到了台湾以后不久大概就到美国去定居了，在美国定居也不那么容易，我们就动员他回国，先回国来看一看嘛，就35周年那个阅兵，在天安门城楼上，他也被请上去观礼嘛。这是南岳游干班的一段情况。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC06-DE007-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"李默庵被请上天安门城楼观礼\",\n      \"process_text\": \"就35周年那个阅兵，在天安门城楼上，他也被请上去观礼嘛。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC06-S0048\"\n      ],\n      \"evidence_quote\": \"陈锐霆：小平同志都坐着车来检阅部队，（建国）35周年嘛。我在天安门上也跟李默庵见了面，他以后就回来了。他对蒋介石也不满，但是他在南岳游干班的纪念周上向来也没骂过共产党。那个时候蒋介石不是叛变革命嘛，他是黄埔一期的学生，也是共产党，以后就脱党了嘛。对蒋介石不满，到了台湾以后不久大概就到美国去定居了，在美国定居也不那么容易，我们就动员他回国，先回国来看一看嘛，就35周年那个阅兵，在天安门城楼上，他也被请上去观礼嘛。这是南岳游干班的一段情况。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE007-P01\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE007-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0048\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE007-P02\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE007-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0048\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC06-DE007-P03\",\n      \"target_stage_id\": \"BATCH02-DOC06-DE007-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC06-S0048\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-05",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC06-DE007",
+    "event_enrichment": {
+      "result_state": "李默庵被动员回国，并在建国35周年阅兵时在天安门城楼观礼。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起于S0046所述1984年建国35周年阅兵准备，止于S0048所述动员李默庵回国并在天安门城楼观礼；不扩展南岳游干班其他背景。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC06-DE007-P01",
+        "stage_order": 1,
+        "stage_summary": "1984年建国35周年阅兵准备背景",
+        "process_text": "（19）84年，他也回来了，我那个时候是全国政协的常委，（当年）也是（建国）35周年嘛，小平同志是军委主席，他要整顿部队，那个时候文化大革命，军队纪律废弛，很不大好，所以就花一点钱，就整顿部队，就在张家口这个地方训练阅兵分列式。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0046"
+        ],
+        "evidence_quote": "陈锐霆：南岳游干训练班以后，三十三兵团的司令叫李默庵，以后我们北京成立的黄埔同学会，（19）84年，他也回来了，我那个时候是全国政协的常委，（当年）也是（建国）35周年嘛，小平同志是军委主席，他要整顿部队，那个时候文化大革命，军队纪律废弛，很不大好，所以就花一点钱，就整顿部队，就在张家口这个地方训练阅兵分列式。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE007-P02",
+        "stage_order": 2,
+        "stage_summary": "李默庵对蒋介石不满且在美国定居不易",
+        "process_text": "他对蒋介石也不满，但是他在南岳游干班的纪念周上向来也没骂过共产党。那个时候蒋介石不是叛变革命嘛，他是黄埔一期的学生，也是共产党，以后就脱党了嘛。对蒋介石不满，到了台湾以后不久大概就到美国去定居了，在美国定居也不那么容易",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0048"
+        ],
+        "evidence_quote": "陈锐霆：小平同志都坐着车来检阅部队，（建国）35周年嘛。我在天安门上也跟李默庵见了面，他以后就回来了。他对蒋介石也不满，但是他在南岳游干班的纪念周上向来也没骂过共产党。那个时候蒋介石不是叛变革命嘛，他是黄埔一期的学生，也是共产党，以后就脱党了嘛。对蒋介石不满，到了台湾以后不久大概就到美国去定居了，在美国定居也不那么容易，我们就动员他回国，先回国来看一看嘛，就35周年那个阅兵，在天安门城楼上，他也被请上去观礼嘛。这是南岳游干班的一段情况。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE007-P03",
+        "stage_order": 3,
+        "stage_summary": "动员李默庵回国看一看",
+        "process_text": "我们就动员他回国，先回国来看一看嘛",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0048"
+        ],
+        "evidence_quote": "陈锐霆：小平同志都坐着车来检阅部队，（建国）35周年嘛。我在天安门上也跟李默庵见了面，他以后就回来了。他对蒋介石也不满，但是他在南岳游干班的纪念周上向来也没骂过共产党。那个时候蒋介石不是叛变革命嘛，他是黄埔一期的学生，也是共产党，以后就脱党了嘛。对蒋介石不满，到了台湾以后不久大概就到美国去定居了，在美国定居也不那么容易，我们就动员他回国，先回国来看一看嘛，就35周年那个阅兵，在天安门城楼上，他也被请上去观礼嘛。这是南岳游干班的一段情况。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC06-DE007-P04",
+        "stage_order": 4,
+        "stage_summary": "李默庵被请上天安门城楼观礼",
+        "process_text": "就35周年那个阅兵，在天安门城楼上，他也被请上去观礼嘛。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC06-S0048"
+        ],
+        "evidence_quote": "陈锐霆：小平同志都坐着车来检阅部队，（建国）35周年嘛。我在天安门上也跟李默庵见了面，他以后就回来了。他对蒋介石也不满，但是他在南岳游干班的纪念周上向来也没骂过共产党。那个时候蒋介石不是叛变革命嘛，他是黄埔一期的学生，也是共产党，以后就脱党了嘛。对蒋介石不满，到了台湾以后不久大概就到美国去定居了，在美国定居也不那么容易，我们就动员他回国，先回国来看一看嘛，就35周年那个阅兵，在天安门城楼上，他也被请上去观礼嘛。这是南岳游干班的一段情况。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC06-DE007-P01",
+        "target_stage_id": "BATCH02-DOC06-DE007-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC06-S0048",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC06-DE007-P02",
+        "target_stage_id": "BATCH02-DOC06-DE007-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC06-S0048",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC06-DE007-P03",
+        "target_stage_id": "BATCH02-DOC06-DE007-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC06-S0048",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

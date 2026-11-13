@@ -1,0 +1,162 @@
+{
+  "run_time": "2026-11-12T22:51:33",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH04-DOC07-DE002",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH04-DOC07-DE002",
+  "usage": {
+    "prompt_tokens": 1953,
+    "total_tokens": 16906,
+    "completion_tokens": 14953,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12178
+    },
+    "time_to_first_token_ms": 219748,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 14952000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V3-11\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH04-DOC07-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰被多人从陷坑中慢慢拔上来，脱离陷坑，并自述那次差点死掉，留下以前没有的经验和教训。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于 S0027 所述潮水一退下船到海滩捡东西、海滩边有看不到的陷坑；中间 S0029-S0032 说明陷坑很深、下边是软泥浆、站住挣扎会越陷越深；S0036 所述掉入陷坑、开始叫唤、船老大扔竹竿、他们跳下来救；S0038 所述慢慢拔上来；止于 S0039 所述差点死掉、是没有的经验和教训。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"潮水退后下船到海滩捡东西，海滩边存在看不到的陷坑\",\n      \"process_text\": \"    陈海峰：在船上。天天潮水一退，再下来捡这个东西。潮水一退，就上船，上船你这个地不就不能走路啊，走路很危险啊。你捡是捡啊，我都差点死掉了。去捡的时候，海滩边上有好多看不到的陷坑。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0027\"\n      ],\n      \"evidence_quote\": \"    陈海峰：在船上。天天潮水一退，再下来捡这个东西。潮水一退，就上船，上船你这个地不就不能走路啊，走路很危险啊。你捡是捡啊，我都差点死掉了。去捡的时候，海滩边上有好多看不到的陷坑。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陷坑底下很深，人掉下去会糊下去，没有相关知识会牺牲\",\n      \"process_text\": \"    陈海峰：你看的是个海滩，实际上它是一个坑，这个底下很深。你人一掉下去啊，就糊下去了。糊下去以后啊，你没有（相关）知识就牺牲了。到海边就进行教育，这一落下去，你这个人要马上躺下来，躺在那个地上。你半个身体是躺下去了，就膝盖以下在那个泥巴里头，那么你呼救，旁边四五个人啊，架住你，把你拉出来。那两条腿全是泥巴。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0029\"\n      ],\n      \"evidence_quote\": \"    陈海峰：你看的是个海滩，实际上它是一个坑，这个底下很深。你人一掉下去啊，就糊下去了。糊下去以后啊，你没有（相关）知识就牺牲了。到海边就进行教育，这一落下去，你这个人要马上躺下来，躺在那个地上。你半个身体是躺下去了，就膝盖以下在那个泥巴里头，那么你呼救，旁边四五个人啊，架住你，把你拉出来。那两条腿全是泥巴。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE002-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"下边是软泥浆，站住慌张挣扎会越陷越深，等于活埋\",\n      \"process_text\": \"你看不到。你如果（是）站的，你慌张了，“哎呀，救命啊……”一叫，深下去十公分二十公分，一叫你这一挣扎又下去二十公分三十公分，你最后到这里完蛋了（陈海峰指颈部），憋死了。等于活埋啊，自己活埋自己，知道嘛。海边上有好多这样坑坑洼洼的地方。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0031\",\n        \"BATCH04-DOC07-S0032\"\n      ],\n      \"evidence_quote\": \"你看不到。你如果（是）站的，你慌张了，“哎呀，救命啊……”一叫，深下去十公分二十公分，一叫你这一挣扎又下去二十公分三十公分，你最后到这里完蛋了（陈海峰指颈部），憋死了。等于活埋啊，自己活埋自己，知道嘛。海边上有好多这样坑坑洼洼的地方。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE002-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"陈海峰掉入陷坑，陷得很深，因没经验开始叫唤\",\n      \"process_text\": \"上面都有螃蟹啦，什么蛤蜊啦，扇贝啦，好多都在哪，你注意捡，旁边就有陷坑，你不知道。哎呦，我就掉下去了，今天这个掉下去了，那边那个掉下去了。我那次掉下去很深哪，掉下去到了这儿了（陈海峰大概指的是大腿根）。我还没经验，开始叫唤，叫唤有人来了，后来有经验的那个（船）老大，快点（把）船上边竹竿扔下来，他们跳下来救了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0036\"\n      ],\n      \"evidence_quote\": \"上面都有螃蟹啦，什么蛤蜊啦，扇贝啦，好多都在哪，你注意捡，旁边就有陷坑，你不知道。哎呦，我就掉下去了，今天这个掉下去了，那边那个掉下去了。我那次掉下去很深哪，掉下去到了这儿了（陈海峰大概指的是大腿根）。我还没经验，开始叫唤，叫唤有人来了，后来有经验的那个（船）老大，快点（把）船上边竹竿扔下来，他们跳下来救了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE002-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"有经验的船老大扔下竹竿，其他人跳下来施救\",\n      \"process_text\": \"上面都有螃蟹啦，什么蛤蜊啦，扇贝啦，好多都在哪，你注意捡，旁边就有陷坑，你不知道。哎呦，我就掉下去了，今天这个掉下去了，那边那个掉下去了。我那次掉下去很深哪，掉下去到了这儿了（陈海峰大概指的是大腿根）。我还没经验，开始叫唤，叫唤有人来了，后来有经验的那个（船）老大，快点（把）船上边竹竿扔下来，他们跳下来救了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0036\"\n      ],\n      \"evidence_quote\": \"上面都有螃蟹啦，什么蛤蜊啦，扇贝啦，好多都在哪，你注意捡，旁边就有陷坑，你不知道。哎呦，我就掉下去了，今天这个掉下去了，那边那个掉下去了。我那次掉下去很深哪，掉下去到了这儿了（陈海峰大概指的是大腿根）。我还没经验，开始叫唤，叫唤有人来了，后来有经验的那个（船）老大，快点（把）船上边竹竿扔下来，他们跳下来救了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE002-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"救援者让陈海峰扒住竹竿，多人用力将其慢慢拔上来\",\n      \"process_text\": \"    陈海峰：两个人跪在地上，两边，叫我两个手扒住竹竿用劲，他们三个四个人啊，往上抬。“哎——”叫着抬一下，“哎——”叫着抬一下。我就从这个地方慢慢拔上来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0038\"\n      ],\n      \"evidence_quote\": \"    陈海峰：两个人跪在地上，两边，叫我两个手扒住竹竿用劲，他们三个四个人啊，往上抬。“哎——”叫着抬一下，“哎——”叫着抬一下。我就从这个地方慢慢拔上来。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH04-DOC07-DE002-P07\",\n      \"stage_order\": 7,\n      \"stage_summary\": \"陈海峰自述那次差点死掉，这是以前没有的经验和教训\",\n      \"process_text\": \"我那次差点死掉了，这个是（以前）没有的经验、教训。\",\n      \"evidence_segment_ids\": [\n        \"BATCH04-DOC07-S0039\"\n      ],\n      \"evidence_quote\": \"我那次差点死掉了，这个是（以前）没有的经验、教训。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE002-P01\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE002-P02\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0029\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE002-P02\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE002-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0032\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE002-P03\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE002-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0036\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE002-P04\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE002-P05\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0036\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE002-P05\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE002-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0038\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH04-DOC07-DE002-P06\",\n      \"target_stage_id\": \"BATCH04-DOC07-DE002-P07\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH04-DOC07-S0039\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-11",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH04-DOC07-DE002",
+    "event_enrichment": {
+      "result_state": "陈海峰被多人从陷坑中慢慢拔上来，脱离陷坑，并自述那次差点死掉，留下以前没有的经验和教训。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于 S0027 所述潮水一退下船到海滩捡东西、海滩边有看不到的陷坑；中间 S0029-S0032 说明陷坑很深、下边是软泥浆、站住挣扎会越陷越深；S0036 所述掉入陷坑、开始叫唤、船老大扔竹竿、他们跳下来救；S0038 所述慢慢拔上来；止于 S0039 所述差点死掉、是没有的经验和教训。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH04-DOC07-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "潮水退后下船到海滩捡东西，海滩边存在看不到的陷坑",
+        "process_text": "    陈海峰：在船上。天天潮水一退，再下来捡这个东西。潮水一退，就上船，上船你这个地不就不能走路啊，走路很危险啊。你捡是捡啊，我都差点死掉了。去捡的时候，海滩边上有好多看不到的陷坑。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0027"
+        ],
+        "evidence_quote": "    陈海峰：在船上。天天潮水一退，再下来捡这个东西。潮水一退，就上船，上船你这个地不就不能走路啊，走路很危险啊。你捡是捡啊，我都差点死掉了。去捡的时候，海滩边上有好多看不到的陷坑。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "陷坑底下很深，人掉下去会糊下去，没有相关知识会牺牲",
+        "process_text": "    陈海峰：你看的是个海滩，实际上它是一个坑，这个底下很深。你人一掉下去啊，就糊下去了。糊下去以后啊，你没有（相关）知识就牺牲了。到海边就进行教育，这一落下去，你这个人要马上躺下来，躺在那个地上。你半个身体是躺下去了，就膝盖以下在那个泥巴里头，那么你呼救，旁边四五个人啊，架住你，把你拉出来。那两条腿全是泥巴。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0029"
+        ],
+        "evidence_quote": "    陈海峰：你看的是个海滩，实际上它是一个坑，这个底下很深。你人一掉下去啊，就糊下去了。糊下去以后啊，你没有（相关）知识就牺牲了。到海边就进行教育，这一落下去，你这个人要马上躺下来，躺在那个地上。你半个身体是躺下去了，就膝盖以下在那个泥巴里头，那么你呼救，旁边四五个人啊，架住你，把你拉出来。那两条腿全是泥巴。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE002-P03",
+        "stage_order": 3,
+        "stage_summary": "下边是软泥浆，站住慌张挣扎会越陷越深，等于活埋",
+        "process_text": "你看不到。你如果（是）站的，你慌张了，“哎呀，救命啊……”一叫，深下去十公分二十公分，一叫你这一挣扎又下去二十公分三十公分，你最后到这里完蛋了（陈海峰指颈部），憋死了。等于活埋啊，自己活埋自己，知道嘛。海边上有好多这样坑坑洼洼的地方。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0031",
+          "BATCH04-DOC07-S0032"
+        ],
+        "evidence_quote": "你看不到。你如果（是）站的，你慌张了，“哎呀，救命啊……”一叫，深下去十公分二十公分，一叫你这一挣扎又下去二十公分三十公分，你最后到这里完蛋了（陈海峰指颈部），憋死了。等于活埋啊，自己活埋自己，知道嘛。海边上有好多这样坑坑洼洼的地方。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE002-P04",
+        "stage_order": 4,
+        "stage_summary": "陈海峰掉入陷坑，陷得很深，因没经验开始叫唤",
+        "process_text": "上面都有螃蟹啦，什么蛤蜊啦，扇贝啦，好多都在哪，你注意捡，旁边就有陷坑，你不知道。哎呦，我就掉下去了，今天这个掉下去了，那边那个掉下去了。我那次掉下去很深哪，掉下去到了这儿了（陈海峰大概指的是大腿根）。我还没经验，开始叫唤，叫唤有人来了，后来有经验的那个（船）老大，快点（把）船上边竹竿扔下来，他们跳下来救了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0036"
+        ],
+        "evidence_quote": "上面都有螃蟹啦，什么蛤蜊啦，扇贝啦，好多都在哪，你注意捡，旁边就有陷坑，你不知道。哎呦，我就掉下去了，今天这个掉下去了，那边那个掉下去了。我那次掉下去很深哪，掉下去到了这儿了（陈海峰大概指的是大腿根）。我还没经验，开始叫唤，叫唤有人来了，后来有经验的那个（船）老大，快点（把）船上边竹竿扔下来，他们跳下来救了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE002-P05",
+        "stage_order": 5,
+        "stage_summary": "有经验的船老大扔下竹竿，其他人跳下来施救",
+        "process_text": "上面都有螃蟹啦，什么蛤蜊啦，扇贝啦，好多都在哪，你注意捡，旁边就有陷坑，你不知道。哎呦，我就掉下去了，今天这个掉下去了，那边那个掉下去了。我那次掉下去很深哪，掉下去到了这儿了（陈海峰大概指的是大腿根）。我还没经验，开始叫唤，叫唤有人来了，后来有经验的那个（船）老大，快点（把）船上边竹竿扔下来，他们跳下来救了。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0036"
+        ],
+        "evidence_quote": "上面都有螃蟹啦，什么蛤蜊啦，扇贝啦，好多都在哪，你注意捡，旁边就有陷坑，你不知道。哎呦，我就掉下去了，今天这个掉下去了，那边那个掉下去了。我那次掉下去很深哪，掉下去到了这儿了（陈海峰大概指的是大腿根）。我还没经验，开始叫唤，叫唤有人来了，后来有经验的那个（船）老大，快点（把）船上边竹竿扔下来，他们跳下来救了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE002-P06",
+        "stage_order": 6,
+        "stage_summary": "救援者让陈海峰扒住竹竿，多人用力将其慢慢拔上来",
+        "process_text": "    陈海峰：两个人跪在地上，两边，叫我两个手扒住竹竿用劲，他们三个四个人啊，往上抬。“哎——”叫着抬一下，“哎——”叫着抬一下。我就从这个地方慢慢拔上来。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0038"
+        ],
+        "evidence_quote": "    陈海峰：两个人跪在地上，两边，叫我两个手扒住竹竿用劲，他们三个四个人啊，往上抬。“哎——”叫着抬一下，“哎——”叫着抬一下。我就从这个地方慢慢拔上来。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH04-DOC07-DE002-P07",
+        "stage_order": 7,
+        "stage_summary": "陈海峰自述那次差点死掉，这是以前没有的经验和教训",
+        "process_text": "我那次差点死掉了，这个是（以前）没有的经验、教训。",
+        "evidence_segment_ids": [
+          "BATCH04-DOC07-S0039"
+        ],
+        "evidence_quote": "我那次差点死掉了，这个是（以前）没有的经验、教训。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH04-DOC07-DE002-P01",
+        "target_stage_id": "BATCH04-DOC07-DE002-P02",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC07-S0029",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE002-P02",
+        "target_stage_id": "BATCH04-DOC07-DE002-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH04-DOC07-S0032",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE002-P03",
+        "target_stage_id": "BATCH04-DOC07-DE002-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0036",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE002-P04",
+        "target_stage_id": "BATCH04-DOC07-DE002-P05",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH04-DOC07-S0036",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE002-P05",
+        "target_stage_id": "BATCH04-DOC07-DE002-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH04-DOC07-S0038",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH04-DOC07-DE002-P06",
+        "target_stage_id": "BATCH04-DOC07-DE002-P07",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH04-DOC07-S0039",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

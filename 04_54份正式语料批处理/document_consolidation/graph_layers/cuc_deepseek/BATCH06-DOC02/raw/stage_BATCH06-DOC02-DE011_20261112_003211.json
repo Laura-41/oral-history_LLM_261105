@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T00:32:11",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC02-DE011",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC02-DE011",
+  "usage": {
+    "prompt_tokens": 1840,
+    "total_tokens": 7577,
+    "completion_tokens": 5737,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4557
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 44722
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-18\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC02-DE011\",\n  \"event_enrichment\": {\n    \"result_state\": \"已在竹林选定二十多个隐蔽点，并搭好竹子天棚、铺设地面，形成分散安置伤员的准备状态；是否实际转运未说明。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以敌军辎重逼近、判断医院可能撤不走为起点，以选定二十多个竹林地点并搭设竹子天棚、准备分散伤员为终点；后续实际转运及找粟司令等行动不在本事件内。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE011-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"敌军逼近后判断医院可能撤不走，事前已有预兆和打算。\",\n      \"process_text\": \"感到撤不走，当时没办法；事前已有预兆和打算。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0079\"\n      ],\n      \"evidence_quote\": \"哎呀，不得了了，那我们撤不走啊，当时没办法。我们事前都有些打算，部队新登打得艰苦的时候啊，就已经有点预兆。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE011-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"到背后高山竹林勘察，在原始森林中选择二十多个隐蔽点。\",\n      \"process_text\": \"与卫生部协理员钱野（音）到背后18里路的高山竹林，在原始森林中选择二十多个地方。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0079\"\n      ],\n      \"evidence_quote\": \"那我们就和卫生部的协理员，叫钱野（音），我们两个人啊，就到背后18里路的高山。那个时候，遍地都是竹子，那个竹海里头，背后那个天荒坪啊，1200米高，现在那个水力发电站在那。那地方密密麻麻的（都是）森林，原始森林里头没人，人不到那地方，我们选择了二十多个地方。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE011-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"在竹林中搭建竹子天棚、铺设隐蔽地面，准备收治伤员。\",\n      \"process_text\": \"准备万一撤不走就把伤员转到竹林，用竹子搭天棚，铺布挡雨，砍竹铺草，工作人员夜间隐蔽施工。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0081\"\n      ],\n      \"evidence_quote\": \"准备万一撤不走，我们伤员都转到这个竹林里去，变成真正的竹子医院了。那里面都（是）竹子来做天棚，都已经弄好。把竹子和竹子用绳子系起来，就搭成天幕。到那个时候，底下再铺布啊，再加一层布挡那个雨水。那个地上呢，把竹子砍掉，砍掉以后，铺上这个草，把竹叶扫来铺上，把老百姓运一点稻草，这个还不能给老百姓知道，都是我们工作人员晚上去弄，白天呢，偷偷去弄，都是隐蔽的地方。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE011-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"确定将伤员分散运到二十多个竹林地点的方案。\",\n      \"process_text\": \"选了二十多个地方，准备万一不行就把伤员运到这些地方分散。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0083\"\n      ],\n      \"evidence_quote\": \"选了二十多个地方，准备万一不行，伤员就运到这些地方分散。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE011-P01\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE011-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0079\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE011-P02\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE011-P03\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0081\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE011-P03\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE011-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0083\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V3-18",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC02-DE011",
+    "event_enrichment": {
+      "result_state": "已在竹林选定二十多个隐蔽点，并搭好竹子天棚、铺设地面，形成分散安置伤员的准备状态；是否实际转运未说明。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以敌军辎重逼近、判断医院可能撤不走为起点，以选定二十多个竹林地点并搭设竹子天棚、准备分散伤员为终点；后续实际转运及找粟司令等行动不在本事件内。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC02-DE011-P01",
+        "stage_order": 1,
+        "stage_summary": "敌军逼近后判断医院可能撤不走，事前已有预兆和打算。",
+        "process_text": "感到撤不走，当时没办法；事前已有预兆和打算。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0079"
+        ],
+        "evidence_quote": "哎呀，不得了了，那我们撤不走啊，当时没办法。我们事前都有些打算，部队新登打得艰苦的时候啊，就已经有点预兆。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE011-P02",
+        "stage_order": 2,
+        "stage_summary": "到背后高山竹林勘察，在原始森林中选择二十多个隐蔽点。",
+        "process_text": "与卫生部协理员钱野（音）到背后18里路的高山竹林，在原始森林中选择二十多个地方。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0079"
+        ],
+        "evidence_quote": "那我们就和卫生部的协理员，叫钱野（音），我们两个人啊，就到背后18里路的高山。那个时候，遍地都是竹子，那个竹海里头，背后那个天荒坪啊，1200米高，现在那个水力发电站在那。那地方密密麻麻的（都是）森林，原始森林里头没人，人不到那地方，我们选择了二十多个地方。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE011-P03",
+        "stage_order": 3,
+        "stage_summary": "在竹林中搭建竹子天棚、铺设隐蔽地面，准备收治伤员。",
+        "process_text": "准备万一撤不走就把伤员转到竹林，用竹子搭天棚，铺布挡雨，砍竹铺草，工作人员夜间隐蔽施工。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0081"
+        ],
+        "evidence_quote": "准备万一撤不走，我们伤员都转到这个竹林里去，变成真正的竹子医院了。那里面都（是）竹子来做天棚，都已经弄好。把竹子和竹子用绳子系起来，就搭成天幕。到那个时候，底下再铺布啊，再加一层布挡那个雨水。那个地上呢，把竹子砍掉，砍掉以后，铺上这个草，把竹叶扫来铺上，把老百姓运一点稻草，这个还不能给老百姓知道，都是我们工作人员晚上去弄，白天呢，偷偷去弄，都是隐蔽的地方。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE011-P04",
+        "stage_order": 4,
+        "stage_summary": "确定将伤员分散运到二十多个竹林地点的方案。",
+        "process_text": "选了二十多个地方，准备万一不行就把伤员运到这些地方分散。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0083"
+        ],
+        "evidence_quote": "选了二十多个地方，准备万一不行，伤员就运到这些地方分散。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC02-DE011-P01",
+        "target_stage_id": "BATCH06-DOC02-DE011-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC02-S0079",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE011-P02",
+        "target_stage_id": "BATCH06-DOC02-DE011-P03",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH06-DOC02-S0081",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE011-P03",
+        "target_stage_id": "BATCH06-DOC02-DE011-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0083",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

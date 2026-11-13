@@ -1,0 +1,233 @@
+{
+  "run_time": "2026-11-10T20:04:35",
+  "run_stage": "FORMAL_BATCH_WINDOW_EXTRACTION",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "system-v0.3-frozen+window-v0.5",
+  "window_id": "BATCH03-DOC05-W002",
+  "technical_document_id": "BATCH03-DOC05",
+  "document_id": "07.陈锐霆 090508（二校后 阅读版）.docx",
+  "input_segment_ids": [
+    "BATCH03-DOC05-S0016",
+    "BATCH03-DOC05-S0017",
+    "BATCH03-DOC05-S0018",
+    "BATCH03-DOC05-S0019",
+    "BATCH03-DOC05-S0020",
+    "BATCH03-DOC05-S0021",
+    "BATCH03-DOC05-S0022",
+    "BATCH03-DOC05-S0023",
+    "BATCH03-DOC05-S0024",
+    "BATCH03-DOC05-S0025",
+    "BATCH03-DOC05-S0026",
+    "BATCH03-DOC05-S0027",
+    "BATCH03-DOC05-S0028",
+    "BATCH03-DOC05-S0029",
+    "BATCH03-DOC05-S0030",
+    "BATCH03-DOC05-S0031",
+    "BATCH03-DOC05-S0032",
+    "BATCH03-DOC05-S0033",
+    "BATCH03-DOC05-S0034",
+    "BATCH03-DOC05-S0035",
+    "BATCH03-DOC05-S0036"
+  ],
+  "json_valid": true,
+  "validation_errors": [],
+  "technical_passed": true,
+  "metrics": {
+    "event_count": 4,
+    "assigned_segment_count": 10,
+    "unassigned_segment_count": 11,
+    "input_segment_count": 21,
+    "all_input_segments_accounted_for": true
+  },
+  "edge_candidate_ids": [
+    "BATCH03-DOC05-W002-E03",
+    "BATCH03-DOC05-W002-E04"
+  ],
+  "parsed_output": {
+    "window_id": "BATCH03-DOC05-W002",
+    "events": [
+      {
+        "candidate_id": "BATCH03-DOC05-W002-E01",
+        "source_segment_ids": [
+          "BATCH03-DOC05-S0017",
+          "BATCH03-DOC05-S0019",
+          "BATCH03-DOC05-S0021",
+          "BATCH03-DOC05-S0023"
+        ],
+        "event": {
+          "event_name": "陈锐霆奉命截击共产党部队并借侦察拖延",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "奉命截击并借侦察拖延",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "他",
+              "normalized_entity": "共产党两路部队",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "我们北边不远的地方",
+              "normalized_value": "颍河北边"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "师部也发现了，马上叫我派人到前面去，把他掐断了，分段消灭了。我就说我派人已经出去侦察去了。",
+          "type_basis": "核心过程为军事遭遇中的奉命截击与以侦察为由拖延，Actor 执行军事行动，Goal 为预期截击对象；‘说派人侦察’是行动策略，不另立言语事件；不是心理过程，因为主要经历是延缓军事行动。角色均在 MATERIAL 允许词表内。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC05-W002-E02",
+        "source_segment_ids": [
+          "BATCH03-DOC05-S0025",
+          "BATCH03-DOC05-S0027"
+        ],
+        "event": {
+          "event_name": "陈锐霆指挥第五纵队进攻新四军四师",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "指挥第五纵队进攻新四军四师",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "新四军四师",
+              "normalized_entity": "新四军第四师",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [],
+          "projected_content": null,
+          "evidence_quote": "我变成为第五纵队的指挥官嘛，进攻新四军四师。",
+          "type_basis": "核心过程为军事指挥与进攻，Actor 执行军事行动，Goal 为受攻击对象；‘成为指挥官’服务于进攻行动，主导过程是物质军事行动，不是关系过程。角色均在 MATERIAL 允许词表内。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC05-W002-E03",
+        "source_segment_ids": [
+          "BATCH03-DOC05-S0030",
+          "BATCH03-DOC05-S0032",
+          "BATCH03-DOC05-S0034",
+          "BATCH03-DOC05-S0036"
+        ],
+        "event": {
+          "event_name": "陈锐霆率部起义",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "率部起义",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            },
+            {
+              "role": "Goal",
+              "mention": "部队",
+              "normalized_entity": "所率国民党部队",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "TIME",
+              "value": "4月19号",
+              "normalized_value": null
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "到了4月19号，我就带着部队起义了。",
+          "type_basis": "核心过程为率部起义，属于有组织军事行动和阵营转换，Actor 为陈锐霆，Goal 为所率部队；向中央报告、开会动员是起义准备和阶段，不另立言语事件；不是单纯心理或言语过程。角色均在 MATERIAL 允许词表内。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      },
+      {
+        "candidate_id": "BATCH03-DOC05-W002-E04",
+        "source_segment_ids": [
+          "BATCH03-DOC05-S0036"
+        ],
+        "event": {
+          "event_name": "陈锐霆起义后转移至津浦路东",
+          "event_type": "MATERIAL",
+          "event_type_zh": "物质",
+          "core_process": "转移至津浦路东",
+          "participants": [
+            {
+              "role": "Actor",
+              "mention": "我",
+              "normalized_entity": "陈锐霆",
+              "certainty": "HIGH"
+            }
+          ],
+          "circumstances": [
+            {
+              "kind": "LOCATION",
+              "value": "津浦路东",
+              "normalized_value": "津浦路东"
+            },
+            {
+              "kind": "LOCATION",
+              "value": "洪泽湖边上不远的地方，就在泗县南边啊",
+              "normalized_value": "洪泽湖附近、泗县南边"
+            }
+          ],
+          "projected_content": null,
+          "evidence_quote": "当时一夜，就到了津浦路东了。我走了两天，就到了洪泽湖边上不远的地方，就在泗县南边啊，我们有个二十七团",
+          "type_basis": "核心过程为起义后率部转移至津浦路东，属于物质性空间移动和组织行动；与二十七团会面受接待是转移后的阶段性结果，军费被扣导致供给困难是后续处境，均不另立事件；不是关系或存在过程，因为主要经历是移动和会合。角色均在 MATERIAL 允许词表内。",
+          "alternative_event_type": null,
+          "ambiguity_reason": null,
+          "review_status": "MODEL_CANDIDATE"
+        }
+      }
+    ],
+    "unassigned_segment_ids": [
+      "BATCH03-DOC05-S0016",
+      "BATCH03-DOC05-S0018",
+      "BATCH03-DOC05-S0020",
+      "BATCH03-DOC05-S0022",
+      "BATCH03-DOC05-S0024",
+      "BATCH03-DOC05-S0026",
+      "BATCH03-DOC05-S0028",
+      "BATCH03-DOC05-S0029",
+      "BATCH03-DOC05-S0031",
+      "BATCH03-DOC05-S0033",
+      "BATCH03-DOC05-S0035"
+    ]
+  },
+  "raw_content": "{\n  \"window_id\": \"BATCH03-DOC05-W002\",\n  \"events\": [\n    {\n      \"candidate_id\": \"BATCH03-DOC05-W002-E01\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC05-S0017\",\n        \"BATCH03-DOC05-S0019\",\n        \"BATCH03-DOC05-S0021\",\n        \"BATCH03-DOC05-S0023\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆奉命截击共产党部队并借侦察拖延\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"奉命截击并借侦察拖延\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"他\",\n            \"normalized_entity\": \"共产党两路部队\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"我们北边不远的地方\",\n            \"normalized_value\": \"颍河北边\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"师部也发现了，马上叫我派人到前面去，把他掐断了，分段消灭了。我就说我派人已经出去侦察去了。\",\n        \"type_basis\": \"核心过程为军事遭遇中的奉命截击与以侦察为由拖延，Actor 执行军事行动，Goal 为预期截击对象；‘说派人侦察’是行动策略，不另立言语事件；不是心理过程，因为主要经历是延缓军事行动。角色均在 MATERIAL 允许词表内。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC05-W002-E02\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC05-S0025\",\n        \"BATCH03-DOC05-S0027\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆指挥第五纵队进攻新四军四师\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"指挥第五纵队进攻新四军四师\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"新四军四师\",\n            \"normalized_entity\": \"新四军第四师\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [],\n        \"projected_content\": null,\n        \"evidence_quote\": \"我变成为第五纵队的指挥官嘛，进攻新四军四师。\",\n        \"type_basis\": \"核心过程为军事指挥与进攻，Actor 执行军事行动，Goal 为受攻击对象；‘成为指挥官’服务于进攻行动，主导过程是物质军事行动，不是关系过程。角色均在 MATERIAL 允许词表内。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC05-W002-E03\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC05-S0030\",\n        \"BATCH03-DOC05-S0032\",\n        \"BATCH03-DOC05-S0034\",\n        \"BATCH03-DOC05-S0036\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆率部起义\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"率部起义\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          },\n          {\n            \"role\": \"Goal\",\n            \"mention\": \"部队\",\n            \"normalized_entity\": \"所率国民党部队\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"TIME\",\n            \"value\": \"4月19号\",\n            \"normalized_value\": null\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"到了4月19号，我就带着部队起义了。\",\n        \"type_basis\": \"核心过程为率部起义，属于有组织军事行动和阵营转换，Actor 为陈锐霆，Goal 为所率部队；向中央报告、开会动员是起义准备和阶段，不另立言语事件；不是单纯心理或言语过程。角色均在 MATERIAL 允许词表内。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    },\n    {\n      \"candidate_id\": \"BATCH03-DOC05-W002-E04\",\n      \"source_segment_ids\": [\n        \"BATCH03-DOC05-S0036\"\n      ],\n      \"event\": {\n        \"event_name\": \"陈锐霆起义后转移至津浦路东\",\n        \"event_type\": \"MATERIAL\",\n        \"event_type_zh\": \"物质\",\n        \"core_process\": \"转移至津浦路东\",\n        \"participants\": [\n          {\n            \"role\": \"Actor\",\n            \"mention\": \"我\",\n            \"normalized_entity\": \"陈锐霆\",\n            \"certainty\": \"HIGH\"\n          }\n        ],\n        \"circumstances\": [\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"津浦路东\",\n            \"normalized_value\": \"津浦路东\"\n          },\n          {\n            \"kind\": \"LOCATION\",\n            \"value\": \"洪泽湖边上不远的地方，就在泗县南边啊\",\n            \"normalized_value\": \"洪泽湖附近、泗县南边\"\n          }\n        ],\n        \"projected_content\": null,\n        \"evidence_quote\": \"当时一夜，就到了津浦路东了。我走了两天，就到了洪泽湖边上不远的地方，就在泗县南边啊，我们有个二十七团\",\n        \"type_basis\": \"核心过程为起义后率部转移至津浦路东，属于物质性空间移动和组织行动；与二十七团会面受接待是转移后的阶段性结果，军费被扣导致供给困难是后续处境，均不另立事件；不是关系或存在过程，因为主要经历是移动和会合。角色均在 MATERIAL 允许词表内。\",\n        \"alternative_event_type\": null,\n        \"ambiguity_reason\": null,\n        \"review_status\": \"MODEL_CANDIDATE\"\n      }\n    }\n  ],\n  \"unassigned_segment_ids\": [\n    \"BATCH03-DOC05-S0016\",\n    \"BATCH03-DOC05-S0018\",\n    \"BATCH03-DOC05-S0020\",\n    \"BATCH03-DOC05-S0022\",\n    \"BATCH03-DOC05-S0024\",\n    \"BATCH03-DOC05-S0026\",\n    \"BATCH03-DOC05-S0028\",\n    \"BATCH03-DOC05-S0029\",\n    \"BATCH03-DOC05-S0031\",\n    \"BATCH03-DOC05-S0033\",\n    \"BATCH03-DOC05-S0035\"\n  ]\n}",
+  "usage": {
+    "prompt_tokens": 5640,
+    "total_tokens": 24050,
+    "completion_tokens": 18410,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 16714
+    },
+    "time_to_first_token_ms": 148353,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 9204500
+  }
+}

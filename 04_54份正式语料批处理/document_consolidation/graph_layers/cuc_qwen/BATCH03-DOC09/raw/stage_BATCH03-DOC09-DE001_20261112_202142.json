@@ -1,0 +1,145 @@
+{
+  "run_time": "2026-11-12T20:21:42",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH03-DOC09-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH03-DOC09-DE001",
+  "usage": {
+    "prompt_tokens": 2331,
+    "total_tokens": 14267,
+    "completion_tokens": 11936,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9454
+    },
+    "time_to_first_token_ms": 174123,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 11935000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CRT-08\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH03-DOC09-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆多处刺伤、补枪未中，装死骗过检查，后被部队抬到卫生机关，用碘酒简单处理。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起始于 S0004 所述午夜宿舍门前遭两人持刺刀暗杀；结束于 S0014 所述被部队抬到卫生机关并用碘酒处理；S0026 为伤情补充。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"暗杀背景与触发：副官内应，反对起义者叛变，午夜两人持刺刀到宿舍门前\",\n      \"process_text\": \"团部副官跟他们都有联系，反对起义的人要叛变，暗杀我时他作内应，午夜有两个人跑到我宿舍门前，一出来两把刺刀就对着我来了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0004\"\n      ],\n      \"evidence_quote\": \"陈锐霆：暗杀我的人，因为团部的副官跟他们都有联系，反对起义的（人）要叛变，暗杀我（的时候）他作内应，所以岗哨他们都很清楚，很方便。有两个人就跑到我宿舍门前，我听到外边有声音，我就刚躺下不久，马上起来。（当时）午夜了嘛，一出来两把刺刀就对着我来了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"赤手应对刺刀并受伤：拨开刺刀，左侧肋骨挨刀，狭窄处无法脱身，转身后又挨刺刀，胃被刺穿\",\n      \"process_text\": \"我赤手把它很自然把都拨开了，但是接着这个地方又挨了一刀。因为很狭窄，出不去。我看着走不了，我转过身子来，我就又回到部队，后头又挨两刺刀，有一刺刀剌得比较深，胃里面没有什么东西，（刺刀）把胃都穿了孔。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0006\"\n      ],\n      \"evidence_quote\": \"陈锐霆：我赤手把它很自然把都拨开了（陈锐霆双手向外下拨），但是接着这个地方（陈锐霆指向自己左侧肋骨处）又挨了一刀。因为很狭窄，大概就这么大一块地方（陈锐霆比划）。本来我那个时候身体非常好，一个小墙，我一下子就可以过去了，但是他们两个人在那儿，出不去。我看着走不了，我转过身子来，我就又回到部队，后头又挨两刺刀，有一刺刀剌得比较深，这个时候亏着是早晨，胃里面没有什么东西，（刺刀）把胃都穿了孔。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"判断敌人可能回来检查并装死：返回屋内，用血抹脸躺下装死\",\n      \"process_text\": \"我返回屋子里边，我想他为什么不敢放枪，这是一种暗杀的动作，怕我那个警备部队出来干涉，所以我说敌人可能还回来检查，我脑子非常清楚，我就躺在这个地方装死吧，把手上流的血，肚子流的血，把脸都抹了一下子，看不清楚了。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0008\"\n      ],\n      \"evidence_quote\": \"陈锐霆：我返回屋子里边，我想他为什么不敢放枪，这是一种暗杀的动作，怕我那个警备部队出来干涉，所以我说敌人可能还回来检查，我脑子非常清楚，我就躺在这个地方装死吧，把手上流的血，肚子流的血，把脸都抹了一下子，看不清楚了。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"四连连长带人检查并补枪：手电照脸，连长说旅长死了，有人补一枪打边上未中\",\n      \"process_text\": \"待了有一二十分钟，的确是四连连长带着一伙人来看我，手电打在我的脸上一照，往底下一照，他说旅长完了，死掉了，走吧，走吧。有一个人“嘭”又给我补了一枪，打我边上，衣裳都破了，没有打到。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0010\",\n        \"BATCH03-DOC09-S0012\"\n      ],\n      \"evidence_quote\": \"陈锐霆：待了有一二十分钟，的确是四连连长带着一伙人来看我，手电打在我的脸上一照，往底下一照，这个时候，哎呀，那个情绪真难受啊（陈锐霆笑）。四连连长原来也是我提级的，在我到任以后才升任的一个连长，他大概对我还有点什么（感谢之情），他说旅长完了，死掉了，走吧，走吧。有一个人“嘭”又给我补了一枪。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE001-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"部队到来与脱险救治：骑兵连长来看，陈锐霆讲起义正义，国民党大部队走后，部队抬到卫生机关用碘酒处理\",\n      \"process_text\": \"后来我们部队都来了，骑兵连的连长也来了，我就跟他讲，我说我们起义是个正义的行动；国民党大部队都要走了，他也就跟着走了。以后我们的部队来赶快把我抬走了，到我们的卫生机关去了，那个时候我们的部队连个消炎片都没有，就是用碘酒抹了一下子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0012\",\n        \"BATCH03-DOC09-S0014\"\n      ],\n      \"evidence_quote\": \"陈锐霆：他跟马家还不一势（音），所以他原来很贴近我们，希望我们给他找一个对象。这个时候他来看我，我也给他讲了好多话，但是（国民党）大部队都要走了，他也就跟着走了。以后我们的部队来赶快把我抬走了，到我们的卫生机关去了，那个时候我们的部队连个消炎片都没有，就是用碘酒抹了一下子。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH03-DOC09-DE001-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"伤情结果确认：共约四刀，胃和肺刺伤一点，未成要害\",\n      \"process_text\": \"这里刺了有两刀吧，我出不去，我转过来，后边又（被）刺了两刀，一共大概（被刺了）四刀。午夜的时候差不多12点过了，那个时候肚子也空了，胃里边什么东西没有了，所以刺刀刺到胃上刺（伤）了一点，另外肺上也刺（伤）了一点，没成要害。\",\n      \"evidence_segment_ids\": [\n        \"BATCH03-DOC09-S0026\"\n      ],\n      \"evidence_quote\": \"陈锐霆：这里（陈锐霆指腹部）刺了有两刀吧，我出不去，我转过来，后边又（被）刺了两刀，一共大概（被刺了）四刀。午夜的时候差不多12点过了，那个时候肚子也空了，胃里边什么东西没有了，所以刺刀刺到胃上刺（伤）了一点，另外肺上也刺（伤）了一点，没成要害。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE001-P01\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE001-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0004\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE001-P02\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0008\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE001-P03\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE001-P04\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0010\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE001-P04\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE001-P05\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0012\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH03-DOC09-DE001-P05\",\n      \"target_stage_id\": \"BATCH03-DOC09-DE001-P06\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH03-DOC09-S0026\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-08",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH03-DOC09-DE001",
+    "event_enrichment": {
+      "result_state": "陈锐霆多处刺伤、补枪未中，装死骗过检查，后被部队抬到卫生机关，用碘酒简单处理。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "起始于 S0004 所述午夜宿舍门前遭两人持刺刀暗杀；结束于 S0014 所述被部队抬到卫生机关并用碘酒处理；S0026 为伤情补充。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH03-DOC09-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "暗杀背景与触发：副官内应，反对起义者叛变，午夜两人持刺刀到宿舍门前",
+        "process_text": "团部副官跟他们都有联系，反对起义的人要叛变，暗杀我时他作内应，午夜有两个人跑到我宿舍门前，一出来两把刺刀就对着我来了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0004"
+        ],
+        "evidence_quote": "陈锐霆：暗杀我的人，因为团部的副官跟他们都有联系，反对起义的（人）要叛变，暗杀我（的时候）他作内应，所以岗哨他们都很清楚，很方便。有两个人就跑到我宿舍门前，我听到外边有声音，我就刚躺下不久，马上起来。（当时）午夜了嘛，一出来两把刺刀就对着我来了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "赤手应对刺刀并受伤：拨开刺刀，左侧肋骨挨刀，狭窄处无法脱身，转身后又挨刺刀，胃被刺穿",
+        "process_text": "我赤手把它很自然把都拨开了，但是接着这个地方又挨了一刀。因为很狭窄，出不去。我看着走不了，我转过身子来，我就又回到部队，后头又挨两刺刀，有一刺刀剌得比较深，胃里面没有什么东西，（刺刀）把胃都穿了孔。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0006"
+        ],
+        "evidence_quote": "陈锐霆：我赤手把它很自然把都拨开了（陈锐霆双手向外下拨），但是接着这个地方（陈锐霆指向自己左侧肋骨处）又挨了一刀。因为很狭窄，大概就这么大一块地方（陈锐霆比划）。本来我那个时候身体非常好，一个小墙，我一下子就可以过去了，但是他们两个人在那儿，出不去。我看着走不了，我转过身子来，我就又回到部队，后头又挨两刺刀，有一刺刀剌得比较深，这个时候亏着是早晨，胃里面没有什么东西，（刺刀）把胃都穿了孔。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "判断敌人可能回来检查并装死：返回屋内，用血抹脸躺下装死",
+        "process_text": "我返回屋子里边，我想他为什么不敢放枪，这是一种暗杀的动作，怕我那个警备部队出来干涉，所以我说敌人可能还回来检查，我脑子非常清楚，我就躺在这个地方装死吧，把手上流的血，肚子流的血，把脸都抹了一下子，看不清楚了。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0008"
+        ],
+        "evidence_quote": "陈锐霆：我返回屋子里边，我想他为什么不敢放枪，这是一种暗杀的动作，怕我那个警备部队出来干涉，所以我说敌人可能还回来检查，我脑子非常清楚，我就躺在这个地方装死吧，把手上流的血，肚子流的血，把脸都抹了一下子，看不清楚了。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "四连连长带人检查并补枪：手电照脸，连长说旅长死了，有人补一枪打边上未中",
+        "process_text": "待了有一二十分钟，的确是四连连长带着一伙人来看我，手电打在我的脸上一照，往底下一照，他说旅长完了，死掉了，走吧，走吧。有一个人“嘭”又给我补了一枪，打我边上，衣裳都破了，没有打到。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0010",
+          "BATCH03-DOC09-S0012"
+        ],
+        "evidence_quote": "陈锐霆：待了有一二十分钟，的确是四连连长带着一伙人来看我，手电打在我的脸上一照，往底下一照，这个时候，哎呀，那个情绪真难受啊（陈锐霆笑）。四连连长原来也是我提级的，在我到任以后才升任的一个连长，他大概对我还有点什么（感谢之情），他说旅长完了，死掉了，走吧，走吧。有一个人“嘭”又给我补了一枪。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE001-P05",
+        "stage_order": 5,
+        "stage_summary": "部队到来与脱险救治：骑兵连长来看，陈锐霆讲起义正义，国民党大部队走后，部队抬到卫生机关用碘酒处理",
+        "process_text": "后来我们部队都来了，骑兵连的连长也来了，我就跟他讲，我说我们起义是个正义的行动；国民党大部队都要走了，他也就跟着走了。以后我们的部队来赶快把我抬走了，到我们的卫生机关去了，那个时候我们的部队连个消炎片都没有，就是用碘酒抹了一下子。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0012",
+          "BATCH03-DOC09-S0014"
+        ],
+        "evidence_quote": "陈锐霆：他跟马家还不一势（音），所以他原来很贴近我们，希望我们给他找一个对象。这个时候他来看我，我也给他讲了好多话，但是（国民党）大部队都要走了，他也就跟着走了。以后我们的部队来赶快把我抬走了，到我们的卫生机关去了，那个时候我们的部队连个消炎片都没有，就是用碘酒抹了一下子。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH03-DOC09-DE001-P06",
+        "stage_order": 6,
+        "stage_summary": "伤情结果确认：共约四刀，胃和肺刺伤一点，未成要害",
+        "process_text": "这里刺了有两刀吧，我出不去，我转过来，后边又（被）刺了两刀，一共大概（被刺了）四刀。午夜的时候差不多12点过了，那个时候肚子也空了，胃里边什么东西没有了，所以刺刀刺到胃上刺（伤）了一点，另外肺上也刺（伤）了一点，没成要害。",
+        "evidence_segment_ids": [
+          "BATCH03-DOC09-S0026"
+        ],
+        "evidence_quote": "陈锐霆：这里（陈锐霆指腹部）刺了有两刀吧，我出不去，我转过来，后边又（被）刺了两刀，一共大概（被刺了）四刀。午夜的时候差不多12点过了，那个时候肚子也空了，胃里边什么东西没有了，所以刺刀刺到胃上刺（伤）了一点，另外肺上也刺（伤）了一点，没成要害。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH03-DOC09-DE001-P01",
+        "target_stage_id": "BATCH03-DOC09-DE001-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH03-DOC09-S0004",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE001-P02",
+        "target_stage_id": "BATCH03-DOC09-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH03-DOC09-S0008",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE001-P03",
+        "target_stage_id": "BATCH03-DOC09-DE001-P04",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH03-DOC09-S0010",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE001-P04",
+        "target_stage_id": "BATCH03-DOC09-DE001-P05",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH03-DOC09-S0012",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH03-DOC09-DE001-P05",
+        "target_stage_id": "BATCH03-DOC09-DE001-P06",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH03-DOC09-S0026",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

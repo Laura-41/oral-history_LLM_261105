@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-12T00:25:03",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH06-DOC02-DE001",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH06-DOC02-DE001",
+  "usage": {
+    "prompt_tokens": 1577,
+    "total_tokens": 6247,
+    "completion_tokens": 4670,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 3599
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0,
+    "time_to_first_token_ms": 37435
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-18\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH06-DOC02-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"以笋代饭后出现便秘，医务人员需用手抠便或灌肠处理，且灌肠仍难以排出。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"事件从粮食供应困难、笋干等成为代粮开始，到以笋代饭后便秘及医务人员处理结束；不扩展到其他代粮作物的独立过程。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"粮食供应困难，当地可食物品被吃光，笋干等成为代粮并被大量消耗。\",\n      \"process_text\": \"把当地能吃的都吃掉了，钱买不到粮食后，以笋干等代粮食的东西充饥。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0011\"\n      ],\n      \"evidence_quote\": \"把当地能吃的都吃掉了，先有钱买。一个月（以后），用钱买不到了，先是粮食供应给你。以后是代粮食的一些东西呀，连笋干都吃差不多了，腌的笋干呢都要吃掉了。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"开始吃笋时觉得味道不错，后来发展到天天吃、顿顿吃，以笋代饭。\",\n      \"process_text\": \"开始吃笋觉得味道不错，到后来天天吃、顿顿吃。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0014\"\n      ],\n      \"evidence_quote\": \"那个时候开始吃，哎呦，味道不错，到后来天天吃、顿顿吃。那个笋啊，粗纤维。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"笋富含粗纤维，本应搭配食用而不能当饭；当饭后大便解不下来。\",\n      \"process_text\": \"笋是营养品但只能搭配吃，不能当饭吃；当饭后大便解不下来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0015\"\n      ],\n      \"evidence_quote\": \"笋是个营养品。但是它是搭配吃的，不能当饭吃。当饭吃以后呢，大便都解不下来！我们那时候大便都解不下来\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH06-DOC02-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"便秘后医务人员戴橡皮手套抠便，并用泄油灌肠，仍解不下来。\",\n      \"process_text\": \"医务人员套橡皮手套抠大便，用泄油灌肠，都泄不下来。\",\n      \"evidence_segment_ids\": [\n        \"BATCH06-DOC02-S0015\"\n      ],\n      \"evidence_quote\": \"解不下来，我们医务人员都套着那个橡皮手套，我给你抠啊，把那个大便（给你）抠下来呀，你给我抠啊……用这个泄油（灌肠），都泄不下来。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE001-P01\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0014\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE001-P02\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE001-P03\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0015\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH06-DOC02-DE001-P03\",\n      \"target_stage_id\": \"BATCH06-DOC02-DE001-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH06-DOC02-S0015\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-18",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH06-DOC02-DE001",
+    "event_enrichment": {
+      "result_state": "以笋代饭后出现便秘，医务人员需用手抠便或灌肠处理，且灌肠仍难以排出。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "事件从粮食供应困难、笋干等成为代粮开始，到以笋代饭后便秘及医务人员处理结束；不扩展到其他代粮作物的独立过程。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH06-DOC02-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "粮食供应困难，当地可食物品被吃光，笋干等成为代粮并被大量消耗。",
+        "process_text": "把当地能吃的都吃掉了，钱买不到粮食后，以笋干等代粮食的东西充饥。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0011"
+        ],
+        "evidence_quote": "把当地能吃的都吃掉了，先有钱买。一个月（以后），用钱买不到了，先是粮食供应给你。以后是代粮食的一些东西呀，连笋干都吃差不多了，腌的笋干呢都要吃掉了。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "开始吃笋时觉得味道不错，后来发展到天天吃、顿顿吃，以笋代饭。",
+        "process_text": "开始吃笋觉得味道不错，到后来天天吃、顿顿吃。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0014"
+        ],
+        "evidence_quote": "那个时候开始吃，哎呦，味道不错，到后来天天吃、顿顿吃。那个笋啊，粗纤维。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "笋富含粗纤维，本应搭配食用而不能当饭；当饭后大便解不下来。",
+        "process_text": "笋是营养品但只能搭配吃，不能当饭吃；当饭后大便解不下来。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0015"
+        ],
+        "evidence_quote": "笋是个营养品。但是它是搭配吃的，不能当饭吃。当饭吃以后呢，大便都解不下来！我们那时候大便都解不下来",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH06-DOC02-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "便秘后医务人员戴橡皮手套抠便，并用泄油灌肠，仍解不下来。",
+        "process_text": "医务人员套橡皮手套抠大便，用泄油灌肠，都泄不下来。",
+        "evidence_segment_ids": [
+          "BATCH06-DOC02-S0015"
+        ],
+        "evidence_quote": "解不下来，我们医务人员都套着那个橡皮手套，我给你抠啊，把那个大便（给你）抠下来呀，你给我抠啊……用这个泄油（灌肠），都泄不下来。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH06-DOC02-DE001-P01",
+        "target_stage_id": "BATCH06-DOC02-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH06-DOC02-S0014",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE001-P02",
+        "target_stage_id": "BATCH06-DOC02-DE001-P03",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH06-DOC02-S0015",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH06-DOC02-DE001-P03",
+        "target_stage_id": "BATCH06-DOC02-DE001-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH06-DOC02-S0015",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

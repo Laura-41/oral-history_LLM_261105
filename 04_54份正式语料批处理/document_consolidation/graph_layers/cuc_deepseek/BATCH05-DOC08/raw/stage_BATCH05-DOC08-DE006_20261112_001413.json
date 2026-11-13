@@ -1,0 +1,147 @@
+{
+  "run_time": "2026-11-12T00:14:13",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH05-DOC08-DE006",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH05-DOC08-DE006",
+  "usage": {
+    "prompt_tokens": 1647,
+    "total_tokens": 12663,
+    "completion_tokens": 11016,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 9383
+    },
+    "tokens_per_second": 11015000,
+    "time_to_first_token_ms": 84788,
+    "time_per_output_token_ms": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CHF-V3-16\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH05-DOC08-DE006\",\n  \"event_enrichment\": {\n    \"result_state\": \"苏浙军区司令部及卫生部、医务职业学校、野战医院等番号已宣布成立；初期兵员空缺、干部极少且多职兼任，随后兵员得到预备并加速培养，相关机构分驻温塘/槐花坎与东峰岕。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以陈海峰回忆到长兴后成立苏浙军区司令部、2月在温塘开成立大会为起点，到宣布卫生部、医务职业学校、野战医院成立并交代初期人员、兵员预备和驻地安排为终点。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE006-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"到长兴后成立苏浙军区司令部，并于2月在温塘召开成立大会。\",\n      \"process_text\": \"我们成立苏浙军区司令部，2月份在温塘开成立大会，好像是2月8号。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0078\"\n      ],\n      \"evidence_quote\": \"我们成立苏浙军区司令部，2月份在温塘开成立大会，好像是2月8号。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE006-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"成立大会后，卫生部宣布成立，医务职业学校宣布开学，野战医院宣布成立。\",\n      \"process_text\": \"成立大会以后，我们卫生部宣布成立，医务职业学校宣布开学，野战医院也宣布成立。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0078\"\n      ],\n      \"evidence_quote\": \"成立大会以后，我们卫生部宣布成立，医务职业学校宣布开学，野战医院也宣布成立。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE006-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"宣布成立时实际没有兵员，只有院长和番号，是空架子。\",\n      \"process_text\": \"宣布成立，一个兵还没有，空的，光杆司令，有院长，就成立这个番号。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0078\"\n      ],\n      \"evidence_quote\": \"宣布成立，一个兵还没有，空的，光杆司令，有院长，就成立这个番号。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE006-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"卫生部初期人员极少，部长李振湘、医政科长陈海峰、保健科长李甲光（音）、材料科长徐金元，陈海峰兼任轮训队队长、支部书记、野战医院院长。\",\n      \"process_text\": \"一个人，苏浙军区卫生部部长李振湘，医政科长陈海峰，保健科长李甲光（音），材料科长徐金元……医政科长兼轮训队队长，兼支部书记，兼野战医院院长。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0080\"\n      ],\n      \"evidence_quote\": \"一个人，苏浙军区卫生部部长李振湘，医政科长陈海峰，保健科长李甲光（音），材料科长徐金元……这样子，医政科长兼轮训队队长，兼支部书记，兼野战医院院长。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE006-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"兵员很快有了且已预备，加速培养；司令部驻温塘旁的长兴县槐花坎乡。\",\n      \"process_text\": \"很快有兵了。这个兵已经在那里预备着了，加速培养。司令部驻在温塘的旁边，就（是）长兴县的槐花坎乡。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0084\",\n        \"BATCH05-DOC08-S0086\",\n        \"BATCH05-DOC08-S0087\"\n      ],\n      \"evidence_quote\": \"加速培养。司令部驻在温塘的旁边，就（是）长兴县的槐花坎乡。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH05-DOC08-DE006-P06\",\n      \"stage_order\": 6,\n      \"stage_summary\": \"卫生部、苏浙医务职业学校、轮训队等机构都放在东峰岕。\",\n      \"process_text\": \"我们卫生部、苏浙医务职业学校、轮训队都放在东峰岕。\",\n      \"evidence_segment_ids\": [\n        \"BATCH05-DOC08-S0099\",\n        \"BATCH05-DOC08-S0100\"\n      ],\n      \"evidence_quote\": \"都放在东峰岕。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE006-P01\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE006-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0078\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE006-P02\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE006-P03\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0078\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE006-P03\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE006-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0080\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE006-P04\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE006-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0084\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH05-DOC08-DE006-P05\",\n      \"target_stage_id\": \"BATCH05-DOC08-DE006-P06\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH05-DOC08-S0099\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V3-16",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH05-DOC08-DE006",
+    "event_enrichment": {
+      "result_state": "苏浙军区司令部及卫生部、医务职业学校、野战医院等番号已宣布成立；初期兵员空缺、干部极少且多职兼任，随后兵员得到预备并加速培养，相关机构分驻温塘/槐花坎与东峰岕。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "以陈海峰回忆到长兴后成立苏浙军区司令部、2月在温塘开成立大会为起点，到宣布卫生部、医务职业学校、野战医院成立并交代初期人员、兵员预备和驻地安排为终点。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH05-DOC08-DE006-P01",
+        "stage_order": 1,
+        "stage_summary": "到长兴后成立苏浙军区司令部，并于2月在温塘召开成立大会。",
+        "process_text": "我们成立苏浙军区司令部，2月份在温塘开成立大会，好像是2月8号。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0078"
+        ],
+        "evidence_quote": "我们成立苏浙军区司令部，2月份在温塘开成立大会，好像是2月8号。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE006-P02",
+        "stage_order": 2,
+        "stage_summary": "成立大会后，卫生部宣布成立，医务职业学校宣布开学，野战医院宣布成立。",
+        "process_text": "成立大会以后，我们卫生部宣布成立，医务职业学校宣布开学，野战医院也宣布成立。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0078"
+        ],
+        "evidence_quote": "成立大会以后，我们卫生部宣布成立，医务职业学校宣布开学，野战医院也宣布成立。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE006-P03",
+        "stage_order": 3,
+        "stage_summary": "宣布成立时实际没有兵员，只有院长和番号，是空架子。",
+        "process_text": "宣布成立，一个兵还没有，空的，光杆司令，有院长，就成立这个番号。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0078"
+        ],
+        "evidence_quote": "宣布成立，一个兵还没有，空的，光杆司令，有院长，就成立这个番号。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE006-P04",
+        "stage_order": 4,
+        "stage_summary": "卫生部初期人员极少，部长李振湘、医政科长陈海峰、保健科长李甲光（音）、材料科长徐金元，陈海峰兼任轮训队队长、支部书记、野战医院院长。",
+        "process_text": "一个人，苏浙军区卫生部部长李振湘，医政科长陈海峰，保健科长李甲光（音），材料科长徐金元……医政科长兼轮训队队长，兼支部书记，兼野战医院院长。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0080"
+        ],
+        "evidence_quote": "一个人，苏浙军区卫生部部长李振湘，医政科长陈海峰，保健科长李甲光（音），材料科长徐金元……这样子，医政科长兼轮训队队长，兼支部书记，兼野战医院院长。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE006-P05",
+        "stage_order": 5,
+        "stage_summary": "兵员很快有了且已预备，加速培养；司令部驻温塘旁的长兴县槐花坎乡。",
+        "process_text": "很快有兵了。这个兵已经在那里预备着了，加速培养。司令部驻在温塘的旁边，就（是）长兴县的槐花坎乡。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0084",
+          "BATCH05-DOC08-S0086",
+          "BATCH05-DOC08-S0087"
+        ],
+        "evidence_quote": "加速培养。司令部驻在温塘的旁边，就（是）长兴县的槐花坎乡。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH05-DOC08-DE006-P06",
+        "stage_order": 6,
+        "stage_summary": "卫生部、苏浙医务职业学校、轮训队等机构都放在东峰岕。",
+        "process_text": "我们卫生部、苏浙医务职业学校、轮训队都放在东峰岕。",
+        "evidence_segment_ids": [
+          "BATCH05-DOC08-S0099",
+          "BATCH05-DOC08-S0100"
+        ],
+        "evidence_quote": "都放在东峰岕。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH05-DOC08-DE006-P01",
+        "target_stage_id": "BATCH05-DOC08-DE006-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC08-S0078",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC08-DE006-P02",
+        "target_stage_id": "BATCH05-DOC08-DE006-P03",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC08-S0078",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC08-DE006-P03",
+        "target_stage_id": "BATCH05-DOC08-DE006-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH05-DOC08-S0080",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC08-DE006-P04",
+        "target_stage_id": "BATCH05-DOC08-DE006-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC08-S0084",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH05-DOC08-DE006-P05",
+        "target_stage_id": "BATCH05-DOC08-DE006-P06",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH05-DOC08-S0099",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

@@ -1,0 +1,107 @@
+{
+  "run_time": "2026-11-12T10:45:31",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC08-DE001",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC08-DE001",
+  "usage": {
+    "prompt_tokens": 1805,
+    "total_tokens": 18143,
+    "completion_tokens": 16338,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 15101
+    },
+    "time_to_first_token_ms": 375959,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 16337000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V2-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC08-DE001\",\n  \"event_enrichment\": {\n    \"result_state\": \"二营到达三支队后，在繁昌西、北一线担任主力防御，并于11月3日及随后一个多礼拜参加第一、二次繁昌战斗，保卫繁昌。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于S0025“实际上一到那里，我们是9月去”，止于S0025“接着一个多礼拜就是第二次繁昌战斗，两个都基本接在一块”；S0029仅取二营防区与主力营任务部分，不纳入一营收复三镇及后续繁昌之战。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE001-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"二营到达三支队后先熟悉情况。\",\n      \"process_text\": \"实际上一到那里，我们是9月去，10月熟悉熟悉情况\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0025\"\n      ],\n      \"evidence_quote\": \"实际上一到那里，我们是9月去，10月熟悉熟悉情况\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE001-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"11月3日参加第一次繁昌战斗。\",\n      \"process_text\": \"11月3号就是打第一次“繁昌战斗”\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0025\"\n      ],\n      \"evidence_quote\": \"11月3号就是打第一次“繁昌战斗”\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE001-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"随后一个多礼拜参加第二次繁昌战斗，两次基本接在一块。\",\n      \"process_text\": \"接着一个多礼拜就是第二次“繁昌战斗”，两个都基本接在一块。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0025\"\n      ],\n      \"evidence_quote\": \"接着一个多礼拜就是第二次“繁昌战斗”，两个都基本接在一块。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC08-DE001-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"补充说明五团二营在繁昌西、北一线担任主力营，任务较重。\",\n      \"process_text\": \"我们五团二营呢，基本上是繁昌的西边和北面，一直到长江边，长江边是铜陵管了，就是铜陵的一部分，繁昌的一半。我们这个二营和三营，是六团三营，我们二营在前面，二营是主力营，他任务重一点。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC08-S0029\"\n      ],\n      \"evidence_quote\": \"我们五团二营呢，基本上是繁昌的西边和北面，一直到长江边，长江边是铜陵管了，就是铜陵的一部分，繁昌的一半。我们这个二营和三营，是六团三营，我们二营在前面，二营是主力营，他任务重一点。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE001-P01\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE001-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0025\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE001-P02\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE001-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0025\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC08-DE001-P03\",\n      \"target_stage_id\": \"BATCH02-DOC08-DE001-P04\",\n      \"logic\": \"ELABORATES\",\n      \"evidence_segment_id\": \"BATCH02-DOC08-S0029\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CHF-V2-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC08-DE001",
+    "event_enrichment": {
+      "result_state": "二营到达三支队后，在繁昌西、北一线担任主力防御，并于11月3日及随后一个多礼拜参加第一、二次繁昌战斗，保卫繁昌。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "起于S0025“实际上一到那里，我们是9月去”，止于S0025“接着一个多礼拜就是第二次繁昌战斗，两个都基本接在一块”；S0029仅取二营防区与主力营任务部分，不纳入一营收复三镇及后续繁昌之战。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC08-DE001-P01",
+        "stage_order": 1,
+        "stage_summary": "二营到达三支队后先熟悉情况。",
+        "process_text": "实际上一到那里，我们是9月去，10月熟悉熟悉情况",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0025"
+        ],
+        "evidence_quote": "实际上一到那里，我们是9月去，10月熟悉熟悉情况",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE001-P02",
+        "stage_order": 2,
+        "stage_summary": "11月3日参加第一次繁昌战斗。",
+        "process_text": "11月3号就是打第一次“繁昌战斗”",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0025"
+        ],
+        "evidence_quote": "11月3号就是打第一次“繁昌战斗”",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE001-P03",
+        "stage_order": 3,
+        "stage_summary": "随后一个多礼拜参加第二次繁昌战斗，两次基本接在一块。",
+        "process_text": "接着一个多礼拜就是第二次“繁昌战斗”，两个都基本接在一块。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0025"
+        ],
+        "evidence_quote": "接着一个多礼拜就是第二次“繁昌战斗”，两个都基本接在一块。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC08-DE001-P04",
+        "stage_order": 4,
+        "stage_summary": "补充说明五团二营在繁昌西、北一线担任主力营，任务较重。",
+        "process_text": "我们五团二营呢，基本上是繁昌的西边和北面，一直到长江边，长江边是铜陵管了，就是铜陵的一部分，繁昌的一半。我们这个二营和三营，是六团三营，我们二营在前面，二营是主力营，他任务重一点。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC08-S0029"
+        ],
+        "evidence_quote": "我们五团二营呢，基本上是繁昌的西边和北面，一直到长江边，长江边是铜陵管了，就是铜陵的一部分，繁昌的一半。我们这个二营和三营，是六团三营，我们二营在前面，二营是主力营，他任务重一点。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC08-DE001-P01",
+        "target_stage_id": "BATCH02-DOC08-DE001-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0025",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE001-P02",
+        "target_stage_id": "BATCH02-DOC08-DE001-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC08-S0025",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC08-DE001-P03",
+        "target_stage_id": "BATCH02-DOC08-DE001-P04",
+        "logic": "ELABORATES",
+        "evidence_segment_id": "BATCH02-DOC08-S0029",
+        "confidence": "MEDIUM"
+      }
+    ]
+  },
+  "request_error": null
+}

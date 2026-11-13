@@ -1,0 +1,90 @@
+{
+  "run_time": "2026-11-12T09:13:46",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC03-DE009",
+  "model_id": "cuc/qwen",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC03-DE009",
+  "usage": {
+    "prompt_tokens": 1411,
+    "total_tokens": 6934,
+    "completion_tokens": 5523,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 4467
+    },
+    "time_to_first_token_ms": 87556,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 5522000
+  },
+  "raw_content": "\n\n{\n  \"document_id\": \"CHF-V1-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC03-DE009\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈海峰说明家庭具有祖传中医背景，并指出家乡耳闻目睹形成对医的印象和医学常识，最终总结两个因素开始从医，且七十多年没有离开医。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"起于 S0039 中陈海峰说明家里是祖传中医、祖父为当地小名医、叔父由祖传中医又学西医；止于 S0041 中总结两个因素开始从医，并说明七十多年没有离开医。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE009-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"家庭祖传中医背景\",\n      \"process_text\": \"我家里是祖传中医，我的祖父是当地的一个小名医，附近的县都来看的，我的叔父是祖传中医，以后又学了西医，是中西医。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0039\"\n      ],\n      \"evidence_quote\": \"我家里是祖传中医，我的祖父是当地的一个小名医，附近的县都来看的，我的叔父是祖传中医，以后又学了西医，是中西医。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE009-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"耳闻目睹形成医学印象与常识\",\n      \"process_text\": \"所以说在家乡啊，耳闻目睹，家里看到的一切，对医有很深的印象。出诊我听到（听不清），那时候还懂得一些基本知识，虽然我搞情报工作，我搞政治工作，但是我那个时候也懂点基本的医学常识，比人家懂得多。因为我看到我叔父怎么看病的，看到我祖父是怎么看病的，他怎么配药的，中草药还懂一点。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0039\"\n      ],\n      \"evidence_quote\": \"所以说在家乡啊，耳闻目睹，家里看到的一切，对医有很深的印象。出诊我听到（听不清），那时候还懂得一些基本知识，虽然我搞情报工作，我搞政治工作，但是我那个时候也懂点基本的医学常识，比人家懂得多。因为我看到我叔父怎么看病的，看到我祖父是怎么看病的，他怎么配药的，中草药还懂一点。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC03-DE009-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"两个因素开始从医并长期未离开\",\n      \"process_text\": \"所以这样子呢，两个因素开始从医，一家伙现在七十多年了，就没有离开医。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC03-S0041\"\n      ],\n      \"evidence_quote\": \"所以这样子呢，两个因素开始从医，一家伙现在七十多年了，就没有离开医。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE009-P01\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE009-P02\",\n      \"logic\": \"CAUSES\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0039\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC03-DE009-P02\",\n      \"target_stage_id\": \"BATCH02-DOC03-DE009-P03\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC03-S0041\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "CHF-V1-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC03-DE009",
+    "event_enrichment": {
+      "result_state": "陈海峰说明家庭具有祖传中医背景，并指出家乡耳闻目睹形成对医的印象和医学常识，最终总结两个因素开始从医，且七十多年没有离开医。",
+      "factuality": "REPORTED",
+      "confidence": "HIGH",
+      "boundary_note": "起于 S0039 中陈海峰说明家里是祖传中医、祖父为当地小名医、叔父由祖传中医又学西医；止于 S0041 中总结两个因素开始从医，并说明七十多年没有离开医。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC03-DE009-P01",
+        "stage_order": 1,
+        "stage_summary": "家庭祖传中医背景",
+        "process_text": "我家里是祖传中医，我的祖父是当地的一个小名医，附近的县都来看的，我的叔父是祖传中医，以后又学了西医，是中西医。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0039"
+        ],
+        "evidence_quote": "我家里是祖传中医，我的祖父是当地的一个小名医，附近的县都来看的，我的叔父是祖传中医，以后又学了西医，是中西医。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE009-P02",
+        "stage_order": 2,
+        "stage_summary": "耳闻目睹形成医学印象与常识",
+        "process_text": "所以说在家乡啊，耳闻目睹，家里看到的一切，对医有很深的印象。出诊我听到（听不清），那时候还懂得一些基本知识，虽然我搞情报工作，我搞政治工作，但是我那个时候也懂点基本的医学常识，比人家懂得多。因为我看到我叔父怎么看病的，看到我祖父是怎么看病的，他怎么配药的，中草药还懂一点。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0039"
+        ],
+        "evidence_quote": "所以说在家乡啊，耳闻目睹，家里看到的一切，对医有很深的印象。出诊我听到（听不清），那时候还懂得一些基本知识，虽然我搞情报工作，我搞政治工作，但是我那个时候也懂点基本的医学常识，比人家懂得多。因为我看到我叔父怎么看病的，看到我祖父是怎么看病的，他怎么配药的，中草药还懂一点。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC03-DE009-P03",
+        "stage_order": 3,
+        "stage_summary": "两个因素开始从医并长期未离开",
+        "process_text": "所以这样子呢，两个因素开始从医，一家伙现在七十多年了，就没有离开医。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC03-S0041"
+        ],
+        "evidence_quote": "所以这样子呢，两个因素开始从医，一家伙现在七十多年了，就没有离开医。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC03-DE009-P01",
+        "target_stage_id": "BATCH02-DOC03-DE009-P02",
+        "logic": "CAUSES",
+        "evidence_segment_id": "BATCH02-DOC03-S0039",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC03-DE009-P02",
+        "target_stage_id": "BATCH02-DOC03-DE009-P03",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC03-S0041",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

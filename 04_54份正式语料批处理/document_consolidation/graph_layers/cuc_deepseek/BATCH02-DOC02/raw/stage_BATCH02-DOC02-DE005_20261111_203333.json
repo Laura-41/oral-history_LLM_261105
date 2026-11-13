@@ -1,0 +1,89 @@
+{
+  "run_time": "2026-11-11T20:33:33",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC02-DE005",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC02-DE005",
+  "usage": {
+    "prompt_tokens": 1155,
+    "total_tokens": 3179,
+    "completion_tokens": 2024,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1236
+    },
+    "time_to_first_token_ms": 15696,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"CRT-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC02-DE005\",\n  \"event_enrichment\": {\n    \"result_state\": \"陈锐霆与王兴纲在南昌会面并交流了彼此情况；随后王兴纲带陈锐霆到东南局，当时黄道任东南局书记。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以王兴纲随商震到南昌及两人见面为起点，以王兴纲带陈锐霆到东南局并提及黄道任东南局书记为终点；不扩展到前文鄱阳湖守备等背景。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE005-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"王兴纲随商震到达南昌，为两人会面提供背景。\",\n      \"process_text\": \"王兴纲作为陈锐霆单线联系的领导人，也跟商震到了南昌。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0035\"\n      ],\n      \"evidence_quote\": \"那么我的单线联系的领导人，王兴纲同志也跟商震到了南昌。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE005-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"陈锐霆与王兴纲在南昌见面，并互相交流彼此情况。\",\n      \"process_text\": \"这个时候两人见了面，互相的情况都讲了一下子。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0035\"\n      ],\n      \"evidence_quote\": \"这个时候我们见了面，互相的情况都讲了一下子。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC02-DE005-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"在国共合作较好的背景下，王兴纲带陈锐霆到东南局，当时黄道任东南局书记。\",\n      \"process_text\": \"这个时候国共合作比较好，王兴纲带陈锐霆到东南局，黄道同志当东南局的书记。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC02-S0035\"\n      ],\n      \"evidence_quote\": \"这个时候国共合作比较好，他带我到东南局，黄道同志当东南局的书记。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE005-P01\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE005-P02\",\n      \"logic\": \"ENABLES\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0035\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC02-DE005-P02\",\n      \"target_stage_id\": \"BATCH02-DOC02-DE005-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC02-S0035\",\n      \"confidence\": \"HIGH\"\n    }\n  ]\n}",
+  "parsed": {
+    "document_id": "CRT-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC02-DE005",
+    "event_enrichment": {
+      "result_state": "陈锐霆与王兴纲在南昌会面并交流了彼此情况；随后王兴纲带陈锐霆到东南局，当时黄道任东南局书记。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以王兴纲随商震到南昌及两人见面为起点，以王兴纲带陈锐霆到东南局并提及黄道任东南局书记为终点；不扩展到前文鄱阳湖守备等背景。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC02-DE005-P01",
+        "stage_order": 1,
+        "stage_summary": "王兴纲随商震到达南昌，为两人会面提供背景。",
+        "process_text": "王兴纲作为陈锐霆单线联系的领导人，也跟商震到了南昌。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0035"
+        ],
+        "evidence_quote": "那么我的单线联系的领导人，王兴纲同志也跟商震到了南昌。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE005-P02",
+        "stage_order": 2,
+        "stage_summary": "陈锐霆与王兴纲在南昌见面，并互相交流彼此情况。",
+        "process_text": "这个时候两人见了面，互相的情况都讲了一下子。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0035"
+        ],
+        "evidence_quote": "这个时候我们见了面，互相的情况都讲了一下子。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC02-DE005-P03",
+        "stage_order": 3,
+        "stage_summary": "在国共合作较好的背景下，王兴纲带陈锐霆到东南局，当时黄道任东南局书记。",
+        "process_text": "这个时候国共合作比较好，王兴纲带陈锐霆到东南局，黄道同志当东南局的书记。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC02-S0035"
+        ],
+        "evidence_quote": "这个时候国共合作比较好，他带我到东南局，黄道同志当东南局的书记。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC02-DE005-P01",
+        "target_stage_id": "BATCH02-DOC02-DE005-P02",
+        "logic": "ENABLES",
+        "evidence_segment_id": "BATCH02-DOC02-S0035",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC02-DE005-P02",
+        "target_stage_id": "BATCH02-DOC02-DE005-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC02-S0035",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "request_error": null
+}

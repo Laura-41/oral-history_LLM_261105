@@ -271,6 +271,272 @@ footer{border-top:1px solid var(--line);padding:22px 34px 34px;max-width:1440px;
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;
   animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+/* ==========================================================================
+   设计体系 v2（UI/UX 建议书落地层，2026-11-13）
+   纯展示层：不改标注数据、契约、Schema、提示词、导入脚本与任何结果文件。
+   以追加覆盖的方式实现，便于整体回退。
+   ========================================================================== */
+:root{
+  /* 年代梯度 / 色弱友好：第三人物线改用紫灰，与印章红、青灰拉开色相 */
+  --purple:#5A4B8A;
+  /* 圆角四级 */
+  --r-panel:14px; --r-card:12px; --r-btn:9px; --r-pill:99px;
+  /* 动效节奏：hover / 内容切换 / 入场 */
+  --t-fast:150ms; --t-mid:300ms; --t-slow:500ms; --ease:ease-out;
+  /* 阴影两档：静置 / 悬浮 */
+  --shadow-rest:0 4px 14px rgba(88,66,40,.07);
+  --shadow-lift:0 12px 36px rgba(88,66,40,.12);
+  /* 字体三栈：标题宋 / 引文楷 / 界面黑；档案编号等宽 */
+  --f-serif:"Songti SC","Noto Serif SC","STSong","SimSun",serif;
+  --f-kai:"Kaiti SC","STKaiti","KaiTi","LXGW WenKai","霞鹜文楷","Songti SC",serif;
+  --f-mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+  --shadow:var(--shadow-lift); --shadow2:var(--shadow-rest);
+}
+body.night{--purple:#A99BD0;--shadow-rest:0 4px 14px rgba(0,0,0,.22);--shadow-lift:0 12px 36px rgba(0,0,0,.34);
+  --shadow:var(--shadow-lift);--shadow2:var(--shadow-rest)}
+
+/* 纸感：3.5% 噪点纸纹，内联 data URI，离线单文件可用 */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* 焦点环：金色 2px + 2px offset；键盘可达。
+   视图标题是程序性焦点容器（tabindex=-1，非 Tab 停靠点），不画指示框，避免切换后标题被框住 */
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:3px}
+h1[tabindex="-1"]:focus,h2[tabindex="-1"]:focus{outline:none}
+
+/* 圆角收敛：大容器 14 / 卡片 12 / 按钮 9 / 胶囊 99 */
+.panel,.life-stage,.cross-canvas,.cross-side{border-radius:var(--r-panel)}
+.res-frame,.res-about{border-radius:var(--r-panel)}
+.composer{border-radius:var(--r-panel)}
+.msg,.source,.pcard,.res-card,.guide-q,.gp-canvas,.quote-box{border-radius:var(--r-card)}
+.chip,.pill,.tag,.live,.legend button{border-radius:var(--r-pill)}
+nav button,.tbtn,.life-ctrl button,.detail-actions button,.guide-btns button,.res-tab,#openRes,.jump{border-radius:var(--r-btn)}
+
+/* 三级按钮：实心朱红=前进类主行动；红底描边=查看证据；灰描边=次要/跨模块 */
+button.b1,.composer button#send.b1,.life-ctrl button.b1{background:var(--red);border:1px solid var(--red);
+  color:#fff;font-weight:600;transition:background var(--t-fast) var(--ease),transform var(--t-fast) var(--ease)}
+button.b1:hover{background:var(--red2);border-color:var(--red2);transform:translateY(-1px)}
+button.b2,.srcbar button.b2{background:var(--redbg);border:1px solid var(--red);color:var(--red);
+  font-weight:600;transition:background var(--t-fast) var(--ease)}
+button.b2:hover{background:var(--red);color:#fff}
+button.b3,.life-ctrl button.b3,.detail-actions button.b3,.jump.b3{background:transparent;
+  border:1px solid var(--line);color:var(--ink2);transition:border-color var(--t-fast) var(--ease),color var(--t-fast) var(--ease)}
+button.b3:hover{border-color:var(--ink3);color:var(--ink)}
+.detail-actions button.b2:hover{border-color:var(--red);color:#fff}
+#send{background:var(--red);border:1px solid var(--red);color:#fff;font-weight:600}
+
+/* 楷体逐字证据卡：引文只给楷体，行高 2.0；档案编号等宽数字 */
+.source .qt,.source .qts .qt,.quote-box{font-family:var(--f-kai);font-size:14px;line-height:2.0;letter-spacing:.2px}
+.source .qh,.quote-box .qh{font-family:var(--f-mono);font-size:10.5px;letter-spacing:1.2px;
+  color:var(--ink3);margin-bottom:6px}
+.source .sh{font-family:var(--f-serif);font-size:12px;letter-spacing:.3px}
+.arch-no{display:block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:1px;
+  color:var(--ink3);margin:0 0 7px;padding-bottom:6px;border-bottom:1px dashed var(--line)}
+/* 命中关键词：旧金色「荧光笔划线」，像批注而非变色 */
+.hl{background:linear-gradient(to bottom,transparent 56%,rgba(176,138,75,.45) 56%,rgba(176,138,75,.45) 92%,transparent 92%);
+  color:inherit;padding:0 1px}
+body.night .hl{background:linear-gradient(to bottom,transparent 56%,rgba(210,172,112,.42) 56%,rgba(210,172,112,.42) 92%,transparent 92%)}
+
+/* 首屏「入口仪式」：超大低透明宋体「档」字水印 + 拨片胶囊（保留同屏图谱） */
+.hero{position:relative}
+.hero::after{content:"档";position:absolute;right:2%;top:-58px;font-family:var(--f-serif);
+  font-size:230px;line-height:1;color:var(--ink);opacity:.05;pointer-events:none;user-select:none}
+.hero h1{letter-spacing:3px}
+.presets .chip{padding:8px 16px;font-size:13px;border-radius:var(--r-pill);
+  transition:background var(--t-fast) var(--ease),border-color var(--t-fast) var(--ease),transform var(--t-fast) var(--ease)}
+.presets .chip:hover{background:var(--redbg);border-color:var(--red);color:var(--red)}
+@media(max-width:640px){.hero::after{font-size:150px;top:-20px;right:-6px}}
+body.night .hero::after{opacity:.028}
+
+/* 翻档案 loading：纸片翻动替代通用步骤文字，文案轮播 */
+.arch-load{display:flex;align-items:center;gap:14px;padding:8px 2px 4px;min-height:52px}
+.arch-pages{position:relative;width:42px;height:34px;flex:none}
+.arch-pages i{position:absolute;left:0;top:0;width:32px;height:30px;border:1px solid var(--line);
+  border-radius:2px 6px 6px 6px;background:var(--solid);box-shadow:var(--shadow2);
+  transform-origin:bottom left;animation:pageFlip 1.25s var(--ease) infinite}
+.arch-pages i:nth-child(1){animation-delay:0s;opacity:.55}
+.arch-pages i:nth-child(2){animation-delay:.16s;opacity:.75}
+.arch-pages i:nth-child(3){animation-delay:.32s}
+@keyframes pageFlip{0%,100%{transform:rotate(0) translateY(0)}45%{transform:rotate(-13deg) translateY(-7px)}}
+.arch-txt{font-family:var(--f-serif);font-size:12.5px;color:var(--ink2);letter-spacing:.5px}
+.arch-txt::after{content:"";animation:dots 1.6s steps(4,end) infinite}
+@keyframes dots{0%{content:""}25%{content:"·"}50%{content:"··"}75%,100%{content:"···"}}
+/* 空态：不给死胡同，给可点相似问句 */
+.empty-hint{margin:12px 0 0;padding:12px 14px;background:var(--bg2);border-left:2px solid var(--gold);
+  border-radius:0 var(--r-card) var(--r-card) 0;font-family:var(--f-serif);font-size:13px;color:var(--ink2)}
+.empty-hint .eq{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}
+.notice.err{background:var(--bg2);border-left:2px solid var(--red)}
+
+/* 人生链路：年代标尺 / 事件分级 / 路径动画 / 漫游进度 */
+.ruler-line{stroke:var(--line);stroke-width:1}
+.ruler-tick{stroke:var(--ink3);stroke-width:1}
+.ruler-yr{font-size:11.5px;fill:var(--ink3);font-family:var(--f-mono);letter-spacing:.5px}
+.ruler-cap{font-size:10.5px;fill:var(--ink3);font-family:var(--f-serif);letter-spacing:1px}
+/* 用 clip-path 从左往右「走出」虚线路径，保留 stroke-dasharray:5 8 的墨线质感 */
+.life-trail{animation:trailReveal 1.2s var(--ease) both}
+@keyframes trailReveal{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.station{animation:stationIn .42s var(--ease) both}
+@keyframes stationIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+.station{transform-box:fill-box;transform-origin:center}
+.station .hit{fill:transparent}
+.station .cap{font-size:11.5px}
+.station.big .cap{font-weight:600}
+.life-scroll{cursor:grab}
+.life-scroll:active{cursor:grabbing}
+.scroll-tip{font-size:10.5px;color:var(--ink3);text-align:right;padding:5px 16px 0;
+  font-family:var(--f-serif);letter-spacing:.5px}
+.walk-bar{display:inline-block;width:64px;height:3px;background:var(--line);border-radius:2px;
+  vertical-align:middle;margin:0 8px;overflow:hidden}
+.walk-bar i{display:block;height:100%;width:0;background:var(--gold)}
+.walk-bar.run i{animation:walkFill 4s linear forwards}
+@keyframes walkFill{from{width:0}to{width:100%}}
+@media(prefers-reduced-motion:reduce){.life-trail{clip-path:none;animation:none}
+  .station{animation:none}.arch-pages i{animation:none}.walk-bar.run i{animation:none;width:100%}}
+
+/* 轨迹交叉：线型编码（实线/虚线/点线），色弱也能读 */
+.cross-legend i{height:0;width:20px;border-radius:0;border-top:3px solid;background:none!important;vertical-align:middle}
+.cross-legend i.dash{border-top-style:dashed}
+.cross-legend i.dot{border-top-style:dotted}
+/* 夜读下紫灰提亮，保证压深底对比度（轨迹交叉与人生链路共用） */
+body.night #crossSvg [stroke="#5A4B8A"],body.night #lifeSvg [stroke="#5A4B8A"]{stroke:var(--purple)}
+body.night #crossSvg [fill="#5A4B8A"],body.night #lifeSvg [fill="#5A4B8A"]{fill:var(--purple)}
+body.night .cross-legend i.dot{border-top-color:var(--purple)!important}
+
+/* 证据先行：依据链与来源卡先落位，正文结论随后浮现（缓一拍，像老人讲事） */
+.answer .chain,.answer .srcbar,.answer .sources,.answer .chain-title{animation:rise .4s var(--ease) both}
+.answer .prose{animation:rise .45s var(--ease) both;animation-delay:.16s}
+.answer .item{animation:rise .4s var(--ease) both}
+@media(prefers-reduced-motion:reduce){.answer .prose,.answer .chain,.answer .srcbar,
+  .answer .sources,.answer .chain-title,.answer .item{animation:none}}
+
+/* 熄灯夜读首次欢迎语 */
+.night-toast{position:fixed;left:50%;bottom:34px;transform:translateX(-50%);z-index:60;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-pill);
+  padding:10px 22px;font-family:var(--f-serif);font-size:13px;letter-spacing:1px;
+  color:var(--ink2);box-shadow:var(--shadow);animation:toastIn .4s var(--ease) both;
+  transition:opacity var(--t-mid) var(--ease)}
+@keyframes toastIn{from{opacity:0;transform:translate(-50%,10px)}to{opacity:1;transform:translate(-50%,0)}}
+
+/* 移动端导航：不收缩、不折行，横向滚动而非把中文压成竖排 */
+@media(max-width:640px){
+  nav{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    /* 右缘渐隐，暗示后面还有导航项可横滑 */
+    -webkit-mask-image:linear-gradient(to right,#000 0,#000 calc(100% - 34px),transparent 100%);
+    mask-image:linear-gradient(to right,#000 0,#000 calc(100% - 34px),transparent 100%)}
+  nav button{flex:0 0 auto;white-space:nowrap;padding:8px 15px}
+  .top-right{flex-wrap:nowrap}
+  .top-right .pill{white-space:nowrap}
+}
+/* 触控目标 ≥44px（粗指针设备） */
+@media(pointer:coarse){
+  nav button,.tbtn,.chip,.life-ctrl button,.detail-actions button,.guide-btns button{min-height:44px}
+  .presets .chip{padding:10px 16px}
+}
+/* ==========================================================================
+   移动端适配 v3（2026-11-13）
+   纯追加覆盖层，只作用于 ≤640px；桌面端规则逐字节不受影响，可整体删除回退。
+   依据 390×844 / 360×800 真实移动视口实测定位的六个根因：
+     ① nav 的 flex:1 与 width:100% 冲突 → 导航被压到 98–128px，四个入口几乎不可见；
+     ② askgrid 的 1fr = minmax(auto,1fr)，被 min-content 撑成固定 374.891px，
+        360px 屏上卡片右缘到 389px 被直接裁掉；改 minmax(0,1fr) 阻断；
+     ③ 输入框 15px < 16px，iOS Safari 聚焦时会自动放大整页；
+     ④ 六个预设问句换行占掉约 5 行首屏；
+     ⑤ 人生链路 2556px / 轨迹交叉 720px 需横滑，提示只有 10.5px 右对齐小字；
+     ⑦ 触控目标 26–40px，低于 WCAG 2.5.8 的 44px。
+   ========================================================================== */
+@media(max-width:640px){
+  /* ① 顶栏：品牌 + 熄灯夜读一行，导航独占满宽一行（四个入口全部可见） */
+  .top{padding:8px 12px 0;gap:8px;row-gap:0}
+  .brand{gap:8px}
+  .brand .seal{width:32px;height:32px;font-size:18px}
+  .brand b{font-size:17px;letter-spacing:2px}
+  .brand small{font-size:9px;letter-spacing:1.6px}
+  .top-right{margin-left:auto;gap:0}
+  .top-right .pill{display:none}          /* 口径信息在 D 板块六项指标中完整给出 */
+  #themeBtn{min-height:40px;padding:9px 12px;font-size:12px}
+  nav{flex:0 0 100%;width:100%;order:3;margin-top:6px;padding-bottom:7px;
+    overflow-x:auto;-webkit-overflow-scrolling:touch;
+    -webkit-mask-image:none;mask-image:none;  /* 满宽后无需渐隐，避免末项被淡化 */
+    justify-content:space-between;gap:2px}
+  nav button{flex:1 0 auto;min-height:44px;padding:10px 8px;font-size:13px;white-space:nowrap}
+
+  /* ② 栅格：minmax(0,1fr) 阻断 min-content 撑宽，卡片不再被裁 */
+  .askgrid,.cross-wrap{grid-template-columns:minmax(0,1fr);gap:14px}
+  .chat,.graphpanel,.cross-canvas,.cross-side,.life-stage,.res-frame{min-width:0;max-width:100%}
+  main{padding:0 12px 46px}
+  .hero{padding:26px 0 18px;overflow:hidden}
+  .hero h1{font-size:27px;line-height:1.4;letter-spacing:1px}
+  .hero::after{font-size:110px;top:-14px;right:0;opacity:.04}
+  .lede{font-size:14px;line-height:1.8}
+  body{font-size:15px}
+
+  /* ③ 输入：16px 防 iOS 自动缩放；按钮不再吃掉占位文字 */
+  .composer{padding:5px;gap:6px}
+  .composer input{min-width:0;flex:1 1 0;font-size:16px;padding:10px 8px}
+  .composer button{flex:0 0 auto;min-height:44px;padding:0 13px;font-size:13.5px}
+  .composer button span{margin-left:3px}
+
+  /* ④ 预设问句：单行横滑，把首屏还给内容与图谱 */
+  .presets{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    padding:4px 2px 8px;margin:10px 0 4px;gap:8px;
+    -webkit-mask-image:linear-gradient(to right,#000 0,#000 calc(100% - 26px),transparent 100%);
+    mask-image:linear-gradient(to right,#000 0,#000 calc(100% - 26px),transparent 100%)}
+  .presets .chip{flex:0 0 auto;min-height:44px;padding:10px 15px;font-size:13px;white-space:nowrap}
+  .mode-note,.modelbar,.guide-title,.start-title,.start-hint,.res-fallback{font-size:12.5px}
+  .chat{padding:16px 14px;min-height:0}
+  .graphpanel{padding:16px 14px}
+  .gp-head b{font-size:16px}
+
+  /* ⑤ 人生链路 / 轨迹交叉：横滑提示醒目化，滚动条可触 */
+  .ruler-cap,.scroll-tip{font-size:12px}
+  .scroll-tip{text-align:center;padding:9px 12px 2px;color:var(--red);letter-spacing:1px}
+  #rulerCap{font-size:12px;padding:12px 14px 0!important;line-height:1.7}
+  .life-scroll,.cross-canvas{-webkit-overflow-scrolling:touch;scrollbar-width:auto}
+  .life-scroll::-webkit-scrollbar,.cross-canvas::-webkit-scrollbar{height:8px}
+  .life-scroll::-webkit-scrollbar-thumb,.cross-canvas::-webkit-scrollbar-thumb{
+    background:var(--ink3);border-radius:8px}
+  .cross-canvas{padding:8px}
+  .cross-side{padding:18px 16px;min-height:0}
+  .cross-legend{gap:10px;font-size:12.5px}
+
+  /* ⑥ 详情 / 指标 / 说明：窄屏留白与字号收敛 */
+  .sec-head{padding:28px 0 16px}
+  .sec-head h2{font-size:24px;line-height:1.45}
+  .sec-head p{font-size:13.5px;line-height:1.85}
+  .life-detail{padding:18px 16px 22px;gap:12px}
+  .life-detail h3{font-size:19px}
+  .quote-box{font-size:13px}
+  .life-ctrl{flex-wrap:wrap;gap:8px;padding:11px 14px}
+  .life-ctrl .pos{order:-1;width:100%;text-align:center}
+  .life-ctrl button{min-height:44px}
+  .walk-bar{width:40px;margin:0 4px}
+  .life-tabs{gap:7px;margin-bottom:14px}
+  .life-tabs button{min-height:44px;padding:9px 13px;font-size:13px}
+  .res-grid{gap:8px}
+  .res-card{padding:10px 12px}
+  .res-card .l{font-size:11px;white-space:normal}
+  .res-about{padding:18px 16px;margin-top:14px}
+  .res-about p,.res-about .intro-lead,.res-scope,.res-about .intro-foot{font-size:13px;line-height:1.9}
+  .res-frame-head{padding:11px 13px;gap:9px}
+  .res-tab,#openRes{min-height:44px;padding:9px 12px;font-size:12.5px}
+  .res-scope{padding:11px 13px}
+
+  /* ⑦ 触控目标 ≥44px（WCAG 2.5.8；行内引用角标按 inline 例外单独放大） */
+  .legend button,.guide-btns button,.detail-actions button,.srcbar button,
+  .chain .cn,.source .more,.follow .chip,.jump,.res-tab,#openRes,#send,
+  .tbtn,.chip,.life-ctrl button,.guide-btns button{min-height:44px}
+  .legend button{padding:9px 13px;font-size:12.5px}
+  .cite{width:24px;height:24px;font-size:12px;margin-right:3px}
+  .station .cap{font-size:12.5px}
+  .ruler-yr{font-size:12.5px}
+  footer{padding:18px 12px 28px;font-size:12px;line-height:1.9}
+}
+/* 横滑提示只在窄屏出现；桌面图表一屏可见，不需要提示 */
+@media(min-width:641px){.cross-tip{display:none}}
+/* 粗指针平板保留 44px 底线，不影响桌面鼠标 */
+@media(pointer:coarse) and (min-width:641px){
+  .legend button,.guide-btns button,.res-tab,#openRes{min-height:44px}
+}
 </style>
 </head>
 <body>
@@ -291,8 +557,8 @@ footer{border-top:1px solid var(--line);padding:22px 34px 34px;max-width:1440px;
 <div class="wrap">
 <header class="top">
   <div class="brand"><span class="seal">记</span><div><b>归途</b><small>ORAL HISTORY ATLAS</small></div></div>
-  <nav id="nav">
-    <button data-view="ask" class="on">问一问</button>
+  <nav id="nav" aria-label="主导航">
+    <button data-view="ask" class="on" aria-current="page">问一问</button>
     <button data-view="life">人生链路</button>
     <button data-view="cross">轨迹交叉</button>
     <button data-view="research">口述史图谱</button>
@@ -304,12 +570,12 @@ footer{border-top:1px solid var(--line);padding:22px 34px 34px;max-width:1440px;
 <section class="view on" id="v-ask">
   <div class="hero">
     <div class="eyebrow">AI 问答 · 句句有据</div>
-    <h1>想听谁的故事，<em>直接问就好。</em></h1>
+    <h1 tabindex="-1">想听谁的故事，<em>直接问就好。</em></h1>
     <p class="lede">不用翻访谈稿。问一句，我从口述史图谱里找出相关经历，讲给你听；想核实，随时点开当时的原话。</p>
   </div>
   <div class="askgrid">
     <div class="panel chat">
-      <div class="composer"><input id="q" placeholder="例如：陈海峰年轻时都做过什么？" autocomplete="off"><button id="send">问一问<span>→</span></button></div>
+      <div class="composer"><input id="q" placeholder="例如：陈海峰年轻时都做过什么？" autocomplete="off" aria-label="输入你的问题"><button id="send" class="b1">问一问<span>→</span></button></div>
       <div class="presets" id="presets"></div>
       <div class="mode-note" id="modeNote">当前为<b>离线演示</b>：回答由「检索 → 筛出真正能回答的事件 → 逐字证据编排」本地生成，未调用任何大模型 API。启动本地代理后自动切换，引用回链与来源卡片格式不变。</div>
       <div class="modelbar" id="modelBar" hidden><span>回答模型</span>
@@ -332,15 +598,17 @@ footer{border-top:1px solid var(--line);padding:22px 34px 34px;max-width:1440px;
 
 <section class="view" id="v-life">
   <div class="sec-head"><div class="eyebrow">B · 人生链路</div>
-    <h2>一条路，<em>一站一站走过去。</em></h2>
-    <p>按事件发生的历史顺序串成旅途。点一站，或按「下一站」往前走；每一站都能回到当时的口述原话。</p></div>
-  <div class="life-tabs" id="lifeTabs"></div>
+    <h2 tabindex="-1">一条路，<em>一站一站走过去。</em></h2>
+    <p>按事件发生的历史顺序串成旅途，站点间距按真实年份排布——挨得近的是密集的那几年，留白处是平静教书的岁月。点一站，或按「下一站」往前走；每一站都能回到当时的口述原话。</p></div>
+  <div class="life-tabs" id="lifeTabs" role="tablist" aria-label="选择受访者"></div>
   <div class="life-stage">
-    <div class="life-scroll" id="lifeScroll"><svg id="lifeSvg" xmlns="http://www.w3.org/2000/svg"></svg></div>
+    <div class="ruler-cap" id="rulerCap" style="padding:12px 20px 0">年代标尺 · 按标注起始年定位，相对时间不折算</div>
+    <div class="life-scroll" id="lifeScroll"><svg id="lifeSvg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="人生链路时间轴"></svg></div>
+    <div class="scroll-tip">← 左右拖动，看完这一生 →</div>
     <div class="life-ctrl">
-      <button id="prevStation">← 上一站</button>
+      <button id="prevStation" class="b3">← 上一站</button>
       <span class="pos" id="stationPos"></span>
-      <span><button id="autoWalk">自动漫游</button> <button class="primary" id="nextStation">下一站 →</button></span>
+      <span><span class="walk-bar" id="walkBar" aria-hidden="true"><i></i></span><button id="autoWalk" class="b3">自动漫游</button> <button id="nextStation" class="b1">下一站 →</button></span>
     </div>
     <div class="life-detail" id="lifeDetail"></div>
   </div>
@@ -348,9 +616,10 @@ footer{border-top:1px solid var(--line);padding:22px 34px 34px;max-width:1440px;
 
 <section class="view" id="v-cross">
   <div class="sec-head"><div class="eyebrow">C · 轨迹交叉</div>
-    <h2>他们曾在<em>同一处相遇</em>，又各自走开。</h2>
+    <h2 tabindex="-1">他们曾在<em>同一处相遇</em>，又各自走开。</h2>
     <p>同一年代、同一支军队、同一个对手——把不同人的轨迹叠在一起，交点会自己浮出来。</p></div>
   <div class="cross-legend" id="crossLegend"></div>
+  <div class="scroll-tip cross-tip">← 左右拖动，看全三条人生线 →</div>
   <div class="cross-wrap">
     <div class="cross-canvas"><svg id="crossSvg" viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg"></svg></div>
     <div class="cross-side" id="crossSide"></div>
@@ -360,7 +629,7 @@ footer{border-top:1px solid var(--line);padding:22px 34px 34px;max-width:1440px;
 
 <section class="view" id="v-research">
   <div class="sec-head"><div class="eyebrow">D · 口述史图谱</div>
-    <h2>这一切背后的<em>科研成果</em>。</h2>
+    <h2 tabindex="-1">这一切背后的<em>科研成果</em>。</h2>
     <p>下面汇总这套图谱的数据规模、标注口径，以及可逐层展开的完整展示。</p></div>
   <div class="res-grid" id="resGrid"></div>
   <div class="res-frame">
@@ -426,14 +695,27 @@ var rendered={ask:1,life:0,cross:0,research:0};
 function switchView(v){
   if(!$('#v-'+v))return;
   S.view=v;$$('.view').forEach(function(x){x.classList.remove('on');});$('#v-'+v).classList.add('on');
-  $$('#nav button').forEach(function(b){b.classList.toggle('on',b.dataset.view===v);});
+  $$('#nav button').forEach(function(b){
+    var on=b.dataset.view===v;b.classList.toggle('on',on);
+    if(on)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');
+  });
   if(!rendered[v]){rendered[v]=1;if(v==='life')renderLife();if(v==='cross')renderCross();if(v==='research')renderResearch();}
   try{history.replaceState(null,'','#'+v);}catch(e){}
   window.scrollTo({top:0,behavior:'smooth'});
+  /* 视图切换后把焦点交给新视图标题，键盘与读屏用户不迷路 */
+  var hd=$('#v-'+v+' h1[tabindex],#v-'+v+' h2[tabindex]');
+  if(hd){try{hd.focus({preventScroll:true});}catch(e){}}
 }
 $$('#nav button').forEach(function(b){b.onclick=function(){switchView(b.dataset.view);};});
 $('#themeBtn').onclick=function(){
   var n=document.body.classList.toggle('night');this.textContent=n?'点灯展卷':'熄灯夜读';
+  /* 熄灯夜读切换只欢迎一次，不每次弹 */
+  if(n&&!S.nightWelcomed){
+    S.nightWelcomed=1;
+    var t=el('div','night-toast','灯灭了，坐下来慢慢听。');
+    document.body.appendChild(t);
+    setTimeout(function(){t.style.opacity='0';setTimeout(function(){if(t.parentNode)t.parentNode.removeChild(t);},320);},2600);
+  }
   // 内嵌工作台在 Shadow DOM 内，夜读态由门户统一下发，避免内外两套主题打架
   try{
     var h=document.getElementById('benchHost');
@@ -630,6 +912,16 @@ function inlineText(s,evs){
     return evs&&evs[i]?'<button class="cite" data-src="'+i+'">'+(i+1)+'</button>':'';
   }).join('');
 }
+/* 逐字原话里给命中词画一道旧金荧光笔：先转义再整体匹配，避免嵌套与注入 */
+function escRe(s){return String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
+function markQuote(text,words){
+  var s=esc(text);
+  var ws=(words||[]).filter(function(w){return w&&String(w).length>=2;})
+    .map(function(w){return esc(String(w));}).sort(function(a,b){return b.length-a.length;});
+  if(!ws.length)return s;
+  try{return s.replace(new RegExp('('+ws.map(escRe).join('|')+')','g'),'<span class="hl">$1</span>');}
+  catch(e){return s;}
+}
 function proseCurated(ctx){
   return (ctx.curated.paragraphs||[]).map(function(p){
     return '<p class="prose">'+inlineText(p,ctx.evs)+'</p>';
@@ -812,8 +1104,9 @@ function detectLLM(){
 updateModeNote();
 try{detectLLM();}catch(e){}
 function renderAnswer(res,q,box){
+  var ld=$('#archLoad',box);if(ld&&ld.parentNode)ld.parentNode.removeChild(ld);
   var ans=$('#ans',box),evs=res.evs||[],h='';
-  if(res.notice)h+='<div class="notice">'+esc(res.notice)+'</div>';
+  if(res.notice)h+='<div class="notice err">'+esc(res.notice)+'</div>';
   if(res.html)h+=res.html;
   else if(res.text){
     h+=String(res.text).split(/\n+/).filter(Boolean).map(function(p){
@@ -832,21 +1125,29 @@ function renderAnswer(res,q,box){
     h+='<div class="srcbar"><span>依据 '+evs.length+' 段事件记录 · '
       +evs.filter(function(e){return srcQuotes(e).length;}).length+' 段采访原话'
       +(res.extra&&res.extra.length?' · 已筛掉 '+res.extra.length+' 段只沾边的背景':'')+'</span>'
-      +'<button id="srcToggle">查看采访原文 ↓</button></div><div class="sources" id="srcs"></div>';
+      +'<button id="srcToggle" class="b2">查看采访原文 ↓</button></div><div class="sources" id="srcs"></div>';
+  }
+  /* 空态：不给死胡同，留两个可点的相似问句 */
+  if(!evs.length&&!res.text&&/没有找到|没有能支撑/.test(res.html||'')){
+    h+='<div class="empty-hint">这段经历还没被讲过。换个人名、年份或地点试试 ——<div class="eq">'
+      +'<button class="chip" data-try="陈海峰年轻时都做过什么？">陈海峰年轻时都做过什么？</button>'
+      +'<button class="chip" data-try="1937 年他们在哪儿？">1937 年他们在哪儿？</button></div></div>';
   }
   h+='<div class="follow"></div>';
   (res.jumps||[]).forEach(function(v){
-    h+='<button class="jump" data-go="'+v+'">'
+    h+='<button class="jump b3" data-go="'+v+'">'
       +(v==='cross'?'这几个人的交集，画成图更好看 →':'把这条人生链路走一遍 →')+'</button>';
   });
   ans.innerHTML=h;
   if(evs.length){
     var srcs=$('#srcs',box);
+    var hitWords=keywordHits(q).concat(personHints(q),(String(q).match(/19\d{2}/g)||[]));
     evs.forEach(function(e,i){
       var qs=srcQuotes(e),cause=(e.causes||[]).concat(e.purposes||[])[0];
-      var d=el('div','source','<div class="sh">['+(i+1)+'] '+esc(e.docTitle)+' · '+esc(e.name)+'</div>'
+      var d=el('div','source','<div class="arch-no">档案 '+esc(e.docTitle||e.doc)+' · '+esc(e.id)+'</div>'
+        +'<div class="sh">['+(i+1)+'] '+esc(e.docTitle)+' · '+esc(e.name)+'</div>'
         +(cause?'<div class="ct">因果标注：'+esc(cause)+'</div>':'')
-        +'<div class="qts">'+(qs.length?qs.map(function(q){return '<div class="qt">'+esc(q.text)+'</div>';}).join('')
+        +'<div class="qts">'+(qs.length?qs.map(function(x){return '<div class="qt">'+markQuote(x.text,hitWords)+'</div>';}).join('')
           :'<div class="qt">该事件暂未挂接逐字片段。</div>')+'</div>'
         +(qs.length?'<div class="more">点此展开 / 收起整段原话</div>':''));
       if(qs.length)d.onclick=function(){$('.qts',d).classList.toggle('full');};
@@ -865,6 +1166,7 @@ function renderAnswer(res,q,box){
     var b=el('button','chip',esc(f));b.onclick=function(){ask(f);};fol.appendChild(b);
   });
   $$('[data-go]',box).forEach(function(b){b.onclick=function(){switchView(b.dataset.go);};});
+  $$('[data-try]',box).forEach(function(b){b.onclick=function(){ask(b.dataset.try);};});
   highlightGraph(evs);
   if(evs.length)$('#gpSub').textContent='已按这条依据链点亮相关实体 · 点实体继续问';
   box.scrollIntoView({behavior:'smooth',block:'nearest'});
@@ -891,21 +1193,23 @@ function renderStart(){
     }).join('')+'</div><div class="start-hint">「你这一生，到底是怎么活的？」—— 从上面挑一个问题，或直接问出来。</div></div>';
   $$('.pcard',th).forEach(function(b){b.onclick=function(){ask(b.dataset.p+'年轻时都做过什么？');};});
 }
+var ARCH_HTML='<div class="arch-load" id="archLoad"><div class="arch-pages"><i></i><i></i><i></i></div>'
+  +'<span class="arch-txt" id="archTxt">正在翻 '+DB.stats.docs+' 份访谈</span></div>';
 function ask(q){
   q=(q||'').trim();if(!q||S.busy)return;
   if(S.view!=='ask')switchView('ask');
   $('#q').value=q;
   var th=$('#thread');if($('.start',th))th.innerHTML='';
   var me=el('div','msg me','<div class="who me">你问</div>'+esc(q));th.appendChild(me);
-  var box=el('div','msg ai','<div class="who">归途 · 有据可查</div><div class="steps" id="steps"></div><div class="answer" id="ans"></div>');
+  var box=el('div','msg ai','<div class="who">归途 · 有据可查</div>'+ARCH_HTML+'<div class="answer" id="ans"></div>');
   th.appendChild(box);
-  var steps=['正在查阅 '+DB.stats.docs+' 份访谈与 '+DB.stats.events+' 个事件…',
-    '筛出真正能回答这个问题的事件…','回到逐字原话，核对因果与图谱…','把线索写成一段能读的回答…'];
-  var sd=$('#steps',box);steps.forEach(function(s){sd.appendChild(el('div','',esc(s)));});
+  var steps=['正在翻 '+DB.stats.docs+' 份访谈','筛出真正能回答的事件',
+    '回到逐字原话，核对因果与图谱','把线索写成一段能读的回答'];
+  var txt=$('#archTxt',box);if(txt)txt.textContent=steps[0];
   S.busy=true;
   var i=0;var timer=setInterval(function(){
-    if(sd.children[i])sd.children[i].classList.add('done');
     i++;
+    if(txt)txt.textContent=steps[Math.min(i,steps.length-1)];
     if(i>=steps.length){clearInterval(timer);setTimeout(function(){finishAnswer(q,box);},200);}
   },220);
   th.scrollIntoView({behavior:'smooth',block:'nearest'});
@@ -913,7 +1217,11 @@ function ask(q){
 function finishAnswer(q,box){
   var r=retrieve(q),ctx=buildChain(q,r),ans=$('#ans',box);
   var useLLM=AnswerEngine.mode==='llm'&&ctx.evs.length>0;
-  if(useLLM)ans.innerHTML='<div class="thinking">正在让大模型依据这几段原话组织回答…</div>';
+  if(useLLM){
+    var at=$('#archTxt',box);if(at)at.textContent='正在让大模型依据这几段原话组织回答';
+  }else{
+    var ld=$('#archLoad',box);if(ld)ld.parentNode.removeChild(ld);
+  }
   var out;
   try{out=(useLLM?AnswerEngine.compose:composeOffline)(q,ctx);}
   catch(e){out=composeOffline(q,ctx);}
@@ -1050,35 +1358,89 @@ function renderLifeTabs(){
     b.onclick=function(){S.lifePerson=p.name;S.lifeIdx=0;stopAuto();renderLifeTabs();renderLife();};box.appendChild(b);
   });
 }
+/* 站点语义类别（纯展示层：由既有 icon 归类，不新增标注字段） */
+var LIFE_CAT={press:'从业',medic:'救护',cap:'从军',book:'求学',flag:'组织',
+  train:'行军',plow:'劳作',house:'家事',mountain:'遇险',star:'改编'};
+function lifeCat(e){return LIFE_CAT[e.icon]||'经历';}
+/* 大站＝有过程阶段或因果标注的转折事件（数据驱动，不编造） */
+function isBigStation(e){
+  return (e.stages&&e.stages.length>=2)||(e.causes&&e.causes.length>0)||(e.purposes&&e.purposes.length>0);
+}
+function lifeYearNum(e){var m=/^(\d{4})/.exec(e.timeStart||'');return m?+m[1]:null;}
+/* 按真实年份排布：相邻两站间距 = 基础间距 + 年份跨度带来的留白。
+   同年多站自然拥挤，空窗年份自动留白；x 严格单调递增，路径不折返。
+   只算展示坐标，不改 historical_order / 不折算相对时间。 */
+function lifeLayout(evs){
+  /* GAP 须大于两行标签宽度（7 字 × 11px ≈ 77px），否则密集年份标签会重叠 */
+  var X0=104,GAP=98,PER_YEAR=62,CAP_YEARS=12;
+  var ys=evs.map(lifeYearNum),known=ys.filter(function(y){return y!=null;});
+  var lo=known.length?Math.min.apply(null,known):1931,
+      hi=known.length?Math.max.apply(null,known):1939;
+  var xs=[],tick={},prevY=known.length?known[0]:lo;
+  ys.forEach(function(y,i){
+    var yy=(y==null?prevY:y);
+    var x=i===0?X0:xs[i-1]+GAP+Math.min(Math.max(0,yy-prevY),CAP_YEARS)*PER_YEAR;
+    xs.push(x);
+    if(y!=null){if(tick[y]==null)tick[y]=x;prevY=y;}
+  });
+  var W=Math.max(720,xs[xs.length-1]+X0);
+  return {xs:xs,ys:ys,W:W,lo:lo,hi:hi,tick:tick};
+}
 function renderLife(){
   var evs=personEvents(S.lifePerson),p=DB.people.filter(function(x){return x.name===S.lifePerson;})[0];
-  var col=p?p.color:'#A8402F',N=evs.length,W=180+N*172,H=330;
+  var col=p?p.color:'#A8402F',N=evs.length;
+  var L=lifeLayout(evs),W=L.W,H=372,Y0=172;
   var svg=$('#lifeSvg');svg.setAttribute('width',W);svg.setAttribute('height',H);svg.setAttribute('viewBox','0 0 '+W+' '+H);
-  var pts=evs.map(function(e,i){return [110+i*172,158+Math.sin(i*.82)*44];});
+  var pts=evs.map(function(e,i){return [L.xs[i],Y0+Math.sin(i*.82)*38];});
   var h='';
-  h+='<path d="M0 268 Q '+W*.25+' 238 '+W*.5+' 266 T '+W+' 258 L '+W+' '+H+' L 0 '+H+' Z" fill="var(--bg2)" opacity=".8"/>';
-  [[120,52],[W*.42,40],[W*.73,62]].forEach(function(c){
+  /* 年代标尺：刻度落在该年份首次出现的站点上，密集年份一目了然 */
+  var tk=Object.keys(L.tick).map(Number).sort(function(a,b){return a-b;});
+  h+='<g class="life-ruler"><line class="ruler-line" x1="'+L.xs[0]+'" y1="46" x2="'+(W-60)+'" y2="46"/>';
+  tk.forEach(function(y){
+    var x=L.tick[y];
+    h+='<line class="ruler-tick" x1="'+x+'" y1="40" x2="'+x+'" y2="52"/>'
+      +'<text class="ruler-yr" x="'+x+'" y="32" text-anchor="middle">'+y+'</text>';
+  });
+  h+='</g>';
+  h+='<path d="M0 306 Q '+W*.25+' 278 '+W*.5+' 304 T '+W+' 296 L '+W+' '+H+' L 0 '+H+' Z" fill="var(--bg2)" opacity=".8"/>';
+  [[150,86],[W*.44,74],[W*.76,92]].forEach(function(c){
     h+='<path d="M'+(c[0]-26)+' '+c[1]+' q 10 -12 22 -3 q 9 -9 20 2" fill="none" stroke="var(--line)" stroke-width="1.6" stroke-linecap="round"/>';
   });
-  h+='<path d="'+smooth(pts)+'" fill="none" stroke="var(--line)" stroke-width="2.4" stroke-dasharray="5 8" stroke-linecap="round"/>';
+  h+='<path class="life-trail" d="'+smooth(pts)+'" fill="none" stroke="var(--line)" stroke-width="2.4" stroke-dasharray="5 8" stroke-linecap="round"/>';
   for(var i=0;i<pts.length-1;i++){
     var seg=smooth([pts[i],pts[i+1]]);
     h+='<path d="'+seg+'" fill="none" stroke="'+(i<S.lifeIdx?col:'transparent')+'" stroke-width="3" stroke-linecap="round" opacity=".85"/>';
   }
+  var seenYear={};
   evs.forEach(function(e,i){
-    var x=pts[i][0],y=pts[i][1],cur=i===S.lifeIdx;
-    var l1=wrap2(e.name,9),l2=l1[1];
-    h+='<g class="station'+(cur?' cur':'')+'" data-i="'+i+'">'
-      +(cur?'<circle class="ring" cx="'+x+'" cy="'+y+'" r="34" fill="none" stroke="'+col+'" stroke-width="1.4" opacity=".6"/>':'')
-      +'<circle class="disc" cx="'+x+'" cy="'+y+'" r="'+(cur?31:26)+'" fill="var(--solid)" stroke="'+(cur?col:'var(--line)')+'" stroke-width="'+(cur?2:1.3)+'"/>'
-      +'<use href="#ic-'+e.icon+'" x="'+(x-19)+'" y="'+(y-20)+'" width="38" height="38" style="color:'+(cur?col:'var(--ink2)')+'"/>'
-      +'<text class="yr" x="'+x+'" y="'+(y-45)+'" text-anchor="middle">'+esc(yrOf(e))+'</text>'
-      +'<text class="cap" x="'+x+'" y="'+(y+52)+'" text-anchor="middle">'+esc(l1[0])+'</text>'
-      +(l2?'<text class="cap" x="'+x+'" y="'+(y+68)+'" text-anchor="middle">'+esc(l2)+'</text>':'')
+    var x=pts[i][0],y=pts[i][1],cur=i===S.lifeIdx,big=isBigStation(e);
+    var r=cur?25:(big?23:15),sz=Math.round(r*1.32);
+    var l1=wrap2(e.name,7),l2=l1[1];
+    /* 同年多站：年份只在标尺与该年首站出现一次，避免「1928 出现四次」的重复噪音 */
+    var yr=String(yrOf(e)),showYr=/^\d{4}$/.test(yr)&&!seenYear[yr];
+    if(/^\d{4}$/.test(yr))seenYear[yr]=1;
+    /* 标签奇偶错行：密集年份即使 x 相近，上下两排也不会互相压字 */
+    var dy=(i%2?32:0),capY=y+r+22+dy;
+    h+='<g class="station'+(cur?' cur':'')+(big?' big':'')+'" data-i="'+i+'" '
+      +'style="animation-delay:'+(i*60)+'ms" tabindex="0" role="button" '
+      +'aria-label="第 '+(i+1)+' 站 · '+esc(yr)+' · '+esc(e.name)+'">'
+      +'<title>'+esc(yr)+' · '+esc(lifeCat(e))+' · '+esc(e.name)+'</title>'
+      +(cur?'<circle class="ring" cx="'+x+'" cy="'+y+'" r="'+(r+10)+'" fill="none" stroke="'+col+'" stroke-width="1.4" opacity=".6"/>':'')
+      +'<circle class="hit" cx="'+x+'" cy="'+y+'" r="24"/>'
+      +'<circle class="disc" cx="'+x+'" cy="'+y+'" r="'+r+'" fill="var(--solid)" stroke="'+(cur?col:'var(--line)')+'" stroke-width="'+(cur?2:1.3)+'"/>'
+      +'<use href="#ic-'+e.icon+'" x="'+(x-sz/2)+'" y="'+(y-sz/2)+'" width="'+sz+'" height="'+sz+'" style="color:'+(cur?col:'var(--ink2)')+'"/>'
+      +(showYr?'<text class="yr" x="'+x+'" y="'+(y-r-14)+'" text-anchor="middle">'+esc(yr)+'</text>':'')
+      +'<text class="cap" x="'+x+'" y="'+capY+'" text-anchor="middle">'+esc(l1[0])+'</text>'
+      +(l2?'<text class="cap" x="'+x+'" y="'+(capY+16)+'" text-anchor="middle">'+esc(l2)+'</text>':'')
       +'</g>';
   });
   svg.innerHTML=h;
-  $$('.station',svg).forEach(function(g){g.onclick=function(){setStation(+g.dataset.i);};});
+  $$('.station',svg).forEach(function(g){
+    g.onclick=function(){setStation(+g.dataset.i);};
+    g.onkeydown=function(ev){if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();setStation(+g.dataset.i);}};
+  });
+  var rc=$('#rulerCap');
+  if(rc)rc.textContent='年代标尺 · '+L.lo+'—'+L.hi+' · 按标注起始年定位，相对时间不折算；大站＝有过程阶段或因果标注的转折';
   $('#stationPos').innerHTML='第 <b>'+(S.lifeIdx+1)+'</b> / '+N+' 站 · '+esc(S.lifePerson);
   renderLifeDetail(evs[S.lifeIdx]);
   var sc=$('#lifeScroll'),cx=pts[S.lifeIdx][0]-sc.clientWidth/2;
@@ -1089,6 +1451,7 @@ function renderLifeDetail(e){
   if(!e){$('#lifeDetail').innerHTML='';return;}
   var col=(DB.people.filter(function(x){return x.name===S.lifePerson;})[0]||{}).color||'#A8402F';
   var tags='<div class="tags"><span class="tag red">'+esc(yrOf(e))+(e.precision?' · '+(PREC[e.precision]||esc(e.precision)):'')+'</span>'
+    +'<span class="tag">'+esc(lifeCat(e))+(isBigStation(e)?' · 转折':'')+'</span>'
     +e.places.map(function(x){return '<span class="tag">'+esc(x.slice(0,20))+'</span>';}).join('')
     +e.orgs.slice(0,2).map(function(x){return '<span class="tag">'+esc(x.slice(0,16))+'</span>';}).join('')+'</div>';
   var stages=e.stages.length?'<div style="font-size:12.5px;color:var(--ink2);margin-top:8px"><b style="color:var(--ink)">这一站的过程：</b>'
@@ -1098,9 +1461,9 @@ function renderLifeDetail(e){
   $('#lifeDetail').innerHTML='<div class="big"><svg><use href="#ic-'+e.icon+'"></use></svg></div><div>'
     +'<h3>'+esc(e.name)+'</h3><div style="font-size:12px;color:var(--ink3)">'+esc(e.docTitle)+' · 按发生顺序第 '+e.h+' 站</div>'
     +tags+stages+quote
-    +'<div class="detail-actions"><button data-act="ask">在「问一问」里追问 →</button>'
-    +(q?'<button data-act="quote">展开这段采访原文</button>':'')
-    +'<button data-act="cross">看这一站和别人的交集 →</button></div></div>';
+    +'<div class="detail-actions"><button class="b3" data-act="ask">在「问一问」里追问 →</button>'
+    +(q?'<button class="b2" data-act="quote">展开这段采访原文</button>':'')
+    +'<button class="b3" data-act="cross">看这一站和别人的交集 →</button></div></div>';
   $$('#lifeDetail [data-act]').forEach(function(b){b.onclick=function(){
     var a=b.dataset.act;
     if(a==='ask')ask(e.person+'：'+e.name+'是怎么回事？');
@@ -1108,13 +1471,21 @@ function renderLifeDetail(e){
     if(a==='cross')switchView('cross');
   };});
 }
-function stopAuto(){if(S.auto){clearInterval(S.auto);S.auto=null;$('#autoWalk').textContent='自动漫游';}}
+function stopAuto(){if(S.auto){clearInterval(S.auto);S.auto=null;$('#autoWalk').textContent='自动漫游';}
+  var bar=$('#walkBar');if(bar)bar.classList.remove('run');}
+function runWalkBar(){var bar=$('#walkBar');if(!bar)return;
+  bar.classList.remove('run');void bar.offsetWidth;bar.classList.add('run');}
 $('#prevStation').onclick=function(){stopAuto();setStation(S.lifeIdx-1);};
 $('#nextStation').onclick=function(){stopAuto();setStation(S.lifeIdx+1);};
+/* 自动漫游：每站 4 秒，金色细进度条告知节奏，可随时暂停 */
 $('#autoWalk').onclick=function(){
   if(S.auto){stopAuto();return;}
   this.textContent='暂停漫游';var n=personEvents(S.lifePerson).length;
-  S.auto=setInterval(function(){if(S.lifeIdx>=n-1){stopAuto();return;}setStation(S.lifeIdx+1);},2300);
+  runWalkBar();
+  S.auto=setInterval(function(){
+    if(S.lifeIdx>=n-1){stopAuto();return;}
+    setStation(S.lifeIdx+1);runWalkBar();
+  },4000);
 };
 document.addEventListener('keydown',function(e){
   if(S.view!=='life'||/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;
@@ -1123,16 +1494,24 @@ document.addEventListener('keydown',function(e){
 });
 
 /* ---------- 轨迹交叉 ---------- */
+/* 四条线拉开色相 + 线型编码：颜色之外再叠实线/虚线/点线，色弱也能读。
+   纯展示层覆盖，不改 DB.people[].color（人生链路与图谱仍用原色）。 */
+/* 只管「线型」，色值一律取 DB.people[].color（由生成器统一定义，避免两处硬编码）。
+   实线 / 虚线 / 点线三种线型是颜色之外的第二重编码。 */
+var LINE_DASH=[{dash:'',cls:''},{dash:'11 7',cls:'dash'},{dash:'2 7',cls:'dot'}];
+function lineStyle(p,i){var d=LINE_DASH[i]||{dash:'',cls:''};return {c:p.color,dash:d.dash,cls:d.cls};}
 function renderCross(){
   var P=DB.people,C=DB.crosses,base={};
   P.forEach(function(p,i){base[p.name]=[96,210,324][i]||(96+i*100);});
   var X0=54,X1=946,XS=C.map(function(c,i){return 165+i*(640/Math.max(1,C.length-1));});
   if(C.length===1)XS=[500];
+  var curC=C[S.crossIdx]||null;
   var svg=$('#crossSvg'),h='';
   h+='<text x="54" y="30" font-size="11.5" fill="var(--ink3)">各自出发</text>'
     +'<text x="946" y="30" text-anchor="end" font-size="11.5" fill="var(--ink3)">又各自走开</text>';
   [96,210,324].forEach(function(y){h+='<line x1="40" y1="'+y+'" x2="960" y2="'+y+'" stroke="var(--line)" stroke-width="1" stroke-dasharray="2 8" opacity=".7"/>';});
-  P.forEach(function(p){
+  P.forEach(function(p,pi){
+    var st=lineStyle(p,pi),hot=!curC||curC.people.indexOf(p.name)>=0;
     var pts=[[X0,base[p.name]]];
     C.forEach(function(c,i){
       var join=c.people.indexOf(p.name)>=0;
@@ -1142,14 +1521,18 @@ function renderCross(){
     });
     pts.push([X1,base[p.name]]);
     var d=smooth(pts);
-    h+='<path d="'+d+'" fill="none" stroke="'+p.color+'" stroke-width="12" opacity=".07" stroke-linecap="round"/>'
-      +'<path d="'+d+'" fill="none" stroke="'+p.color+'" stroke-width="3.2" opacity=".88" stroke-linecap="round"/>';
-    h+='<circle cx="'+X0+'" cy="'+base[p.name]+'" r="5" fill="'+p.color+'"/>'
-      +'<text x="'+(X0+8)+'" y="'+(base[p.name]-11)+'" font-size="12" fill="'+p.color+'" font-family="Songti SC,serif">'+esc(p.name)+'</text>';
+    h+='<path d="'+d+'" fill="none" stroke="'+st.c+'" stroke-width="12" opacity="'+(hot?.07:.02)+'" stroke-linecap="round"/>'
+      +'<path d="'+d+'" fill="none" stroke="'+st.c+'" stroke-width="'+(hot?3.2:2)+'" '
+      +'stroke-dasharray="'+st.dash+'" opacity="'+(hot?.92:.25)+'" stroke-linecap="round"/>';
+    h+='<circle cx="'+X0+'" cy="'+base[p.name]+'" r="5" fill="'+st.c+'" opacity="'+(hot?1:.35)+'"/>'
+      +'<text x="'+(X0+8)+'" y="'+(base[p.name]-11)+'" font-size="12" fill="'+st.c+'" '
+      +'opacity="'+(hot?1:.45)+'" font-family="Songti SC,serif">'+esc(p.name)+'</text>';
   });
   C.forEach(function(c,i){
     var y=c.people.reduce(function(s,n){return s+base[n];},0)/c.people.length,cur=i===S.crossIdx;
-    h+='<g class="cnode'+(cur?' cur':'')+'" data-i="'+i+'">'
+    h+='<g class="cnode'+(cur?' cur':'')+'" data-i="'+i+'" tabindex="0" role="button" '
+      +'aria-label="第 '+(i+1)+' 处交集 · '+esc(c.label)+' · '+esc(c.people.join('与'))+'">'
+      +'<title>'+esc(c.label)+' · '+esc(c.people.join(' 与 '))+' · '+esc(c.kind)+'（点开看详情）</title>'
       +'<circle cx="'+XS[i]+'" cy="'+y+'" r="30" fill="var(--redbg)" opacity=".7"/>'
       +'<circle class="ccircle" cx="'+XS[i]+'" cy="'+y+'" r="20" fill="'+(cur?'var(--red)':'var(--solid)')+'" stroke="var(--red)" stroke-width="1.8"/>'
       +'<text class="cnum" x="'+XS[i]+'" y="'+(y+4)+'" text-anchor="middle" font-size="12" fill="'+(cur?'#fff':'var(--red)')+'">'+(i+1)+'</text>'
@@ -1158,10 +1541,14 @@ function renderCross(){
       +'</g>';
   });
   svg.innerHTML=h;
-  $$('.cnode',svg).forEach(function(g){g.onclick=function(){S.crossIdx=+g.dataset.i;renderCross();};});
+  $$('.cnode',svg).forEach(function(g){
+    g.onclick=function(){S.crossIdx=+g.dataset.i;renderCross();};
+    g.onkeydown=function(ev){if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();S.crossIdx=+g.dataset.i;renderCross();}};
+  });
   var lg=$('#crossLegend');lg.innerHTML='';
-  P.forEach(function(p){lg.appendChild(el('span','','<i style="background:'+p.color+'"></i>'+esc(p.name)));});
-  lg.appendChild(el('span','','<i style="background:var(--red)"></i>交汇处（点圆章看详情）'));
+  P.forEach(function(p,i){var st=lineStyle(p,i);
+    lg.appendChild(el('span','','<i class="'+st.cls+'" style="border-top-color:'+st.c+'"></i>'+esc(p.name)));});
+  lg.appendChild(el('span','','<i style="border-top-color:var(--red)"></i>交汇处（点圆章看详情）'));
   $('#crossNote').innerHTML='交集由 6 份人工标注的<b>共同年代、共同实体</b>自动检出，共 '+C.length+' 处；说明文字依事件名编排，非受访者原话。'
     +'这里刻意<b>不按精确年份对齐</b>——相对时间（如「五三惨案以后」）不硬折算。等 60 份语料齐了，交集会密得多。';
   renderCrossSide();
@@ -1180,8 +1567,8 @@ function renderCrossSide(){
   $('#crossSide').innerHTML='<div class="knd">'+esc(c.kind)+' · 第 '+(S.crossIdx+1)+' / '+DB.crosses.length+' 处</div>'
     +'<h3>'+esc(c.label)+'</h3><div class="note">'+esc(c.note)+'</div>'
     +'<div class="evt"><div style="font-size:11px;color:var(--ink3);letter-spacing:1.5px;margin-bottom:9px">两边各自的经历（点事件可去人生链路）</div>'+rows+'</div>'
-    +(q?'<div class="quote-box"><div class="qh">来自 '+esc(q.docTitle)+'</div>'+esc(q.quotes[0].text.slice(0,110))+'…</div>':'')
-    +'<div class="detail-actions"><button id="goLife">去看 '+esc(c.people[0])+' 的人生链路 →</button></div>';
+    +(q?'<div class="quote-box"><div class="qh">档案 '+esc(q.docTitle||q.doc)+' · 逐字原话</div>'+esc(q.quotes[0].text.slice(0,110))+'…</div>':'')
+    +'<div class="detail-actions"><button id="goLife" class="b3">去看 '+esc(c.people[0])+' 的人生链路 →</button></div>';
   $$('#crossSide [data-eid]').forEach(function(s){s.onclick=function(){
     var e=EV[s.dataset.eid];S.lifePerson=e.person;S.lifeIdx=Math.max(0,personEvents(e.person).indexOf(e));
     rendered.life=0;switchView('life');renderLifeTabs();};});
@@ -1219,6 +1606,9 @@ $('#openRes').onclick=function(){window.open(DB.meta.mentorFile,'_blank');};
 /* ---------- 启动 ---------- */
 renderPresets();renderStart();renderLegend();renderGuide();drawGraph();renderLifeTabs();
 var hash=(location.hash||'').replace('#','');
+/* 答辩/导师可用 ?view=research 直达项目说明，不必经过公众首屏（只加不减，导航结构不变） */
+try{var vp=new URLSearchParams(location.search).get('view');
+  if(['ask','life','cross','research'].indexOf(vp)>=0)hash=vp;}catch(e){}
 if(['life','cross','research'].indexOf(hash)>=0)switchView(hash);
 window.PORTAL={S:S,switchView:switchView,ask:ask,retrieve:retrieve,buildChain:buildChain,
   composeOffline:composeOffline,renderAnswer:renderAnswer,AnswerEngine:AnswerEngine,

@@ -1,0 +1,108 @@
+{
+  "run_time": "2026-11-11T22:03:05",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC09-DE012",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC09-DE012",
+  "usage": {
+    "prompt_tokens": 1319,
+    "total_tokens": 5100,
+    "completion_tokens": 3781,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2529
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 3780000,
+    "time_to_first_token_ms": 29109
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC09-DE012\",\n  \"event_enrichment\": {\n    \"result_state\": \"卫立煌部看到八路军新营在缺枪少武器情况下仍不害怕，卫立煌因此感叹红军改编的八路军不简单。\",\n    \"factuality\": \"REPORTED\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"以685团新营奉命自行往西为起点，至卫立煌对比双方表现并感叹八路军不简单为终点；中间包含新营西行休息唱歌、卫立煌部因日军进攻而慌张等过程。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE012-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"685团新营因无武器，被要求自行往西走，必要时可主动过黄河。\",\n      \"process_text\": \"685团只有两个老营，新营没有武器；敌人南下作战时，叫新营自行往西走，若敌人追得紧，实在不行可主动过黄河。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0079\"\n      ],\n      \"evidence_quote\": \"当时我们685团只有两个老营，这个新营怎么办？敌人南下我们进行作战活动的时候，叫这个新营啊，叫他自行往西走，就是如果敌人要追得紧，实在不行你可以主动地过黄河去。因为他没武器呀。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE012-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"新营往西行进，政治工作干部多为打过仗的人，带队休息时唱歌，情绪高兴。\",\n      \"process_text\": \"我们这个营往西走；部队政治思想工作干部都是打过很多仗的人，带部队到休息地方时唱歌，挺高兴的。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0083\"\n      ],\n      \"evidence_quote\": \"我们这个营往西走——就是以后我们才知道——我们这个部队政治思想工作干部都是打过很多仗的人，所以带这个部队到你这地方休息的时候啊，都唱歌啊什么，挺高兴的。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE012-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"卫立煌因调任绕道，带一个营同行；日军进攻炮响，其士兵慌张。\",\n      \"process_text\": \"卫立煌要从第二战区副司令长官调任第一战区司令长官，从晋南走不了，拟绕道延安到洛阳；他带一个营，自动武器很多，因日军进攻炮响，士兵慌慌张张。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0083\"\n      ],\n      \"evidence_quote\": \"这个卫立煌啊，他第二战区副司令长官要调到第一战区去当司令长官，当时从晋南走他走不了了，他就要走延安，这么绕到洛阳去，他指挥部在那。他带了一个营，自动武器很多。因为这日本人进攻，炮响啊，他的兵就慌慌张张的。\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE012-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"卫立煌看到八路军新营缺枪却不害怕，对比自己部队的慌张，感叹八路军不简单。\",\n      \"process_text\": \"卫立煌说八路军枪都没有，人家都不害怕；自己部队背着好武器却吓得不行，真没用；他因此感觉红军改编的八路军不简单。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0085\"\n      ],\n      \"evidence_quote\": \"结果（一看）我们的部队，卫立煌说你们看看你八路军枪都没有，人家都不害怕。你们他妈的那么好的武器背着，你们吓得不行，你们真没用！所以卫立煌在山西抗战，他也感觉到红军改编的八路军不简单。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE012-P01\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE012-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0083\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE012-P02\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE012-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0083\",\n      \"confidence\": \"MEDIUM\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE012-P03\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE012-P04\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0085\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC09-DE012",
+    "event_enrichment": {
+      "result_state": "卫立煌部看到八路军新营在缺枪少武器情况下仍不害怕，卫立煌因此感叹红军改编的八路军不简单。",
+      "factuality": "REPORTED",
+      "confidence": "MEDIUM",
+      "boundary_note": "以685团新营奉命自行往西为起点，至卫立煌对比双方表现并感叹八路军不简单为终点；中间包含新营西行休息唱歌、卫立煌部因日军进攻而慌张等过程。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC09-DE012-P01",
+        "stage_order": 1,
+        "stage_summary": "685团新营因无武器，被要求自行往西走，必要时可主动过黄河。",
+        "process_text": "685团只有两个老营，新营没有武器；敌人南下作战时，叫新营自行往西走，若敌人追得紧，实在不行可主动过黄河。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0079"
+        ],
+        "evidence_quote": "当时我们685团只有两个老营，这个新营怎么办？敌人南下我们进行作战活动的时候，叫这个新营啊，叫他自行往西走，就是如果敌人要追得紧，实在不行你可以主动地过黄河去。因为他没武器呀。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE012-P02",
+        "stage_order": 2,
+        "stage_summary": "新营往西行进，政治工作干部多为打过仗的人，带队休息时唱歌，情绪高兴。",
+        "process_text": "我们这个营往西走；部队政治思想工作干部都是打过很多仗的人，带部队到休息地方时唱歌，挺高兴的。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0083"
+        ],
+        "evidence_quote": "我们这个营往西走——就是以后我们才知道——我们这个部队政治思想工作干部都是打过很多仗的人，所以带这个部队到你这地方休息的时候啊，都唱歌啊什么，挺高兴的。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE012-P03",
+        "stage_order": 3,
+        "stage_summary": "卫立煌因调任绕道，带一个营同行；日军进攻炮响，其士兵慌张。",
+        "process_text": "卫立煌要从第二战区副司令长官调任第一战区司令长官，从晋南走不了，拟绕道延安到洛阳；他带一个营，自动武器很多，因日军进攻炮响，士兵慌慌张张。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0083"
+        ],
+        "evidence_quote": "这个卫立煌啊，他第二战区副司令长官要调到第一战区去当司令长官，当时从晋南走他走不了了，他就要走延安，这么绕到洛阳去，他指挥部在那。他带了一个营，自动武器很多。因为这日本人进攻，炮响啊，他的兵就慌慌张张的。",
+        "confidence": "MEDIUM"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE012-P04",
+        "stage_order": 4,
+        "stage_summary": "卫立煌看到八路军新营缺枪却不害怕，对比自己部队的慌张，感叹八路军不简单。",
+        "process_text": "卫立煌说八路军枪都没有，人家都不害怕；自己部队背着好武器却吓得不行，真没用；他因此感觉红军改编的八路军不简单。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0085"
+        ],
+        "evidence_quote": "结果（一看）我们的部队，卫立煌说你们看看你八路军枪都没有，人家都不害怕。你们他妈的那么好的武器背着，你们吓得不行，你们真没用！所以卫立煌在山西抗战，他也感觉到红军改编的八路军不简单。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC09-DE012-P01",
+        "target_stage_id": "BATCH02-DOC09-DE012-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0083",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE012-P02",
+        "target_stage_id": "BATCH02-DOC09-DE012-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0083",
+        "confidence": "MEDIUM"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE012-P03",
+        "target_stage_id": "BATCH02-DOC09-DE012-P04",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0085",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

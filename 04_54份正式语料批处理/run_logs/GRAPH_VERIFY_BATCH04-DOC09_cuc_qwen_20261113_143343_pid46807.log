@@ -28,3 +28,76 @@
 
 == entity_time：1 次调用 ==
   [1/1] 请求 entity_time/YYS-07，输入 23,436 字符，最长等待 3600s……
+  完成：total_tokens=67875
+
+全部完成：2 次调用。下一步：python3 scripts/graph_apply_enrichment.py --document BATCH04-DOC09 --model cuc/qwen --write
+
+===== 后处理：校验、算偏移、生成 18 张 CSV =====
+  环境成分待人工复核 9 条（就近归类／规范值待补，另出清单）
+[落盘] BATCH04-DOC09 / cuc/qwen
+  stage 响应 1｜entity_time 响应 1｜覆盖率 1.0000
+    documents                  1 行
+    source_segments           74 行
+    source_attachments       101 行
+    coverage_audit             1 行
+    document_annotations      23 行
+    event_nodes                1 行
+    event_processes            1 行
+    event_participants         9 行
+    event_circumstances       21 行
+    event_next                 0 行
+    process_stages             9 行
+    stage_next                 8 行
+    event_times                1 行
+    time_expressions          17 行
+    entities                  76 行
+    entity_mentions          135 行
+    entity_aliases            10 行
+    entity_relations          35 行
+  校验问题 0 条｜偏移待核 38 条
+  已写入：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH04-DOC09
+
+===== 18 表完整性验收 =====
+[通过] BATCH04-DOC09 / cuc/qwen
+  片段 74｜事件 1｜阶段 9｜实体 76｜提及 135｜时间表达 17｜覆盖率 1.0000
+  报告：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH04-DOC09/VALIDATION_report.json
+
+===== L3/L4 导出 24 张 import CSV =====
+[落盘] 模型线 cuc/qwen｜已验收文档 27 份
+  生平叠加视图：疑似同一经历 2 组（只标 NEEDS_REVIEW，交人工）；人工 MERGE 生效 0 组，KEEP_SEPARATE 0 组
+
+== 24 张 import CSV 规模 ==
+  documents                    27 行
+  source_segments            2548 行
+  source_attachments         3768 行
+  event_nodes                 216 行
+  event_processes             216 行
+  event_participants          788 行
+  event_circumstances        1190 行
+  process_stages              991 行
+  stage_next                  784 行
+  event_next                  189 行
+  entities                   1251 行
+  entity_mentions             966 行
+  entity_aliases              151 行
+  entity_relations            318 行
+  event_times                 216 行
+  time_expressions            657 行
+  document_annotations        807 行
+  coverage_audit               27 行
+  person_subjects               3 行
+  document_persons             27 行
+  life_episodes               159 行
+  life_episode_sources        159 行
+  life_episode_next           156 行
+  narrated_contexts            53 行
+
+  警告 7696 条（详见报告）
+  疑似清单：04_54份正式语料批处理/review_queue/cuc_qwen_生平层疑似同一经历_待人工确认_20261113.md
+
+  已写入：05_合并与Neo4j/import_cuc_qwen
+
+===== 完成 =====
+结果：04_54份正式语料批处理/document_consolidation/graph_layers/cuc_qwen/BATCH04-DOC09/
+图谱导入：05_合并与Neo4j/import_cuc_qwen/
+请把 VALIDATION_report.json 与 prepare_summary.json 交助手复核，再决定是否放行 BATCH03。

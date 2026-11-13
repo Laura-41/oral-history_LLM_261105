@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T21:56:54",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC09-DE002",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC09-DE002",
+  "usage": {
+    "prompt_tokens": 1160,
+    "total_tokens": 4342,
+    "completion_tokens": 3182,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2603
+    },
+    "time_to_first_token_ms": 33771,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 0
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC09-DE002\",\n  \"event_enrichment\": {\n    \"result_state\": \"政治处和11连由吴文玉带领在榆社、武乡停留，扩军的具体过程与结果原文未述。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为受命带政治处和11连扩军，终点为在榆社、武乡停下；后续“部队下来了”及战斗缴获不在本事件边界内。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE002-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"在师准备配合129师侧击日军的背景下，吴文玉率政治处和11连执行扩军任务。\",\n      \"process_text\": \"师准备配合129师侧击日军、准备打仗时，吴文玉带政治处和一个11连扩军去。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0026\"\n      ],\n      \"evidence_quote\": \"就在这个时候，师里边准备配合129师，侧击从娘子关西进的日军。就在那边准备打仗，就把我们政治处的吴文玉，以后叫吴法宪，他带着我们政治处和一个11连扩军去。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE002-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"扩军队伍在榆社、武乡停留。\",\n      \"process_text\": \"我们在榆社、武乡停下\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0026\"\n      ],\n      \"evidence_quote\": \"我们在榆社、武乡停下\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE002-P01\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE002-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0026\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC09-DE002",
+    "event_enrichment": {
+      "result_state": "政治处和11连由吴文玉带领在榆社、武乡停留，扩军的具体过程与结果原文未述。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为受命带政治处和11连扩军，终点为在榆社、武乡停下；后续“部队下来了”及战斗缴获不在本事件边界内。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC09-DE002-P01",
+        "stage_order": 1,
+        "stage_summary": "在师准备配合129师侧击日军的背景下，吴文玉率政治处和11连执行扩军任务。",
+        "process_text": "师准备配合129师侧击日军、准备打仗时，吴文玉带政治处和一个11连扩军去。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0026"
+        ],
+        "evidence_quote": "就在这个时候，师里边准备配合129师，侧击从娘子关西进的日军。就在那边准备打仗，就把我们政治处的吴文玉，以后叫吴法宪，他带着我们政治处和一个11连扩军去。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE002-P02",
+        "stage_order": 2,
+        "stage_summary": "扩军队伍在榆社、武乡停留。",
+        "process_text": "我们在榆社、武乡停下",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0026"
+        ],
+        "evidence_quote": "我们在榆社、武乡停下",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC09-DE002-P01",
+        "target_stage_id": "BATCH02-DOC09-DE002-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0026",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

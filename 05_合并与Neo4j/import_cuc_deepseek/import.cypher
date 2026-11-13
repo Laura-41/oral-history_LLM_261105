@@ -23,7 +23,7 @@ MERGE (g:GraphBuild {build_id: 'oral-history-batch-cuc_deepseek-v1'})
 SET g.name = '正式语料cuc/deepseek图谱',
     g.import_date = '2026-11-13',
     g.schema_version = '3.2+batch-application-ext',
-    g.description = '正式语料 52 份（cuc/deepseek）：原文—事件—阶段—实体—时间—生平，data_role=BATCH_APPLICATION';
+    g.description = '正式语料 54 份（cuc/deepseek）：原文—事件—阶段—实体—时间—生平，data_role=BATCH_APPLICATION';
 
 UNWIND [
   {id:'MATERIAL_EVENT', name:'物质事件'},

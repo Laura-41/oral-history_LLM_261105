@@ -1,0 +1,126 @@
+{
+  "run_time": "2026-11-11T21:57:48",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC09-DE004",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC09-DE004",
+  "usage": {
+    "prompt_tokens": 1444,
+    "total_tokens": 5526,
+    "completion_tokens": 4082,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 2787
+    },
+    "time_to_first_token_ms": 32319,
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 4081000
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC09-DE004\",\n  \"event_enrichment\": {\n    \"result_state\": \"会议和动员报告完成，听众情绪高涨；事后得知国民党特务曾窃听报告并进行反宣传。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"HIGH\",\n    \"boundary_note\": \"以沁源休息期间肖华召开连以上干部会议并作动员为起点，以报告内容、听众反应及事后窃听反宣传为结束；不扩展到其他会议或战斗。\",\n    \"boundary_confidence\": \"HIGH\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE004-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"沁源休息期间，肖华召集连以上干部开会并作动员。\",\n      \"process_text\": \"在沁源休息时，肖华召开连以上干部会议，做了动员。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0030\"\n      ],\n      \"evidence_quote\": \"就是我们在沁源休息的时候，肖华召开了连以上干部（会议），做了动员。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE004-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"肖华作长篇报告，分析山西正面战场形势。\",\n      \"process_text\": \"肖华讲了两个钟头，报告题为《目前山西抗战形势和我军的英勇》，重点讲山西正面战场因国民党军战败南逃，已不可能有大规模战斗。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0032\"\n      ],\n      \"evidence_quote\": \"他讲了两个钟头，就是他讲的是，《目前山西抗战形势和我军的英勇》，重点的精神就是山西的正面战场，由于国民党军战败，纷纷南逃，已经不可能有什么大规模的战斗。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE004-P03\",\n      \"stage_order\": 3,\n      \"stage_summary\": \"报告指出我党我军须单独坚持华北抗战并建设根据地，听众高兴。\",\n      \"process_text\": \"报告由此提出我党我军要准备单独坚持华北抗战，负担敌后抗战和建设根据地责任；这是平型关战斗后的一次政治形势和任务报告，大家都很高兴。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0034\"\n      ],\n      \"evidence_quote\": \"因此我党我军就要准备单独坚持华北的抗战，负担起敌后抗战和建设根据地责任。所以这是平型关战斗以后啊，就这一次，政治形势和任务的报告，大家都很高兴。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE004-P04\",\n      \"stage_order\": 4,\n      \"stage_summary\": \"动员报告后听众情绪特别高涨。\",\n      \"process_text\": \"动员报告以后，大家特别高兴。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0036\"\n      ],\n      \"evidence_quote\": \"他这个动员报告以后，大家特别高兴。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE004-P05\",\n      \"stage_order\": 5,\n      \"stage_summary\": \"报告后两个团反应积极，事后得知国民党特务窃听并搞反宣传。\",\n      \"process_text\": \"肖华报告后，685、686团参加，大家都挺高兴；事后听说国民党特务在边上窃听报告，做手脚、搞反宣传。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0042\"\n      ],\n      \"evidence_quote\": \"从那次肖华报告以后，当时我们两个团参加，685、686团，大家都挺高兴。但事后我们听说了，国民党特务他在边上窃听了咱们的肖华的报告，他做了一些手脚，搞了一些反宣传。\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE004-P01\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE004-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0032\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE004-P02\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE004-P03\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0034\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE004-P03\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE004-P04\",\n      \"logic\": \"RESULTS_IN\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0036\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE004-P04\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE004-P05\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0042\",\n      \"confidence\": \"MEDIUM\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC09-DE004",
+    "event_enrichment": {
+      "result_state": "会议和动员报告完成，听众情绪高涨；事后得知国民党特务曾窃听报告并进行反宣传。",
+      "factuality": "FACT",
+      "confidence": "HIGH",
+      "boundary_note": "以沁源休息期间肖华召开连以上干部会议并作动员为起点，以报告内容、听众反应及事后窃听反宣传为结束；不扩展到其他会议或战斗。",
+      "boundary_confidence": "HIGH"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC09-DE004-P01",
+        "stage_order": 1,
+        "stage_summary": "沁源休息期间，肖华召集连以上干部开会并作动员。",
+        "process_text": "在沁源休息时，肖华召开连以上干部会议，做了动员。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0030"
+        ],
+        "evidence_quote": "就是我们在沁源休息的时候，肖华召开了连以上干部（会议），做了动员。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE004-P02",
+        "stage_order": 2,
+        "stage_summary": "肖华作长篇报告，分析山西正面战场形势。",
+        "process_text": "肖华讲了两个钟头，报告题为《目前山西抗战形势和我军的英勇》，重点讲山西正面战场因国民党军战败南逃，已不可能有大规模战斗。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0032"
+        ],
+        "evidence_quote": "他讲了两个钟头，就是他讲的是，《目前山西抗战形势和我军的英勇》，重点的精神就是山西的正面战场，由于国民党军战败，纷纷南逃，已经不可能有什么大规模的战斗。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE004-P03",
+        "stage_order": 3,
+        "stage_summary": "报告指出我党我军须单独坚持华北抗战并建设根据地，听众高兴。",
+        "process_text": "报告由此提出我党我军要准备单独坚持华北抗战，负担敌后抗战和建设根据地责任；这是平型关战斗后的一次政治形势和任务报告，大家都很高兴。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0034"
+        ],
+        "evidence_quote": "因此我党我军就要准备单独坚持华北的抗战，负担起敌后抗战和建设根据地责任。所以这是平型关战斗以后啊，就这一次，政治形势和任务的报告，大家都很高兴。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE004-P04",
+        "stage_order": 4,
+        "stage_summary": "动员报告后听众情绪特别高涨。",
+        "process_text": "动员报告以后，大家特别高兴。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0036"
+        ],
+        "evidence_quote": "他这个动员报告以后，大家特别高兴。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE004-P05",
+        "stage_order": 5,
+        "stage_summary": "报告后两个团反应积极，事后得知国民党特务窃听并搞反宣传。",
+        "process_text": "肖华报告后，685、686团参加，大家都挺高兴；事后听说国民党特务在边上窃听报告，做手脚、搞反宣传。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0042"
+        ],
+        "evidence_quote": "从那次肖华报告以后，当时我们两个团参加，685、686团，大家都挺高兴。但事后我们听说了，国民党特务他在边上窃听了咱们的肖华的报告，他做了一些手脚，搞了一些反宣传。",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC09-DE004-P01",
+        "target_stage_id": "BATCH02-DOC09-DE004-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0032",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE004-P02",
+        "target_stage_id": "BATCH02-DOC09-DE004-P03",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0034",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE004-P03",
+        "target_stage_id": "BATCH02-DOC09-DE004-P04",
+        "logic": "RESULTS_IN",
+        "evidence_segment_id": "BATCH02-DOC09-S0036",
+        "confidence": "HIGH"
+      },
+      {
+        "source_stage_id": "BATCH02-DOC09-DE004-P04",
+        "target_stage_id": "BATCH02-DOC09-DE004-P05",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0042",
+        "confidence": "MEDIUM"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

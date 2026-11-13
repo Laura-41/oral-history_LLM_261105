@@ -1,0 +1,72 @@
+{
+  "run_time": "2026-11-11T21:57:28",
+  "run_stage": "GRAPH_ENRICHMENT_STAGE",
+  "task": "stage",
+  "packet_key": "BATCH02-DOC09-DE003",
+  "model_id": "cuc/deepseek",
+  "prompt_version": "graph_enrichment_v1.0",
+  "schema_version": "v1.0",
+  "technical_document_id": "BATCH02-DOC09-DE003",
+  "usage": {
+    "prompt_tokens": 1094,
+    "total_tokens": 3328,
+    "completion_tokens": 2234,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1697
+    },
+    "time_per_output_token_ms": 0,
+    "tokens_per_second": 2233000,
+    "time_to_first_token_ms": 19655
+  },
+  "raw_content": "{\n  \"document_id\": \"YYS-04\",\n  \"task\": \"stage\",\n  \"prompt_version\": \"graph_enrichment_v1.0\",\n  \"schema_version\": \"v1.0\",\n  \"event_id\": \"BATCH02-DOC09-DE003\",\n  \"event_enrichment\": {\n    \"result_state\": \"部队到达沁源县，师部及旅部在县城附近驻扎休息。\",\n    \"factuality\": \"FACT\",\n    \"confidence\": \"MEDIUM\",\n    \"boundary_note\": \"起点为接到通知后随队跟进，终点为到达沁源县附近驻扎休息；同段唐亮调任685团主任属另一人事事件，不纳入本事件边界。\",\n    \"boundary_confidence\": \"MEDIUM\"\n  },\n  \"stages\": [\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE003-P01\",\n      \"stage_order\": 1,\n      \"stage_summary\": \"接到通知后，所在部队随后跟进。\",\n      \"process_text\": \"接到通知说他们先走，我们在后面跟。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0028\"\n      ],\n      \"evidence_quote\": \"我们呢，在那接到通知说他们先走，我们在后面跟。\",\n      \"confidence\": \"HIGH\"\n    },\n    {\n      \"stage_id\": \"BATCH02-DOC09-DE003-P02\",\n      \"stage_order\": 2,\n      \"stage_summary\": \"部队到达沁源县，师部及旅部在县城附近驻扎休息。\",\n      \"process_text\": \"到沁源县，师部、旅部在县里的附近住着休息。\",\n      \"evidence_segment_ids\": [\n        \"BATCH02-DOC09-S0028\"\n      ],\n      \"evidence_quote\": \"我们到沁源县，师部啊，我们这个旅呀，就在那里，县里的附近在那里住着休息。\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"stage_next\": [\n    {\n      \"source_stage_id\": \"BATCH02-DOC09-DE003-P01\",\n      \"target_stage_id\": \"BATCH02-DOC09-DE003-P02\",\n      \"logic\": \"SEQUENCE\",\n      \"evidence_segment_id\": \"BATCH02-DOC09-S0028\",\n      \"confidence\": \"HIGH\"\n    }\n  ],\n  \"no_stage_reason\": \"\"\n}",
+  "parsed": {
+    "document_id": "YYS-04",
+    "task": "stage",
+    "prompt_version": "graph_enrichment_v1.0",
+    "schema_version": "v1.0",
+    "event_id": "BATCH02-DOC09-DE003",
+    "event_enrichment": {
+      "result_state": "部队到达沁源县，师部及旅部在县城附近驻扎休息。",
+      "factuality": "FACT",
+      "confidence": "MEDIUM",
+      "boundary_note": "起点为接到通知后随队跟进，终点为到达沁源县附近驻扎休息；同段唐亮调任685团主任属另一人事事件，不纳入本事件边界。",
+      "boundary_confidence": "MEDIUM"
+    },
+    "stages": [
+      {
+        "stage_id": "BATCH02-DOC09-DE003-P01",
+        "stage_order": 1,
+        "stage_summary": "接到通知后，所在部队随后跟进。",
+        "process_text": "接到通知说他们先走，我们在后面跟。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0028"
+        ],
+        "evidence_quote": "我们呢，在那接到通知说他们先走，我们在后面跟。",
+        "confidence": "HIGH"
+      },
+      {
+        "stage_id": "BATCH02-DOC09-DE003-P02",
+        "stage_order": 2,
+        "stage_summary": "部队到达沁源县，师部及旅部在县城附近驻扎休息。",
+        "process_text": "到沁源县，师部、旅部在县里的附近住着休息。",
+        "evidence_segment_ids": [
+          "BATCH02-DOC09-S0028"
+        ],
+        "evidence_quote": "我们到沁源县，师部啊，我们这个旅呀，就在那里，县里的附近在那里住着休息。",
+        "confidence": "HIGH"
+      }
+    ],
+    "stage_next": [
+      {
+        "source_stage_id": "BATCH02-DOC09-DE003-P01",
+        "target_stage_id": "BATCH02-DOC09-DE003-P02",
+        "logic": "SEQUENCE",
+        "evidence_segment_id": "BATCH02-DOC09-S0028",
+        "confidence": "HIGH"
+      }
+    ],
+    "no_stage_reason": ""
+  },
+  "request_error": null
+}

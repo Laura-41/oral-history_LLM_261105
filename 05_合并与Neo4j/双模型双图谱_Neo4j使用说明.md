@@ -445,3 +445,29 @@ RETURN d.doc_id, d.title, count(e) AS events, collect(e.event_name) AS event_nam
 | DeepSeek 库 7486 | ⏳ 尚未建立；且 `BATCH02-DOC01` 的 `entity_time` 调用在 11-07／11-08／11-10 **连续三次 HTTP 500（上游错误）**，非命令问题 |
 | 覆盖率 | `1.0000 / PASS`（`coverage_audit`） |
 | 词表 | `segment_type` 8 值（含 `RECORDING_TIMESTAMP`）；`circumstance_kind` 严格 5 值 |
+
+> 上表是 11-10 的历史快照，现行状态见 §九。
+
+## 九、60 份完整图谱（2026-11-13 19:10 起，现行状态）
+
+在 **DeepSeek 实例（HTTP 7486 / Bolt 7689）** 里已把 6 份人工 Demo 与 54 份正式语料合成一个 60 份的库。`build_id = oral-history-all60-v1`。Qwen 实例（7485）与 demo 实例（7474）未改动。
+
+**两套导入包并存、互不覆盖**：
+
+| 目录 | 内容 | 用途 |
+|---|---|---|
+| `import_cuc_deepseek/` | 原 24 张 CSV + `import.cypher`（引用 `file:///documents.csv` 等） | 纯 54 份正式语料，可一键回退 |
+| `import_all60/` | 24 张合并 CSV + `import.cypher`（引用 `file:///all60_*.csv`） | 60 份完整库 |
+
+构建脚本 `scripts/build_all60_import.py`：`python3 scripts/build_all60_import.py` 只生成，`--deploy` 同时把 `all60_*.csv` / `all60_import.cypher` 放进 `/tmp/graph_deepseek/import/`。导入仍按 §五的 HTTP API 逐条提交方式（`cypher-shell` 受 macOS 隔离属性限制，见 `review_queue/抽检与脚注核对报告_20261113.md` §五／§六）。
+
+**规模**：60 文档 / 479 事件 / 6327 片段 / 1834 二级阶段 / 1565 实体 / 377 生平 / 27573 节点 / 49872 关系。`data_role`：`WORKFLOW_DEMO`+`CONFIRMED` 6 份、`BATCH_APPLICATION`+`MODEL_CANDIDATE` 54 份。
+
+**两点必须记住**：
+
+1. **两类数据不可混读、统计不可相加**。人工 6 份是词表 v1.0 的金标准，正式 54 份是 v1.1 的候选结果；查询先加 `WHERE d.data_role = '…'`，生平按 `episode_id STARTS WITH 'DEMO-'` 区分（40 条人工 / 337 条正式）。
+2. **`documents.doc_id` 是语料 ID**（`YYS-04`、`CHF-V1-01`），技术编号 `BATCH0X-DOC0Y` 只出现在 `event_id` / `segment_id` 里。写 `WHERE d.doc_id='BATCH02-DOC09'` 会返回空。
+
+**生平层关联补齐**：合库前 `BiographicalSubject` / `INTERVIEW_OF` / `HAS_LIFE_EPISODE` 全为 0（正式 `entities.csv` 缺 `PER-CHF`／`PER-CRT`／`PER-YYS`，MATCH 落空，337 条生平是孤儿）。人工 Demo 的 `entities.csv` 提供了这三个共享人物实体，合库后自动补齐 3 人物节点、60 `INTERVIEW_OF`、377 `HAS_LIFE_EPISODE`、94 `NARRATED_CONTEXT`。
+
+**回退到纯 54 份**：重跑 `import_cuc_deepseek/import.cypher`（24 表已在实例 import 目录，清库只作用 7486 这个实例）即可，原文件一字未动。

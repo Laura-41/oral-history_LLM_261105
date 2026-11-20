@@ -21,9 +21,9 @@ CREATE CONSTRAINT life_episode_id IF NOT EXISTS FOR (n:LifeEpisode) REQUIRE n.ep
 
 MERGE (g:GraphBuild {build_id: 'oral-history-batch-cuc_qwen-v1'})
 SET g.name = '正式语料cuc/qwen图谱',
-    g.import_date = '2026-11-13',
+    g.import_date = '2026-11-14',
     g.schema_version = '3.2+batch-application-ext',
-    g.description = '正式语料 32 份（cuc/qwen）：原文—事件—阶段—实体—时间—生平，data_role=BATCH_APPLICATION';
+    g.description = '正式语料 54 份（cuc/qwen）：原文—事件—阶段—实体—时间—生平，data_role=BATCH_APPLICATION';
 
 UNWIND [
   {id:'MATERIAL_EVENT', name:'物质事件'},
